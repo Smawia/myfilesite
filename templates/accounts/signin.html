@@ -1,0 +1,23 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<div class="signin">
+    {% if request.user.is_authenticated %}
+    <h4 class="alert-success">مرحباً بك {{request.user.username}} أنت حالياً مسجل دخول
+        <a class="spe-a" href="{% url 'logout' %}">تسجيل خروج</a>
+    </h4>
+    <form action="" method="post" style="display: none;">
+        {% else %}
+        <form action="" method="post">
+            {% endif %}
+            {% csrf_token %}
+            {% include 'partials/alerts.html' %}
+            <input type="text" name="name" placeholder="ادخل اسمك" id="" required>
+            <input type="password" name="pass" placeholder="ادخل كلمة السر" id="" required>
+            <div class="f">
+                <input type="checkbox" name="check" class="special-check" id="me"> <label for="me">تذكرني</label>
+            </div>
+            <input type="submit" name="login" class="spe-button" value="تسجيل الدخول">
+        </form>
+</div>
+{% endblock %}

@@ -1,0 +1,46 @@
+{% extends 'base.html' %}
+{% block content %}
+
+{% if not request.user.is_authenticated or not request.user.is_superuser%}
+<h4 class="alert-info">قم بتسجيل الدخول كمدير لعرض الصفحة
+    <a class="spe-a" href="{% url 'signin' %}">تسجيل الدخول</a>
+</h4>
+<table style="display: none;">
+    {%else%}
+
+    {% if posts.count > 0 %}
+    <table>
+        <thead>
+            <tr>
+                <td>الاسم</td>
+                <td>تاريخ النشر</td>
+                <td>العملية</td>
+            </tr>
+        </thead>
+        <tbody>
+            {% for post in posts %}
+            <tr>
+                <td>{{post.user_id.username}}</td>
+                <td>{{post.post_date|date:'Y-m-d H:i'}}</td>
+                <td><a href="{% url 'accepting' post_id=post.id %}" class="accept">
+
+                        {% if is_allow %}
+                        تم السماح بالنشر
+                        {% else %}
+                        السماح بالنشر
+                        {% endif %}
+                    </a></td>
+            </tr>
+            {% endfor %}
+
+        </tbody>
+    </table>
+    {% else %}
+    <h4 class="alert-info empty">
+        لا توجد حالياً منشورات
+    </h4>
+    <hr>
+    {% endif %}
+
+    {% endif %}
+    {% endblock %}

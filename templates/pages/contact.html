@@ -1,0 +1,51 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+<div class="contactus">
+    <img src="{% static 'imgs/logo.png' %}" alt="">
+    <h3>تواصل معنا</h3>
+    <div class="container">
+        <div class="left">
+            <div class="form">
+                <form action="" method="post">
+                    {% csrf_token %}
+                    {% include 'partials/alerts.html' %}
+                    <textarea name="ta" id="" cols="50" rows="10" placeholder="ادخل اقتراحك" required></textarea>
+                    <input type="email" name="email" id="" placeholder="ادخل إيميلك" required>
+                    <input type="submit" value="ارسال" name="sub" style="margin-top: 15px;" class="spe-button">
+                </form>
+            </div>
+        </div>
+        <div class="right">
+            <div class="address">
+                <p>المركز التأسيسي للدراسات والبحوث</p>
+                <p>الحي السياسي</p>
+                <p>صنعاء</p>
+
+                <div class="one">
+                    <i class="fa-solid fa-phone"></i><span>777717533 967+ </span>
+                </div>
+
+                <div class="two">
+                    <i class="fa-solid fa-envelope"></i>
+                    <span><a href="mailto:contact@csr-yemen.com">contact@csr-yemen.com</a></span>
+                </div>
+                <div class="two">
+                    <i class="fa-brands fa-whatsapp"></i>
+                    <span>
+                        <a href="https://api.whatsapp.com/send?phone=777646693">تواصل معنا عبر الوتس</a>
+                    </span>
+                </div>
+                <div class="two">
+                    <i class="fa-brands fa-facebook"></i>
+                    <span>
+                        <a href="https://www.facebook.com/profile.php?id=61556721602912" target="_blank">تابعنا على
+                            الفايس بوك</a>
+                    </span>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</div>
+{% endblock %}

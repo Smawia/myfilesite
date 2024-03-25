@@ -1,0 +1,20 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+<div class="show-i">
+    <a href="{% url 'showDetailPatrols' %}">
+        <div class="card">
+            <div class="head">
+                <h3>الدوريات</h3>
+            </div>
+            <div class="i">
+                <i class="fa-brands fa-discourse"></i>
+            </div>
+            <p>إطلاق دورية "حوكمة"<br>
+                مجلة علمية محكمة تتبع المركز التأسيسي للدراسات والبحوث
+            </p>
+            <button>المزيد</button>
+        </div>
+    </a>
+</div>
+{% endblock %}

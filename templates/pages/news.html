@@ -1,0 +1,17 @@
+{% extends 'base.html' %}
+{% block content %}
+<div class="show-i">
+    <a href="{% url 'showDetailNews' %}">
+        <div class="card">
+            <div class="head">
+                <h3>الأخبار والفعاليات</h3>
+            </div>
+            <div class="i">
+                <i class="fa-regular fa-newspaper"></i>
+            </div>
+            <p>لا يوجد حالياً</p>
+            <button>المزيد</button>
+        </div>
+    </a>
+</div>
+{% endblock %}

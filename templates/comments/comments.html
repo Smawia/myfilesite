@@ -1,0 +1,51 @@
+{% extends 'base.html' %}
+
+{% load static %}
+
+{% block content %}
+<div class="show-i">
+    <a href="{% url 'showDetailStudies' %}">
+        <div class="card">
+            <div class="head">
+                <h3>إصدارات المركز</h3>
+            </div>
+            <div class="i">
+                <i class="fa-solid fa-code-compare"></i>
+            </div>
+            <p>كتاب جماعي بعنوان "رؤية مستقبلية للإصلاح الإداري الشامل في الجمهورية اليمنية- دراسة تحليلية مقارنة"</p>
+            <button>المزيد</button>
+        </div>
+    </a>
+</div>
+<div class="comments">
+    {% for comment in comments|slice:':5' %}
+    <div class="info">
+        <div class="img-text">
+            <i class="fa-regular fa-user"></i>
+            <span class="name">{{comment.name}}</span>
+            <span class="date">{{comment.publish_date|date:'Y-m-d H:i'}}</span>
+        </div>
+        <p>{{comment.comment}}</p>
+        <a href="">الرد</a>
+    </div>
+    {% endfor %}
+    <div class="contact">
+        <h4>اترك تعليقا</h4>
+        <p>لن يتم نشر عنوانك الإلكتروني <span>الحقول الإلزامية مشار إليها ب*</span></p>
+        <div class="fields">
+            {% include 'partials/alerts.html' %}
+            <form action="" method="post">
+                {% csrf_token %}
+                <textarea name="comment" id="" cols="30" rows="10" placeholder="اكتب تعليقك" class="ta" required></textarea>
+                <input type="text" name="name" id="" placeholder="ادخل اسمك"><span>*</span>
+                <input type="email" name="email" id="" placeholder="ادخل البريد الالكتروني"><span>*</span>
+                <!-- <div class="check">
+                    <input type="checkbox" name="" id=""><label for="">احفظ اسمي</label>
+                </div> -->
+                <input type="submit" name="send" value="إرسال" class="spe-a">
+            </form>
+        </div>
+    </div>
+
+</div>
+{% endblock %}

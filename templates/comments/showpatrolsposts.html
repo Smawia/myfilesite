@@ -1,0 +1,23 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+<div class="show-posts">
+    <!-- <h3 class="pup">المنشورات</h3> -->
+    {% if posts.count > 0 %}
+    {% for post in posts %}
+    <div class="post-box">
+        <div class="infop">
+            <i class="fa-regular fa-user"></i><span>{{post.user_id.username}}</span><span>{{post.post_date|date:'Y-m-d H:i'}}</span>
+        </div>
+        <p>{{post.post}}</p>
+        <img src="{{ post.file.url }}" alt="">
+    </div>
+    {% endfor %}
+    {% else %}
+    <h4 class="alert-info empty">
+        لا توجد حالياً منشورات
+    </h4>
+    <hr>
+    {% endif %}
+</div>
+{% endblock %}

@@ -1,0 +1,30 @@
+{% extends 'base.html' %}
+{% block content %}
+<div class="comments">
+    <div class="contact">
+        <h4>ارفع منشورك</h4>
+        <p>لن يتم نشر عنوانك الإلكتروني </p>
+        <div class="fields">
+            {% if not request.user.is_authenticated%}
+            <h4 class="alert-info">قم بتسجيل الدخول أولاً لإضافة منشور
+                <a class="spe-a" href="{% url 'signin' %}">تسجيل الدخول</a>
+            </h4>
+            <form action="" method="post" style="display: none;">
+                {% else %}
+                {% include 'partials/alerts.html' %}
+                <form action="" method="post" enctype="multipart/form-data">
+
+                    {% csrf_token %}
+                    <textarea name="publish" id="" cols="50" rows="10" placeholder="اكتب منشورك" required></textarea>
+                    <input type="file" name="docfile" id="" style="margin: 30px 0 0 0;" required><label class="image">قم
+                        برفع صورة</label>
+                    <input type="text" name="type" id="" value="news" hidden>
+                    <input type="submit" name="send" class="spe-button" value="نشر">
+                </form>
+                <a href="{% url 'show_news_posts' %}" class="spe-a all">عرض كل المنشورات</a>
+                {% endif %}
+        </div>
+    </div>
+
+</div>
+{% endblock %}
