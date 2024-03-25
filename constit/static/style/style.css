@@ -2180,7 +2180,7 @@ table tbody tr td:hover {
 .show-posts .post-box {
     width: calc(50% - 6px);
     background-color: white;
-
+    position: relative;
 }
 
 .show-posts .post-box .infop {
@@ -2212,6 +2212,16 @@ table tbody tr td:hover {
     height: 300px;
 }
 
+.show-posts .post-box .my-spe {
+    position: absolute;
+    bottom: -50px;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 30px;
+    background-color: blue !important;
+    padding: 10px 15px !important;
+}
+
 @media (max-width: 574px) {
     .show-posts {
         flex-direction: column;
@@ -2219,7 +2229,7 @@ table tbody tr td:hover {
 
     .show-posts .post-box {
         width: calc(100% - 2px);
-        margin-top: 20px;
+        margin-top: 30px;
     }
 
     .show-posts .post-box img {
@@ -2244,7 +2254,7 @@ table tbody tr td:hover {
 
     .show-posts .post-box {
         width: calc(100% - 2px);
-        margin-top: 20px;
+        margin-top: 30px;
     }
 
     .show-posts .post-box img {

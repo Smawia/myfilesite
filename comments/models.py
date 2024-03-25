@@ -24,6 +24,7 @@ class Publish(models.Model):
     type = models.CharField(max_length = 100)
     is_allowed = models.BooleanField(default=False)
     file = models.FileField()
+    file2 = models.FileField()
 
     def __str__(self):
         return self.post

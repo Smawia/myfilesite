@@ -2180,7 +2180,7 @@ table tbody tr td:hover {
 .show-posts .post-box {
     width: calc(50% - 6px);
     background-color: white;
-
+    position: relative;
 }
 
 .show-posts .post-box .infop {
@@ -2210,6 +2210,10 @@ table tbody tr td:hover {
 .show-posts .post-box img {
     width: 50%;
     height: 300px;
+}
+
+.show-posts .post-box .my-spe {
+    position: absolute;
 }
 
 @media (max-width: 574px) {
