@@ -31,8 +31,30 @@ header {
     position: relative;
 }
 
+/* .togg::before {
+    content: "";
+    position: absolute;
+    width: 0;
+    height: 0;
+    bottom: -78%;
+    left: 50%;
+    transform: translateX(-50%);
+    border-width: 10px;
+    border-style: solid;
+    border-color: #333 transparent transparent transparent;
+    display: none;
+} */
+
 header .toggle-menu {
     font-size: 20px;
+}
+
+header ul li .left-arrow {
+    display: none;
+}
+
+header ul li .left-arrow2 {
+    display: none;
 }
 
 @media (min-width: 793px) {
@@ -88,12 +110,11 @@ header ul {
         list-style: none;
         padding: 8px 3px;
         transition: 0.3s;
-        margin-top: 5px;
         display: none;
         position: absolute;
         top: 0px !important;
         right: 135px !important;
-        width: 150px !important;
+        width: 170px !important;
         z-index: 100;
     }
 
@@ -143,7 +164,7 @@ header ul .base-li .ul {
     position: absolute;
     top: 20px;
     right: 0;
-    width: 200px;
+    width: 150px;
     z-index: 100;
 }
 
@@ -162,15 +183,18 @@ header ul li a.active,
 header ul li a:hover {
     box-sizing: border-box;
     color: white;
-    border: 2px solid red;
     border-radius: 8px;
     padding: 7px;
     background-color: blue;
 }
 
+
+
 header ul li a:hover .arrow {
     color: white;
 }
+
+
 
 header a i {
     position: relative;
@@ -398,6 +422,7 @@ header img {
 .show-i .card p {
     margin: 10px 20px 20px;
     font-size: 18px;
+    /* text-align: justify; */
 }
 
 .show-i .card button {
@@ -702,6 +727,62 @@ header img {
     border-radius: 8px;
     display: block;
     width: fit-content;
+}
+
+@media (max-width: 574px) {
+    .info .name {
+        font-size: 17px;
+    }
+
+    .info .date {
+        font-size: 17px;
+    }
+
+    .info p {
+        font-size: 17px;
+    }
+}
+
+@media (min-width: 575px) {
+    .info .name {
+        font-size: 17px;
+    }
+
+    .info .date {
+        font-size: 17px;
+    }
+
+    .info p {
+        font-size: 17px;
+    }
+}
+
+@media (min-width: 768px) {
+    .info .name {
+        font-size: 25px;
+    }
+
+    .info .date {
+        font-size: 25px;
+    }
+
+    .info p {
+        font-size: 25px;
+    }
+}
+
+@media (min-width: 992px) {
+    .info .name {
+        font-size: 30px;
+    }
+
+    .info .date {
+        font-size: 30px;
+    }
+
+    .info p {
+        font-size: 30px;
+    }
 }
 
 .comments .contact {
@@ -1168,7 +1249,7 @@ table tbody tr td:hover {
 @media (max-width: 574px) {
     .spe-a {
         padding: 5px !important;
-        font-size: 10px;
+        font-size: 12px;
         margin-right: 10px;
     }
 }
@@ -1176,7 +1257,7 @@ table tbody tr td:hover {
 @media (min-width: 575px) {
     .spe-a {
         padding: 5px !important;
-        font-size: 10px;
+        font-size: 12px;
         margin-right: 10px !important;
     }
 }
@@ -1694,7 +1775,7 @@ table tbody tr td:hover {
         margin: 10px auto;
         border-radius: 8px;
         padding: 3px 8px !important;
-        font-size: 25px;
+        font-size: 12px;
     }
 
     .contactus .address p {
@@ -1732,7 +1813,7 @@ table tbody tr td:hover {
         margin: 10px auto;
         border-radius: 8px;
         padding: 3px 8px !important;
-        font-size: 25px;
+        font-size: 12px;
     }
 
     .contactus .address p {
@@ -1769,7 +1850,7 @@ table tbody tr td:hover {
         display: block !important;
         border-radius: 8px;
         padding: 8px 5px;
-        font-size: 25px;
+        font-size: 18px;
         /* text-align: start !important; */
         margin-right: 0 !important;
         padding-right: 10px;
@@ -1940,7 +2021,7 @@ table tbody tr td:hover {
     .patrols ul li {
         position: relative;
         padding-right: 10px;
-        font-size: 15px;
+        font-size: 17px;
         margin-bottom: 8px;
         line-height: 1.6;
     }
@@ -2003,7 +2084,7 @@ table tbody tr td:hover {
     .patrols ul li {
         position: relative;
         padding-right: 10px;
-        font-size: 15px;
+        font-size: 17px;
         margin-bottom: 8px;
         line-height: 1.6;
     }
@@ -2214,6 +2295,12 @@ table tbody tr td:hover {
 
 .show-posts .post-box .my-spe {
     position: absolute;
+    bottom: -50px;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 30px;
+    background-color: blue !important;
+    padding: 10px 15px !important;
 }
 
 @media (max-width: 574px) {
@@ -2223,7 +2310,7 @@ table tbody tr td:hover {
 
     .show-posts .post-box {
         width: calc(100% - 2px);
-        margin-top: 20px;
+        margin-top: 30px;
     }
 
     .show-posts .post-box img {
@@ -2238,6 +2325,11 @@ table tbody tr td:hover {
         margin-top: 10px;
         padding-right: 10px;
         font-family: 'Adobe Arabic';
+    }
+
+    .show-posts .post-box .my-spe {
+        font-size: 20px;
+        padding: 5px 10px;
     }
 }
 
@@ -2248,7 +2340,7 @@ table tbody tr td:hover {
 
     .show-posts .post-box {
         width: calc(100% - 2px);
-        margin-top: 20px;
+        margin-top: 30px;
     }
 
     .show-posts .post-box img {
@@ -2263,6 +2355,11 @@ table tbody tr td:hover {
         margin-top: 10px;
         padding-right: 10px;
         font-family: 'Adobe Arabic';
+    }
+
+    .show-posts .post-box .my-spe {
+        font-size: 20px;
+        padding: 5px 10px;
     }
 }
 
@@ -2289,6 +2386,11 @@ table tbody tr td:hover {
         padding-right: 15px;
         font-family: 'Adobe Arabic';
     }
+
+    .show-posts .post-box .my-spe {
+        font-size: 25px;
+        padding: 8px 13px;
+    }
 }
 
 @media (min-width: 992px) {
@@ -2312,6 +2414,11 @@ table tbody tr td:hover {
         margin-top: 20px;
         padding-right: 20px;
         font-family: 'Adobe Arabic';
+    }
+
+    .show-posts .post-box .my-spe {
+        font-size: 30px;
+        padding: 10px 15px;
     }
 }
 
@@ -2348,7 +2455,7 @@ table tbody tr td:hover {
 
 .empty {
     position: absolute;
-    top: 150px;
+    top: 17%;
     left: 50%;
     transform: translate(-50%, -50%);
     font-size: 40px;
@@ -2357,23 +2464,27 @@ table tbody tr td:hover {
 @media (max-width: 574px) {
     .empty {
         font-size: 20px;
+        top: 13%;
     }
 }
 
 @media (min-width: 575px) {
     .empty {
         font-size: 20px;
+        top: 13%;
     }
 }
 
 @media (min-width: 768px) {
     .empty {
         font-size: 25px;
+        top: 15%;
     }
 }
 
 @media (min-width: 992px) {
     .empty {
         font-size: 30px;
+        top: 17%;
     }
 }

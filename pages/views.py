@@ -119,6 +119,7 @@ def pushStudyPost(request):
 def pushPatrolPost(request):
     publish = None
     file_up = None
+    file_up2 = None
     type = None
     
     if request.method == 'POST' and 'send' in request.POST:
@@ -126,9 +127,10 @@ def pushPatrolPost(request):
             if 'publish' in request.POST: publish = request.POST['publish']
             if 'type' in request.POST: type = request.POST['type']
             file_up = DocumentForm(request.POST, request.FILES)
+            file_up2 = DocumentForm(request.POST, request.FILES)
             if file_up.is_valid():
 
-                if  publish and file_up and type:
+                if  publish and file_up and file_up2 and type:
                     new_publish = Publish()
                     new_publish.post = publish
                     new_publish.user_id = request.user
@@ -137,6 +139,7 @@ def pushPatrolPost(request):
                     else:
                         new_publish.is_allowed = False
                     new_publish.file = request.FILES['docfile']
+                    new_publish.file2 = request.FILES['docfile2']
                     new_publish.type = type
                     new_publish.save()
                     messages.success(request, 'تم إضافة المنشور بنجاح')
@@ -222,6 +225,7 @@ def showDetailNews(request):
 def pushNewsPost(request):
     publish = None
     file_up = None
+    file_up2 = None
     type = None
     
     if request.method == 'POST' and 'send' in request.POST:
@@ -229,9 +233,9 @@ def pushNewsPost(request):
             if 'publish' in request.POST: publish = request.POST['publish']
             if 'type' in request.POST: type = request.POST['type']
             file_up = DocumentForm(request.POST, request.FILES)
+            file_up2 = DocumentForm(request.POST, request.FILES)
             if file_up.is_valid():
-
-                if  publish and file_up and type:
+                if  publish and file_up and file_up2 and type:
                     new_publish = Publish()
                     new_publish.post = publish
                     new_publish.user_id = request.user
@@ -240,6 +244,7 @@ def pushNewsPost(request):
                     else:
                         new_publish.is_allowed = False
                     new_publish.file = request.FILES['docfile']
+                    new_publish.file2 = request.FILES['docfile2']
                     new_publish.type = type
                     new_publish.save()
                     messages.success(request, 'تم إضافة المنشور بنجاح')
