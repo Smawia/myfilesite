@@ -16,7 +16,13 @@ def about(request):
     return render(request,'pages/about.html')
 
 def studies(request):
-    return render(request,'pages/studies.html')
+    typeData = 'studies'
+    context = None
+
+    context = {
+        'posts':Publish.objects.all().filter(type=typeData)
+    }
+    return render(request,'pages/studies.html',context)
 
 def contact(request):
     sugg = None
@@ -39,10 +45,22 @@ def contact(request):
     return render(request,'pages/contact.html')
 
 def patrols(request):
-    return render(request,'pages/patrols.html')
+    typeData = 'patrols'
+    context = None
+
+    context = {
+        'posts':Publish.objects.all().filter(type=typeData)
+    }
+    return render(request,'pages/patrols.html',context)
 
 def news(request):
-    return render(request,'pages/news.html')
+    typeData = 'news'
+    context = None
+
+    context = {
+        'posts':Publish.objects.all().filter(type=typeData)
+    }
+    return render(request,'pages/news.html',context)
 
 def showDetailStudies(request):
     name = None

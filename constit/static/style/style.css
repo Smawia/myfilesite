@@ -2249,12 +2249,10 @@ table tbody tr td:hover {
 .show-posts {
     width: 80%;
     margin: 30px auto;
-    box-shadow: 1px 1px 10px silver;
     padding: 20px;
     display: flex;
     justify-content: space-around;
     flex-wrap: wrap;
-    background-color: whitesmoke;
 }
 
 
@@ -2280,11 +2278,11 @@ table tbody tr td:hover {
     margin-top: 20px;
     padding-right: 20px;
     text-align: justify;
-    height: 100px;
-    /* white-space: nowrap;
+    height: 70px;
+    white-space: nowrap;
     overflow: hidden;
-    text-overflow: ellipsis; */
-    overflow: auto;
+    text-overflow: ellipsis;
+    /* overflow: auto; */
     font-family: 'Adobe Arabic';
 }
 
@@ -2309,7 +2307,7 @@ table tbody tr td:hover {
     }
 
     .show-posts .post-box {
-        width: calc(100% - 2px);
+        width: calc(115% - 2px);
         margin-top: 30px;
     }
 
@@ -2339,7 +2337,7 @@ table tbody tr td:hover {
     }
 
     .show-posts .post-box {
-        width: calc(100% - 2px);
+        width: calc(115% - 2px);
         margin-top: 30px;
     }
 
@@ -2369,7 +2367,7 @@ table tbody tr td:hover {
     }
 
     .show-posts .post-box {
-        width: calc(50% - 6px);
+        width: calc(70% - 6px);
         margin-top: 30px;
     }
 

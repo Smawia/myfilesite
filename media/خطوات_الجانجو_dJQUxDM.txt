@@ -1,0 +1,48 @@
+خطوات تثبيت الجانجو:
+تثبيت البايثون
+تثبيت الpip
+curl https://bootst/rap.pypa.io/get-pip.py -o get-pip.py
+curl https://bootstrap.pypa.io/get-pip.py -o get-pip.py
+python get-pip.py
+تحديث الpip باستخدلم الأمر
+python -m pip install -U pip
+تنزيل البيئة الوهمية
+pip install virtualenv
+
+انشاء البيئة
+vertualenv folderName
+تفعيل البيئة
+.\Scripts\activate
+تثبيت الجانجو
+pip install django
+
+
+طريقة أخرى لتحدديث البيب
+python.exe -m pip install --upgrade pip
+
+طريقة اخرى لانشاء البيئة
+python -m venv ./venv
+
+انشاء مشروع
+django-admin startproject coff .
+
+
+تشغيل السرفر
+python manage.py runserver
+
+تسهيل فتح البرنامج
+cd IT
+.\venv\Scripts\activate && code .
+
+cd IT
+start http://localhost:8000
+.\venv\Scripts\activate && python manage.py runserver
+
+start open_project_IT.bat
+start run_server_it.bat
+
+التطبيق والمشروع
+لانشاء تطبيق وربطه بالمشروع
+python manage.py startapp test1
+
+

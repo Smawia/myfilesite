@@ -14,32 +14,18 @@
             <button>المزيد</button>
         </div>
     </a>
-    <!-- <a href="{% url 'patrols' %}">
-        <div class="card">
-            <div class="head">
-                <h3>آخر الدوريات</h3>
+    <div class="show-posts">
+        {% for post in posts %}
+        <div class="post-box">
+            <div class="infop">
+                <i class="fa-regular fa-user"></i><span>{{post.user_id.username}}</span><span>{{post.post_date|date:'Y-m-d H:i'}}</span>
             </div>
-            <div class="i">
-                <i class="fa-brands fa-discourse"></i>
-            </div>
-            <p>إطلاق دورية "حوكمة"<br>
-                مجلة علمية محكمة تتبع المركز التأسيسي للدراسات والبحوث
-            </p>
-            <button>المزيد</button>
+            <p>{{post.post}}</p>
+            <img src="{{ post.file.url }}" alt="">
+            <!-- <a href="../../media/{{post.file2}}" class="spe-a my-spe" download="proposed_file_name"><i class="fa-solid fa-file-arrow-down"></i></a> -->
         </div>
-    </a>
-    <a href="{% url 'news' %}">
-        <div class="card">
-            <div class="head">
-                <h3>آخر الأخبار</h3>
-            </div>
-            <div class="i">
-                <i class="fa-regular fa-newspaper"></i>
-            </div>
-            <p>لا يوجد حالياً</p>
-            <button>المزيد</button>
-        </div>
-    </a> -->
-
+        {% endfor %}
+    </div>
 </div>
+
 {% endblock %}

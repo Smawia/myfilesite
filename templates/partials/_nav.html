@@ -36,7 +36,7 @@
             </ul>
         </li>
         <li class="base-li"><a href=""
-            {% if 'comment' in request.path or 'studies' in request.path or 'showDetailStudies' in request.path or 'showDetailPatrols' in request.path or 'patrols' in request.path or 'pushStudyPost' in request.path or 'pushPatrolPost' in request.path or 'pushnewsPost' in request.path %}
+            {% if 'comment' in request.path or 'studies' in request.path or 'showDetailStudies' in request.path or 'showDetailPatrols' in request.path or 'patrols' in request.path or 'pushStudyPost' in request.path %}
             class="active"
             {% else %}
             class=""
@@ -49,7 +49,7 @@
         </li>
       
         <li><a href="{% url 'patrols' %}"
-            {% if 'patrols' in request.path or 'showDetailPatrols' in request.path %}
+            {% if 'patrols' in request.path or 'showDetailPatrols' in request.path or 'pushPatrolPost' in request.path %}
             class="active"
             {% else %}
             class=""
@@ -92,7 +92,7 @@
             {% endif %}
             >المنشورات</a></li>
         <li><a href="{% url 'news' %}"
-            {% if 'news' in request.path or 'showDetailNews' in request.path %}
+            {% if 'news' in request.path or 'showDetailNews' in request.path or 'pushNewsPost' in request.path %}
             class="active"
             {% else %}
             class=""
