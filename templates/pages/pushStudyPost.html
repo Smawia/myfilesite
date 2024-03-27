@@ -16,15 +16,13 @@
 
                     {% csrf_token %}
                     <textarea name="publish" id="" cols="50" rows="10" placeholder="اكتب منشورك" required></textarea>
-                    <input type="file" name="docfile" id="" style="margin: 30px 0 0 0;" required><label class="image">قم
-                        برفع صورة</label>
-                    <input type="file" name="docfile2" id="" style="margin: 30px 0 0 0;" required><label
-                        class="image">قم
-                        برفع ملف</label>
+                    <span>قم باختيار صورة</span>
+                    <input type="file" name="docfile" id="" style="margin: 10px 0 0 0;" required class="spe-inp">
+                    <span>قم باختيار ملف</span>
+                    <input type="file" name="docfile2" id="" style="margin: 10px 0 0 0;" required class="spe-inp">
                     <input type="text" name="type" id="" value="studies" hidden>
                     <input type="submit" name="send" class="spe-button" value="نشر">
                 </form>
-                <!-- <a href="{% url 'show_posts' %}" class="spe-a all">عرض كل المنشورات</a> -->
                 {% endif %}
         </div>
     </div>
