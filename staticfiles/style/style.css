@@ -15,6 +15,7 @@ body {
     min-height: 100%;
     display: flex;
     flex-direction: column;
+    font-size: 40px;
 }
 
 /* start header */
@@ -159,13 +160,26 @@ header ul .base-li .ul {
     list-style: none;
     padding: 8px 3px;
     transition: 0.3s;
-    margin-top: 5px;
+    margin-top: 15px;
     display: none;
     position: absolute;
     top: 20px;
     right: 0;
     width: 150px;
     z-index: 100;
+}
+
+header ul .base-li .ul::before {
+    content: "";
+    position: absolute;
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: 10px;
+    border-color: #333 transparent transparent transparent;
+    top: -10px;
+    left: 60%;
+    /* transform: translateX(-50%); */
 }
 
 
@@ -1040,7 +1054,7 @@ header img {
         margin-top: 5px;
         border-radius: 8px;
         padding: 3px;
-        font-size: 10px;
+        font-size: 12px;
     }
 }
 
@@ -1049,7 +1063,7 @@ header img {
         margin-top: 5px;
         border-radius: 8px;
         padding: 3px;
-        font-size: 10px;
+        font-size: 12px;
     }
 }
 
@@ -1058,7 +1072,7 @@ header img {
         margin-top: 15px;
         border-radius: 8px;
         padding: 5px 2px;
-        font-size: 15px;
+        font-size: 17px;
     }
 }
 
@@ -1067,7 +1081,7 @@ header img {
         margin-top: 20px;
         border-radius: 8px;
         padding: 8px 3px;
-        font-size: 25px;
+        font-size: 27px;
     }
 }
 
@@ -1087,31 +1101,31 @@ footer {
 
 @media (max-width:466px) {
     footer {
-        font-size: 10px;
+        font-size: 13px;
     }
 }
 
 @media (max-width: 574px) {
     footer {
-        font-size: 10px;
+        font-size: 13px;
     }
 }
 
 @media (min-width: 575px) {
     footer {
-        font-size: 13px;
+        font-size: 15px;
     }
 }
 
 @media (min-width: 768px) {
     footer {
-        font-size: 15px;
+        font-size: 20px;
     }
 }
 
 @media (min-width: 992px) {
     footer {
-        font-size: 20px;
+        font-size: 23px;
     }
 }
 
@@ -2278,8 +2292,10 @@ table tbody tr td:hover {
     margin-top: 20px;
     padding-right: 20px;
     text-align: justify;
-    height: 72px;
+    height: 73px;
     overflow: hidden;
+    /* white-space: nowrap; */
+
     text-overflow: ellipsis;
     /* overflow: auto; */
     font-family: 'Adobe Arabic';
@@ -2465,6 +2481,13 @@ table tbody tr td:hover {
     }
 }
 
+@media (max-width: 574px) {
+    .empty {
+        font-size: 20px;
+        top: 13%;
+    }
+}
+
 @media (min-width: 575px) {
     .empty {
         font-size: 20px;
@@ -2483,5 +2506,13 @@ table tbody tr td:hover {
     .empty {
         font-size: 30px;
         top: 17%;
+    }
+}
+
+@media (max-width: 856px) {
+    .spe-inp {
+        display: block;
+        margin-bottom: 15px;
+        margin-top: 15px;
     }
 }

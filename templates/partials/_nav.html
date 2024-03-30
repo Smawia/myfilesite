@@ -35,7 +35,7 @@
                 <li><a href="{% url 'contact' %}">تواصل معنا</a></li>
             </ul>
         </li>
-        <li class="base-li"><a href=""
+        <li class="base-li"><a href="{% url 'studies' %}"
             {% if 'comment' in request.path or 'studies' in request.path or 'showDetailStudies' in request.path or 'showDetailPatrols' in request.path or 'patrols' in request.path or 'pushStudyPost' in request.path %}
             class="active"
             {% else %}
