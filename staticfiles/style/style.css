@@ -15,7 +15,7 @@ body {
     min-height: 100%;
     display: flex;
     flex-direction: column;
-    font-size: 40px;
+    /* font-size: 40px; */
 }
 
 /* start header */
@@ -515,6 +515,12 @@ header img {
 
 }
 
+@media (max-width: 768px) {
+    .points .left {
+        border-left: none;
+    }
+}
+
 .points .right ul {
     list-style: none;
     padding-right: 20px;
@@ -614,8 +620,14 @@ header img {
     color: white;
     border: 2px solid white;
     border-top-left-radius: 30px;
-    height: 172px;
-    overflow: hidden;
+    /* height: 172px; */
+    /* overflow: hidden; */
+    padding-bottom: 10px;
+
+}
+
+.order .d-f div ul {
+    list-style: none;
 }
 
 @media (max-width: 574px) {
@@ -628,6 +640,7 @@ header img {
 
     .order .d-f div ul {
         list-style: none;
+        text-align: start !important;
     }
 }
 
@@ -641,6 +654,7 @@ header img {
 
     .order .d-f div ul {
         list-style: none;
+        text-align: center !important;
     }
 }
 
@@ -650,12 +664,22 @@ header img {
         margin-bottom: 25px;
         border-bottom: none;
     }
+
+    .order .d-f div ul {
+        list-style: none;
+        text-align: center !important;
+    }
 }
 
 @media (min-width: 992px) {
     .order .d-f div {
         width: calc(33.3% - 4px);
         margin-bottom: 30px;
+    }
+
+    .order .d-f div ul {
+        list-style: none;
+        text-align: start !important;
     }
 }
 
@@ -749,7 +773,7 @@ header img {
     }
 
     .info .date {
-        font-size: 17px;
+        font-size: 15px;
     }
 
     .info p {
@@ -763,7 +787,7 @@ header img {
     }
 
     .info .date {
-        font-size: 17px;
+        font-size: 15px;
     }
 
     .info p {
@@ -829,6 +853,48 @@ header img {
     margin-top: 20px;
     margin-bottom: 20px;
 }
+
+@media (max-width: 574px) {
+
+    .comments .contact .fields input[type="text"],
+    .comments .contact .fields input[type="email"] {
+        display: block;
+        width: 90%;
+        margin-bottom: 10px;
+    }
+
+    .comments .contact .fields span {
+        display: none;
+    }
+}
+
+@media (min-width: 575px) {
+
+    .comments .contact .fields input[type="text"],
+    .comments .contact .fields input[type="email"] {
+        display: block;
+        width: 90%;
+        margin-bottom: 10px;
+    }
+
+    .comments .contact .fields span {
+        display: none;
+    }
+}
+
+@media (min-width: 768px) {
+
+    .comments .contact .fields input[type="text"] {
+        display: inline;
+        width: 50%;
+    }
+
+    .comments .contact .fields input[type="email"] {
+        width: 50%;
+    }
+}
+
+
 
 /* .comments .contact .fields input[type="submit"] {
     background-color: blue;
@@ -1258,12 +1324,13 @@ table tbody tr td:hover {
     padding: 5px 10px;
     display: inline-block;
     transition: 0.3s;
+    font-weight: bold;
 }
 
 @media (max-width: 574px) {
     .spe-a {
         padding: 5px !important;
-        font-size: 12px;
+        font-size: 13px;
         margin-right: 10px;
     }
 }
@@ -1271,7 +1338,7 @@ table tbody tr td:hover {
 @media (min-width: 575px) {
     .spe-a {
         padding: 5px !important;
-        font-size: 12px;
+        font-size: 13px;
         margin-right: 10px !important;
     }
 }
@@ -1279,7 +1346,7 @@ table tbody tr td:hover {
 @media (min-width: 768px) {
     .spe-a {
         padding: 5px 3px;
-        font-size: 15px;
+        font-size: 17px;
         margin-right: 15px;
     }
 }
@@ -1287,7 +1354,7 @@ table tbody tr td:hover {
 @media (min-width: 992px) {
     .spe-a {
         padding: 8px 5px;
-        font-size: 20px;
+        font-size: 23px;
         margin-right: 20px;
     }
 }
@@ -1310,6 +1377,7 @@ table tbody tr td:hover {
     background-color: white;
     box-shadow: 1px 1px 10px silver;
     padding: 10px 20px;
+    font-family: 'Adobe Arabic';
 }
 
 .cretiria h1 {
@@ -1334,9 +1402,6 @@ table tbody tr td:hover {
 }
 
 
-
-
-
 .cretiria .one h3 {
     font-style: italic;
     margin: 20px 0;
@@ -1357,7 +1422,6 @@ table tbody tr td:hover {
     font-size: 20px;
     /* font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; */
     font-family: 'Adobe Arabic';
-    color: #333;
 }
 
 @media (max-width: 574px) {
@@ -1372,6 +1436,7 @@ table tbody tr td:hover {
 
     .cretiria .one h3 {
         font-size: 15px;
+        text-align: start;
     }
 
     .cretiria .one ul li,
@@ -1397,6 +1462,7 @@ table tbody tr td:hover {
 
     .cretiria .one h3 {
         font-size: 17px;
+        text-align: start;
     }
 
     .cretiria .one ul li,
@@ -1779,7 +1845,7 @@ table tbody tr td:hover {
     }
 
     .contactus .container .left form input[type="email"] {
-        width: 100%;
+        width: 70%;
         position: relative;
         z-index: 2;
     }
@@ -1817,7 +1883,7 @@ table tbody tr td:hover {
     }
 
     .contactus .container .left form input[type="email"] {
-        width: 100%;
+        width: 70%;
         position: relative;
         z-index: 2;
     }
@@ -1957,7 +2023,7 @@ table tbody tr td:hover {
     top: 8px;
     border-style: solid;
     border-color: transparent #333 transparent transparent;
-    border-width: 10px;
+    border-width: 8px;
 
 }
 
