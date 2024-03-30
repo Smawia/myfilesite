@@ -128,6 +128,10 @@ header ul {
         color: white;
         font-size: 10px;
     }
+
+    header ul .base-li .ul::before {
+        display: none;
+    }
 }
 
 header ul li {
@@ -229,6 +233,8 @@ header img {
         height: 50px;
         margin-top: 5px;
     }
+
+
 }
 
 @media (min-width: 575px) {
@@ -1058,7 +1064,7 @@ header img {
     border: 2px solid #333;
     outline: none;
     margin-top: 30px;
-    height: 30px;
+    height: 30%;
     padding-right: 20px;
 }
 
@@ -1067,7 +1073,7 @@ header img {
     .signup input[type='text'],
     .signup input[type='email'],
     .signup input[type='password'] {
-        height: 15px;
+        height: 30%;
     }
 }
 
@@ -1076,7 +1082,7 @@ header img {
     .signup input[type='text'],
     .signup input[type='email'],
     .signup input[type='password'] {
-        height: 20px;
+        height: 30%;
     }
 }
 
@@ -1085,7 +1091,7 @@ header img {
     .signup input[type='text'],
     .signup input[type='email'],
     .signup input[type='password'] {
-        height: 25px;
+        height: 25%;
     }
 }
 
@@ -1094,7 +1100,7 @@ header img {
     .signup input[type='text'],
     .signup input[type='email'],
     .signup input[type='password'] {
-        height: 27px;
+        height: 20%;
     }
 }
 
@@ -1223,7 +1229,7 @@ footer {
     .alert-success,
     .alert-error,
     .alert-info {
-        font-size: 13px;
+        font-size: 15px;
         margin-bottom: 3px;
     }
 
@@ -1234,7 +1240,7 @@ footer {
     .alert-success,
     .alert-error,
     .alert-info {
-        font-size: 13px;
+        font-size: 15px;
         margin-bottom: 3px;
     }
 }
@@ -1244,7 +1250,7 @@ footer {
     .alert-success,
     .alert-error,
     .alert-info {
-        font-size: 15px;
+        font-size: 18px;
         margin-bottom: 7px;
     }
 }
@@ -1254,7 +1260,7 @@ footer {
     .alert-success,
     .alert-error,
     .alert-info {
-        font-size: 20px;
+        font-size: 23px;
         margin-bottom: 10px;
     }
 }

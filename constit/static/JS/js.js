@@ -9,7 +9,7 @@ let lis = document.querySelectorAll(".js li");
 
 
 bar.onclick = function () {
-    ul.style.cssText = "display: flex;flex-direction: column;position: absolute;left: -400%;width: 160px;top:10%;z-index: 1000;background-color:#333;color:white";
+    ul.style.cssText = "display: flex;flex-direction: column;position: absolute;left: -430%;width: 160px;top:10%;z-index: 1000;background-color:#333;color:white";
     arrow.style.display = 'inline-block';
     arrow3.style.display = 'inline-block';
     arrow2.style.display = 'none';
