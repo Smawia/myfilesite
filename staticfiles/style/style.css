@@ -194,7 +194,7 @@ header ul .base-li .ul li {
 header ul .base-li .ul li a {
     text-decoration: none;
     color: white;
-    font-size: 10px;
+    font-size: 12px;
 }
 
 header ul li a.active,
@@ -385,7 +385,7 @@ header img {
     width: 0px;
     height: 100%;
     top: 0;
-    left: 0;
+    right: 0;
     background-color: #0000ff61;
     border-bottom-left-radius: 12px;
     border-bottom-right-radius: 12px;
@@ -979,6 +979,7 @@ header img {
 }
 
 @media (min-width: 575px) {
+
     .signin input[type='text'],
     .signin input[type='password'] {
         width: 90%;
@@ -986,9 +987,20 @@ header img {
 }
 
 @media (min-width: 768px) {
+
     .signin input[type='text'],
     .signin input[type='password'] {
-        width: 40%;
+        width: 60%;
+        margin-right: 0;
+    }
+}
+
+@media (min-width: 992px) {
+
+    .signin input[type='text'],
+    .signin input[type='password'] {
+        width: 70%;
+        margin-right: 0;
     }
 }
 
@@ -1099,6 +1111,7 @@ header img {
     .signup input[type='email'],
     .signup input[type='password'] {
         height: 30px;
+        width: 90%;
     }
 }
 
@@ -1108,6 +1121,7 @@ header img {
     .signup input[type='email'],
     .signup input[type='password'] {
         height: 30px;
+        width: 90%;
     }
 }
 
@@ -1116,7 +1130,8 @@ header img {
     .signup input[type='text'],
     .signup input[type='email'],
     .signup input[type='password'] {
-        height: 25px;
+        height: 30px;
+        width: 60%;
     }
 }
 
@@ -1125,7 +1140,8 @@ header img {
     .signup input[type='text'],
     .signup input[type='email'],
     .signup input[type='password'] {
-        height: 20px;
+        height: 30px;
+        width: 70%;
     }
 }
 

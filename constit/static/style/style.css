@@ -194,7 +194,7 @@ header ul .base-li .ul li {
 header ul .base-li .ul li a {
     text-decoration: none;
     color: white;
-    font-size: 10px;
+    font-size: 12px;
 }
 
 header ul li a.active,
@@ -385,7 +385,7 @@ header img {
     width: 0px;
     height: 100%;
     top: 0;
-    left: 0;
+    right: 0;
     background-color: #0000ff61;
     border-bottom-left-radius: 12px;
     border-bottom-right-radius: 12px;
