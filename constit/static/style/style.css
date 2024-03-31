@@ -312,6 +312,7 @@ header img {
     font-size: 23px;
     text-align: justify;
     line-height: 1.6;
+    word-spacing: -1px;
     font-family: 'Adobe Arabic';
 }
 
@@ -550,7 +551,7 @@ header img {
     top: 3px;
     border-style: solid;
     border-color: transparent #333 transparent transparent;
-    border-width: 10px;
+    border-width: 8px;
 }
 
 
@@ -865,7 +866,7 @@ header img {
     .comments .contact .fields input[type="text"],
     .comments .contact .fields input[type="email"] {
         display: block;
-        width: 90%;
+        width: 60%;
         margin-bottom: 10px;
     }
 
@@ -879,7 +880,7 @@ header img {
     .comments .contact .fields input[type="text"],
     .comments .contact .fields input[type="email"] {
         display: block;
-        width: 90%;
+        width: 60%;
         margin-bottom: 10px;
     }
 
@@ -990,6 +991,7 @@ header img {
     outline: none;
     cursor: pointer;
     background-color: #333;
+    font-weight: bold;
 }
 
 @media (max-width: 574px) {
@@ -997,7 +999,7 @@ header img {
         margin-top: 2px;
         border-radius: 8px;
         padding: 3px;
-        font-size: 12px;
+        font-size: 14px;
     }
 }
 
@@ -1006,7 +1008,7 @@ header img {
         margin-top: 2px;
         border-radius: 8px;
         padding: 3px;
-        font-size: 12px;
+        font-size: 14px;
     }
 }
 
@@ -1015,7 +1017,7 @@ header img {
         margin-top: 5px;
         border-radius: 8px;
         padding: 5px 2px;
-        font-size: 15px;
+        font-size: 16px;
     }
 }
 
@@ -2588,3 +2590,7 @@ table tbody tr td:hover {
         margin-top: 15px;
     }
 }
+
+/* ::selection {
+    background-color: red;
+} */

@@ -312,6 +312,7 @@ header img {
     font-size: 23px;
     text-align: justify;
     line-height: 1.6;
+    word-spacing: -1px;
     font-family: 'Adobe Arabic';
 }
 
@@ -550,7 +551,7 @@ header img {
     top: 3px;
     border-style: solid;
     border-color: transparent #333 transparent transparent;
-    border-width: 10px;
+    border-width: 8px;
 }
 
 
@@ -1064,7 +1065,7 @@ header img {
     border: 2px solid #333;
     outline: none;
     margin-top: 30px;
-    height: 30%;
+    height: 30px;
     padding-right: 20px;
 }
 
@@ -1073,7 +1074,7 @@ header img {
     .signup input[type='text'],
     .signup input[type='email'],
     .signup input[type='password'] {
-        height: 30%;
+        height: 30px;
     }
 }
 
@@ -1082,7 +1083,7 @@ header img {
     .signup input[type='text'],
     .signup input[type='email'],
     .signup input[type='password'] {
-        height: 30%;
+        height: 30px;
     }
 }
 
@@ -1091,7 +1092,7 @@ header img {
     .signup input[type='text'],
     .signup input[type='email'],
     .signup input[type='password'] {
-        height: 25%;
+        height: 25px;
     }
 }
 
@@ -1100,7 +1101,7 @@ header img {
     .signup input[type='text'],
     .signup input[type='email'],
     .signup input[type='password'] {
-        height: 20%;
+        height: 20px;
     }
 }
 
@@ -1126,7 +1127,7 @@ header img {
         margin-top: 5px;
         border-radius: 8px;
         padding: 3px;
-        font-size: 12px;
+        font-size: 15px;
     }
 }
 
@@ -1135,7 +1136,7 @@ header img {
         margin-top: 5px;
         border-radius: 8px;
         padding: 3px;
-        font-size: 12px;
+        font-size: 15px;
     }
 }
 
@@ -1144,7 +1145,7 @@ header img {
         margin-top: 15px;
         border-radius: 8px;
         padding: 5px 2px;
-        font-size: 17px;
+        font-size: 20px;
     }
 }
 
@@ -1229,8 +1230,8 @@ footer {
     .alert-success,
     .alert-error,
     .alert-info {
-        font-size: 15px;
-        margin-bottom: 3px;
+        font-size: 13px !important;
+        margin-bottom: 5px !important;
     }
 
 }
@@ -1240,8 +1241,8 @@ footer {
     .alert-success,
     .alert-error,
     .alert-info {
-        font-size: 15px;
-        margin-bottom: 3px;
+        font-size: 13px !important;
+        margin-bottom: 5px !important;
     }
 }
 
@@ -1250,8 +1251,8 @@ footer {
     .alert-success,
     .alert-error,
     .alert-info {
-        font-size: 18px;
-        margin-bottom: 7px;
+        font-size: 18px !important;
+        margin-bottom: 7px !important;
     }
 }
 
@@ -1260,8 +1261,8 @@ footer {
     .alert-success,
     .alert-error,
     .alert-info {
-        font-size: 23px;
-        margin-bottom: 10px;
+        font-size: 23px !important;
+        margin-bottom: 10px !important;
     }
 }
 
@@ -2588,3 +2589,7 @@ table tbody tr td:hover {
         margin-top: 15px;
     }
 }
+
+/* ::selection {
+    background-color: red;
+} */
