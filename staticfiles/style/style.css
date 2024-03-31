@@ -866,7 +866,7 @@ header img {
     .comments .contact .fields input[type="text"],
     .comments .contact .fields input[type="email"] {
         display: block;
-        width: 90%;
+        width: 60%;
         margin-bottom: 10px;
     }
 
@@ -880,7 +880,7 @@ header img {
     .comments .contact .fields input[type="text"],
     .comments .contact .fields input[type="email"] {
         display: block;
-        width: 90%;
+        width: 60%;
         margin-bottom: 10px;
     }
 
@@ -970,6 +970,29 @@ header img {
     padding-right: 20px;
 }
 
+@media (max-width: 574px) {
+
+    .signin input[type='text'],
+    .signin input[type='password'] {
+        width: 90%;
+    }
+}
+
+@media (min-width: 575px) {
+    .signin input[type='text'],
+    .signin input[type='password'] {
+        width: 90%;
+    }
+}
+
+@media (min-width: 768px) {
+    .signin input[type='text'],
+    .signin input[type='password'] {
+        width: 40%;
+    }
+}
+
+
 .f {
     display: flex;
     justify-content: start;
@@ -991,6 +1014,7 @@ header img {
     outline: none;
     cursor: pointer;
     background-color: #333;
+    font-weight: bold;
 }
 
 @media (max-width: 574px) {
@@ -998,7 +1022,7 @@ header img {
         margin-top: 2px;
         border-radius: 8px;
         padding: 3px;
-        font-size: 12px;
+        font-size: 14px;
     }
 }
 
@@ -1007,7 +1031,7 @@ header img {
         margin-top: 2px;
         border-radius: 8px;
         padding: 3px;
-        font-size: 12px;
+        font-size: 14px;
     }
 }
 
@@ -1016,7 +1040,7 @@ header img {
         margin-top: 5px;
         border-radius: 8px;
         padding: 5px 2px;
-        font-size: 15px;
+        font-size: 16px;
     }
 }
 

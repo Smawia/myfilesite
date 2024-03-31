@@ -970,6 +970,41 @@ header img {
     padding-right: 20px;
 }
 
+@media (max-width: 574px) {
+
+    .signin input[type='text'],
+    .signin input[type='password'] {
+        width: 90%;
+    }
+}
+
+@media (min-width: 575px) {
+
+    .signin input[type='text'],
+    .signin input[type='password'] {
+        width: 90%;
+    }
+}
+
+@media (min-width: 768px) {
+
+    .signin input[type='text'],
+    .signin input[type='password'] {
+        width: 60%;
+        margin-right: 0;
+    }
+}
+
+@media (min-width: 992px) {
+
+    .signin input[type='text'],
+    .signin input[type='password'] {
+        width: 70%;
+        margin-right: 0;
+    }
+}
+
+
 .f {
     display: flex;
     justify-content: start;
@@ -1076,6 +1111,7 @@ header img {
     .signup input[type='email'],
     .signup input[type='password'] {
         height: 30px;
+        width: 90%;
     }
 }
 
@@ -1085,6 +1121,7 @@ header img {
     .signup input[type='email'],
     .signup input[type='password'] {
         height: 30px;
+        width: 90%;
     }
 }
 
@@ -1093,7 +1130,8 @@ header img {
     .signup input[type='text'],
     .signup input[type='email'],
     .signup input[type='password'] {
-        height: 25px;
+        height: 30px;
+        width: 60%;
     }
 }
 
@@ -1102,7 +1140,8 @@ header img {
     .signup input[type='text'],
     .signup input[type='email'],
     .signup input[type='password'] {
-        height: 20px;
+        height: 30px;
+        width: 70%;
     }
 }
 
