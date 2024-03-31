@@ -162,7 +162,7 @@ header ul .base-li .ul {
     flex-direction: column;
     background-color: #333;
     list-style: none;
-    padding: 8px 3px;
+    padding: 8px 5px 8px 0;
     transition: 0.3s;
     margin-top: 15px;
     display: none;
@@ -186,9 +186,14 @@ header ul .base-li .ul::before {
     /* transform: translateX(-50%); */
 }
 
-
 header ul .base-li .ul li {
+    margin-right: 0;
+}
+
+header ul .base-li .ul li:not(:last-of-type) {
+    padding-bottom: 10px;
     margin-bottom: 10px;
+    border-bottom: 1px solid white;
 }
 
 header ul .base-li .ul li a {
