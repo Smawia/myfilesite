@@ -2642,12 +2642,12 @@ input[type="text"],
 input[type="email"],
 textarea {
     padding-right: 10px !important;
+    font-weight: bold;
 }
 
 ::placeholder {
     font-weight: bold;
     font-size: 16px;
-    padding-top: 1px;
 }
 
 ::-webkit-scrollbar {
