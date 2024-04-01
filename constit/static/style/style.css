@@ -2638,3 +2638,38 @@ table tbody tr td:hover {
 /* ::selection {
     background-color: red;
 } */
+input[type="text"],
+input[type="email"],
+textarea {
+    padding-right: 10px !important;
+}
+
+::placeholder {
+    font-weight: bold;
+    font-size: 16px;
+}
+
+::-webkit-scrollbar {
+    width: 15px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+    box-shadow: 0 0 5px silver;
+    border-radius: 10px;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+    background: #333;
+    border-radius: 10px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+    background: blue;
+}
+
+input {
+    caret-color: #333;
+}
