@@ -2638,11 +2638,12 @@ table tbody tr td:hover {
 /* ::selection {
     background-color: red;
 } */
-input[type="text"],
-input[type="email"],
+input,
 textarea {
     padding-right: 10px !important;
     font-weight: bold;
+    color: #333;
+    padding-top: 3px;
 }
 
 ::placeholder {
