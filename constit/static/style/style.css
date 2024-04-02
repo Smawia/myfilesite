@@ -628,7 +628,7 @@ header img {
 
 .order .d-f div {
     width: calc(33.3% - 6px);
-    background-color: #333;
+    background-color: #33333394;
     color: white;
     border: 2px solid white;
     border-top-left-radius: 30px;
@@ -641,6 +641,8 @@ header img {
 .order .d-f div ul {
     list-style: none;
     font-weight: bold;
+    /* color: black; */
+    font-size: 18px;
 }
 
 @media (max-width: 574px) {
@@ -1479,7 +1481,7 @@ table tbody tr td:hover {
 
 @media (max-width: 574px) {
     .cretiria p {
-        font-size: 15px;
+        font-size: 17px;
         text-align: justify;
     }
 
