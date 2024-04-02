@@ -640,6 +640,7 @@ header img {
 
 .order .d-f div ul {
     list-style: none;
+    font-weight: bold;
 }
 
 @media (max-width: 574px) {
@@ -1611,7 +1612,7 @@ table tbody tr td:hover {
     font-size: 22px;
     line-height: 1.6;
     width: 90%;
-    color: #333;
+    color: black;
     padding-left: 0;
     font-family: 'Adobe Arabic';
     text-align: justify;
@@ -1639,6 +1640,8 @@ table tbody tr td:hover {
     width: calc(33.3% - 8px);
     background-color: #b0b0b0;
     border-radius: 12px;
+    color: #333;
+    line-height: 1.6;
 }
 
 .d-flex .authers div ul {
@@ -2091,7 +2094,7 @@ table tbody tr td:hover {
     font-weight: normal;
     text-align: end;
     padding-left: 10px;
-    color: blueviolet;
+    /* color: blueviolet; */
 }
 
 
@@ -2113,14 +2116,14 @@ table tbody tr td:hover {
 }
 
 .patrols .text .two {
-    color: #8a2be2;
+    color: black;
     text-align: center;
     font-size: 10px;
     font-weight: bold;
 }
 
 .patrols .text .two a {
-    color: #8a2be2;
+    color: blue;
     text-decoration: none;
 }
 

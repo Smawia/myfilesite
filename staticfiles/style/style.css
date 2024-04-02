@@ -1639,6 +1639,8 @@ table tbody tr td:hover {
     width: calc(33.3% - 8px);
     background-color: #b0b0b0;
     border-radius: 12px;
+    color: #333;
+    line-height: 1.6;
 }
 
 .d-flex .authers div ul {
@@ -1806,6 +1808,9 @@ table tbody tr td:hover {
     width: 100%;
     resize: none;
     padding-right: 10px;
+    position: relative;
+    z-index: 100;
+    background-color: transparent;
 }
 
 .contactus .container .left form input[type="email"] {
@@ -1814,6 +1819,8 @@ table tbody tr td:hover {
     display: block;
     margin-bottom: 20px;
     height: 25px;
+    background-color: transparent !important;
+    border: 1px solid black;
 }
 
 
@@ -1823,6 +1830,8 @@ table tbody tr td:hover {
     font-size: 30px;
     font-style: italic;
     margin-top: 0;
+    position: relative;
+    z-index: 1000;
 }
 
 .contactus .address .one {
