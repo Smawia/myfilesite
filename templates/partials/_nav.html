@@ -22,8 +22,8 @@
             class=""
             {% endif %}
             >الصفحة الرئيسية</a></li>
-        <li class="base-li"><a href="{% url 'about' %}"
-            {% if 'about' in request.path or '/criteria' in request.path or 'contact' in request.path %}
+        <li class="base-li"><a href="#"
+            {% if 'about' in request.path or '/criteria' in request.path %}
             class="active"
             {% else %}
             class=""
@@ -32,7 +32,7 @@
             <ul class="ul">
                 <li><a href="{% url 'about' %}">عن المركز</a></li>
                 <li><a href="{% url 'criteria' %}">معايير النشر</a></li>
-                <li><a href="{% url 'contact' %}">تواصل معنا</a></li>
+                
             </ul>
         </li>
         <li class="base-li"><a href="{% url 'studies' %}"
@@ -47,14 +47,14 @@
                 <li><a href="{% url 'patrols' %}">الدورية</a></li>
             </ul>
         </li>   
-        <li><a href="{% url 'patrols' %}"
+        <!-- <li><a href="{% url 'patrols' %}"
             {% if 'patrols' in request.path or 'showDetailPatrols' in request.path or 'pushPatrolPost' in request.path %}
             class="active"
             {% else %}
             class=""
             {% endif %}
             >الدوريات</a>
-        </li>
+        </li> -->
         <li><a href="{% url 'all_posts' %}" 
             {% if not request.user.is_authenticated or not request.user.is_superuser %}
             style="display: none;"
@@ -84,6 +84,13 @@
             {% endif %}
             {% endif %}
             >تسجيل عضوية</a></li>
+        <li><a href="{% url 'contact' %}" 
+            {% if 'contact' in request.path %}
+            class="active"
+            {% else %}
+            class=""
+            {% endif %}
+            >تواصل معنا</a></li>
     </ul>
     </div>
     <img src="{% static 'imgs/logo.png' %}" alt="">

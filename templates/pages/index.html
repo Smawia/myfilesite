@@ -3,6 +3,77 @@
 {% load static %}
 
 {% block content %}
+
+<!-- start image slider -->
+<!-- <div class="images-slider">
+    <div class="text">  
+        <a href="#">
+            <p class="one">dddddd"المركز التأسيسي للدراسات والبحوث" مؤسسة بحثية فكرية تطويرية مستقلة غير ربحية، تختص
+                بالعلوم الإنسانية
+                (الإدارية والسياسية والقانونية والاقتصادية والاجتماعية والتنموية والاتصالية والرقمية).
+            </p>
+            <span class="ones">12 مارس 2024</span>
+        </a>
+        <a href="{% url 'firstpage' %}">
+            <p class="two" style="display: none;">gggggg"المركز التأسيسي للدراسات والبحوث" مؤسسة بحثية فكرية تطويرية
+                مستقلة غير ربحية، تختص
+                بالعلوم الإنسانية
+            </p>
+            <span class="twos" style="display: none;">25 يناير 2024</span>
+        </a>
+        <a href="#">
+            <p class="three" style="display: none;">kkkkkkkk"امؤسسة بحثية فكرية تطويرية مستقلة غير ربحية، تختص
+                بالعلوم
+                الإنسانية
+                (الإدارية والسياسية والقانونية والاقتصادية والاجتماعية والتنموية والاتصالية والرقمية).
+            </p>
+            <span class="threes" style="display: none;">28 فبراير 2024</span>
+        </a>
+    </div>
+    <span class="right">&lt;</span>
+    <span class="left">&gt;</span>
+</div> -->
+
+<section class="container-sec">
+    <div class="card">
+        <div class="image">
+            <img src="{% static 'imgs/pexels-photo-206359.jpeg' %}" alt="">
+        </div>
+        <a href="#">
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Officiis in expedita ducimus nisi
+            </p>
+        </a>
+    </div>
+    <div class="card">
+        <div class="image">
+            <img src="{% static 'imgs/pexels-photo-206359.jpeg' %}" alt="">
+        </div>
+        <a href="#">
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Officiis in expedita ducimus nisi
+            </p>
+        </a>
+    </div>
+    <div class="card">
+        <div class="image">
+            <img src="{% static 'imgs/pexels-photo-206359.jpeg' %}" alt="">
+        </div>
+        <a href="#">
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Officiis in expedita ducimus nisi
+            </p>
+        </a>
+    </div>
+    <div class="card">
+        <div class="image">
+            <img src="{% static 'imgs/pexels-photo-206359.jpeg' %}" alt="">
+        </div>
+        <a href="{% url 'firstpage' %}">
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Officiis in expedita ducimus nisi
+            </p>
+        </a>
+    </div>
+</section>
+
+<!-- end image slider -->
 <!-- text info -->
 <div class="text-info">
     <img src="{% static 'imgs/logo.png' %}" alt="">
@@ -13,45 +84,95 @@
 </div>
 
 <!-- text info -->
+<h1 class="spe-h1">آخر الإصدارات</h1>
 <div class="show-i">
     <a href="{% url 'showDetailStudies' %}">
         <div class="card">
-            <div class="head">
-                <h3>آخر إصدارات المركز</h3>
+            <div class="image-card">
+                <img src="{% static 'imgs/aimen.jpeg' %}" alt="">
             </div>
-            <div class="i">
-                <i class="fa-solid fa-code-compare"></i>
-            </div>
+            <i class="fa-solid fa-calendar"></i><span>24 , أبريل 2010</span>
             <p>كتاب جماعي بعنوان "رؤية مستقبلية للإصلاح الإداري الشامل في الجمهورية اليمنية- دراسة تحليلية مقارنة"</p>
-            <button>المزيد</button>
         </div>
     </a>
-    <a href="{% url 'showDetailPatrols' %}">
+    <a href="{% url 'firstpage' %}">
         <div class="card">
-            <div class="head">
-                <h3>آخر الدوريات</h3>
+            <div class="image-card">
+                <img src="{% static 'imgs/aimen.jpeg' %}" alt="">
             </div>
-            <div class="i">
-                <i class="fa-brands fa-discourse"></i>
-            </div>
-            <p>إطلاق دورية "حوكمة"<br>
-                مجلة علمية محكمة تتبع المركز التأسيسي للدراسات والبحوث
-            </p>
-            <button>المزيد</button>
+            <i class="fa-solid fa-calendar"></i><span>24 , أبريل 2010</span>
+            <p>كتاب جماعي بعنوان "رؤية مستقبلية للإصلاح الإداري الشامل في الجمهورية اليمنية- دراسة تحليلية مقارنة"</p>
         </div>
     </a>
     <a href="{% url 'showDetailNews' %}">
         <div class="card">
-            <div class="head">
-                <h3>آخر الأخبار</h3>
+            <div class="image-card">
+                <img src="{% static 'imgs/aimen.jpeg' %}" alt="">
             </div>
-            <div class="i">
-                <i class="fa-regular fa-newspaper"></i>
-            </div>
-            <p>لا يوجد حالياً</p>
-            <button>المزيد</button>
+            <i class="fa-solid fa-calendar"></i><span>24 , أبريل 2010</span>
+            <p>كتاب جماعي بعنوان "رؤية مستقبلية للإصلاح الإداري الشامل في الجمهورية اليمنية- دراسة تحليلية مقارنة"</p>
         </div>
     </a>
+</div>
+<h1 class="spe-h1">آخر الدوريات</h1>
+<div class="show-i">
+    <a href="{% url 'showDetailStudies' %}">
+        <div class="card">
+            <div class="image-card">
+                <img src="{% static 'imgs/aimen.jpeg' %}" alt="">
+            </div>
+            <i class="fa-solid fa-calendar"></i><span>24 , أبريل 2010</span>
+            <p>كتاب جماعي بعنوان "رؤية مستقبلية للإصلاح الإداري الشامل في الجمهورية اليمنية- دراسة تحليلية مقارنة"</p>
+        </div>
+    </a>
+    <a href="{% url 'showDetailPatrols' %}">
+        <div class="card">
+            <div class="image-card">
+                <img src="{% static 'imgs/aimen.jpeg' %}" alt="">
+            </div>
+            <i class="fa-solid fa-calendar"></i><span>24 , أبريل 2010</span>
+            <p>كتاب جماعي بعنوان "رؤية مستقبلية للإصلاح الإداري الشامل في الجمهورية اليمنية- دراسة تحليلية مقارنة"</p>
+        </div>
+    </a>
+    <a href="{% url 'showDetailNews' %}">
+        <div class="card">
+            <div class="image-card">
+                <img src="{% static 'imgs/aimen.jpeg' %}" alt="">
+            </div>
+            <i class="fa-solid fa-calendar"></i><span>24 , أبريل 2010</span>
+            <p>كتاب جماعي بعنوان "رؤية مستقبلية للإصلاح الإداري الشامل في الجمهورية اليمنية- دراسة تحليلية مقارنة"</p>
+        </div>
+    </a>
+</div>
+<h1 class="spe-h1">آخر الأخبار</h1>
+<div class="show-i">
 
+    <a href="{% url 'showDetailStudies' %}">
+        <div class="card">
+            <div class="image-card">
+                <img src="{% static 'imgs/aimen.jpeg' %}" alt="">
+            </div>
+            <i class="fa-solid fa-calendar"></i><span>24 , أبريل 2010</span>
+            <p>كتاب جماعي بعنوان "رؤية مستقبلية للإصلاح الإداري الشامل في الجمهورية اليمنية- دراسة تحليلية مقارنة"</p>
+        </div>
+    </a>
+    <a href="{% url 'showDetailPatrols' %}">
+        <div class="card">
+            <div class="image-card">
+                <img src="{% static 'imgs/aimen.jpeg' %}" alt="">
+            </div>
+            <i class="fa-solid fa-calendar"></i><span>24 , أبريل 2010</span>
+            <p>كتاب جماعي بعنوان "رؤية مستقبلية للإصلاح الإداري الشامل في الجمهورية اليمنية- دراسة تحليلية مقارنة"</p>
+        </div>
+    </a>
+    <a href="{% url 'showDetailNews' %}">
+        <div class="card">
+            <div class="image-card">
+                <img src="{% static 'imgs/aimen.jpeg' %}" alt="">
+            </div>
+            <i class="fa-solid fa-calendar"></i><span>24 , أبريل 2010</span>
+            <p>كتاب جماعي بعنوان "رؤية مستقبلية للإصلاح الإداري الشامل في الجمهورية اليمنية- دراسة تحليلية مقارنة"</p>
+        </div>
+    </a>
 </div>
 {% endblock %}

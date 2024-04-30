@@ -276,6 +276,12 @@ def pushNewsPost(request):
         
     else:
         return render(request,'pages/pushNewsPost.html')
+    
+def firstpage(request):
+    return render(request,'pages/firstpage.html')
+
+def error_404(request,exception):
+    return render(request,'pages/404_error.html')
 
 
    
