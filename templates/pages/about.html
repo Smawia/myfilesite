@@ -1,7 +1,8 @@
 {% extends 'base.html' %}
-
+{% load static %}
 {% block content %}
 <div class="points">
+    <img src="{% static 'imgs/logo.png' %}" alt="">
     <div class="left">
         <div class="txt1">
             <h2>الرؤية</h2>
@@ -26,7 +27,7 @@
 
     <div class="right">
         <div class="txt1">
-            <h4>أهداف المركز</h4>
+            <h2>أهداف المركز</h2>
             <p>في ضوء رؤية المركز ورسالته، يعمل المركز على تحقيق أهداف علمية وعملية بواسطة أنشطته الأكاديمية
                 والبحثية
                 والتدريبية والاستشارية، وتتمثل هذه الأهداف في الآتي:
@@ -63,6 +64,7 @@
 </div>
 
 <div class="work">
+    <img src="{% static 'imgs/logo.png' %}" alt="">
     <h3>وسائل عمل المركز</h3>
     <p>يسعى المركز لتحقيق الأهداف المشار إليها من خلال الآليات والوسائل التالية:</p>
     <ul>

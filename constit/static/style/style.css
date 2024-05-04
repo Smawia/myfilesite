@@ -243,6 +243,12 @@ header img {
     width: 100px;
     height: 100px;
     border-radius: 50%;
+    transition: 0.6s;
+    cursor: pointer;
+}
+
+header img:hover {
+    transform: rotate(360deg);
 }
 
 @media (max-width: 574px) {
@@ -538,6 +544,18 @@ header img {
     padding: 30px;
     font-family: 'Adobe Arabic';
     font-size: 18px;
+    position: relative;
+}
+
+.points img {
+    position: absolute;
+    width: 350px;
+    height: 350px;
+    top: 50%;
+    left: 50%;
+    border-radius: 50%;
+    transform: translate(-50%, -50%);
+    opacity: 0.3;
 }
 
 @media (max-width: 574px) {
@@ -566,13 +584,22 @@ header img {
 
 .points .left {
     background-color: white;
-    border-top-left-radius: 20px;
-    /* border-bottom-left-radius: 20px; */
     padding: 10px;
-    margin-left: 20px;
-    border-left: 1px solid #333;
-
+    margin-left: 40px;
+    position: relative;
 }
+
+.points .left::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 5px;
+    height: 100%;
+    background-color: black;
+    border-radius: 10px;
+}
+
 
 @media (max-width: 768px) {
     .points .left {
@@ -584,7 +611,10 @@ header img {
     list-style: none;
     padding-right: 20px;
     margin-top: 30px;
-
+    text-align: justify;
+    font-family: 'Calibri';
+    position: relative;
+    z-index: 1000;
 }
 
 .points .right ul li {
@@ -609,11 +639,12 @@ header img {
 
 .points .txt1 p {
     line-height: 1.6;
+    font-family: 'Calibri';
 }
 
 .points .txt1 ol {
     font-size: 20px;
-
+    font-family: 'Calibri';
 }
 
 .work {
@@ -625,10 +656,22 @@ header img {
     box-shadow: 1px 1px 10px silver;
     font-family: 'Adobe Arabic';
     font-size: 20px;
+    position: relative;
+}
+
+.work img {
+    position: absolute;
+    width: 350px;
+    height: 350px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    opacity: 0.3;
 }
 
 .work ul {
     list-style: none;
+    font-family: 'Calibri';
 }
 
 .work ul li {
@@ -675,15 +718,13 @@ header img {
 
 .order .d-f div {
     width: calc(33.3% - 6px);
-    background-color: #33333394;
+    background-color: #333;
     color: white;
     border: 2px solid white;
     border-top-left-radius: 30px;
-    /* height: 172px; */
     overflow: hidden;
     padding-bottom: 10px;
     border-radius: 12px;
-
 }
 
 .order .d-f div ul {
@@ -1267,7 +1308,9 @@ footer {
 }
 
 footer .info-footer {
-    text-align: start;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
     color: #b0b0b0 !important;
     transition: 0.5s;
 }
@@ -1308,6 +1351,22 @@ footer .info-footer ul li i {
     margin-left: 20px;
 }
 
+.fa-phone {
+    position: relative;
+    left: 12px;
+}
+
+.my-env {
+    position: relative;
+    right: 30px;
+}
+
+footer .info-footer .email {
+    position: relative;
+    right: 30px;
+}
+
+
 
 @media (max-width:466px) {
     footer {
@@ -1319,6 +1378,11 @@ footer .info-footer ul li i {
     footer {
         font-size: 15px;
     }
+
+    footer .info-footer {
+        flex-direction: column;
+    }
+
 }
 
 @media (min-width: 575px) {
@@ -1336,6 +1400,18 @@ footer .info-footer ul li i {
 @media (min-width: 992px) {
     footer {
         font-size: 23px;
+    }
+}
+
+@media (max-width: 780px) {
+    .my-env {
+        position: relative;
+        right: 20px;
+    }
+
+    footer .info-footer .email {
+        position: relative;
+        right: 20px;
     }
 }
 
@@ -3203,7 +3279,7 @@ input {
 .container-sec {
     display: flex;
     gap: 12px;
-    max-width: 80%;
+    max-width: 70%;
     margin: 20px auto;
     background-color: rgba(0, 0, 255, 0.823);
     border-radius: 12px;
@@ -3281,3 +3357,10 @@ input {
     text-decoration: none;
     color: #333;
 }
+
+/* start styling special icons */
+.fa-calendar {
+    padding-right: 20px;
+}
+
+/* end styling special icons */
