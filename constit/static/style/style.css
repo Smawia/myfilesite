@@ -422,6 +422,7 @@ header img:hover {
 .show-i .card .image-card img {
     border-radius: 12px;
     width: 100%;
+    max-height: 220px;
 }
 
 .show-i .card i {
@@ -2189,7 +2190,7 @@ table tbody tr td:hover {
 
 /* start patrols */
 .patrols {
-    width: 81%;
+    width: 80%;
     background-color: white;
     padding: 15px;
     box-shadow: 1px 1px 10px silver;
@@ -2212,7 +2213,7 @@ table tbody tr td:hover {
 
 .patrols h2 {
     text-align: center;
-    background-color: #333;
+    background-color: rgba(0, 0, 255, 0.823) !important;
     border: 2px solid white;
     border-radius: 12px;
     width: fit-content;
@@ -2223,7 +2224,7 @@ table tbody tr td:hover {
 }
 
 .patrols .head {
-    background-color: #333;
+    background-color: rgba(0, 0, 255, 0.823) !important;
     padding: 20px;
     border-radius: 12px;
     border: 2px solid white;
@@ -2233,13 +2234,44 @@ table tbody tr td:hover {
     color: white;
 }
 
+.patrols span {
+    font-size: 22px;
+}
+
+@media (max-width: 574px) {
+    .patrols span {
+        font-size: 18px;
+    }
+}
+
+@media (min-width: 575px) {
+    .patrols span {
+        font-size: 18px;
+    }
+}
+
+@media (min-width: 768px) {
+    .patrols span {
+        font-size: 20px;
+    }
+}
+
+@media (min-width: 992px) {
+    .patrols span {
+        font-size: 22px;
+    }
+}
+
 .patrols p {
     font-size: 20px;
     line-height: 1.6;
+    font-family: 'Calibri';
+    text-align: justify;
 }
 
 .patrols ul {
     list-style: none;
+    font-family: 'Calibri';
 }
 
 .patrols ul li {
@@ -2308,7 +2340,6 @@ table tbody tr td:hover {
 @media (max-width: 574px) {
     .patrols h2 {
         text-align: center;
-        background-color: #333;
         border: 2px solid white;
         border-radius: 8px;
         width: fit-content;
@@ -2324,7 +2355,6 @@ table tbody tr td:hover {
     }
 
     .patrols .head {
-        background-color: #333;
         padding: 10px;
         border-radius: 8px;
         border: 2px solid white;
@@ -2371,7 +2401,6 @@ table tbody tr td:hover {
 @media (min-width: 575px) {
     .patrols h2 {
         text-align: center;
-        background-color: #333;
         border: 2px solid white;
         border-radius: 8px;
         width: fit-content;
@@ -2387,7 +2416,6 @@ table tbody tr td:hover {
     }
 
     .patrols .head {
-        background-color: #333;
         padding: 10px;
         border-radius: 8px;
         border: 2px solid white;
@@ -2434,7 +2462,6 @@ table tbody tr td:hover {
 @media (min-width: 768px) {
     .patrols h2 {
         text-align: center;
-        background-color: #333;
         border: 2px solid white;
         border-radius: 8px;
         width: fit-content;
@@ -2450,7 +2477,6 @@ table tbody tr td:hover {
     }
 
     .patrols .head {
-        background-color: #333;
         padding: 10px;
         border-radius: 8px;
         border: 2px solid white;
@@ -2497,7 +2523,6 @@ table tbody tr td:hover {
 @media (min-width: 992px) {
     .patrols h2 {
         text-align: center;
-        background-color: #333;
         border: 2px solid white;
         border-radius: 8px;
         width: fit-content;
@@ -2513,7 +2538,6 @@ table tbody tr td:hover {
     }
 
     .patrols .head {
-        background-color: #333;
         padding: 10px;
         border-radius: 8px;
         border: 2px solid white;
@@ -3001,8 +3025,10 @@ input {
 /* start first page */
 
 .first-page {
-    width: 90%;
+    width: 80%;
     margin: 30px auto;
+    box-shadow: 1px 1px 10px silver;
+    padding: 20px;
     position: relative;
 }
 
@@ -3031,6 +3057,7 @@ input {
     right: 30px;
     font-family: 'greta arabic, sans-serif';
     font-weight: bold;
+    margin-right: 20px;
 }
 
 .first-page .info {
@@ -3308,6 +3335,7 @@ input {
     color: #333;
     text-align: center;
     font-family: 'Calibri';
+    max-width: 60%;
 }
 
 .card .image {
@@ -3318,30 +3346,6 @@ input {
     margin-bottom: 10px;
     position: relative;
     right: 40px;
-}
-
-@media (max-width: 574px) {
-    .card .image {
-        right: 20px;
-    }
-}
-
-@media (min-width: 575px) {
-    .card .image {
-        right: 20px;
-    }
-}
-
-@media (min-width: 768px) {
-    .card .image {
-        right: 25px;
-    }
-}
-
-@media (min-width: 992px) {
-    .card .image {
-        right: 30px;
-    }
 }
 
 .card .image img {
@@ -3357,6 +3361,36 @@ input {
     text-decoration: none;
     color: #333;
 }
+
+@media (max-width: 574px) {
+    .card .image {
+        width: 180px;
+        right: -26px;
+    }
+}
+
+@media (min-width: 575px) {
+    .card .image {
+        width: 180px;
+        right: -26px;
+    }
+}
+
+@media (min-width: 768px) {
+    .card .image {
+        width: 300px;
+        right: -18px;
+    }
+}
+
+@media (min-width: 992px) {
+    .card .image {
+        width: 450px;
+        right: -15px;
+    }
+}
+
+
 
 /* start styling special icons */
 .fa-calendar {
