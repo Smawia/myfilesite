@@ -2783,7 +2783,7 @@ table tbody tr td:hover {
 .news h2 {
     background-color: red;
     color: white;
-    text-align: center;
+    width: fit-content;
     padding: 15px;
     border-radius: 12px;
 }
@@ -3076,6 +3076,75 @@ input {
     margin-right: 20px;
 }
 
+.first-page .full-text img {
+    width: 400px;
+    height: 250px;
+    display: block;
+    margin: 5px auto;
+    border-radius: 12px;
+}
+
+@media (max-width: 574px) {
+    .first-page .full-text img {
+        width: 200px;
+        height: 150px;
+    }
+}
+
+@media (min-width: 575px) {
+    .first-page .full-text img {
+        width: 200px;
+        height: 150px;
+    }
+}
+
+@media (min-width: 768px) {
+    .first-page .full-text img {
+        width: 300px;
+        height: 250px;
+    }
+}
+
+@media (min-width: 992px) {
+    .first-page .full-text img {
+        width: 350px;
+        height: 300px;
+    }
+}
+
+.first-page .us-table {
+    border: 1px solid white;
+}
+
+.first-page .us-table tr td:hover {
+    background-color: #ddd !important;
+    color: black;
+}
+
+@media (max-width: 574px) {
+    .first-page .us-table {
+        font-size: 18px;
+    }
+}
+
+@media (min-width: 575px) {
+    .first-page .us-table {
+        font-size: 18px;
+    }
+}
+
+@media (min-width: 768px) {
+    .first-page .us-table {
+        font-size: 23px;
+    }
+}
+
+@media (min-width: 992px) {
+    .first-page .us-table {
+        font-size: 28px;
+    }
+}
+
 .first-page .full-text h2 {
     font-size: 30px;
     font-family: 'Calibri';
@@ -3087,15 +3156,20 @@ input {
     text-align: justify;
     /* font-weight: bold; */
     font-size: 30px;
-    letter-spacing: -1px;
 }
 
 .first-page .full-text ul,
 .first-page .full-text ol {
     font-size: 30px;
-    line-height: 1.6;
+    line-height: 1.8;
     font-family: 'Calibri';
     text-align: justify;
+    word-spacing: -1px;
+}
+
+.first-page .full-text ul li,
+.first-page .full-text ol li {
+    margin-top: 30px;
 }
 
 .first-page .full-text span sup {
@@ -3204,13 +3278,18 @@ input {
 
     .first-page .full-text p {
         font-size: 20px;
-        letter-spacing: -1px;
     }
 
     .first-page .full-text ul,
     .first-page .full-text ol {
         font-size: 20px;
         line-height: 1.6;
+        word-spacing: -2px;
+    }
+
+    .first-page .full-text ul li,
+    .first-page .full-text ol li {
+        margin-top: 20px;
     }
 }
 
@@ -3246,13 +3325,18 @@ input {
 
     .first-page .full-text p {
         font-size: 20px;
-        letter-spacing: -1px;
     }
 
     .first-page .full-text ul,
     .first-page .full-text ol {
         font-size: 20px;
-        line-height: 1.6;
+        line-height: 1.8;
+        word-spacing: -2px;
+    }
+
+    .first-page .full-text ul li,
+    .first-page .full-text ol li {
+        margin-top: 20px;
     }
 }
 
@@ -3288,13 +3372,18 @@ input {
 
     .first-page .full-text p {
         font-size: 26px;
-        letter-spacing: -1px;
     }
 
     .first-page .full-text ul,
     .first-page .full-text ol {
         font-size: 26px;
-        line-height: 1.6;
+        line-height: 1.8;
+        word-spacing: -1px;
+    }
+
+    .first-page .full-text ul li,
+    .first-page .full-text ol li {
+        margin-top: 25px;
     }
 }
 
@@ -3330,13 +3419,18 @@ input {
 
     .first-page .full-text p {
         font-size: 30px;
-        letter-spacing: -1px;
     }
 
     .first-page .full-text ul,
     .first-page .full-text ol {
         font-size: 30px;
         line-height: 1.6;
+        word-spacing: -1px;
+    }
+
+    .first-page .full-text ul li,
+    .first-page .full-text ol li {
+        margin-top: 30px;
     }
 }
 
@@ -3481,7 +3575,8 @@ input {
 
 .container-sec .card a {
     text-decoration: none;
-    color: #333;
+    font-size: 25px;
+    color: black;
 }
 
 @media (max-width: 574px) {

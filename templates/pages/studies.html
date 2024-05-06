@@ -3,7 +3,7 @@
 {% block content %}
 <h1 class="spe-h1"> الإصدارات</h1>
 <div class="show-i">
-    <a href="{% url 'showDetailStudies' %}">
+    <!-- <a href="{% url 'showDetailStudies' %}">
         <div class="card">
             <div class="image-card">
                 <img src="{% static 'imgs/stu.png' %}" alt="">
@@ -11,7 +11,7 @@
             <i class="fa-solid fa-calendar"></i><span>24 , أبريل 2010</span>
             <p>كتاب جماعي بعنوان "رؤية مستقبلية للإصلاح الإداري الشامل في الجمهورية اليمنية- دراسة تحليلية مقارنة"</p>
         </div>
-    </a>
+    </a> -->
     <a href="{% url 'firstpage' %}">
         <div class="card">
             <div class="image-card">
@@ -30,7 +30,7 @@
             <p>الإصلاح الإداري المفهوم والأهداف</p>
         </div>
     </a>
-    <a href="{% url 'showDetailNews' %}">
+    <a href="{% url 'reformmethodology' %}">
         <div class="card">
             <div class="image-card">
                 <img src="{% static 'imgs/method1.jpg' %}" alt="">
@@ -39,16 +39,16 @@
             <p>منهجية الإصلاح الإداري</p>
         </div>
     </a>
-    <a href="{% url 'showDetailNews' %}">
+    <a href="{% url 'Notesreform' %}">
         <div class="card">
             <div class="image-card">
-                <img src="{% static 'imgs/notes2.jpg' %}" alt="">
+                <img src="{% static 'imgs/notes3.jpg' %}" alt="">
             </div>
             <i class="fa-solid fa-calendar"></i><span>24 , أبريل 2010</span>
             <p>ملاحظات على مداخل الإصلاح الإداري</p>
         </div>
     </a>
-    <a href="{% url 'showDetailNews' %}">
+    <a href="{% url 'studyOfUS' %}">
         <div class="card">
             <div class="image-card">
                 <img src="{% static 'imgs/US.jpg' %}" alt="">
@@ -57,7 +57,7 @@
             <p>تجربة الولايات المتحدة الأمريكية في الإصلاح الإداري</p>
         </div>
     </a>
-    <a href="{% url 'showDetailNews' %}">
+    <a href="{% url 'studysingapore' %}">
         <div class="card">
             <div class="image-card">
                 <img src="{% static 'imgs/sn.webp' %}" alt="">

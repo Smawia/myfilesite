@@ -283,6 +283,18 @@ def firstpage(request):
 def administrative_reform(request):
     return render(request,'pages/administrative_reform.html')
 
+def reform_methodology(request):
+    return render(request,'pages/reform_methodology.html')
+
+def Notes_reform(request):
+    return render(request,'pages/Notes_reform.html')
+
+def study_of_US(request):
+    return render(request,'pages/studyUS.html')
+
+def studysingapore(request):
+    return render(request,'pages/study_singapore.html')
+
 def error_404(request,exception):
     return render(request,'pages/404_error.html')
 

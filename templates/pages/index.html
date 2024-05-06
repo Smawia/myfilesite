@@ -36,39 +36,46 @@
 
 <section class="container-sec">
     <div class="card">
-        <div class="image">
-            <img src="{% static 'imgs/pexels-photo-206359.jpeg' %}" alt="">
-        </div>
-        <a href="#">
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Officiis in expedita ducimus nisi
-            </p>
-        </a>
-    </div>
-    <div class="card">
-        <div class="image">
-            <img src="{% static 'imgs/pexels-photo-206359.jpeg' %}" alt="">
-        </div>
-        <a href="#">
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Officiis in expedita ducimus nisi
-            </p>
-        </a>
-    </div>
-    <div class="card">
-        <div class="image">
-            <img src="{% static 'imgs/pexels-photo-206359.jpeg' %}" alt="">
-        </div>
-        <a href="#">
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Officiis in expedita ducimus nisi
-            </p>
-        </a>
-    </div>
-    <div class="card">
-        <div class="image">
-            <img src="{% static 'imgs/pexels-photo-206359.jpeg' %}" alt="">
-        </div>
         <a href="{% url 'firstpage' %}">
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Officiis in expedita ducimus nisi
+            <div class="image">
+                <img src="{% static 'imgs/manage1.webp' %}" alt="">
+            </div>
+        </a>
+        <a href="{% url 'firstpage' %}">
+            <p>نشأة الإدارة وتطورها
             </p>
+        </a>
+    </div>
+    <div class="card">
+        <a href="{% url 'administrativereform' %}">
+            <div class="image">
+                <img src="{% static 'imgs/repair.jpg' %}" alt="">
+            </div>
+        </a>
+        <a href="{% url 'administrativereform' %}">
+            <p>الإصلاح الإداري المفهوم والأهداف
+            </p>
+        </a>
+    </div>
+    <div class="card">
+        <a href="{% url 'reformmethodology' %}">
+            <div class="image">
+                <img src="{% static 'imgs/method1.jpg'' %}" alt="">
+            </div>
+        </a>
+        <a href="{% url 'reformmethodology' %}">
+            <p>منهجية الإصلاح الإداري
+            </p>
+        </a>
+    </div>
+    <div class="card">
+        <a href="{% url 'Notesreform' %}">
+            <div class="image">
+                <img src="{% static 'imgs/notes3.jpg' %}" alt="">
+            </div>
+        </a>
+        <a href="{% url 'Notesreform' %}">
+            <p>ملاحظات على مداخل الإصلاح الإداري</p>
         </a>
     </div>
 </section>
@@ -86,7 +93,7 @@
 <!-- text info -->
 <h1 class="spe-h1">آخر الإصدارات</h1>
 <div class="show-i">
-    <a href="{% url 'showDetailStudies' %}">
+    <!-- <a href="{% url 'showDetailStudies' %}">
         <div class="card">
             <div class="image-card">
                 <img src="{% static 'imgs/stu.png' %}" alt="">
@@ -94,7 +101,7 @@
             <i class="fa-solid fa-calendar"></i><span>24 , أبريل 2010</span>
             <p>كتاب جماعي بعنوان "رؤية مستقبلية للإصلاح الإداري الشامل في الجمهورية اليمنية- دراسة تحليلية مقارنة"</p>
         </div>
-    </a>
+    </a> -->
     <a href="{% url 'firstpage' %}">
         <div class="card">
             <div class="image-card">
@@ -104,13 +111,22 @@
             <p>نشأة الإدارة وتطورها</p>
         </div>
     </a>
-    <a href="{% url 'showDetailNews' %}">
+    <a href="{% url 'administrativereform' %}">
         <div class="card">
             <div class="image-card">
                 <img src="{% static 'imgs/repair.jpg' %}" alt="">
             </div>
             <i class="fa-solid fa-calendar"></i><span>24 , أبريل 2010</span>
             <p>الإصلاح الإداري المفهوم والأهداف</p>
+        </div>
+    </a>
+    <a href="{% url 'reformmethodology' %}">
+        <div class="card">
+            <div class="image-card">
+                <img src="{% static 'imgs/method1.jpg' %}" alt="">
+            </div>
+            <i class="fa-solid fa-calendar"></i><span>24 , أبريل 2010</span>
+            <p>منهجية الإصلاح الإداري</p>
         </div>
     </a>
     <a href="{% url 'studies' %}" class="show-all">عرض المزيد...</a>
@@ -145,7 +161,7 @@
             <p>كتاب جماعي بعنوان "رؤية مستقبلية للإصلاح الإداري الشامل في الجمهورية اليمنية- دراسة تحليلية مقارنة"</p>
         </div>
     </a>
-    <a href="{% url 'studies' %}" class="show-all">عرض المزيد...</a>
+    <a href="{% url 'patrols' %}" class="show-all">عرض المزيد...</a>
 
 </div>
 <h1 class="spe-h1">آخر الأخبار</h1>
@@ -180,6 +196,6 @@
             <p>كتاب جماعي بعنوان "رؤية مستقبلية للإصلاح الإداري الشامل في الجمهورية اليمنية- دراسة تحليلية مقارنة"</p>
         </div>
     </a>
-    <a href="{% url 'studies' %}" class="show-all">عرض المزيد...</a>
+    <a href="{% url 'news' %}" class="show-all">عرض المزيد...</a>
 </div>
 {% endblock %}

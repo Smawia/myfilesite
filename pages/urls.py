@@ -16,4 +16,8 @@ urlpatterns = [
     path('pushNewsPost',views.pushNewsPost,name='pushNewsPost'),
     path('firstStudyPage',views.firstpage,name='firstpage'),
     path('administrativeReform',views.administrative_reform,name='administrativereform'),
+    path('reformMethodology',views.reform_methodology,name='reformmethodology'),
+    path('NotesReform',views.Notes_reform,name='Notesreform'),
+    path('StudyOfUS',views.study_of_US,name='studyOfUS'),
+    path('StudySingapore',views.studysingapore,name='studysingapore'),
 ]
