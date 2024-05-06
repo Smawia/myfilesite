@@ -14,5 +14,6 @@ urlpatterns = [
     path('pushStudyPost',views.pushStudyPost,name='pushStudyPost'),
     path('pushPatrolPost',views.pushPatrolPost,name='pushPatrolPost'),
     path('pushNewsPost',views.pushNewsPost,name='pushNewsPost'),
-    path('firstpage',views.firstpage,name='firstpage'),
+    path('firstStudyPage',views.firstpage,name='firstpage'),
+    path('administrativeReform',views.administrative_reform,name='administrativereform'),
 ]

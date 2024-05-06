@@ -280,6 +280,9 @@ def pushNewsPost(request):
 def firstpage(request):
     return render(request,'pages/firstpage.html')
 
+def administrative_reform(request):
+    return render(request,'pages/administrative_reform.html')
+
 def error_404(request,exception):
     return render(request,'pages/404_error.html')
 
