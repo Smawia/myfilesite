@@ -295,6 +295,12 @@ def study_of_US(request):
 def studysingapore(request):
     return render(request,'pages/study_singapore.html')
 
+def rwanda_study(request):
+    return render(request,'pages/rwanda_study.html')
+
+def china_study(request):
+    return render(request,'pages/china_study.html')
+
 def error_404(request,exception):
     return render(request,'pages/404_error.html')
 

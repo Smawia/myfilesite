@@ -26,6 +26,7 @@ header {
     display: flex;
     justify-content: space-around;
     align-items: center;
+    font-family: 'Calibri';
 }
 
 .togg {
@@ -149,7 +150,7 @@ header ul li {
 header ul li a {
     text-decoration: none;
     color: black;
-    font-size: 12px;
+    font-size: 18px;
     font-style: italic;
     transition: 0.4s;
 }
@@ -162,7 +163,7 @@ header ul .base-li {
 
 @media (max-width: 790px) {
     header ul .base-li {
-        height: 15px;
+        height: 19px;
         width: 500px;
     }
 }
@@ -213,7 +214,7 @@ header ul .base-li .ul li:not(:last-of-type) {
 header ul .base-li .ul li a {
     text-decoration: none;
     color: white;
-    font-size: 12px;
+    font-size: 15px;
 }
 
 header ul li a.active,
@@ -221,8 +222,9 @@ header ul li a:hover {
     box-sizing: border-box;
     color: white;
     border-radius: 8px;
-    padding: 7px;
-    background-color: blue;
+    padding: 4px;
+    padding-left: 6px;
+    background-color: rgba(0, 0, 255, 0.823);
 }
 
 
@@ -242,7 +244,7 @@ header a i {
 
 @media (min-width: 793px) and (max-width: 893px) {
     header ul li a {
-        font-size: 10px;
+        font-size: 15px;
     }
 }
 
@@ -646,6 +648,29 @@ header img:hover {
     border-width: 8px;
 }
 
+@media (max-width: 574px) {
+    .points .right ul li::before {
+        top: 9px;
+    }
+}
+
+@media (min-width: 575px) {
+    .points .right ul li::before {
+        top: 9px;
+    }
+}
+
+@media (min-width: 768px) {
+    .points .right ul li::before {
+        top: 12px;
+    }
+}
+
+@media (min-width: 992px) {
+    .points .right ul li::before {
+        top: 15px;
+    }
+}
 
 .points .txt1 p {
     line-height: 1.6;
@@ -656,6 +681,8 @@ header img:hover {
     font-size: 20px;
     font-family: 'Calibri';
 }
+
+
 
 .work {
     background-color: white;
@@ -677,6 +704,10 @@ header img:hover {
     left: 50%;
     transform: translate(-50%, -50%);
     opacity: 0.3;
+}
+
+.p-work {
+    font-size: 25px;
 }
 
 .work ul {
@@ -704,7 +735,90 @@ header img:hover {
     border-width: 8px;
     border-style: solid;
     border-color: transparent #333 transparent transparent;
+}
 
+@media (max-width: 574px) {
+    .points .txt1 p {
+        font-size: 18px !important;
+    }
+
+    .points .txt1 ol {
+        font-size: 18px !important;
+    }
+
+    .points .right ul {
+        font-size: 18px !important;
+    }
+
+    .p-work {
+        font-size: 18px;
+    }
+
+    .work ul {
+        font-size: 18px !important;
+    }
+
+    .work ul li::before {
+        top: 2px;
+    }
+}
+
+@media (min-width: 575px) {
+    .points .txt1 p {
+        font-size: 18px !important;
+    }
+
+    .points .txt1 ol {
+        font-size: 18px !important;
+    }
+
+    .points .right ul {
+        font-size: 18px !important;
+    }
+
+    .p-work {
+        font-size: 18px;
+    }
+
+    .work ul {
+        font-size: 18px !important;
+    }
+
+    .work ul li::before {
+        top: 2px;
+    }
+}
+
+@media (min-width: 768px) {
+    .points .txt1 p {
+        font-size: 25px !important;
+    }
+
+    .points .txt1 ol {
+        font-size: 25px !important;
+    }
+
+    .points .right ul {
+        font-size: 25px !important;
+    }
+
+    .p-work {
+        font-size: 25px;
+    }
+
+    .work ul {
+        font-size: 25px !important;
+    }
+
+    .work ul li::before {
+        top: 8px;
+    }
+}
+
+@media (min-width: 992px) {
+    .work ul li::before {
+        top: 9px;
+    }
 }
 
 .order {
@@ -2797,7 +2911,7 @@ table tbody tr td:hover {
     border-radius: 12px;
     cursor: pointer;
     animation-name: move-item;
-    animation-duration: 5s;
+    animation-duration: 3s;
     animation-iteration-count: infinite;
     animation-direction: alternate;
 }
@@ -2808,7 +2922,7 @@ table tbody tr td:hover {
 
 @keyframes move-item {
     to {
-        transform: translateX(-600px);
+        transform: translateX(-650px);
         /* opacity: 0.5; */
     }
 }
@@ -3164,15 +3278,15 @@ input {
 
 @media (max-width: 574px) {
     .first-page .full-text img {
-        width: 200px;
-        height: 150px;
+        width: 243px;
+        height: 166px;
     }
 }
 
 @media (min-width: 575px) {
     .first-page .full-text img {
-        width: 200px;
-        height: 150px;
+        width: 243px;
+        height: 166px;
     }
 }
 
@@ -3185,7 +3299,7 @@ input {
 
 @media (min-width: 992px) {
     .first-page .full-text img {
-        width: 350px;
+        width: 400px;
         height: 300px;
     }
 }
@@ -3300,6 +3414,8 @@ input {
     .first-page .first-flex {
         flex-direction: column;
         font-size: 18px;
+        margin-right: 10px;
+        
     }
 }
 
@@ -3307,6 +3423,7 @@ input {
     .first-page .first-flex {
         flex-direction: column;
         font-size: 20px;
+        margin-right: 10px;
     }
 }
 
@@ -3367,7 +3484,7 @@ input {
 
     .first-page .full-text ul li,
     .first-page .full-text ol li {
-        margin-top: 20px;
+        margin-top: 10px;
     }
 }
 
@@ -3414,7 +3531,7 @@ input {
 
     .first-page .full-text ul li,
     .first-page .full-text ol li {
-        margin-top: 20px;
+        margin-top: 10px;
     }
 }
 
@@ -3461,7 +3578,7 @@ input {
 
     .first-page .full-text ul li,
     .first-page .full-text ol li {
-        margin-top: 25px;
+        margin-top: 15px;
     }
 }
 
@@ -3508,7 +3625,7 @@ input {
 
     .first-page .full-text ul li,
     .first-page .full-text ol li {
-        margin-top: 30px;
+        margin-top: 20px;
     }
 }
 

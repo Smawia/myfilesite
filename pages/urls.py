@@ -20,4 +20,6 @@ urlpatterns = [
     path('NotesReform',views.Notes_reform,name='Notesreform'),
     path('StudyOfUS',views.study_of_US,name='studyOfUS'),
     path('StudySingapore',views.studysingapore,name='studysingapore'),
+    path('StudyRwanda',views.rwanda_study,name='rwanda_study'),
+    path('StudyChina',views.china_study,name='china_study'),
 ]

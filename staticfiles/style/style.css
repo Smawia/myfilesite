@@ -26,6 +26,7 @@ header {
     display: flex;
     justify-content: space-around;
     align-items: center;
+    font-family: 'Calibri';
 }
 
 .togg {
@@ -149,7 +150,7 @@ header ul li {
 header ul li a {
     text-decoration: none;
     color: black;
-    font-size: 12px;
+    font-size: 18px;
     font-style: italic;
     transition: 0.4s;
 }
@@ -158,6 +159,13 @@ header ul .base-li {
     transition: 0.3s;
     position: relative;
     height: 35px;
+}
+
+@media (max-width: 790px) {
+    header ul .base-li {
+        height: 19px;
+        width: 500px;
+    }
 }
 
 header ul .base-li:hover .ul {
@@ -188,7 +196,7 @@ header ul .base-li .ul::before {
     border-style: solid;
     border-width: 10px;
     border-color: #333 transparent transparent transparent;
-    top: -10px;
+    top: -20px;
     left: 60%;
     /* transform: translateX(-50%); */
 }
@@ -199,13 +207,14 @@ header ul .base-li .ul li {
 
 header ul .base-li .ul li:not(:last-of-type) {
     padding-bottom: 10px;
+    margin-bottom: 10px;
     border-bottom: 1px solid white;
 }
 
 header ul .base-li .ul li a {
     text-decoration: none;
     color: white;
-    font-size: 12px;
+    font-size: 15px;
 }
 
 header ul li a.active,
@@ -234,7 +243,7 @@ header a i {
 
 @media (min-width: 793px) and (max-width: 893px) {
     header ul li a {
-        font-size: 10px;
+        font-size: 15px;
     }
 }
 
@@ -638,6 +647,29 @@ header img:hover {
     border-width: 8px;
 }
 
+@media (max-width: 574px) {
+    .points .right ul li::before {
+        top: 9px;
+    }
+}
+
+@media (min-width: 575px) {
+    .points .right ul li::before {
+        top: 9px;
+    }
+}
+
+@media (min-width: 768px) {
+    .points .right ul li::before {
+        top: 12px;
+    }
+}
+
+@media (min-width: 992px) {
+    .points .right ul li::before {
+        top: 15px;
+    }
+}
 
 .points .txt1 p {
     line-height: 1.6;
@@ -648,6 +680,8 @@ header img:hover {
     font-size: 20px;
     font-family: 'Calibri';
 }
+
+
 
 .work {
     background-color: white;
@@ -669,6 +703,10 @@ header img:hover {
     left: 50%;
     transform: translate(-50%, -50%);
     opacity: 0.3;
+}
+
+.p-work {
+    font-size: 25px;
 }
 
 .work ul {
@@ -696,7 +734,90 @@ header img:hover {
     border-width: 8px;
     border-style: solid;
     border-color: transparent #333 transparent transparent;
+}
 
+@media (max-width: 574px) {
+    .points .txt1 p {
+        font-size: 18px !important;
+    }
+
+    .points .txt1 ol {
+        font-size: 18px !important;
+    }
+
+    .points .right ul {
+        font-size: 18px !important;
+    }
+
+    .p-work {
+        font-size: 18px;
+    }
+
+    .work ul {
+        font-size: 18px !important;
+    }
+
+    .work ul li::before {
+        top: 2px;
+    }
+}
+
+@media (min-width: 575px) {
+    .points .txt1 p {
+        font-size: 18px !important;
+    }
+
+    .points .txt1 ol {
+        font-size: 18px !important;
+    }
+
+    .points .right ul {
+        font-size: 18px !important;
+    }
+
+    .p-work {
+        font-size: 18px;
+    }
+
+    .work ul {
+        font-size: 18px !important;
+    }
+
+    .work ul li::before {
+        top: 2px;
+    }
+}
+
+@media (min-width: 768px) {
+    .points .txt1 p {
+        font-size: 25px !important;
+    }
+
+    .points .txt1 ol {
+        font-size: 25px !important;
+    }
+
+    .points .right ul {
+        font-size: 25px !important;
+    }
+
+    .p-work {
+        font-size: 25px;
+    }
+
+    .work ul {
+        font-size: 25px !important;
+    }
+
+    .work ul li::before {
+        top: 8px;
+    }
+}
+
+@media (min-width: 992px) {
+    .work ul li::before {
+        top: 9px;
+    }
 }
 
 .order {
@@ -2800,7 +2921,7 @@ table tbody tr td:hover {
 
 @keyframes move-item {
     to {
-        transform: translateX(-900px);
+        transform: translateX(-750px);
         /* opacity: 0.5; */
     }
 }
@@ -2814,13 +2935,7 @@ table tbody tr td:hover {
     .news h2 {
         padding: 10px;
         font-size: 18px;
-    }
-
-    @keyframes move-item {
-        to {
-            transform: translateX(-100px);
-            /* opacity: 0.5; */
-        }
+        animation-name: ddd;
     }
 }
 
@@ -2833,6 +2948,7 @@ table tbody tr td:hover {
     .news h2 {
         padding: 10px;
         font-size: 18px;
+        animation-name: ddd;
     }
 }
 
@@ -2845,6 +2961,7 @@ table tbody tr td:hover {
     .news h2 {
         padding: 15px;
         font-size: 23px;
+        animation-name: ddd;
     }
 }
 
@@ -2857,6 +2974,7 @@ table tbody tr td:hover {
     .news h2 {
         padding: 20px;
         font-size: 28px;
+        animation-name: move-item;
     }
 }
 
@@ -3159,15 +3277,15 @@ input {
 
 @media (max-width: 574px) {
     .first-page .full-text img {
-        width: 200px;
-        height: 150px;
+        width: 243px;
+        height: 166px;
     }
 }
 
 @media (min-width: 575px) {
     .first-page .full-text img {
-        width: 200px;
-        height: 150px;
+        width: 243px;
+        height: 166px;
     }
 }
 
@@ -3180,7 +3298,7 @@ input {
 
 @media (min-width: 992px) {
     .first-page .full-text img {
-        width: 350px;
+        width: 400px;
         height: 300px;
     }
 }
@@ -3362,7 +3480,7 @@ input {
 
     .first-page .full-text ul li,
     .first-page .full-text ol li {
-        margin-top: 20px;
+        margin-top: 10px;
     }
 }
 
@@ -3409,7 +3527,7 @@ input {
 
     .first-page .full-text ul li,
     .first-page .full-text ol li {
-        margin-top: 20px;
+        margin-top: 10px;
     }
 }
 
@@ -3456,7 +3574,7 @@ input {
 
     .first-page .full-text ul li,
     .first-page .full-text ol li {
-        margin-top: 25px;
+        margin-top: 15px;
     }
 }
 
@@ -3503,7 +3621,7 @@ input {
 
     .first-page .full-text ul li,
     .first-page .full-text ol li {
-        margin-top: 30px;
+        margin-top: 20px;
     }
 }
 
@@ -3655,28 +3773,28 @@ input {
 @media (max-width: 574px) {
     .card .image {
         width: 135px;
-        right: -26px;
+        right: -14px;
     }
 }
 
 @media (min-width: 575px) {
     .card .image {
         width: 135px;
-        right: -26px;
+        right: -14px;
     }
 }
 
 @media (min-width: 768px) {
     .card .image {
         width: 300px;
-        right: -18px;
+        right: -9px;
     }
 }
 
 @media (min-width: 992px) {
     .card .image {
         width: 450px;
-        right: -15px;
+        right: -3px;
     }
 }
 
