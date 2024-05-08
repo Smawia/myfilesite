@@ -164,7 +164,7 @@ header ul .base-li {
 @media (max-width: 790px) {
     header ul .base-li {
         height: 19px;
-        width: 500px;
+        width: 300px;
     }
 }
 
@@ -3415,7 +3415,7 @@ input {
         flex-direction: column;
         font-size: 18px;
         margin-right: 10px;
-        
+
     }
 }
 
