@@ -1741,9 +1741,10 @@ table tbody tr td:hover {
     font-size: 30px;
     text-align: start;
     font-style: normal;
-    font-family: 'Adobe Arabic';
+    font-family: 'Calibri';
     margin-bottom: 30px;
     letter-spacing: -1px;
+    line-height: 1.6;
 }
 
 
@@ -1761,9 +1762,14 @@ table tbody tr td:hover {
 
 }
 
+.cretiria .one ul,
+.cretiria .one ol {
+    line-height: 1.6 !important;
+}
+
 .cretiria .one ul li,
 .cretiria .one ol li {
-    line-height: 1.6;
+    line-height: 1.6 !important;
     font-size: 20px;
     /* font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; */
     font-family: 'Calibri';
@@ -1772,12 +1778,12 @@ table tbody tr td:hover {
 
 @media (max-width: 574px) {
     .cretiria p {
-        font-size: 17px;
+        font-size: 18px;
         text-align: justify;
     }
 
     .cretiria h1 {
-        font-size: 13px;
+        font-size: 18px;
         padding: 14px;
     }
 
@@ -1789,90 +1795,101 @@ table tbody tr td:hover {
 
     .cretiria .one ul li,
     .cretiria .one ol li {
-        font-size: 17px;
+        font-size: 18px;
         text-align: justify;
+        line-height: 1.6;
     }
 
     .cretiria .one ul {
         padding-right: 20px;
+        line-height: 1.6;
+        font-size: 18px;
     }
 }
 
 @media (min-width: 575px) {
     .cretiria p {
-        font-size: 17px;
+        font-size: 18px;
         text-align: justify;
     }
 
     .cretiria h1 {
-        font-size: 17px;
+        font-size: 18px;
         padding: 14px;
     }
 
     .cretiria .one h3 {
-        font-size: 17px;
+        font-size: 18px;
         text-align: start;
         padding: 4px 15px;
     }
 
     .cretiria .one ul li,
     .cretiria .one ol li {
-        font-size: 17px;
+        font-size: 18px;
+        line-height: 1.6;
     }
 
     .cretiria .one ul {
+        font-size: 18px;
         padding-right: 20px;
+        line-height: 1.6;
     }
 }
 
 @media (min-width: 768px) {
     .cretiria p {
-        font-size: 20px;
+        font-size: 23px;
     }
 
     .cretiria h1 {
-        font-size: 20px;
+        font-size: 25px;
         text-align: start;
     }
 
     .cretiria .one h3 {
-        font-size: 20px;
+        font-size: 25px;
         text-align: start;
     }
 
     .cretiria .one ul li,
     .cretiria .one ol li {
-        font-size: 23px;
+        font-size: 25px;
+        line-height: 1.6;
     }
 
     .cretiria .one ul {
         padding-right: 25px;
+        line-height: 1.6;
+        font-size: 23px;
     }
 }
 
 @media (min-width: 992px) {
     .cretiria p {
-        font-size: 25px;
+        font-size: 28px;
         text-align: justify;
     }
 
     .cretiria h1 {
-        font-size: 25px;
+        font-size: 28px;
         text-align: start;
     }
 
     .cretiria .one h3 {
-        font-size: 25px;
+        font-size: 28px;
         text-align: start;
     }
 
     .cretiria .one ul li,
     .cretiria .one ol li {
-        font-size: 25px;
+        font-size: 28px;
     }
 
     .cretiria .one ul {
         padding-right: 30px;
+        line-height: 1.6;
+        font-size: 28px;
     }
 }
 
@@ -3276,6 +3293,11 @@ input {
     border-radius: 12px;
 }
 
+.full-text .spe-img {
+    width: 300px;
+    height: 300px;
+}
+
 @media (max-width: 574px) {
     .first-page .full-text img {
         width: 243px;
@@ -3301,6 +3323,34 @@ input {
     .first-page .full-text img {
         width: 400px;
         height: 300px;
+    }
+}
+
+@media (max-width: 574px) {
+    .first-page .full-text .spe-img {
+        width: 260px;
+        height: 170px;
+    }
+}
+
+@media (min-width: 575px) {
+    .first-page .full-text .spe-img {
+        width: 260px;
+        height: 170px;
+    }
+}
+
+@media (min-width: 768px) {
+    .first-page .full-text .spe-img {
+        width: 400px;
+        height: 300px;
+    }
+}
+
+@media (min-width: 992px) {
+    .first-page .full-text .spe-img {
+        width: 500px;
+        height: 330px;
     }
 }
 

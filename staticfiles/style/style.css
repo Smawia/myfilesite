@@ -164,7 +164,7 @@ header ul .base-li {
 @media (max-width: 790px) {
     header ul .base-li {
         height: 19px;
-        width: 500px;
+        width: 300px;
     }
 }
 
@@ -196,7 +196,7 @@ header ul .base-li .ul::before {
     border-style: solid;
     border-width: 10px;
     border-color: #333 transparent transparent transparent;
-    top: -20px;
+    top: -10px;
     left: 60%;
     /* transform: translateX(-50%); */
 }
@@ -222,8 +222,9 @@ header ul li a:hover {
     box-sizing: border-box;
     color: white;
     border-radius: 8px;
-    padding: 7px;
-    background-color: blue;
+    padding: 4px;
+    padding-left: 6px;
+    background-color: rgba(0, 0, 255, 0.823);
 }
 
 
@@ -1740,7 +1741,7 @@ table tbody tr td:hover {
     font-size: 30px;
     text-align: start;
     font-style: normal;
-    font-family: 'Adobe Arabic';
+    font-family: 'Calibri';
     margin-bottom: 30px;
     letter-spacing: -1px;
 }
@@ -1760,6 +1761,11 @@ table tbody tr td:hover {
 
 }
 
+.cretiria .one ul,
+.cretiria .one ol {
+    line-height: 1.6;
+}
+
 .cretiria .one ul li,
 .cretiria .one ol li {
     line-height: 1.6;
@@ -1771,12 +1777,12 @@ table tbody tr td:hover {
 
 @media (max-width: 574px) {
     .cretiria p {
-        font-size: 17px;
+        font-size: 18px;
         text-align: justify;
     }
 
     .cretiria h1 {
-        font-size: 13px;
+        font-size: 18px;
         padding: 14px;
     }
 
@@ -1788,7 +1794,7 @@ table tbody tr td:hover {
 
     .cretiria .one ul li,
     .cretiria .one ol li {
-        font-size: 17px;
+        font-size: 18px;
         text-align: justify;
     }
 
@@ -1799,24 +1805,24 @@ table tbody tr td:hover {
 
 @media (min-width: 575px) {
     .cretiria p {
-        font-size: 17px;
+        font-size: 18px;
         text-align: justify;
     }
 
     .cretiria h1 {
-        font-size: 17px;
+        font-size: 18px;
         padding: 14px;
     }
 
     .cretiria .one h3 {
-        font-size: 17px;
+        font-size: 18px;
         text-align: start;
         padding: 4px 15px;
     }
 
     .cretiria .one ul li,
     .cretiria .one ol li {
-        font-size: 17px;
+        font-size: 15px;
     }
 
     .cretiria .one ul {
@@ -1826,22 +1832,22 @@ table tbody tr td:hover {
 
 @media (min-width: 768px) {
     .cretiria p {
-        font-size: 20px;
+        font-size: 23px;
     }
 
     .cretiria h1 {
-        font-size: 20px;
+        font-size: 25px;
         text-align: start;
     }
 
     .cretiria .one h3 {
-        font-size: 20px;
+        font-size: 25px;
         text-align: start;
     }
 
     .cretiria .one ul li,
     .cretiria .one ol li {
-        font-size: 23px;
+        font-size: 25px;
     }
 
     .cretiria .one ul {
@@ -1851,23 +1857,23 @@ table tbody tr td:hover {
 
 @media (min-width: 992px) {
     .cretiria p {
-        font-size: 25px;
+        font-size: 28px;
         text-align: justify;
     }
 
     .cretiria h1 {
-        font-size: 25px;
+        font-size: 28px;
         text-align: start;
     }
 
     .cretiria .one h3 {
-        font-size: 25px;
+        font-size: 28px;
         text-align: start;
     }
 
     .cretiria .one ul li,
     .cretiria .one ol li {
-        font-size: 25px;
+        font-size: 28px;
     }
 
     .cretiria .one ul {
@@ -2910,7 +2916,7 @@ table tbody tr td:hover {
     border-radius: 12px;
     cursor: pointer;
     animation-name: move-item;
-    animation-duration: 5s;
+    animation-duration: 3s;
     animation-iteration-count: infinite;
     animation-direction: alternate;
 }
@@ -2921,7 +2927,7 @@ table tbody tr td:hover {
 
 @keyframes move-item {
     to {
-        transform: translateX(-750px);
+        transform: translateX(-650px);
         /* opacity: 0.5; */
     }
 }
@@ -3413,6 +3419,8 @@ input {
     .first-page .first-flex {
         flex-direction: column;
         font-size: 18px;
+        margin-right: 10px;
+
     }
 }
 
@@ -3420,6 +3428,7 @@ input {
     .first-page .first-flex {
         flex-direction: column;
         font-size: 20px;
+        margin-right: 10px;
     }
 }
 

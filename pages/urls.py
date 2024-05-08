@@ -22,4 +22,5 @@ urlpatterns = [
     path('StudySingapore',views.studysingapore,name='studysingapore'),
     path('StudyRwanda',views.rwanda_study,name='rwanda_study'),
     path('StudyChina',views.china_study,name='china_study'),
+    path('MalaysiaStudy',views.malaysia_study,name='malaysia_study'),
 ]
