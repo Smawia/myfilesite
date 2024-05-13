@@ -304,6 +304,21 @@ def china_study(request):
 def malaysia_study(request):
     return render(request,'pages/malaysia_study.html')
 
+def jor_study(request):
+    return render(request,'pages/jor_study.html')
+
+def features_of_administrative_reform_in_yemen(request):
+    return render(request,'pages/features_of_administrative_reform_in_yemen.html')
+
+def comprehensive_reform(request):
+    return render(request,'pages/comprehensive_reform.html')
+
+def administrative_raw(request):
+    return render(request,'pages/administrative_raw.html')
+
+def administrative_reform2(request):
+    return render(request,'pages/administrative_reform2.html')
+
 def error_404(request,exception):
     return render(request,'pages/404_error.html')
 

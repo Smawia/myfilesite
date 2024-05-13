@@ -24,9 +24,9 @@
             >الصفحة الرئيسية</a></li>
         <li class="base-li"><a href="#"
             {% if 'about' in request.path or '/criteria' in request.path %}
-            class="active"
+            class="active js-a"
             {% else %}
-            class=""
+            class="js-a"
             {% endif %}
             >معلومات المركز <i class="fa-solid fa-angle-down arrow"></i><i class="fa-solid fa-angle-left arrow left-arrow"></i></a>
             <ul class="ul">
@@ -35,14 +35,14 @@
                 
             </ul>
         </li>
-        <li class="base-li"><a href="{% url 'studies' %}"
+        <li class="base-li"><a href="js-a"
             {% if 'comment' in request.path or 'studies' in request.path or 'showDetailStudies' in request.path or 'showDetailPatrols' in request.path or 'patrols' in request.path or 'pushStudyPost' in request.path %}
-            class="active"
+            class="active js-a"
             {% else %}
-            class=""
+            class="js-a"
             {% endif %}
             >اصدارات المركز<i class="fa-solid fa-angle-down arrow spe-arrow"></i><i class="fa-solid fa-angle-left arrow left-arrow2"></i></a>
-            <ul class="ul">
+            <ul class="ul nested-list">
                 <li><a href="{% url 'studies' %}">الكتب والدراسات</a></li>
                 <li><a href="{% url 'patrols' %}">الدورية</a></li>
             </ul>
@@ -104,5 +104,7 @@
         </a>
     {% endif %}
 </header>
-
+<script>
+    
+</script>
 <!-- end header -->

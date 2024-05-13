@@ -23,4 +23,9 @@ urlpatterns = [
     path('StudyRwanda',views.rwanda_study,name='rwanda_study'),
     path('StudyChina',views.china_study,name='china_study'),
     path('MalaysiaStudy',views.malaysia_study,name='malaysia_study'),
+    path('JordanStudy',views.jor_study,name='jor_study'),
+    path('FeaturesOfAdministrativeReformInYemen',views.features_of_administrative_reform_in_yemen,name='features_of_administrative_reform_in_yemen'),
+    path('ComprehensiveReform',views.comprehensive_reform,name='comprehensive_reform'),
+    path('AdministrativeRaw',views.administrative_raw,name='administrative_raw'),
+    path('AdministrativeReformTwo',views.administrative_reform2,name='administrative_reform2'),
 ]
