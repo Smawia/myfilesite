@@ -2,11 +2,12 @@
 {% load static %}
 {% block content %}
 <div class="first-page">
+    <a href="#img-id" class="hidden-row"><i class="fa-solid fa-arrow-up-long"></i></a>
     <!-- <h1>الحياة في اليمن</h1> -->
-    <img src="{% static 'imgs/raw.webp' %}" alt="">
+    <img src="{% static 'imgs/raw.webp' %}" alt="" id="img-id">
     <p class="p-img">تجربة رواندا في الإصلاح الإداري</p>
     <div class="info">
-        <span>تم النشر في</span><i class="fa-solid fa-calendar"></i><span> 24 , أبريل 2010 </span>
+        <span>تم النشر في</span><i class="fa-solid fa-calendar"></i><span> 25 نوفمبر 2023 </span><span class="pub">أ.د أحمد محمد عبد الله ناصر</span>
     </div>
 
     <div class="full-text">
@@ -222,10 +223,10 @@
                 المجتمعية.</li>
         </ol>
     </div>
-    <hr>
+    <!-- <hr>
     <div class="publisher-name">
         <h1>الباحث:</h1>
         <h2>أ.د أحمد محمد عبد الله ناصر</h2>
-    </div>
+    </div> -->
 </div>
 {% endblock %}

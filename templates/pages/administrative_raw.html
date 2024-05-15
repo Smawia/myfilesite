@@ -2,11 +2,12 @@
 {% load static %}
 {% block content %}
 <div class="first-page">
+    <a href="#img-id" class="hidden-row"><i class="fa-solid fa-arrow-up-long"></i></a>
     <!-- <h1>الحياة في اليمن</h1> -->
-    <img src="{% static 'imgs/jy.jpg' %}" alt="">
+    <img src="{% static 'imgs/jy.jpg' %}" alt="" id="img-id">
     <p class="p-img">ماهية القانون الإداري</p>
     <div class="info">
-        <span>تم النشر في</span><i class="fa-solid fa-calendar"></i><span>25 نوفمبر 2023</span>
+        <span>تم النشر في</span><i class="fa-solid fa-calendar"></i><span>25 نوفمبر 2023</span><span class="pub">أ.د فارس محمد عبد القادر القادر</span>
     </div>
 
     <div class="full-text">
@@ -81,10 +82,10 @@
             بمكان تقنين قواعد القانون الإداري؛ لأنها متناثرة في أكثر من قانون، ومواضيعها متعددة ومتنوعة وتنظم أكثر من
             جهة إدارية.</p>
     </div>
-    <hr>
+    <!-- <hr>
     <div class="publisher-name">
         <h1>الباحث:</h1>
         <h2>أ.د فارس محمد عبدالقادر القادر</h2>
-    </div>
+    </div> -->
 </div>
 {% endblock %}

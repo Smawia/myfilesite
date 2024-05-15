@@ -319,6 +319,21 @@ def administrative_raw(request):
 def administrative_reform2(request):
     return render(request,'pages/administrative_reform2.html')
 
+def administrative_law_in_yemen(request):
+    return render(request,'pages/administrative_law_in_yemen.html')
+
+def global_management_reform(request):
+    return render(request,'pages/global_management_reform.html')
+
+def future_fo_reforming_administrative_law_in_yemen(request):
+    return render(request,'pages/future_fo_reforming_administrative_law_in_yemen.html')
+
+def legal_reform(request):
+    return render(request,'pages/legal_reform.html')
+
+def evolution_of_public_administration(request):
+    return render(request,'pages/evolution_of_public_administration.html')
+
 def error_404(request,exception):
     return render(request,'pages/404_error.html')
 

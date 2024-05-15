@@ -28,4 +28,9 @@ urlpatterns = [
     path('ComprehensiveReform',views.comprehensive_reform,name='comprehensive_reform'),
     path('AdministrativeRaw',views.administrative_raw,name='administrative_raw'),
     path('AdministrativeReformTwo',views.administrative_reform2,name='administrative_reform2'),
+    path('AdministrativeLawInYemen',views.administrative_law_in_yemen,name='administrative_law_in_yemen'),
+    path('GlobalManagementReform',views.global_management_reform,name='global_management_reform'),
+    path('FutureForReformingAdministrativeLawInYemen',views.future_fo_reforming_administrative_law_in_yemen,name='future_fo_reforming_administrative_law_in_yemen'),
+    path('LegalReform',views.legal_reform,name='legal_reform'),
+    path('EvolutionOfPublicAdministration',views.evolution_of_public_administration,name='evolution_of_public_administration'),
 ]

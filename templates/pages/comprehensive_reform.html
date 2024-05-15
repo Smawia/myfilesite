@@ -2,11 +2,12 @@
 {% load static %}
 {% block content %}
 <div class="first-page">
+    <a href="#img-id" class="hidden-row"><i class="fa-solid fa-arrow-up-long"></i></a>
     <!-- <h1>الحياة في اليمن</h1> -->
-    <img src="{% static 'imgs/fanicial.webp' %}" alt="">
+    <img src="{% static 'imgs/fanicial.webp' %}" alt="" id="img-id">
     <p class="p-img">تقييم برنامج الإصلاح الإقتصادي والمالي والإداري في اليمن</p>
     <div class="info">
-        <span>تم النشر في</span><i class="fa-solid fa-calendar"></i><span>25 نوفمبر 2023</span>
+        <span>تم النشر في</span><i class="fa-solid fa-calendar"></i><span>25 نوفمبر 2023</span><span class="pub">أ.د أحمد محمد عبد الله ناصر</span>
     </div>
 
     <div class="full-text">
@@ -69,8 +70,8 @@
             الدولة فيها إلى المؤسسة الاقتصادية اليمنية.</p>
         <h2>يرى البنك الدولي أن مسيرة الإصلاح الاقتصادي في اليمن مرت بثلاث مراحل: </h2>
         <ul>
-            <li>مرحلة الانطلاقة القوية (1995 – 1999). </li>
-            <li>مرحلة الجمود (2000 – 2004/2005). </li>
+            <li class="ws2">مرحلة الانطلاقة القوية (1995 – 1999). </li>
+            <li class="ws-index">مرحلة الجمود (2000 – 2004/2005). </li>
             <li>مرحلة إعادة تدشين برنامج الإصلاح الاقتصادي (2005). </li>
 
         </ul>
@@ -225,7 +226,7 @@
         <h2>جدول رقم (1) مؤشرات الإدارة في اليمن خلال العقد الثاني من القرن الحادي والعشرين:<span><sup
                     title="Source: the table was established by using data from، World Bank، Worledwide Governance Indecators، 2021 update، Aggregate Governance Indicators 1996-2020، available at: http://info.worldbank.org/governance/wgi/">[in]</sup></span>
         </h2>
-        <table class="us-table">
+        <table class="us-table ctable">
             <tbody>
                 <tr>
                     <td>المؤشرات </td>
@@ -622,10 +623,10 @@
 
 
     </div>
-    <hr>
+    <!-- <hr>
     <div class="publisher-name">
         <h1>الباحث:</h1>
         <h2>أ.د أحمد محمد عبد الله ناصر</h2>
-    </div>
+    </div> -->
 </div>
 {% endblock %}

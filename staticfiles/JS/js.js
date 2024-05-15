@@ -1,10 +1,10 @@
 // let spe_a = document.querySelector('.js-a');
-let ul_list = document.querySelector('.ul');
-window.onscroll = function () {
-    if (window.scrollX <= 794) {
-        ul_list.style.cssText = 'display: flex;flex-direction: row;'
-    }
-}
+// let ul_list = document.querySelector('.ul');
+// window.onscroll = function () {
+//     if (window.scrollX <= 794) {
+//         ul_list.style.cssText = 'display: flex;flex-direction: row;'
+//     }
+// }
 // // let nested_list = document.querySelector('.nested-list');
 // spe_a.onclick = function (e) {
 //     console.log("spe a");

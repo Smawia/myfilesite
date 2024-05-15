@@ -2,11 +2,12 @@
 {% load static %}
 {% block content %}
 <div class="first-page">
+    <a href="#img-id" class="hidden-row"><i class="fa-solid fa-arrow-up-long"></i></a>
     <!-- <h1>الحياة في اليمن</h1> -->
-    <img src="{% static 'imgs/maly.jpg' %}" alt="">
+    <img src="{% static 'imgs/maly.jpg' %}" alt="" id="img-id">
     <p class="p-img"> تجربة ماليزيا في الإصلاح الإداري</p>
     <div class="info">
-        <span>تم النشر في</span><i class="fa-solid fa-calendar"></i><span> 24 , أبريل 2010 </span>
+        <span>تم النشر في</span><i class="fa-solid fa-calendar"></i><span> 25 نوفمبر 2023 </span><span class="pub">أ.د أحمد محمد عبد الله ناصر</span>
     </div>
     <div class="full-text">
         <p>تقع ماليزيا في الجنوب الشـرقي لقارة آسيا، قرب الخطّ الاستوائي، وهي مكوّنة من منطقتين أساسيتين، هما: ماليزيا
@@ -219,11 +220,11 @@
             <li>وجود رؤية استراتيجية شاملة وطويلة الأمد تحدد أهداف وخطط وبرامج الإصلاح الإداري بشكل متسق ومنسق.</li>
         </ul>
     </div>
-    <hr>
+    <!-- <hr>
     <div class="publisher-name">
 
         <h1>الباحث:</h1>
         <h2>أ.د أحمد محمد عبد الله ناصر</h2>
-    </div>
+    </div> -->
 </div>
 {% endblock %}
