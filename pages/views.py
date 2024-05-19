@@ -334,6 +334,9 @@ def legal_reform(request):
 def evolution_of_public_administration(request):
     return render(request,'pages/evolution_of_public_administration.html')
 
+def stages_of_legislative_reform(request):
+    return render(request,'pages/stages_of_legislative_reform.html')
+
 def error_404(request,exception):
     return render(request,'pages/404_error.html')
 

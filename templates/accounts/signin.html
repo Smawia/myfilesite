@@ -4,7 +4,8 @@
 <div class="signin">
     {% if request.user.is_authenticated %}
     <h4 class="alert-success">مرحباً بك {{request.user.username}} أنت حالياً مسجل دخول
-        <a class="spe-a" href="{% url 'logout' %}">تسجيل خروج</a>
+        <!-- <a class="spe-a" href="{% url 'logout' %}">تسجيل خروج</a> -->
+        <a class="go-to-index" href="{% url 'index' %}"></a>
     </h4>
     <form action="" method="post" style="display: none;">
         {% else %}

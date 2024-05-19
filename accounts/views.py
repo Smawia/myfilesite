@@ -76,7 +76,7 @@ def signup(request):
                         # add user profile
                         user_profile = UserProfile(user=user,address=address)
                         user_profile.save()
-
+                        auth.login(request, user)
                         # sucess messages
                         messages.success(request,'تم تسجيل العضوية بنجاح')
                         fname = ''

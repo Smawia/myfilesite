@@ -2,16 +2,24 @@
 
 {% block content %}
 <div class="signup">
-    {% include 'partials/alerts.html' %}
-    <form action="" method="post">
-        {% csrf_token %}
-        <input type="text" name="fname" placeholder="ادخل اسمك الأول" id="" value="{{fname}}" required>
-        <input type="text" name="lname" placeholder="ادخل اسمك الثاني" id="" value="{{lname}}" required>
-        <input type="email" name="email" placeholder="ادخل الإيميل" id="" value="{{email}}" required>
-        <input type="text" name="address" placeholder="ادخل عنوانك" id="" value="{{address}}" required>
-        <input type="text" name="username" placeholder="ادخل اسم المستخدم" id="" value="{{user_name}}" required>
-        <input type="password" name="password" placeholder="ادخل كلمة السر" id="" value="{{password}}" required>
-        <input type="submit" name="signup" value="تسجيل عضوية">
-    </form>
+    {% if request.user.is_authenticated %}
+    <h4 class="alert-success">مرحباً بك {{request.user.username}} تم تسجيل عضويتك بنجاح
+        <!-- <a class="spe-a" href="{% url 'logout' %}">تسجيل خروج</a> -->
+        <a class="go-to-index2" href="{% url 'index' %}"></a>
+    </h4>
+    <form action="" method="post" style="display: none;">
+        {% else %}
+        <form action="" method="post">
+            {% endif %}
+            {% csrf_token %}
+            {% include 'partials/alerts.html' %}
+            <input type="text" name="fname" placeholder="ادخل اسمك الأول" id="" value="{{fname}}" required>
+            <input type="text" name="lname" placeholder="ادخل اسمك الثاني" id="" value="{{lname}}" required>
+            <input type="email" name="email" placeholder="ادخل الإيميل" id="" value="{{email}}" required>
+            <input type="text" name="address" placeholder="ادخل عنوانك" id="" value="{{address}}" required>
+            <input type="text" name="username" placeholder="ادخل اسم المستخدم" id="" value="{{user_name}}" required>
+            <input type="password" name="password" placeholder="ادخل كلمة السر" id="" value="{{password}}" required>
+            <input type="submit" name="signup" value="تسجيل عضوية">
+        </form>
 </div>
 {% endblock %}

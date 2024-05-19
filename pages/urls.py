@@ -33,4 +33,5 @@ urlpatterns = [
     path('FutureForReformingAdministrativeLawInYemen',views.future_fo_reforming_administrative_law_in_yemen,name='future_fo_reforming_administrative_law_in_yemen'),
     path('LegalReform',views.legal_reform,name='legal_reform'),
     path('EvolutionOfPublicAdministration',views.evolution_of_public_administration,name='evolution_of_public_administration'),
+    path('StagesOfLegislativeReform',views.stages_of_legislative_reform,name='stages_of_legislative_reform'),
 ]
