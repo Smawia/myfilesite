@@ -337,6 +337,12 @@ def evolution_of_public_administration(request):
 def stages_of_legislative_reform(request):
     return render(request,'pages/stages_of_legislative_reform.html')
 
+def legislative_reform_in_the_world(request):
+    return render(request,'pages/legislative_reform_in_the_world.html')
+
+def legal_reform_in_yemen(request):
+    return render(request,'pages/legal_reform_in_yemen.html')
+
 def error_404(request,exception):
     return render(request,'pages/404_error.html')
 

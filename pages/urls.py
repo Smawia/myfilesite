@@ -34,4 +34,6 @@ urlpatterns = [
     path('LegalReform',views.legal_reform,name='legal_reform'),
     path('EvolutionOfPublicAdministration',views.evolution_of_public_administration,name='evolution_of_public_administration'),
     path('StagesOfLegislativeReform',views.stages_of_legislative_reform,name='stages_of_legislative_reform'),
+    path('LegislativeReformInTheWorld',views.legislative_reform_in_the_world,name='legislative_reform_in_the_world'),
+    path('LegalReformInYemen',views.legal_reform_in_yemen,name='legal_reform_in_yemen'),
 ]
