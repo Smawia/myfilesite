@@ -343,6 +343,12 @@ def legislative_reform_in_the_world(request):
 def legal_reform_in_yemen(request):
     return render(request,'pages/legal_reform_in_yemen.html')
 
+def general_administration_in_yemen(request):
+    return render(request,'pages/general_administration_in_yemen.html')
+
+def books(request):
+    return render(request,'pages/books.html')
+
 def error_404(request,exception):
     return render(request,'pages/404_error.html')
 

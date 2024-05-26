@@ -34,7 +34,7 @@
     <span class="left">&gt;</span>
 </div> -->
 
-<section class="container-sec">
+<!-- <section class="container-sec">
     <div class="card">
         <a href="{% url 'firstpage' %}">
             <div class="image">
@@ -78,7 +78,56 @@
             <p>ملاحظات على مداخل الإصلاح الإداري</p>
         </a>
     </div>
-</section>
+</section> -->
+
+<div class="slider">
+    <div class="slides">
+        <input type="radio" name="radio-btn" id="radio1">
+        <input type="radio" name="radio-btn" id="radio2">
+        <input type="radio" name="radio-btn" id="radio3">
+        <input type="radio" name="radio-btn" id="radio4">
+        <div class="slide first">
+            <a href="{% url 'malaysia_study' %}">
+                <img src="{% static 'imgs/maly2.webp' %}" alt="">
+                <h2>تجربة ماليزيا في الإصلاح الإداري</h2>
+            </a>
+        </div>
+        <div class="slide">
+            <a href="{% url 'china_study' %}">
+                <img src="{% static 'imgs/china.jpeg' %}" alt="">
+                <h2>سياسة الإصلاح والإنفتاح في الصين</h2>
+            </a>
+        </div>
+        <div class="slide">
+            <a href="{% url 'global_management_reform' %}">
+                <img src="{% static 'imgs/world2.jpg' %}" alt="">
+                <h2> بعض التجارب الدولية في الإصلاح الإداري
+                </h2>
+            </a>
+        </div>
+
+
+        <div class="slide">
+            <a href="{% url 'stages_of_legislative_reform' %}">
+                <img src="{% static 'imgs/all2.webp' %}" alt="">
+                <h2>مراحل عملية الإصلاح التشريعي</h2>
+            </a>
+        </div>
+
+        <div class="navigation-auto">
+            <div class="auto-btn1"></div>
+            <div class="auto-btn2"></div>
+            <div class="auto-btn3"></div>
+            <div class="auto-btn4"></div>
+        </div>
+    </div>
+    <div class="navigation-manual">
+        <label for="radio1" class="manual-btn"></label>
+        <label for="radio2" class="manual-btn"></label>
+        <label for="radio3" class="manual-btn"></label>
+        <label for="radio4" class="manual-btn"></label>
+    </div>
+</div>
 
 <!-- end image slider -->
 <!-- text info -->
@@ -110,7 +159,6 @@
             <div class="image-card">
                 <img src="{% static 'imgs/manage1.webp' %}" alt="">
             </div>
-            <i class="fa-solid fa-calendar"></i><span>25 , نوفمبر 2023</span>
             <p>نشأة الإدارة وتطورها</p>
         </div>
     </a>
@@ -119,7 +167,6 @@
             <div class="image-card">
                 <img src="{% static 'imgs/repair.jpg' %}" alt="">
             </div>
-            <i class="fa-solid fa-calendar"></i><span>25 , نوفمبر 2023</span>
             <p>الإصلاح الإداري المفهوم والأهداف</p>
         </div>
     </a>
@@ -128,7 +175,6 @@
             <div class="image-card">
                 <img src="{% static 'imgs/method1.jpg' %}" alt="">
             </div>
-            <i class="fa-solid fa-calendar"></i><span>25 , نوفمبر 2023</span>
             <p>منهجية الإصلاح الإداري</p>
         </div>
     </a>
@@ -137,7 +183,6 @@
             <div class="image-card">
                 <img src="{% static 'imgs/US.jpg' %}" alt="">
             </div>
-            <i class="fa-solid fa-calendar"></i><span>25 , نوفمبر 2023</span>
             <p>تجربة الولايات المتحدة الأمريكية في الإصلاح الإداري</p>
         </div>
     </a>
@@ -146,7 +191,6 @@
             <div class="image-card">
                 <img src="{% static 'imgs/sn.webp' %}" alt="">
             </div>
-            <i class="fa-solid fa-calendar"></i><span>25 , نوفمبر 2023</span>
             <p>تجربة سنغافورا في اللإصلاح الإداري</p>
         </div>
     </a>
@@ -155,7 +199,6 @@
             <div class="image-card">
                 <img src="{% static 'imgs/raw.webp' %}" alt="">
             </div>
-            <i class="fa-solid fa-calendar"></i><span>25 , نوفمبر 2023</span>
             <p>تجربة رواندا في الإصلاح الإداري</p>
         </div>
     </a>
@@ -199,8 +242,18 @@
 </div> -->
 <h1 class="spe-h1">آخر الأخبار</h1>
 <!-- <div class="show-i"> -->
-<div class="news">
-    <h2>الأخبار قيد العمل حالياً</h2>
+    <!-- <div class="news">
+        <h2>الأخبار قيد العمل حالياً</h2>
+    </div> -->
+<div class="show-i">
+    <a href="{% url 'rwanda_study' %}">
+        <div class="card">
+            <div class="image-card">
+                <img src="{% static 'imgs/invite.png' %}" alt="">
+            </div>
+            <p>إعلان للمرة الثانية</p>
+        </div>
+    </a>
 </div>
 <!-- <a href="{% url 'showDetailStudies' %}">
         <div class="card">
@@ -233,4 +286,14 @@
     </a> -->
 <!-- <a href="{% url 'news' %}" class="show-all">عرض المزيد...</a> -->
 <!-- </div> -->
+<script type="text/javascript">
+    let counter = 1;
+    setInterval(function () {
+        document.getElementById('radio' + counter).checked = true;
+        counter++;
+        if (counter > 4) {
+            counter = 1;
+        }
+    }, 5000);
+</script>
 {% endblock %}

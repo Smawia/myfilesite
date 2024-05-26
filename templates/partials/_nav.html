@@ -2,7 +2,7 @@
 
 <!-- start header -->
 <header>
-    <img src="{% static 'imgs/logo.png' %}" alt="">
+    <a href="{% url 'index' %}"><img src="{% static 'imgs/logo.png' %}" alt=""></a>
     
     
     <div class="togg">
@@ -28,15 +28,16 @@
                 
             </ul>
         </li>
-        <li class="base-li"><a href="js-a"
-            {% if 'studies' in request.path or 'showDetailStudies' in request.path or 'showDetailPatrols' in request.path or 'patrols' in request.path or 'pushStudyPost' in request.path or 'firstStudyPage' in request.path or 'administrativeReform' in request.path or 'reformMethodology' in request.path or 'NotesReform' in request.path or 'StudyOfUS' in request.path or 'StudySingapore' in request.path or 'StudyRwanda' in request.path or 'StudyChina' in request.path or 'MalaysiaStudy' in request.path or 'JordanStudy' in request.path or 'FeaturesOfAdministrativeReformInYemen' in request.path or 'ComprehensiveReform' in request.path or 'AdministrativeRaw' in request.path or 'AdministrativeReformTwo' in request.path or 'AdministrativeLawInYemen' in request.path or 'GlobalManagementReform' in request.path or 'FutureForReformingAdministrativeLawInYemen' in request.path or 'LegalReform' in request.path or 'EvolutionOfPublicAdministration' in request.path or 'pushStudyPost' in request.path or 'pushStudyPost' in request.path or 'pushStudyPost' in request.path or 'pushStudyPost' in request.path or 'pushStudyPost' in request.path or 'pushStudyPost' in request.path%}
+        <li class="base-li"><a href="#"
+            {% if 'studies' in request.path or 'showDetailStudies' in request.path or 'showDetailPatrols' in request.path or 'patrols' in request.path or 'pushStudyPost' in request.path or 'firstStudyPage' in request.path or 'administrativeReform' in request.path or 'reformMethodology' in request.path or 'NotesReform' in request.path or 'StudyOfUS' in request.path or 'StudySingapore' in request.path or 'StudyRwanda' in request.path or 'StudyChina' in request.path or 'MalaysiaStudy' in request.path or 'JordanStudy' in request.path or 'FeaturesOfAdministrativeReformInYemen' in request.path or 'ComprehensiveReform' in request.path or 'AdministrativeRaw' in request.path or 'AdministrativeReformTwo' in request.path or 'AdministrativeLawInYemen' in request.path or 'GlobalManagementReform' in request.path or 'FutureForReformingAdministrativeLawInYemen' in request.path or 'LegalReform' in request.path or 'EvolutionOfPublicAdministration' in request.path or 'Books' in request.path or 'pushStudyPost' in request.path or 'pushStudyPost' in request.path or 'pushStudyPost' in request.path or 'pushStudyPost' in request.path or 'pushStudyPost' in request.path%}
             class="active js-a"
             {% else %}
-            class="js-a"
+            class=""
             {% endif %}
             >اصدارات المركز<i class="fa-solid fa-angle-down arrow spe-arrow"></i><i class="fa-solid fa-angle-left arrow left-arrow2"></i></a>
             <ul class="ul nested-list">
-                <li><a href="{% url 'studies' %}">الكتب والدراسات</a></li>
+                <li><a href="{% url 'studies' %}">الدراسات والبحوث</a></li>
+                <li><a href="{% url 'books' %}">الكتب</a></li>
                 <li><a href="{% url 'patrols' %}">الدورية</a></li>
             </ul>
         </li>   
@@ -112,15 +113,16 @@
                     <li><a href="{% url 'criteria' %}">معايير النشر</a></li>
                 </ul>
             </li>   
-            <li class="aside-base-li"><a href="{% url 'studies' %}"
-                {% if 'studies' in request.path or 'showDetailStudies' in request.path or 'showDetailPatrols' in request.path or 'patrols' in request.path or 'pushStudyPost' in request.path or 'firstStudyPage' in request.path or 'administrativeReform' in request.path or 'reformMethodology' in request.path or 'NotesReform' in request.path or 'StudyOfUS' in request.path or 'StudySingapore' in request.path or 'StudyRwanda' in request.path or 'StudyChina' in request.path or 'MalaysiaStudy' in request.path or 'JordanStudy' in request.path or 'FeaturesOfAdministrativeReformInYemen' in request.path or 'ComprehensiveReform' in request.path or 'AdministrativeRaw' in request.path or 'AdministrativeReformTwo' in request.path or 'AdministrativeLawInYemen' in request.path or 'GlobalManagementReform' in request.path or 'FutureForReformingAdministrativeLawInYemen' in request.path or 'LegalReform' in request.path or 'EvolutionOfPublicAdministration' in request.path or 'pushStudyPost' in request.path or 'pushStudyPost' in request.path or 'pushStudyPost' in request.path or 'pushStudyPost' in request.path or 'pushStudyPost' in request.path or 'pushStudyPost' in request.path%}
+            <li class="aside-base-li"><a href="#"
+                {% if 'studies' in request.path or 'showDetailStudies' in request.path or 'showDetailPatrols' in request.path or 'patrols' in request.path or 'pushStudyPost' in request.path or 'firstStudyPage' in request.path or 'administrativeReform' in request.path or 'reformMethodology' in request.path or 'NotesReform' in request.path or 'StudyOfUS' in request.path or 'StudySingapore' in request.path or 'StudyRwanda' in request.path or 'StudyChina' in request.path or 'MalaysiaStudy' in request.path or 'JordanStudy' in request.path or 'FeaturesOfAdministrativeReformInYemen' in request.path or 'ComprehensiveReform' in request.path or 'AdministrativeRaw' in request.path or 'AdministrativeReformTwo' in request.path or 'AdministrativeLawInYemen' in request.path or 'GlobalManagementReform' in request.path or 'FutureForReformingAdministrativeLawInYemen' in request.path or 'LegalReform' in request.path or 'EvolutionOfPublicAdministration' in request.path or 'Books' in request.path or 'pushStudyPost' in request.path or 'pushStudyPost' in request.path or 'pushStudyPost' in request.path or 'pushStudyPost' in request.path or 'pushStudyPost' in request.path%}
                 class="active js-a"
                 {% else %}
                 class="js-a"
                 {% endif %}
                 >اصدارات المركز</a>
                 <ul class="aside-ul aside-nested-list">
-                    <li><a href="{% url 'studies' %}">الكتب والدراسات</a></li>
+                    <li><a href="{% url 'studies' %}">الدراسات والبحوث</a></li>
+                    <li><a href="{% url 'books' %}">الكتب</a></li>
                     <li><a href="{% url 'patrols' %}">الدورية</a></li>
                 </ul>
             </li>
@@ -180,6 +182,14 @@
         <i class="fa-solid fa-right-to-bracket login"></i>
     </a>
     {% endif %}
+
+    <!-- start social media -->
+    <div class="social">
+        <a href="mailto:contact@csr-yemen.com"><i class="fa-solid fa-envelope"></i></a>
+        <a href="https://api.whatsapp.com/send?phone=782742438"><i class="fa-brands fa-whatsapp"></i></a>
+        <a href="https://www.facebook.com/profile.php?id=61556721602912" target="_blank"><i class="fa-brands fa-facebook"></i></a>
+    </div>
+    <!-- end social media -->
 </header>
 <script>
     
