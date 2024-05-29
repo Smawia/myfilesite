@@ -2,9 +2,11 @@ from django.shortcuts import redirect, render
 from django.http import HttpResponse
 from django.contrib import messages
 from .models import Contacts
+from .models import Studies
 from comments.models import Publish
 from comments.models import Comments
 from comments.forms import DocumentForm
+from django.core.paginator import Paginator
 
 # Create your views here.
 
@@ -16,11 +18,19 @@ def about(request):
     return render(request,'pages/about.html')
 
 def studies(request):
-    typeData = 'studies'
+    # typeData = 'studies'
+    # Publish.objects.all().filter(type=typeData)
     context = None
 
+    # data = ['نشأة الإدارة وتطورها','الإصلاح الإداري المفهوم والأهداف','منهجية الإصلاح الإداري','ملاحظات على مداخل الإصلاح الإداري','تجربة الولايات المتحدة الأمريكية في الإصلاح الإداري','تجربة سنغافورا في الإصلاح الإداري']
+
+    data = Studies.objects.all()
+
+    page = Paginator(data,10)
+    page_list = request.GET.get('page')
+    page = page.get_page(page_list)
     context = {
-        'posts':Publish.objects.all().filter(type=typeData)
+        'page': page
     }
     return render(request,'pages/studies.html',context)
 
@@ -53,14 +63,6 @@ def patrols(request):
     }
     return render(request,'pages/patrols.html',context)
 
-def news(request):
-    typeData = 'news'
-    context = None
-
-    context = {
-        'posts':Publish.objects.all().filter(type=typeData)
-    }
-    return render(request,'pages/news.html',context)
 
 def showDetailStudies(request):
     name = None
@@ -348,6 +350,15 @@ def general_administration_in_yemen(request):
 
 def books(request):
     return render(request,'pages/books.html')
+
+def current_economic_situation(request):
+    return render(request,'pages/current_economic_situation.html')
+
+def the_existing_social_situation(request):
+    return render(request,'pages/the_existing_social_situation.html')
+
+def the_influence_of_the_bureaucratic_apparatus_on_administrative_reform(request):
+    return render(request,'pages/the_influence_of_the_bureaucratic_apparatus_on_administrative_reform.html')
 
 def error_404(request,exception):
     return render(request,'pages/404_error.html')

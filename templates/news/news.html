@@ -3,8 +3,18 @@
 {% block content %}
 <h1 class="spe-h1"> الأخبار</h1>
 <!-- <div class="show-i"> -->
-<div class="news">
+<!-- <div class="news">
     <h2>الأخبار قيد العمل حالياً</h2>
+</div> -->
+<div class="show-i">
+    <a href="{% url 'first_announcement' %}">
+        <div class="card">
+            <div class="image-card">
+                <img src="{% static 'imgs/invite.png' %}" alt="">
+            </div>
+            <p>إعلان دعوة للنشر</p>
+        </div>
+    </a>
 </div>
 <!-- <a href="{% url 'showDetailStudies' %}">
         <div class="card">

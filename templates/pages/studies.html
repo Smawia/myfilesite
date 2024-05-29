@@ -12,12 +12,22 @@
             <p>كتاب جماعي بعنوان "رؤية مستقبلية للإصلاح الإداري الشامل في الجمهورية اليمنية- دراسة تحليلية مقارنة"</p>
         </div>
     </a> -->
-    <a href="{% url 'firstpage' %}">
+    {% for data in page.object_list %}
+    <a href="{{ data.url }}">
+        <div class="card">
+            <div class="image-card">
+                <img src="{{data.image.url}}" alt="">
+            </div>
+            <p>{{data.subject}}</p>
+        </div>
+    </a>
+    {% endfor %}
+    <!-- <a href="{% url 'firstpage' %}">
         <div class="card">
             <div class="image-card">
                 <img src="{% static 'imgs/manage1.webp' %}" alt="">
             </div>
-            <p>نشأة الإدارة وتطورها</p>
+            <p></p>
         </div>
     </a>
     <a href="{% url 'administrativereform' %}">
@@ -206,8 +216,8 @@
             </div>
             <p>وضع الإدارة العامة القائم في مؤسسات الدولة اليمنية</p>
         </div>
-    </a><!--
-    <a href="{% url 'showDetailNews' %}">
+    </a> -->
+    <!-- <a href="{% url 'showDetailNews' %}">
         <div class="card">
             <div class="image-card">
                 <img src="{% static 'imgs/state.jpeg' %}" alt="">
@@ -362,5 +372,33 @@
     </a> -->
 
 </div>
-
+<div class="pagination">
+    <div class="p-row">
+        <div class="p-column">
+            <ul class="p-ul">
+                <li class="p-item disabled">
+                    {% if page.has_previous %}
+                    <a href="{% url 'studies' %}?page={{page.previous_page_number}}" class="p-link">السابق</a>
+                    {% endif %}
+                </li>
+                {% for num_page in page.paginator.page_range %}
+                {% if page.number == num_page %}
+                <li class="p-item">
+                    <a href="{% url 'studies' %}?page={{num_page}}" class="p-link active">{{num_page}}</a>
+                </li>
+                {% else %}
+                <li class="p-item">
+                    <a href="{% url 'studies' %}?page={{num_page}}" class="p-link">{{num_page}}</a>
+                </li>
+                {% endif %}
+                {% endfor %}
+                <li class="p-item disabled">
+                    {% if page.has_next %}
+                    <a href="{% url 'studies' %}?page={{page.next_page_number}}" class="p-link">التالي</a>
+                    {% endif %}
+                </li>
+            </ul>
+        </div>
+    </div>
+</div>
 {% endblock %}

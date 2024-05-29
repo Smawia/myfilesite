@@ -7,7 +7,6 @@ urlpatterns = [
     path('studies',views.studies,name='studies'),
     path('contact',views.contact,name='contact'),
     path('patrols',views.patrols,name='patrols'),
-    path('news',views.news,name='news'),
     path('showDetailStudies',views.showDetailStudies,name='showDetailStudies'),
     path('showDetailPatrols',views.showDetailPatrols,name='showDetailPatrols'),
     path('showDetailNews',views.showDetailNews,name='showDetailNews'),
@@ -38,4 +37,9 @@ urlpatterns = [
     path('LegalReformInYemen',views.legal_reform_in_yemen,name='legal_reform_in_yemen'),
     path('GeneralAdministrationInYemen',views.general_administration_in_yemen,name='general_administration_in_yemen'),
     path('Books',views.books,name='books'),
+
+    # new studies
+    path('CurrentEconomicSituation',views.current_economic_situation,name='current_economic_situation'),
+    path('theExistingSocialSituation',views.the_existing_social_situation,name='the_existing_social_situation'),
+    path('TheBureaucraticApparatusOnAdministrativeReform',views.the_influence_of_the_bureaucratic_apparatus_on_administrative_reform,name='the_influence_of_the_bureaucratic_apparatus_on_administrative_reform'),
 ]

@@ -19,14 +19,40 @@ let arrow4 = document.querySelector(".spe-arrow");
 let arrow2 = document.querySelector(".arrow");
 let lis = document.querySelectorAll(".js li");
 let img_id = document.querySelector(".hidden-row");
+let card = document.querySelectorAll(".card");
+let head_page = document.querySelector(".head-page");
+let txt_information = document.querySelector(".text-info");
 window.onscroll = function () {
     if (window.scrollY >= 300) {
+        // console.log(head_page);
+        head_page.style.cssText = "background-color: rgb(227 9 29 / 23%); border-radius: 12px;";
         img_id.style.display = 'block';
     }
+    if (window.scrollY >= 50) {
+        txt_information.style.transform = 'translateX(0)';
+    }
+    // if (window.scrollY >= 290) {
+    //     card[0].style.visibility = 'visible';
+    //     card[1].style.visibility = 'visible';
+    //     card[2].style.visibility = 'visible';
+    //     card[3].style.visibility = 'visible';
+    //     card[4].style.visibility = 'visible';
+    //     card[5].style.visibility = 'visible';
+    //     card[6].style.visibility = 'visible';
+    //     // card.style.visibility = 'visible';
+    // }
     else {
+        head_page.style.cssText = "background-color: white;";
         img_id.style.display = 'none';
     }
 }
+
+
+
+
+
+
+
 let aside_bar = document.querySelector('.aside');
 let over = document.querySelector('.over');
 console.log(aside_bar);
@@ -37,8 +63,8 @@ bar.onclick = function () {
 
 document.body.addEventListener("click", function (e) {
     if (!e.target.classList.contains('toggle-menu')) {
-        aside_bar.style.display='none';
-        over.style.display='none';
+        aside_bar.style.display = 'none';
+        over.style.display = 'none';
     }
 });
 // bar.onclick = function () {
