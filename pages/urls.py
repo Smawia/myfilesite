@@ -42,4 +42,9 @@ urlpatterns = [
     path('CurrentEconomicSituation',views.current_economic_situation,name='current_economic_situation'),
     path('theExistingSocialSituation',views.the_existing_social_situation,name='the_existing_social_situation'),
     path('TheBureaucraticApparatusOnAdministrativeReform',views.the_influence_of_the_bureaucratic_apparatus_on_administrative_reform,name='the_influence_of_the_bureaucratic_apparatus_on_administrative_reform'),
+    path('PublicFinanceAndEconomicConstruction',views.public_finance_and_economic_construction,name='public_finance_and_economic_construction'),
+    path('FinancialReformInCountries',views.financial_reform_in_countries,name='financial_reform_in_countries'),
+    path('FinancialReformInYemen',views.financial_reform_in_yemen,name='financial_reform_in_yemen'),
+    path('FutureOfFinancialReformInYemen',views.future_of_financial_reform_in_yemen,name='future_of_financial_reform_in_yemen'),
+    path('PrivateSectorInYemen',views.the_private_sector_inyemen,name='the_private_sector_inyemen'),
 ]

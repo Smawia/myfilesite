@@ -29,7 +29,7 @@
             </ul>
         </li>
         <li class="base-li"><a href="#"
-            {% if 'studies' in request.path or 'showDetailStudies' in request.path or 'showDetailPatrols' in request.path or 'patrols' in request.path or 'pushStudyPost' in request.path or 'firstStudyPage' in request.path or 'administrativeReform' in request.path or 'reformMethodology' in request.path or 'NotesReform' in request.path or 'StudyOfUS' in request.path or 'StudySingapore' in request.path or 'StudyRwanda' in request.path or 'StudyChina' in request.path or 'MalaysiaStudy' in request.path or 'JordanStudy' in request.path or 'FeaturesOfAdministrativeReformInYemen' in request.path or 'ComprehensiveReform' in request.path or 'AdministrativeRaw' in request.path or 'AdministrativeReformTwo' in request.path or 'AdministrativeLawInYemen' in request.path or 'GlobalManagementReform' in request.path or 'FutureForReformingAdministrativeLawInYemen' in request.path or 'LegalReform' in request.path or 'EvolutionOfPublicAdministration' in request.path or 'Books' in request.path or 'GeneralAdministrationInYemen' in request.path or 'CurrentEconomicSituation' in request.path or 'pushStudyPost' in request.path or 'pushStudyPost' in request.path or 'pushStudyPost' in request.path%}
+            {% if 'studies' in request.path or 'showDetailStudies' in request.path or 'showDetailPatrols' in request.path or 'patrols' in request.path or 'pushStudyPost' in request.path or 'firstStudyPage' in request.path or 'administrativeReform' in request.path or 'reformMethodology' in request.path or 'NotesReform' in request.path or 'StudyOfUS' in request.path or 'StudySingapore' in request.path or 'StudyRwanda' in request.path or 'StudyChina' in request.path or 'MalaysiaStudy' in request.path or 'JordanStudy' in request.path or 'FeaturesOfAdministrativeReformInYemen' in request.path or 'ComprehensiveReform' in request.path or 'AdministrativeRaw' in request.path or 'AdministrativeReformTwo' in request.path or 'AdministrativeLawInYemen' in request.path or 'GlobalManagementReform' in request.path or 'FutureForReformingAdministrativeLawInYemen' in request.path or 'LegalReform' in request.path or 'EvolutionOfPublicAdministration' in request.path or 'Books' in request.path or 'GeneralAdministrationInYemen' in request.path or 'CurrentEconomicSituation' in request.path or 'theExistingSocialSituation' in request.path or 'TheBureaucraticApparatusOnAdministrativeReform' in request.path or 'PublicFinanceAndEconomicConstruction' in request.path or 'FinancialReformInCountries' in request.path  or 'FinancialReformInYemen' in request.path  or 'FutureOfFinancialReformInYemen' in request.path or 'PrivateSectorInYemen' in request.path%}
             class="active js-a"
             {% else %}
             class=""
@@ -49,17 +49,7 @@
             {% endif %}
             >الدوريات</a>
         </li> -->
-        <li><a href="{% url 'all_posts' %}" 
-            {% if not request.user.is_authenticated or not request.user.is_superuser %}
-            style="display: none;"
-            {% else %}
-            {% if 'all_posts' in request.path %}
-            class="active"
-            {% else %}
-            class=""
-            {% endif %}
-            {% endif %}
-            >المنشورات</a></li>
+        
         <li class="asid-li2"><a href="{% url 'news' %}"
             {% if 'news' in request.path or 'showDetailNews' in request.path or 'pushNewsPost' in request.path %}
             class="active"
@@ -85,6 +75,17 @@
             class=""
             {% endif %}
             >تواصل معنا</a></li>
+        <li class="asid-li3"><a href="{% url 'all_posts' %}"     
+            {% if not request.user.is_authenticated or not request.user.is_superuser %}
+            style="display: none;"
+            {% else %}
+            {% if 'all_posts' in request.path %}
+            class="active"
+            {% else %}
+            class=""
+            {% endif %}
+            {% endif %}
+            >المنشورات</a></li>
     </ul>
     </div>
     <!-- overlay -->
@@ -114,7 +115,7 @@
                 </ul>
             </li>   
             <li class="aside-base-li"><a href="#"
-                {% if 'studies' in request.path or 'showDetailStudies' in request.path or 'showDetailPatrols' in request.path or 'patrols' in request.path or 'pushStudyPost' in request.path or 'firstStudyPage' in request.path or 'administrativeReform' in request.path or 'reformMethodology' in request.path or 'NotesReform' in request.path or 'StudyOfUS' in request.path or 'StudySingapore' in request.path or 'StudyRwanda' in request.path or 'StudyChina' in request.path or 'MalaysiaStudy' in request.path or 'JordanStudy' in request.path or 'FeaturesOfAdministrativeReformInYemen' in request.path or 'ComprehensiveReform' in request.path or 'AdministrativeRaw' in request.path or 'AdministrativeReformTwo' in request.path or 'AdministrativeLawInYemen' in request.path or 'GlobalManagementReform' in request.path or 'FutureForReformingAdministrativeLawInYemen' in request.path or 'LegalReform' in request.path or 'EvolutionOfPublicAdministration' in request.path or 'Books' in request.path or 'GeneralAdministrationInYemen' in request.path or 'CurrentEconomicSituation' in request.path or 'pushStudyPost' in request.path or 'pushStudyPost' in request.path or 'pushStudyPost' in request.path%}
+                {% if 'studies' in request.path or 'showDetailStudies' in request.path or 'showDetailPatrols' in request.path or 'patrols' in request.path or 'pushStudyPost' in request.path or 'firstStudyPage' in request.path or 'administrativeReform' in request.path or 'reformMethodology' in request.path or 'NotesReform' in request.path or 'StudyOfUS' in request.path or 'StudySingapore' in request.path or 'StudyRwanda' in request.path or 'StudyChina' in request.path or 'MalaysiaStudy' in request.path or 'JordanStudy' in request.path or 'FeaturesOfAdministrativeReformInYemen' in request.path or 'ComprehensiveReform' in request.path or 'AdministrativeRaw' in request.path or 'AdministrativeReformTwo' in request.path or 'AdministrativeLawInYemen' in request.path or 'GlobalManagementReform' in request.path or 'FutureForReformingAdministrativeLawInYemen' in request.path or 'LegalReform' in request.path or 'EvolutionOfPublicAdministration' in request.path or 'Books' in request.path or 'GeneralAdministrationInYemen' in request.path or 'CurrentEconomicSituation' in request.path or 'theExistingSocialSituation' in request.path or 'TheBureaucraticApparatusOnAdministrativeReform' in request.path or 'PublicFinanceAndEconomicConstruction' in request.path or 'FinancialReformInCountries' in request.path  or 'FinancialReformInYemen' in request.path  or 'FutureOfFinancialReformInYemen' in request.path or 'PrivateSectorInYemen' in request.path%}
                 class="active js-a"
                 {% else %}
                 class="js-a"

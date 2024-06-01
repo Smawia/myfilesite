@@ -3936,7 +3936,7 @@ input {
     .first-page .p-img {
         border-radius: 12px;
         top: 335px;
-        right: 125px;
+        right: 130px;
         font-size: 25px;
         width: 52%;
         height: 85px;
@@ -4832,7 +4832,7 @@ input {
 
 .asid-li2 {
     position: relative;
-    right: -27px;
+    right: -9px;
 }
 
 .asid-li3 {
@@ -5582,19 +5582,33 @@ input {
     width: 400px !important;
     height: 400px !important;
 }
+
 .g2 {
     width: 400px !important;
     height: 400px !important;
 }
+
 .g3 {
     width: 400px !important;
     height: 400px !important;
 }
+
 .g4 {
     width: 400px !important;
     height: 400px !important;
 }
+
 .g5 {
+    width: 400px !important;
+    height: 400px !important;
+}
+
+.gd1 {
+    width: 400px !important;
+    height: 400px !important;
+}
+
+.gd2 {
     width: 400px !important;
     height: 400px !important;
 }
@@ -5604,25 +5618,40 @@ input {
         width: 361px !important;
         height: 90px !important;
     }
+
     .g1 {
         width: 348px !important;
         height: 134px !important;
     }
+
     .g2 {
         width: 354px !important;
         height: 186px !important;
     }
+
     .g3 {
         width: 352px !important;
         height: 184px !important;
     }
+
     .g4 {
         width: 355px !important;
         height: 151px !important;
     }
+
     .g5 {
         width: 343px !important;
         height: 185px !important;
+    }
+
+    .gd1 {
+        width: 351px !important;
+        height: 250px !important;
+    }
+
+    .gd2 {
+        width: 351px !important;
+        height: 251px !important;
     }
 }
 
@@ -5631,25 +5660,39 @@ input {
         width: 585px !important;
         height: 170px !important;
     }
+
     .g1 {
         width: 389px !important;
         height: 134px !important;
     }
+
     .g2 {
         width: 465px !important;
         height: 197px !important;
     }
+
     .g3 {
         width: 501px !important;
         height: 215px !important;
     }
+
     .g4 {
         width: 504px !important;
         height: 214px !important;
     }
+
     .g5 {
         width: 445px !important;
         height: 218px !important;
+    }
+    .gd1 {
+        width: 440px !important;
+        height: 275px !important;
+    }
+
+    .gd2 {
+        width: 464px !important;
+        height: 283px !important;
     }
 }
 
@@ -5658,25 +5701,38 @@ input {
         width: 621px !important;
         height: 200px !important;
     }
+
     .g1 {
         width: 410px !important;
         height: 142px !important;
     }
+
     .g2 {
         width: 533px !important;
         height: 216px !important;
     }
+
     .g3 {
         width: 573px !important;
         height: 226px !important;
     }
+
     .g4 {
         width: 598px !important;
         height: 226px !important;
     }
+
     .g5 {
         width: 568px !important;
         height: 244px !important;
+    }
+    .gd1 {
+        width: 549px !important;
+        height: 296px !important;
+    }
+    .gd2 {
+        width: 620px !important;
+        height: 305px !important;
     }
 }
 
@@ -5685,25 +5741,38 @@ input {
         width: 621px !important;
         height: 190px !important;
     }
+
     .g1 {
         width: 410px !important;
         height: 142px !important;
     }
+
     .g2 {
         width: 533px !important;
         height: 216px !important;
     }
+
     .g3 {
         width: 640px !important;
         height: 234px !important;
     }
+
     .g4 {
         width: 598px !important;
         height: 226px !important;
     }
+
     .g5 {
         width: 568px !important;
         height: 244px !important;
+    }
+    .gd1 {
+        width: 565px !important;
+        height: 301px !important;
+    }
+    .gd2 {
+        width: 700px !important;
+        height: 330px !important;
     }
 }
 

@@ -360,6 +360,21 @@ def the_existing_social_situation(request):
 def the_influence_of_the_bureaucratic_apparatus_on_administrative_reform(request):
     return render(request,'pages/the_influence_of_the_bureaucratic_apparatus_on_administrative_reform.html')
 
+def public_finance_and_economic_construction(request):
+    return render(request,'pages/public_finance_and_economic_construction.html')
+
+def financial_reform_in_countries(request):
+    return render(request,'pages/financial_reform_in_countries.html')
+
+def financial_reform_in_yemen(request):
+    return render(request,'pages/financial_reform_in_yemen.html')
+
+def future_of_financial_reform_in_yemen(request):
+    return render(request,'pages/future_of_financial_reform_in_yemen.html')
+
+def the_private_sector_inyemen(request):
+    return render(request,'pages/the_private_sector_inyemen.html')
+
 def error_404(request,exception):
     return render(request,'pages/404_error.html')
 
