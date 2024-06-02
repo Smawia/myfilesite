@@ -137,6 +137,7 @@ header ul {
     header ul li a:hover {
         color: white !important;
         border-radius: 8px !important;
+        border-bottom: 2px solid red;
     }
 
     header ul .base-li .ul {
@@ -344,31 +345,35 @@ header .arrow {
     display: flex;
     justify-content: space-around;
     align-items: center;
-    transform: translateX(20000px);
-    transition: 2s;
+    transform: translateX(2000px);
+    transition: 3s;
 }
 
 @media (max-width: 574px) {
     .text-info {
         flex-direction: column;
+        font-size: 18px;
     }
 }
 
 @media (min-width: 575px) {
     .text-info {
         flex-direction: column;
+        font-size: 20px;
     }
 }
 
 @media (min-width: 768px) {
     .text-info {
         flex-direction: row;
+        font-size: 23px;
     }
 }
 
 @media (min-width: 992px) {
     .text-info {
         flex-direction: row;
+        font-size: 28px;
     }
 }
 
@@ -3790,7 +3795,7 @@ input {
         justify-content: center;
         align-items: center;
         font-size: 16px;
-        width: 265px;
+        width: 200px;
         margin: 66px auto 10px;
     }
 
@@ -4832,7 +4837,7 @@ input {
 
 .asid-li2 {
     position: relative;
-    right: -9px;
+    right: -3px;
 }
 
 .asid-li3 {
@@ -5567,7 +5572,7 @@ input {
 .p-ul li a:hover,
 .p-ul li a.active {
     background-color: #e3091d;
-    color: white;
+    color: white !important;
 }
 
 /* end styling pagination */
@@ -5630,8 +5635,11 @@ input {
     }
 
     .g3 {
-        width: 352px !important;
-        height: 184px !important;
+        width: 340px !important;
+        height: 192px !important;
+        display: block !important;
+        margin-right: -42px !important;
+
     }
 
     .g4 {
@@ -5685,6 +5693,7 @@ input {
         width: 445px !important;
         height: 218px !important;
     }
+
     .gd1 {
         width: 440px !important;
         height: 275px !important;
@@ -5713,8 +5722,8 @@ input {
     }
 
     .g3 {
-        width: 573px !important;
-        height: 226px !important;
+        width: 586px !important;
+        height: 235px !important;
     }
 
     .g4 {
@@ -5726,10 +5735,12 @@ input {
         width: 568px !important;
         height: 244px !important;
     }
+
     .gd1 {
         width: 549px !important;
         height: 296px !important;
     }
+
     .gd2 {
         width: 620px !important;
         height: 305px !important;
@@ -5766,10 +5777,12 @@ input {
         width: 568px !important;
         height: 244px !important;
     }
+
     .gd1 {
         width: 565px !important;
         height: 301px !important;
     }
+
     .gd2 {
         width: 700px !important;
         height: 330px !important;
@@ -5781,3 +5794,9 @@ input {
     position: relative;
     top: -3px;
 }
+
+/* styling footer icons */
+.foot-i {
+    color: #b0b0b0 !important;
+}
+/* styling social is */

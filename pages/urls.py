@@ -47,4 +47,7 @@ urlpatterns = [
     path('FinancialReformInYemen',views.financial_reform_in_yemen,name='financial_reform_in_yemen'),
     path('FutureOfFinancialReformInYemen',views.future_of_financial_reform_in_yemen,name='future_of_financial_reform_in_yemen'),
     path('PrivateSectorInYemen',views.the_private_sector_inyemen,name='the_private_sector_inyemen'),
+    path('RoleOfThePrivateSectorInWorld',views.role_of_the_private_sector_in_world,name='role_of_the_private_sector_in_world'),
+    path('RoleOfPrivateSectorInDevelopment',views.role_of_the_private_sector_in_development_in_yemen,name='role_of_the_private_sector_in_development_in_yemen'),
+    path('FutureOfPrivateSectorInYemen',views.future_of_private_sector_in_Yemen,name='future_of_private_sector_in_Yemen'),
 ]

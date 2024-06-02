@@ -10,18 +10,18 @@
     <ul class="js">
         <li><a href="{% url 'index' %}" 
             {% if '/' == request.path %}
-            class="active"
+            class="active nav-a"
             {% else %}
-            class=""
+            class="nav-a"
             {% endif %}
             >الصفحة الرئيسية</a></li>
         <li class="base-li"><a href="#"
             {% if 'about' in request.path or '/criteria' in request.path %}
-            class="active js-a"
+            class="active js-a nav-a"
             {% else %}
-            class="js-a"
+            class="js-a nav-a"
             {% endif %}
-            >معلومات المركز <i class="fa-solid fa-angle-down arrow"></i><i class="fa-solid fa-angle-left arrow left-arrow"></i></a>
+            >معلومات المركز <i class="fa-solid fa-angle-down arrow active"></i></a>
             <ul class="ul">
                 <li><a href="{% url 'about' %}">عن المركز</a></li>
                 <li><a href="{% url 'criteria' %}">معايير النشر</a></li>
@@ -29,12 +29,12 @@
             </ul>
         </li>
         <li class="base-li"><a href="#"
-            {% if 'studies' in request.path or 'showDetailStudies' in request.path or 'showDetailPatrols' in request.path or 'patrols' in request.path or 'pushStudyPost' in request.path or 'firstStudyPage' in request.path or 'administrativeReform' in request.path or 'reformMethodology' in request.path or 'NotesReform' in request.path or 'StudyOfUS' in request.path or 'StudySingapore' in request.path or 'StudyRwanda' in request.path or 'StudyChina' in request.path or 'MalaysiaStudy' in request.path or 'JordanStudy' in request.path or 'FeaturesOfAdministrativeReformInYemen' in request.path or 'ComprehensiveReform' in request.path or 'AdministrativeRaw' in request.path or 'AdministrativeReformTwo' in request.path or 'AdministrativeLawInYemen' in request.path or 'GlobalManagementReform' in request.path or 'FutureForReformingAdministrativeLawInYemen' in request.path or 'LegalReform' in request.path or 'EvolutionOfPublicAdministration' in request.path or 'Books' in request.path or 'GeneralAdministrationInYemen' in request.path or 'CurrentEconomicSituation' in request.path or 'theExistingSocialSituation' in request.path or 'TheBureaucraticApparatusOnAdministrativeReform' in request.path or 'PublicFinanceAndEconomicConstruction' in request.path or 'FinancialReformInCountries' in request.path  or 'FinancialReformInYemen' in request.path  or 'FutureOfFinancialReformInYemen' in request.path or 'PrivateSectorInYemen' in request.path%}
-            class="active js-a"
+            {% if 'studies' in request.path or 'showDetailStudies' in request.path or 'showDetailPatrols' in request.path or 'patrols' in request.path or 'pushStudyPost' in request.path or 'firstStudyPage' in request.path or 'administrativeReform' in request.path or 'reformMethodology' in request.path or 'NotesReform' in request.path or 'StudyOfUS' in request.path or 'StudySingapore' in request.path or 'StudyRwanda' in request.path or 'StudyChina' in request.path or 'MalaysiaStudy' in request.path or 'JordanStudy' in request.path or 'FeaturesOfAdministrativeReformInYemen' in request.path or 'ComprehensiveReform' in request.path or 'AdministrativeRaw' in request.path or 'AdministrativeReformTwo' in request.path or 'AdministrativeLawInYemen' in request.path or 'GlobalManagementReform' in request.path or 'FutureForReformingAdministrativeLawInYemen' in request.path or 'LegalReform' in request.path or 'EvolutionOfPublicAdministration' in request.path or 'Books' in request.path or 'GeneralAdministrationInYemen' in request.path or 'CurrentEconomicSituation' in request.path or 'theExistingSocialSituation' in request.path or 'TheBureaucraticApparatusOnAdministrativeReform' in request.path or 'PublicFinanceAndEconomicConstruction' in request.path or 'FinancialReformInCountries' in request.path  or 'FinancialReformInYemen' in request.path  or 'FutureOfFinancialReformInYemen' in request.path or 'PrivateSectorInYemen' in request.path  or 'RoleOfPrivateSectorInDevelopment' in request.path%}
+            class="active js-a nav-a"
             {% else %}
-            class=""
+            class="nav-a"
             {% endif %}
-            >اصدارات المركز<i class="fa-solid fa-angle-down arrow spe-arrow"></i><i class="fa-solid fa-angle-left arrow left-arrow2"></i></a>
+            >اصدارات المركز<i class="fa-solid fa-angle-down arrow spe-arrow active"></i></a>
             <ul class="ul nested-list">
                 <li><a href="{% url 'studies' %}">الدراسات والبحوث</a></li>
                 <li><a href="{% url 'books' %}">الكتب</a></li>
@@ -52,9 +52,9 @@
         
         <li class="asid-li2"><a href="{% url 'news' %}"
             {% if 'news' in request.path or 'showDetailNews' in request.path or 'pushNewsPost' in request.path %}
-            class="active"
+            class="active nav-a"
             {% else %}
-            class=""
+            class="nav-a"
             {% endif %}
             >الأخبار والفعاليات</a></li>
         <li class="asid-li3"><a href="{% url 'signup' %}" 
@@ -62,17 +62,17 @@
             style="display: none;"
             {% else %}
             {% if 'signup' in request.path %}
-            class="active"
+            class="active nav-a"
             {% else %}
-            class=""
+            class="nav-a"
             {% endif %}
             {% endif %}
             >تسجيل عضوية</a></li>
         <li class="asid-li3"><a href="{% url 'contact' %}" 
             {% if 'contact' in request.path %}
-            class="active"
+            class="active nav-a"
             {% else %}
-            class=""
+            class="nav-a"
             {% endif %}
             >تواصل معنا</a></li>
         <li class="asid-li3"><a href="{% url 'all_posts' %}"     
@@ -80,9 +80,9 @@
             style="display: none;"
             {% else %}
             {% if 'all_posts' in request.path %}
-            class="active"
+            class="active nav-a"
             {% else %}
-            class=""
+            class="nav-a"
             {% endif %}
             {% endif %}
             >المنشورات</a></li>
@@ -115,7 +115,7 @@
                 </ul>
             </li>   
             <li class="aside-base-li"><a href="#"
-                {% if 'studies' in request.path or 'showDetailStudies' in request.path or 'showDetailPatrols' in request.path or 'patrols' in request.path or 'pushStudyPost' in request.path or 'firstStudyPage' in request.path or 'administrativeReform' in request.path or 'reformMethodology' in request.path or 'NotesReform' in request.path or 'StudyOfUS' in request.path or 'StudySingapore' in request.path or 'StudyRwanda' in request.path or 'StudyChina' in request.path or 'MalaysiaStudy' in request.path or 'JordanStudy' in request.path or 'FeaturesOfAdministrativeReformInYemen' in request.path or 'ComprehensiveReform' in request.path or 'AdministrativeRaw' in request.path or 'AdministrativeReformTwo' in request.path or 'AdministrativeLawInYemen' in request.path or 'GlobalManagementReform' in request.path or 'FutureForReformingAdministrativeLawInYemen' in request.path or 'LegalReform' in request.path or 'EvolutionOfPublicAdministration' in request.path or 'Books' in request.path or 'GeneralAdministrationInYemen' in request.path or 'CurrentEconomicSituation' in request.path or 'theExistingSocialSituation' in request.path or 'TheBureaucraticApparatusOnAdministrativeReform' in request.path or 'PublicFinanceAndEconomicConstruction' in request.path or 'FinancialReformInCountries' in request.path  or 'FinancialReformInYemen' in request.path  or 'FutureOfFinancialReformInYemen' in request.path or 'PrivateSectorInYemen' in request.path%}
+                {% if 'studies' in request.path or 'showDetailStudies' in request.path or 'showDetailPatrols' in request.path or 'patrols' in request.path or 'pushStudyPost' in request.path or 'firstStudyPage' in request.path or 'administrativeReform' in request.path or 'reformMethodology' in request.path or 'NotesReform' in request.path or 'StudyOfUS' in request.path or 'StudySingapore' in request.path or 'StudyRwanda' in request.path or 'StudyChina' in request.path or 'MalaysiaStudy' in request.path or 'JordanStudy' in request.path or 'FeaturesOfAdministrativeReformInYemen' in request.path or 'ComprehensiveReform' in request.path or 'AdministrativeRaw' in request.path or 'AdministrativeReformTwo' in request.path or 'AdministrativeLawInYemen' in request.path or 'GlobalManagementReform' in request.path or 'FutureForReformingAdministrativeLawInYemen' in request.path or 'LegalReform' in request.path or 'EvolutionOfPublicAdministration' in request.path or 'Books' in request.path or 'GeneralAdministrationInYemen' in request.path or 'CurrentEconomicSituation' in request.path or 'theExistingSocialSituation' in request.path or 'TheBureaucraticApparatusOnAdministrativeReform' in request.path or 'PublicFinanceAndEconomicConstruction' in request.path or 'FinancialReformInCountries' in request.path  or 'FinancialReformInYemen' in request.path  or 'FutureOfFinancialReformInYemen' in request.path or 'PrivateSectorInYemen' in request.path  or 'RoleOfPrivateSectorInDevelopment' in request.path%}
                 class="active js-a"
                 {% else %}
                 class="js-a"
@@ -186,9 +186,9 @@
 
     <!-- start social media -->
     <div class="social">
-        <a href="mailto:contact@csr-yemen.com"><i class="fa-solid fa-envelope"></i></a>
-        <a href="https://api.whatsapp.com/send?phone=782742438"><i class="fa-brands fa-whatsapp"></i></a>
-        <a href="https://www.facebook.com/profile.php?id=61556721602912" target="_blank"><i class="fa-brands fa-facebook"></i></a>
+        <a href="mailto:contact@csr-yemen.com"><i class="fa-solid fa-envelope social-i"></i></a>
+        <a href="https://api.whatsapp.com/send?phone=782742438"><i class="fa-brands fa-whatsapp social-i"></i></a>
+        <a href="https://www.facebook.com/profile.php?id=61556721602912" target="_blank"><i class="fa-brands fa-facebook social-i"></i></a>
     </div>
     <!-- end social media -->
 </header>

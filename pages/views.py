@@ -375,6 +375,15 @@ def future_of_financial_reform_in_yemen(request):
 def the_private_sector_inyemen(request):
     return render(request,'pages/the_private_sector_inyemen.html')
 
+def role_of_the_private_sector_in_world(request):
+    return render(request,'pages/role_of_the_private_sector_in_world.html')
+
+def role_of_the_private_sector_in_development_in_yemen(request):
+    return render(request,'pages/role_of_the_private_sector_in_development_in_yemen.html')
+
+def future_of_private_sector_in_Yemen(request):
+    return render(request,'pages/future_of_private_sector_in_Yemen.html')
+
 def error_404(request,exception):
     return render(request,'pages/404_error.html')
 
