@@ -384,6 +384,9 @@ def role_of_the_private_sector_in_development_in_yemen(request):
 def future_of_private_sector_in_Yemen(request):
     return render(request,'pages/future_of_private_sector_in_Yemen.html')
 
+def Government(request):
+    return render(request,'pages/E-Government.html')
+    
 def error_404(request,exception):
     return render(request,'pages/404_error.html')
 

@@ -50,4 +50,5 @@ urlpatterns = [
     path('RoleOfThePrivateSectorInWorld',views.role_of_the_private_sector_in_world,name='role_of_the_private_sector_in_world'),
     path('RoleOfPrivateSectorInDevelopment',views.role_of_the_private_sector_in_development_in_yemen,name='role_of_the_private_sector_in_development_in_yemen'),
     path('FutureOfPrivateSectorInYemen',views.future_of_private_sector_in_Yemen,name='future_of_private_sector_in_Yemen'),
+    path('Government',views.Government,name='E-Government'),
 ]
