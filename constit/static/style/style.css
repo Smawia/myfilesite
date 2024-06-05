@@ -352,13 +352,14 @@ header .arrow {
     .text-info {
         flex-direction: column;
         font-size: 18px;
+        transform: translateX(0);
     }
 }
 
 @media (min-width: 575px) {
     .text-info {
         flex-direction: column;
-        font-size: 20px;
+        font-size: 16px;
     }
 }
 
@@ -372,7 +373,7 @@ header .arrow {
 @media (min-width: 992px) {
     .text-info {
         flex-direction: row;
-        font-size: 28px;
+        font-size: 30px;
     }
 }
 
@@ -420,6 +421,30 @@ header .arrow {
     line-height: 1.6;
     word-spacing: -3px;
     font-family: 'Calibri';
+}
+
+@media (max-width: 574px) {
+    .text-info p {
+        font-size: 16px !important;
+    }
+}
+
+@media (min-width: 575px) {
+    .text-info p {
+        font-size: 18px !important;
+    }
+}
+
+@media (min-width: 768px) {
+    .text-info p {
+        font-size: 23px !important;
+    }
+}
+
+@media (min-width: 992px) {
+    .text-info p {
+        font-size: 25px !important;
+    }
 }
 
 .text-info .text {
@@ -541,8 +566,8 @@ header .arrow {
     }
 
     .show-i .card .image-card img {
-        height: 200px;
-        max-height: 200px;
+        height: 150px;
+        max-height: 150px;
     }
 
     .show-i .card p {
@@ -3622,7 +3647,7 @@ input {
 
 @media (max-width: 574px) {
     .first-page .us-table {
-        font-size: 18px;
+        font-size: 16px;
     }
 }
 
@@ -3634,13 +3659,13 @@ input {
 
 @media (min-width: 768px) {
     .first-page .us-table {
-        font-size: 23px;
+        font-size: 22px;
     }
 }
 
 @media (min-width: 992px) {
     .first-page .us-table {
-        font-size: 28px;
+        font-size: 26px;
     }
 }
 
@@ -3707,7 +3732,7 @@ input {
 
 @media (max-width: 574px) {
     .first-page .full-text h2 {
-        font-size: 18px;
+        font-size: 16px;
     }
 }
 
@@ -3719,20 +3744,20 @@ input {
 
 @media (min-width: 768px) {
     .first-page .full-text h2 {
-        font-size: 25px;
+        font-size: 22px;
     }
 }
 
 @media (min-width: 992px) {
     .first-page .full-text h2 {
-        font-size: 30px;
+        font-size: 26px;
     }
 }
 
 @media (max-width: 574px) {
     .first-page .first-flex {
         flex-direction: column;
-        font-size: 18px;
+        font-size: 16px;
         margin-right: 10px;
 
     }
@@ -3741,7 +3766,7 @@ input {
 @media (min-width: 575px) {
     .first-page .first-flex {
         flex-direction: column;
-        font-size: 20px;
+        font-size: 18px;
         margin-right: 10px;
     }
 }
@@ -3749,14 +3774,14 @@ input {
 @media (min-width: 768px) {
     .first-page .first-flex {
         flex-direction: row;
-        font-size: 25px;
+        font-size: 22px;
     }
 }
 
 @media (min-width: 992px) {
     .first-page .first-flex {
         flex-direction: row;
-        font-size: 25px;
+        font-size: 26px;
     }
 }
 
@@ -3766,7 +3791,7 @@ input {
     }
 
     .first-page h1 {
-        font-size: 18px;
+        font-size: 16px;
     }
 
     .first-page img {
@@ -3785,7 +3810,7 @@ input {
         font-size: 20px;
         border-top-left-radius: 0;
         border-top-right-radius: 0;
-        width: 87%;
+        width: 88%;
         background-color: #000000e0;
     }
 
@@ -3794,8 +3819,7 @@ input {
         justify-content: center;
         align-items: center;
         font-size: 18px;
-        width: 200px;
-        margin: 66px auto 10px;
+        margin: 80px auto 10px;
     }
 
     .first-page .info .pub {
@@ -3803,13 +3827,13 @@ input {
     }
 
     .first-page .full-text p {
-        font-size: 18px;
+        font-size: 16px;
         /* font-family: 'math' !important; */
     }
 
     .first-page .full-text ul,
     .first-page .full-text ol {
-        font-size: 18px;
+        font-size: 16px;
         line-height: 1.6;
         /* font-family: 'math' !important; */
     }
@@ -3827,7 +3851,7 @@ input {
     }
 
     .first-page h1 {
-        font-size: 20px;
+        font-size: 18px;
     }
 
     .first-page img {
@@ -3901,17 +3925,17 @@ input {
     .first-page .info {
         padding: 10px 10px;
         border-radius: 10px;
-        font-size: 23px;
+        font-size: 22px;
         margin-top: 30px;
     }
 
     .first-page .full-text p {
-        font-size: 26px;
+        font-size: 22px;
     }
 
     .first-page .full-text ul,
     .first-page .full-text ol {
-        font-size: 25px;
+        font-size: 22px;
         line-height: 1.8;
     }
 
@@ -3952,17 +3976,17 @@ input {
     .first-page .info {
         padding: 10px 10px;
         border-radius: 10px;
-        font-size: 28px;
+        font-size: 26px;
         margin-top: 40px;
     }
 
     .first-page .full-text p {
-        font-size: 30px;
+        font-size: 26px;
     }
 
     .first-page .full-text ul,
     .first-page .full-text ol {
-        font-size: 30px;
+        font-size: 26px;
         line-height: 1.6;
         word-spacing: -1px;
         word-spacing: -1px;
@@ -4051,11 +4075,6 @@ input {
     }
 }
 
-@media (max-width: 574px) {
-    .first-page .full-text {
-        /* font-family: 'math' !important; */
-    }
-}
 
 @media (min-width: 575px) {
     .first-page .full-text {
@@ -4089,7 +4108,7 @@ input {
 
     .first-page .first-page-info p {
         margin-bottom: 0;
-        font-size: 18px;
+        font-size: 16px;
     }
 
     .first-page .president {
@@ -5595,6 +5614,8 @@ input {
 .g3 {
     width: 400px !important;
     height: 400px !important;
+    position: relative;
+    right: 0;
 }
 
 .g4 {
@@ -5642,8 +5663,7 @@ input {
         width: 340px !important;
         height: 192px !important;
         display: block !important;
-        margin-right: -42px !important;
-
+        right: 0;
     }
 
     .g4 {
@@ -5951,7 +5971,7 @@ input {
 .gov-p,
 .gov-p2 {
     text-align: center !important;
-    font-size: 30px  !important;
+    font-size: 30px !important;
 }
 
 .gov-p {
@@ -5977,12 +5997,12 @@ input {
     }
 
     .gov tr td ul li {
-        font-size: 15px;
+        font-size: 14px;
     }
 
     .gov-p,
     .gov-p2 {
-        font-size: 15px !important;
+        font-size: 14px !important;
     }
 }
 
@@ -5996,11 +6016,12 @@ input {
     }
 
     .gov tr td ul li {
-        font-size: 18px;
+        font-size: 16px;
     }
+
     .gov-p,
     .gov-p2 {
-        font-size: 18px !important;
+        font-size: 16px !important;
     }
 }
 
@@ -6012,6 +6033,7 @@ input {
     .gov tr td ul li {
         font-size: 20px;
     }
+
     .gov-p,
     .gov-p2 {
         font-size: 20px !important;
@@ -6026,8 +6048,15 @@ input {
     .gov tr td ul li {
         font-size: 22px;
     }
+
     .gov-p,
     .gov-p2 {
         font-size: 22px !important;
     }
+}
+
+/* end  */
+.show-all {
+    width: fit-content !important;
+    padding: 5px !important;
 }

@@ -352,13 +352,14 @@ header .arrow {
     .text-info {
         flex-direction: column;
         font-size: 18px;
+        transform: translateX(0);
     }
 }
 
 @media (min-width: 575px) {
     .text-info {
         flex-direction: column;
-        font-size: 20px;
+        font-size: 16px;
     }
 }
 
@@ -372,7 +373,7 @@ header .arrow {
 @media (min-width: 992px) {
     .text-info {
         flex-direction: row;
-        font-size: 28px;
+        font-size: 30px;
     }
 }
 
@@ -5916,9 +5917,121 @@ input {
 }
 
 /* styling gov table */
-.gove {
-    
+/* .gov {
+    background-color: white !important;
 }
-.gove:hover {
-    background-color: none;
+.gov:hover {
+    background-color: transparent !important;
+}
+.gov tr {
+    background-color: white !important;
+}*/
+
+.gov td {
+    background-color: white;
+    text-align: center;
+}
+
+.gov td:hover {
+    background-color: white;
+    color: black;
+}
+
+.gov tr td ul li {
+    font-size: 28px;
+}
+
+.gov .td {
+    font-size: 25px;
+}
+
+.gov ul {
+    padding-right: 0;
+}
+
+.gov-p,
+.gov-p2 {
+    text-align: center !important;
+    font-size: 30px !important;
+}
+
+.gov-p {
+    margin-bottom: 3px;
+}
+
+.gov-p2 {
+    margin-top: 3px;
+}
+
+.gov {
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+@media (max-width: 574px) {
+    .gov td {
+        text-align: start;
+    }
+
+    .gov .td {
+        font-size: 15px;
+    }
+
+    .gov tr td ul li {
+        font-size: 15px;
+    }
+
+    .gov-p,
+    .gov-p2 {
+        font-size: 15px !important;
+    }
+}
+
+@media (min-width: 575px) {
+    .gov td {
+        text-align: center;
+    }
+
+    .gov .td {
+        font-size: 18px;
+    }
+
+    .gov tr td ul li {
+        font-size: 18px;
+    }
+
+    .gov-p,
+    .gov-p2 {
+        font-size: 18px !important;
+    }
+}
+
+@media (min-width: 768px) {
+    .gov .td {
+        font-size: 20px;
+    }
+
+    .gov tr td ul li {
+        font-size: 20px;
+    }
+
+    .gov-p,
+    .gov-p2 {
+        font-size: 20px !important;
+    }
+}
+
+@media (min-width: 992px) {
+    .gov .td {
+        font-size: 22px;
+    }
+
+    .gov tr td ul li {
+        font-size: 22px;
+    }
+
+    .gov-p,
+    .gov-p2 {
+        font-size: 22px !important;
+    }
 }
