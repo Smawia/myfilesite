@@ -1,16 +1,3 @@
-// let spe_a = document.querySelector('.js-a');
-// let ul_list = document.querySelector('.ul');
-// window.onscroll = function () {
-//     if (window.scrollX <= 794) {
-//         ul_list.style.cssText = 'display: flex;flex-direction: row;'
-//     }
-// }
-// // let nested_list = document.querySelector('.nested-list');
-// spe_a.onclick = function (e) {
-//     console.log("spe a");
-//     e.preventDefault();
-//     ul_list.style.display = 'block';
-// }
 let bar = document.querySelector(".toggle-menu");
 let ul = document.querySelector(".js");
 let arrow = document.querySelector(".left-arrow");
@@ -24,10 +11,8 @@ let head_page = document.querySelector(".head-page");
 let txt_information = document.querySelector(".text-info");
 let nav_a = document.querySelectorAll(".nav-a");
 let nav_i = document.querySelectorAll(".arrow");
-console.log(nav_i);
 window.onscroll = function () {
     if (window.scrollY >= 300) {
-        // console.log(head_page);
         head_page.style.cssText = "background-color: rgb(227 9 29 / 48%); border-radius: 12px;";
         nav_a[0].style.color = "white";
         nav_a[1].style.color = "white";
@@ -42,16 +27,7 @@ window.onscroll = function () {
     if (window.scrollY >= 50) {
         txt_information.style.transform = 'translateX(0)';
     }
-    // if (window.scrollY >= 290) {
-    //     card[0].style.visibility = 'visible';
-    //     card[1].style.visibility = 'visible';
-    //     card[2].style.visibility = 'visible';
-    //     card[3].style.visibility = 'visible';
-    //     card[4].style.visibility = 'visible';
-    //     card[5].style.visibility = 'visible';
-    //     card[6].style.visibility = 'visible';
-    //     // card.style.visibility = 'visible';
-    // }
+
     else {
         head_page.style.cssText = "background-color: white;";
         nav_a[0].style.color = "black";
@@ -66,15 +42,8 @@ window.onscroll = function () {
     }
 }
 
-
-
-
-
-
-
 let aside_bar = document.querySelector('.aside');
 let over = document.querySelector('.over');
-console.log(aside_bar);
 bar.onclick = function () {
     aside_bar.style.cssText = 'width: 50%;display:block';
     over.style.display = 'block';
@@ -86,22 +55,6 @@ document.body.addEventListener("click", function (e) {
         over.style.display = 'none';
     }
 });
-// bar.onclick = function () {
-//     ul.style.cssText = "display: flex;flex-direction: column;position: absolute;left: -430%;width: 160px;top:10%;z-index: 1000;background-color:#333;color:white";
-//     arrow.style.display = 'inline-block';
-//     arrow3.style.display = 'inline-block';
-//     arrow2.style.display = 'none';
-//     arrow4.style.display = 'none';
-// }
-
-// document.body.addEventListener("click", function (e) {
-//     if (!e.target.classList.contains('toggle-menu')) {
-//         if (ul.style.display === 'flex') {
-//             ul.style.display = 'none';
-//         }
-//     }
-// });
-
 
 let go_to_index = document.querySelector('.go-to-index');
 
@@ -113,78 +66,3 @@ let go_to_index2 = document.querySelector('.go-to-index2');
 setTimeout(function () {
     go_to_index2.click();
 }, 5000);
-// let bgImg = document.querySelector('.images-slider');
-// let rightRow = document.querySelector('.right');
-// let leftRow = document.querySelector('.left');
-// let one = document.querySelector('.one');
-// let two = document.querySelector('.two');
-// let three = document.querySelector('.three');
-// let ones = document.querySelector('.ones');
-// let twos = document.querySelector('.twos');
-// let threes = document.querySelector('.threes');
-
-// console.log(bgImg);
-
-// let imgsList = ['pexels-photo-206359.jpeg', 'aimen.jpeg', 'thir.jpeg'];
-
-// let counter = 0;
-// setInterval(function () {
-//     let rand = Math.floor(Math.random() * imgsList.length);
-
-
-//     console.log(rand);
-//     if (rand === 0) {
-//         bgImg.style.backgroundImage = 'url("static/imgs/' + imgsList[0] + '")';
-//         two.style.display = 'none';
-//         three.style.display = 'none';
-//         one.style.display = 'block';
-//         twos.style.display = 'none';
-//         threes.style.display = 'none';
-//         ones.style.display = 'block';
-//     }
-//     else if (rand === 1) {
-//         bgImg.style.backgroundImage = 'url("static/imgs/' + imgsList[1] + '")';
-//         one.style.display = 'none';
-//         three.style.display = 'none';
-//         two.style.display = 'block';
-//         ones.style.display = 'none';
-//         threes.style.display = 'none';
-//         twos.style.display = 'block';
-//     }
-//     else if (rand === 2) {
-//         bgImg.style.backgroundImage = 'url("static/imgs/' + imgsList[2] + '")';
-//         two.style.display = 'none';
-//         one.style.display = 'none';
-//         three.style.display = 'block';
-//         twos.style.display = 'none';
-//         ones.style.display = 'none';
-//         threes.style.display = 'block';
-//     }
-// }, 2000);
-
-// rightRow.onclick = function () {
-//     if (counter == 2) {
-//         return;
-//     }
-//     else {
-//         counter++;
-//         bgImg.style.backgroundImage = 'url("static/imgs/' + imgsList[counter] + '")';
-//     }
-// }
-// leftRow.onclick = function () {
-//     if (counter == 0) {
-//         return;
-//     }
-//     else {
-//         counter--;
-//         bgImg.style.backgroundImage = 'url("static/imgs/' + imgsList[counter] + '")';
-//     }
-// }
-
-// let anchor = document.querySelector('.a-count');
-// let count = document.querySelector('.count');
-
-// anchor.onclick = function () {
-//     console.log("dsadda");
-//     count.innerHTML++;
-// }

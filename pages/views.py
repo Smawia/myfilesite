@@ -26,7 +26,7 @@ def studies(request):
 
     data = Studies.objects.all()
 
-    page = Paginator(data,10)
+    page = Paginator(data,9)
     page_list = request.GET.get('page')
     page = page.get_page(page_list)
     context = {
