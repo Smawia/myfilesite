@@ -31,6 +31,7 @@ window.onscroll = function () {
     else {
         head_page.style.cssText = "background-color: white;";
         nav_a[0].style.color = "black";
+        nav_a[0].classList.add("active");
         nav_a[1].style.color = "black";
         nav_a[2].style.color = "black";
         nav_a[3].style.color = "black";
