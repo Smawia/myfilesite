@@ -3,310 +3,195 @@
 {% load static %}
 
 {% block content %}
-
-<!-- start image slider -->
-<!-- <div class="images-slider">
-    <div class="text">  
-        <a href="#">
-            <p class="one">dddddd"المركز التأسيسي للدراسات والبحوث" مؤسسة بحثية فكرية تطويرية مستقلة غير ربحية، تختص
-                بالعلوم الإنسانية
-                (الإدارية والسياسية والقانونية والاقتصادية والاجتماعية والتنموية والاتصالية والرقمية).
-            </p>
-            <span class="ones">12 مارس 2024</span>
-        </a>
-        <a href="{% url 'firstpage' %}">
-            <p class="two" style="display: none;">gggggg"المركز التأسيسي للدراسات والبحوث" مؤسسة بحثية فكرية تطويرية
-                مستقلة غير ربحية، تختص
-                بالعلوم الإنسانية
-            </p>
-            <span class="twos" style="display: none;">25 يناير 2024</span>
-        </a>
-        <a href="#">
-            <p class="three" style="display: none;">kkkkkkkk"امؤسسة بحثية فكرية تطويرية مستقلة غير ربحية، تختص
-                بالعلوم
-                الإنسانية
-                (الإدارية والسياسية والقانونية والاقتصادية والاجتماعية والتنموية والاتصالية والرقمية).
-            </p>
-            <span class="threes" style="display: none;">28 فبراير 2024</span>
-        </a>
-    </div>
-    <span class="right">&lt;</span>
-    <span class="left">&gt;</span>
-</div> -->
-
-<!-- <section class="container-sec">
-    <div class="card">
-        <a href="{% url 'firstpage' %}">
-            <div class="image">
-                <img src="{% static 'imgs/manage1.webp' %}" alt="">
+<div class="container">
+    <div class="slider">
+        <div class="slides">
+            <input type="radio" name="radio-btn" id="radio1">
+            <input type="radio" name="radio-btn" id="radio2">
+            <input type="radio" name="radio-btn" id="radio3">
+            <input type="radio" name="radio-btn" id="radio4">
+            <div class="slide first">
+                <a href="{% url 'financial_reform_in_yemen' %}">
+                    <img src="{% static 'imgs/mo1.jpg' %}" alt="">
+                    <div class="slide-full-inf">
+                        <h2>برامج الإصلاح المالي في الجمهورية اليمنية</h2>
+                        <span><span style="display: inline;"> 3 </span>أكتوبر 2023
+                        </span>
+                    </div>
+                </a>
             </div>
-        </a>
-        <a href="{% url 'firstpage' %}">
-            <p>نشأة الإدارة وتطورها
-            </p>
-        </a>
-    </div>
-    <div class="card">
-        <a href="{% url 'administrativereform' %}">
-            <div class="image">
-                <img src="{% static 'imgs/repair.jpg' %}" alt="">
+            <div class="slide">
+                <a href="{% url 'the_existing_social_situation' %}">
+                    <img src="{% static 'imgs/agstate.webp' %}" alt="">
+                    <!-- <h2>سياسة الإصلاح والإنفتاح في الصين</h2> -->
+                    <div class="slide-full-inf">
+                        <h2>أهم ملامح الوضع الاجتماعي القائم في اليمن</h2>
+                        <span><span style="display: inline;">27 </span>سبتمبر 2023
+                        </span>
+                    </div>
+                </a>
             </div>
-        </a>
-        <a href="{% url 'administrativereform' %}">
-            <p>الإصلاح الإداري المفهوم والأهداف
-            </p>
-        </a>
-    </div>
-    <div class="card">
-        <a href="{% url 'reformmethodology' %}">
-            <div class="image">
-                <img src="{% static 'imgs/method1.jpg'' %}" alt="">
+            <div class="slide">
+                <a href="{% url 'information_and_communications_technology_in_Yemen' %}">
+                    <img src="{% static 'imgs/teg.jpg' %}" alt="">
+                    <!-- <h2>مدخل إلى الحكومة الإلكترونية</h2> -->
+                    <div class="slide-full-inf">
+                        <h2>البنية الأساسية لتكنولوجيا المعلومات والاتصالات في اليمن</h2>
+                        <span><span style="display: inline;">27 </span>سبتمبر 2023
+                        </span>
+                    </div>
+                </a>
             </div>
-        </a>
-        <a href="{% url 'reformmethodology' %}">
-            <p>منهجية الإصلاح الإداري
-            </p>
-        </a>
-    </div>
-    <div class="card">
-        <a href="{% url 'Notesreform' %}">
-            <div class="image">
-                <img src="{% static 'imgs/notes3.jpg' %}" alt="">
+            <div class="slide">
+                <a href="{% url 'rwanda_study' %}">
+                    <img src="{% static 'imgs/raw.webp' %}" alt="">
+                    <!-- <h2>مراحل عملية الإصلاح التشريعي</h2> -->
+                    <div class="slide-full-inf">
+                        <h2>تجربة رواندا في الإصلاح الإداري</h2>
+                        <span><span style="display: inline;">20 </span>سبتمبر 2023
+                        </span>
+                    </div>
+                </a>
             </div>
-        </a>
-        <a href="{% url 'Notesreform' %}">
-            <p>ملاحظات على مداخل الإصلاح الإداري</p>
-        </a>
-    </div>
-</section> -->
-<div class="load-container">
-    <div class="loader"><span></span></div>
-</div>
-<div class="slider">
-    <div class="slides">
-        <input type="radio" name="radio-btn" id="radio1">
-        <input type="radio" name="radio-btn" id="radio2">
-        <input type="radio" name="radio-btn" id="radio3">
-        <input type="radio" name="radio-btn" id="radio4">
-        <div class="slide first">
-            <a href="{% url 'malaysia_study' %}">
-                <img src="{% static 'imgs/maly2.webp' %}" alt="">
-                <h2>تجربة ماليزيا في الإصلاح الإداري</h2>
-            </a>
-        </div>
-        <div class="slide">
-            <a href="{% url 'china_study' %}">
-                <img src="{% static 'imgs/china.jpeg' %}" alt="">
-                <h2>سياسة الإصلاح والإنفتاح في الصين</h2>
-            </a>
-        </div>
-        <div class="slide">
-            <a href="{% url 'comprehensive_reform' %}">
-                <img src="{% static 'imgs/fanicial.webp' %}" alt="">
-                <h2> تقييم برنامج الإصلاح الإقتصادي والمالي والإداري في اليمن
-                </h2>
-            </a>
-        </div>
 
-
-        <div class="slide">
-            <a href="{% url 'stages_of_legislative_reform' %}">
-                <img src="{% static 'imgs/all2.webp' %}" alt="">
-                <h2>مراحل عملية الإصلاح التشريعي</h2>
-            </a>
+            <div class="navigation-auto">
+                <div class="auto-btn1"></div>
+                <div class="auto-btn2"></div>
+                <div class="auto-btn3"></div>
+                <div class="auto-btn4"></div>
+            </div>
         </div>
-
-        <div class="navigation-auto">
-            <div class="auto-btn1"></div>
-            <div class="auto-btn2"></div>
-            <div class="auto-btn3"></div>
-            <div class="auto-btn4"></div>
+        <div class="navigation-manual">
+            <label for="radio1" class="manual-btn"></label>
+            <label for="radio2" class="manual-btn"></label>
+            <label for="radio3" class="manual-btn"></label>
+            <label for="radio4" class="manual-btn"></label>
         </div>
-    </div>
-    <div class="navigation-manual">
-        <label for="radio1" class="manual-btn"></label>
-        <label for="radio2" class="manual-btn"></label>
-        <label for="radio3" class="manual-btn"></label>
-        <label for="radio4" class="manual-btn"></label>
     </div>
 </div>
 
 <!-- end image slider -->
 <!-- text info -->
-<div class="text-info">
-    <img src="{% static 'imgs/logo.png' %}" alt="">
-    <p style="font-size: 20px;"><span> "المركز التأسيسي للدراسات والبحوث" </span>مؤسسة بحثية فكرية تطويرية مستقلة
-        غير
-        ربحية، تختص
-        بالعلوم الإنسانية
-        (الإدارية والسياسية والقانونية والاقتصادية والاجتماعية والتنموية والاتصالية والرقمية). يقدم دراسات
-        وأبحاث علمية أكاديمية و<span class="ws2" style="font-weight: normal;">استشارية وبرامج تدريبية نوعية في المجالات
-            المشار إليها للدولة والمجتمع
-            بكافة
-            مكوناته.</span></p>
-</div>
+<!-- <div class="container">
+    <div class="text-info">
+        <img src="{% static 'imgs/LOGOS-02.png' %}" alt="">
+        <p><span> "المركز التأسيسي للدراسات والبحوث" </span>مؤسسة بحثية فكرية تطويرية مستقلة
+            غير
+            ربحية، تختص
+            بالعلوم الإنسانية
+            (الإدارية والسياسية والقانونية والاقتصادية والاجتماعية والتنموية والاتصالية والرقمية). يقدم دراسات
+            وأبحاث علمية أكاديمية و<span style="font-weight: normal;">استشارية وبرامج تدريبية نوعية في المجالات
+                المشار إليها للدولة والمجتمع
+                بكافة
+                مكوناته.</span></p>
+    </div>
+</div> -->
 
 <!-- text info -->
-<h1 class="spe-h1">آخر الإصدارات</h1>
-<div class="show-i">
-    <!-- <a href="{% url 'showDetailStudies' %}">
-        <div class="card">
-            <div class="image-card">
-                <img src="{% static 'imgs/stu.png' %}" alt="">
+<div class="container">
+    <h1 class="spe-h1">دراسات حديثة</h1>
+    <div class="show-studies-index">
+        <div class="show-index-imgs">
+            <div class="card">
+                <a href="{% url 'firstpage' %}">
+                    <img src="{% static 'imgs/manage1.webp' %}" alt="">
+                </a>
+                <a href="{% url 'firstpage' %}">
+                    <div class="text-info-index">
+                        <span><i class="fa-solid fa-calendar"></i>30 سبتمبر 2023</span>
+                        <p>نشأة الإدارة وتطورها</p>
+                    </div>
+                </a>
             </div>
-            <i class="fa-solid fa-calendar"></i><span>25 , نوفمبر 2023</span>
-            <p>كتاب جماعي بعنوان "رؤية مستقبلية للإصلاح الإداري الشامل في الجمهورية اليمنية- دراسة تحليلية مقارنة"</p>
-        </div>
-    </a> -->
-    <a href="{% url 'firstpage' %}">
-        <div class="card">
-            <div class="image-card">
-                <img src="{% static 'imgs/manage1.webp' %}" alt="">
-            </div>
-            <p>نشأة الإدارة وتطورها</p>
-        </div>
-    </a>
-    <a href="{% url 'administrativereform' %}">
-        <div class="card">
-            <div class="image-card">
-                <img src="{% static 'imgs/repair.jpg' %}" alt="">
-            </div>
-            <p>الإصلاح الإداري المفهوم والأهداف</p>
-        </div>
-    </a>
-    <a href="{% url 'reformmethodology' %}">
-        <div class="card">
-            <div class="image-card">
-                <img src="{% static 'imgs/method1.jpg' %}" alt="">
-            </div>
-            <p>منهجية الإصلاح الإداري</p>
-        </div>
-    </a>
-    <a href="{% url 'studyOfUS' %}">
-        <div class="card">
-            <div class="image-card">
-                <img src="{% static 'imgs/US.jpg' %}" alt="">
-            </div>
-            <p>تجربة الولايات المتحدة الأمريكية في الإصلاح الإداري</p>
-        </div>
-    </a>
-    <a href="{% url 'studysingapore' %}">
-        <div class="card">
-            <div class="image-card">
-                <img src="{% static 'imgs/sn.webp' %}" alt="">
-            </div>
-            <p>تجربة سنغافورا في اللإصلاح الإداري</p>
-        </div>
-    </a>
-    <a href="{% url 'rwanda_study' %}">
-        <div class="card">
-            <div class="image-card">
-                <img src="{% static 'imgs/raw.webp' %}" alt="">
-            </div>
-            <p>تجربة رواندا في الإصلاح الإداري</p>
-        </div>
-    </a>
-    <a href="{% url 'studies' %}" class="show-all">عرض المزيد...</a>
-</div>
-<h1 class="spe-h1">آخر الدوريات</h1>
-<!-- <div class="show-i"> -->
-<div class="news">
-    <h2>الدوريات قيد العمل حالياً</h2>
-</div>
-<!-- <a href="{% url 'showDetailPatrols' %}">
-        <div class="card">
-            <div class="image-card">
-                <img src="{% static 'imgs/aimen.jpeg' %}" alt="">
-            </div>
-            <i class="fa-solid fa-calendar"></i><span>25 , نوفمبر 2023</span>
-            <p>كتاب جماعي بعنوان "رؤية مستقبلية للإصلاح الإداري الشامل في الجمهورية اليمنية- دراسة تحليلية مقارنة"</p>
-        </div>
-    </a>
-    <a href="{% url 'showDetailPatrols' %}">
-        <div class="card">
-            <div class="image-card">
-                <img src="{% static 'imgs/aimen.jpeg' %}" alt="">
-            </div>
-            <i class="fa-solid fa-calendar"></i><span>25 , نوفمبر 2023</span>
-            <p>كتاب جماعي بعنوان "رؤية مستقبلية للإصلاح الإداري الشامل في الجمهورية اليمنية- دراسة تحليلية مقارنة"</p>
-        </div>
-    </a>
-    <a href="{% url 'showDetailNews' %}">
-        <div class="card">
-            <div class="image-card">
-                <img src="https://img.freepik.com/free-vector/various-white-daises-blue-background-cartoon-illustration-set-camomiles-chamomiles-with-different-petals-seamless-floral-pattern-blossom-spring-flowers-summer-concept_74855-26128.jpg?size=626&ext=jpg&ga=GA1.1.314870725.1714825266&semt=sph"
-                    alt="">
-            </div>
-            <i class="fa-solid fa-calendar"></i><span>25 , نوفمبر 2023</span>
-            <p>كتاب جماعي بعنوان "رؤية مستقبلية للإصلاح الإداري الشامل في الجمهورية اليمنية- دراسة تحليلية مقارنة"</p>
-        </div>
-    </a> -->
-<!-- <a href="{% url 'patrols' %}" class="show-all">عرض المزيد...</a>
+            <div class="card">
+                <a href="{% url 'administrativereform' %}">
+                    <img src="{% static 'imgs/repair.jpg' %}" alt="">
+                </a>
+                <a href="{% url 'administrativereform' %}">
+                    <div class="text-info-index">
+                        <span><i class="fa-solid fa-calendar"></i>30 سبتمبر 2023</span>
+                        <p>الإصلاح الإداري المفهوم والأهداف</p>
 
-</div> -->
-<h1 class="spe-h1">آخر الأخبار</h1>
-<!-- <div class="show-i"> -->
-<!-- <div class="news">
-        <h2>الأخبار قيد العمل حالياً</h2>
-    </div> -->
-<div class="show-i">
-    <a href="{% url 'first_announcement' %}">
-        <div class="card">
-            <div class="image-card">
-                <img src="{% static 'imgs/invite.png' %}" alt="">
+                    </div>
+                </a>
             </div>
-            <p>إعلان دعوة للنشر</p>
-        </div>
-    </a>
-</div>
-<!-- <a href="{% url 'showDetailStudies' %}">
-        <div class="card">
-            <div class="image-card">
-                <img src="https://img.freepik.com/free-photo/artistic-blurry-colorful-wallpaper-background_58702-8289.jpg?w=996&t=st=1714825959~exp=1714826559~hmac=997171980ea86f5931db92cd1f1f5aeece228ee506ed2045c74b062d95d0a82c"
-                    alt="">
-            </div>
-            <i class="fa-solid fa-calendar"></i><span>25 , نوفمبر 2023</span>
-            <p>كتاب جماعي بعنوان "رؤية مستقبلية للإصلاح الإداري الشامل في الجمهورية اليمنية- دراسة تحليلية مقارنة"</p>
-        </div>
-    </a>
-    <a href="{% url 'showDetailPatrols' %}">
-        <div class="card">
-            <div class="image-card">
-                <img src="https://img.freepik.com/free-vector/radiating-light-movement-background_52683-14635.jpg?size=626&ext=jpg"
-                    alt="">
-            </div>
-            <i class="fa-solid fa-calendar"></i><span>25 , نوفمبر 2023</span>
-            <p>كتاب جماعي بعنوان "رؤية مستقبلية للإصلاح الإداري الشامل في الجمهورية اليمنية- دراسة تحليلية مقارنة"</p>
-        </div>
-    </a>
-    <a href="{% url 'showDetailNews' %}">
-        <div class="card">
-            <div class="image-card">
-                <img src="https://letsenhance.io/static/8f5e523ee6b2479e26ecc91b9c25261e/1015f/MainAfter.jpg" alt="">
-            </div>
-            <i class="fa-solid fa-calendar"></i><span>25 , نوفمبر 2023</span>
-            <p>كتاب جماعي بعنوان "رؤية مستقبلية للإصلاح الإداري الشامل في الجمهورية اليمنية- دراسة تحليلية مقارنة"</p>
-        </div>
-    </a> -->
-<!-- <a href="{% url 'news' %}" class="show-all">عرض المزيد...</a> -->
-<!-- </div> -->
-<script type="text/javascript">
-    let counter = 1;
-    setInterval(function () {
-        document.getElementById('radio' + counter).checked = true;
-        counter++;
-        if (counter > 4) {
-            counter = 1;
-        }
-    }, 5000);
-    window.addEventListener("load", () => {
-        const loader = document.querySelector(".loader");
-        const load_container = document.querySelector(".load-container");
-        loader.classList.add("loader--hidden");
+            <div class="card">
+                <a href="{% url 'reformmethodology' %}">
+                    <img src="{% static 'imgs/method1.jpg' %}" alt="">
+                </a>
+                <a href="{% url 'reformmethodology' %}">
+                    <div class="text-info-index">
+                        <span><i class="fa-solid fa-calendar"></i>30 سبتمبر 2023</span>
+                        <p>منهجية الإصلاح الإداري</p>
 
-        loader.addEventListener("transitionend", () => {
-            document.body.removeChild(load_container);
-        });
-    });
-</script>
+                    </div>
+                </a>
+            </div>
+            <div class="card">
+                <a href="{% url 'studyOfUS' %}">
+                    <img src="{% static 'imgs/US.jpg' %}" alt="" class="stud">
+                </a>
+                <a href="{% url 'studyOfUS' %}">
+                    <div class="text-info-index">
+                        <span><i class="fa-solid fa-calendar"></i>20 سبتمبر 2023</span>
+                        <p>تجربة الولايات المتحدة الأمريكية في الإصلاح الإداري</p>
+
+                    </div>
+                </a>
+            </div>
+            <div class="card">
+                <a href="{% url 'studysingapore' %}">
+                    <img src="{% static 'imgs/sn.webp' %}" alt="" class="stud">
+                </a>
+                <a href="{% url 'studysingapore' %}">
+                    <div class="text-info-index">
+                        <span><i class="fa-solid fa-calendar"></i>20 سبتمبر 2023</span>
+                        <p>تجربة سنغافورا في اللإصلاح الإداري</p>
+
+                    </div>
+                </a>
+            </div>
+            <div class="card">
+                <a href="{% url 'rwanda_study' %}">
+                    <img src="{% static 'imgs/raw.webp' %}" alt="" class="stud">
+                </a>
+                <a href="{% url 'rwanda_study' %}">
+                    <div class="text-info-index">
+                        <span><i class="fa-solid fa-calendar"></i>20 سبتمبر 2023</span>
+                        <p>تجربة رواندا في الإصلاح الإداري</p>
+                    </div>
+                </a>
+            </div>
+
+        </div>
+        <a href="{% url 'studies' %}" class="show-all">عرض المزيد...</a>
+    </div>
+</div>
+
+<div class="container">
+    <div class="tow-books">
+        <div class="daw">
+            <h1 class="spe-h1">دوريات المركز</h1>
+            <a href="{% url 'patrols' %}">
+                <div class="card">
+                    <img src="{% static 'imgs/stu.png' %}" alt="">
+                    <div class="daw-info">
+                        <p>دوريات المركز</p>
+                    </div>
+                </div>
+            </a>
+        </div>
+        <div class="daw">
+            <h1 class="spe-h1">كتب المركز</h1>
+            <a href="{% url 'books' %}">
+                <div class="card">
+                    <img src="{% static 'imgs/stu.png' %}" alt="">
+                    <div class="daw-info">
+                        <p>رؤية مستقبلية للإصلاح الإداري الشامل في اليمن - العدد الأول - 2024</p>
+                    </div>
+                </div>
+            </a>
+        </div>
+    </div>
+</div>
 {% endblock %}

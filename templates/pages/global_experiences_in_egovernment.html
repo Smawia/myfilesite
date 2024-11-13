@@ -1,35 +1,40 @@
 {% extends 'base.html' %}
 {% load static %}
 {% block content %}
+<div class="top-of-study">
+    <a href="{% url 'index' %}">المركز التأسيسي</a>/<a href="{% url 'studies' %}">الدراسات</a>/<span>التجارب العالمية في الحكومة الالكترونية وتطورها</span>
+</div>
 <div class="first-page">
     <a href="#img-id" class="hidden-row"><i class="fa-solid fa-arrow-up-long"></i></a>
     <!-- <h1>الحياة في اليمن</h1> -->
-    <img src="{% static 'imgs/t.webp' %}" alt="" id="img-id">
     <p class="p-img">التجارب العالمية في الحكومة الالكترونية وتطورها</p>
+
+    <img src="{% static 'imgs/t.webp' %}" alt="" id="img-id">
     <div class="info">
         <div class="date-info">
-            <span>تم النشر في<i class="fa-solid fa-calendar"></i>27 سبتمبر 2023</span>
+            <span><i class="fa-solid fa-calendar"></i>27 سبتمبر 2023</span>
         </div>
         <span class="pub">أ.م.د/ أحمد عبد الله صالح الشلبي</span>
     </div>
     <div class="full-text">
-        <p>ماتزال الحكومة الإلكترونية مفهومًا جديدًا في العديد من البلدان النامية<span><sup
-                    title="Ochara-Muganda, Nixon, & Van Belle, Jean-Paul. (2010). A proposed framework for E-Government knowledge infrastructures for Africa’s transition economies. J. e-Government Stud. Best Pract, 303226, 1-9.">[1]</sup></span>،
+        <p>ماتزال الحكومة الإلكترونية مفهومًا جديدًا في العديد من البلدان النامية <a href="#1"><span><sup
+                        title="Ochara-Muganda, Nixon, & Van Belle, Jean-Paul. (2010). A proposed framework for E-Government knowledge infrastructures for Africa’s transition economies. J. e-Government Stud. Best Pract, 303226, 1-9.">[1]</sup></span></a>،
             ومن الواضح أن عددًا من البلدان
             النامية لايزال يبني البنى التحتية الأساسية لتكنولوجيا المعلومات والاتصالات، وبعضها لايزال في المراحل الأولية
             لتوضيح رؤية الحكومة الإلكترونية، مثل رسم سياسات تكنولوجيا المعلومات والاتصالات لتكون بمقام عوامل للحكومة
-            الإلكترونية<span><sup title="Ibid.">[2]</sup></span>. ويمكن القول بأنه لا تزال الحكومة الإلكترونية في مرحلة
+            الإلكترونية<a href="#2"><span><sup title="Ibid.">[2]</sup></span></a>. ويمكن القول بأنه لا تزال الحكومة
+            الإلكترونية في مرحلة
             التصور في معظم البلدان النامية، حيث إن
             الأدبيات المتعلقة بتجارب تنفيذ الحكومة الإلكترونية في البلدان النامية نادرة.</p>
         <p>لقد جرى إحباط أجندات التنمية في العديد من البلدان بسبب عدم وجود مساءلة صريحة عن الأولويات، وعدم وجود إدارة
             فعالة للموارد الوطنية، والافتقار إلى عملية صنع القرار التشاركية والشفافة من قبل المواطنين العاديين، وارتفاع
-            مستويات الفساد<span><sup
-                    title="Bazzanella, S, & Bihan, JL. (2012). Support for Harmonisation of ICT Policies in Sub-Sahara Africa Implementation Strategy. International Telecommunication Union.">[3]</sup></span>.
+            مستويات الفساد<a href="#3"><span><sup
+                        title="Bazzanella, S, & Bihan, JL. (2012). Support for Harmonisation of ICT Policies in Sub-Sahara Africa Implementation Strategy. International Telecommunication Union.">[3]</sup></span></a>.
         </p>
         <p>تحاول جميع دول العالم تنفيذ الحكومة الإلكترونية بهدف تقليل تكلفة تقديم الخدمات العامة، وقام العديد الدول إلى
             حد ما بدمج تكنولوجيا المعلومات والاتصالات في سلاسل القيمة والعمليات التجارية الخاصة بها واستهدفت زيادة
-            الفعالية اللاحقة<span><sup
-                    title="Smith, Matthew L. (2011). Limitations to building institutional trustworthiness through e-government: a comparative study of two e-services in Chile. Journal of Information Technology, 26, 78-93. & UN e-Government Survey. (2010): Op. Cit.">[4]</sup></span>.
+            الفعالية اللاحقة<a href="#4"><span><sup
+                        title="Smith, Matthew L. (2011). Limitations to building institutional trustworthiness through e-government: a comparative study of two e-services in Chile. Journal of Information Technology, 26, 78-93. & UN e-Government Survey. (2010): Op. Cit.">[4]</sup></span></a>.
         </p>
         <p>ولفهم الاهتمام بالحكومة الإلكترونية في العالم النامي يلزم النظر في الوضع الحالي لتطوير الحكومة الإلكترونية في
             إفريقيا وآسيا وأمريكا الجنوبية، ومن الواضح أن الحكومة الإلكترونية هي مشـروع مهم للغاية، كما يتضح من عدد
@@ -41,48 +46,53 @@
         </p>
         <h2>تجربة كندا:</h2>
         <p>لعدة سنوات، كانت كندا رائدة في مجال الحكومة الإلكترونية وهي واحدة من أوائل الدول التي أظهرت التزاماً غير
-            مسبوق تجاه تطوير تدخلات الحكومة الإلكترونية التي تركز على المستخدم<span><sup
-                    title="Park, Eun G, Lamontagne, Manon, Perez, Amilcar, Melikhova, Irina, & Bartlett, Gregory. (2009). Running ahead toward interoperable e-government: The government of Canada metadata framework. International Journal of Information Management, 29(2), 145-150. & Roy, Jeffrey. (2006). E-service delivery and new governance capacities:'Service Canada'as a case study. International Journal of Services Technology and Management, 7(3), 253-271. & Shareef, Mahmud Akhter,... (2011): Op. Cit.">[5]</sup></span>.
+            مسبوق تجاه تطوير تدخلات الحكومة الإلكترونية التي تركز على المستخدم<a href="#5"><span><sup
+                        title="Park, Eun G, Lamontagne, Manon, Perez, Amilcar, Melikhova, Irina, & Bartlett, Gregory. (2009). Running ahead toward interoperable e-government: The government of Canada metadata framework. International Journal of Information Management, 29(2), 145-150. & Roy, Jeffrey. (2006). E-service delivery and new governance capacities:'Service Canada'as a case study. International Journal of Services Technology and Management, 7(3), 253-271. & Shareef, Mahmud Akhter,... (2011): Op. Cit.">[5]</sup></span></a>.
             في الوقت الحالي، هناك العديد من
-            التفاعلات بين الحكومة والمواطنين<span><sup title="راجع: www.canadians-canadiens.gc.ca))">[6]</sup></span>،
+            التفاعلات بين الحكومة والمواطنين <a href="#6"><span><sup
+                        title="راجع: (www.canadians-canadiens.gc.ca)">[6]</sup></span></a>،
             وغير المواطنين أو الشركات على الإنترنت. في استطلاع الحكومة الإلكترونية
-            لعام 2022، احتلت كندا المرتبة 32 عالمياً في مؤشر تطوير الحكومة الإلكترونية<span><sup
-                    title="UN e-Government Survey., (2022): Op. Cit.">[7]</sup></span>.</p>
+            لعام 2022، احتلت كندا المرتبة 32 عالمياً في مؤشر تطوير الحكومة الإلكترونية<a href="#7"><span><sup
+                        title="UN e-Government Survey., (2022): Op. Cit.">[7]</sup></span></a>.</p>
         <p>جدول أعمال الحكومة الإلكترونية الكندية مليء بالتحديات، مثل: الحواجز المتعددة الثقافات والوضع الثنائي اللغة
-            لكندا، حيث إنَّ اللغتين الإنجليزية والفرنسية هما اللغتان الرئيسة<span><sup
-                    title="Wang, Lu, Rosenberg, Mark, & Lo, Lucia. (2008). Ethnicity and utilization of family physicians: A case study of Mainland Chinese immigrants in Toronto, Canada. Social science & medicine, 67(9), 1410-1422.">[8]</sup></span>.
+            لكندا، حيث إنَّ اللغتين الإنجليزية والفرنسية هما اللغتان الرئيسة<a href="#8"><span><sup
+                        title="Wang, Lu, Rosenberg, Mark, & Lo, Lucia. (2008). Ethnicity and utilization of family physicians: A case study of Mainland Chinese immigrants in Toronto, Canada. Social science & medicine, 67(9), 1410-1422.">[8]</sup></span></a>.
             وللتخفيف من هذه العوائق ومختلف العوائق
             الأخرى وضعت حكومة كندا - بالتعاون مع شركائها المتعاونين - تدابير تهدف إلى ضمان التنفيذ السـريع للحكومة
-            الإلكترونية<span><sup title="Shareef, Mahmud Akhter,... (2011): Op. Cit.">[9]</sup></span>. تكون إدارة جدول
+            الإلكترونية<a href="#9"><span><sup title="Shareef, Mahmud Akhter,... (2011): Op. Cit.">[9]</sup></span></a>.
+            تكون إدارة جدول
             أعمال الحكومة الإلكترونية بواسطة كبير موظفي المعلومات (CIO) بتمويل للحكومة
-            الإلكترونية يقدمه الصندوق المركزي وتكمله وكالات فردية. إن الحكومة عبر الإنترنت (GOL)<span><sup
-                    title="راجع: www.canada.gc.ca/main_e.html))">[10]</sup></span>، هي مبادرة من
+            الإلكترونية يقدمه الصندوق المركزي وتكمله وكالات فردية. إن الحكومة عبر الإنترنت (GOL) <a
+                href="#10"><span><sup title="راجع: (www.canada.gc.ca/main_e.html)">[10]</sup></span></a>، هي مبادرة من
             الحكومة الفيدرالية لكندا التي ضمنت إمكانية الوصول إلى خدماتها العامة، ولديها محتوى واضح ومفهوم باللغتين،
             ويوفر بوابة متكاملة كمدخل واحد للخدمات الحكومية.</p>
-        <p>بدأت أولى مبادرات الحكومة الإلكترونية في كندا في عام 1994 عندما جرى إطلاق صندوق الاستثمار الكندي<span><sup
-                    title="Pare, Richard. (2002). E-Democracy and E-Government: How Will These Affect Libraries? ">[11]</sup></span>،
+        <p>بدأت أولى مبادرات الحكومة الإلكترونية في كندا في عام 1994 عندما جرى إطلاق صندوق الاستثمار الكندي <a
+                href="#11"><span><sup
+                        title="Pare, Richard. (2002). E-Democracy and E-Government: How Will These Affect Libraries? ">[11]</sup></span></a>،
             وقد مكّن
             هذا الصندوق شركات التكنولوجيا الكندية الرائدة من تحسين نشـر التكنولوجيا وابتكارها. في نفس العام أُطلق برنامج
             الوصول إلى المجتمع (CAP)، وكان يهدف إلى تزويد الكنديين بإمكانية الوصول إلى الإنترنت بتكلفة معقولة وتمكينهم
             من المعرفة بمهارات تكنولوجيا المعلومات والاتصالات ذات الصلة للمشاركة في الاقتصاد القائم على المعلومات
-            والمعرفة الذي كان في طور التكوين<span><sup
-                    title="Gurstein, Michael. (2003). Effective use: A community informatics strategy beyond the digital divide. First Monday. ">[12]</sup></span>.
+            والمعرفة الذي كان في طور التكوين<a href="#12"><span><sup
+                        title="Gurstein, Michael. (2003). Effective use: A community informatics strategy beyond the digital divide. First Monday. ">[12]</sup></span></a>.
         </p>
-        <p>كشفت دراسة أجراها Ipsos-Reid<span><sup
-                    title="Kumar, Vinod, Mukerji, Bhasker, & Butt, Irfan. (2007): Op. Cit.">[13]</sup></span> أنه على
+        <p>كشفت دراسة أجراها Ipsos-Reid <a href="#13"><span><sup
+                        title="Kumar, Vinod, Mukerji, Bhasker, & Butt, Irfan. (2007): Op. Cit.">[13]</sup></span></a>
+            أنه على
             الرغم من التحسينات الكبيرة في تنفيذ الحكومة الإلكترونية بشكل عام في
             كندا، إلا أن 70% من الكنديين ما زالوا مترددين في تقديم معلومات سرية وشخصية عبر الإنترنت. كشفت الدراسة أن
             غالبية الكنديين يفتقرون إلى الثقة في منصات الحكومة الإلكترونية مما أسهم في إدراك كندا أن هناك حاجة إلى وضع
             سياسة تقييم تأثير الخصوصية (PIA) التي تحدد عمليات التقييم للخدمات الجديدة أو المعاد تصميمها التي تثير قضايا
-            الخصوصية<span><sup
-                    title="Stiftung, B. (2002). Balanced E-Government: E-Government–Connecting efficient administration and responsive democracy. A study by the Bertelsmann Foundation, 24.">[14]</sup></span>.
+            الخصوصية<a href="#14"><span><sup
+                        title="Stiftung, B. (2002). Balanced E-Government: E-Government–Connecting efficient administration and responsive democracy. A study by the Bertelsmann Foundation, 24.">[14]</sup></span></a>.
         </p>
-        <p>يذكر<span><sup title="Kumar, Vinod, Mukerji, Bhasker, & Butt, Irfan. (2007): Op. Cit.">[15]</sup></span>
+        <p>يذكر<a href="#15"><span><sup
+                        title="Kumar, Vinod, Mukerji, Bhasker, & Butt, Irfan. (2007): Op. Cit.">[15]</sup></span></a>
             اعتراف الحكومة الكندية بتصورات المستخدمين التي تعتمد على تأكيدهم لمدى أمان معلوماتهم عند تعاملاتهم
             عبر الإنترنت، وقدموا بنية تحتية أمنية حديثة تسمى PassK ، كما أنشأت الحكومة الكندية قناة كندا الآمنة (SC)
             التي تتكون أساسًا من البنية التحتية للشبكة والعمليات وخدمات الأمن والمصادقة التي تدعم مشروع الحكومة
-            الإلكترونية<span><sup
-                    title="Just, Mike, & Rosmarin, Danielle. (2009). Meeting the challenges of Canada’s Secure Delivery of e-Government Services.">[16]</sup></span>.
+            الإلكترونية<a href="#16"><span><sup
+                        title="Just, Mike, & Rosmarin, Danielle. (2009). Meeting the challenges of Canada’s Secure Delivery of e-Government Services.">[16]</sup></span></a>.
         </p>
         <p>يشير استطلاع EKOS الذي تم في عام 2005 أن 74% من الكنديين واثقون من أمان معلوماتهم على منصات الحكومة
             الإلكترونية، ويتوج هذا بزيادة المشاركة في تطبيقات الحكومة الإلكترونية من المواطنين والشـركات، ونتيجة لهذه
@@ -91,24 +101,26 @@
         </p>
         <h2>تجربة البرازيل:</h2>
         <p>البرازيل إحدى الدول الناشئة التي لها أجندة للحكومة الإلكترونية، حصلت البرازيل على المرتبة 48 عالميًا في مؤشر
-            تطوير الحكومة الإلكترونية<span><sup title="UN e-Government Survey.,(2022): Op. Cit.">[17]</sup></span>.
-            خلال التسعينيات تطورت الحكومة الإلكترونية لاسـيما على المستوى المؤسسي<span><sup
-                    title="Chahin, Ali, Cunha, Maria Alexandra, Knight, Peter T, & Pinto, Sólon Lemos. (2004). egov. br–A próxima revolução brasileira. São Paulo: Financial Times Prentice Hall: Pearson Education do Brasil.">[18]</sup></span>،
+            تطوير الحكومة الإلكترونية<a href="#17"><span><sup
+                        title="UN e-Government Survey.,(2022): Op. Cit.">[17]</sup></span></a>.
+            خلال التسعينيات تطورت الحكومة الإلكترونية لاسـيما على المستوى المؤسسي <a href="#18"><span><sup
+                        title="Chahin, Ali, Cunha, Maria Alexandra, Knight, Peter T, & Pinto, Sólon Lemos. (2004). egov. br–A próxima revolução brasileira. São Paulo: Financial Times Prentice Hall: Pearson Education do Brasil.">[18]</sup></span></a>،
             وتتصدر جدول أعمـال الحكومة الإلكترونية في البرازيل اللجنة التنفيذية للحكومة الإلكترونية (CEGE)، التي يرأسها
-            كبير موظفي الرئيس، ولديها بوابة مخصصة للحكومة الإلكترونية<span><sup
-                    title="راجع: www.governoeletronico.gov.br))">[19]</sup></span> تتيح التفاعل المناسب بين الحكومة
+            كبير موظفي الرئيس، ولديها بوابة مخصصة للحكومة الإلكترونية<a href="#19"><span><sup
+                        title="راجع: (www.governoeletronico.gov.br)">[19]</sup></span></a> تتيح التفاعل المناسب بين
+            الحكومة
             والمواطنين أو
             الشركات.</p>
         <p>في عام 2000، حددت الورقة الخضـراء بشأن الحكومة الإلكترونية (Livro Verde) خارطة الطريق لتحويل البرازيل إلى
             مجتمع معلومات، مما يمهد الطريق أمام الحكومة الفيدرالية لتقديم الخدمات على الإنترنت عبر بوابة RedeGoverno حيث
-            يتوافر أكثر من 4800 نوع من المعلومات<span><sup
-                    title="Takahashi, Tadao. (2000). Information Society in Brazil-Green Book. Brasilia: SOCINFO.">[20]</sup></span>.
+            يتوافر أكثر من 4800 نوع من المعلومات<a href="#20"><span><sup
+                        title="Takahashi, Tadao. (2000). Information Society in Brazil-Green Book. Brasilia: SOCINFO.">[20]</sup></span></a>.
             كما تتيح البوابة تقديم الخدمات العامة مثل شهادات سداد الضـرائب،
             وإقرار ضريبة الدخل، والتسجيل للموردين الحكوميين، ومتابعة الإجراءات القضائية. يجري تعزيز أجندة الحكومة
             الإلكترونية عن طريق وضع معايير مختلفة مثل معايير الحكومة الإلكترونية لقابلية التشغيل البيني (e-PING).</p>
         <p>وإدراكًا لأهمية الإرادة السياسية في نجاح تنفيذ الحكومة الإلكترونية هدف مشـروع البرازيل الإلكترونية إلى زيادة
-            الوعي بفوائد استراتيجية التنمية الإلكترونية قادة الحكومة<span><sup
-                    title="Knight, Peter T. (2007). Knowledge management and e-government in Brazil. e-Government, 29, 06.">[21]</sup></span>،
+            الوعي بفوائد استراتيجية التنمية الإلكترونية قادة الحكومة <a href="#21"><span><sup
+                        title="Knight, Peter T. (2007). Knowledge management and e-government in Brazil. e-Government, 29, 06.">[21]</sup></span></a>،
             وأكد Bertot, Jaeger, and McClure (2008) أنه على
             الرغم من أن الحكومة الإلكترونية قد وصلت إلى مستويات عالية من التطور، إلا أن المشاركة الديمقراطية للأفراد
             العاديين لا تزال مفهومًا جديدًا نسبيًا.</p>
@@ -120,8 +132,8 @@
             الحكومات والمنظمات الأكاديمية.</p>
         <p>وبشكل عام اعتمدت الإدارة العامة في البرازيل استخدام تكنولوجيا المعلومات والاتصالات في أنشطتها اليومية، في
             مدينة سانتا أندريه مثلاً، تُستُخدم تكنولوجيا نظم المعلومات الجغرافية في إصدار تصاريح البناء وعمليات
-            التفتيش<span><sup
-                    title="Bertot, John Carlo, Jaeger, Paul T, & McClure, Charles R. (2008). Citizen-centered e-government services: benefits, costs, and research needs. Paper presented at the Proceedings of the 2008 international conference on Digital government research.">[22]</sup></span>،
+            التفتيش <a href="#22"><span><sup
+                        title="Bertot, John Carlo, Jaeger, Paul T, & McClure, Charles R. (2008). Citizen-centered e-government services: benefits, costs, and research needs. Paper presented at the Proceedings of the 2008 international conference on Digital government research.">[22]</sup></span></a>،
             وفي نظام الحكومة الإلكترونية الحالي تمتلك أكثر من 358 بلدية مواقع إلكترونية أو بوابات، وتطبيق آخر للحكومة
             الإلكترونية يستخدم في مدينة سانتا أندريه هو تنفيذ نظام الصحة العامة المتكامل (SISP) الذي يهدف إلى توفير خدمة
             صحية عامة أسرع لعامة الناس، ويرتبط SISP ويتكامل مع النظام الصحي الفيدرالي والبطاقة الممغنطة للنظام الصحي
@@ -133,10 +145,11 @@
             الإلكترونية.</p>
         <h2>تجربة السويد:</h2>
         <p>لقد أظهرت السويد التزام الحكومة تجاه تطوير الحكومة الإلكترونية. إنها واحدة من أنجح الجهات المنفذة للحكومة
-            الإلكترونية في جميع دول الشمال<span><sup
-                    title="Lind, Mikael, & Johannisson, Per. (2009). Acting Out The Swedish E-Government Action Plan-Mind And Mend The Gaps. International Journal of Public Information Systems, 5(2). ">[23]</sup></span>،
-            وقد حصلت على المرتبة الخامسة عالميًا في مؤشر تطور الحكومة الإلكترونية<span><sup
-                    title="UN e-Government Survey.,(2022): Op. Cit.">[24]</sup></span>.بدأ تطوير الحكومة الإلكترونية في
+            الإلكترونية في جميع دول الشمال <a href="#23"><span><sup
+                        title="Lind, Mikael, & Johannisson, Per. (2009). Acting Out The Swedish E-Government Action Plan-Mind And Mend The Gaps. International Journal of Public Information Systems, 5(2). ">[23]</sup></span></a>،
+            وقد حصلت على المرتبة الخامسة عالميًا في مؤشر تطور الحكومة الإلكترونية<a href="#24"><span><sup
+                        title="UN e-Government Survey.,(2022): Op. Cit.">[24]</sup></span></a>.بدأ تطوير الحكومة
+            الإلكترونية في
             السويد مع إطلاق استراتيجية الحكومة الإلكترونية السويدية في عام 2009،
             ويقود وفد الحكومة الإلكترونية السويدي جدول أعمال الحكومة الإلكترونية، يفترض Axelsson and Lindblad-Gidlund
             (2009) أن هناك أولويات مختلفة يكون أخذها في الحسبان عند إعداد استراتيجيات الحكومة الإلكترونية، حيث يعطي بعض
@@ -144,31 +157,32 @@
             بالنسبة للسويد الملاحظ أن تكنولوجيا المعلومات والاتصالات قد جرى غرسها في جميع سلاسل القيمة التقليدية للإدارة
             العامة تقريبًا (Wihlborg & Palm, 2008).</p>
         <p>تركز العديد من المبادرات على تعزيز تطوير الحكومة الإلكترونية في السويد. في عام 2004 عينت الحكومة السويدية
-            مجلس التشغيل البيني الحكومي ((GIB لتعزيز التبادل الآمن للمعلومات داخل الإدارة العامة والمواطنين (Löfgren,
-            2007)، وقد وضع المجلس القواعد الارشادية الآتية: إرشادات للمواقع الإلكترونية الحكومية، إرشادات للاستخدام
+            مجلس التشغيل البيني الحكومي (GIB لتعزيز التبادل الآمن للمعلومات داخل الإدارة العامة والمواطنين (Löfgren,
+            2007))، وقد وضع المجلس القواعد الارشادية الآتية: إرشادات للمواقع الإلكترونية الحكومية، إرشادات للاستخدام
             الحكومي للشهادات والتوقيعات الإلكترونية، إرشادات لواجهات المستخدم التي تلبي المتطلبات القانونية.</p>
         <p>تتمتع السويد عمومًا بتطبيق سريع لتكنولوجيا المعلومات للأغراض الإدارية؛ مما يُترجم إلى ممارسات إدارية محسنة في
             جميع أنحاء الخدمة العامة، وتبين حالة السويد أنه وضِعت استراتيجيات محددة لتشجيع تطوير الحكومة الإلكترونية،
             وقد توجت الاستراتيجيات المحددة بالتطور السريع للحكومة الإلكترونية في السويد، ومن الواضح أن تنفيذ الحكومة
             الإلكترونية الجديدة يتضمن التخطيط الاستراتيجي لنشر الأنشطة وخطط التنفيذ.</p>
         <h2>تجربة اليونان:</h2>
-        <p>هناك العديد من التدخلات التي تم وضعها الحكومة لتشجيع انتشار تطبيقات الحكومة الإلكترونية في اليونان<span><sup
-                    title="Markellos, Konstantinos, Markellou, Penelope, Panayiotaki, Angeliki, & Stergianeli, Eirini. (2007). Current state of Greek E-Government initiatives. Journal of Law and Governance, 2(3), 69–92-69–92.">[25]</sup></span>،
+        <p>هناك العديد من التدخلات التي تم وضعها الحكومة لتشجيع انتشار تطبيقات الحكومة الإلكترونية في اليونان <a
+                href="#25"><span><sup
+                        title="Markellos, Konstantinos, Markellou, Penelope, Panayiotaki, Angeliki, & Stergianeli, Eirini. (2007). Current state of Greek E-Government initiatives. Journal of Law and Governance, 2(3), 69–92-69–92.">[25]</sup></span></a>،
             وقد
             حصدت نتائجها إذا حصلت على المرتبة 33 عالمياً في مؤشر تطور الحكومة الإلكترونية<span><sup
                     title="UN e-Government Survey.,(2022): Op. Cit.">[26]</sup></span>.</p>
         <p>جرت مناقشة العديد من المبادرات الأساسية حيث كانت اليونان تهدف إلى تحويل نفسها إلى مجتمع معلومات وذلك بالبدء
             باستراتيجية لتقليل الفجوة الرقمية التي أعاقت المشاركة الإلكترونية. لقد توصلت اليونان إلى استراتيجية لمجتمع
-            المعلومات منذ عام 1995<span><sup
-                    title="Markellos, Konstantinos, Markellou, Penelope, Panayiotaki, .. (2007): Op. Cit.">[27]</sup></span>.
+            المعلومات منذ عام 1995 <a href="#27"><span><sup
+                        title="Markellos, Konstantinos, Markellou, Penelope, Panayiotaki, .. (2007): Op. Cit.">[27]</sup></span></a>.
             والهدف الرئيسـي من ذلك هو تقليص الفجوة الرقمية وزيادة تعزيز اعتماد تكنولوجيا
             المعلومات والاتصالات من قبل غالبية الشركات اليونانية. وهدفت اليونان أن تصبح مجتمع معلومات، كما هدفت أيضاً
             إلى زيادة عدد الأشخاص الذين يمكنهم الوصول إلى تكنولوجيا المعلومات والاتصالات وبالتالي تشجيع المعاملات
             الإلكترونية مع عامة الناس. وتركز مبادرات الحكومة الإلكترونية في اليونان بشكل كامل على جوانب التكامل الرأسي
             والأفقي لتقديم خدمات القطاع العام.</p>
         <p>أحد البرامج الأولى لتشجيع تغلغل الحكومة الإلكترونية في اليونان كان برنامج كليسثينيس (Kleisthenis) لعام
-            1994<span><sup
-                    title="Votis, Konstantinos, Alexakos, Christos, Vassiliadis, Bill, & Likothanassis, S. (2008). An ontologically principled service-oriented architecture for managing distributed e-government nodes. Journal of Network and Computer Applications, 31(2), 131-148. ">[28]</sup></span>،
+            1994 <a href="#28"><span><sup
+                        title="Votis, Konstantinos, Alexakos, Christos, Vassiliadis, Bill, & Likothanassis, S. (2008). An ontologically principled service-oriented architecture for managing distributed e-government nodes. Journal of Network and Computer Applications, 31(2), 131-148. ">[28]</sup></span></a>،
             تم تكليف هذا البرنامج بتحديث الإدارة العامة على مدى خمس سنوات (1994-1999). كانت إحدى المكونات الرئيسة
             لبرنامج كليسثينيس هو تطوير نظام للخدمات الضـريبية الإلكترونية (TAXISnet) وإنشاء شبكة وطنية للإدارة العامة.
         </p>
@@ -176,66 +190,74 @@
             اعتماد تكنولوجيا المعلومات والاتصالات بشكل أسرع في مساعي الحكومة التجارية، وقد بدأ ذلك بإنشاء خدمة مركز
             الاتصال عبر موقع عام. </p>
         <p>وبهدف تنفيذ استراتيجية نظم المعلومات ذات الصلة والمتماسكة لإنشاء مجتمع المعلومات المنشود، اعتُمد البرنامج
-            التشغيلي لمجتمع المعلومات (OPIS) في عام 2000<span><sup
-                    title="Markellos, Konstantinos, Markellou, Penelope, Panayiotaki, .. (2007): Op. Cit.gerald E. Coiden: Adminisirative Reform – Chicago 1970.">[29]</sup></span>،
+            التشغيلي لمجتمع المعلومات (OPIS) في عام 2000 <a href="#29"><span><sup
+                        title="Markellos, Konstantinos, Markellou, Penelope, Panayiotaki, .. (2007): Op. Cit.gerald E. Coiden: Adminisirative Reform – Chicago 1970.">[29]</sup></span></a>،
             يشمل تنفيذ OPIS جميع الإدارات الحكومية وجرى دمجه في مبادرة
             eEurope استنادًا إلى استنتاجات قمة لشبونة في مارس 2000.</p>
         <p>في عام 2001 شُكِّلت شبكة حكومية Syzefxis كشبكة إنترانت وطنية للقطاع العام اليوناني مع القدرة على ربط أكثر من
-            1700 منظمة عامة في جميع أنحاء اليونان<span><sup
-                    title="Bouras, Christos, Gkamas, Apostolos, Papagiannopoulos, John, Theophilopoulos, George, & Tsiatsos, Thrasyvoulos. (2009). Broadband municipal optical networks in Greece: A suitable business model. Telematics and informatics, 26(4), 391-409.">[30]</sup></span>،
+            1700 منظمة عامة في جميع أنحاء اليونان <a href="#30"><span><sup
+                        title="Bouras, Christos, Gkamas, Apostolos, Papagiannopoulos, John, Theophilopoulos, George, & Tsiatsos, Thrasyvoulos. (2009). Broadband municipal optical networks in Greece: A suitable business model. Telematics and informatics, 26(4), 391-409.">[30]</sup></span></a>،
             ولتعزيز تبادل البيانات بين المنظمات المختلفة شُغِّل نظام P2P بين
-            Syzefxis والشبكة اليونانية للأبحاث والتكنولوجيا (GRNET) لأول مرة في عام 2006<span><sup
-                    title="Markellos, Konstantinos, Markellou, Penelope, Panayiotaki, .. (2007): Op. Cit.">[31]</sup></span>،
+            Syzefxis والشبكة اليونانية للأبحاث والتكنولوجيا (GRNET) لأول مرة في عام 2006 <a href="#31">
+                <span><sup
+                        title="Markellos, Konstantinos, Markellou, Penelope, Panayiotaki, .. (2007): Op. Cit.">[31]</sup></span></a>،
             واستكمال ذلك عن بسماح
-            الوصول لشبكة الخدمات الآمنة عبر أوروبا للتواصل بين الإدارات (TESTA)، وتصميم وتنفيذ شبكات MAN، والبنى التحتية
-            لحلقات الألياف الضوئية ومجموعة متنوعة من شبكات النطاق العريض<span><sup title="Ibid.">[32]</sup></span>.</p>
+            الوصول لشبكة الخدمات الآمنة عبر أوروبا للتواصل بين الإدارات (TESTA)، وتصميم وتنفيذ شبكات MAN، والبنى
+            التحتية
+            لحلقات الألياف الضوئية ومجموعة متنوعة من شبكات النطاق العريض<a href="#32"><span><sup
+                        title="Ibid.">[32]</sup></span></a>.</p>
         <p>ومن المبادرات الأخرى تجاه مجتمع المعلومات تنفيذ شبكة IKAne والتي تنقسم إلى فئتين: خدمات المعلومات وخدمات
             المعاملات، كما أُنشئت مراكز اتصال للمواطنين للاتصال برقم هاتف مكون من أربعة أرقام، حيث سُجلت طلباتهم لاتخاذ
-            مزيد من الإجراءات<span><sup title="Ibid.">[33]</sup></span>.</p>
+            مزيد من الإجراءات<a href="#33"><span><sup title="Ibid.">[33]</sup></span></a>.</p>
         <p>لقد وضع النهج الاستراتيجي المبدئي للحكومة الإلكترونية في اليونان في ورقة بيضاء بعنوان "اليونان في مجتمع
             المعلومات: الاستراتيجيات والإجراءات" التي نُشـرت في عام 1999 وتم تحديثها في عام 2002. يعد ARIADNI (تطوير
             وتشغيل المعلومات الرئيسة والدعم ونظام الربط البيني لمركز خدمة المواطنين) إحدى المبادرات التي تهدف إلى تحسين
             خدمات الإدارة العامة في الإدارات الإقليمية والمحلية عن طريق السماح للمواطنين والشـركات بالتفاعل معهم
             باستخدام تكنولوجيا المعلومات والاتصالات.</p>
-        <p>وهناك - أيضًا - برنامج Politeia الذي يهدف إلى تحسين الخدمات المقدمة لعامة الناس<span><sup
-                    title="Philippidou, Sophia S, Soderquist, Klas Eric, & Prastacos, Gregory P. (2004). Towards new public management in Greek public organizations: leadership vs. management, and the path to implementation. Public organization review, 4, 317-337. ">[34]</sup></span>،
+        <p>وهناك - أيضًا - برنامج Politeia الذي يهدف إلى تحسين الخدمات المقدمة لعامة الناس <a href="#34"><span><sup
+                        title="Philippidou, Sophia S, Soderquist, Klas Eric, & Prastacos, Gregory P. (2004). Towards new public management in Greek public organizations: leadership vs. management, and the path to implementation. Public organization review, 4, 317-337. ">[34]</sup></span></a>،
             هدفه الرئيس هو إيجاد
             وتوظيف الموارد البشـرية المختصة التي يمكنها استخدام تكنولوجيا المعلومات والاتصالات بشكل مناسب في نماذج
             الإدارة المالية، واعتماد الأساليب الحديثة للإدارة العامة والرقابة، وضمان سيادة الشفافية والحد من الفساد في
             الخدمة العامة.</p>
         <p>إحدى أهم مبادرات الحكومة الإلكترونية المعاصرة تنفيذ "الاستراتيجية الرقمية اليونانية" المخصصة للتنفيذ خلال
-            الفترة 2013-2016م<span><sup
-                    title="Markellos, Konstantinos, Markellou, Penelope, Panayiotaki, .. (2007): Op. Cit.">[35]</sup></span>.
+            الفترة 2013-2016م<a href="#35"><span><sup
+                        title="Markellos, Konstantinos, Markellou, Penelope, Panayiotaki, .. (2007): Op. Cit.">[35]</sup></span></a>.
             تحتوي وتحوي قائمة شاملة (65 بندًا) لأولويات التنفيذ لتشجيع استيعاب تكنولوجيا المعلومات
-            والاتصالات والحكومة الإلكترونية في المجتمع اليوناني عامة<span><sup title="Ibid.">[36]</sup></span>، ويتولى
+            والاتصالات والحكومة الإلكترونية في المجتمع اليوناني عامة <a href="#36"><span><sup
+                        title="Ibid.">[36]</sup></span></a>، ويتولى
             التنسيق الشامل لجميع مبادرات الحكومة
-            الإلكترونية هذه الأمانة العامة للإدارة العامة والحكومة الإلكترونية التي كان إطلاقها في عام 2006<span><sup
-                    title="Ibid.">[37]</sup></span> أصبحت
-            الاتجاهات الناشئة للحكومة المتنقلة واضحة الآن في اليونان بسبب الانتشار الأسرع للهاتف المحمول<span><sup
-                    title="Karadimas, Papatzelou, & Papantoniou, 2008.">[38]</sup></span>.</p>
+            الإلكترونية هذه الأمانة العامة للإدارة العامة والحكومة الإلكترونية التي كان إطلاقها في عام 2006 <a
+                href="#37"><span><sup title="Ibid.">[37]</sup></span></a> أصبحت
+            الاتجاهات الناشئة للحكومة المتنقلة واضحة الآن في اليونان بسبب الانتشار الأسرع للهاتف المحمول<a
+                href="#38"><span><sup title="Karadimas, Papatzelou, & Papantoniou, 2008.">[38]</sup></span></a>.</p>
         <h2>تجربة سنغافورة:</h2>
-        <p>سنغافورة إحدى الدول الرائدة في مجال تطوير الحكومة الإلكترونية بين الدول النامية والناشئة<span><sup
-                    title="Rowley, Jennifer. (2011). e-Government stakeholders—Who are they and what do they want? International journal of Information management, 31(1), 53-62.">[39]</sup></span>،
+        <p>سنغافورة إحدى الدول الرائدة في مجال تطوير الحكومة الإلكترونية بين الدول النامية والناشئة <a
+                href="#39"><span><sup
+                        title="Rowley, Jennifer. (2011). e-Government stakeholders—Who are they and what do they want? International journal of Information management, 31(1), 53-62.">[39]</sup></span></a>،
             وحصلت على
-            المرتبة 12 عالميًا في مؤشر تطور الحكومة الإلكترونية<span><sup
-                    title="UN e-Government Survey.,(2022): Op. Cit.">[40]</sup></span>. حققت نجاحات في تحويل البلاد إلى
+            المرتبة 12 عالميًا في مؤشر تطور الحكومة الإلكترونية<a href="#40"><span><sup
+                        title="UN e-Government Survey.,(2022): Op. Cit.">[40]</sup></span></a>. حققت نجاحات في تحويل
+            البلاد إلى
             مجتمع معلومات
             والاستخدام المتقدم لتكنولوجيا المعلومات والاتصالات للمشاركة في سلاسل القيمة الاجتماعية والاقتصادية والتجارية
             العالمية، وكان حصول النجاحات عن طريق مبادرات مثل استثمار أكثر من 1.3 مليار دولار سنغافوري لترقية خدماتها
-            العامة عبر الإنترنت<span><sup title="Mimicopoulos, Michael G. (2004). Op. Cit">[41]</sup></span>. تعد هذه
+            العامة عبر الإنترنت<a href="#41"><span><sup
+                        title="Mimicopoulos, Michael G. (2004). Op. Cit">[41]</sup></span></a>. تعد هذه
             المبادرة تكملة لخطة عمل الحكومة الإلكترونية الثانية (eGAPII)، وهي استمرار
-            لبرنامج مماثل (eGAPI) تم تنفيذه بتكلفة قدرها 1.5 مليار دولار سنغافوري<span><sup
-                    title="Ibid.">[42]</sup></span>.</p>
+            لبرنامج مماثل (eGAPI) تم تنفيذه بتكلفة قدرها 1.5 مليار دولار سنغافوري<a href="#42"><span><sup
+                        title="Ibid.">[42]</sup></span></a>.</p>
         <p>وحدد تقرير المائدة المستديرة بعض خدمات الحكومة الإلكترونية الأساسية التي جرى تنفيذها، وتسمح بوابة المواطن
-            الإلكتروني في سنغافورة<span><sup title="https://www.citizenconnectcentre.gov.sg.">[43]</sup></span>
+            الإلكتروني في سنغافورة<a href="#43"><span><sup
+                        title="https://www.citizenconnectcentre.gov.sg.">[43]</sup></span></a>
             للمواطنين بالوصول لأكثر من 1600 خدمة تقدمها المؤسسات العامة، وتتيح تقديم نماذج
             التقديم لوظائف شاغرة، وتسجيل الناخبين، وبحث معلومات المدرسة، والمشاركة في المناقشات (المنتديات الإلكترونية)
             مع الحكومة فيما يتعلق ببعض عمليات صنع القرار. يبلغ معدل زيارة البوابة 3.1 مليون شهريًا مما يؤكد حقيقة أن
             عددًا أكبر بكثير من الأشخاص والشـركات يشاركون في التفاعل مع الحكومة؛ بهدف ضمان الوصول الواسع إلى المعلومات
             الحكومية والخدمات الإلكترونية، أنشئت شبكة من مراكز مساعدة المواطن الإلكتروني في عام 2001م، وأنشئت مركز
             الأعمال الإلكترونية الحكومي في سنغافورة (GeBiz) عام 2000 لمساعدة الحكومة في مشترياتها وأنشطة المناقصات بهدف
-            الحد من الفساد في عملية المشتريات العامة<span><sup
-                    title="Mimicopoulos, Michael G. (2004): Op.Cit.">[44]</sup></span>.</p>
+            الحد من الفساد في عملية المشتريات العامة<a href="#44"><span><sup
+                        title="Mimicopoulos, Michael G. (2004): Op.Cit.">[44]</sup></span></a>.</p>
         <p>يوضح Tan, Pan, and Cha التدخلات المختلفة للحكومة الإلكترونية التي حدثت في سنغافورة، ومن أجل النهوض بتنمية
             الحكومة الإلكترونية صممت سنغافورة مبادرات إدارية استراتيجية لاستخدام تكنولوجيا المعلومات والاتصالات في منصات
             الإدارة العامة تسمى "خطط المعلومات والاتصالات الحكومية"، ويكون فصل هذه الخطط في طبقات مختلفة ولها نتائج
@@ -245,8 +267,8 @@
         <p>كان إطلاق CSCP استجابة لخطة الحوسبة الوطنية (NCP) لحكومة سنغافورة لتحويل حكومتها إلى مستغل فعال وفعال
             لتطبيقات تكنولوجيا المعلومات والاتصالات الناشئة، وشُكِّلت خطة عمل الحكومة الإلكترونية الأولى، بالتعاون مع
             هيئة تنمية المعلومات والاتصالات (IDA)؛ من أجل "تطوير سنغافورة لتصبح عاصمة معلوماتية عالمية تتمتع باقتصاد
-            إلكتروني مزدهر ومجتمع إلكتروني متمكن من المعلومات"<span><sup
-                    title="IDAS. (2006). Infocomm Development Authority of Singapore.">[45]</sup></span>.، وكانت
+            إلكتروني مزدهر ومجتمع إلكتروني متمكن من المعلومات"<a href="#45"><span><sup
+                        title="IDAS. (2006). Infocomm Development Authority of Singapore.">[45]</sup></span></a>.، وكانت
             المبادرة الثانية خطة عمل الحكومة الإلكترونية
             الثانية، عبارة عن مخطط لتكنولوجيا المعلومات والاتصالات بقيمة 900 مليون دولار أمريكي؛ يهدف إلى تحويل تقديم
             الخدمات العامة في سنغافورة إلى حكومة شبكية توفر خدمات إلكترونية متكاملة وسهلة الوصول وذات قيمة مضافة للشعب،
@@ -256,7 +278,8 @@
             الحكومة الإلكترونية في سنغافورة، وكانت بمقام دروس للدول أو المناطق الأخرى التي هي في طور تنفيذ الحكومة
             الإلكترونية.</p>
         <p>تواصل حكومة سنغافورة التدخلات للتأكد من أن "المعزولين رقميًا" يُمنحون - أيضًا - فرصة متساوية للوصول إلى محتوى
-            الحكومة الإلكترونية<span><sup title="Helsper & Eynon, 2010; Maioli, 2008.">[46]</sup></span>، ومن البرامج
+            الحكومة الإلكترونية <a href="#46"><span><sup
+                        title="Helsper & Eynon, 2010; Maioli, 2008.">[46]</sup></span></a>، ومن البرامج
             التي جرى اتباعها في هذا المجال برنامج CARE لعام 2004 الذي يوفر التدريب
             للشـركات على كيفية الاستفادة من الخدمات الإلكترونية المتوفرة في البوابة. </p>
         <p>تسترشد الإدارات الحكومية المختلفة التي قد ترغب في تصميم مواقع الويب الخاصة بها بمجموعة من معايير واجهة الويب
@@ -268,32 +291,33 @@
         <p>مبادرة أخرى هي برنامج Igov2010 الذي واصل العمل الذي أنجزته eGAPII إلى مستوى آخر، وتهدف هذه المبادرة إلى تحقيق
             التنوع في نوع المستخدمين الذين يصلون إلى تطبيقات الحكومة الإلكترونية، وقد أظهرت حالة سنغافورة أن هناك
             التزامًا كبيرًا من جانب الحكومة وأصحاب المصلحة الآخرين في تعزيز تطوير الحكومة الإلكترونية، ويترتب على ذلك
-            أنه لابد من السعي إلى مشاركة أصحاب المصلحة عند رسم الحكومة الإلكترونية<span><sup
-                    title="Rowley, Jennifer. (2011). Op. Cit.">[47]</sup></span>.</p>
+            أنه لابد من السعي إلى مشاركة أصحاب المصلحة عند رسم الحكومة الإلكترونية<a href="#47"><span><sup
+                        title="Rowley, Jennifer. (2011). Op. Cit.">[47]</sup></span></a>.</p>
         <h2>تجربة كوريا الجنوبية:</h2>
-        <p>تعد كوريا الجنوبية حاليًا الرائدة عالميًا في تطوير الحكومة الإلكترونية <span><sup
-                    title="UN e-Government Survey.,(2022): Op. Cit.">[48]</sup></span>، حيث حصلت على المرتبة الثالثة في
+        <p>تعد كوريا الجنوبية حاليًا الرائدة عالميًا في تطوير الحكومة الإلكترونية <a href="#48"><span><sup
+                        title="UN e-Government Survey.,(2022): Op. Cit.">[48]</sup></span></a>، حيث حصلت على المرتبة
+            الثالثة في
             مؤشر تطور الحكومة الرقمية، لقد أظهرت هذه الدولة نموًا مثيرًا للإعجاب في استخدام تكنولوجيا المعلومات
-            والاتصالات والابتكار، وحققت الكثير في أخذ مكانها الصحيح في مجتمع المعلومات<span><sup
-                    title="Lee, Sang Kyu, & Gibson, David V. (2002). Towards knowledge-based economy in Korea: metrics and policy. International Journal of Technology, Policy and Management, 2(3), 301-314. ">[49]</sup></span>.
+            والاتصالات والابتكار، وحققت الكثير في أخذ مكانها الصحيح في مجتمع المعلومات<a href="#49"><span><sup
+                        title="Lee, Sang Kyu, & Gibson, David V. (2002). Towards knowledge-based economy in Korea: metrics and policy. International Journal of Technology, Policy and Management, 2(3), 301-314. ">[49]</sup></span></a>.
             تتمتع كوريا بقدر كبير من
             النضج في اختراق تكنولوجيا المعلومات والاتصالات، وهو حاليًا أعلى معدل انتشار للإنترنت والهواتف المحمولة في
-            العالم للفرد<span><sup
-                    title="Kim, Yongsoo, Kelly, Tim, & Raja, Siddhartha. (2010). Building broadband: Strategies and policies for the developing world: World Bank Publications..">[50]</sup></span>.
+            العالم للفرد<a href="#50"><span><sup
+                        title="Kim, Yongsoo, Kelly, Tim, & Raja, Siddhartha. (2010). Building broadband: Strategies and policies for the developing world: World Bank Publications..">[50]</sup></span></a>.
         </p>
         <p>وقد جرى تنفيذ العديد من المبادرات لوضع كوريا في مكانة تنافسية في مجال اعتماد تكنولوجيا المعلومات والاتصالات
             واستخدامها ضمن أطرها الاجتماعية والاقتصادية المختلفة، يفترض H. Lee and Yun أن قطاع تكنولوجيا المعلومات
             والاتصالات في كوريا مخصص ومتحرر بالكامل ويرتكز على مبادئ السوق غير الخاضعة للتنظيم وعلى جبهة السياسات، وتعمل
             وزارة المعلومات والاتصالات الكورية (MIC) على تطوير البنية التحتية لتكنولوجيا المعلومات والاتصالات عالية
             السـرعة وتشجع الاستخدام المكثف لتكنولوجيا المعلومات والاتصالات في مختلف سلاسل القيمة الاجتماعية والاقتصادية
-            للاقتصاد الكوري<span><sup
-                    title="Lee, Heejin, & Yun, Kyounglim. (2001). The growth of broadband Internet connections in South Korea: Contributing factors. BLED 2001 Proceedings, 39.">[51]</sup></span>.
+            للاقتصاد الكوري<a href="#51"><span><sup
+                        title="Lee, Heejin, & Yun, Kyounglim. (2001). The growth of broadband Internet connections in South Korea: Contributing factors. BLED 2001 Proceedings, 39.">[51]</sup></span></a>.
         </p>
         <p>وجرى تنفيذ مبادرات جوهرية ومبدئية أخرى في كوريا بهدف إلى سد الفجوة الرقمية وتشجيع النفاذ العالمي إلى
             تكنولوجيا المعلومات والاتصالات لجميع المواطنين بصـرف النظر عن وضعهم، وقد نُفِّذت التدخلات المتنوعة المتعلقة
             بالفجوة الرقمية في كوريا في إطار الشـراكة بين القطاعين العام والخاص (PPP)، حيث تعاون القطاع الخاص (المنظمات
             غير الحكومية، كيانات الأعمال الخاصة، المجتمع المدني، المواطنون) مع الحكومة، يتألف PPP من أكثر من 679 عضوًا
-            من مختلف قطاعات الاقتصاد. </p>
+            من مختلف قطاعات الاقتصاد.</p>
         <p>نوضح هنا بعض التدخلات الرئيسة التي جرى تنفيذها عن طريق ترتيبات الشـراكة بين القطاعين العام والخاص في كوريا:
             في عام 1997، تم الشـروع في مشـروع البنية التحتية للمعلومات عالية السـرعة، وكانت هذه بداية عصر الإنترنت الذي
             يمثل بداية خدمات التجارة الإلكترونية، استمرت مبادرات التميز الرقمي في عام 1999 تقريبًا عندما شرعت الحكومة
@@ -302,8 +326,8 @@
         <p>في عام 2002 أُطلقت "رؤية كوريا الإلكترونية 2006" التي أرست الأساس للحكومة الإلكترونية وأطلقت أول تقنية
             لاسلكية في العالم لخدمة الاتصالات المتنقلة الدولية-2000 (الجيل الثالث، 3G) لزيادة نقل البيانات بين الهواتف
             المحمولة والهوائيات الأساسية، علاوة على ذلك في عام 2004، جرى رسم وتنفيذ عدد قليل من المبادرات مثل خطة تنفيذ
-            شبكة تقارب النطاق العريض (BcN)، وشبكة u-Sensor، والخطط الرئيسة لـ IPv6<span><sup
-                    title="Menon, Siddhartha. (2011). Policy agendas for South Korea's broadband convergence network infrastructure project. info, 13(2), 19-34.">[52]</sup></span>،
+            شبكة تقارب النطاق العريض (BcN)، وشبكة u-Sensor، والخطط الرئيسة لـ IPv6 <a href="#52"><span><sup
+                        title="Menon, Siddhartha. (2011). Policy agendas for South Korea's broadband convergence network infrastructure project. info, 13(2), 19-34.">[52]</sup></span></a>،
             وقد مكن هذا معاملات التجارة
 
             الإلكترونية من الارتفاع إلى عدة ملايين من الدولارات.</p>
@@ -311,8 +335,8 @@
             والفضائية، في عام 2006، كان هناك انتقال نحو العالم المفتوح، وقد جرى تعزيز ذلك عن طريق إنشاء "الخطة الرئيسة
             لكوريا الجنوبية"، وإطلاق الخدمات التجارية مثل BcN، وWiBro، وHSDPA، وشهدت هذه التدخلات طفرة في وصول المواطنين
             العاديين إلى تكنولوجيا المعلومات والاتصالات وحصول الدولة على المرتبة الأولى في العالم باستخدام معيارDOI
-            <span><sup
-                    title="Ok, HyeRyoung. (2011). New media practices in Korea. International Journal of Communications, 5, 320-348.">[53]</sup></span>.
+            <a href="#53"><span><sup
+                        title="Ok, HyeRyoung. (2011). New media practices in Korea. International Journal of Communications, 5, 320-348.">[53]</sup></span></a>.
         </p>
         <p>كما تجدر الإشارة إلى العديد من المبادرات نحو تطوير الحكومة الإلكترونية في كوريا: 1987 - 1997 وضع الإطار
             القانوني والتنظيمي، شمل قانون شبكات الكمبيوتر لعام 1986 وقانون تعزيز المعـلوماتية لعام 1995، و 1998 - 2002
@@ -320,18 +344,137 @@
             إدارة موارد المعرفة لعام 2000، وقانون الحكومة الإلكترونية لعام 2001. وفي 2003 - 2007، كان هناك ترويج نشط
             لصناعة تكنولوجيا المعلومات والاتصالات في جميع أنحاء البلاد، وشهد ذلك تنفيذ 31 مشـروعًا لخارطة طريق الحكومة
             الإلكترونية في عام 2003، وتنفيذ رؤية كوريا لتكنولوجيا المعلومات ذات النطاق العريض لعام 2007، وخطة BcN لعام
-            2004م<span><sup title="Menon, Siddhartha. (2011), Op: Cit.">[54]</sup></span>.</p>
+            2004م<a href="#54"><span><sup title="Menon, Siddhartha. (2011), Op: Cit.">[54]</sup></span></a>.</p>
         <p>مبدئيًا سُنَّ إجمالي 101 قانون، بما في ذلك قانون التوقيع الإلكتروني وقانون الترويج الصناعي للمحتوى الرقمي عبر
             الإنترنت؛ من أجل التطوير المناسب لصناعة تكنولوجيا المعلومات في كوريا. ويجري استخدام معظم ابتكارات تكنولوجيا
             المعلومات والاتصالات في سياق الحكومة الإلكترونية.</p>
         <p>في التجربة الكورية جرى اعتماد استخدام تكنولوجيا المعلومات والاتصالات في مختلف القطاعات الاجتماعية والاقتصادية
-            مثل التعليم (التعلم الإلكتروني) بسـرعة بسبب القبول الثقافي لاستخدام تكنولوجيا المعلومات والاتصالات<span><sup
-                    title="Bedi, Arjun Singh, Kimalu, Paul, Manda, Damiano, & Nafula, Nancy. (2002).Op: Cit.">[55]</sup></span>،
+            مثل التعليم (التعلم الإلكتروني) بسـرعة بسبب القبول الثقافي لاستخدام تكنولوجيا المعلومات والاتصالات <a
+                href="#55"><span><sup
+                        title="Bedi, Arjun Singh, Kimalu, Paul, Manda, Damiano, & Nafula, Nancy. (2002).Op: Cit.">[55]</sup></span></a>،
             وقد
             أثر ذلك بشكل إيجابي في عملية نشـر تكنولوجيا المعلومات والاتصالات. وتعلق الآباء والتلاميذ بتكنولوجيا
             المعلومات والاتصالات بعدها وسيلة للتعليم تنطوي على إمكانات كبيرة لمستقبل واعد، ولذلك شجعوا وسهلوا اعتمادها.
         </p>
 
     </div>
+</div>
+<h2 class="show-references">إظهار المراجع</h2>
+<div class="refrences">
+    <div class="first-ref-info">
+        <h2>المراجع</h2>
+    </div>
+    <ul>
+        <li id="1" class="eng">Ochara-Muganda, Nixon, & Van Belle, Jean-Paul. (2010). A proposed framework for
+            E-Government
+            knowledge infrastructures for Africa’s transition economies. J. e-Government Stud. Best Pract, 303226, 1-9.
+        </li>
+        <li id="2" class="eng">Ibid.</li>
+        <li id="3" class="eng">Bazzanella, S, & Bihan, JL. (2012). Support for Harmonisation of ICT Policies in
+            Sub-Sahara Africa
+            Implementation Strategy. International Telecommunication Union.</li>
+        <li id="4" class="eng">Smith, Matthew L. (2011). Limitations to building institutional trustworthiness through
+            e-government:
+            a comparative study of two e-services in Chile. Journal of Information Technology, 26, 78-93. & UN
+            e-Government Survey. (2010): Op. Cit.</li>
+        <li id="5" class="eng">Park, Eun G, Lamontagne, Manon, Perez, Amilcar, Melikhova, Irina, & Bartlett, Gregory.
+            (2009).
+            Running ahead toward interoperable e-government: The government of Canada metadata framework. International
+            Journal of Information Management, 29(2), 145-150. & Roy, Jeffrey. (2006). E-service delivery and new
+            governance capacities:'Service Canada'as a case study. International Journal of Services Technology and
+            Management, 7(3), 253-271. & Shareef, Mahmud Akhter,... (2011): Op. Cit.</li>
+        <li id="6">راجع: <a href="https://www.canadians-canadiens.gc.ca">www.canadians-canadiens.gc.ca</a></li>
+        <li id="7" class="eng">UN e-Government Survey., (2022): Op. Cit.</li>
+        <li id="8" class="eng">Wang, Lu, Rosenberg, Mark, & Lo, Lucia. (2008). Ethnicity and utilization of family
+            physicians: A
+            case study of Mainland Chinese immigrants in Toronto, Canada. Social science & medicine, 67(9), 1410-1422.
+        </li>
+        <li id="9" class="eng">Shareef, Mahmud Akhter,... (2011): Op. Cit.</li>
+        <li id="10">راجع: <a href="www.canada.gc.ca/main_e.html">www.canada.gc.ca/main_e.html</a></li>
+        <li id="11" class="eng">Pare, Richard. (2002). E-Democracy and E-Government: How Will These Affect Libraries?
+        </li>
+        <li id="12" class="eng">Gurstein, Michael. (2003). Effective use: A community informatics strategy beyond the
+            digital
+            divide. First Monday. </li>
+        <li id="13" class="eng">Kumar, Vinod, Mukerji, Bhasker, & Butt, Irfan. (2007): Op. Cit.</li>
+        <li id="14" class="eng">Stiftung, B. (2002). Balanced E-Government: E-Government–Connecting efficient
+            administration and
+            responsive democracy. A study by the Bertelsmann Foundation, 24.</li>
+        <li id="15" class="eng">Kumar, Vinod, Mukerji, Bhasker, & Butt, Irfan. (2007): Op. Cit.</li>
+        <li id="16" class="eng">Just, Mike, & Rosmarin, Danielle. (2009). Meeting the challenges of Canada’s Secure
+            Delivery of
+            e-Government Services.</li>
+        <li id="17" class="eng">UN e-Government Survey.,(2022): Op. Cit.</li>
+        <li id="18" class="eng">Chahin, Ali, Cunha, Maria Alexandra, Knight, Peter T, & Pinto, Sólon Lemos. (2004).
+            egov. br–A
+            próxima revolução brasileira. São Paulo: Financial Times Prentice Hall: Pearson Education do Brasil.</li>
+        <li id="19" class="eng">راجع: <a href="www.governoeletronico.gov.br">www.governoeletronico.gov.br</a></li>
+        <li id="20" class="eng">Takahashi, Tadao. (2000). Information Society in Brazil-Green Book. Brasilia: SOCINFO.
+        </li>
+        <li id="21" class="eng">Knight, Peter T. (2007). Knowledge management and e-government in Brazil. e-Government,
+            29, 06.</li>
+        <li id="22" class="eng">Bertot, John Carlo, Jaeger, Paul T, & McClure, Charles R. (2008). Citizen-centered
+            e-government
+            services: benefits, costs, and research needs. Paper presented at the Proceedings of the 2008 international
+            conference on Digital government research.</li>
+        <li id="23" class="eng">Lind, Mikael, & Johannisson, Per. (2009). Acting Out The Swedish E-Government Action
+            Plan-Mind And
+            Mend The Gaps. International Journal of Public Information Systems, 5(2).</li>
+        <li id="24" class="eng">UN e-Government Survey.,(2022): Op. Cit.</li>
+        <li id="25" class="eng">Markellos, Konstantinos, Markellou, Penelope, Panayiotaki, Angeliki, & Stergianeli,
+            Eirini. (2007).
+            Current state of Greek E-Government initiatives. Journal of Law and Governance, 2(3), 69–92-69–92.</li>
+        <li id="26" class="eng">UN e-Government Survey.,(2022): Op. Cit.</li>
+        <li id="27" class="eng">Markellos, Konstantinos, Markellou, Penelope, Panayiotaki, .. (2007): Op. Cit.</li>
+        <li id="28" class="eng">Votis, Konstantinos, Alexakos, Christos, Vassiliadis, Bill, & Likothanassis, S. (2008).
+            An
+            ontologically principled service-oriented architecture for managing distributed e-government nodes. Journal
+            of Network and Computer Applications, 31(2), 131-148. </li>
+        <li id="29" class="eng">Markellos, Konstantinos, Markellou, Penelope, Panayiotaki, .. (2007): Op. Cit.</li>
+        <li id="30" class="eng">Bouras, Christos, Gkamas, Apostolos, Papagiannopoulos, John, Theophilopoulos, George, &
+            Tsiatsos,
+            Thrasyvoulos. (2009). Broadband municipal optical networks in Greece: A suitable business model. Telematics
+            and informatics, 26(4), 391-409.</li>
+        <li id="31" class="eng">Markellos, Konstantinos, Markellou, Penelope, Panayiotaki, .. (2007): Op. Cit.</li>
+        <li id="32" class="eng">Ibid.</li>
+        <li id="33" class="eng">Ibid.</li>
+        <li id="34" class="eng">Philippidou, Sophia S, Soderquist, Klas Eric, & Prastacos, Gregory P. (2004). Towards
+            new public
+            management in Greek public organizations: leadership vs. management, and the path to implementation. Public
+            organization review, 4, 317-337.</li>
+        <li id="35" class="eng">Markellos, Konstantinos, Markellou, Penelope, Panayiotaki, .. (2007): Op. Cit.</li>
+        <li id="36" class="eng">Ibid.</li>
+        <li id="37" class="eng">Ibid.</li>
+        <li id="38" class="eng">Karadimas, Papatzelou, & Papantoniou, 2008.</li>
+        <li id="39" class="eng">Rowley, Jennifer. (2011). e-Government stakeholders—Who are they and what do they want?
+            International journal of Information management, 31(1), 53-62.</li>
+        <li id="40" class="eng">UN e-Government Survey.,(2022): Op. Cit.</li>
+        <li id="41" class="eng">Mimicopoulos, Michael G. (2004). Op. Cit.</li>
+        <li id="42" class="eng">Ibid.</li>
+        <li id="43" class="eng"><a
+                href="https://www.citizenconnectcentre.gov.sg">https://www.citizenconnectcentre.gov.sg</a>.</li>
+        <li id="44" class="eng">Mimicopoulos, Michael G. (2004): Op.Cit.</li>
+        <li id="45" class="eng">IDAS. (2006). Infocomm Development Authority of Singapore.</li>
+        <li id="46" class="eng">Helsper & Eynon, 2010; Maioli, 2008.</li>
+        <li id="47" class="eng">Rowley, Jennifer. (2011). Op. Cit.</li>
+        <li id="48" class="eng">UN e-Government Survey.,(2022): Op. Cit.</li>
+        <li id="49" class="eng">Lee, Sang Kyu, & Gibson, David V. (2002). Towards knowledge-based economy in Korea:
+            metrics and
+            policy. International Journal of Technology, Policy and Management, 2(3), 301-314.</li>
+        <li id="50" class="eng">Kim, Yongsoo, Kelly, Tim, & Raja, Siddhartha. (2010). Building broadband: Strategies and
+            policies
+            for the developing world: World Bank Publications.</li>
+        <li id="51" class="eng">Lee, Heejin, & Yun, Kyounglim. (2001). The growth of broadband Internet connections in
+            South Korea:
+            Contributing factors. BLED 2001 Proceedings, 39.</li>
+        <li id="52" class="eng">Menon, Siddhartha. (2011). Policy agendas for South Korea's broadband convergence
+            network
+            infrastructure project. info, 13(2), 19-34.</li>
+        <li id="53" class="eng">Ok, HyeRyoung. (2011). New media practices in Korea. International Journal of
+            Communications, 5,
+            320-348.</li>
+        <li id="54" class="eng">Menon, Siddhartha. (2011), Op: Cit.</li>
+        <li id="55" class="eng">Bedi, Arjun Singh, Kimalu, Paul, Manda, Damiano, & Nafula, Nancy. (2002).Op: Cit.</li>
+    </ul>
 </div>
 {% endblock %}

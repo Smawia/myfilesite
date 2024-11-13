@@ -8,6 +8,7 @@ from comments.models import Comments
 from comments.forms import DocumentForm
 from django.core.paginator import Paginator
 
+
 # Create your views here.
 
 def index(request):
@@ -26,8 +27,9 @@ def studies(request):
 
     data = Studies.objects.all()
 
-    page = Paginator(data,9)
+    page = Paginator(data,10)
     page_list = request.GET.get('page')
+    
     page = page.get_page(page_list)
     context = {
         'page': page
@@ -392,6 +394,15 @@ def implementing_egovernment(request):
 
 def global_experiences_in_egovernment(request):
     return render(request,'pages/global_experiences_in_egovernment.html')
+
+def information_and_communications_technology_in_Yemen(request):
+    return render(request,'pages/information_and_communications_technology_in_Yemen.html')
+
+def implementing_egovernment_in_Yemen(request):
+    return render(request,'pages/implementing_e-government_in_Yemen.html')
+
+def future_of_eGovernment_Yemen(request):
+    return render(request,'pages/future_of_eGovernment_Yemen.html')
     
 def error_404(request,exception):
     return render(request,'pages/404_error.html')

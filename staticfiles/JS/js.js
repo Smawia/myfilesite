@@ -11,34 +11,52 @@ let head_page = document.querySelector(".head-page");
 let txt_information = document.querySelector(".text-info");
 let nav_a = document.querySelectorAll(".nav-a");
 let nav_i = document.querySelectorAll(".arrow");
+let index_imgs = document.querySelectorAll(".show-studies-index .show-index-imgs .card img");
+let index_imgs2 = document.querySelectorAll(".show-studies-index .show-index-imgs .card img.stud");
+let show_ref = document.querySelector(".show-references");
+let all_ref = document.querySelector(".refrences");
+let social = document.querySelector(".social");
+let socialSpan = document.querySelector(".social span");
+
+socialSpan.onclick = function () {
+    social.classList.toggle("social2");
+    socialSpan.innerHTML = '-';
+    res2 = getComputedStyle(social);
+    dis2 = res2.right;
+    if(dis2 == '10px'){
+        socialSpan.innerHTML = '+';
+    }
+}
+
+let counter = 1;
+setInterval(function () {
+    document.getElementById('radio' + counter).checked = true;
+    counter++;
+    if (counter > 4) {
+        counter = 1;
+    }
+}, 5000);
+
 window.onscroll = function () {
-    if (window.scrollY >= 300) {
-        head_page.style.cssText = "background-color: rgb(227 9 29 / 48%); border-radius: 12px;";
-        nav_a[0].style.color = "white";
-        nav_a[1].style.color = "white";
-        nav_a[2].style.color = "white";
-        nav_a[3].style.color = "white";
-        nav_a[4].style.color = "white";
-        nav_a[5].style.color = "white";
-        nav_i[0].style.color = "white";
-        nav_i[1].style.color = "white";
-        img_id.style.display = 'block';
+    if (window.scrollY >= 500) {
+        index_imgs[0].style.width = '100%';
+        index_imgs[1].style.width = '100%';
+        index_imgs[2].style.width = '100%';
     }
+
+    if (window.scrollY >= 800) {
+        index_imgs2[0].style.width = '100%';
+        index_imgs2[1].style.width = '100%';
+        index_imgs2[2].style.width = '100%';
+    }
+
     if (window.scrollY >= 50) {
-        txt_information.style.transform = 'translateX(0)';
+        txt_information.style.cssText = 'visibility: visible; transform: translateX(0)';
     }
+
 
     else {
         head_page.style.cssText = "background-color: white;";
-        nav_a[0].style.color = "black";
-        nav_a[0].classList.add("active");
-        nav_a[1].style.color = "black";
-        nav_a[2].style.color = "black";
-        nav_a[3].style.color = "black";
-        nav_a[4].style.color = "black";
-        nav_a[5].style.color = "black";
-        nav_i[0].style.color = "black";
-        nav_i[1].style.color = "black";
         img_id.style.display = 'none';
     }
 }
@@ -46,7 +64,7 @@ window.onscroll = function () {
 let aside_bar = document.querySelector('.aside');
 let over = document.querySelector('.over');
 bar.onclick = function () {
-    aside_bar.style.cssText = 'width: 50%;display:block';
+    aside_bar.style.cssText = 'width: 100%;display:block';
     over.style.display = 'block';
 }
 
@@ -61,9 +79,64 @@ let go_to_index = document.querySelector('.go-to-index');
 
 setTimeout(function () {
     go_to_index.click();
-}, 5000);
+}, 3000);
 
 let go_to_index2 = document.querySelector('.go-to-index2');
 setTimeout(function () {
     go_to_index2.click();
-}, 5000);
+}, 3000);
+
+show_ref.onclick = function () {
+    // document.querySelector(".refrences").style.display = 'block';
+    res = getComputedStyle(all_ref);
+    dis = res.height;
+    console.log(dis);
+    if (all_ref.classList.contains("jordan")) {
+        console.log("jordan");
+        if (dis == '0px') {
+            console.log("jordan");
+            all_ref.style.height = '160px';
+            show_ref.innerHTML = 'إخفاء المراجع'
+        }
+        else {
+            all_ref.style.height = '0';
+            show_ref.innerHTML = 'إظهار المراجع'
+        }
+    }
+    else if (all_ref.classList.contains("eveloution")) {
+        if (dis == '0px') {
+            all_ref.style.height = '150px';
+            show_ref.innerHTML = 'إخفاء المراجع'
+        }
+        else {
+            all_ref.style.height = '0';
+            show_ref.innerHTML = 'إظهار المراجع'
+        }
+    }
+
+    else if (all_ref.classList.contains("legis")) {
+        if (dis == '0px') {
+            all_ref.style.height = '235px';
+            show_ref.innerHTML = 'إخفاء المراجع'
+        }
+        else {
+            all_ref.style.height = '0';
+            show_ref.innerHTML = 'إظهار المراجع'
+        }
+    }
+    else {
+        if (dis == '0px') {
+            all_ref.style.height = '310px';
+            show_ref.innerHTML = 'إخفاء المراجع'
+        }
+        else {
+            all_ref.style.height = '0';
+            show_ref.innerHTML = 'إظهار المراجع'
+        }
+    }
+
+}
+
+
+
+

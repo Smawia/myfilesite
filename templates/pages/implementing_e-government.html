@@ -1,34 +1,39 @@
 {% extends 'base.html' %}
 {% load static %}
 {% block content %}
+<div class="top-of-study">
+    <a href="{% url 'index' %}">المركز التأسيسي</a>/<a href="{% url 'studies' %}">الدراسات</a>/<span>عوامل نجاح أو فشل تنفيذ الحكومة الإلكترونية</span>
+</div>
 <div class="first-page">
     <a href="#img-id" class="hidden-row"><i class="fa-solid fa-arrow-up-long"></i></a>
     <!-- <h1>الحياة في اليمن</h1> -->
-    <img src="{% static 'imgs/egoven.jpg' %}" alt="" id="img-id">
     <p class="p-img">عوامل نجاح أو فشل تنفيذ الحكومة الإلكترونية</p>
+
+    <img src="{% static 'imgs/egoven.jpg' %}" alt="" id="img-id">
     <div class="info">
         <div class="date-info">
-            <span>تم النشر في<i class="fa-solid fa-calendar"></i>27 سبتمبر 2023</span>
+            <span><i class="fa-solid fa-calendar"></i>27 سبتمبر 2023</span>
         </div>
         <span class="pub">أ.م.د/ أحمد عبد الله صالح الشلبي</span>
     </div>
     <div class="full-text">
         <p>تلاحظ الحكومات بشكل متزايد فائدة تنفيذ أنظمة الحكومة الإلكترونية، وقد حدث تحول نموذجي، حيث أصبحت الحكومات
-            مهتمة بنفس القدر باستخدام الإنترنت في تنفيذ أنشطتها اليومية<span><sup
-                    title="Nurdin, Nurdin, Stockdale, Rosemary, & Scheepers, Helana. (2010). Examining the role of the culture of local government on adoption and use of e-government services. Paper presented at the International Conference on E-Government and E-Services.">[1]</sup></span>،
+            مهتمة بنفس القدر باستخدام الإنترنت في تنفيذ أنشطتها اليومية <a href="#1"><span><sup
+                        title="Nurdin, Nurdin, Stockdale, Rosemary, & Scheepers, Helana. (2010). Examining the role of the culture of local government on adoption and use of e-government services. Paper presented at the International Conference on E-Government and E-Services.">[1]</sup></span></a>،
             وعلى الرغم من هذا الاهتمام والتصميم والدعم
             من جانب الحكومة، فقد جرى الإبلاغ عن فشل ونجاح تنفيذ واعتماد الحكومة الإلكترونية في مختلف المجالات الاجتماعية
-            والاقتصادية<span><sup title="Heeks, Richard. (2004): Op. Cit.">[2]</sup></span>. وكما هو مذكور أعلاه، فإن
+            والاقتصادية<a href="#2"><span><sup title="Heeks, Richard. (2004): Op. Cit.">[2]</sup></span></a>. وكما هو
+            مذكور أعلاه، فإن
             تنفيذ الحكومة الإلكترونية يأتي بتكلفة فرصة أعلى؛ لذلك لن يكون من
             الجيد لأصحاب المصلحة في الحكومة الإلكترونية والشـركاء المتعاونين أن يشهدوا فشل تنفيذ الحكومة الإلكترونية
             وخصوصًا عند تخصيص موارد مالية ضخمة.</p>
         <p>قد يتوج الدافع لتنفيذ الحكومة الإلكترونية من رغبة الحكومات في استرداد أقصـى فائدة من نفقاتها المالية الضخمة
             نحو إنشاء البنى التحتية المناسبة لتكنولوجيا المعلومات والاتصالات، وغيرها من التدخلات اللازمة لاستيعاب
-            تكنولوجيا المعلومات والاتصالات على مستوى العالم<span><sup
-                    title="Almarabeh, Tamara, & AbuAli, Amer. (2010). A general framework for e-government: definition maturity challenges, opportunities, and success. European Journal of Scientific Research, 39(1), 29-42.">[3]</sup></span>.
+            تكنولوجيا المعلومات والاتصالات على مستوى العالم<a href="#3"><span><sup
+                        title="Almarabeh, Tamara, & AbuAli, Amer. (2010). A general framework for e-government: definition maturity challenges, opportunities, and success. European Journal of Scientific Research, 39(1), 29-42.">[3]</sup></span></a>.
         </p>
-        <p>تقسم تنفيذ الحكومة الإلكترونية إلى ثلاث فئات مختلفة كما هو مفصل أدناه: <span><sup
-                    title="Heeks, Richard. (2003). Most eGovernment-for-development projects fail: how can risks be reduced? ">[4]</sup></span>
+        <p>تقسم تنفيذ الحكومة الإلكترونية إلى ثلاث فئات مختلفة كما هو مفصل أدناه: <a href="#4"><span><sup
+                        title="Heeks, Richard. (2003). Most eGovernment-for-development projects fail: how can risks be reduced? ">[4]</sup></span></a>
         </p>
         <ul>
             <li><span class="spe-span">ناجحة إلى حد كبير: </span>حققت معظم مجموعات أصحاب المصلحة أهدافها الرئيسة ولم
@@ -38,8 +43,8 @@
             <li><span class="spe-span">من السابق لأوانه التقييم: </span>كان التنفيذ قبل وقت قليل جدًا ولا يوجد سوى
                 القليل من الأدلة حتى الآن لتقييم النتيجة.</li>
         </ul>
-        <p>جرى تحديد أشكال أخرى من النجاح على النحو المفصل أدناه: <span><sup
-                    title="Andersen, Kim Viborg, & Henriksen, Helle Zinner. (2006). E-government maturity models: Extension of the Layne and Lee model. Government information quarterly, 23(2), 236-248. & Wimmer, MA, Scholl, HJ, Grönlund, Å, & Andersen, KV. (2006). EGOV (2006): LNCS, vol. 4084: Springer, Heidelberg.">[5]</sup></span>
+        <p>جرى تحديد أشكال أخرى من النجاح على النحو المفصل أدناه: <a href="#5"><span><sup
+                        title="Andersen, Kim Viborg, & Henriksen, Helle Zinner. (2006). E-government maturity models: Extension of the Layne and Lee model. Government information quarterly, 23(2), 236-248. & Wimmer, MA, Scholl, HJ, Grönlund, Å, & Andersen, KV. (2006). EGOV (2006): LNCS, vol. 4084: Springer, Heidelberg.">[5]</sup></span></a>
         </p>
         <ul style="list-style: square;">
             <li><span class="spe-span">الفشل التام: </span>هو الحالة التي لم يجر فيها تنفيذ المبادرة مطلقًا، أو كان
@@ -52,17 +57,18 @@
                 تحقيق بعضها و/أو كانت هناك بعض النتائج المهمة غير المرغوب فيها.</li>
         </ul>
         <p>والسؤال الذي يستحق الطرح هو: ما الذي يجعل تطبيقات الحكومة الإلكترونية الرئيسة تفشل؟ وتشير دراسات
-            الحالة<span><sup
-                    title="Ali, Maged, Weerakkody, Vishanth, & El-Haddadeh, Ramzi. (2009): The impact of national culture on e-government implementation: A comparison case study. ">[6]</sup></span>
+            الحالة<a href="#6"><span><sup
+                        title="Ali, Maged, Weerakkody, Vishanth, & El-Haddadeh, Ramzi. (2009): The impact of national culture on e-government implementation: A comparison case study. ">[6]</sup></span></a>
             من
             بلدان مختلفة حول تنفيذ الحكومة الإلكترونية إلى أن هناك العديد من التحديات التي تواجه تنفيذ أنظمة الحكومة
             الإلكترونية، وتظهر هذه الدراسات أن عوامل التبني تختلف من بلد معين، وتعتمد من ثَمَّ على السياق والثقافة
-            المحلية<span><sup title="Baumgarten, Jason, & Chui, Michael. (2009): Op. Cit.">[7]</sup></span>.</p>
+            المحلية<a href="#7"><span><sup
+                        title="Baumgarten, Jason, & Chui, Michael. (2009): Op. Cit.">[7]</sup></span></a>.</p>
         <h2>عوامل رئيسة تسبب الفشل:</h2>
         <ul>
             <li>التنفيذ غير المدروس - اعتمادًا على دوافع الحكومة لتنفيذ الحكومة الإلكترونية - عندما يكون تنفيذ الحكومة
-                الإلكترونية على عجل فالمرجح ألا تتحقق فوائدها المتوقعة<span><sup
-                        title="Anttiroiko, Ari-Veikko, & Malkia, Matti. :(2006). Encyclopedia of digital government: IGI Global. & Seifert, Jeffrey, & Petersen, R Eric. (2002). The promise of all things E? Expectations and challenges of emergent electronic government. Perspectives on Global Development and Technology, 1(2), 193-212. ">[8]</sup></span>،
+                الإلكترونية على عجل فالمرجح ألا تتحقق فوائدها المتوقعة <a href="#7"><span><sup
+                            title="Anttiroiko, Ari-Veikko, & Malkia, Matti. :(2006). Encyclopedia of digital government: IGI Global. & Seifert, Jeffrey, & Petersen, R Eric. (2002). The promise of all things E? Expectations and challenges of emergent electronic government. Perspectives on Global Development and Technology, 1(2), 193-212. ">[8]</sup></span></a>،
                 فقد تُخفى بعض المبادئ الأساسية في تنفيذ الحكومة
                 الإلكترونية، ومن ثَمَّ يكون تجاهلها، مثل هذه الظروف تؤدي إلى فشل العديد من مشاريع الحكومة الإلكترونية.
             </li>
@@ -78,23 +84,24 @@
                 العديد من مساعي الحكومة الإلكترونية في إفريقيا جنوب الصحراء الكبرى.</li>
             <li>ويمكن أن يعزى انخفاض مستويات مشاركة المواطنين في تطبيقات الحكومة الإلكترونية في حالة كندا إلى تجاهل وضع
                 أدوات
-                التصفح والتنقل في الموقع المناسبة، وكذلك الافتقار إلى الواجهات الجميلة والجذابة<span><sup
-                        title="Coleman, Stephen. (2006): Op. Cit.">[9]</sup></span>، وكذلك افتقار المنصات إلى
-                إضافة الطابع الشخصي للعميل وإمكانية عمل التخصيصات اللازمة<span><sup
-                        title="Horst, Mark, Kuttschreuter, Margôt, & Gutteling, Jan M. (2007): Op. Cit. & Thorbjørnsen, Helge, Supphellen, Magne, Nysveen, Herbjørn, & Egil, Per. (2002). Building brand relationships online: A comparison of two interactive applications. Journal of interactive marketing, 16(3), 17-34">[10]</sup></span>
-                وبرامج الولاء<span><sup
-                        title="R. Kumar & Best, (2006): Op, Cit. & Navarra & Cornford, (2007): Op. Cit.">[11]</sup></span>
+                التصفح والتنقل في الموقع المناسبة، وكذلك الافتقار إلى الواجهات الجميلة والجذابة <a href="#9"><span><sup
+                            title="Coleman, Stephen. (2006): Op. Cit.">[9]</sup></span></a>، وكذلك افتقار المنصات إلى
+                إضافة الطابع الشخصي للعميل وإمكانية عمل التخصيصات اللازمة<a href="#10"><span><sup
+                            title="Horst, Mark, Kuttschreuter, Margôt, & Gutteling, Jan M. (2007): Op. Cit. & Thorbjørnsen, Helge, Supphellen, Magne, Nysveen, Herbjørn, & Egil, Per. (2002). Building brand relationships online: A comparison of two interactive applications. Journal of interactive marketing, 16(3), 17-34">[10]</sup></span></a>
+                وبرامج الولاء<a href="#11"><span><sup
+                            title="R. Kumar & Best, (2006): Op, Cit. & Navarra & Cornford, (2007): Op. Cit.">[11]</sup></span></a>
                 والتي تعتبر استراتيجيات رئيسية
                 لجذب الأفراد لزيارة موقع الويب أو بوابة الحكومة الإلكترونية.</li>
             <li>ضعف ثقة المواطن، وكان أحد الأسباب الرئيسية لذلك هو قضايا الثقة وسهولة الاستخدام التي استمرت في العمل
-                كحواجز أمام استيعاب واعتماد خدمات الحكومة الإلكترونية على نطاق أوسع<span><sup
-                        title="Napoli, Julie, Ewing, Michael T, & Pitt, Leyland F. (2000). Factors affecting the adoption of the internet in the public sector. Journal of Nonprofit & Public Sector Marketing, 7(4), 77-88. & Wimmer, MA, Scholl, HJ, Grönlund, Å, & Andersen, KV. (2006): Op. Cit.">[12]</sup></span>.
+                كحواجز أمام استيعاب واعتماد خدمات الحكومة الإلكترونية على نطاق أوسع<a href="#12"><span><sup
+                            title="Napoli, Julie, Ewing, Michael T, & Pitt, Leyland F. (2000). Factors affecting the adoption of the internet in the public sector. Journal of Nonprofit & Public Sector Marketing, 7(4), 77-88. & Wimmer, MA, Scholl, HJ, Grönlund, Å, & Andersen, KV. (2006): Op. Cit.">[12]</sup></span></a>.
             </li>
             <li>ضعف وهجرة الكادر الخبير، كما أن القدرات البشـرية معرضة للخطر في معظم الحالات؛ بسبب ندرة الموارد البشرية
-                بسبب هجرة العقول إلى الخارج ونقص برامج بناء القدرات<span><sup
-                        title="Coleman, Stephen. (2006): Op. Cit. & Ngulube, Patric, (2007): Op. Cit.">[13]</sup></span>.
+                بسبب هجرة العقول إلى الخارج ونقص برامج بناء القدرات<a href="#13"><span><sup
+                            title="Coleman, Stephen. (2006): Op. Cit. & Ngulube, Patric, (2007): Op. Cit.">[13]</sup></span></a>.
             </li>
-            <li>الأمية التكنولوجية، وقد أكد<span><sup title="Ngulube, Patric, (2007): Op. Cit.">[14]</sup></span> أن
+            <li>الأمية التكنولوجية، وقد أكد<a href="#14"><span><sup
+                            title="Ngulube, Patric, (2007): Op. Cit.">[14]</sup></span></a> أن
                 الفشل الحاصل في تجارب إفريقيا جنوب الصحراء الكبرى يرجع أساسا إلى أن
                 المواطنين في منطقة إفريقيا جنوب الصحراء لا يعرفون تكنولوجيا المعلومات، وأن جودة المعلومات الحكومية
                 رديئة.</li>
@@ -103,7 +110,8 @@
                 الإلكترونية.</li>
             <li>البيروقراطية والفساد الحكومي تعاني العديد من الحكومات في إفريقيا جنوب الصحراء الكبرى من الروتين والفساد
                 في أنظمة تقديم الخدمات العامة الخاصة بها، مما يحد من تطوير الحكومة الإلكترونية. على سبيل المثال، عند
-                التقدم بطلب للحصول على جوازات سفر في بوتسوانا، يمكن للمرء تنزيل النماذج من الإنترنت (http://www.gov.bw)،
+                التقدم بطلب للحصول على جوازات سفر في بوتسوانا، يمكن للمرء تنزيل النماذج من الإنترنت ( <a
+                    href="http://www.gov.bw">www.gov.bw</a> )،
                 ولكن لا يزال يتعين عليه زيارة مقر الجهة المختصة لإكمال عملية التقديم.</li>
             <li>ضعف الربط البيني والعمل التشاركي المنظم والمعياري، حيث إنَّ هناك ضعفًا في المعايير التي تضمن قابلية
                 التشغيل البيني وقابلية النقل لأنظمة المعلومات الحكومية غير كافية وفي بعض الأحيان غير موجودة على الإطلاق؛
@@ -113,17 +121,17 @@
         <h2>عوامل رئيسة للنجاح:</h2>
         <ol>
             <li>ومن البلدان التي شملتها الدراسة أظهرت الحكومة الإلكترونية قدرًا كبيرًا من النضج في كندا، ويرجع جزئيًا
-                إلى التزام الحكومة الكندية بتنفيذها<span><sup
-                        title="Kumar, Vinod, Mukerji, Bhasker, & Butt, Irfan. (2007): Factors for Successful E-Government Adoption: A Conceptual Framework. Electronic Journal of E-government, 5(1), pp63‑76-pp63‑76.">[15]</sup></span>.
+                إلى التزام الحكومة الكندية بتنفيذها<a href="#15"><span><sup
+                            title="Kumar, Vinod, Mukerji, Bhasker, & Butt, Irfan. (2007): Factors for Successful E-Government Adoption: A Conceptual Framework. Electronic Journal of E-government, 5(1), pp63‑76-pp63‑76.">[15]</sup></span></a>.
                 أحد الالتزامات التي تعهدت بها الحكومة الكندية هو تخصيص 880 مليون
-                دولار كندي لدعم تطوير مبادرات الحكومة الإلكترونية وحدودها في كندا<span><sup
-                        title="Ibid.">[16]</sup></span>، ومع ذلك، وعلى الرغم من هذا
+                دولار كندي لدعم تطوير مبادرات الحكومة الإلكترونية وحدودها في كندا <a href="#16"><span><sup
+                            title="Ibid.">[16]</sup></span></a>، ومع ذلك، وعلى الرغم من هذا
                 الاستثمار الضخم، لا تزال كندا تواجه التحدي المتمثل في انخفاض استخدام المواطنين لمنصات الحكومة
                 الإلكترونية المتاحة مثل بوابات ومواقع الحكومة الإلكترونية. </li>
             <li>يعتمد نجاح الحكومة الإلكترونية - إلى حد كبير - على الجاهزية الإلكترونية بمنطقة تنفيذ الحكومة الإلكترونية
                 واستراتيجيات الحكومة الإلكترونية المتاحة، مثلاً: يعزى نجاح نيوزيلندا في تنفيذ الحكومة الإلكترونية إلى
-                المبادرات الآتية التي وضعتها وحدة الحكومة الإلكترونية:<span><sup
-                        title="Boyle, Brendan, & Nicholson, David, (2003): Op, Cit.">[17]</sup></span>
+                المبادرات الآتية التي وضعتها وحدة الحكومة الإلكترونية: <a href="#17"><span><sup
+                            title="Boyle, Brendan, & Nicholson, David, (2003): Op, Cit.">[17]</sup></span></a>
                 <ul style="list-style: square;">
                     <li>طُوِّرت استراتيجية الحكومة الإلكترونية.</li>
                     <li>صيغت المعايير والمبادئ التوجيهية.</li>
@@ -136,8 +144,9 @@
         <p>توضح الأمثلة أعلاه أنه في البيئات التي تزدهر فيها الحكومة الإلكترونية، توجد بنى تحتية سليمة لتكنولوجيا
             المعلومات والاتصالات، والتزام حكومي قوي، واستراتيجية ورؤية محددة بوضوح للحكومة الإلكترونية، ومحو الأمية
             المعلوماتية، ومحو الأمية الإلكترونية، والاتصال.</p>
-        <p>ولتنفيذ الحكومة الإلكترونية بنجاح ، يقدم<span><sup
-                    title="Almarabeh, Tamara, & AbuAli, Amer. (2010): Op. Cit.">[18]</sup></span> قائمة من التوصيات التي
+        <p>ولتنفيذ الحكومة الإلكترونية بنجاح ، يقدم<a href="#18"><span><sup
+                        title="Almarabeh, Tamara, & AbuAli, Amer. (2010): Op. Cit.">[18]</sup></span></a> قائمة من
+            التوصيات التي
             ينبغي استخدامها للتغلب على بعض التحديات
             التي تواجه تنفيذ الحكومة الإلكترونية، تتُعد هذه التوصيات الموضحة في جدول 6 عامة بطبيعتها، وقد تكون قابلة
             للتطبيق في أي بيئة يجري فيها تنفيذ الحكومة الإلكترونية، علاوة على ذلك قد تكون هذه التوصيات بمقام مبادئ
@@ -152,7 +161,7 @@
                     <td class="td">التوصيات</td>
                 </tr>
                 <tr>
-                    <td  class="td">تطوير البنية التحتية</td>
+                    <td class="td">تطوير البنية التحتية</td>
                     <td>
                         <ul style="list-style:none">
                             <li>– تطوير المشاريع المتوافقة مع البنية التحتية للاتصالات في البلاد</li>
@@ -167,7 +176,7 @@
                     </td>
                 </tr>
                 <tr>
-                    <td  class="td">القانون والسياسة العامة</td>
+                    <td class="td">القانون والسياسة العامة</td>
                     <td>
                         <ul style="list-style:none">
                             <li>– التشاور مع أصحاب المصلحة لتقييم كيف يمكن للقوانين الحالية أن تعرقل النتائج المطلوبة؟
@@ -180,7 +189,7 @@
                     </td>
                 </tr>
                 <tr>
-                    <td  class="td">الفجوة الرقمية</td>
+                    <td class="td">الفجوة الرقمية</td>
                     <td>
                         <ul style="list-style:none">
                             <li>– توفير الوصول الجماعي عن طريق مراكز الكمبيوتر أو الأكشاك في القرية</li>
@@ -192,7 +201,7 @@
                     </td>
                 </tr>
                 <tr>
-                    <td  class="td">محو الأمية الإلكترونية</td>
+                    <td class="td">محو الأمية الإلكترونية</td>
                     <td>
                         <ul style="list-style:none">
                             <li>– التأكد من أن المحتوى باللغة المحلية وأن الواجهات سهلة الاستخدام</li>
@@ -208,7 +217,7 @@
                     </td>
                 </tr>
                 <tr>
-                    <td  class="td">إمكانية الوصول</td>
+                    <td class="td">إمكانية الوصول</td>
                     <td>
                         <ul style="list-style:none">
                             <li>– الأخذ بعين الاعتبار تصميم تطبيقات تلائم المعاقين، مثل خيار الصوت للمكفوفين منذ بداية
@@ -219,7 +228,7 @@
                     </td>
                 </tr>
                 <tr>
-                    <td  class="td">الثقة</td>
+                    <td class="td">الثقة</td>
                     <td>
                         <ul style="list-style:none">
                             <li>– تعيين الشركاء الداخليين والخارجيين الرئيسين وبناء استراتيجية لفتح خطوط الاتصالات</li>
@@ -230,7 +239,7 @@
                     </td>
                 </tr>
                 <tr>
-                    <td  class="td">الخصوصية</td>
+                    <td class="td">الخصوصية</td>
                     <td>
                         <ul style="list-style:none">
                             <li>– تثقيف وتدريب المسؤولين الحكوميين على أهمية الخصوصية</li>
@@ -240,7 +249,7 @@
                     </td>
                 </tr>
                 <tr>
-                    <td  class="td">الأمن</td>
+                    <td class="td">الأمن</td>
                     <td>
                         <ul style="list-style:none">
                             <li>– تعيين مسؤول رفيع مسؤولًا عن أمن الحاسوب</li>
@@ -252,7 +261,7 @@
                     </td>
                 </tr>
                 <tr>
-                    <td  class="td">الشفافية</td>
+                    <td class="td">الشفافية</td>
                     <td>
                         <ul style="list-style:none">
                             <li>– يمكن للموظف العام رفيع المستوى تسريع جهود الشفافية والمساءلة عن طريق جعل مكاتبهم أمثلة
@@ -266,7 +275,7 @@
                     </td>
                 </tr>
                 <tr>
-                    <td  class="td">التوافقية والربط البيني المعياري</td>
+                    <td class="td">التوافقية والربط البيني المعياري</td>
                     <td>
                         <ul style="list-style:none">
                             <li>– رسم خريطة وتقييم أنظمة السجلات الحالية</li>
@@ -277,7 +286,7 @@
                     </td>
                 </tr>
                 <tr>
-                    <td  class="td">إدارة السجلات</td>
+                    <td class="td">إدارة السجلات</td>
                     <td>
                         <ul style="list-style:none">
                             <li>– تشجيع تبادل البيانات والتعاون بين الدوائر الحكومية</li>
@@ -288,7 +297,7 @@
                     </td>
                 </tr>
                 <tr>
-                    <td  class="td">التوفر والحفظ الدائم</td>
+                    <td class="td">التوفر والحفظ الدائم</td>
                     <td>
                         <ul style="list-style:none">
                             <li>– تصميم التطبيقات بحسب الحاجة</li>
@@ -300,60 +309,69 @@
                     </td>
                 </tr>
                 <tr>
-                    <td  class="td">التعليم والتسويق</td>
+                    <td class="td">التعليم والتسويق</td>
                     <td>
                         <ul style="list-style:none">
-                            <li>–	تطوير حملات دعائية وتدريبية من شأنها إشراك الجمهور في مبادرات الحكومة الإلكترونية</li>
-                            <li>–	إجراء بحث للتأكد من أن الخدمات عبر الإنترنت تستجيب للاحتياجات الفعلية وأن التنفيذ يناسب الجمهور المستهدف</li>
+                            <li>– تطوير حملات دعائية وتدريبية من شأنها إشراك الجمهور في مبادرات الحكومة الإلكترونية</li>
+                            <li>– إجراء بحث للتأكد من أن الخدمات عبر الإنترنت تستجيب للاحتياجات الفعلية وأن التنفيذ
+                                يناسب الجمهور المستهدف</li>
                         </ul>
                     </td>
                 </tr>
                 <tr>
-                    <td  class="td">المنافسة/التعاون بين القطاعين العام والخاص</td>
+                    <td class="td">المنافسة/التعاون بين القطاعين العام والخاص</td>
                     <td>
                         <ul style="list-style:none">
-                            <li>–	إقامة شراكات متعددة القطاعات</li>
-                            <li>–	مراجعة وإعادة تقييم القوانين والسياسات التي تعيق التعاون بين القطاعين العام والخاص</li>
-                            <li>–	التأكد من أن الاتفاقيات مع المقاولين والشركاء عادلة ويمكن مراجعتها وتنقيحها بمرور الوقت</li>
-                            <li>–	طلب المساعدة والمشاركة من المنظمات التي لديها بالفعل خبرة في تقديم الخدمات والمعلومات باستخدام نفس التقنيات أو تقنيات مشابهة</li>
+                            <li>– إقامة شراكات متعددة القطاعات</li>
+                            <li>– مراجعة وإعادة تقييم القوانين والسياسات التي تعيق التعاون بين القطاعين العام والخاص
+                            </li>
+                            <li>– التأكد من أن الاتفاقيات مع المقاولين والشركاء عادلة ويمكن مراجعتها وتنقيحها بمرور
+                                الوقت</li>
+                            <li>– طلب المساعدة والمشاركة من المنظمات التي لديها بالفعل خبرة في تقديم الخدمات والمعلومات
+                                باستخدام نفس التقنيات أو تقنيات مشابهة</li>
                         </ul>
                     </td>
                 </tr>
                 <tr>
-                    <td  class="td">مشاكل القوى العاملة</td>
+                    <td class="td">مشاكل القوى العاملة</td>
                     <td>
                         <ul style="list-style:none">
-                            <li>–	تحديد جدول زمني للتنفيذ بطريقة تدريجية حتى لا تبدو الإصلاحات ساحقة للبيروقراطية </li>
-                            <li>–	عقد اجتماعات منتظمة بين قادة سياسة الحكومة الإلكترونية والقوى العاملة المتضررة حتى يكون الموظفون مشاركين نشطين في العملية</li>
-                            <li>–	خلق الحوافز عن طريق مكافأة الأفراد والهيئات التي تطبق الإصلاحات بسرعة</li>
+                            <li>– تحديد جدول زمني للتنفيذ بطريقة تدريجية حتى لا تبدو الإصلاحات ساحقة للبيروقراطية </li>
+                            <li>– عقد اجتماعات منتظمة بين قادة سياسة الحكومة الإلكترونية والقوى العاملة المتضررة حتى
+                                يكون الموظفون مشاركين نشطين في العملية</li>
+                            <li>– خلق الحوافز عن طريق مكافأة الأفراد والهيئات التي تطبق الإصلاحات بسرعة</li>
                         </ul>
                     </td>
                 </tr>
                 <tr>
-                    <td  class="td">هياكل التكلفة</td>
+                    <td class="td">هياكل التكلفة</td>
                     <td>
                         <ul style="list-style:none">
-                            <li>–	تجنب الخدمات القائمة على الإعلانات أو الرسوم.</li>
-                            <li>–	توضيح الوظائف بوضوح وحاول عدم إضافة تفاصيل من شأنها أن تدفع الميزانيات إلى العجز.</li>
-                            <li>–	تطوير المشاريع التي يمكن تحقيقها بالموارد المتاحة</li>
-                            <li>–	النظر في استخدام الحكومة الحالي للتكنولوجيا ودراسة النجاحات والإخفاقات السابقة</li>
-                            <li>–	تعيين مسؤول أو هيئة تنظيمية للإشراف على التكلفة</li>
+                            <li>– تجنب الخدمات القائمة على الإعلانات أو الرسوم.</li>
+                            <li>– توضيح الوظائف بوضوح وحاول عدم إضافة تفاصيل من شأنها أن تدفع الميزانيات إلى العجز.</li>
+                            <li>– تطوير المشاريع التي يمكن تحقيقها بالموارد المتاحة</li>
+                            <li>– النظر في استخدام الحكومة الحالي للتكنولوجيا ودراسة النجاحات والإخفاقات السابقة</li>
+                            <li>– تعيين مسؤول أو هيئة تنظيمية للإشراف على التكلفة</li>
                         </ul>
                     </td>
                 </tr>
                 <tr>
-                    <td  class="td">المقارنة المعيارية</td>
+                    <td class="td">المقارنة المعيارية</td>
                     <td>
                         <ul style="list-style:none">
-                            <li>–	إنشاء أهداف قابلة للقياس خلال مراحل التخطيط المبكرة</li>
-                            <li>–	تخصيص مكتب للإشراف على تنفيذ التعاملات الإلكترونية الحكومية</li>
-                            <li>–	التأكد من حصول المكتب على التمويل الكافي ومعترف به من قبل جميع الوكالات والإدارات ذات الصلة</li>
-                            <li>–	إجراء عمليات تدقيق منتظمة لضمان إحراز التقدم لتحقيق الأهداف المعلنة</li>
-                            <li>–	مراجعة المعايير بانتظام للتأكد من أن التدابير الدقيقة مناسبة للتكنولوجيا سريعة التغير</li>
-                            <li>–	إنشاء نظام تحصيل لدعم تشغيل البرنامج</li>
-                            <li>–	تعد البنية التحتية المشتركة ومعايير الهندسة المعمارية لتكنولوجيا المعلومات أمرًا أساسيًا لضمان حدوث التطوير المستمر بطريقة متماسكة ومتكاملة</li>
-                            <li>–	يؤدي التخطيط المتقدم لمعايير البنية التحتية المشتركة لتكنولوجيا المعلومات إلى تقليل وقت التطوير وتوافق النظام</li>
-                            <li>–	يمكن أن يكون المقياس الكمي مفيدًا مثل المقاييس النوعية</li>
+                            <li>– إنشاء أهداف قابلة للقياس خلال مراحل التخطيط المبكرة</li>
+                            <li>– تخصيص مكتب للإشراف على تنفيذ التعاملات الإلكترونية الحكومية</li>
+                            <li>– التأكد من حصول المكتب على التمويل الكافي ومعترف به من قبل جميع الوكالات والإدارات ذات
+                                الصلة</li>
+                            <li>– إجراء عمليات تدقيق منتظمة لضمان إحراز التقدم لتحقيق الأهداف المعلنة</li>
+                            <li>– مراجعة المعايير بانتظام للتأكد من أن التدابير الدقيقة مناسبة للتكنولوجيا سريعة التغير
+                            </li>
+                            <li>– إنشاء نظام تحصيل لدعم تشغيل البرنامج</li>
+                            <li>– تعد البنية التحتية المشتركة ومعايير الهندسة المعمارية لتكنولوجيا المعلومات أمرًا
+                                أساسيًا لضمان حدوث التطوير المستمر بطريقة متماسكة ومتكاملة</li>
+                            <li>– يؤدي التخطيط المتقدم لمعايير البنية التحتية المشتركة لتكنولوجيا المعلومات إلى تقليل
+                                وقت التطوير وتوافق النظام</li>
+                            <li>– يمكن أن يكون المقياس الكمي مفيدًا مثل المقاييس النوعية</li>
                         </ul>
                     </td>
                 </tr>
@@ -361,5 +379,54 @@
         </table>
         <p class="gov-p2"> المصدر: (Almarabeh & AbuAli, 2010)</p>
     </div>
+</div>
+<h2 class="show-references">إظهار المراجع</h2>
+<div class="refrences">
+    <div class="first-ref-info">
+        <h2>المراجع</h2>
+    </div>
+    <ul>
+        <li id="1" class="eng">Nurdin, Nurdin, Stockdale, Rosemary, & Scheepers, Helana. (2010). Examining the role of
+            the culture
+            of local government on adoption and use of e-government services. Paper presented at the International
+            Conference on E-Government and E-Services.</li>
+        <li id="2" class="eng">Heeks, Richard. (2004): Op. Cit.</li>
+        <li id="3" class="eng">Almarabeh, Tamara, & AbuAli, Amer. (2010). A general framework for e-government:
+            definition maturity
+            challenges, opportunities, and success. European Journal of Scientific Research, 39(1), 29-42.</li>
+        <li id="4" class="eng">Heeks, Richard. (2003). Most eGovernment-for-development projects fail: how can risks be
+            reduced?
+        </li>
+        <li id="5" class="eng">Andersen, Kim Viborg, & Henriksen, Helle Zinner. (2006). E-government maturity models:
+            Extension of
+            the Layne and Lee model. Government information quarterly, 23(2), 236-248. & Wimmer, MA, Scholl, HJ,
+            Grönlund, Å, & Andersen, KV. (2006). EGOV (2006): LNCS, vol. 4084: Springer, Heidelberg.</li>
+        <li id="6" class="eng">Ali, Maged, Weerakkody, Vishanth, & El-Haddadeh, Ramzi. (2009): The impact of national
+            culture on
+            e-government implementation: A comparison case study.</li>
+        <li id="7" class="eng">Baumgarten, Jason, & Chui, Michael. (2009): Op. Cit.</li>
+        <li id="8" class="eng">Anttiroiko, Ari-Veikko, & Malkia, Matti. :(2006). Encyclopedia of digital government: IGI
+            Global. &
+            Seifert, Jeffrey, & Petersen, R Eric. (2002). The promise of all things E? Expectations and challenges of
+            emergent electronic government. Perspectives on Global Development and Technology, 1(2), 193-212.</li>
+        <li id="9" class="eng">Coleman, Stephen. (2006): Op. Cit.</li>
+        <li id="10" class="eng">Horst, Mark, Kuttschreuter, Margôt, & Gutteling, Jan M. (2007): Op. Cit. & Thorbjørnsen,
+            Helge,
+            Supphellen, Magne, Nysveen, Herbjørn, & Egil, Per. (2002). Building brand relationships online: A comparison
+            of two interactive applications. Journal of interactive marketing, 16(3), 17-34.</li>
+        <li id="11" class="eng">R. Kumar & Best, (2006): Op, Cit. & Navarra & Cornford, (2007): Op. Cit.</li>
+        <li id="12" class="eng">Napoli, Julie, Ewing, Michael T, & Pitt, Leyland F. (2000). Factors affecting the
+            adoption of the
+            internet in the public sector. Journal of Nonprofit & Public Sector Marketing, 7(4), 77-88. & Wimmer, MA,
+            Scholl, HJ, Grönlund, Å, & Andersen, KV. (2006): Op. Cit.</li>
+        <li id="13" class="eng">Coleman, Stephen. (2006): Op. Cit. & Ngulube, Patric, (2007): Op. Cit.</li>
+        <li id="14" class="eng">Ngulube, Patric, (2007): Op. Cit.</li>
+        <li id="15" class="eng">Kumar, Vinod, Mukerji, Bhasker, & Butt, Irfan. (2007): Factors for Successful
+            E-Government Adoption:
+            A Conceptual Framework. Electronic Journal of E-government, 5(1), pp63‑76-pp63‑76.</li>
+        <li id="16" class="eng">Ibid.</li>
+        <li id="17" class="eng">Boyle, Brendan, & Nicholson, David, (2003): Op, Cit.</li>
+        <li id="18" class="eng">Almarabeh, Tamara, & AbuAli, Amer. (2010): Op. Cit.</li>
+    </ul>
 </div>
 {% endblock %}

@@ -1,194 +1,221 @@
 {% load static %}
-
 <!-- start header -->
-<header class="head-page">
-    <a href="{% url 'index' %}"><img src="{% static 'imgs/logo.png' %}" alt=""></a>
-    
-    
-    <div class="togg">
-        <i class="fas fa-bars toggle-menu"></i>
-    <ul class="js">
-        <li><a href="{% url 'index' %}" 
-            {% if '/' == request.path %}
-            class="active nav-a"
-            {% else %}
-            class="nav-a"
-            {% endif %}
-            >الصفحة الرئيسية</a></li>
-        <li class="base-li"><a href="#"
-            {% if 'about' in request.path or '/criteria' in request.path %}
-            class="active js-a nav-a"
-            {% else %}
-            class="js-a nav-a"
-            {% endif %}
-            >معلومات المركز <i class="fa-solid fa-angle-down arrow active"></i></a>
-            <ul class="ul">
-                <li><a href="{% url 'about' %}">عن المركز</a></li>
-                <li><a href="{% url 'criteria' %}">معايير النشر</a></li>  
-            </ul>
-        </li>
-        <li class="base-li"><a href="#"
-            {% if 'studies' in request.path or 'showDetailStudies' in request.path or 'showDetailPatrols' in request.path or 'patrols' in request.path or 'pushStudyPost' in request.path or 'firstStudyPage' in request.path or 'administrativeReform' in request.path or 'reformMethodology' in request.path or 'NotesReform' in request.path or 'StudyOfUS' in request.path or 'StudySingapore' in request.path or 'StudyRwanda' in request.path or 'StudyChina' in request.path or 'MalaysiaStudy' in request.path or 'JordanStudy' in request.path or 'FeaturesOfAdministrativeReformInYemen' in request.path or 'ComprehensiveReform' in request.path or 'AdministrativeRaw' in request.path or 'AdministrativeReformTwo' in request.path or 'AdministrativeLawInYemen' in request.path or 'GlobalManagementReform' in request.path or 'FutureForReformingAdministrativeLawInYemen' in request.path or 'LegalReform' in request.path or 'EvolutionOfPublicAdministration' in request.path or 'Books' in request.path or 'GeneralAdministrationInYemen' in request.path or 'CurrentEconomicSituation' in request.path or 'theExistingSocialSituation' in request.path or 'TheBureaucraticApparatusOnAdministrativeReform' in request.path or 'PublicFinanceAndEconomicConstruction' in request.path or 'FinancialReformInCountries' in request.path  or 'FinancialReformInYemen' in request.path  or 'FutureOfFinancialReformInYemen' in request.path or 'PrivateSectorInYemen' in request.path  or 'RoleOfPrivateSectorInDevelopment' in request.path or 'FutureOfPrivateSectorInYemen' in request.path or 'Government' in request.path or 'implementingE-government' in request.path or 'GlobalExperiencesInEgovernment' in request.path%}
-            class="active js-a nav-a"
-            {% else %}
-            class="nav-a"
-            {% endif %}
-            >اصدارات المركز<i class="fa-solid fa-angle-down arrow spe-arrow active"></i></a>
-            <ul class="ul nested-list">
-                <li><a href="{% url 'studies' %}">الدراسات والبحوث</a></li>
-                <li><a href="{% url 'books' %}">الكتب</a></li>
-                <li><a href="{% url 'patrols' %}">الدورية</a></li>
-            </ul>
-        </li>       
-        <!-- <li><a href="{% url 'patrols' %}"
-            {% if 'patrols' in request.path or 'showDetailPatrols' in request.path or 'pushPatrolPost' in request.path %}
-            class="active"
-            {% else %}
-            class=""
-            {% endif %}
-            >الدوريات</a>
-        </li> -->
-        
-        <li class="asid-li2"><a href="{% url 'news' %}"
-            {% if 'news' in request.path or 'showDetailNews' in request.path or 'pushNewsPost' in request.path %}
-            class="active nav-a"
-            {% else %}
-            class="nav-a"
-            {% endif %}
-            >الأخبار والفعاليات</a></li>
-        <li class="asid-li3"><a href="{% url 'signup' %}" 
-            {% if request.user.is_authenticated %}
-            style="display: none;"
-            {% else %}
-            {% if 'signup' in request.path %}
-            class="active nav-a"
-            {% else %}
-            class="nav-a"
-            {% endif %}
-            {% endif %}
-            >تسجيل عضوية</a></li>
-        <li class="asid-li3"><a href="{% url 'contact' %}" 
-            {% if 'contact' in request.path %}
-            class="active nav-a"
-            {% else %}
-            class="nav-a"
-            {% endif %}
-            >تواصل معنا</a></li>
-        <li class="asid-li3"><a href="{% url 'all_posts' %}"     
-            {% if not request.user.is_authenticated or not request.user.is_superuser %}
-            style="display: none;"
-            {% else %}
-            {% if 'all_posts' in request.path %}
-            class="active nav-a"
-            {% else %}
-            class="nav-a"
-            {% endif %}
-            {% endif %}
-            >المنشورات</a></li>
-    </ul>
+ <div class="above-header">
+    <div class="container">
+        <div class="social-above-header">
+            <a href="mailto:contact@csr-yemen.com" class="email"><i
+                class="fa-solid fa-envelope my-env foot-i"></i></a>
+                <a href="https://api.whatsapp.com/send?phone=782742438"><i
+                    class="fa-brands fa-whatsapp foot-i"></i></a>
+                    <a href="https://www.facebook.com/profile.php?id=61556721602912" target="_blank"><i
+                        class="fa-brands fa-facebook foot-i"></i></a>
+        </div>
     </div>
-    <!-- overlay -->
-    <div class="over"></div>
-    <!-- overlay -->
-    <!-- aside bar -->
-    <div class="aside">
-        <img src="{% static 'imgs/logo.png' %}" alt="" class="aside-img">
-        <ul class="aside-ul">
-            <li><a href="{% url 'index' %}" 
-                {% if '/' == request.path %}
-                class="active"
-                {% else %}
-                class=""
-                {% endif %}
-                >الصفحة الرئيسية</a></li>
-            <li class="aside-base-li"><a href="{% url 'about' %}"
-                {% if 'about' in request.path or '/criteria' in request.path %}
-                class="active js-a"
-                {% else %}
-                class="js-a"
-                {% endif %}
-                >معلومات المركز</a>
-                <ul class="ul aside-nested-list">
-                    <li><a href="{% url 'about' %}">عن المركز</a></li>
-                    <li><a href="{% url 'criteria' %}">معايير النشر</a></li>
+</div>             
+<div class="header-container" style="background-color: white;">
+    <div class="container">
+        <header class="head-page">
+            <a href="{% url 'index' %}"><img src="{% static 'imgs/LOGOS-01.png' %}" alt=""></a> 
+            <div class="togg">
+                <i class="fas fa-bars toggle-menu"></i>
+                <ul class="js">
+                    <li><a href="{% url 'index' %}" 
+                        {% if '/' == request.path %}
+                        class="active nav-a"
+                        {% else %}
+                        class="nav-a"
+                        {% endif %}
+                        >الرئيسية</a></li>
+                    <li class="base-li"><a href="#"
+                        {% if 'about' in request.path or '/criteria' in request.path %}
+                        class="active js-a nav-a"
+                        {% else %}
+                        class="js-a nav-a"
+                        {% endif %}
+                        >معلومات المركز <i class="fa-solid fa-angle-down arrow active"></i></a>
+                        <ul class="ul">
+                            <li><a href="{% url 'about' %}">من نحن</a></li>
+                            <li><a href="{% url 'criteria' %}">معايير النشر</a></li>  
+                        </ul>
+                    </li>
+                    <li class="base-li"><a href="#"
+                        {% if 'studies' in request.path or 'showDetailStudies' in request.path or 'showDetailPatrols' in request.path or 'patrols' in request.path or 'pushStudyPost' in request.path or 'firstStudyPage' in request.path or 'administrativeReform' in request.path or 'reformMethodology' in request.path or 'NotesReform' in request.path or 'StudyOfUS' in request.path or 'StudySingapore' in request.path or 'StudyRwanda' in request.path or 'StudyChina' in request.path or 'MalaysiaStudy' in request.path or 'JordanStudy' in request.path or 'FeaturesOfAdministrativeReformInYemen' in request.path or 'ComprehensiveReform' in request.path or 'AdministrativeRaw' in request.path or 'AdministrativeReformTwo' in request.path or 'AdministrativeLawInYemen' in request.path or 'GlobalManagementReform' in request.path or 'FutureForReformingAdministrativeLawInYemen' in request.path or 'LegalReform' in request.path or 'EvolutionOfPublicAdministration' in request.path or 'Books' in request.path or 'GeneralAdministrationInYemen' in request.path or 'CurrentEconomicSituation' in request.path or 'theExistingSocialSituation' in request.path or 'TheBureaucraticApparatusOnAdministrativeReform' in request.path or 'PublicFinanceAndEconomicConstruction' in request.path or 'FinancialReformInCountries' in request.path  or 'FinancialReformInYemen' in request.path  or 'FutureOfFinancialReformInYemen' in request.path or 'PrivateSectorInYemen' in request.path  or 'RoleOfPrivateSectorInDevelopment' in request.path or 'FutureOfPrivateSectorInYemen' in request.path or 'Government' in request.path or 'implementingE-government' in request.path or 'GlobalExperiencesInEgovernment' in request.path or 'InformationCommunicationsTechnologyInYemen' in request.path or 'ImplementingEgovernmentInYemen' in request.path or 'FutureEGovernmentYemen' in request.path%}
+                        class="active js-a nav-a"
+                        {% else %}
+                        class="nav-a"
+                        {% endif %}
+                        >اصدارات المركز<i class="fa-solid fa-angle-down arrow spe-arrow active"></i></a>
+                        <ul class="ul nested-list">
+                            <li><a href="{% url 'studies' %}">الدراسات والبحوث</a></li>
+                            <li><a href="{% url 'books' %}">الكتب</a></li>
+                            <li><a href="{% url 'patrols' %}">الدورية</a></li>
+                        </ul>
+                    </li>       
+                    <!-- <li><a href="{% url 'patrols' %}"
+                        {% if 'patrols' in request.path or 'showDetailPatrols' in request.path or 'pushPatrolPost' in request.path %}
+                        class="active"
+                        {% else %}
+                        class=""
+                        {% endif %}
+                        >الدوريات</a>
+                    </li> -->
+                    
+                    <li class="asid-li2"><a href="{% url 'news' %}"
+                        {% if 'news' in request.path or 'showDetailNews' in request.path or 'pushNewsPost' in request.path %}
+                        class="active nav-a"
+                        {% else %}
+                        class="nav-a"
+                        {% endif %}
+                        >الأخبار والفعاليات</a></li>
+                    
+                        <li class="base-li asid-li3"><a href="{% url 'signup' %}"
+                            {% if 'signup' in request.path or 'signin' in request.path or 'logout' in request.path %}
+                            class="active js-a nav-a"
+                            {% else %}
+                            class="js-a nav-a"
+                            {% endif %}
+                            >تسجيل عضوية<i class="fa-solid fa-angle-down arrow active"></i></a>
+                            <ul class="ul">
+                                {% if request.user.is_authenticated %}
+                                <li style="display: none;"><a href="{% url 'signin' %}">تسجيل الدخول</a></li>
+                                {% else %}
+                                <li><a href="{% url 'signin' %}">تسجيل الدخول</a></li>
+                                {% endif %}
+                                {% if request.user.is_authenticated %}
+                                <li><a href="{% url 'logout' %}">تسجيل الخروج</a></li> 
+                                {% else %}
+                                <li style="display: none;"><a href="{% url 'logout' %}">تسجيل الخروج</a></li>
+                                {% endif %}
+                            </ul>
+                        </li>
+                    <li class="asid-li3"><a href="{% url 'contact' %}" 
+                        {% if 'contact' in request.path %}
+                        class="active nav-a"
+                        {% else %}
+                        class="nav-a"
+                        {% endif %}
+                        >تواصل معنا</a></li>
+                    <li class="asid-li3"><a href="{% url 'all_posts' %}"     
+                        {% if not request.user.is_authenticated or not request.user.is_superuser %}
+                        style="display: none;"
+                        {% else %}
+                        {% if 'all_posts' in request.path %}
+                        class="active nav-a"
+                        {% else %}
+                        class="nav-a"
+                        {% endif %}
+                        {% endif %}
+                        >المنشورات</a></li>
                 </ul>
-            </li>   
-            <li class="aside-base-li"><a href="#"
-                {% if 'studies' in request.path or 'showDetailStudies' in request.path or 'showDetailPatrols' in request.path or 'patrols' in request.path or 'pushStudyPost' in request.path or 'firstStudyPage' in request.path or 'administrativeReform' in request.path or 'reformMethodology' in request.path or 'NotesReform' in request.path or 'StudyOfUS' in request.path or 'StudySingapore' in request.path or 'StudyRwanda' in request.path or 'StudyChina' in request.path or 'MalaysiaStudy' in request.path or 'JordanStudy' in request.path or 'FeaturesOfAdministrativeReformInYemen' in request.path or 'ComprehensiveReform' in request.path or 'AdministrativeRaw' in request.path or 'AdministrativeReformTwo' in request.path or 'AdministrativeLawInYemen' in request.path or 'GlobalManagementReform' in request.path or 'FutureForReformingAdministrativeLawInYemen' in request.path or 'LegalReform' in request.path or 'EvolutionOfPublicAdministration' in request.path or 'Books' in request.path or 'GeneralAdministrationInYemen' in request.path or 'CurrentEconomicSituation' in request.path or 'theExistingSocialSituation' in request.path or 'TheBureaucraticApparatusOnAdministrativeReform' in request.path or 'PublicFinanceAndEconomicConstruction' in request.path or 'FinancialReformInCountries' in request.path  or 'FinancialReformInYemen' in request.path  or 'FutureOfFinancialReformInYemen' in request.path or 'PrivateSectorInYemen' in request.path  or 'RoleOfPrivateSectorInDevelopment' in request.path or 'FutureOfPrivateSectorInYemen' in request.path or 'Government' in request.path or 'implementingE-government' in request.path or 'GlobalExperiencesInEgovernment' in request.path%}
-                class="active js-a"
-                {% else %}
-                class="js-a"
-                {% endif %}
-                >اصدارات المركز</a>
-                <ul class="aside-ul aside-nested-list">
-                    <li><a href="{% url 'studies' %}">الدراسات والبحوث</a></li>
-                    <li><a href="{% url 'books' %}">الكتب</a></li>
-                    <li><a href="{% url 'patrols' %}">الدورية</a></li>
+            </div>
+            <!-- overlay -->
+            <div class="over"></div>
+            <!-- overlay -->
+            <!-- aside bar -->
+            <div class="aside">
+                <img src="{% static 'imgs/LOGOS-01.png' %}" alt="" class="aside-img">
+                <i class="fa-regular fa-circle-xmark"></i>
+                <ul class="aside-ul">
+                    <li><a href="{% url 'index' %}" 
+                        {% if '/' == request.path %}
+                        class="active"
+                        {% else %}
+                        class=""
+                        {% endif %}
+                        >الصفحة الرئيسية</a></li>
+                    <li class="aside-base-li"><a href="{% url 'about' %}"
+                        {% if 'about' in request.path or '/criteria' in request.path %}
+                        class="active js-a"
+                        {% else %}
+                        class="js-a"
+                        {% endif %}
+                        >معلومات المركز</a>
+                        <ul class="ul aside-nested-list">
+                            <li><a href="{% url 'about' %}">عن المركز</a></li>
+                            <li><a href="{% url 'criteria' %}">معايير النشر</a></li>
+                        </ul>
+                    </li>   
+                    <li class="aside-base-li"><a href="#"
+                        {% if 'studies' in request.path or 'showDetailStudies' in request.path or 'showDetailPatrols' in request.path or 'patrols' in request.path or 'pushStudyPost' in request.path or 'firstStudyPage' in request.path or 'administrativeReform' in request.path or 'reformMethodology' in request.path or 'NotesReform' in request.path or 'StudyOfUS' in request.path or 'StudySingapore' in request.path or 'StudyRwanda' in request.path or 'StudyChina' in request.path or 'MalaysiaStudy' in request.path or 'JordanStudy' in request.path or 'FeaturesOfAdministrativeReformInYemen' in request.path or 'ComprehensiveReform' in request.path or 'AdministrativeRaw' in request.path or 'AdministrativeReformTwo' in request.path or 'AdministrativeLawInYemen' in request.path or 'GlobalManagementReform' in request.path or 'FutureForReformingAdministrativeLawInYemen' in request.path or 'LegalReform' in request.path or 'EvolutionOfPublicAdministration' in request.path or 'Books' in request.path or 'GeneralAdministrationInYemen' in request.path or 'CurrentEconomicSituation' in request.path or 'theExistingSocialSituation' in request.path or 'TheBureaucraticApparatusOnAdministrativeReform' in request.path or 'PublicFinanceAndEconomicConstruction' in request.path or 'FinancialReformInCountries' in request.path  or 'FinancialReformInYemen' in request.path  or 'FutureOfFinancialReformInYemen' in request.path or 'PrivateSectorInYemen' in request.path  or 'RoleOfPrivateSectorInDevelopment' in request.path or 'FutureOfPrivateSectorInYemen' in request.path or 'Government' in request.path or 'implementingE-government' in request.path or 'GlobalExperiencesInEgovernment' in request.path or 'InformationCommunicationsTechnologyInYemen' in request.path or 'ImplementingEgovernmentInYemen' in request.path or 'FutureEGovernmentYemen' in request.path%}
+                        class="active js-a"
+                        {% else %}
+                        class="js-a"
+                        {% endif %}
+                        >اصدارات المركز</a>
+                        <ul class="aside-ul aside-nested-list">
+                            <li><a href="{% url 'studies' %}">الدراسات والبحوث</a></li>
+                            <li><a href="{% url 'books' %}">الكتب</a></li>
+                            <li><a href="{% url 'patrols' %}">الدورية</a></li>
+                        </ul>
+                    </li>
+                    <li class="asid-li small-screen"><a href="{% url 'news' %}"
+                        {% if 'news' in request.path or 'showDetailNews' in request.path or 'pushNewsPost' in request.path %}
+                        class="active"
+                        {% else %}
+                        class=""
+                        {% endif %}
+                        >الأخبار والفعاليات</a></li>
+                    <!-- <li class="asid-li small-screen"><a href="{% url 'signup' %}" 
+                        {% if request.user.is_authenticated %}
+                        style="display: none;"
+                        {% else %}
+                        {% if 'signup' in request.path %}
+                        class="active"
+                        {% else %}
+                        class=""
+                        {% endif %}
+                        {% endif %}
+                        >تسجيل عضوية</a></li> -->
+                        <li class="aside-base-li"><a href="{% url 'signup' %}"
+                            {% if 'signup' in request.path or 'signin' in request.path or 'logout' in request.path %}
+                            class="active js-a nav-a"
+                            {% else %}
+                            class="js-a nav-a"
+                            {% endif %}
+                            >تسجيل عضوية</a>
+                            <ul class="aside-ul aside-nested-list">
+                                {% if request.user.is_authenticated %}
+                                <li style="display: none;"><a href="{% url 'signin' %}">تسجيل الدخول</a></li>
+                                {% else %}
+                                <li><a href="{% url 'signin' %}">تسجيل الدخول</a></li>
+                                {% endif %}
+                                {% if request.user.is_authenticated %}
+                                <li><a href="{% url 'logout' %}" class="logout-aside">تسجيل الخروج</a></li> 
+                                {% else %}
+                                <li style="display: none;"><a href="{% url 'logout' %}">تسجيل الخروج</a></li>
+                                {% endif %}
+                            </ul>
+                        </li>
+                    <li class="asid-li small-screen"><a href="{% url 'contact' %}" 
+                        {% if 'contact' in request.path %}
+                        class="active"
+                        {% else %}
+                        class=""
+                        {% endif %}
+                        >تواصل معنا</a></li>
+                    <li><a href="{% url 'all_posts' %}" 
+                        {% if not request.user.is_authenticated or not request.user.is_superuser %}
+                        style="display: none;"
+                        {% else %}
+                        {% if 'all_posts' in request.path %}
+                        class="active"
+                        {% else %}
+                        class=""
+                        {% endif %}
+                        {% endif %}
+                        >المنشورات</a></li>
                 </ul>
-            </li>
-            <li class="asid-li small-screen"><a href="{% url 'news' %}"
-                {% if 'news' in request.path or 'showDetailNews' in request.path or 'pushNewsPost' in request.path %}
-                class="active"
-                {% else %}
-                class=""
-                {% endif %}
-                >الأخبار والفعاليات</a></li>
-            <li class="asid-li small-screen"><a href="{% url 'signup' %}" 
-                {% if request.user.is_authenticated %}
-                style="display: none;"
-                {% else %}
-                {% if 'signup' in request.path %}
-                class="active"
-                {% else %}
-                class=""
-                {% endif %}
-                {% endif %}
-                >تسجيل عضوية</a></li>
-            <li class="asid-li small-screen"><a href="{% url 'contact' %}" 
-                {% if 'contact' in request.path %}
-                class="active"
-                {% else %}
-                class=""
-                {% endif %}
-                >تواصل معنا</a></li>
-            <li><a href="{% url 'all_posts' %}" 
-                {% if not request.user.is_authenticated or not request.user.is_superuser %}
-                style="display: none;"
-                {% else %}
-                {% if 'all_posts' in request.path %}
-                class="active"
-                {% else %}
-                class=""
-                {% endif %}
-                {% endif %}
-                >المنشورات</a></li>
-        </ul>
+            </div>
+            
+            <!-- start social media -->
+            <div class="social">
+                <span>+</span>
+                <a href="mailto:contact@csr-yemen.com"><i class="fa-solid fa-envelope social-i" style="color: white !important;"></i></a>
+                <a href="https://api.whatsapp.com/send?phone=782742438"><i class="fa-brands fa-whatsapp social-i" style="color: white !important;"></i></a>
+                <a href="https://www.facebook.com/profile.php?id=61556721602912" target="_blank"><i class="fa-brands fa-facebook social-i" style="color: white !important;"></i></a>
+            </div>
+            <!-- end social media -->
+        </header>
     </div>
-    {% if not request.user.is_authenticated %}
-        <a href="{% url 'logout' %}" style="display: none;">
-            <i class="fa-solid fa-arrow-right-from-bracket logout"></i>
-        </a>
-    {% else %}
-        <a href="{% url 'logout' %}">
-            <i class="fa-solid fa-arrow-right-from-bracket logout"></i>
-        </a>
-    {% endif %}
-    {% if not request.user.is_authenticated %}
-    <a href="{% url 'signin' %}">
-        <i class="fa-solid fa-right-to-bracket login"></i>
-    </a>
-    {% else %}
-    <a href="{% url 'signin' %}" style="display: none;">
-        <i class="fa-solid fa-right-to-bracket login"></i>
-    </a>
-    {% endif %}
-
-    <!-- start social media -->
-    <div class="social">
-        <a href="mailto:contact@csr-yemen.com"><i class="fa-solid fa-envelope social-i"></i></a>
-        <a href="https://api.whatsapp.com/send?phone=782742438"><i class="fa-brands fa-whatsapp social-i"></i></a>
-        <a href="https://www.facebook.com/profile.php?id=61556721602912" target="_blank"><i class="fa-brands fa-facebook social-i"></i></a>
-    </div>
-    <!-- end social media -->
-</header>
+</div>
 <!-- end header -->

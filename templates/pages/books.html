@@ -1,12 +1,15 @@
 {% extends 'base.html' %}
 {% load static %}
 {% block content %}
-<div class="books">
-    <div class="book-info">
-        <img src="{% static 'imgs/stu.png' %}" alt="">
-        <div class="book-info2">
-            <h2>رقم الإيداع بالهيئة العامة للكتاب</h2>
-            <span>(2023/449)</span>
+<div class="container">
+    <h1 class="spe-h1 book">الكتب</h1>
+    <div class="books">
+        <div class="book-card">
+            <img src="{% static 'imgs/stu.png' %}" alt="">
+            <div class="book-info">
+                <h2>رقم الإيداع بالهيئة العامة للكتاب</h2>
+                <span>(2023/449)</span>
+            </div>
         </div>
     </div>
 </div>

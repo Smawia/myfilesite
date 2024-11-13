@@ -1,6 +1,55 @@
 <!-- start footer -->
+{% load static %}
 <footer>
-    <div class="info-footer">
+    <div class="container">
+        <div class="footer-information">
+            <div class="first-text">
+                <p class="first-p"><span>المركز التأسيسي للدراسات والبحوث</span></p>
+                <p>مؤسسة بحثية فكرية تطويرية مستقلة غير ربحية، تختص بالعلوم
+                    الإنسانية
+                    (الإدارية والسياسية والقانونية والاقتصادية والاجتماعية والتنموية والاتصالية والرقمية). يقدم دراسات
+                    وأبحاث علمية أكاديمية واستشارية وبرامج تدريبية نوعية في المجالات المشار إليها للدولة والمجتمع بكافة
+                    مكوناته.</p>
+            </div>
+            <div class="contact-and-links">
+                <div class="links">
+                    <div class="first-col">
+                        <ul>
+                            <li><a href="{% url 'index' %}">الرئيسية</a></li>
+                            <li><a href="{% url 'about' %}">معلومات المركز</a></li>
+                            <li><a href="{% url 'studies' %}">إصدارات المركز</a></li>
+                            <li><a href="{% url 'news' %}">الأخبار والفعاليات</a></li>
+                            <li><a href="{% url 'signup' %}">تسجيل عضوية</a></li>
+                            <li><a href="{% url 'contact' %}">تواصل معنا</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-social">
+                <img src="{% static 'imgs/LOGOS-01.png' %}" alt="">
+                <div class="footer-social2">
+                    <div class="email">
+                        <a href="mailto:contact@csr-yemen.com" class="email"><i
+                                class="fa-solid fa-envelope my-env foot-i"></i></a>
+                    </div>
+                    <div class="whats">
+                        <a href="https://api.whatsapp.com/send?phone=782742438"><i
+                                class="fa-brands fa-whatsapp foot-i"></i></a>
+                    </div>
+                    <div class="face-book">
+                        <a href="https://www.facebook.com/profile.php?id=61556721602912" target="_blank"><i
+                                class="fa-brands fa-facebook foot-i"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="final-p">
+        <p>© 2024 جميع الحقوق محفوظة للمركز التأسيسي للدراسات والبحوث</p>
+    </div>
+</footer>
+<!-- <footer> -->
+<!-- <div class="info-footer">
         <div class="con-info">
             <p>"المركز التأسيسي للدراسات والبحوث" مؤسسة بحثية فكرية تطويرية مستقلة غير ربحية، تختص بالعلوم الإنسانية
                 (الإدارية والسياسية والقانونية والاقتصادية والاجتماعية والتنموية والاتصالية والرقمية). يقدم دراسات
@@ -34,10 +83,8 @@
                 </li>
             </ul>
         </div>
-    </div>
-    <hr>
-    <p>© 2024 جميع الحقوق محفوظة للمركز التأسيسي للدراسات والبحوث
-
-    </p>
-</footer>
+    </div> -->
+<!-- <hr>
+    <p>© 2024 جميع الحقوق محفوظة للمركز التأسيسي للدراسات والبحوث</p>
+</footer> -->
 <!-- end footer -->
