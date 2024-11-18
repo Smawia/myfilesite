@@ -4,22 +4,37 @@
     --third-color: var(--second-color);
     --fourth-color: #5A70A2;
     --fifth-color: #C79C6F;
+    /* ألوان الوضع الفاتح */
+    --bg-color: rgba(212, 207, 207, 0.318);
+    --text-color: #000000;
+    --button-bg-color: #f0f0f0;
+    --button-text-color: #000000;
 }
 
 html {
     height: 100%;
     scroll-behavior: smooth;
 }
+body.dark-mode {
+    /* ألوان الوضع الداكن */
+    --bg-color: #121212;
+    --text-color: #ffffff;
+    --button-bg-color: #333333;
+    --button-text-color: #ffffff;
+}
 
 body {
-    background-color: rgba(212, 207, 207, 0.318);
+    background-color: var(--bg-color);
     direction: rtl;
     margin: 0;
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     min-height: 100%;
     display: flex;
     flex-direction: column;
+    color: var(--text-color);
+    transition: background-color 0.3s, color 0.3s;
 }
+
 
 /* @media (max-width: 574px) {
     body {
@@ -77,7 +92,6 @@ header .toggle-menu {
     font-size: 20px;
     cursor: pointer;
     z-index: 1000;
-    margin-left: -30px;
     position: relative;
 }
 
@@ -289,29 +303,37 @@ header img {
         /* عرض الشعار */
         height: auto;
         /* الحفاظ على النسب */
-        margin-top: 5px;
+        margin-top: -2px;
+    }
+
+    header {
+        display: flex;
+        justify-content: space-between;
     }
 
     header .toggle-menu {
-        right: 252px;
-        top: 6px;
+        font-size: 18px;
     }
 
 }
 
 /* الشاشات المتوسطة */
 @media (min-width: 575px) and (max-width: 859px) {
-    header .toggle-menu {
-        right: 320px;
-        top: 17px;
+    header {
+        display: flex;
+        justify-content: space-between;
     }
+
+    header .toggle-menu {
+        margin-top: 4px;
+    }
+
 }
 
 @media (min-width: 575px) {
     header img {
-        width: 100px;
+        width: 90px;
         height: auto;
-        margin-top: 5px;
     }
 
     header ul li a {
@@ -339,17 +361,17 @@ header img {
 
 @media (min-width: 768px) {
     header img {
-        width: 130px;
+        width: 110px;
         height: auto;
-        margin-top: 5px;
+        margin-top: 1px;
     }
 }
 
 @media (min-width: 992px) {
     header img {
-        width: 150px;
+        width: 130px;
         height: auto;
-        margin-top: 5px;
+        margin-top: 11px;
     }
 }
 
@@ -370,6 +392,20 @@ header .arrow {
     width: 80%;
     margin: auto;
 }
+.social-above-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.social-above-header #toggleMode {
+    background-color: var(--button-bg-color);
+    color: var(--button-text-color);
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s;
+}
 
 .social-above-header a i {
     display: inline-block;
@@ -387,7 +423,9 @@ header .arrow {
     .social-above-header a i {
         margin-right: 5px;
     }
-
+    .social-above-header #toggleMode {
+        padding: 6px 10px;
+    }
 }
 
 @media (min-width: 575px) {
@@ -401,6 +439,9 @@ header .arrow {
     .social-above-header a i {
         margin-right: 5px;
     }
+    .social-above-header #toggleMode {
+        padding: 6px 12px;
+    }
 }
 
 @media (min-width: 768px) {
@@ -412,6 +453,15 @@ header .arrow {
 
     .social-above-header a i {
         margin-right: 10px;
+    }
+    .social-above-header #toggleMode {
+        padding: 6px 17px;
+    }
+}
+
+@media (min-width: 992px) {
+    .social-above-header #toggleMode {
+        padding: 10px 20px;
     }
 }
 
@@ -547,7 +597,6 @@ header .arrow {
     padding: 0;
     display: flex;
     justify-content: space-around;
-    background-color: #f8f8f8f8;
     flex-wrap: wrap;
     transition: 0.3s;
     padding-top: 20px;
@@ -613,10 +662,6 @@ header .arrow {
     transition: 0.6s;
 }
 
-.show-i .card p:hover {
-    opacity: 1;
-    transform: translateY(0);
-}
 
 .show-i .card button {
     position: absolute;
@@ -734,7 +779,6 @@ header .arrow {
 
 /* start about */
 .points {
-    background-color: white;
     margin: 30px 0;
     border-radius: 15px;
     /* margin: 20px auto; */
@@ -829,7 +873,6 @@ header .arrow {
 }
 
 .points .left {
-    background-color: white;
     padding: 10px;
     margin-left: 40px;
     position: relative;
@@ -927,7 +970,6 @@ header .arrow {
 
 
 .work {
-    background-color: white;
     margin: 20px auto;
     padding: 20px;
     border-radius: 12px;
@@ -993,6 +1035,7 @@ header .arrow {
 
     .points .txt1 ol {
         font-size: 14px !important;
+        padding-right: 24px;
     }
 
     .points .right ul {
@@ -1028,6 +1071,7 @@ header .arrow {
 
     .points .txt1 ol {
         font-size: 15px !important;
+        padding-right: 24px;
     }
 
     .points .right ul {
@@ -1061,6 +1105,7 @@ header .arrow {
 
     .points .txt1 ol {
         font-size: 16px !important;
+
     }
 
     .points .right ul {
@@ -1092,6 +1137,7 @@ header .arrow {
 @media (min-width: 992px) {
     .points .txt1 ol {
         font-size: 18px !important;
+        padding-right: 26px;
     }
 
     .p-work {
@@ -2043,7 +2089,6 @@ table tbody tr td:hover {
 /* srart criteria */
 .cretiria {
     margin: 40px 0;
-    background-color: white;
     box-shadow: 1px 1px 10px silver;
     padding: 40px;
     font-family: 'Calibri';
@@ -2520,7 +2565,6 @@ table tbody tr td:hover {
 .contactus .address .two span {
     margin-right: 20px;
     font-size: 20px;
-    color: #333;
 }
 
 .contactus .address .one span {
@@ -2540,7 +2584,6 @@ table tbody tr td:hover {
 
 .contactus .address .two a {
     text-decoration: none;
-    color: #333;
     transition: 0.3s;
 }
 
@@ -3557,7 +3600,6 @@ input {
     box-shadow: 1px 1px 5px silver;
     padding: 20px;
     position: relative;
-    background-color: white;
 }
 
 .first-page.news {
@@ -3566,7 +3608,6 @@ input {
     box-shadow: 1px 1px 5px silver;
     padding: 20px;
     position: relative;
-    background: white;
 }
 
 .first-page.news h2 {
@@ -3596,13 +3637,11 @@ input {
     font-size: 30px;
     font-weight: bold;
     margin-right: 10px;
-    color: white;
     width: calc(100% - 10px) !important;
     transition: 0.3s;
     position: relative;
     padding-bottom: 10px;
     border-radius: 12px;
-    color: black;
     font-family: 'CodecProBold', sans-serif;
     margin-top: 0;
     margin-bottom: 0;
@@ -3983,7 +4022,7 @@ input {
     .first-page img {
         width: 100%;
         margin: 20px auto;
-        height: 300px;
+        height: 290px;
     }
 
 
@@ -4018,7 +4057,7 @@ input {
     .first-page img {
         width: 100%;
         margin: 20px auto;
-        height: 300px;
+        height: 310px;
     }
 
 
@@ -4072,7 +4111,6 @@ input {
 }
 
 .refrences {
-    background-color: white;
     box-shadow: 1px 1px 10px silver;
     width: 70%;
     margin: 20px 45px;
@@ -4496,7 +4534,6 @@ input {
     padding-right: 20px;
     box-sizing: border-box;
     margin-top: 40px;
-    background-color: white;
 }
 
 .show-studies h3 {
@@ -4550,7 +4587,7 @@ input {
 
 .show-studies a .study-info p {
     text-align: justify;
-    color: #00000094;
+    color: var(--fifth-color);
     margin-top: 6px;
     max-height: 59px;
     overflow: hidden;
@@ -4558,10 +4595,6 @@ input {
     text-overflow: ellipsis;
     transition: 0.3s;
     font-weight: bold;
-}
-
-.show-studies a .study-info p:hover {
-    color: black;
 }
 
 .top-of-study {
@@ -4623,7 +4656,7 @@ input {
     }
 
     .show-studies a .study-info {
-        padding-bottom: 7px;
+        padding-bottom: 0;
     }
 
     .show-studies a .study-info .image-card {
@@ -4708,6 +4741,12 @@ input {
     .show-studies a .study-info p {
         max-height: 44px;
         font-size: 12px;
+        margin-top: -8px;
+    }
+
+    .show-studies a .study-info {
+        padding-bottom: 0;
+        margin-bottom: 9px;
     }
 
     .top-of-study {
@@ -4717,7 +4756,7 @@ input {
     }
 }
 
-@media (min-width: 768px) {
+@media (min-width: 968px) {
 
     .flex-news {
         flex-direction: row;
@@ -4736,7 +4775,7 @@ input {
     .show-studies {
         position: sticky;
         top: 0;
-        width: 35%;
+        width: 400px;
         margin-top: 12px;
     }
 
@@ -4769,7 +4808,7 @@ input {
 
     .show-studies a .study-info {
         margin-bottom: 10px;
-        padding-bottom: 8px;
+        padding-bottom: 0;
     }
 
     .top-of-study {
@@ -4847,7 +4886,7 @@ input {
 @media (max-width: 574px) {
     .spe-h1 {
         font-size: 16px;
-        margin-top: 20px;
+        margin-top: 10px;
         margin-bottom: 0;
     }
 }
@@ -6300,6 +6339,7 @@ input {
     position: relative !important;
     left: 0 !important;
 }
+
 .my-gd2 {
     width: 400px !important;
     height: 400px !important;
@@ -6356,6 +6396,7 @@ input {
         display: block !important;
         margin: 10px auto !important;
     }
+
     .my-g {
         width: 350px !important;
         height: auto !important;
@@ -6397,6 +6438,7 @@ input {
         display: block !important;
         margin: 10px auto !important;
     }
+
     .my-gd2 {
         width: 250px !important;
         height: auto !important;
@@ -6441,7 +6483,7 @@ input {
         width: 400px !important;
         height: auto !important;
     }
-    
+
 
     .g3 {
         width: 400px !important;
@@ -6477,6 +6519,7 @@ input {
         width: 464px !important;
         height: auto !important;
     }
+
     .my-gd2 {
         width: 350px !important;
         height: auto !important;
@@ -6543,6 +6586,7 @@ input {
         width: 620px !important;
         height: auto !important;
     }
+
     .my-gd2 {
         width: 400px !important;
         height: auto !important;
@@ -6614,6 +6658,7 @@ input {
         width: 700px !important;
         height: auto !important;
     }
+
     .my-gd2 {
         width: 500px !important;
         height: auto !important;
@@ -6764,7 +6809,6 @@ h5 {
 
 
 .gov td {
-    background-color: white;
     text-align: center;
 }
 
@@ -6988,14 +7032,14 @@ input:focus {
     }
 
     .show-studies-index .show-index-imgs .card {
-        width: calc(100% - 10px) !important;
+        width: calc(100%) !important;
         margin-bottom: 20px !important;
     }
 
     .show-studies-index .show-index-imgs .card img {
         width: 0;
-        height: 150px !important;
-        max-height: 150px !important;
+        height: 180px !important;
+        max-height: 180px !important;
     }
 
     .show-studies-index .show-index-imgs .card a .text-info-index p {
@@ -7020,7 +7064,7 @@ input:focus {
     }
 
     .show-studies-index .show-index-imgs .card {
-        width: calc(98% - 10px) !important;
+        width: calc(100%) !important;
         margin-bottom: 20px !important;
         margin-left: auto;
         margin-right: auto;
@@ -7207,9 +7251,11 @@ input:focus {
     }
 
     .show-all-studies .studies-card {
-        width: calc(100% - 10px) !important;
+        width: calc(100%) !important;
         margin-bottom: 20px !important;
         height: 180px;
+        margin-left: auto;
+        margin-right: auto;
     }
 
     .show-all-studies .studies-card img {
@@ -7493,8 +7539,8 @@ input:focus {
     }
 
     .tow-books .daw {
-        width: calc(100%) !important;
-        margin-bottom: 5px !important;
+        width: calc(80%) !important;
+        margin: 5px auto !important;
     }
 
     .tow-books .daw .card {
@@ -7805,6 +7851,7 @@ ul .aside-nested-list {
 .special-title2 {
     font-size: 18px;
 }
+
 .special-title3 {
     font-size: 18px;
 }
@@ -7826,9 +7873,11 @@ ul .aside-nested-list {
     .special-title2 {
         font-size: 16px !important;
     }
+
     .special-title3 {
         font-size: 15px !important;
     }
+
     .img-singapore {
         width: 200px !important;
         height: auto !important;
@@ -7847,9 +7896,11 @@ ul .aside-nested-list {
     .special-title2 {
         font-size: 17px !important;
     }
+
     .special-title3 {
         font-size: 15px !important;
     }
+
     .img-singapore {
         width: 220px !important;
         height: auto !important;
@@ -7868,9 +7919,11 @@ ul .aside-nested-list {
     .special-title2 {
         font-size: 17px !important;
     }
+
     .special-title3 {
         font-size: 15px !important;
     }
+
     .img-singapore {
         width: 250px !important;
         height: auto !important;
@@ -7889,11 +7942,90 @@ ul .aside-nested-list {
     .special-title2 {
         font-size: 18px !important;
     }
+
     .special-title3 {
         font-size: 16px !important;
     }
+
     .img-singapore {
         width: 300px !important;
         height: auto !important;
+    }
+}
+
+.controls {
+    display: flex;
+    position: fixed;
+    /* بدلًا من sticky */
+    top: 168px;
+    right: 156px;
+    z-index: 10000000;
+
+}
+
+.controls #increaseFont,
+.controls #decreaseFont {
+    background-color: var(--fifth-color);
+    outline: none;
+    color: white;
+    font-weight: bold;
+    border: none;
+    margin-left: 5px;
+    width: 20px;
+    transition: 0.3s;
+}
+
+.controls #increaseFont:hover,
+.controls #decreaseFont:hover {
+    background-color: var(--fourth-color);
+    transform: scale(1.3);
+}
+
+@media (max-width: 574px) {
+    .controls {
+        right: 6px;
+    
+    }
+
+    .controls #increaseFont,
+    .controls #decreaseFont {
+        margin-left: 1px;
+        width: 17px;
+    }
+}
+
+@media (min-width: 575px) {
+    .controls {
+        right: 14px;
+    
+    }
+
+    .controls #increaseFont,
+    .controls #decreaseFont {
+        margin-left: 3px;
+    }
+}
+
+@media (min-width: 768px) {
+    .controls {
+        right: 26px;
+    
+    }
+
+    .controls #increaseFont,
+    .controls #decreaseFont {
+        margin-left: 4px;
+    }
+}
+
+@media (min-width: 992px) {
+    .controls {
+        right: 96px;
+    
+    }
+    
+    .controls #increaseFont,
+    .controls #decreaseFont {
+        margin-left: 5px;
     }
 }

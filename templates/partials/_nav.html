@@ -3,13 +3,19 @@
  <div class="above-header">
     <div class="container">
         <div class="social-above-header">
-            <a href="mailto:contact@csr-yemen.com" class="email"><i
-                class="fa-solid fa-envelope my-env foot-i"></i></a>
-                <a href="https://api.whatsapp.com/send?phone=782742438"><i
-                    class="fa-brands fa-whatsapp foot-i"></i></a>
-                    <a href="https://www.facebook.com/profile.php?id=61556721602912" target="_blank"><i
-                        class="fa-brands fa-facebook foot-i"></i></a>
-        </div>
+            <div class="links">
+                <a href="mailto:contact@csr-yemen.com" class="email"><i
+                    class="fa-solid fa-envelope my-env foot-i"></i></a>
+                    <a href="https://api.whatsapp.com/send?phone=782742438"><i
+                        class="fa-brands fa-whatsapp foot-i"></i></a>
+                        <a href="https://www.facebook.com/profile.php?id=61556721602912" target="_blank"><i
+                            class="fa-brands fa-facebook foot-i"></i></a>
+            </div>
+                        <button id="toggleMode">
+                            <span id="icon">🌞</span>
+                        </button>
+        </div>  
+        
     </div>
 </div>             
 <div class="header-container" style="background-color: white;">
@@ -219,3 +225,37 @@
     </div>
 </div>
 <!-- end header -->
+ <script>
+    document.addEventListener('DOMContentLoaded', function () {
+        const toggleButton = document.getElementById('toggleMode');
+        const body = document.body;
+        const icon = document.getElementById('icon');  // تحديد الأيقونة
+        
+        // استرجاع الوضع المحفوظ من localStorage
+        const savedMode = localStorage.getItem('theme');
+        if (savedMode) {
+            body.classList.add(savedMode);
+            icon.textContent = savedMode === 'dark-mode' ? '🌙' : '🌞'; // تغيير الإيموجي بناءً على الوضع المحفوظ
+        } else {
+            // إذا لم يكن هناك وضع محفوظ، تعيين الوضع الفاتح افتراضيًا
+            icon.textContent = '🌞'; 
+        }
+        
+        // تبديل الوضع عند النقر على الزر
+        toggleButton.addEventListener('click', function () {
+            if (body.classList.contains('dark-mode')) {
+                body.classList.remove('dark-mode');
+                localStorage.setItem('theme', ''); // حفظ الوضع الفاتح
+                icon.textContent = '🌞'; // تغيير الإيموجي إلى الوضع الفاتح
+            } else {
+                body.classList.add('dark-mode');
+                localStorage.setItem('theme', 'dark-mode'); // حفظ الوضع الداكن
+                icon.textContent = '🌙'; // تغيير الإيموجي إلى الوضع الداكن
+            }
+        });
+    
+    });
+    
+    
+    
+ </script>

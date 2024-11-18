@@ -23,7 +23,7 @@ socialSpan.onclick = function () {
     socialSpan.innerHTML = '-';
     res2 = getComputedStyle(social);
     dis2 = res2.right;
-    if(dis2 == '10px'){
+    if (dis2 == '10px') {
         socialSpan.innerHTML = '+';
     }
 }
@@ -44,7 +44,7 @@ window.onscroll = function () {
         index_imgs[2].style.width = '100%';
     }
 
-    if (window.scrollY >= 800) {
+    if (window.scrollY >= 500) {
         index_imgs2[0].style.width = '100%';
         index_imgs2[1].style.width = '100%';
         index_imgs2[2].style.width = '100%';
@@ -136,6 +136,46 @@ show_ref.onclick = function () {
     }
 
 }
+// جميع العناصر المستهدفة لتغيير حجم النص
+const elements = [
+    ...document.querySelectorAll('.first-page .full-text p'),      // الفقرات
+    ...document.querySelectorAll('.first-page .full-text ul'),     // القوائم غير المرتبة
+    ...document.querySelectorAll('.first-page .full-text ol'),     // القوائم المرتبة
+    ...document.querySelectorAll('.first-page .full-text h2'),     // العناوين
+    ...document.querySelectorAll('.special-title'),                // العناوين الخاصة
+    ...document.querySelectorAll('.special-title2')                // العناوين الخاصة 2
+];
+
+// تحديد الأزرار
+const increaseButton = document.getElementById('increaseFont');
+const decreaseButton = document.getElementById('decreaseFont');
+
+// الحجم الافتراضي للنص
+let fontSize = 16;
+
+// الحد الأقصى والأدنى للحجم
+const maxFontSize = 26;
+const minFontSize = 10;
+
+// عند النقر على زر التكبير
+increaseButton.addEventListener('click', function () {
+    if (fontSize < maxFontSize) { // تحقق أن الحجم أقل من الحد الأقصى
+        fontSize += 2; // زيادة الحجم
+        elements.forEach(function (el) {
+            el.style.fontSize = `${fontSize}px`;
+        });
+    }
+});
+
+// عند النقر على زر التصغير
+decreaseButton.addEventListener('click', function () {
+    if (fontSize > minFontSize) { // تحقق أن الحجم أكبر من الحد الأدنى
+        fontSize -= 2; // تقليل الحجم
+        elements.forEach(function (el) {
+            el.style.fontSize = `${fontSize}px`;
+        });
+    }
+});
 
 
 
