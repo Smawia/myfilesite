@@ -38,7 +38,7 @@ setInterval(function () {
 }, 5000);
 
 window.onscroll = function () {
-    if (window.scrollY >= 500) {
+    if (window.scrollY >= 250) {
         index_imgs[0].style.width = '100%';
         index_imgs[1].style.width = '100%';
         index_imgs[2].style.width = '100%';
