@@ -178,5 +178,29 @@ decreaseButton.addEventListener('click', function () {
 });
 
 
+const studies = document.querySelectorAll(".study-item"); // جميع المواضيع
+const itemsToShow = 4; // عدد المواضيع المعروضة
+let startIndex = 0;
+
+// دالة لتحديث العرض
+function updateStudies() {
+    // إخفاء جميع المواضيع
+    studies.forEach((item) => item.classList.remove("active"));
+
+    // عرض العناصر الثلاثة التالية
+    for (let i = 0; i < itemsToShow; i++) {
+        const index = (startIndex + i) % studies.length;
+        studies[index].classList.add("active");
+    }
+
+    // تحديث البداية
+    startIndex = (startIndex + itemsToShow) % studies.length;
+}
+
+// تحديث العرض عند التحميل
+updateStudies();
+
+// تبديل المواضيع كل 5 ثوانٍ
+setInterval(updateStudies, 5000);
 
 

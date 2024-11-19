@@ -44,7 +44,7 @@ window.onscroll = function () {
         index_imgs[2].style.width = '100%';
     }
 
-    if (window.scrollY >= 400) {
+    if (window.scrollY >= 500) {
         index_imgs2[0].style.width = '100%';
         index_imgs2[1].style.width = '100%';
         index_imgs2[2].style.width = '100%';
@@ -178,5 +178,29 @@ decreaseButton.addEventListener('click', function () {
 });
 
 
+const studies = document.querySelectorAll(".study-item"); // جميع المواضيع
+const itemsToShow = 3; // عدد المواضيع المعروضة
+let startIndex = 0;
+
+// دالة لتحديث العرض
+function updateStudies() {
+    // إخفاء جميع المواضيع
+    studies.forEach((item) => item.classList.remove("active"));
+
+    // عرض العناصر الثلاثة التالية
+    for (let i = 0; i < itemsToShow; i++) {
+        const index = (startIndex + i) % studies.length;
+        studies[index].classList.add("active");
+    }
+
+    // تحديث البداية
+    startIndex = (startIndex + itemsToShow) % studies.length;
+}
+
+// تحديث العرض عند التحميل
+updateStudies();
+
+// تبديل المواضيع كل 5 ثوانٍ
+setInterval(updateStudies, 5000);
 
 

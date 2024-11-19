@@ -2,11 +2,13 @@
 {% load static %}
 {% block content %}
 <div class="container">
-    <h1 class="spe-h1"> الإصدارات</h1>
+    <h1 class="spe-h1"> الدراسات</h1>
     <div class="show-all-studies">
         {% for data in page.object_list %}
         <div class="studies-card">
-            <img src="{{data.image.url}}" alt="">
+            <a href="{{ data.url }}">
+                <img src="{{ data.image.url }}" alt="">
+            </a>
             <a href="{{ data.url }}">
                 <div class="study-text-info">
                     <p>{{data.subject}}</p>
@@ -20,6 +22,13 @@
     <div class="p-row">
         <div class="p-column">
             <ul class="p-ul">
+                <li class="p-item">
+                    {% if not page.has_previous %}
+                    <a href="{% url 'studies' %}?page=1" class="p-link first" hidden>الأول</a>
+                    {% else %}
+                    <a href="{% url 'studies' %}?page=1" class="p-link first">الأول</a>
+                    {% endif %}
+                </li>
                 <li class="p-item disabled">
                     {% if page.has_previous %}
                     <a href="{% url 'studies' %}?page={{page.previous_page_number}}" class="p-link pre">السابق</a>
@@ -39,6 +48,14 @@
                 <li class="p-item disabled">
                     {% if page.has_next %}
                     <a href="{% url 'studies' %}?page={{page.next_page_number}}" class="p-link next">التالي</a>
+                    {% endif %}
+                </li>
+                <!-- زر "الأخير" -->
+                <li class="p-item">
+                    {% if not page.has_next %}
+                    <a class="p-link disabled" hidden>الأخير</a>
+                    {% else %}
+                    <a href="{% url 'studies' %}?page={{ page.paginator.num_pages }}" class="p-link last">الأخير</a>
                     {% endif %}
                 </li>
             </ul>

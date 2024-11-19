@@ -5,12 +5,13 @@
     <div class="top-of-study">
         <a href="{% url 'index' %}">المركز التأسيسي</a>/<a href="{% url 'studies' %}">الدراسات</a>/<span>بعض التجارب الدولية في الإصلاح الإداري</span>
     </div>
-    <div class="controls">
-        <button id="increaseFont">+</button>
-        <button id="decreaseFont">-</button>
-    </div>
+    
     <div class="studies-flex">
         <div class="first-page">
+            <div class="controls">
+                <button id="increaseFont">تكبير الخط</button>
+                <button id="decreaseFont">تصغير الخط</button>
+            </div>
             <a href="#img-id" class="hidden-row"><i class="fa-solid fa-arrow-up-long"></i></a>
             <!-- <h1>الحياة في اليمن</h1> -->
             <p class="p-img">بعض التجارب الدولية في الإصلاح الإداري</p>
@@ -448,7 +449,7 @@
         </div>
         <div class="show-some-studies">
             <h3 class="show-studies-h3">مواضيع مشابهة</h3>
-            <a href="{% url 'reformmethodology' %}">
+            <a href="{% url 'reformmethodology' %}" class="study-item">
                 <div class="study-info-show">
                     <div class="image-card">
                         <img src="{% static 'imgs/method1.jpg' %}" alt="" class="index-img">
@@ -458,29 +459,29 @@
                     </div>
                 </div>
             </a>
-            <a href="{% url 'comprehensive_reform' %}">
+            <a href="{% url 'comprehensive_reform' %}" class="study-item">
                 <div class="study-info-show">
                     <div class="image-card">
                         <img src="{% static 'imgs/fanicial.webp' %}" alt="" class="index-img">
                     </div>
                     <div class="studies-text-some-info">
                         <h3>تقييم برنامج الإصلاح الاقتصادي والمالي والإداري الشامل في اليمن</h3>
-                        
+
                     </div>
                 </div>
             </a>
-            <a href="{% url 'evolution_of_public_administration' %}">
+            <a href="{% url 'evolution_of_public_administration' %}" class="study-item">
                 <div class="study-info-show">
                     <div class="image-card">
                         <img src="{% static 'imgs/admini.jpg' %}" alt="" class="index-img">
                     </div>
                     <div class="studies-text-some-info">
                         <h3>تطور الإدارة العامة في إطار حقل القانون الإداري</h3>
-                        
+
                     </div>
                 </div>
             </a>
-            <a href="{% url 'financial_reform_in_countries' %}">
+            <a href="{% url 'financial_reform_in_countries' %}" class="study-item">
                 <div class="study-info-show">
                     <div class="image-card">
                         <img src="{% static 'imgs/gold.webp' %}" alt="" class="index-img">
@@ -490,7 +491,58 @@
                     </div>
                 </div>
             </a>
-            <a href="{% url 'implementing_e-government' %}">
+            <a href="{% url 'malaysia_study' %}" class="study-item">
+                <div class="study-info-show">
+                    <div class="image-card">
+                        <img src="{% static 'imgs/maly2.webp' %}" alt="" class="index-img">
+                    </div>
+                    <div class="studies-text-some-info">
+                        <h3>تجربة ماليزيا في الإصلاح الإداري</h3>
+                    </div>
+                </div>
+            </a>
+            <a href="{% url 'future_fo_reforming_administrative_law_in_yemen' %}" class="study-item">
+                <div class="study-info-show">
+                    <div class="image-card">
+                        <img src="{% static 'imgs/fix2.webp' %}" alt="" class="index-img">
+                    </div>
+                    <div class="studies-text-some-info">
+                        <h3>الرؤية المستقبلية لإصلاح القانون الإداري في اليمن</h3>
+                    </div>
+                </div>
+            </a>
+            <a href="{% url 'future_of_financial_reform_in_yemen' %}" class="study-item">
+                <div class="study-info-show">
+                    <div class="image-card">
+                        <img src="{% static 'imgs/tagarb9.jpg' %}" alt="" class="index-img">
+                    </div>
+                    <div class="studies-text-some-info">
+                        <h3>رؤية مستقبلية للإصلاح المالي في اليمن</h3>
+                    </div>
+                </div>
+            </a>
+            <a href="{% url 'role_of_the_private_sector_in_world' %}" class="study-item">
+                <div class="study-info-show">
+                    <div class="image-card">
+                        <img src="{% static 'imgs/test.png' %}" alt="" class="index-img">
+                    </div>
+                    <div class="studies-text-some-info">
+                        <h3>تجارب عالمية وإقليمية لدور القطاع الخاص</h3>
+                    </div>
+                </div>
+            </a>
+            <a href="{% url 'legislative_reform_in_the_world' %}" class="study-item">
+                <div class="study-info-show">
+                    <div class="image-card">
+                        <img src="{% static 'imgs/repair4.jpg' %}" alt="" class="index-img">
+                    </div>
+                    <div class="studies-text-some-info">
+                        <h3>تجارب عربية وغربية للإصلاح التشريعي</h3>
+                    </div>
+                </div>
+            </a>
+
+            <a href="{% url 'implementing_e-government' %}" class="study-item">
                 <div class="study-info-show last-one">
                     <div class="image-card">
                         <img src="{% static 'imgs/egoven.jpg' %}" alt="" class="index-img">

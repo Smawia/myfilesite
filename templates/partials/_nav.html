@@ -4,16 +4,16 @@
     <div class="container">
         <div class="social-above-header">
             <div class="links">
-                <a href="mailto:contact@csr-yemen.com" class="email"><i
+                <a href="mailto:scresearchyemen@gmail.com" class="email"><i
                     class="fa-solid fa-envelope my-env foot-i"></i></a>
-                    <a href="https://api.whatsapp.com/send?phone=782742438"><i
+                    <a href="https://api.whatsapp.com/send?phone=783222270"><i
                         class="fa-brands fa-whatsapp foot-i"></i></a>
                         <a href="https://www.facebook.com/profile.php?id=61556721602912" target="_blank"><i
                             class="fa-brands fa-facebook foot-i"></i></a>
             </div>
-                        <button id="toggleMode">
-                            <span id="icon">🌞</span>
-                        </button>
+            <button id="toggleMode">
+                <span id="icon">وضع النهار</span>
+            </button>
         </div>  
         
     </div>
@@ -216,8 +216,8 @@
             <!-- start social media -->
             <div class="social">
                 <span>+</span>
-                <a href="mailto:contact@csr-yemen.com"><i class="fa-solid fa-envelope social-i" style="color: white !important;"></i></a>
-                <a href="https://api.whatsapp.com/send?phone=782742438"><i class="fa-brands fa-whatsapp social-i" style="color: white !important;"></i></a>
+                <a href="mailto:scresearchyemen@gmail.com"><i class="fa-solid fa-envelope social-i" style="color: white !important;"></i></a>
+                <a href="https://api.whatsapp.com/send?phone=783222270"><i class="fa-brands fa-whatsapp social-i" style="color: white !important;"></i></a>
                 <a href="https://www.facebook.com/profile.php?id=61556721602912" target="_blank"><i class="fa-brands fa-facebook social-i" style="color: white !important;"></i></a>
             </div>
             <!-- end social media -->
@@ -235,10 +235,10 @@
         const savedMode = localStorage.getItem('theme');
         if (savedMode) {
             body.classList.add(savedMode);
-            icon.textContent = savedMode === 'dark-mode' ? '🌙' : '🌞'; // تغيير الإيموجي بناءً على الوضع المحفوظ
-        } else {
+            icon.textContent = savedMode === 'dark-mode' ? 'وضع الليل' : 'وضع النهار'; // تغيير النص بناءً على الوضع المحفوظ        
+            } else {
             // إذا لم يكن هناك وضع محفوظ، تعيين الوضع الفاتح افتراضيًا
-            icon.textContent = '🌞'; 
+            icon.textContent = 'وضع النهار'; 
         }
         
         // تبديل الوضع عند النقر على الزر
@@ -246,11 +246,11 @@
             if (body.classList.contains('dark-mode')) {
                 body.classList.remove('dark-mode');
                 localStorage.setItem('theme', ''); // حفظ الوضع الفاتح
-                icon.textContent = '🌞'; // تغيير الإيموجي إلى الوضع الفاتح
+                icon.textContent = 'وضع النهار'; // تغيير النص إلى الوضع الفاتح
             } else {
                 body.classList.add('dark-mode');
                 localStorage.setItem('theme', 'dark-mode'); // حفظ الوضع الداكن
-                icon.textContent = '🌙'; // تغيير الإيموجي إلى الوضع الداكن
+                icon.textContent = 'وضع الليل'; // تغيير النص إلى الوضع الداكن
             }
         });
     

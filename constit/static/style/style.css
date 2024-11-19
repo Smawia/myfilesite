@@ -15,6 +15,7 @@ html {
     height: 100%;
     scroll-behavior: smooth;
 }
+
 body.dark-mode {
     /* ألوان الوضع الداكن */
     --bg-color: #121212;
@@ -392,12 +393,16 @@ header .arrow {
     width: 80%;
     margin: auto;
 }
+
 .social-above-header {
     display: flex;
     justify-content: space-between;
     align-items: center;
 }
+
 .social-above-header #toggleMode {
+    font-family: 'CodecProBold', sans-serif;
+    font-weight: bold;
     background-color: var(--button-bg-color);
     color: var(--button-text-color);
     border: none;
@@ -423,8 +428,10 @@ header .arrow {
     .social-above-header a i {
         margin-right: 5px;
     }
+
     .social-above-header #toggleMode {
         padding: 6px 10px;
+        font-size: 12px;
     }
 }
 
@@ -439,8 +446,10 @@ header .arrow {
     .social-above-header a i {
         margin-right: 5px;
     }
+
     .social-above-header #toggleMode {
         padding: 6px 12px;
+        font-size: 14px;
     }
 }
 
@@ -454,14 +463,17 @@ header .arrow {
     .social-above-header a i {
         margin-right: 10px;
     }
+
     .social-above-header #toggleMode {
         padding: 6px 17px;
+        font-size: 15px;
     }
 }
 
 @media (min-width: 992px) {
     .social-above-header #toggleMode {
         padding: 10px 20px;
+        font-size: 16px;
     }
 }
 
@@ -1811,13 +1823,14 @@ footer .final-p {
     }
 
     footer .footer-information .footer-social img {
-        width: 109px;
-        height: 55px;
-        margin-bottom: 10px;
+        width: 100px;
+        height: 49px;
+        margin-bottom: 14px;
+        margin-top: 9px;
     }
 
     footer .footer-information .footer-social div i {
-        font-size: 12px;
+        font-size: 10px;
     }
 
     footer .final-p {
@@ -1841,9 +1854,10 @@ footer .final-p {
     }
 
     footer .footer-information .footer-social img {
-        width: 133px;
-        height: 68px;
-        margin-bottom: 15px;
+        width: 114px;
+        height: 54px;
+        margin-bottom: 14px;
+        margin-top: 12px;
     }
 
     footer .footer-information .footer-social div i {
@@ -1871,9 +1885,10 @@ footer .final-p {
     }
 
     footer .footer-information .footer-social img {
-        width: 150px;
-        height: 80px;
-        margin-bottom: 21px;
+        width: 123px;
+        height: 65px;
+        margin-bottom: 14px;
+        margin-top: 13px;
     }
 
     footer .footer-information .footer-social div i {
@@ -1901,9 +1916,10 @@ footer .final-p {
     }
 
     footer .footer-information .footer-social img {
-        width: 156px;
-        height: 88px;
-        margin-bottom: 40px;
+        width: 130px;
+        height: 70px;
+        margin-bottom: 14px;
+        margin-top: 20px;
     }
 
     footer .final-p {
@@ -1995,28 +2011,17 @@ table {
 table td {
     padding: 15px;
     border: 1px solid #333;
-    background-color: white;
 }
 
 table tr {
     transition: 0.3s;
 }
 
-table thead tr:hover {
-    background-color: #333;
-}
-
-
 table thead td {
     font-weight: bold;
     text-align: center;
     border-color: honeydew;
     background-color: #0000ff99;
-}
-
-table tbody tr td:hover {
-    background-color: #333;
-    color: white;
 }
 
 /* end table */
@@ -2572,14 +2577,8 @@ table tbody tr td:hover {
     cursor: pointer;
 }
 
-.contactus .address .one span:hover {
-    color: blue;
-    text-decoration: underline;
-}
-
 .contactus .address i {
     font-size: 20px;
-    color: #333;
 }
 
 .contactus .address .two a {
@@ -2587,10 +2586,6 @@ table tbody tr td:hover {
     transition: 0.3s;
 }
 
-.contactus .address .two a:hover {
-    text-decoration: underline;
-    color: blue;
-}
 
 @media (max-width: 574px) {
     .contactus h3 {
@@ -3783,7 +3778,6 @@ input {
 
 .first-page .us-table tr td:hover {
     background-color: transparent !important;
-    color: black;
 }
 
 @media (max-width: 574px) {
@@ -3833,13 +3827,14 @@ input {
 
 
 .first-page .full-text span sup {
-    color: var(--secound-color);
+    color: #B46C22;
     cursor: pointer;
     font-weight: bold;
 }
 
 .first-page .full-text a {
     text-decoration: none;
+    color: #B46C22;
 }
 
 .first-page .info {
@@ -6174,23 +6169,6 @@ input {
     margin-right: 10px;
 }
 
-.fa-facebook {
-    color: #3b5998 !important;
-}
-
-.fa-whatsapp {
-    color: green !important;
-}
-
-.fa-envelope {
-    color: #1c4966 !important;
-}
-
-.fa-phone {
-    color: green !important;
-
-}
-
 .call {
     position: relative;
     right: 0px;
@@ -6205,7 +6183,7 @@ input {
 }
 
 .p-ul li {
-    margin-right: 1px;
+    margin-right: 3px;
     font-weight: bold;
     box-sizing: border-box;
 }
@@ -6213,57 +6191,51 @@ input {
 .p-ul li a {
     text-decoration: none;
     transition: 0.3s;
-    padding: 5px;
-    border: 1px solid var(--second-color);
-    color: var(--fourth-color);
+    padding: 5px 10px;
+    border: 1px solid #B46C22;
+    color: #B46C22;
     border-radius: 5px;
 }
 
 .p-ul li a:hover,
 .p-ul li a.active {
-    background-color: var(--second-color);
+    background-color: #B46C22;
     color: white !important;
 }
 
-.pre,
-.next {
-    position: relative;
-    top: 0;
-}
-
 @media (max-width: 574px) {
-
-    .pre,
-    .next {
-        position: relative;
-        top: -2px;
+    .p-ul li {
+        margin-right: 2px;
+    }
+    
+    .p-ul li a {
+        padding: 3px 7px;
     }
 }
 
 @media (min-width: 575px) {
-
-    .pre,
-    .next {
-        position: relative;
-        top: -2px;
+    .p-ul li {
+        margin-right: 2px;
+    }
+    
+    .p-ul li a {
+        padding: 4px 7px;
     }
 }
 
 @media (min-width: 768px) {
-
-    .pre,
-    .next {
-        position: relative;
-        top: -1px;
+    .p-ul li a {
+        padding: 5px 8px;
     }
 }
 
 @media (min-width: 992px) {
-
-    .pre,
-    .next {
-        position: relative;
-        top: 0;
+    .p-ul li {
+        margin-right: 3px;
+    }
+    
+    .p-ul li a {
+        padding: 5px 10px;
     }
 }
 
@@ -6711,14 +6683,6 @@ input {
     width: 133px;
 }
 
-.e_yemen tbody tr td {
-    background-color: white !important;
-}
-
-.e_yemen tbody tr td:hover {
-    color: black !important;
-}
-
 .e_yemen tbody tr td ol,
 .e_yemen tbody tr td ul,
 .e_yemen tbody tr td p,
@@ -6810,11 +6774,6 @@ h5 {
 
 .gov td {
     text-align: center;
-}
-
-.gov td:hover {
-    background-color: white;
-    color: black;
 }
 
 .gov tr td ul li {
@@ -7064,7 +7023,7 @@ input:focus {
     }
 
     .show-studies-index .show-index-imgs .card {
-        width: calc(100%) !important;
+        width: calc(85%) !important;
         margin-bottom: 20px !important;
         margin-left: auto;
         margin-right: auto;
@@ -7072,8 +7031,8 @@ input:focus {
 
     .show-studies-index .show-index-imgs .card img {
         width: 0;
-        height: 220px !important;
-        max-height: 220px !important;
+        height: 240px !important;
+        max-height: 240px !important;
     }
 
     .show-studies-index .show-index-imgs .card a .text-info-index p {
@@ -7164,97 +7123,65 @@ input:focus {
     margin-bottom: 50px !important;
     background-color: rgba(0, 0, 0, 0.74);
     height: 250px;
-    perspective: 50em;
-    position: relative;
     box-sizing: border-box;
-    transition: 0.3s ease;
+    transition: 0.3s;
+}
+
+.show-all-studies .studies-card:hover {
+    background-color: white;
+    box-shadow: 1px 1px 10px silver;
 }
 
 .show-all-studies .studies-card img {
     width: 100%;
     height: 100% !important;
     max-height: 250px !important;
-    transition: 0.5s;
-    transform-origin: 0 100%;
 }
 
 .show-all-studies .studies-card a {
     text-decoration: none;
-    color: white;
     font-size: 25px;
+    color: rgba(0, 0, 0, 0.74);
+    transition: 0.3;
+}
+
+.show-all-studies .studies-card a:hover {
+    color: black;
 }
 
 .show-all-studies .studies-card .study-text-info {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
     box-sizing: border-box;
-    z-index: 1;
-    opacity: 0;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    font-family: 'Calibri';
+    margin-top: 0;
     font-weight: bold;
-    background-color: var(--fifth-color);
-    line-height: 1.6;
-    padding: 20px 30px;
-    transform: rotateX(-90deg);
-    transform-origin: 50% 0%;
-    transition: 0.5s;
+    background-color: white;
+
 }
 
-.show-all-studies .studies-card:hover img {
-    transform: rotateX(90deg);
-    opacity: 0;
+.show-all-studies .studies-card .study-text-info p {
+    margin-top: -4px;
+    padding: 10px 6px 20px;
+    font-family: 'CodecProBold', sans-serif;
+    transition: 0.3s;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
 }
 
-.show-all-studies .studies-card:hover .study-text-info {
-    opacity: 1;
-    transform: rotateX(0);
-    transition-delay: 0.3s;
+.show-all-studies .studies-card .study-text-info p:hover {
+    background-color: white;
+    box-shadow: 1px 1px 10px silver;
 }
 
 @media (max-width: 574px) {
     .show-all-studies {
-        margin-top: 10px;
+        margin-top: 8px;
         padding: 5px 20px;
     }
 
     .show-all-studies .studies-card {
         width: calc(100% - 10px) !important;
-        margin-bottom: 20px !important;
-        height: 170px;
-    }
-
-    .show-all-studies .studies-card img {
-        width: 100%;
-        height: 100% !important;
-        max-height: 170px !important;
-    }
-
-    .show-all-studies .studies-card a {
-        font-size: 14px;
-    }
-
-    .show-all-studies .studies-card .study-text-info {
-        padding: 20px 30px;
-    }
-}
-
-@media (min-width: 575px) {
-    .show-all-studies {
-        margin-top: 10px;
-    }
-
-    .show-all-studies .studies-card {
-        width: calc(100%) !important;
-        margin-bottom: 20px !important;
+        margin-bottom: 65px !important;
         height: 180px;
-        margin-left: auto;
         margin-right: auto;
     }
 
@@ -7265,55 +7192,101 @@ input:focus {
     }
 
     .show-all-studies .studies-card a {
-        font-size: 16px;
+        font-size: 14px;
     }
 
-    .show-all-studies .studies-card .study-text-info {
-        padding: 20px 30px;
+    .show-all-studies .studies-card .study-text-info p {
+        margin-top: -4px;
+        padding: 10px 6px;
     }
 }
 
-@media (min-width: 768px) {
+@media (min-width: 575px) {
     .show-all-studies {
-        margin-top: 20px;
+        margin-top: 8px;
     }
 
     .show-all-studies .studies-card {
-        width: calc(50% - 16px) !important;
-        margin-bottom: 30px !important;
-        height: 190px;
+        width: calc(85%) !important;
+        margin-bottom: 62px !important;
+        height: 240px;
+        margin-left: auto;
+        margin-right: auto;
     }
 
     .show-all-studies .studies-card img {
         width: 100%;
         height: 100% !important;
-        max-height: 190px !important;
+        max-height: 240px !important;
     }
 
     .show-all-studies .studies-card a {
-        font-size: 18px;
+        font-size: 15px;
+    }
+
+}
+
+@media (min-width: 768px) {
+    .show-all-studies {
+        margin-top: 15px;
+    }
+
+    .show-all-studies .studies-card {
+        width: calc(50% - 16px) !important;
+        margin-bottom: 70px !important;
+        height: 240px;
+    }
+
+    .show-all-studies .studies-card img {
+        width: 100%;
+        height: 100% !important;
+        max-height: 240px !important;
+    }
+
+    .show-all-studies .studies-card a {
+        font-size: 16px;
+    }
+
+    .show-all-studies .studies-card .study-text-info {
+        margin-top: 0;
+
+    }
+
+    .show-all-studies .studies-card .study-text-info p {
+        margin-top: -4px;
+        padding: 10px 6px 20px;
     }
 }
 
 @media (min-width: 992px) {
     .show-all-studies {
-        margin-top: 30px;
+        margin-top: 20px;
     }
 
     .show-all-studies .studies-card {
         width: calc(37% - 70px) !important;
-        margin-bottom: 40px !important;
-        height: 220px;
+        margin-bottom: 80px !important;
+        height: 300px;
     }
 
     .show-all-studies .studies-card img {
         width: 100%;
         height: 100% !important;
-        max-height: 220px !important;
+        max-height: 300px !important;
     }
 
     .show-all-studies .studies-card a {
-        font-size: 20px;
+        font-size: 18px;
+    }
+
+    .show-all-studies .studies-card .study-text-info {
+        margin-top: 0;
+
+    }
+
+    .show-all-studies .studies-card .study-text-info p {
+        margin-top: -4px;
+        padding: 10px 6px 20px;
     }
 }
 
@@ -7955,10 +7928,10 @@ ul .aside-nested-list {
 
 .controls {
     display: flex;
-    position: fixed;
+    position: absolute;
     /* بدلًا من sticky */
-    top: 168px;
-    right: 156px;
+    top: 122px;
+    left: 126px;
     z-index: 10000000;
 
 }
@@ -7971,61 +7944,82 @@ ul .aside-nested-list {
     font-weight: bold;
     border: none;
     margin-left: 5px;
-    width: 20px;
     transition: 0.3s;
+    padding: 5px;
+    font-family: 'CodecProBold', sans-serif;
 }
 
 .controls #increaseFont:hover,
 .controls #decreaseFont:hover {
     background-color: var(--fourth-color);
-    transform: scale(1.3);
 }
 
 @media (max-width: 574px) {
     .controls {
-        right: 6px;
-    
+        /* بدلًا من sticky */
+        top: 62px;
+        left: 11px;
     }
 
     .controls #increaseFont,
     .controls #decreaseFont {
         margin-left: 1px;
-        width: 17px;
+        font-size: 10px;
     }
 }
 
 @media (min-width: 575px) {
     .controls {
-        right: 14px;
-    
+        /* بدلًا من sticky */
+        top: 73px;
+        left: 16px;
     }
 
     .controls #increaseFont,
     .controls #decreaseFont {
         margin-left: 3px;
+        font-size: 10px;
     }
 }
 
 @media (min-width: 768px) {
-    .controls {
-        right: 26px;
-    
-    }
 
     .controls #increaseFont,
     .controls #decreaseFont {
         margin-left: 4px;
+        font-size: 12px;
     }
 }
 
 @media (min-width: 992px) {
     .controls {
-        right: 96px;
-    
+        /* بدلًا من sticky */
+        top: 106px;
+        left: 35px;
     }
-    
+
     .controls #increaseFont,
     .controls #decreaseFont {
         margin-left: 5px;
+        font-size: 14px;
     }
 }
+
+.contactus a {
+    font-weight: bold;
+}
+.first-page .studies-flex a:visited,
+.contactus a:visited,
+.contactus a {
+    color: #B46C22;
+    
+}
+
+.study-item {
+    display: none; /* إخفاء العناصر افتراضيًا */
+}
+
+.study-item.active {
+    display: block; /* عرض العناصر النشطة فقط */
+}
+
