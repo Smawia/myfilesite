@@ -1859,7 +1859,7 @@ footer .final-p {
     }
 
     footer .footer-information .footer-social div i {
-        font-size: 10px;
+        font-size: 14px;
     }
 
     footer .final-p {
@@ -1890,7 +1890,7 @@ footer .final-p {
     }
 
     footer .footer-information .footer-social div i {
-        font-size: 12px;
+        font-size: 14px;
     }
 
     footer .final-p {
@@ -1921,7 +1921,7 @@ footer .final-p {
     }
 
     footer .footer-information .footer-social div i {
-        font-size: 14px;
+        font-size: 15px;
     }
 
     footer .final-p {
@@ -6230,6 +6230,10 @@ input {
     background-color: #B46C22;
     color: white !important;
 }
+.pagination .pre {
+    position: relative;
+    top: 0;
+}
 
 @media (max-width: 574px) {
     .p-ul li {
@@ -6238,6 +6242,10 @@ input {
 
     .p-ul li a {
         padding: 3px 7px;
+    }
+    .pagination .pre {
+        position: relative;
+        top: -2px;
     }
 }
 

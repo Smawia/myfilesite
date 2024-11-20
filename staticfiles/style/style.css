@@ -332,6 +332,7 @@ header img {
     }
 
 }
+
 /* الشاشات المتوسطة */
 @media (min-width: 575px) and (max-width: 1037px) {
     header {
@@ -351,6 +352,7 @@ header img {
         margin-right: 18px;
     }
 }
+
 @media (min-width: 860px) {
 
     header ul li {
@@ -1850,8 +1852,8 @@ footer .final-p {
     }
 
     footer .footer-information .footer-social img {
-        width: 100px;
-        height: 49px;
+        width: 90px;
+        height: 43px;
         margin-bottom: 14px;
         margin-top: 9px;
     }
@@ -1881,8 +1883,8 @@ footer .final-p {
     }
 
     footer .footer-information .footer-social img {
-        width: 114px;
-        height: 54px;
+        width: 100px;
+        height: 50px;
         margin-bottom: 14px;
         margin-top: 12px;
     }
@@ -1912,8 +1914,8 @@ footer .final-p {
     }
 
     footer .footer-information .footer-social img {
-        width: 123px;
-        height: 65px;
+        width: 107px;
+        height: 58px;
         margin-bottom: 14px;
         margin-top: 13px;
     }
@@ -1944,7 +1946,7 @@ footer .final-p {
 
     footer .footer-information .footer-social img {
         width: 130px;
-        height: 68px;
+        height: 65px;
         margin-bottom: 14px;
         margin-top: 20px;
     }
@@ -6228,6 +6230,10 @@ input {
     background-color: #B46C22;
     color: white !important;
 }
+.pagination pre {
+    position: relative;
+    top: 0;
+}
 
 @media (max-width: 574px) {
     .p-ul li {
@@ -6236,6 +6242,10 @@ input {
 
     .p-ul li a {
         padding: 3px 7px;
+    }
+    .pagination pre {
+        position: relative;
+        top: -1px;
     }
 }
 
@@ -8087,5 +8097,9 @@ header input {
 }
 
 header .phone {
-    margin-right: 20px;
+    margin-right: 16px;
+}
+
+header .phone button {
+    margin-right: 0;
 }
