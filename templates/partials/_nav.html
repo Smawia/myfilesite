@@ -114,6 +114,13 @@
                         >المنشورات</a></li>
                 </ul>
             </div>
+            <div class="search-header tab">
+                <form action="{% url 'studies' %}" method="get" class="search-form">
+                    <input type="text" name="q" placeholder="ابحث...">
+                    <button type="submit" class="search"><i class="fas fa-search"></i></button>
+                </form>
+            </div>
+            
             <!-- overlay -->
             <div class="over"></div>
             <!-- overlay -->
@@ -128,7 +135,7 @@
                         {% else %}
                         class=""
                         {% endif %}
-                        >الصفحة الرئيسية</a></li>
+                        >الرئيسية</a></li>
                     <li class="aside-base-li"><a href="{% url 'about' %}"
                         {% if 'about' in request.path or '/criteria' in request.path %}
                         class="active js-a"
@@ -211,6 +218,12 @@
                         {% endif %}
                         >المنشورات</a></li>
                 </ul>
+                <div class="search-header phone">
+                    <form action="{% url 'studies' %}" method="get" class="search-form phone">
+                        <input type="text" name="q" placeholder="ابحث..." class="phone">
+                        <button type="submit" class="search phone"><i class="fas fa-search"></i></button>
+                    </form>
+                </div>
             </div>
             
             <!-- start social media -->

@@ -1,8 +1,14 @@
 {% extends 'base.html' %}
 {% load static %}
+{% block title %}الدراسات{% endblock %}
+
 {% block content %}
 <div class="container">
     <h1 class="spe-h1"> الدراسات</h1>
+    <!-- عرض نص البحث إذا كان موجودًا -->
+    {% if query %}
+    <p style="background-color: #C79C6F; color: white; width: fit-content; border-radius: 12px; padding: 8px;">نتائج البحث عن: <span style="color: white; font-weight: bold;">"{{ query }}"</span></p>
+    {% endif %}
     <div class="show-all-studies">
         {% for data in page.object_list %}
         <div class="studies-card">
@@ -17,49 +23,62 @@
         </div>
         {% endfor %}
     </div>
+    <!-- عرض رسالة إذا لم يتم العثور على نتائج -->
+    {% if not page.object_list %}
+    <p style="text-align: center; font-weight: bold;">لم يتم العثور على نتائج تطابق بحثك.</p>
+    {% endif %}
 </div>
 <div class="pagination">
     <div class="p-row">
         <div class="p-column">
             <ul class="p-ul">
+                <!-- زر "الأول" -->
                 <li class="p-item">
                     {% if not page.has_previous %}
-                    <a href="{% url 'studies' %}?page=1" class="p-link first" hidden>الأول</a>
+                    <a href="{% url 'studies' %}?q={{ query }}&page=1" class="p-link first" hidden>الأول</a>
                     {% else %}
-                    <a href="{% url 'studies' %}?page=1" class="p-link first">الأول</a>
+                    <a href="{% url 'studies' %}?q={{ query }}&page=1" class="p-link first">الأول</a>
                     {% endif %}
                 </li>
+
+                <!-- زر "السابق" -->
                 <li class="p-item disabled">
                     {% if page.has_previous %}
-                    <a href="{% url 'studies' %}?page={{page.previous_page_number}}" class="p-link pre">السابق</a>
+                    <a href="{% url 'studies' %}?q={{ query }}&page={{ page.previous_page_number }}" class="p-link pre">السابق</a>
                     {% endif %}
                 </li>
+
+                <!-- أرقام الصفحات -->
                 {% for num_page in page.paginator.page_range %}
                 {% if page.number == num_page %}
                 <li class="p-item">
-                    <a href="{% url 'studies' %}?page={{num_page}}" class="p-link active">{{num_page}}</a>
+                    <a href="{% url 'studies' %}?q={{ query }}&page={{ num_page }}" class="p-link active">{{ num_page }}</a>
                 </li>
                 {% else %}
                 <li class="p-item">
-                    <a href="{% url 'studies' %}?page={{num_page}}" class="p-link">{{num_page}}</a>
+                    <a href="{% url 'studies' %}?q={{ query }}&page={{ num_page }}" class="p-link">{{ num_page }}</a>
                 </li>
                 {% endif %}
                 {% endfor %}
+
+                <!-- زر "التالي" -->
                 <li class="p-item disabled">
                     {% if page.has_next %}
-                    <a href="{% url 'studies' %}?page={{page.next_page_number}}" class="p-link next">التالي</a>
+                    <a href="{% url 'studies' %}?q={{ query }}&page={{ page.next_page_number }}" class="p-link next">التالي</a>
                     {% endif %}
                 </li>
+
                 <!-- زر "الأخير" -->
                 <li class="p-item">
                     {% if not page.has_next %}
                     <a class="p-link disabled" hidden>الأخير</a>
                     {% else %}
-                    <a href="{% url 'studies' %}?page={{ page.paginator.num_pages }}" class="p-link last">الأخير</a>
+                    <a href="{% url 'studies' %}?q={{ query }}&page={{ page.paginator.num_pages }}" class="p-link last">الأخير</a>
                     {% endif %}
                 </li>
             </ul>
         </div>
     </div>
 </div>
+
 {% endblock %}

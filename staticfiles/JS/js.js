@@ -69,7 +69,7 @@ bar.onclick = function () {
 }
 
 document.body.addEventListener("click", function (e) {
-    if (!e.target.classList.contains('toggle-menu')) {
+    if (!e.target.classList.contains('toggle-menu') && !e.target.classList.contains('phone')) {
         aside_bar.style.display = 'none';
         over.style.display = 'none';
     }
@@ -179,7 +179,7 @@ decreaseButton.addEventListener('click', function () {
 
 
 const studies = document.querySelectorAll(".study-item"); // جميع المواضيع
-const itemsToShow = 3; // عدد المواضيع المعروضة
+const itemsToShow = 4; // عدد المواضيع المعروضة
 let startIndex = 0;
 
 // دالة لتحديث العرض

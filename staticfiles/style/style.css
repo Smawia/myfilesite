@@ -71,6 +71,7 @@ header {
     transition: 0.6s;
     display: inline-flex;
     margin: 10px 0 0;
+    width: 100%;
 }
 
 
@@ -104,7 +105,7 @@ header ul li .left-arrow2 {
     display: none;
 }
 
-@media (min-width: 860px) {
+@media (min-width: 1037px) {
     header .toggle-menu {
         display: none;
     }
@@ -128,10 +129,18 @@ header ul.aside-ul {
     margin-top: 0;
 }
 
-@media (max-width: 860px) {
+@media (max-width: 1037px) {
     header ul {
         display: none;
 
+    }
+
+    header .search-header.tab {
+        display: none !important;
+    }
+
+    header .aside .search-header.phone {
+        display: block !important;
     }
 
     header .arrow {
@@ -292,6 +301,12 @@ header a i {
     }
 }
 
+@media (min-width: 1270px) and (max-width: 1317px) {
+    header ul li a {
+        font-size: 14px !important;
+    }
+}
+
 header img {
     cursor: pointer;
     position: relative;
@@ -317,9 +332,8 @@ header img {
     }
 
 }
-
 /* الشاشات المتوسطة */
-@media (min-width: 575px) and (max-width: 859px) {
+@media (min-width: 575px) and (max-width: 1037px) {
     header {
         display: flex;
         justify-content: space-between;
@@ -329,6 +343,19 @@ header img {
         margin-top: 4px;
     }
 
+}
+
+@media (min-width: 1050px) {
+
+    header ul li {
+        margin-right: 18px;
+    }
+}
+@media (min-width: 860px) {
+
+    header ul li {
+        margin-right: 10px;
+    }
 }
 
 @media (min-width: 575px) {
@@ -342,7 +369,7 @@ header img {
     }
 
     header ul li {
-        margin-right: 25px;
+        margin-right: 20px;
     }
 }
 
@@ -360,7 +387,7 @@ header img {
     }
 }
 
-@media (min-width: 768px) {
+@media (min-width: 990px) {
     header img {
         width: 110px;
         height: auto;
@@ -1917,7 +1944,7 @@ footer .final-p {
 
     footer .footer-information .footer-social img {
         width: 130px;
-        height: 70px;
+        height: 68px;
         margin-bottom: 14px;
         margin-top: 20px;
     }
@@ -3417,13 +3444,8 @@ table thead td {
 input,
 textarea {
     padding-right: 10px !important;
-    font-weight: bold;
     color: #333;
     padding-top: 3px;
-}
-
-::placeholder {
-    font-size: 14px;
 }
 
 /* styling scroll bar */
@@ -4118,12 +4140,12 @@ input {
 
 .refrences .first-ref-info {
     background-color: var(--second-color);
-    padding: 10px;
+    padding: 1px 9px;
     color: white;
 }
 
 .refrences .first-ref-info h2 {
-    background-color: #333;
+    background-color: var(--fifth-color);
     border: 2px solid white;
     width: fit-content;
     padding: 10px 12px;
@@ -4206,6 +4228,7 @@ input {
     .show-references {
         font-size: 12px;
         width: 65px;
+        padding: 6px 6px;
     }
 
     .refrences {
@@ -4245,6 +4268,7 @@ input {
 
     .show-references {
         font-size: 14px;
+        padding: 6px 6px;
     }
 
     .refrences {
@@ -4283,6 +4307,7 @@ input {
 
     .show-references {
         font-size: 16px;
+        padding: 6px 9px;
     }
 
 
@@ -4313,6 +4338,7 @@ input {
 
     .show-references {
         font-size: 18px;
+        padding: 6px 9px;
     }
 
     .refrences {
@@ -5513,7 +5539,7 @@ input {
 .aside .aside-img {
     display: block;
     margin: 5px auto;
-    width: 134px;
+    width: 114px;
     height: auto;
 }
 
@@ -5585,7 +5611,7 @@ input {
 
 .asid-li3 {
     position: relative;
-    right: -13px;
+    right: -2px;
 }
 
 /* end styling aside */
@@ -6207,7 +6233,7 @@ input {
     .p-ul li {
         margin-right: 2px;
     }
-    
+
     .p-ul li a {
         padding: 3px 7px;
     }
@@ -6217,7 +6243,7 @@ input {
     .p-ul li {
         margin-right: 2px;
     }
-    
+
     .p-ul li a {
         padding: 4px 7px;
     }
@@ -6233,7 +6259,7 @@ input {
     .p-ul li {
         margin-right: 3px;
     }
-    
+
     .p-ul li a {
         padding: 5px 10px;
     }
@@ -6712,7 +6738,7 @@ h5 {
 
 @media (max-width: 574px) {
     .e_yemen {
-        border-spacing: 0px;
+        border-spacing: 1px;
     }
 
     .e_yemen tbody tr td ol,
@@ -6726,7 +6752,7 @@ h5 {
 
 @media (min-width: 575px) {
     .e_yemen {
-        border-spacing: 0px;
+        border-spacing: 1px;
     }
 
     .e_yemen tbody tr td ol,
@@ -8008,18 +8034,58 @@ ul .aside-nested-list {
 .contactus a {
     font-weight: bold;
 }
+
 .first-page .studies-flex a:visited,
 .contactus a:visited,
 .contactus a {
     color: #B46C22;
-    
+
 }
 
 .study-item {
-    display: none; /* إخفاء العناصر افتراضيًا */
+    display: none;
+    /* إخفاء العناصر افتراضيًا */
 }
 
 .study-item.active {
-    display: block; /* عرض العناصر النشطة فقط */
+    display: block;
+    /* عرض العناصر النشطة فقط */
 }
 
+.search-header {
+    display: flex;
+    align-items: center;
+}
+
+.search-header.tab {
+    position: absolute;
+    left: 0;
+    bottom: 16px;
+}
+
+header input {
+    width: 120px;
+
+}
+
+.search-header button {
+    color: white;
+    font-weight: bold;
+    background-color: var(--second-color);
+    border: none;
+    height: 22px;
+    border-radius: 2px;
+    position: relative;
+    top: -1px;
+    cursor: pointer;
+}
+
+@media (max-width: 1137px) {
+    header input {
+        width: 100px;
+    }
+}
+
+header .phone {
+    margin-right: 20px;
+}

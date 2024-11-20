@@ -7,7 +7,7 @@ from comments.models import Publish
 from comments.models import Comments
 from comments.forms import DocumentForm
 from django.core.paginator import Paginator
-
+from django.db.models import Q  # لاستعمال البحث المتقدم
 
 # Create your views here.
 
@@ -19,20 +19,21 @@ def about(request):
     return render(request,'pages/about.html')
 
 def studies(request):
-    # typeData = 'studies'
-    # Publish.objects.all().filter(type=typeData)
     context = None
-
-    # data = ['نشأة الإدارة وتطورها','الإصلاح الإداري المفهوم والأهداف','منهجية الإصلاح الإداري','ملاحظات على مداخل الإصلاح الإداري','تجربة الولايات المتحدة الأمريكية في الإصلاح الإداري','تجربة سنغافورا في الإصلاح الإداري']
-
+    query = request.GET.get('q')  # الحصول على الكلمة المفتاحية من الطلب
     data = Studies.objects.all()
-
+    # تصفية البيانات إذا كان هناك كلمة بحث
+    if query:
+        data = data.filter(
+            Q(subject__icontains=query)
+        )
     page = Paginator(data,10)
     page_list = request.GET.get('page')
     
     page = page.get_page(page_list)
     context = {
-        'page': page
+        'page': page,
+        'query': query,  # إضافة الكلمة المفتاحية للسياق لعرضها في القالب
     }
     return render(request,'pages/studies.html',context)
 

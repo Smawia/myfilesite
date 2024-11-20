@@ -69,7 +69,7 @@ bar.onclick = function () {
 }
 
 document.body.addEventListener("click", function (e) {
-    if (!e.target.classList.contains('toggle-menu')) {
+    if (!e.target.classList.contains('toggle-menu') && !e.target.classList.contains('phone')) {
         aside_bar.style.display = 'none';
         over.style.display = 'none';
     }
