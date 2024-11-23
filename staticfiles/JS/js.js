@@ -38,47 +38,56 @@ document.body.addEventListener("click", function (e) {
     }
 });
 
-show_ref.addEventListener('click', function () {
-    // الحصول على نمط العنصر
-    let res = getComputedStyle(all_ref);
-    let dis = res.height;
-
-    // التحقق من الكلاس وإعداد الطول بناءً على الحالة
+show_ref.onclick = function () {
+    // document.querySelector(".refrences").style.display = 'block';
+    res = getComputedStyle(all_ref);
+    dis = res.height;
+    console.log(dis);
     if (all_ref.classList.contains("jordan")) {
-        if (dis === '0px') {
+        console.log("jordan");
+        if (dis == '0px') {
+            console.log("jordan");
             all_ref.style.height = '160px';
-            show_ref.innerHTML = 'إخفاء المراجع';
-        } else {
-            all_ref.style.height = '0';
-            show_ref.innerHTML = 'إظهار المراجع';
+            show_ref.innerHTML = 'إخفاء المراجع'
         }
-    } else if (all_ref.classList.contains("eveloution")) {
-        if (dis === '0px') {
-            all_ref.style.height = '150px';
-            show_ref.innerHTML = 'إخفاء المراجع';
-        } else {
+        else {
             all_ref.style.height = '0';
-            show_ref.innerHTML = 'إظهار المراجع';
-        }
-    } else if (all_ref.classList.contains("legis")) {
-        if (dis === '0px') {
-            all_ref.style.height = '235px';
-            show_ref.innerHTML = 'إخفاء المراجع';
-        } else {
-            all_ref.style.height = '0';
-            show_ref.innerHTML = 'إظهار المراجع';
-        }
-    } else {
-        if (dis === '0px') {
-            all_ref.style.height = '310px';
-            show_ref.innerHTML = 'إخفاء المراجع';
-        } else {
-            all_ref.style.height = '0';
-            show_ref.innerHTML = 'إظهار المراجع';
+            show_ref.innerHTML = 'إظهار المراجع'
         }
     }
-});
+    else if (all_ref.classList.contains("eveloution")) {
+        if (dis == '0px') {
+            all_ref.style.height = '150px';
+            show_ref.innerHTML = 'إخفاء المراجع'
+        }
+        else {
+            all_ref.style.height = '0';
+            show_ref.innerHTML = 'إظهار المراجع'
+        }
+    }
 
+    else if (all_ref.classList.contains("legis")) {
+        if (dis == '0px') {
+            all_ref.style.height = '235px';
+            show_ref.innerHTML = 'إخفاء المراجع'
+        }
+        else {
+            all_ref.style.height = '0';
+            show_ref.innerHTML = 'إظهار المراجع'
+        }
+    }
+    else {
+        if (dis == '0px') {
+            all_ref.style.height = '310px';
+            show_ref.innerHTML = 'إخفاء المراجع'
+        }
+        else {
+            all_ref.style.height = '0';
+            show_ref.innerHTML = 'إظهار المراجع'
+        }
+    }
+
+}
 // جميع العناصر المستهدفة لتغيير حجم النص
 const elements = [
     ...document.querySelectorAll('.first-page .full-text p'),      // الفقرات
