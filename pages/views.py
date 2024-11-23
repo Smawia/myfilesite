@@ -20,7 +20,7 @@ def about(request):
 
 def studies(request):
     context = None
-    query = request.GET.get('q')  # الحصول على الكلمة المفتاحية من الطلب
+    query = request.GET.get('q', '')  # الحصول على الكلمة المفتاحية من الطلب
     data = Studies.objects.all()
     # تصفية البيانات إذا كان هناك كلمة بحث
     if query:

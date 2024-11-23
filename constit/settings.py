@@ -140,3 +140,6 @@ MEDIA_URL = '/media/'
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 # django_heroku.settings(locals())
+import mimetypes
+mimetypes.add_type("font/ttf", ".ttf", True)
+mimetypes.add_type("font/otf", ".otf", True)
