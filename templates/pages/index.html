@@ -197,6 +197,14 @@
 </div>
 <script>
     document.addEventListener('DOMContentLoaded', function () {
+        let counter = 1;
+        setInterval(function () {
+            document.getElementById('radio' + counter).checked = true;
+            counter++;
+            if (counter > 4) {
+                counter = 1;
+            }
+        }, 5000);
 
         let index_imgs = document.querySelectorAll(".show-studies-index .show-index-imgs .card img");
         let index_imgs2 = document.querySelectorAll(".show-studies-index .show-index-imgs .card img.stud");
@@ -206,13 +214,12 @@
                 index_imgs[1].style.width = '100%';
                 index_imgs[2].style.width = '100%';
             }
-        
+
             if (window.scrollY >= 500) {
                 index_imgs2[0].style.width = '100%';
                 index_imgs2[1].style.width = '100%';
                 index_imgs2[2].style.width = '100%';
             }
-        
             else {
                 head_page.style.cssText = "background-color: white;";
             }
