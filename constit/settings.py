@@ -66,6 +66,7 @@ TEMPLATES = [
                 'django.template.context_processors.request',
                 'django.contrib.auth.context_processors.auth',
                 'django.contrib.messages.context_processors.messages',
+                'pages.context_processors.static_version',  # أضف هذا السطر
             ],
         },
     },
@@ -129,7 +130,6 @@ STATICFILES_DIRS = [
     BASE_DIR / 'constit/static'
 ]
 
-# STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
 
 # media
 MEDIA_ROOT = BASE_DIR / 'media'

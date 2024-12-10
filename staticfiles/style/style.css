@@ -459,7 +459,7 @@ header .arrow {
 }
 
 .social-above-header #toggleMode {
-    font-family: 'CodecProBold', sans-serif;
+    font-family: 'Calibri';
     font-weight: bold;
     background-color: var(--button-bg-color);
     color: var(--button-text-color);
@@ -1879,7 +1879,7 @@ footer .final-p {
 
     footer .footer-information .footer-social img {
         width: 80px;
-        height: 43px;
+        height: 38px;
         margin-bottom: 14px;
         margin-top: 9px;
     }
@@ -1911,7 +1911,7 @@ footer .final-p {
 
     footer .footer-information .footer-social img {
         width: 100px;
-        height: 50px;
+        height: 40px;
         margin-bottom: 14px;
         margin-top: 12px;
     }
@@ -1942,7 +1942,7 @@ footer .final-p {
 
     footer .footer-information .footer-social img {
         width: 107px;
-        height: 58px;
+        height: 45px;
         margin-bottom: 14px;
         margin-top: 13px;
     }
@@ -1974,7 +1974,7 @@ footer .final-p {
 
     footer .footer-information .footer-social img {
         width: 130px;
-        height: 65px;
+        height: 50px;
         margin-bottom: 14px;
         margin-top: 20px;
     }
@@ -8017,8 +8017,9 @@ ul .aside-nested-list {
     border: none;
     margin-left: 5px;
     transition: 0.3s;
-    padding: 5px;
-    font-family: 'CodecProBold', sans-serif;
+    padding: 5px 8px;
+    font-family: 'Calibri';
+    border-radius: 12px;
 }
 
 .controls #increaseFont:hover,

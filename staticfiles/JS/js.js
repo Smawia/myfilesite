@@ -95,7 +95,8 @@ const elements = [
     ...document.querySelectorAll('.first-page .full-text ol'),     // القوائم المرتبة
     ...document.querySelectorAll('.first-page .full-text h2'),     // العناوين
     ...document.querySelectorAll('.special-title'),                // العناوين الخاصة
-    ...document.querySelectorAll('.special-title2')                // العناوين الخاصة 2
+    ...document.querySelectorAll('.special-title2'),
+    ...document.querySelectorAll('.e_yemen tbody tr td ol')                // العناوين الخاصة 2
 ];
 
 // تحديد الأزرار

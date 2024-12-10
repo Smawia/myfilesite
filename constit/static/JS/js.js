@@ -19,7 +19,7 @@ socialSpan.onclick = function () {
     socialSpan.innerHTML = '-';
     res2 = getComputedStyle(social);
     dis2 = res2.right;
-    if (dis2 == '10px') {
+    if (dis2 == '-55px') {
         socialSpan.innerHTML = '+';
     }
 }
@@ -95,7 +95,8 @@ const elements = [
     ...document.querySelectorAll('.first-page .full-text ol'),     // القوائم المرتبة
     ...document.querySelectorAll('.first-page .full-text h2'),     // العناوين
     ...document.querySelectorAll('.special-title'),                // العناوين الخاصة
-    ...document.querySelectorAll('.special-title2')                // العناوين الخاصة 2
+    ...document.querySelectorAll('.special-title2'),
+    ...document.querySelectorAll('.e_yemen tbody tr td')      
 ];
 
 // تحديد الأزرار
@@ -114,7 +115,7 @@ increaseButton.addEventListener('click', function () {
     if (fontSize < maxFontSize) { // تحقق أن الحجم أقل من الحد الأقصى
         fontSize += 2; // زيادة الحجم
         elements.forEach(function (el) {
-            el.style.fontSize = `${fontSize}px`;
+            el.style.setProperty('font-size', `${fontSize}px`, 'important');
         });
     }
 });
@@ -124,7 +125,7 @@ decreaseButton.addEventListener('click', function () {
     if (fontSize > minFontSize) { // تحقق أن الحجم أكبر من الحد الأدنى
         fontSize -= 2; // تقليل الحجم
         elements.forEach(function (el) {
-            el.style.fontSize = `${fontSize}px`;
+            el.style.setProperty('font-size', `${fontSize}px`, 'important');
         });
     }
 });

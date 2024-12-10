@@ -320,9 +320,10 @@ header ul li a:hover .arrow {
 
 header a i {
     position: relative;
-    right: 20px;
+    right: 58px;
     color: green;
-    font-size: 25px;
+    font-size: 16px;
+    top: 6px;
 }
 
 @media (min-width: 788px) and (max-width: 960px) {
@@ -459,7 +460,7 @@ header .arrow {
 }
 
 .social-above-header #toggleMode {
-    font-family: 'CodecProBold', sans-serif;
+    font-family: 'Calibri';
     font-weight: bold;
     background-color: var(--button-bg-color);
     color: var(--button-text-color);
@@ -483,7 +484,7 @@ header .arrow {
     }
 
     .social-above-header a i {
-        margin-right: 5px;
+        margin-right: 4px;
     }
 
     .social-above-header #toggleMode {
@@ -517,7 +518,7 @@ header .arrow {
     }
 
     .social-above-header a i {
-        margin-right: 10px;
+        margin-right: 4px;
         font-size: 17px;
     }
 
@@ -1879,14 +1880,14 @@ footer .final-p {
 
     footer .footer-information .footer-social img {
         width: 80px;
-        height: 43px;
+        height: 38px;
         margin-bottom: 14px;
         margin-top: 9px;
     }
 
     footer .footer-information .footer-social div i {
-        font-size: 12px;
-        margin-left: 5px;
+        font-size: 11px;
+        margin-left: -1px;
     }
 
     footer .final-p {
@@ -1911,7 +1912,7 @@ footer .final-p {
 
     footer .footer-information .footer-social img {
         width: 100px;
-        height: 50px;
+        height: 40px;
         margin-bottom: 14px;
         margin-top: 12px;
     }
@@ -1942,7 +1943,7 @@ footer .final-p {
 
     footer .footer-information .footer-social img {
         width: 107px;
-        height: 58px;
+        height: 45px;
         margin-bottom: 14px;
         margin-top: 13px;
     }
@@ -1974,9 +1975,8 @@ footer .final-p {
 
     footer .footer-information .footer-social img {
         width: 130px;
-        height: 65px;
-        margin-bottom: 14px;
-        margin-top: 20px;
+        height: 50px;
+        margin: 20px auto;
     }
 
     footer .final-p {
@@ -2000,7 +2000,7 @@ footer .final-p {
 }
 
 .alert-error {
-    background-color: red;
+    background-color: var(--fifth-color);
 }
 
 .alert-info {
@@ -2635,7 +2635,8 @@ table thead td {
 }
 
 .contactus .address i {
-    font-size: 20px;
+    font-size: 18px;
+    margin-left: 9px;
 }
 
 .contactus .address .two a {
@@ -6201,13 +6202,13 @@ input {
     display: flex;
     position: fixed;
     top: 40%;
-    right: -125px;
+    right: -275px;
     z-index: 100000;
     transition: 1s;
 }
 
 .social.social2 {
-    right: 10px;
+    right: -55px;
 }
 
 .social span {
@@ -6216,7 +6217,7 @@ input {
     background-color: var(--second-color);
     position: absolute;
     top: -24%;
-    left: -68px;
+    left: -94px;
     cursor: pointer;
     font-weight: bold;
     font-size: 20px;
@@ -6225,6 +6226,7 @@ input {
     padding-right: 155px;
     padding-left: 14px;
     box-sizing: border-box;
+    padding-right: 241px;
 }
 
 .social a:not(:first-of-type) {
@@ -8017,8 +8019,9 @@ ul .aside-nested-list {
     border: none;
     margin-left: 5px;
     transition: 0.3s;
-    padding: 5px;
-    font-family: 'CodecProBold', sans-serif;
+    padding: 5px 8px;
+    font-family: 'Calibri';
+    border-radius: 12px;
 }
 
 .controls #increaseFont:hover,
@@ -8084,7 +8087,7 @@ ul .aside-nested-list {
 .first-page .studies-flex a:visited,
 .contactus a:visited,
 .contactus a {
-    color: #B46C22;
+    color: #C8721A;
 
 }
 
@@ -8138,4 +8141,8 @@ header .phone {
 
 header .phone button {
     margin-right: 0;
+}
+
+.footer-social2 {
+    display: flex;
 }
