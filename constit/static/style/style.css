@@ -5,7 +5,7 @@
     --fourth-color: #5A70A2;
     --fifth-color: #C79C6F;
     /* ألوان الوضع الفاتح */
-    --bg-color: rgba(212, 207, 207, 0.318);
+    --bg-color: #f8f8f8;
     --text-color: #000000;
     --button-bg-color: #f0f0f0;
     --button-text-color: #000000;
@@ -320,7 +320,7 @@ header ul li a:hover .arrow {
 
 header a i {
     position: relative;
-    right: 58px;
+    right: 97px;
     color: green;
     font-size: 16px;
     top: 6px;
@@ -1844,7 +1844,7 @@ footer .final-p {
     margin-top: 10px;
 }
 
-@media (max-width: 550px) {
+@media (max-width: 630px) {
     footer .footer-information {
         flex-direction: column;
         padding: 50px 10px 10px;
@@ -1870,28 +1870,27 @@ footer .final-p {
     }
 
     footer .footer-information .first-text p {
-        font-size: 10px;
-        width: 200px;
+        font-size: 14px;
+        width: 223px;
     }
 
     footer .footer-information .contact-and-links .links ul {
-        font-size: 10px;
+        font-size: 14px;
     }
 
     footer .footer-information .footer-social img {
-        width: 80px;
-        height: 38px;
-        margin-bottom: 14px;
-        margin-top: 9px;
+        width: 75px;
+        height: auto;
+        margin: 8px auto 14px;
     }
 
     footer .footer-information .footer-social div i {
-        font-size: 11px;
-        margin-left: -1px;
+        font-size: 12px;
+        margin-left: 2px;
     }
 
     footer .final-p {
-        font-size: 10px;
+        font-size: 14px;
     }
 }
 
@@ -1901,20 +1900,19 @@ footer .final-p {
     }
 
     footer .footer-information .first-text p {
-        font-size: 10px;
-        width: 200px;
+        font-size: 14px;
+        width: 211px;
     }
 
     footer .footer-information .contact-and-links .links ul {
-        font-size: 10px;
-        line-height: 1.2;
+        font-size: 14px;
+        line-height: 2.1;
     }
 
     footer .footer-information .footer-social img {
         width: 100px;
-        height: 40px;
-        margin-bottom: 14px;
-        margin-top: 12px;
+        height: auto;
+        margin: 19px auto 14px;
     }
 
     footer .footer-information .footer-social div i {
@@ -1922,7 +1920,11 @@ footer .final-p {
     }
 
     footer .final-p {
-        font-size: 10px;
+        font-size: 14px;
+    }
+
+    footer .footer-information .first-text p.first-p {
+        margin-bottom: -9px !important;
     }
 }
 
@@ -1932,20 +1934,21 @@ footer .final-p {
     }
 
     footer .footer-information .first-text p {
-        font-size: 12px;
-        width: 200px;
+        font-size: 14px;
+        width: 227px;
     }
 
     footer .footer-information .contact-and-links .links ul {
-        font-size: 12px;
-        line-height: 0.8;
+        font-size: 14px;
+        line-height: 1.8;
     }
 
     footer .footer-information .footer-social img {
-        width: 107px;
-        height: 45px;
+        width: 115px;
+        height: auto;
         margin-bottom: 14px;
         margin-top: 13px;
+        margin: 14px auto;
     }
 
     footer .footer-information .footer-social div i {
@@ -1954,7 +1957,11 @@ footer .final-p {
     }
 
     footer .final-p {
-        font-size: 12px;
+        font-size: 14px;
+    }
+
+    footer .footer-information .first-text p.first-p {
+        margin-bottom: -9px !important;
     }
 }
 
@@ -1981,6 +1988,10 @@ footer .final-p {
 
     footer .final-p {
         font-size: 14px;
+    }
+
+    footer .footer-information .first-text p.first-p {
+        margin-bottom: -9px !important;
     }
 }
 
@@ -5699,7 +5710,8 @@ input {
     height: 100%;
     top: 0;
     left: 0;
-    background-color: #00000052;
+    background:
+        linear-gradient(to bottom, rgba(0, 0, 0, 0.16), rgba(0, 0, 0, 0) 43%, rgba(0, 0, 0, 0.3) 65%, rgba(0, 0, 0, 0)), radial-gradient(circle, rgba(0, 0, 0, 0) 20%, rgba(0, 0, 0, 0.41) 70%)
 }
 
 .slider .slides .slide img {
@@ -5870,7 +5882,7 @@ input {
     .navigation-auto {
         width: 90%;
         justify-content: center;
-        margin-top: 184px;
+        margin-top: 183px;
     }
 
     .navigation-auto div {
@@ -6154,7 +6166,7 @@ input {
         width: 90%;
         position: absolute;
         justify-content: center;
-        margin-top: 475px;
+        margin-top: 474px;
     }
 
     .navigation-auto div {
@@ -6217,7 +6229,7 @@ input {
     background-color: var(--second-color);
     position: absolute;
     top: -24%;
-    left: -94px;
+    left: -148px;
     cursor: pointer;
     font-weight: bold;
     font-size: 20px;

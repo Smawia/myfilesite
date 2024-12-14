@@ -4,7 +4,6 @@
     <div class="container">
         <div class="social-above-header">
             <div class="links">
-                <a href="https://www.linkedin.com/in/csr-yemen-858154340/" target="_blank"><i class="fab fa-linkedin"></i></a>
                 <a href="mailto:scresearchyemen@gmail.com" class="email"><i
                     class="fa-solid fa-envelope my-env foot-i" target="_blank"></i></a>
                     <a href="https://x.com/csrYemen" target="_blank"><i class="fab fa-twitter"></i></a>
@@ -12,14 +11,14 @@
                         class="fa-brands fa-whatsapp foot-i" target="_blank"></i></a>
                         <a href="https://t.me/constituenttele" target="_blank"><i class="fab fa-telegram"></i></a>
                         <a href="https://www.youtube.com/channel/UCnDXXEWOVbtYgwASbii_Frg" target="_blank"><i class="fab fa-youtube"></i></a>
-                        <a href="https://www.tiktok.com/@csryemen?lang=en" target="_blank"><i class="fab fa-tiktok"></i></a>
+                        
                         <a href="https://www.instagram.com/csryemen/" target="_blank"><i class="fab fa-instagram"></i></a>
                         <a href="https://www.facebook.com/profile.php?id=61556721602912" target="_blank"><i
                             class="fa-brands fa-facebook foot-i"></i></a>
                             
             </div>
             <button id="toggleMode">
-                <span id="icon">وضع النهار</span>
+                <span id="icon">فاتح</span>
             </button>
         </div>  
         
@@ -236,14 +235,11 @@
             <!-- start social media -->
             <div class="social">
                 <span>+</span>
-                <a href="https://www.linkedin.com/in/csr-yemen-858154340/" target="_blank"><i
-                    class="fab fa-linkedin" style="color: white !important;"></i></a>
                 <a href="mailto:scresearchyemen@gmail.com"><i class="fa-solid fa-envelope social-i" style="color: white !important;"></i></a>
                 <a href="https://x.com/csrYemen" target="_blank"><i class="fab fa-twitter" style="color: white !important;"></i></a>
                 <a href="https://api.whatsapp.com/send?phone=783222270"><i class="fa-brands fa-whatsapp social-i" style="color: white !important;"></i></a>
                 <a href="https://t.me/constituenttele" target="_blank"><i class="fab fa-telegram" style="color: white !important;"></i></a>
                 <a href="https://www.youtube.com/channel/UCnDXXEWOVbtYgwASbii_Frg" target="_blank"><i class="fab fa-youtube" style="color: white !important;"></i></a>
-                <a href="https://www.tiktok.com/@csryemen?lang=en" target="_blank"><i class="fab fa-tiktok" style="color: white !important;"></i></a>
                 <a href="https://www.instagram.com/csryemen/" target="_blank"><i class="fab fa-instagram" style="color: white !important;"></i></a>
                 <a href="https://www.facebook.com/profile.php?id=61556721602912" target="_blank"><i class="fa-brands fa-facebook social-i" style="color: white !important;"></i></a>
             </div>
@@ -262,10 +258,10 @@
         const savedMode = localStorage.getItem('theme');
         if (savedMode) {
             body.classList.add(savedMode);
-            icon.textContent = savedMode === 'dark-mode' ? 'وضع الليل' : 'وضع النهار'; // تغيير النص بناءً على الوضع المحفوظ        
+            icon.textContent = savedMode === 'dark-mode' ? 'داكن' : 'فاتح'; // تغيير النص بناءً على الوضع المحفوظ        
             } else {
             // إذا لم يكن هناك وضع محفوظ، تعيين الوضع الفاتح افتراضيًا
-            icon.textContent = 'وضع النهار'; 
+            icon.textContent = 'فاتح'; 
         }
         
         // تبديل الوضع عند النقر على الزر
@@ -273,11 +269,11 @@
             if (body.classList.contains('dark-mode')) {
                 body.classList.remove('dark-mode');
                 localStorage.setItem('theme', ''); // حفظ الوضع الفاتح
-                icon.textContent = 'وضع النهار'; // تغيير النص إلى الوضع الفاتح
+                icon.textContent = 'فاتح'; // تغيير النص إلى الوضع الفاتح
             } else {
                 body.classList.add('dark-mode');
                 localStorage.setItem('theme', 'dark-mode'); // حفظ الوضع الداكن
-                icon.textContent = 'وضع الليل'; // تغيير النص إلى الوضع الداكن
+                icon.textContent = 'داكن'; // تغيير النص إلى الوضع الداكن
             }
         });
     
