@@ -18,7 +18,7 @@
                             
             </div>
             <button id="toggleMode">
-                <span id="icon">فاتح</span>
+                <span id="icon" class="fas fa-sun"></span>
             </button>
         </div>  
         
@@ -56,7 +56,7 @@
                         {% else %}
                         class="nav-a"
                         {% endif %}
-                        >اصدارات المركز<i class="fa-solid fa-angle-down arrow spe-arrow active"></i></a>
+                        >إصدارات المركز<i class="fa-solid fa-angle-down arrow spe-arrow active"></i></a>
                         <ul class="ul nested-list">
                             <li><a href="{% url 'studies' %}">الدراسات والبحوث</a></li>
                             <li><a href="{% url 'books' %}">الكتب</a></li>
@@ -160,7 +160,7 @@
                         {% else %}
                         class="js-a"
                         {% endif %}
-                        >اصدارات المركز</a>
+                        >إصدارات المركز</a>
                         <ul class="aside-ul aside-nested-list">
                             <li><a href="{% url 'studies' %}">الدراسات والبحوث</a></li>
                             <li><a href="{% url 'books' %}">الكتب</a></li>
@@ -252,33 +252,41 @@
     document.addEventListener('DOMContentLoaded', function () {
         const toggleButton = document.getElementById('toggleMode');
         const body = document.body;
-        const icon = document.getElementById('icon');  // تحديد الأيقونة
-        
+        const firstPage = document.querySelector('.first-page'); // تحديد العنصر
+        const icon = document.getElementById('icon'); // تحديد الأيقونة
+    
         // استرجاع الوضع المحفوظ من localStorage
         const savedMode = localStorage.getItem('theme');
-        if (savedMode) {
-            body.classList.add(savedMode);
-            icon.textContent = savedMode === 'dark-mode' ? 'داكن' : 'فاتح'; // تغيير النص بناءً على الوضع المحفوظ        
-            } else {
+        if (savedMode === 'dark-mode') {
+            body.classList.add('dark-mode'); // تطبيق الوضع الغامق على body
+            if (firstPage) {
+                firstPage.classList.add('dark-mode'); // تطبيق الوضع الغامق على .first-page
+            }
+            icon.className = 'fas fa-sun'; // تغيير الأيقونة إلى الشمس
+        } else {
             // إذا لم يكن هناك وضع محفوظ، تعيين الوضع الفاتح افتراضيًا
-            icon.textContent = 'فاتح'; 
+            icon.className = 'fas fa-moon'; 
         }
-        
+    
         // تبديل الوضع عند النقر على الزر
         toggleButton.addEventListener('click', function () {
             if (body.classList.contains('dark-mode')) {
+                // إزالة الوضع الغامق
                 body.classList.remove('dark-mode');
+                if (firstPage) {
+                    firstPage.classList.remove('dark-mode'); // إزالة الفئة من .first-page
+                }
                 localStorage.setItem('theme', ''); // حفظ الوضع الفاتح
-                icon.textContent = 'فاتح'; // تغيير النص إلى الوضع الفاتح
+                icon.className = 'fas fa-moon'; // تغيير الأيقونة إلى الهلال
             } else {
+                // إضافة الوضع الغامق
                 body.classList.add('dark-mode');
-                localStorage.setItem('theme', 'dark-mode'); // حفظ الوضع الداكن
-                icon.textContent = 'داكن'; // تغيير النص إلى الوضع الداكن
+                if (firstPage) {
+                    firstPage.classList.add('dark-mode'); // تطبيق الفئة على .first-page
+                }
+                localStorage.setItem('theme', 'dark-mode'); // حفظ الوضع الغامق
+                icon.className = 'fas fa-sun'; // تغيير الأيقونة إلى الشمس
             }
         });
-    
-    });
-    
-    
-    
+    });          
  </script>
