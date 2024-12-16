@@ -10,43 +10,44 @@
         content="المركز التأسيسي للدراسات والبحوث مؤسسة بحثية فكرية تطويرية مستقلة غير ربحية، تختص بالعلوم الإنسانية (الإدارية والسياسية والقانونية والاقتصادية والاجتماعية والتنموية والاتصالية والرقمية). يقدم دراسات وأبحاث علمية أكاديمية واستشارية وبرامج تدريبية نوعية في المجالات المشار إليها للدولة والمجتمع بكافة مكوناته." />
     <meta name="keywords" content="text,">
 
-    <meta rel="sitemap" type="application/xml" content="sitemap.xml" />
-
     {% block robots %}
     <meta name="robots" content="index, follow">
     {% endblock %}
 
 
-    <meta name="googlebot" content="index/follow" />
+    <meta name="googlebot" content="index, follow">
 
     <meta name="theme-color" content="default" />
-
-
     <!-- Schema.org markup -->
-    <meta itemprop="name" content="text" />
-    <!--  119 character -->
-    <meta itemprop="description" content="text" />
-    <meta itemprop="image" content="image.png" />
-
+    <script type="application/ld+json">
+        {
+            "@context": "https://schema.org",
+            "@type": "WebSite",
+            "name": "المركز التأسيسي للدراسات والبحوث",
+            "url": "http://csr-yemen.com/",
+            "potentialAction": {
+                "@type": "SearchAction",
+                "target": "http://csr-yemen.com/search?q={search_term_string}",
+                "query-input": "required name=search_term_string"
+            }
+        }
+    </script>
     <!-- markup for facebook -->
     <meta property="og:type" content="website" />
     <meta property="og:title" content="title" />
     <meta property="og:url" content="http://csr-yemen.com" />
     <meta property="og:site_name" content="aimen" />
-    <meta property="og:image" content="image.png" />
     <meta property="og:description" content="text" />
 
 
     <!-- markup for twitter -->
-    <meta name="twitter:card" content="image.jpg" />
     <meta name="twitter:title" content="title" />
     <meta name="twitter:description" content="text" />
     <meta name="twitter:creator" content="hamzarachid.com" />
-    <meta name="twitter:image" content="image.png" />
     <link rel="stylesheet" href="{% static 'style/style.css' %}?v={{ static_version }}">
     <link rel="stylesheet" href="{% static 'style/all.min.css' %}?v={{ static_version }}">
 
-    <title>{% block title %}المركز التأسيسي{% endblock %}</title>
+    <title>{% block title %}المركز التأسيسي للدراسات والبحوث{% endblock %}</title>
     <link rel="icon" type="image/x-icon" href="{% static 'imgs/icon.ico' %}">
 </head>
 
@@ -56,6 +57,19 @@
     {% endblock %}
     {% include 'partials/_footer.html' %}
     <script src="{% static 'JS/js.js' %}?v={{ static_version }}"></script>
+    <script type="application/ld+json">
+        {
+            "@context": "https://schema.org",
+            "@type": "WebSite",
+            "name": "المركز التأسيسي للدراسات والبحوث",
+            "url": "http://csr-yemen.com/",
+            "potentialAction": {
+                "@type": "SearchAction",
+                "target": "http://csr-yemen.com/search?q={search_term_string}",
+                "query-input": "required name=search_term_string"
+            }
+        }
+        </script>
 </body>
 
 </html>

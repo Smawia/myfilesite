@@ -253,7 +253,9 @@
         const toggleButton = document.getElementById('toggleMode');
         const body = document.body;
         const firstPage = document.querySelector('.first-page'); // تحديد العنصر
+
         const icon = document.getElementById('icon'); // تحديد الأيقونة
+        const contactLinks = document.querySelectorAll('.contactus a'); // تحديد روابط .contactus
     
         // استرجاع الوضع المحفوظ من localStorage
         const savedMode = localStorage.getItem('theme');
@@ -263,9 +265,11 @@
                 firstPage.classList.add('dark-mode'); // تطبيق الوضع الغامق على .first-page
             }
             icon.className = 'fas fa-sun'; // تغيير الأيقونة إلى الشمس
+            contactLinks.forEach(link => link.classList.add('dark-mode'));
         } else {
             // إذا لم يكن هناك وضع محفوظ، تعيين الوضع الفاتح افتراضيًا
             icon.className = 'fas fa-moon'; 
+            contactLinks.forEach(link => link.classList.remove('dark-mode'));
         }
     
         // تبديل الوضع عند النقر على الزر
@@ -276,6 +280,7 @@
                 if (firstPage) {
                     firstPage.classList.remove('dark-mode'); // إزالة الفئة من .first-page
                 }
+                contactLinks.forEach(link => link.classList.remove('dark-mode'));
                 localStorage.setItem('theme', ''); // حفظ الوضع الفاتح
                 icon.className = 'fas fa-moon'; // تغيير الأيقونة إلى الهلال
             } else {
@@ -284,6 +289,7 @@
                 if (firstPage) {
                     firstPage.classList.add('dark-mode'); // تطبيق الفئة على .first-page
                 }
+                contactLinks.forEach(link => link.classList.add('dark-mode'));
                 localStorage.setItem('theme', 'dark-mode'); // حفظ الوضع الغامق
                 icon.className = 'fas fa-sun'; // تغيير الأيقونة إلى الشمس
             }

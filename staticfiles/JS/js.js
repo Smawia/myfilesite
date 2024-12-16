@@ -9,8 +9,52 @@ let card = document.querySelectorAll(".card");
 let head_page = document.querySelector(".head-page");
 let nav_a = document.querySelectorAll(".nav-a");
 let nav_i = document.querySelectorAll(".arrow");
-let show_ref = document.querySelector(".show-references");
-let all_ref = document.querySelector(".refrences");
+let show_refs = document.querySelectorAll(".container > .show-references , .nested-ref > .show-references");
+let all_refs = document.querySelectorAll(".container > .refrences , .nested-ref > .refrences");
+
+// تأكد من أن هناك تساويًا بين عدد الأزرار والمراجع
+if (show_refs.length !== all_refs.length) {
+    console.error("عدد العناصر غير متساوٍ بين show_refs و all_refs!");
+} else {
+    show_refs.forEach((show_ref, index) => {
+        const all_ref = all_refs[index]; // المرجع المرتبط بنفس الفهرس
+        
+        show_ref.onclick = function () {
+            // الحصول على الأنماط الحالية للعنصر
+            const res = getComputedStyle(all_ref);
+            const dis = res.height;
+
+            // تخزين ارتفاعات المراجع بناءً على الكلاس
+            const heights = {
+                "jordan": "160px",
+                "eveloution": "150px",
+                "legis": "235px"
+            };
+
+            // العثور على الكلاس المتطابق
+            let matchedClass = null;
+            for (const cls of all_ref.classList) {
+                if (heights[cls]) {
+                    matchedClass = cls;
+                    break;
+                }
+            }
+
+            // تحديد الارتفاع الجديد بناءً على الكلاس أو القيمة الافتراضية
+            const newHeight = matchedClass ? heights[matchedClass] : "310px";
+
+            // تبديل حالة العرض
+            if (dis === "0px") {
+                all_ref.style.height = newHeight;
+                show_ref.innerHTML = "إخفاء المراجع";
+            } else {
+                all_ref.style.height = "0";
+                show_ref.innerHTML = "إظهار المراجع";
+            }
+        };
+    });
+}
+
 let social = document.querySelector(".social");
 let socialSpan = document.querySelector(".social span");
 
@@ -19,7 +63,7 @@ socialSpan.onclick = function () {
     socialSpan.innerHTML = '-';
     res2 = getComputedStyle(social);
     dis2 = res2.right;
-    if (dis2 == '10px') {
+    if (dis2 == '-55px') {
         socialSpan.innerHTML = '+';
     }
 }
@@ -38,56 +82,6 @@ document.body.addEventListener("click", function (e) {
     }
 });
 
-show_ref.onclick = function () {
-    // document.querySelector(".refrences").style.display = 'block';
-    res = getComputedStyle(all_ref);
-    dis = res.height;
-    console.log(dis);
-    if (all_ref.classList.contains("jordan")) {
-        console.log("jordan");
-        if (dis == '0px') {
-            console.log("jordan");
-            all_ref.style.height = '160px';
-            show_ref.innerHTML = 'إخفاء المراجع'
-        }
-        else {
-            all_ref.style.height = '0';
-            show_ref.innerHTML = 'إظهار المراجع'
-        }
-    }
-    else if (all_ref.classList.contains("eveloution")) {
-        if (dis == '0px') {
-            all_ref.style.height = '150px';
-            show_ref.innerHTML = 'إخفاء المراجع'
-        }
-        else {
-            all_ref.style.height = '0';
-            show_ref.innerHTML = 'إظهار المراجع'
-        }
-    }
-
-    else if (all_ref.classList.contains("legis")) {
-        if (dis == '0px') {
-            all_ref.style.height = '235px';
-            show_ref.innerHTML = 'إخفاء المراجع'
-        }
-        else {
-            all_ref.style.height = '0';
-            show_ref.innerHTML = 'إظهار المراجع'
-        }
-    }
-    else {
-        if (dis == '0px') {
-            all_ref.style.height = '310px';
-            show_ref.innerHTML = 'إخفاء المراجع'
-        }
-        else {
-            all_ref.style.height = '0';
-            show_ref.innerHTML = 'إظهار المراجع'
-        }
-    }
-
-}
 // جميع العناصر المستهدفة لتغيير حجم النص
 const elements = [
     ...document.querySelectorAll('.first-page .full-text p'),      // الفقرات
@@ -96,7 +90,7 @@ const elements = [
     ...document.querySelectorAll('.first-page .full-text h2'),     // العناوين
     ...document.querySelectorAll('.special-title'),                // العناوين الخاصة
     ...document.querySelectorAll('.special-title2'),
-    ...document.querySelectorAll('.e_yemen tbody tr td ol')                // العناوين الخاصة 2
+    ...document.querySelectorAll('.e_yemen tbody tr td')      
 ];
 
 // تحديد الأزرار
@@ -115,7 +109,7 @@ increaseButton.addEventListener('click', function () {
     if (fontSize < maxFontSize) { // تحقق أن الحجم أقل من الحد الأقصى
         fontSize += 2; // زيادة الحجم
         elements.forEach(function (el) {
-            el.style.fontSize = `${fontSize}px`;
+            el.style.setProperty('font-size', `${fontSize}px`, 'important');
         });
     }
 });
@@ -125,7 +119,7 @@ decreaseButton.addEventListener('click', function () {
     if (fontSize > minFontSize) { // تحقق أن الحجم أكبر من الحد الأدنى
         fontSize -= 2; // تقليل الحجم
         elements.forEach(function (el) {
-            el.style.fontSize = `${fontSize}px`;
+            el.style.setProperty('font-size', `${fontSize}px`, 'important');
         });
     }
 });

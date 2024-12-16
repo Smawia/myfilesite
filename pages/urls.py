@@ -1,5 +1,8 @@
 from django.urls import path
 from . import views
+from django.contrib.sitemaps.views import sitemap
+from .sitemaps import StaticViewSitemap
+
 
 urlpatterns = [
     path('',views.index,name='index'),
@@ -56,4 +59,11 @@ urlpatterns = [
     path('InformationCommunicationsTechnologyInYemen',views.information_and_communications_technology_in_Yemen,name='information_and_communications_technology_in_Yemen'),
     path('ImplementingEgovernmentInYemen',views.implementing_egovernment_in_Yemen,name='implementing_e-government_in_Yemen'),
     path('FutureEGovernmentYemen',views.future_of_eGovernment_Yemen,name='future_of_eGovernment_Yemen'),
+]
+sitemaps = {
+    'static': StaticViewSitemap,
+}
+
+urlpatterns += [
+    path('sitemap.xml', sitemap, {'sitemaps': sitemaps}, name='sitemap'),
 ]

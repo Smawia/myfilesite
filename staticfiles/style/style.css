@@ -5,7 +5,7 @@
     --fourth-color: #5A70A2;
     --fifth-color: #C79C6F;
     /* ألوان الوضع الفاتح */
-    --bg-color: rgba(212, 207, 207, 0.318);
+    --bg-color: #f8f8f8;
     --text-color: #000000;
     --button-bg-color: #f0f0f0;
     --button-text-color: #000000;
@@ -18,22 +18,28 @@ html {
 
 @font-face {
     font-family: 'Calibri Bold';
-    src: url('/static/fonts/calibri-bold.ttf') format('truetype');
+    src: url('/static/fonts/calibri-bold.ttf') format('truetype'),
+         url('/static/fonts/calibri-bold.woff') format('woff'),
+         url('/static/fonts/calibri-bold.woff2') format('woff2');
 }
 
 @font-face {
-    font-family: 'Calibri Italic';
-    src: url('/static/fonts/calibri-italic.ttf') format('truetype');
+    font-family: 'Calibri Light';
+    src: 
+         url('/static/fonts/calibri-light.woff') format('woff'),
+         url('/static/fonts/calibri-light.woff2') format('woff2');
 }
 
 @font-face {
     font-family: 'Calibri Regular';
-    src: url('/static/fonts/calibri-regular.ttf') format('truetype');
+    src: url('/static/fonts/calibri-regular.ttf') format('truetype'),
 }
 
 @font-face {
     font-family: 'Calibri Bold Italic';
-    src: url('/static/fonts/calibri-bold-italic.ttf') format('truetype');
+    src: url('/static/fonts/calibri-bold-italic.ttf') format('truetype'),
+         url('/static/fonts/calibri-bold-italic.woff') format('woff'),
+         url('/static/fonts/calibri-bold-italic.woff2') format('woff2');
 }
 
 @font-face {
@@ -44,6 +50,19 @@ html {
 @font-face {
     font-family: 'CodecPro Regular';
     src: url('/static/fonts/CodecPro-Regular.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: "Calibri";
+    src: url("/static/fonts/a78cfad3beb089a6ce86d4e280fa270b.eot");
+    src: url("/static/fonts/a78cfad3beb089a6ce86d4e280fa270b.eot?#iefix") format("embedded-opentype"),
+         url("/static/fonts/a78cfad3beb089a6ce86d4e280fa270b.woff") format("woff"),
+         url("/static/fonts/a78cfad3beb089a6ce86d4e280fa270b.woff2") format("woff2"),
+         url("/static/fonts/a78cfad3beb089a6ce86d4e280fa270b.ttf") format("truetype"),
+         url("/static/fonts/a78cfad3beb089a6ce86d4e280fa270b.svg#Calibri") format("svg");
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
 }
 
 body.dark-mode {
@@ -65,32 +84,6 @@ body {
     color: var(--text-color);
     transition: background-color 0.3s, color 0.3s;
 }
-
-
-/* @media (max-width: 574px) {
-    body {
-        font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif';
-
-    }
-}
-
-@media (min-width: 575px) {
-    body {
-        font-family: 'Calibri';
-    }
-}
-
-@media (min-width: 768px) {
-    body {
-        font-family: 'Calibri';
-    }
-}
-
-@media (min-width: 992px) {
-    body {
-        font-family: 'Calibri';
-    }
-} */
 
 /* start header */
 header {
@@ -320,9 +313,10 @@ header ul li a:hover .arrow {
 
 header a i {
     position: relative;
-    right: 20px;
+    right: 97px;
     color: green;
-    font-size: 25px;
+    font-size: 16px;
+    top: 6px;
 }
 
 @media (min-width: 788px) and (max-width: 960px) {
@@ -483,12 +477,13 @@ header .arrow {
     }
 
     .social-above-header a i {
-        margin-right: 5px;
+        margin-right: 4px;
     }
 
     .social-above-header #toggleMode {
         padding: 3px 4px;
         font-size: 12px;
+        width: 40px;
     }
 }
 
@@ -507,6 +502,7 @@ header .arrow {
     .social-above-header #toggleMode {
         padding: 6px 12px;
         font-size: 14px;
+        width: 40px;
     }
 }
 
@@ -517,13 +513,14 @@ header .arrow {
     }
 
     .social-above-header a i {
-        margin-right: 10px;
+        margin-right: 4px;
         font-size: 17px;
     }
 
     .social-above-header #toggleMode {
         padding: 6px 17px;
         font-size: 15px;
+        width: 50px;
     }
 }
 
@@ -531,6 +528,7 @@ header .arrow {
     .social-above-header #toggleMode {
         padding: 6px 8px;
         font-size: 15px;
+        width: 70px;
     }
 }
 
@@ -876,7 +874,7 @@ header .arrow {
 
 @media (max-width: 574px) {
     .points {
-        width: calc(100% - 30px);
+        width: calc(100%);
         flex-direction: column;
         box-sizing: border-box;
     }
@@ -942,7 +940,6 @@ header .arrow {
 }
 
 .points .left {
-    padding: 10px;
     margin-left: 40px;
     position: relative;
 }
@@ -1836,6 +1833,11 @@ footer .footer-information .footer-social div i {
     font-size: 15px;
 }
 
+footer hr {
+    color: gray;
+    opacity: 0.5;
+}
+
 footer .final-p {
     text-align: center;
     color: white;
@@ -1843,7 +1845,7 @@ footer .final-p {
     margin-top: 10px;
 }
 
-@media (max-width: 550px) {
+@media (max-width: 630px) {
     footer .footer-information {
         flex-direction: column;
         padding: 50px 10px 10px;
@@ -1869,28 +1871,27 @@ footer .final-p {
     }
 
     footer .footer-information .first-text p {
-        font-size: 10px;
-        width: 200px;
+        font-size: 14px;
+        width: 280px;
     }
 
     footer .footer-information .contact-and-links .links ul {
-        font-size: 10px;
+        font-size: 14px;
     }
 
     footer .footer-information .footer-social img {
-        width: 80px;
-        height: 38px;
-        margin-bottom: 14px;
-        margin-top: 9px;
+        width: 90px;
+        height: auto;
+        margin: 8px auto 14px;
     }
 
     footer .footer-information .footer-social div i {
         font-size: 12px;
-        margin-left: 5px;
+        margin-left: 2px;
     }
 
     footer .final-p {
-        font-size: 10px;
+        font-size: 12px;
     }
 }
 
@@ -1900,20 +1901,19 @@ footer .final-p {
     }
 
     footer .footer-information .first-text p {
-        font-size: 10px;
-        width: 200px;
+        font-size: 14px;
+        width: 211px;
     }
 
     footer .footer-information .contact-and-links .links ul {
-        font-size: 10px;
-        line-height: 1.2;
+        font-size: 14px;
+        line-height: 2.1;
     }
 
     footer .footer-information .footer-social img {
         width: 100px;
-        height: 40px;
-        margin-bottom: 14px;
-        margin-top: 12px;
+        height: auto;
+        margin: 19px auto 14px;
     }
 
     footer .footer-information .footer-social div i {
@@ -1921,7 +1921,11 @@ footer .final-p {
     }
 
     footer .final-p {
-        font-size: 10px;
+        font-size: 12px;
+    }
+
+    footer .footer-information .first-text p.first-p {
+        margin-bottom: -9px !important;
     }
 }
 
@@ -1931,20 +1935,21 @@ footer .final-p {
     }
 
     footer .footer-information .first-text p {
-        font-size: 12px;
-        width: 200px;
+        font-size: 14px;
+        width: 227px;
     }
 
     footer .footer-information .contact-and-links .links ul {
-        font-size: 12px;
-        line-height: 0.8;
+        font-size: 14px;
+        line-height: 1.8;
     }
 
     footer .footer-information .footer-social img {
-        width: 107px;
-        height: 45px;
+        width: 115px;
+        height: auto;
         margin-bottom: 14px;
         margin-top: 13px;
+        margin: 14px auto;
     }
 
     footer .footer-information .footer-social div i {
@@ -1953,7 +1958,11 @@ footer .final-p {
     }
 
     footer .final-p {
-        font-size: 12px;
+        font-size: 14px;
+    }
+
+    footer .footer-information .first-text p.first-p {
+        margin-bottom: -9px !important;
     }
 }
 
@@ -1974,13 +1983,16 @@ footer .final-p {
 
     footer .footer-information .footer-social img {
         width: 130px;
-        height: 50px;
-        margin-bottom: 14px;
-        margin-top: 20px;
+        height: auto;
+        margin: 20px auto;
     }
 
     footer .final-p {
         font-size: 14px;
+    }
+
+    footer .footer-information .first-text p.first-p {
+        margin-bottom: -9px !important;
     }
 }
 
@@ -2000,7 +2012,7 @@ footer .final-p {
 }
 
 .alert-error {
-    background-color: red;
+    background-color: var(--fifth-color);
 }
 
 .alert-info {
@@ -2635,7 +2647,8 @@ table thead td {
 }
 
 .contactus .address i {
-    font-size: 20px;
+    font-size: 18px;
+    margin-left: 9px;
 }
 
 .contactus .address .two a {
@@ -2645,6 +2658,9 @@ table thead td {
 
 
 @media (max-width: 574px) {
+    .contactus {
+        padding: 10px 0;
+    }
     .contactus h3 {
         font-size: 15px;
     }
@@ -2675,14 +2691,23 @@ table thead td {
         padding: 3px 8px !important;
         font-size: 16px;
     }
+    .contactus .address {
+        margin-top: 10px;
+    }
 
     .contactus .address p {
         /* text-align: center; */
-        font-size: 20px;
+        font-size: 14px;
+    }
+    .contactus .address i {
+        font-size: 13px !important;
     }
 }
 
 @media (min-width: 575px) {
+    .contactus {
+        padding: 10px 0;
+    }
     .contactus h3 {
         font-size: 15px;
     }
@@ -2714,13 +2739,23 @@ table thead td {
         font-size: 16px;
     }
 
+    .contactus .address {
+        margin-top: 10px;
+    }
+
     .contactus .address p {
         /* text-align: center; */
-        font-size: 18px;
+        font-size: 16px;
+    }
+    .contactus .address i {
+        font-size: 14px !important;
     }
 }
 
 @media (min-width: 768px) {
+    .contactus {
+        padding: 20px 0;
+    }
     .contactus h3 {
         font-size: 23px;
     }
@@ -2756,7 +2791,10 @@ table thead td {
 
     .contactus .address p {
         /* text-align: center; */
-        font-size: 20px;
+        font-size: 18px;
+    }
+    .contactus .address i {
+        font-size: 16px !important;
     }
 }
 
@@ -3487,13 +3525,11 @@ textarea {
 /* Track */
 ::-webkit-scrollbar-track {
     box-shadow: inset 0 0 5px grey;
-    border-radius: 10px;
 }
 
 /* Handle */
 ::-webkit-scrollbar-thumb {
     background: var(--fourth-color);
-    border-radius: 10px;
 }
 
 /* end styling scrollbar */
@@ -3647,6 +3683,13 @@ input {
     box-shadow: 1px 1px 5px silver;
     padding: 20px;
     position: relative;
+    background-color: white;
+}
+
+/* الوضع الغامق */
+.first-page.dark-mode {
+    background-color: #121212;
+    /* لون غامق */
 }
 
 .first-page.news {
@@ -4010,6 +4053,7 @@ input {
 
     .first-page .full-text p {
         font-size: 14px;
+        font-family: 'Calibri' !important;
     }
 
     .first-page .full-text ul,
@@ -4018,6 +4062,7 @@ input {
         margin-top: 0;
         margin-bottom: 0;
         padding-right: 20px;
+        font-family: 'Calibri' !important;
     }
 }
 
@@ -4162,16 +4207,36 @@ input {
     width: 70%;
     margin: 20px 45px;
     font-family: 'Calibri';
-    height: 0;
+    height: 310px;
     overflow: auto;
     border-radius: 12px;
     transition: 1s;
+}
+
+.refrences.jordan {
+    height: 160px;
+}
+
+.refrences.eveloution {
+    height: 150px;
+}
+
+.refrences.legis {
+    height: 253px;
 }
 
 .refrences .first-ref-info {
     background-color: var(--second-color);
     padding: 1px 9px;
     color: white;
+}
+
+.container>.show-references {
+    display: block;
+}
+
+.container>.refrences {
+    display: block;
 }
 
 .refrences .first-ref-info h2 {
@@ -4262,8 +4327,16 @@ input {
     }
 
     .refrences {
-        width: 90%;
+        width: 100%;
         margin: 10px 0 !important;
+    }
+
+    .container>.show-references {
+        display: none;
+    }
+
+    .container>.refrences {
+        display: none;
     }
 
     .refrences .first-ref-info h2 {
@@ -5698,7 +5771,9 @@ input {
     height: 100%;
     top: 0;
     left: 0;
-    background-color: #00000052;
+    background:
+        linear-gradient(to bottom, rgba(0, 0, 0, 0.30), rgba(0, 0, 0, 0) 30%, rgba(0, 0, 0, 0.5)),
+        linear-gradient(to top, rgba(0, 0, 0, 0.30), rgba(0, 0, 0, 0) 40%, rgba(0, 0, 0, 0.5));
 }
 
 .slider .slides .slide img {
@@ -5869,7 +5944,7 @@ input {
     .navigation-auto {
         width: 90%;
         justify-content: center;
-        margin-top: 184px;
+        margin-top: 183px;
     }
 
     .navigation-auto div {
@@ -6153,7 +6228,7 @@ input {
         width: 90%;
         position: absolute;
         justify-content: center;
-        margin-top: 475px;
+        margin-top: 474px;
     }
 
     .navigation-auto div {
@@ -6201,13 +6276,13 @@ input {
     display: flex;
     position: fixed;
     top: 40%;
-    right: -125px;
+    right: -275px;
     z-index: 100000;
     transition: 1s;
 }
 
 .social.social2 {
-    right: 10px;
+    right: -55px;
 }
 
 .social span {
@@ -6216,7 +6291,7 @@ input {
     background-color: var(--second-color);
     position: absolute;
     top: -24%;
-    left: -68px;
+    left: -148px;
     cursor: pointer;
     font-weight: bold;
     font-size: 20px;
@@ -6225,6 +6300,7 @@ input {
     padding-right: 155px;
     padding-left: 14px;
     box-sizing: border-box;
+    padding-right: 241px;
 }
 
 .social a:not(:first-of-type) {
@@ -7068,7 +7144,7 @@ input:focus {
     }
 
     .show-studies-index .show-index-imgs .card img {
-        width: 0;
+        width: 100%;
         height: 180px !important;
         max-height: 180px !important;
     }
@@ -7103,7 +7179,7 @@ input:focus {
     }
 
     .show-studies-index .show-index-imgs .card img {
-        width: 0;
+        width: 100%;
         height: 240px !important;
         max-height: 240px !important;
     }
@@ -7133,7 +7209,7 @@ input:focus {
     }
 
     .show-studies-index .show-index-imgs .card img {
-        width: 0;
+        width: 100%;
         height: 240px !important;
         max-height: 240px !important;
     }
@@ -7163,7 +7239,7 @@ input:focus {
     }
 
     .show-studies-index .show-index-imgs .card img {
-        width: 0;
+        width: 100%;
         height: 300px !important;
         max-height: 300px !important;
     }
@@ -7683,10 +7759,15 @@ ul .aside-nested-list {
     display: block;
     margin-bottom: 10px;
     margin-top: 10px;
+    color: gray;
 }
 
 .studies-flex {
     display: flex;
+}
+
+.studies-flex .nested-ref {
+    display: none;
 }
 
 .show-some-studies {
@@ -7731,6 +7812,10 @@ ul .aside-nested-list {
         flex-direction: column;
     }
 
+    .studies-flex .nested-ref {
+        display: block;
+    }
+
     .show-some-studies {
         width: 100%;
     }
@@ -7758,6 +7843,11 @@ ul .aside-nested-list {
         max-height: 150px;
         display: block;
         margin: 0 auto;
+    }
+
+    .date-info {
+        margin-top: 20px;
+        font-size: 12px;
     }
 }
 
@@ -7795,6 +7885,11 @@ ul .aside-nested-list {
         max-height: 169px;
         display: block;
         margin: 0 auto;
+    }
+
+    .date-info {
+        margin-top: 20px;
+        font-size: 14px;
     }
 }
 
@@ -7841,6 +7936,12 @@ ul .aside-nested-list {
         width: 100%;
         max-height: 100%;
     }
+
+    .date-info {
+        margin-bottom: 10px;
+        margin-top: 10px;
+        font-size: 16px;
+    }
 }
 
 @media (min-width: 992px) {
@@ -7882,6 +7983,12 @@ ul .aside-nested-list {
     .show-some-studies .image-card img {
         width: 100%;
         max-height: 100%;
+    }
+
+    .date-info {
+        margin-bottom: 10px;
+        margin-top: 10px;
+        font-size: 16px;
     }
 }
 
@@ -8017,9 +8124,9 @@ ul .aside-nested-list {
     border: none;
     margin-left: 5px;
     transition: 0.3s;
-    padding: 5px 8px;
+    padding: 5px 12px;
     font-family: 'Calibri';
-    border-radius: 12px;
+    border-radius: 8px;
 }
 
 .controls #increaseFont:hover,
@@ -8030,14 +8137,14 @@ ul .aside-nested-list {
 @media (max-width: 574px) {
     .controls {
         /* بدلًا من sticky */
-        top: 62px;
+        top: 45px;
         left: 11px;
     }
 
     .controls #increaseFont,
     .controls #decreaseFont {
-        margin-left: 1px;
-        font-size: 10px;
+        margin-left: 8px;
+        font-size: 12px;
     }
 }
 
@@ -8051,7 +8158,7 @@ ul .aside-nested-list {
     .controls #increaseFont,
     .controls #decreaseFont {
         margin-left: 3px;
-        font-size: 10px;
+        font-size: 12px;
     }
 }
 
@@ -8060,7 +8167,7 @@ ul .aside-nested-list {
     .controls #increaseFont,
     .controls #decreaseFont {
         margin-left: 4px;
-        font-size: 12px;
+        font-size: 14px;
     }
 }
 
@@ -8074,7 +8181,7 @@ ul .aside-nested-list {
     .controls #increaseFont,
     .controls #decreaseFont {
         margin-left: 5px;
-        font-size: 14px;
+        font-size: 16px;
     }
 }
 
@@ -8085,8 +8192,12 @@ ul .aside-nested-list {
 .first-page .studies-flex a:visited,
 .contactus a:visited,
 .contactus a {
-    color: #B46C22;
+    color: black;
 
+}
+
+.contactus a.dark-mode {
+    color: white;
 }
 
 .study-item {
@@ -8139,4 +8250,8 @@ header .phone {
 
 header .phone button {
     margin-right: 0;
+}
+
+.footer-social2 {
+    display: flex;
 }
