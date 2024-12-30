@@ -7749,6 +7749,10 @@ ul .aside-nested-list {
     color: gray;
 }
 
+.date-info i {
+    margin-left: 3px;
+}
+
 .studies-flex {
     display: flex;
 }
