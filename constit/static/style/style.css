@@ -64,7 +64,7 @@ body {
     background-color: var(--bg-color);
     direction: rtl;
     margin: 0;
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-family: 'Calibri';
     min-height: 100%;
     display: flex;
     flex-direction: column;
@@ -7599,11 +7599,10 @@ input:focus {
 }
 
 .tow-books .daw .card img {
-    max-width: 100%;
-    max-height: 100%;
-    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.3);
+    width: 100%;
+    height: 366px;
+    box-shadow: 4px -4px 8px rgba(0, 0, 0, 0.3), -4px -4px 8px rgba(0, 0, 0, 0.3), 0px -4px 8px rgba(0, 0, 0, 0.3);
     transition: box-shadow 0.3s ease;
-    /* تأثير سلس عند التمرير */
 }
 
 .tow-books .daw .card:hover img {
@@ -7660,6 +7659,9 @@ input:focus {
     .tow-books .daw .card .daw-info {
         font-size: 14px;
     }
+    .tow-books .daw .card img {
+        height: 250px;
+    }    
 
     .tow-books .daw .card .daw-info p {
         padding: 10px;
@@ -7669,7 +7671,7 @@ input:focus {
 
 @media (min-width: 575px) and (max-width: 767px) {
     .tow-books .daw {
-        width: calc(52% - 20px) !important;
+        width: calc(50% - 20px) !important;
         margin-bottom: 20px !important;
     }
 
@@ -7680,6 +7682,9 @@ input:focus {
     .tow-books .daw .card .daw-info {
         font-size: 14px;
     }
+    .tow-books .daw .card img {
+        height: 250px;
+    }  
 
     .tow-books .daw .card .daw-info p {
         margin-top: -3px;
@@ -7691,7 +7696,7 @@ input:focus {
 
 @media (min-width: 768px) and (max-width: 991px) {
     .tow-books .daw {
-        width: calc(52% - 24px) !important;
+        width: calc(50% - 24px) !important;
         margin-bottom: 25px !important;
     }
 
@@ -7702,6 +7707,9 @@ input:focus {
     .tow-books .daw .card .daw-info {
         font-size: 14px;
     }
+    .tow-books .daw .card img {
+        height: 300px;
+    }  
 
     .tow-books .daw .card .daw-info p {
         margin-top: -4px;
@@ -7713,7 +7721,7 @@ input:focus {
 
 @media (min-width: 992px) {
     .tow-books .daw {
-        width: calc(40% - 30px) !important;
+        width: calc(42% - 30px) !important;
         margin-bottom: 40px !important;
     }
 
@@ -7724,11 +7732,15 @@ input:focus {
     .tow-books .daw .card .daw-info {
         font-size: 18px;
     }
+    .tow-books .daw .card img {
+        height: 366px;
+    }  
 
     .tow-books .daw .card .daw-info p {
         margin-top: -4px;
         padding: 15px 10px;
         height: 25px;
+        padding-bottom: 25px;
         /* تأثير سلس عند التمرير */
     }
 }
