@@ -7,14 +7,14 @@
     <h1 class="spe-h1 book">الكتب</h1>
     <div class="tow-books">
         <div class="daw">
-            <a href="#">
+            <a href="{% url 'download_or_view_file' %}?action=view" target="_blank">
                 <div class="card download">
                     <img src="{% static 'imgs/Book A.jpg' %}" alt="">
                     <div class="daw-info">
                         <p>رقم الإيداع بالهيئة العامة للكتاب (2023/449)</p>
                         
                     </div>
-                    <a href="{% url 'download_file' %}" class="download">
+                    <a href="{% url 'download_or_view_file' %}?action=download" class="download">
                         <i class="fas fa-download"></i> تحميل الكتاب
                     </a>
                     

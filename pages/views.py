@@ -1,5 +1,5 @@
 from django.shortcuts import redirect, render
-from django.http import HttpResponse
+from django.http import FileResponse, HttpResponse
 from django.contrib import messages
 from .models import Contacts
 from .models import Studies
@@ -8,20 +8,40 @@ from comments.models import Comments
 from comments.forms import DocumentForm
 from django.core.paginator import Paginator
 from django.db.models import Q  # لاستعمال البحث المتقدم
-from django.http import FileResponse
 import os
+import mimetypes
 
-def download_file(request):
-    file_path = os.path.join('media', 'Future Vision for Administrative Reform.pdf')  # مسار الملف داخل مجلد media
-    return FileResponse(open(file_path, 'rb'), as_attachment=True, filename='Future Vision for Administrative Reform.pdf')
+def download_or_view_file(request):
+    # تحديد مسار الملف
+    file_path = os.path.join('media', 'Future Vision for Administrative Reform.pdf')
 
-# Create your views here.
+    # التحقق من وجود الملف
+    if not os.path.exists(file_path):
+        return HttpResponse("الملف غير موجود", status=404)
+
+    # الحصول على نوع العملية من طلب GET (تحميل أو عرض)
+    action = request.GET.get('action', 'download')  # القيمة الافتراضية هي "download"
+
+    # إذا كانت العملية هي "عرض"
+    if action == 'view':
+        try:
+            file = open(file_path, 'rb')  # افتح الملف بدون إغلاقه
+            response = FileResponse(file, content_type='application/pdf')
+            response['Content-Disposition'] = 'inline; filename="Future Vision for Administrative Reform.pdf"'
+            return response
+        except Exception as e:
+            return HttpResponse(f"حدث خطأ أثناء عرض الملف: {str(e)}", status=500)
+
+    # إذا كانت العملية هي "تحميل"
+    try:
+        file = open(file_path, 'rb')  # افتح الملف بدون إغلاقه
+        response = FileResponse(file, as_attachment=True, filename='Future Vision for Administrative Reform.pdf')
+        return response
+    except Exception as e:
+        return HttpResponse(f"حدث خطأ أثناء تحميل الملف: {str(e)}", status=500)
 
 def index(request):
     return render(request,'pages/index.html')
-
-
-
 
 def about(request):
     return render(request,'pages/about.html')
