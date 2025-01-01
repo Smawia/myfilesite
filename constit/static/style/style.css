@@ -19,15 +19,15 @@ html {
 @font-face {
     font-family: 'Calibri Bold';
     src: url('/static/fonts/calibri-bold.ttf') format('truetype'),
-         url('/static/fonts/calibri-bold.woff') format('woff'),
-         url('/static/fonts/calibri-bold.woff2') format('woff2');
+        url('/static/fonts/calibri-bold.woff') format('woff'),
+        url('/static/fonts/calibri-bold.woff2') format('woff2');
 }
 
 @font-face {
     font-family: 'Calibri Light';
-    src: 
-         url('/static/fonts/calibri-light.woff') format('woff'),
-         url('/static/fonts/calibri-light.woff2') format('woff2');
+    src:
+        url('/static/fonts/calibri-light.woff') format('woff'),
+        url('/static/fonts/calibri-light.woff2') format('woff2');
 }
 
 @font-face {
@@ -38,8 +38,8 @@ html {
 @font-face {
     font-family: 'Calibri Bold Italic';
     src: url('/static/fonts/calibri-bold-italic.ttf') format('truetype'),
-         url('/static/fonts/calibri-bold-italic.woff') format('woff'),
-         url('/static/fonts/calibri-bold-italic.woff2') format('woff2');
+        url('/static/fonts/calibri-bold-italic.woff') format('woff'),
+        url('/static/fonts/calibri-bold-italic.woff2') format('woff2');
 }
 
 @font-face {
@@ -2648,6 +2648,7 @@ table thead td {
     .contactus {
         padding: 10px 0;
     }
+
     .contactus h3 {
         font-size: 15px;
     }
@@ -2678,6 +2679,7 @@ table thead td {
         padding: 3px 8px !important;
         font-size: 16px;
     }
+
     .contactus .address {
         margin-top: 10px;
     }
@@ -2686,6 +2688,7 @@ table thead td {
         /* text-align: center; */
         font-size: 14px;
     }
+
     .contactus .address i {
         font-size: 13px !important;
     }
@@ -2695,6 +2698,7 @@ table thead td {
     .contactus {
         padding: 10px 0;
     }
+
     .contactus h3 {
         font-size: 15px;
     }
@@ -2734,6 +2738,7 @@ table thead td {
         /* text-align: center; */
         font-size: 16px;
     }
+
     .contactus .address i {
         font-size: 14px !important;
     }
@@ -2743,6 +2748,7 @@ table thead td {
     .contactus {
         padding: 20px 0;
     }
+
     .contactus h3 {
         font-size: 23px;
     }
@@ -2780,6 +2786,7 @@ table thead td {
         /* text-align: center; */
         font-size: 18px;
     }
+
     .contactus .address i {
         font-size: 16px !important;
     }
@@ -4977,13 +4984,6 @@ input {
     height: 100px;
 }
 
-.download i {
-    font-size: 25px;
-    position: absolute;
-    top: 50%;
-    right: 10px;
-}
-
 .error {
     background-color: red;
     padding: 10px;
@@ -7101,6 +7101,12 @@ input:focus {
     margin-right: 20px;
     margin-bottom: 20px !important;
     font-family: 'CodecProBold', sans-serif;
+    
+}
+
+.show-studies-index .show-index-imgs .card a .text-info-index p.pod {
+    margin-top: 0;
+    margin-right: 10px;
 }
 
 .show-studies-index .show-index-imgs .card a .text-info-index span {
@@ -7128,6 +7134,7 @@ input:focus {
     .show-studies-index .show-index-imgs .card {
         width: calc(100%) !important;
         margin-bottom: 20px !important;
+        margin-top: -5px;
     }
 
     .show-studies-index .show-index-imgs .card img {
@@ -7163,6 +7170,7 @@ input:focus {
         margin-bottom: 20px !important;
         margin-left: auto;
         margin-right: auto;
+        margin-top: -5px;
     }
 
     .show-studies-index .show-index-imgs .card img {
@@ -7193,6 +7201,7 @@ input:focus {
     .show-studies-index .show-index-imgs .card {
         width: calc(50% - 16px) !important;
         margin-bottom: 30px !important;
+        margin-top: -12px;
     }
 
     .show-studies-index .show-index-imgs .card img {
@@ -7223,6 +7232,7 @@ input:focus {
     .show-studies-index .show-index-imgs .card {
         width: calc(37% - 70px) !important;
         margin-bottom: 40px !important;
+        margin-top: -20px;
     }
 
     .show-studies-index .show-index-imgs .card img {
@@ -7586,6 +7596,7 @@ input:focus {
 .tow-books .daw {
     width: calc(40% - 30px) !important;
     margin-bottom: 40px !important;
+    position: relative;
 }
 
 .tow-books .daw a {
@@ -7596,6 +7607,14 @@ input:focus {
     margin-top: 15px;
     width: 100%;
     transition: transform 1s ease;
+}
+
+.tow-books .daw .card:hover {
+    transform: scale(1.03);
+}
+
+.tow-books .daw .card.download:hover {
+    transform: none;
 }
 
 .tow-books .daw .card img {
@@ -7613,11 +7632,6 @@ input:focus {
 }
 
 
-.daw .card:hover {
-    transform: scale(1.03);
-    /* تكبير أقل */
-}
-
 .tow-books .daw .card .daw-info {
     background-color: white;
     font-size: 18px;
@@ -7634,6 +7648,24 @@ input:focus {
     /* تأثير سلس عند التمرير */
 }
 
+.tow-books .daw .card a.download {
+    position: absolute;
+    top: 19px;
+    left: 5px;
+    background: var(--fifth-color);
+    color: white;
+    padding: 8px;
+    border-radius: 8px;
+    font-size: 18px;
+    font-weight: bold;
+    transition: 0.5s;
+}
+
+.tow-books .daw .card a.download:hover {
+    background-color: var(--fourth-color);
+    transform: none;
+}
+
 .tow-books .daw .card .daw-info p:hover {
     box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.5);
     /* زيادة الظل عند التمرير */
@@ -7647,7 +7679,7 @@ input:focus {
     }
 
     .tow-books .daw {
-        width: calc(80%) !important;
+        width: calc(100%) !important;
         margin: 0 auto !important;
     }
 
@@ -7659,20 +7691,29 @@ input:focus {
     .tow-books .daw .card .daw-info {
         font-size: 14px;
     }
+
     .tow-books .daw .card img {
         height: 250px;
-    }    
+    }
 
     .tow-books .daw .card .daw-info p {
         padding: 10px;
         margin-top: -4px;
     }
+
+    .tow-books .daw .card a.download {
+        top: 21px;
+        padding: 5px;
+        font-size: 14px;
+    }
 }
 
 @media (min-width: 575px) and (max-width: 767px) {
     .tow-books .daw {
-        width: calc(50% - 20px) !important;
+        width: calc(86% - 20px) !important;
         margin-bottom: 20px !important;
+        margin: 0 auto 20px;
+        margin-bottom: 20px;
     }
 
     .tow-books .daw .card {
@@ -7682,15 +7723,23 @@ input:focus {
     .tow-books .daw .card .daw-info {
         font-size: 14px;
     }
+
     .tow-books .daw .card img {
         height: 250px;
-    }  
+    }
 
     .tow-books .daw .card .daw-info p {
         margin-top: -3px;
         padding: 15px 10px;
         height: 20px;
+        padding-bottom: 18px;
         /* تأثير سلس عند التمرير */
+    }
+
+    .tow-books .daw .card a.download {
+        top: 13px;
+        left: 3px;
+        font-size: 14px;
     }
 }
 
@@ -7707,15 +7756,20 @@ input:focus {
     .tow-books .daw .card .daw-info {
         font-size: 14px;
     }
+
     .tow-books .daw .card img {
         height: 300px;
-    }  
+    }
 
     .tow-books .daw .card .daw-info p {
         margin-top: -4px;
         padding: 15px 10px;
         height: 25px;
         /* تأثير سلس عند التمرير */
+    }
+
+    .tow-books .daw .card a.download {
+        font-size: 16px;
     }
 }
 
@@ -7732,9 +7786,10 @@ input:focus {
     .tow-books .daw .card .daw-info {
         font-size: 18px;
     }
+
     .tow-books .daw .card img {
         height: 366px;
-    }  
+    }
 
     .tow-books .daw .card .daw-info p {
         margin-top: -4px;
@@ -7742,6 +7797,14 @@ input:focus {
         height: 25px;
         padding-bottom: 25px;
         /* تأثير سلس عند التمرير */
+    }
+
+    .tow-books .daw .card a.download {
+        top: 19px;
+        left: 5px;
+        padding: 8px;
+        border-radius: 8px;
+        font-size: 18px;
     }
 }
 

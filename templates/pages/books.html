@@ -8,11 +8,16 @@
     <div class="tow-books">
         <div class="daw">
             <a href="#">
-                <div class="card">
+                <div class="card download">
                     <img src="{% static 'imgs/Book A.jpg' %}" alt="">
                     <div class="daw-info">
                         <p>رقم الإيداع بالهيئة العامة للكتاب (2023/449)</p>
+                        
                     </div>
+                    <a href="{% url 'download_file' %}" class="download">
+                        <i class="fas fa-download"></i> تحميل الكتاب
+                    </a>
+                    
                 </div>
             </a>
         </div>

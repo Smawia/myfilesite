@@ -8,11 +8,19 @@ from comments.models import Comments
 from comments.forms import DocumentForm
 from django.core.paginator import Paginator
 from django.db.models import Q  # لاستعمال البحث المتقدم
+from django.http import FileResponse
+import os
+
+def download_file(request):
+    file_path = os.path.join('media', 'Future Vision for Administrative Reform.pdf')  # مسار الملف داخل مجلد media
+    return FileResponse(open(file_path, 'rb'), as_attachment=True, filename='Future Vision for Administrative Reform.pdf')
 
 # Create your views here.
 
 def index(request):
     return render(request,'pages/index.html')
+
+
 
 
 def about(request):
