@@ -1,4 +1,7 @@
 :root {
+    writing-mode: horizontal-tb; /* الاتجاه الأفقي الافتراضي */
+    direction: rtl; /* النص يقرأ من اليسار لليمين */
+    text-orientation: mixed; /* النصوص أفقية في الوضع الأفقي */
     --main-color: white;
     --second-color: #5754A3;
     --third-color: var(--second-color);
@@ -17,39 +20,20 @@ html {
 }
 
 @font-face {
-    font-family: 'Calibri Bold';
-    src: url('/static/fonts/calibri-bold.ttf') format('truetype'),
-        url('/static/fonts/calibri-bold.woff') format('woff'),
-        url('/static/fonts/calibri-bold.woff2') format('woff2');
-}
-
-@font-face {
-    font-family: 'Calibri Light';
-    src:
-        url('/static/fonts/calibri-light.woff') format('woff'),
-        url('/static/fonts/calibri-light.woff2') format('woff2');
-}
-
-@font-face {
-    font-family: 'Calibri Regular';
-    src: url('/static/fonts/calibri-regular.ttf') format('truetype'),
-}
-
-@font-face {
     font-family: 'Calibri Bold Italic';
-    src: url('/static/fonts/calibri-bold-italic.ttf') format('truetype'),
-        url('/static/fonts/calibri-bold-italic.woff') format('woff'),
-        url('/static/fonts/calibri-bold-italic.woff2') format('woff2');
+    src: url('../fonts/calibri-bold-italic.ttf') format('truetype');
+    font-weight: bold;
+    font-style: italic;
 }
 
 @font-face {
     font-family: 'CodecPro Bold';
-    src: url('/static/fonts/CodecPro-Bold.ttf') format('truetype');
+    src: url('../fonts/CodecPro-Bold.ttf') format('truetype');
 }
 
 @font-face {
     font-family: 'CodecPro Regular';
-    src: url('/static/fonts/CodecPro-Regular.ttf') format('truetype');
+    src: url('../fonts/CodecPro-Regular.ttf') format('truetype');
 }
 
 body.dark-mode {
@@ -4732,7 +4716,7 @@ input {
 }
 
 .top-of-study a:hover {
-    color: var(--second-color);
+    color: var(--fifth-color);
 }
 
 .top-of-study span {
@@ -8195,6 +8179,7 @@ ul .aside-nested-list {
     padding: 5px 12px;
     font-family: 'Calibri';
     border-radius: 8px;
+    cursor: pointer;
 }
 
 .controls #increaseFont:hover,

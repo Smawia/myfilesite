@@ -18,51 +18,38 @@ html {
 
 @font-face {
     font-family: 'Calibri Bold';
-    src: url('/static/fonts/calibri-bold.ttf') format('truetype'),
-         url('/static/fonts/calibri-bold.woff') format('woff'),
-         url('/static/fonts/calibri-bold.woff2') format('woff2');
+    src: url('../fonts/calibri-bold.ttf') format('truetype'),
+        url('../fonts/calibri-bold.woff') format('woff'),
+        url('../fonts/calibri-bold.woff2') format('woff2');
 }
 
 @font-face {
     font-family: 'Calibri Light';
-    src: 
-         url('/static/fonts/calibri-light.woff') format('woff'),
-         url('/static/fonts/calibri-light.woff2') format('woff2');
+    src:
+        url('../fonts/calibri-light.woff') format('woff'),
+        url('../fonts/calibri-light.woff2') format('woff2');
 }
 
 @font-face {
     font-family: 'Calibri Regular';
-    src: url('/static/fonts/calibri-regular.ttf') format('truetype'),
+    src: url('../fonts/calibri-regular.ttf') format('truetype'),
 }
 
 @font-face {
     font-family: 'Calibri Bold Italic';
-    src: url('/static/fonts/calibri-bold-italic.ttf') format('truetype'),
-         url('/static/fonts/calibri-bold-italic.woff') format('woff'),
-         url('/static/fonts/calibri-bold-italic.woff2') format('woff2');
+    src: url('../fonts/calibri-bold-italic.ttf') format('truetype'),
+        url('../fonts/calibri-bold-italic.woff') format('woff'),
+        url('../fonts/calibri-bold-italic.woff2') format('woff2');
 }
 
 @font-face {
     font-family: 'CodecPro Bold';
-    src: url('/static/fonts/CodecPro-Bold.ttf') format('truetype');
+    src: url('../fonts/CodecPro-Bold.ttf') format('truetype');
 }
 
 @font-face {
     font-family: 'CodecPro Regular';
-    src: url('/static/fonts/CodecPro-Regular.ttf') format('truetype');
-}
-
-@font-face {
-    font-family: "Calibri";
-    src: url("/static/fonts/a78cfad3beb089a6ce86d4e280fa270b.eot");
-    src: url("/static/fonts/a78cfad3beb089a6ce86d4e280fa270b.eot?#iefix") format("embedded-opentype"),
-         url("/static/fonts/a78cfad3beb089a6ce86d4e280fa270b.woff") format("woff"),
-         url("/static/fonts/a78cfad3beb089a6ce86d4e280fa270b.woff2") format("woff2"),
-         url("/static/fonts/a78cfad3beb089a6ce86d4e280fa270b.ttf") format("truetype"),
-         url("/static/fonts/a78cfad3beb089a6ce86d4e280fa270b.svg#Calibri") format("svg");
-    font-weight: normal;
-    font-style: normal;
-    font-display: swap;
+    src: url('../fonts/CodecPro-Regular.ttf') format('truetype');
 }
 
 body.dark-mode {
@@ -77,7 +64,7 @@ body {
     background-color: var(--bg-color);
     direction: rtl;
     margin: 0;
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-family: 'Calibri';
     min-height: 100%;
     display: flex;
     flex-direction: column;
@@ -2661,6 +2648,7 @@ table thead td {
     .contactus {
         padding: 10px 0;
     }
+
     .contactus h3 {
         font-size: 15px;
     }
@@ -2691,6 +2679,7 @@ table thead td {
         padding: 3px 8px !important;
         font-size: 16px;
     }
+
     .contactus .address {
         margin-top: 10px;
     }
@@ -2699,6 +2688,7 @@ table thead td {
         /* text-align: center; */
         font-size: 14px;
     }
+
     .contactus .address i {
         font-size: 13px !important;
     }
@@ -2708,6 +2698,7 @@ table thead td {
     .contactus {
         padding: 10px 0;
     }
+
     .contactus h3 {
         font-size: 15px;
     }
@@ -2747,6 +2738,7 @@ table thead td {
         /* text-align: center; */
         font-size: 16px;
     }
+
     .contactus .address i {
         font-size: 14px !important;
     }
@@ -2756,6 +2748,7 @@ table thead td {
     .contactus {
         padding: 20px 0;
     }
+
     .contactus h3 {
         font-size: 23px;
     }
@@ -2793,6 +2786,7 @@ table thead td {
         /* text-align: center; */
         font-size: 18px;
     }
+
     .contactus .address i {
         font-size: 16px !important;
     }
@@ -4990,13 +4984,6 @@ input {
     height: 100px;
 }
 
-.download i {
-    font-size: 25px;
-    position: absolute;
-    top: 50%;
-    right: 10px;
-}
-
 .error {
     background-color: red;
     padding: 10px;
@@ -5967,7 +5954,7 @@ input {
         right: 0;
         bottom: -15px;
         text-align: end;
-        width: 85%;
+        width: 90%;
         padding-bottom: 8px;
     }
 
@@ -5975,6 +5962,8 @@ input {
         margin-right: -10px;
         font-size: 16px;
         margin-bottom: 5px;
+        line-height: normal;
+        margin-top: 0px;
     }
 
     .slide-full-inf span {
@@ -7114,6 +7103,12 @@ input:focus {
     margin-right: 20px;
     margin-bottom: 20px !important;
     font-family: 'CodecProBold', sans-serif;
+    
+}
+
+.show-studies-index .show-index-imgs .card a .text-info-index p.pod {
+    margin-top: 0;
+    margin-right: 10px;
 }
 
 .show-studies-index .show-index-imgs .card a .text-info-index span {
@@ -7141,6 +7136,7 @@ input:focus {
     .show-studies-index .show-index-imgs .card {
         width: calc(100%) !important;
         margin-bottom: 20px !important;
+        margin-top: -5px;
     }
 
     .show-studies-index .show-index-imgs .card img {
@@ -7176,6 +7172,7 @@ input:focus {
         margin-bottom: 20px !important;
         margin-left: auto;
         margin-right: auto;
+        margin-top: -5px;
     }
 
     .show-studies-index .show-index-imgs .card img {
@@ -7206,6 +7203,7 @@ input:focus {
     .show-studies-index .show-index-imgs .card {
         width: calc(50% - 16px) !important;
         margin-bottom: 30px !important;
+        margin-top: -12px;
     }
 
     .show-studies-index .show-index-imgs .card img {
@@ -7236,6 +7234,7 @@ input:focus {
     .show-studies-index .show-index-imgs .card {
         width: calc(37% - 70px) !important;
         margin-bottom: 40px !important;
+        margin-top: -20px;
     }
 
     .show-studies-index .show-index-imgs .card img {
@@ -7599,6 +7598,7 @@ input:focus {
 .tow-books .daw {
     width: calc(40% - 30px) !important;
     margin-bottom: 40px !important;
+    position: relative;
 }
 
 .tow-books .daw a {
@@ -7611,12 +7611,19 @@ input:focus {
     transition: transform 1s ease;
 }
 
+.tow-books .daw .card:hover {
+    transform: scale(1.03);
+}
+
+.tow-books .daw .card.download:hover {
+    transform: none;
+}
+
 .tow-books .daw .card img {
-    max-width: 100%;
-    max-height: 100%;
-    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.3);
+    width: 100%;
+    height: 366px;
+    box-shadow: 4px -4px 8px rgba(0, 0, 0, 0.3), -4px -4px 8px rgba(0, 0, 0, 0.3), 0px -4px 8px rgba(0, 0, 0, 0.3);
     transition: box-shadow 0.3s ease;
-    /* تأثير سلس عند التمرير */
 }
 
 .tow-books .daw .card:hover img {
@@ -7626,11 +7633,6 @@ input:focus {
     /* تقليل شدة الظلال */
 }
 
-
-.daw .card:hover {
-    transform: scale(1.03);
-    /* تكبير أقل */
-}
 
 .tow-books .daw .card .daw-info {
     background-color: white;
@@ -7648,6 +7650,24 @@ input:focus {
     /* تأثير سلس عند التمرير */
 }
 
+.tow-books .daw .card a.download {
+    position: absolute;
+    top: 19px;
+    left: 5px;
+    background: var(--fifth-color);
+    color: white;
+    padding: 8px;
+    border-radius: 8px;
+    font-size: 18px;
+    font-weight: bold;
+    transition: 0.5s;
+}
+
+.tow-books .daw .card a.download:hover {
+    background-color: var(--fourth-color);
+    transform: none;
+}
+
 .tow-books .daw .card .daw-info p:hover {
     box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.5);
     /* زيادة الظل عند التمرير */
@@ -7661,7 +7681,7 @@ input:focus {
     }
 
     .tow-books .daw {
-        width: calc(80%) !important;
+        width: calc(100%) !important;
         margin: 0 auto !important;
     }
 
@@ -7674,16 +7694,28 @@ input:focus {
         font-size: 14px;
     }
 
+    .tow-books .daw .card img {
+        height: 250px;
+    }
+
     .tow-books .daw .card .daw-info p {
         padding: 10px;
         margin-top: -4px;
+    }
+
+    .tow-books .daw .card a.download {
+        top: 21px;
+        padding: 5px;
+        font-size: 14px;
     }
 }
 
 @media (min-width: 575px) and (max-width: 767px) {
     .tow-books .daw {
-        width: calc(52% - 20px) !important;
+        width: calc(86% - 20px) !important;
         margin-bottom: 20px !important;
+        margin: 0 auto 20px;
+        margin-bottom: 20px;
     }
 
     .tow-books .daw .card {
@@ -7694,17 +7726,28 @@ input:focus {
         font-size: 14px;
     }
 
+    .tow-books .daw .card img {
+        height: 250px;
+    }
+
     .tow-books .daw .card .daw-info p {
         margin-top: -3px;
         padding: 15px 10px;
         height: 20px;
+        padding-bottom: 18px;
         /* تأثير سلس عند التمرير */
+    }
+
+    .tow-books .daw .card a.download {
+        top: 13px;
+        left: 3px;
+        font-size: 14px;
     }
 }
 
 @media (min-width: 768px) and (max-width: 991px) {
     .tow-books .daw {
-        width: calc(52% - 24px) !important;
+        width: calc(50% - 24px) !important;
         margin-bottom: 25px !important;
     }
 
@@ -7716,17 +7759,25 @@ input:focus {
         font-size: 14px;
     }
 
+    .tow-books .daw .card img {
+        height: 300px;
+    }
+
     .tow-books .daw .card .daw-info p {
         margin-top: -4px;
         padding: 15px 10px;
         height: 25px;
         /* تأثير سلس عند التمرير */
     }
+
+    .tow-books .daw .card a.download {
+        font-size: 16px;
+    }
 }
 
 @media (min-width: 992px) {
     .tow-books .daw {
-        width: calc(40% - 30px) !important;
+        width: calc(42% - 30px) !important;
         margin-bottom: 40px !important;
     }
 
@@ -7738,11 +7789,24 @@ input:focus {
         font-size: 18px;
     }
 
+    .tow-books .daw .card img {
+        height: 366px;
+    }
+
     .tow-books .daw .card .daw-info p {
         margin-top: -4px;
         padding: 15px 10px;
         height: 25px;
+        padding-bottom: 25px;
         /* تأثير سلس عند التمرير */
+    }
+
+    .tow-books .daw .card a.download {
+        top: 19px;
+        left: 5px;
+        padding: 8px;
+        border-radius: 8px;
+        font-size: 18px;
     }
 }
 
@@ -7760,6 +7824,10 @@ ul .aside-nested-list {
     margin-bottom: 10px;
     margin-top: 10px;
     color: gray;
+}
+
+.date-info i {
+    margin-left: 3px;
 }
 
 .studies-flex {
