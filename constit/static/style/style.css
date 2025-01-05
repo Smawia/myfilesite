@@ -5954,7 +5954,7 @@ input {
         right: 0;
         bottom: -15px;
         text-align: end;
-        width: 85%;
+        width: 90%;
         padding-bottom: 8px;
     }
 
@@ -5962,6 +5962,8 @@ input {
         margin-right: -10px;
         font-size: 16px;
         margin-bottom: 5px;
+        line-height: normal;
+        margin-top: 0px;
     }
 
     .slide-full-inf span {
