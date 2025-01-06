@@ -1,4 +1,10 @@
 :root {
+    writing-mode: horizontal-tb;
+    /* الاتجاه الأفقي الافتراضي */
+    direction: rtl;
+    /* النص يقرأ من اليسار لليمين */
+    text-orientation: mixed;
+    /* النصوص أفقية في الوضع الأفقي */
     --main-color: white;
     --second-color: #5754A3;
     --third-color: var(--second-color);
@@ -17,29 +23,10 @@ html {
 }
 
 @font-face {
-    font-family: 'Calibri Bold';
-    src: url('../fonts/calibri-bold.ttf') format('truetype'),
-        url('../fonts/calibri-bold.woff') format('woff'),
-        url('../fonts/calibri-bold.woff2') format('woff2');
-}
-
-@font-face {
-    font-family: 'Calibri Light';
-    src:
-        url('../fonts/calibri-light.woff') format('woff'),
-        url('../fonts/calibri-light.woff2') format('woff2');
-}
-
-@font-face {
-    font-family: 'Calibri Regular';
-    src: url('../fonts/calibri-regular.ttf') format('truetype'),
-}
-
-@font-face {
-    font-family: 'Calibri Bold Italic';
-    src: url('../fonts/calibri-bold-italic.ttf') format('truetype'),
-        url('../fonts/calibri-bold-italic.woff') format('woff'),
-        url('../fonts/calibri-bold-italic.woff2') format('woff2');
+    font-family: 'calibri Regular';
+    src: url('../fonts/calibri-regular.ttf') format('woff2'),
+        url('../fonts/') format('woff'),
+        url('../fonts/') format('truetype');
 }
 
 @font-face {
@@ -64,7 +51,7 @@ body {
     background-color: var(--bg-color);
     direction: rtl;
     margin: 0;
-    font-family: 'Calibri';
+    font-family: 'calibri Regular';
     min-height: 100%;
     display: flex;
     flex-direction: column;
@@ -75,7 +62,7 @@ body {
 /* start header */
 header {
     background: white;
-    font-family: 'Calibri';
+    font-family: 'calibri Regular';
     position: relative;
     z-index: 10000000;
     transition: 0.6s;
@@ -4732,7 +4719,7 @@ input {
 }
 
 .top-of-study a:hover {
-    color: var(--second-color);
+    color: var(--fifth-color);
 }
 
 .top-of-study span {
@@ -7103,7 +7090,7 @@ input:focus {
     margin-right: 20px;
     margin-bottom: 20px !important;
     font-family: 'CodecProBold', sans-serif;
-    
+
 }
 
 .show-studies-index .show-index-imgs .card a .text-info-index p.pod {
@@ -8195,6 +8182,7 @@ ul .aside-nested-list {
     padding: 5px 12px;
     font-family: 'Calibri';
     border-radius: 8px;
+    cursor: pointer;
 }
 
 .controls #increaseFont:hover,
