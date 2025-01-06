@@ -1,10 +1,7 @@
 :root {
-    writing-mode: horizontal-tb;
-    /* الاتجاه الأفقي الافتراضي */
-    direction: rtl;
-    /* النص يقرأ من اليسار لليمين */
-    text-orientation: mixed;
-    /* النصوص أفقية في الوضع الأفقي */
+    writing-mode: horizontal-tb; /* الاتجاه الأفقي الافتراضي */
+    direction: rtl; /* النص يقرأ من اليسار لليمين */
+    text-orientation: mixed; /* النصوص أفقية في الوضع الأفقي */
     --main-color: white;
     --second-color: #5754A3;
     --third-color: var(--second-color);
@@ -23,10 +20,75 @@ html {
 }
 
 @font-face {
-    font-family: 'calibri Regular';
-    src: url('../fonts/calibri-regular.ttf') format('woff2'),
-        url('../fonts/') format('woff'),
-        url('../fonts/') format('truetype');
+    font-family: 'Calibri';
+    src: url('../fonts/Calibri-LightItalic.eot');
+    src: local('Calibri Light Italic'), local('Calibri-LightItalic'),
+        url('../fonts/Calibri-LightItalic.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/Calibri-LightItalic.woff2') format('woff2'),
+        url('../fonts/Calibri-LightItalic.woff') format('woff'),
+        url('../fonts/Calibri-LightItalic.ttf') format('truetype');
+    font-weight: 300;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'Calibri';
+    src: url('../fonts/Calibri-Italic.eot');
+    src: local('Calibri Italic'), local('Calibri-Italic'),
+        url('../fonts/Calibri-Italic.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/Calibri-Italic.woff2') format('woff2'),
+        url('../fonts/Calibri-Italic.woff') format('woff'),
+        url('../fonts/Calibri-Italic.ttf') format('truetype');
+    font-weight: normal;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'Calibri-Light';
+    src: url('../fonts/Calibri-Light.eot');
+    src: local('Calibri Light'), local('Calibri-Light'),
+        url('../fonts/Calibri-Light.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/Calibri-Light.woff2') format('woff2'),
+        url('../fonts/Calibri-Light.woff') format('woff'),
+        url('../fonts/Calibri-Light.ttf') format('truetype');
+    font-weight: 300;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Calibri';
+    src: url('../fonts/Calibri-Bold.eot');
+    src: local('Calibri Bold'), local('Calibri-Bold'),
+        url('../fonts/Calibri-Bold.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/Calibri-Bold.woff2') format('woff2'),
+        url('../fonts/Calibri-Bold.woff') format('woff'),
+        url('../fonts/Calibri-Bold.ttf') format('truetype');
+    font-weight: bold;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Calibri';
+    src: url('../fonts/Calibri.eot');
+    src: local('Calibri'),
+        url('../fonts/Calibri.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/Calibri.woff2') format('woff2'),
+        url('../fonts/Calibri.woff') format('woff'),
+        url('../fonts/Calibri.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Calibri';
+    src: url('../fonts/Calibri-BoldItalic.eot');
+    src: local('Calibri Bold Italic'), local('Calibri-BoldItalic'),
+        url('../fonts/Calibri-BoldItalic.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/Calibri-BoldItalic.woff2') format('woff2'),
+        url('../fonts/Calibri-BoldItalic.woff') format('woff'),
+        url('../fonts/Calibri-BoldItalic.ttf') format('truetype');
+    font-weight: bold;
+    font-style: italic;
 }
 
 @font-face {
@@ -51,7 +113,7 @@ body {
     background-color: var(--bg-color);
     direction: rtl;
     margin: 0;
-    font-family: 'calibri Regular';
+    font-family: 'Calibri';
     min-height: 100%;
     display: flex;
     flex-direction: column;
@@ -62,7 +124,7 @@ body {
 /* start header */
 header {
     background: white;
-    font-family: 'calibri Regular';
+    font-family: 'Calibri';
     position: relative;
     z-index: 10000000;
     transition: 0.6s;
@@ -7090,7 +7152,7 @@ input:focus {
     margin-right: 20px;
     margin-bottom: 20px !important;
     font-family: 'CodecProBold', sans-serif;
-
+    
 }
 
 .show-studies-index .show-index-imgs .card a .text-info-index p.pod {
