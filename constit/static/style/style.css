@@ -4891,7 +4891,8 @@ input {
 
 /* end first page */
 
-.download {
+.download,
+.view {
     position: relative;
 }
 
@@ -7536,7 +7537,8 @@ input:focus {
     transform: scale(1.03);
 }
 
-.tow-books .daw .card.download:hover {
+.tow-books .daw .card.download:hover,
+.tow-books .daw .card.view:hover {
     transform: none;
 }
 
@@ -7571,10 +7573,10 @@ input:focus {
     /* تأثير سلس عند التمرير */
 }
 
-.tow-books .daw .card a.download {
+.tow-books .daw .card a.download,
+.tow-books .daw .card a.view {
     position: absolute;
     top: 19px;
-    left: 5px;
     background: var(--fifth-color);
     color: white;
     padding: 8px;
@@ -7583,8 +7585,15 @@ input:focus {
     font-weight: bold;
     transition: 0.5s;
 }
+.tow-books .daw .card a.download {
+    left: 5px;
+}
+.tow-books .daw .card a.view {
+    right: 5px;
+}
 
-.tow-books .daw .card a.download:hover {
+.tow-books .daw .card a.download:hover,
+.tow-books .daw .card a.view:hover {
     background-color: var(--fourth-color);
     transform: none;
 }
@@ -7624,7 +7633,8 @@ input:focus {
         margin-top: -4px;
     }
 
-    .tow-books .daw .card a.download {
+    .tow-books .daw .card a.download,
+    .tow-books .daw .card a.view {
         top: 21px;
         padding: 5px;
         font-size: 14px;
@@ -7659,10 +7669,16 @@ input:focus {
         /* تأثير سلس عند التمرير */
     }
 
-    .tow-books .daw .card a.download {
+    .tow-books .daw .card a.download,
+    .tow-books .daw .card a.view {
         top: 13px;
-        left: 3px;
         font-size: 14px;
+    }
+    .tow-books .daw .card a.download {
+        left: 3px;
+    }
+    .tow-books .daw .card a.view {
+        right: 3px;
     }
 }
 
@@ -7691,7 +7707,8 @@ input:focus {
         /* تأثير سلس عند التمرير */
     }
 
-    .tow-books .daw .card a.download {
+    .tow-books .daw .card a.download,
+    .tow-books .daw .card a.view {
         font-size: 16px;
     }
 }
@@ -7722,12 +7739,18 @@ input:focus {
         /* تأثير سلس عند التمرير */
     }
 
-    .tow-books .daw .card a.download {
+    .tow-books .daw .card a.download,
+    .tow-books .daw .card a.view {
         top: 19px;
-        left: 5px;
         padding: 8px;
         border-radius: 8px;
         font-size: 18px;
+    }
+    .tow-books .daw .card a.download { 
+        left: 5px;
+    }
+    .tow-books .daw .card a.view { 
+        right: 5px;
     }
 }
 
