@@ -7528,6 +7528,7 @@ input:focus {
 }
 
 .tow-books .daw .card {
+    background-color: white;
     margin-top: 15px;
     width: 100%;
     transition: transform 1s ease;
@@ -7558,7 +7559,6 @@ input:focus {
 
 
 .tow-books .daw .card .daw-info {
-    background-color: white;
     font-size: 18px;
     font-weight: bold;
 }
