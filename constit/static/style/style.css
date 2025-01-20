@@ -6252,10 +6252,6 @@ input {
     color: white !important;
 }
 
-.pagination .pre {
-    position: relative;
-    top: 0;
-}
 
 @media (max-width: 574px) {
     .p-ul li {
@@ -6264,11 +6260,6 @@ input {
 
     .p-ul li a {
         padding: 3px 7px;
-    }
-
-    .pagination .pre {
-        position: relative;
-        top: -2px;
     }
 }
 
