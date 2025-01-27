@@ -206,8 +206,7 @@
 <script>
     document.addEventListener('DOMContentLoaded', function () {
         let counter = 1;
-        let intervalTime = 9000; // وقت البداية بين الانتقالات
-        let incrementTime = 1000; // مقدار الزيادة الزمنية لكل انتقال
+        let intervalTime = 12000; // وقت البداية بين الانتقالات
 
         function startSlider() {
             counter = 1; // التأكد من البدء من الصورة الأولى
@@ -220,15 +219,12 @@
                 }
                 document.getElementById('radio' + counter).checked = true;
 
-                // زيادة وقت الانتقال
-                intervalTime += incrementTime;
-
-                // ضبط الانتقال التالي مع الوقت الجديد
+                // ضبط الانتقال التالي بنفس الوقت الثابت                
                 setTimeout(sliderTransition, intervalTime);
             }, intervalTime);
         }
 
-        // التأكد من تشغيل السلايدر عند تحميل الصفحة
+        // التأكد من تشغيل السلايدر عند تحميل الصفحة        
         window.onload = startSlider;
 
 
