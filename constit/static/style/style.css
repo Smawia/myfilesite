@@ -7536,7 +7536,7 @@ input:focus {
 
 .tow-books .daw .card img {
     width: 100%;
-    height: 366px;
+    height: 100%;
     box-shadow: 4px -4px 8px rgba(0, 0, 0, 0.3), -4px -4px 8px rgba(0, 0, 0, 0.3), 0px -4px 8px rgba(0, 0, 0, 0.3);
     transition: box-shadow 0.3s ease;
 }
@@ -7615,10 +7615,6 @@ input:focus {
         font-size: 14px;
     }
 
-    .tow-books .daw .card img {
-        height: 250px;
-    }
-
     .tow-books .daw .card .daw-info p {
         padding: 10px;
         margin-top: -4px;
@@ -7646,10 +7642,6 @@ input:focus {
 
     .tow-books .daw .card .daw-info {
         font-size: 14px;
-    }
-
-    .tow-books .daw .card img {
-        height: 250px;
     }
 
     .tow-books .daw .card .daw-info p {
@@ -7687,10 +7679,6 @@ input:focus {
         font-size: 14px;
     }
 
-    .tow-books .daw .card img {
-        height: 300px;
-    }
-
     .tow-books .daw .card .daw-info p {
         margin-top: -4px;
         padding: 15px 10px;
@@ -7716,10 +7704,6 @@ input:focus {
 
     .tow-books .daw .card .daw-info {
         font-size: 18px;
-    }
-
-    .tow-books .daw .card img {
-        height: 366px;
     }
 
     .tow-books .daw .card .daw-info p {
