@@ -5354,7 +5354,7 @@ input {
     color: white;
     font-weight: bold;
     padding: 10px;
-    background-color: var(--second-color);
+    background-color: rgba(87, 84, 163, 0.5);
     border-radius: 8px;
     position: fixed;
     z-index: 5000;
@@ -5366,6 +5366,7 @@ input {
     animation-iteration-count: infinite;
     animation-fill-mode: both;
     animation-direction: alternate;
+    transition: 0.3s;
 }
 
 @keyframes up-and-down {
@@ -5375,7 +5376,7 @@ input {
 
     to {
         transform: translateY(-30px);
-        background-color: var(--fourth-color);
+        background-color: var(--second-color);
     }
 }
 
@@ -5406,7 +5407,7 @@ input {
 @media (min-width: 992px) {
     .fa-arrow-up-long {
         padding: 6px;
-        right: 18px;
+        right: 40px;
         font-size: 28px;
     }
 }
