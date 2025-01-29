@@ -7752,6 +7752,7 @@ ul .aside-nested-list {
 
 .studies-flex {
     display: flex;
+    align-items: flex-start; /* يضمن أن العنصر اللاصق لا يتأثر بمحاذاة العناصر */
 }
 
 .studies-flex .nested-ref {
@@ -7762,6 +7763,14 @@ ul .aside-nested-list {
     width: 300px;
     position: sticky;
     top: 0;
+    max-height: 100vh; /* تحديد ارتفاع أقصى حتى لا يشغل الشاشة بالكامل */
+    overflow: auto; /* تمكين التمرير داخل العنصر */
+    /* إخفاء شريط التمرير */
+    scrollbar-width: none; /* للمتصفحات التي تدعم هذا الخيار مثل Firefox */
+}
+
+.studies-flex .show-some-studies::-webkit-scrollbar {
+    display: none; /* إخفاء شريط التمرير في Chrome, Safari, Edge */
 }
 
 .show-some-studies a {
