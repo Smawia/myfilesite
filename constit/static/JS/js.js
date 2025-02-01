@@ -148,7 +148,7 @@ function updateStudies() {
 updateStudies();
 
 // تبديل المواضيع كل 5 ثوانٍ
-setInterval(updateStudies, 5000);
+setInterval(updateStudies, 12000);
 
 // تحديد العنصر باستخدام الكلاس
 const hiddenRows = document.querySelectorAll('.hidden-row');
