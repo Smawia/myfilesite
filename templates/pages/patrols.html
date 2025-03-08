@@ -6,14 +6,18 @@
     <h1 class="spe-h1 book">الدوريات</h1>
     <div class="tow-books">
         <div class="daw">
-            <a href="#">
-                <div class="card">
-                    <img src="{% static 'imgs/patrol.jpg' %}" alt="">
+                <div class="card download">
+                    <img src="{% static 'imgs/p.jpg' %}" alt="">
                     <div class="daw-info">
                         <p>أُسـس / العدد الأول</p>
                     </div>
+                    <a href="{% url 'download_or_view_patrols' %}?action=download" class="download">
+                        <i class="fas fa-download"></i> تحميل العدد
+                    </a>
+                    <a href="{% url 'download_or_view_patrols' %}?action=view" class="view" target="_blank">
+                        <i class="fas fa-eye"></i> قراءة العدد 
+                    </a>
                 </div>
-            </a>
         </div>
     </div>
 </div>

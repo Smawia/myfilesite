@@ -13,6 +13,16 @@
             <input type="radio" name="radio-btn" id="radio4">
             <input type="radio" name="radio-btn" id="radio5">
             <div class="slide first">
+                <a href="{% url 'patrols' %}">
+                    <img src="{% static 'imgs/slider.jpg' %}" alt="">
+                    <div class="slide-full-inf">
+                        <h2>دورية أُســـس </h2>
+                        <span><span style="display: inline;"><i class="fas fa-calendar-alt"></i> 8 </span>/3/ 2025
+                        </span>
+                    </div>
+                </a>
+            </div>
+            <div class="slide">
                 <a href="{% url 'financial_reform_in_yemen' %}">
                     <img src="{% static 'imgs/y.png' %}" alt="">
                     <div class="slide-full-inf">
@@ -40,16 +50,6 @@
                     <div class="slide-full-inf">
                         <h2>تجربة رواندا في الإصلاح الإداري</h2>
                         <span><span style="display: inline;"><i class="fas fa-calendar-alt"></i> 4 </span>/5/ 2024
-                        </span>
-                    </div>
-                </a>
-            </div>
-            <div class="slide">
-                <a href="{% url 'administrative_raw' %}">
-                    <img src="{% static 'imgs/jy.jpg' %}" alt="">
-                    <div class="slide-full-inf">
-                        <h2>ماهية القانون الإداري</h2>
-                        <span><span style="display: inline;"><i class="fas fa-calendar-alt"></i> 6 </span>/7/ 2024
                         </span>
                     </div>
                 </a>
@@ -168,7 +168,7 @@
             <h1 class="spe-h1">دوريات المركز</h1>
             <a href="{% url 'patrols' %}">
                 <div class="card">
-                    <img src="{% static 'imgs/patrol.jpg' %}" alt="">
+                    <img src="{% static 'imgs/p.jpg' %}" alt="">
                     <div class="daw-info">
                         <p>دوريات المركز</p>
                     </div>

@@ -9,11 +9,11 @@ from comments.forms import DocumentForm
 from django.core.paginator import Paginator
 from django.db.models import Q  # لاستعمال البحث المتقدم
 import os
-import mimetypes
+from django.conf import settings
 
-def download_or_view_file(request):
-    # تحديد مسار الملف
-    file_path = os.path.join('media', 'Future Vision for Administrative Reform.pdf')
+def serve_pdf(request, filename):
+    # تحديد مسار الملف داخل MEDIA_ROOT
+    file_path = os.path.join(settings.MEDIA_ROOT, filename)
 
     # التحقق من وجود الملف
     if not os.path.exists(file_path):
@@ -22,23 +22,27 @@ def download_or_view_file(request):
     # الحصول على نوع العملية من طلب GET (تحميل أو عرض)
     action = request.GET.get('action', 'download')  # القيمة الافتراضية هي "download"
 
-    # إذا كانت العملية هي "عرض"
-    if action == 'view':
-        try:
-            file = open(file_path, 'rb')  # افتح الملف بدون إغلاقه
-            response = FileResponse(file, content_type='application/pdf')
-            response['Content-Disposition'] = 'inline; filename="Future Vision for Administrative Reform.pdf"'
-            return response
-        except Exception as e:
-            return HttpResponse(f"حدث خطأ أثناء عرض الملف: {str(e)}", status=500)
-
-    # إذا كانت العملية هي "تحميل"
     try:
-        file = open(file_path, 'rb')  # افتح الملف بدون إغلاقه
-        response = FileResponse(file, as_attachment=True, filename='Future Vision for Administrative Reform.pdf')
+        with open(file_path, 'rb') as file:
+            file_content = file.read()
+
+        response = HttpResponse(file_content, content_type='application/pdf')
+
+        if action == 'view':
+            response['Content-Disposition'] = f'inline; filename="{filename}"'
+        else:
+            response['Content-Disposition'] = f'attachment; filename="{filename}"'
+
         return response
     except Exception as e:
-        return HttpResponse(f"حدث خطأ أثناء تحميل الملف: {str(e)}", status=500)
+        return HttpResponse(f"حدث خطأ أثناء معالجة الملف: {str(e)}", status=500)
+
+# إنشاء الفيوز باستخدام الدالة العامة
+def download_or_view_file(request):
+    return serve_pdf(request, 'Future Vision for Administrative Reform.pdf')
+
+def download_or_view_patrols(request):
+    return serve_pdf(request, 'Patrols Book.pdf')
 
 def index(request):
     return render(request,'pages/index.html')
