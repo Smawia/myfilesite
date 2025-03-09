@@ -5811,16 +5811,16 @@ input {
 
 @media (max-width: 574px) {
     .slider {
-        height: 200px;
+        height: 150px;
         margin: auto;
     }
 
     .slider .slides {
-        height: 200px;
+        height: 150px;
     }
 
     .slider .slides .slide img {
-        height: 200px;
+        height: 100%;
         background-size: cover;
     }
 
@@ -5854,7 +5854,7 @@ input {
     .navigation-auto {
         width: 90%;
         justify-content: center;
-        margin-top: 183px;
+        margin-top: 133px;
     }
 
     .navigation-auto div {
@@ -5908,16 +5908,16 @@ input {
 
 @media (min-width: 575px) {
     .slider {
-        height: 300px;
+        height: 200px;
         margin: auto;
     }
 
     .slider .slides {
-        height: 300px;
+        height: 200px;
     }
 
     .slider .slides .slide img {
-        height: 300px;
+        height: 100%;
         background-size: cover;
     }
 
@@ -5952,7 +5952,7 @@ input {
     .navigation-auto {
         width: 90%;
         justify-content: center;
-        margin-top: 280px;
+        margin-top: 180px;
     }
 
     .navigation-auto div:not(:last-child) {
@@ -5961,7 +5961,7 @@ input {
 
     .slide-full-inf {
         right: 4px;
-        bottom: -57px;
+        bottom: -21px;
         text-align: end;
         width: 70%;
     }
@@ -5989,16 +5989,16 @@ input {
 
 @media (min-width: 768px) {
     .slider {
-        height: 350px;
+        height: 300px;
         margin: auto;
     }
 
     .slider .slides {
-        height: 350px;
+        height: 300px;
     }
 
     .slider .slides .slide img {
-        height: 350px;
+        height: 100%;
         background-size: cover;
     }
 
@@ -6032,7 +6032,7 @@ input {
     .navigation-auto {
         width: 90%;
         justify-content: center;
-        margin-top: 325px;
+        margin-top: 275px;
     }
 
     .navigation-auto div:not(:last-child) {
@@ -6040,8 +6040,8 @@ input {
     }
 
     .slide-full-inf {
-        right: 4px;
-        bottom: -62px;
+        right: 1px;
+        bottom: -37px;
         text-align: end;
         width: 70%;
     }
@@ -6069,7 +6069,7 @@ input {
 
 @media (min-width: 992px) {
     .slider {
-        height: 500px;
+        height: 400px;
         overflow: hidden;
         margin: auto;
         direction: ltr;
@@ -6077,7 +6077,7 @@ input {
 
     .slider .slides {
         width: 500%;
-        height: 500px;
+        height: 400px;
         display: flex;
     }
 
@@ -6092,7 +6092,7 @@ input {
     }
 
     .slider .slides .slide img {
-        height: 550px;
+        height: 100%;
         background-size: cover;
     }
 
@@ -6140,7 +6140,7 @@ input {
         width: 90%;
         position: absolute;
         justify-content: center;
-        margin-top: 474px;
+        margin-top: 374px;
     }
 
     .navigation-auto div {
