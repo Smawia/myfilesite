@@ -1,0 +1,31 @@
+{% extends 'base.html' %}
+{%  load static %}
+{% block content %}
+<div class="container">
+    <h1 class="publications">إصدارات المركز</h1>
+    <div class="tow-books">
+        <div class="daw">
+            <h1 class="spe-h1">دوريات المركز</h1>
+            <a href="{% url 'patrols' %}">
+                <div class="card">
+                    <img src="{% static 'imgs/web.jpg' %}" alt="">
+                    <div class="daw-info">
+                        <p>دورية أٌســس</p>
+                    </div>
+                </div>
+            </a>
+        </div>
+        <div class="daw">
+            <h1 class="spe-h1">كتب المركز</h1>
+            <a href="{% url 'books' %}">
+                <div class="card">
+                    <img src="{% static 'imgs/Book A.jpg' %}" alt="">
+                    <div class="daw-info">
+                        <p>رؤية مستقبلية للإصلاح الإداري الشامل في اليمن 2023</p>
+                    </div>
+                </div>
+            </a>
+        </div>
+    </div>
+</div>
+{% endblock %}

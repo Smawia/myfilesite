@@ -42,7 +42,7 @@ def download_or_view_file(request):
     return serve_pdf(request, 'Future Vision for Administrative Reform.pdf')
 
 def download_or_view_patrols(request):
-    return serve_pdf(request, 'Patrols Book.pdf')
+    return serve_pdf(request, 'Osus-2025-03-Issue.pdf')
 
 def index(request):
     return render(request,'pages/index.html')
@@ -436,6 +436,9 @@ def implementing_egovernment_in_Yemen(request):
 
 def future_of_eGovernment_Yemen(request):
     return render(request,'pages/future_of_eGovernment_Yemen.html')
+
+def show_publications(request):
+    return render(request,'pages/show_publications.html')
     
 def error_404(request,exception):
     return render(request,'pages/404_error.html')

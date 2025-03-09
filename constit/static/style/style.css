@@ -8273,3 +8273,35 @@ header .phone button {
 .footer-social2 {
     display: flex;
 }
+.publications {
+    color: var(--second-color);
+    margin-bottom: 0;
+}
+@media (max-width: 574px) {
+    .publications {
+        font-size: 20px;
+    }
+}
+
+@media (min-width: 575px) {
+    .publications {
+        font-size: 19px;
+        margin-bottom: -7px;
+        margin-right: 50px;
+    }
+}
+
+@media (min-width: 768px) {
+    .publications {
+        font-size: 23px;
+        margin-bottom: -17px;
+        margin-right: 0;
+    }
+}
+
+@media (min-width: 992px) {
+    .publications {
+        font-size: 26px;
+        margin-right: 0;
+    }
+}
