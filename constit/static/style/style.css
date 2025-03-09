@@ -1,7 +1,10 @@
 :root {
-    writing-mode: horizontal-tb; /* الاتجاه الأفقي الافتراضي */
-    direction: rtl; /* النص يقرأ من اليسار لليمين */
-    text-orientation: mixed; /* النصوص أفقية في الوضع الأفقي */
+    writing-mode: horizontal-tb;
+    /* الاتجاه الأفقي الافتراضي */
+    direction: rtl;
+    /* النص يقرأ من اليسار لليمين */
+    text-orientation: mixed;
+    /* النصوص أفقية في الوضع الأفقي */
     --main-color: white;
     --second-color: #5754A3;
     --third-color: var(--second-color);
@@ -5727,6 +5730,7 @@ input {
 #radio4:checked~.first {
     margin-left: -60%;
 }
+
 #radio5:checked~.first {
     margin-left: -80%;
 }
@@ -5765,6 +5769,7 @@ input {
 #radio4:checked~.navigation-auto .auto-btn4 {
     background-color: var(--fifth-color);
 }
+
 #radio5:checked~.navigation-auto .auto-btn5 {
     background-color: var(--fifth-color);
 }
@@ -5811,12 +5816,12 @@ input {
 
 @media (max-width: 574px) {
     .slider {
-        height: 150px;
+        height: 105px;
         margin: auto;
     }
 
     .slider .slides {
-        height: 150px;
+        height: 105px;
     }
 
     .slider .slides .slide img {
@@ -5827,7 +5832,7 @@ input {
     .navigation-manual {
         position: absolute;
         width: 90%;
-        margin-top: -17px;
+        margin-top: -13px;
 
     }
 
@@ -5854,7 +5859,7 @@ input {
     .navigation-auto {
         width: 90%;
         justify-content: center;
-        margin-top: 133px;
+        margin-top: 92px;
     }
 
     .navigation-auto div {
@@ -5875,22 +5880,22 @@ input {
 
     .slide-full-inf {
         right: 0;
-        bottom: -15px;
+        bottom: 1px;
         text-align: end;
-        width: 90%;
+        width: 96%;
         padding-bottom: 8px;
     }
 
     .slide-full-inf h2 {
         margin-right: -10px;
-        font-size: 16px;
+        font-size: 14px;
         margin-bottom: 5px;
         line-height: normal;
         margin-top: 0px;
     }
 
     .slide-full-inf span {
-        font-size: 14px;
+        font-size: 12px;
         margin-right: -5px;
     }
 
@@ -5903,6 +5908,10 @@ input {
     .slide-full-inf span.pub {
         margin-right: -10px;
         margin-top: 5px;
+    }
+
+    .slider .slides .slide::before {
+        background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.08), rgba(0, 0, 0, 0) 30%, rgba(0, 0, 0, 0.5)), linear-gradient(to top, rgba(0, 0, 0, 0.05), rgba(0, 0, 0, 0) 40%, rgba(0, 0, 0, 0.16));
     }
 }
 
@@ -7017,7 +7026,7 @@ input:focus {
     margin-right: 20px;
     margin-bottom: 20px !important;
     font-family: 'CodecProBold', sans-serif;
-    
+
 }
 
 .show-studies-index .show-index-imgs .card a .text-info-index p.pod {
@@ -7055,8 +7064,8 @@ input:focus {
 
     .show-studies-index .show-index-imgs .card img {
         width: 100%;
-        height: 180px !important;
-        max-height: 180px !important;
+        height: 150px !important;
+        max-height: 150px !important;
     }
 
     .show-studies-index .show-index-imgs .card a .text-info-index p {
@@ -7577,9 +7586,11 @@ input:focus {
     font-weight: bold;
     transition: 0.5s;
 }
+
 .tow-books .daw .card a.download {
     left: 5px;
 }
+
 .tow-books .daw .card a.view {
     right: 5px;
 }
@@ -7658,9 +7669,11 @@ input:focus {
         top: 13px;
         font-size: 14px;
     }
+
     .tow-books .daw .card a.download {
         left: 3px;
     }
+
     .tow-books .daw .card a.view {
         right: 3px;
     }
@@ -7722,10 +7735,12 @@ input:focus {
         border-radius: 8px;
         font-size: 18px;
     }
-    .tow-books .daw .card a.download { 
+
+    .tow-books .daw .card a.download {
         left: 5px;
     }
-    .tow-books .daw .card a.view { 
+
+    .tow-books .daw .card a.view {
         right: 5px;
     }
 }
@@ -7752,7 +7767,8 @@ ul .aside-nested-list {
 
 .studies-flex {
     display: flex;
-    align-items: flex-start; /* يضمن أن العنصر اللاصق لا يتأثر بمحاذاة العناصر */
+    align-items: flex-start;
+    /* يضمن أن العنصر اللاصق لا يتأثر بمحاذاة العناصر */
 }
 
 .studies-flex .nested-ref {
@@ -7763,14 +7779,18 @@ ul .aside-nested-list {
     width: 300px;
     position: sticky;
     top: 0;
-    max-height: 100vh; /* تحديد ارتفاع أقصى حتى لا يشغل الشاشة بالكامل */
-    overflow: auto; /* تمكين التمرير داخل العنصر */
+    max-height: 100vh;
+    /* تحديد ارتفاع أقصى حتى لا يشغل الشاشة بالكامل */
+    overflow: auto;
+    /* تمكين التمرير داخل العنصر */
     /* إخفاء شريط التمرير */
-    scrollbar-width: none; /* للمتصفحات التي تدعم هذا الخيار مثل Firefox */
+    scrollbar-width: none;
+    /* للمتصفحات التي تدعم هذا الخيار مثل Firefox */
 }
 
 .studies-flex .show-some-studies::-webkit-scrollbar {
-    display: none; /* إخفاء شريط التمرير في Chrome, Safari, Edge */
+    display: none;
+    /* إخفاء شريط التمرير في Chrome, Safari, Edge */
 }
 
 .show-some-studies a {
