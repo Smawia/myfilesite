@@ -4933,6 +4933,7 @@ input {
         font-size: 18px;
         margin-top: 20px;
         margin-bottom: 0;
+        margin-right: 43px;
     }
 }
 
@@ -8273,10 +8274,12 @@ header .phone button {
 .footer-social2 {
     display: flex;
 }
+
 .publications {
     color: var(--second-color);
     margin-bottom: 0;
 }
+
 @media (max-width: 574px) {
     .publications {
         font-size: 20px;
@@ -8303,5 +8306,282 @@ header .phone button {
     .publications {
         font-size: 26px;
         margin-right: 0;
+    }
+}
+
+/* styling osus */
+.osus-first-content h3,
+.osus-first-content h2 {
+    color: var(--second-color);
+}
+
+.osus-first-content .osus-first-container {
+    display: flex;
+    margin-bottom: 100px;
+}
+
+.osus-first-content .osus-first-container .osus-first-text {
+    margin-right: 20px;
+    line-height: 1.8;
+    font-size: 18px;
+    text-align: justify;
+}
+
+.osus-first-content .osus-first-container img {
+    width: 486px;
+    height: 426px;
+    box-shadow: 1px 1px 3px 2px gray;
+}
+
+.osus-first-content .osus-second-container {
+    display: flex;
+    margin-bottom: 100px;
+}
+
+.osus-first-content .osus-second-container img {
+    width: 486px;
+    height: 426px;
+    box-shadow: 1px 1px 3px 2px gray;
+}
+
+.osus-first-content .osus-second-container .osus-second-text {
+    margin-right: 20px;
+    line-height: 1.8;
+    font-size: 18px;
+    text-align: justify;
+    margin-top: -6px;
+}
+
+.osus-first-content .osus-second-container .osus-second-text .osus-links {
+    display: flex;
+    justify-content: center;
+}
+
+.osus-first-content .osus-second-container .osus-second-text .osus-links a {
+    margin-left: 20px;
+    padding: 0px 65px;
+    border: 1px solid black;
+    color: black;
+    margin-top: 195px;
+}
+
+@media (max-width: 574px) {
+
+    .osus-first-content h3 {
+        font-size: 14px;
+    }
+
+    .osus-first-content h2 {
+        font-size: 16px;
+    }
+
+    .osus-first-content .osus-first-container {
+        flex-direction: column;
+        margin-bottom: 20px;
+    }
+
+    .osus-first-content .osus-first-container .osus-first-text {
+        font-size: 14px;
+        margin-right: 0;
+    }
+
+    .osus-first-content .osus-first-container img {
+        width: 100%;
+        height: 260px;
+    }
+
+    .osus-first-content .osus-second-container {
+        flex-direction: column;
+        margin-bottom: 30px;
+    }
+
+    .osus-first-content .osus-second-container img {
+        width: 90%;
+        height: 247px;
+    }
+
+    .osus-first-content .osus-second-container .osus-second-text {
+        font-size: 14px;
+        margin-right: 0;
+        margin-top: 0px;
+        width: 90%;
+    }
+
+    .osus-first-content .osus-second-container .osus-second-text .osus-links {
+        display: flex;
+        justify-content: center;
+    }
+
+    .osus-first-content .osus-second-container .osus-second-text .osus-links a {
+        margin-left: 8px;
+        padding: 0px 8px;
+        margin-top: 10px;
+        font-size: 12px;
+    }
+}
+
+@media (min-width: 575px) and (max-width: 767px) {
+    .osus-first-content h3 {
+        font-size: 14px;
+        margin-right: 26px;
+    }
+
+    .osus-first-content h2 {
+        font-size: 16px;
+        margin-right: 26px;
+    }
+
+    .osus-first-content .osus-first-container {
+        flex-direction: column;
+        margin-bottom: 20px;
+        margin-left: auto;
+        margin-right: auto;
+        width: 90%;
+    }
+
+    .osus-first-content .osus-first-container .osus-first-text {
+        font-size: 16px;
+        margin-right: 0;
+    }
+
+    .osus-first-content .osus-first-container img {
+        width: 100%;
+        height: 300px;
+    }
+
+    .osus-first-content .osus-second-container {
+        flex-direction: column;
+        margin-bottom: 30px;
+        margin-left: auto;
+        margin-right: auto;
+        width: 90%;
+    }
+
+    .osus-first-content .osus-second-container img {
+        width: 480px;
+        height: 330px;
+    }
+
+    .osus-first-content .osus-second-container .osus-second-text {
+        font-size: 16px;
+        margin-right: 0;
+        margin-top: 0px;
+        width: 480px;
+    }
+
+    .osus-first-content .osus-second-container .osus-second-text .osus-links {
+        display: flex;
+        justify-content: center;
+    }
+
+    .osus-first-content .osus-second-container .osus-second-text .osus-links a {
+        margin-left: 10px;
+        padding: 0px 10px;
+        margin-top: 10px;
+        font-size: 12px;
+    }
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+    .osus-first-content h3 {
+        font-size: 16px;
+    }
+
+    .osus-first-content h2 {
+        font-size: 18px;
+    }
+
+    .osus-first-content .osus-first-container {
+        display: flex;
+        margin-bottom: 50px;
+    }
+
+    .osus-first-content .osus-first-container .osus-first-text {
+        margin-right: 15px;
+        line-height: 1.1;
+        font-size: 16px;
+    }
+
+    .osus-first-content .osus-first-container img {
+        width: 400px;
+        height: 326px;
+    }
+
+    .osus-first-content .osus-second-container {
+        display: flex;
+        margin-bottom: 50px;
+    }
+
+    .osus-first-content .osus-second-container img {
+        width: 380px;
+        height: 300px;
+    }
+
+    .osus-first-content .osus-second-container .osus-second-text {
+        line-height: 1.1;
+        font-size: 18px;
+        margin-right: 20px;
+        margin-top: 10px;
+    }
+
+    .osus-first-content .osus-second-container .osus-second-text .osus-links {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .osus-first-content .osus-second-container .osus-second-text .osus-links a {
+        margin-left: 10px;
+        padding: 3px 17px;
+        margin-top: 40px;
+        font-size: 18px;
+    }
+}
+
+@media (min-width: 992px) {
+
+    .osus-first-content .osus-first-container {
+        display: flex;
+        margin-bottom: 100px;
+    }
+
+    .osus-first-content .osus-first-container .osus-first-text {
+        margin-right: 20px;
+        line-height: 1.8;
+        font-size: 18px;
+        text-align: justify;
+    }
+
+    .osus-first-content .osus-first-container img {
+        width: 486px;
+        height: 426px;
+    }
+
+    .osus-first-content .osus-second-container {
+        display: flex;
+        margin-bottom: 100px;
+    }
+
+    .osus-first-content .osus-second-container img {
+        width: 476px;
+        height: 400px;
+    }
+
+    .osus-first-content .osus-second-container .osus-second-text {
+        line-height: 1.8;
+        font-size: 18px;
+        text-align: justify;
+        margin-right: 60px;
+        margin-top: 20px;
+    }
+
+    .osus-first-content .osus-second-container .osus-second-text .osus-links {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .osus-first-content .osus-second-container .osus-second-text .osus-links a {
+        margin-left: 10px;
+        padding: 0px 45px;
+        margin-top: 150px;
     }
 }

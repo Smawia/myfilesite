@@ -58,7 +58,7 @@
                         {% endif %}
                         >دراسات وبحوث</a></li>
                     <li class="base-li"><a href="{% url 'publications' %}"
-                        {% if 'books' in request.path or 'journals' in request.path or 'publications' in request.path %}
+                        {% if 'books' in request.path or 'journals' in request.path or 'publications' in request.path or 'Osus' in request.path%}
                         class="active js-a nav-a"
                         {% else %}
                         class="nav-a"
@@ -66,7 +66,7 @@
                         >إصدارات المركز<i class="fa-solid fa-angle-down arrow spe-arrow active"></i></a>
                         <ul class="ul nested-list">
                             <li><a href="{% url 'books' %}">الكتب</a></li>
-                            <li><a href="{% url 'patrols' %}">الدوريات</a></li>
+                            <li><a href="{% url 'osus' %}">الدوريات</a></li>
                         </ul>
                     </li>       
                     <!-- <li><a href="{% url 'patrols' %}"
@@ -176,7 +176,7 @@
                         >إصدارات المركز</a>
                         <ul class="aside-ul aside-nested-list">
                             <li><a href="{% url 'books' %}">الكتب</a></li>
-                            <li><a href="{% url 'patrols' %}">الدوريات</a></li>
+                            <li><a href="{% url 'osus' %}">الدوريات</a></li>
                         </ul>
                     </li>
                     <li class="asid-li small-screen"><a href="{% url 'news' %}"

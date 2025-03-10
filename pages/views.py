@@ -439,6 +439,9 @@ def future_of_eGovernment_Yemen(request):
 
 def show_publications(request):
     return render(request,'pages/show_publications.html')
+
+def osus_journals(request):
+    return render(request,'pages/osus_journals.html')
     
 def error_404(request,exception):
     return render(request,'pages/404_error.html')

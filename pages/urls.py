@@ -62,6 +62,7 @@ urlpatterns = [
     path('download/', views.download_or_view_file, name='download_or_view_file'),
     path('journals/osus/osus-2025-03-issue.pdf', views.download_or_view_patrols, name='download_or_view_patrols'),
     path('publications', views.show_publications, name='publications'),
+    path('Journals/Osus', views.osus_journals, name='osus'),
 ]
 sitemaps = {
     'static': StaticViewSitemap,
