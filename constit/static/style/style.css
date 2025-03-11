@@ -4933,7 +4933,6 @@ input {
         font-size: 18px;
         margin-top: 20px;
         margin-bottom: 0;
-        margin-right: 43px;
     }
 }
 
@@ -8330,7 +8329,7 @@ header .phone button {
 .osus-first-content .osus-first-container img {
     width: 486px;
     height: 426px;
-    box-shadow: 1px 1px 3px 2px gray;
+    box-shadow: 1px 1px 3px 2px #251e1e54;
 }
 
 .osus-first-content .osus-second-container {
@@ -8341,7 +8340,7 @@ header .phone button {
 .osus-first-content .osus-second-container img {
     width: 486px;
     height: 426px;
-    box-shadow: 1px 1px 3px 2px gray;
+    box-shadow: 1px 1px 3px 2px #251e1e54   ;
 }
 
 .osus-first-content .osus-second-container .osus-second-text {
@@ -8360,8 +8359,10 @@ header .phone button {
 .osus-first-content .osus-second-container .osus-second-text .osus-links a {
     margin-left: 20px;
     padding: 0px 65px;
-    border: 1px solid black;
-    color: black;
+    background: #1A6782;
+    color: white;
+    border: none;
+    font-weight: bold;
     margin-top: 195px;
 }
 
