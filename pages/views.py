@@ -44,6 +44,9 @@ def download_or_view_file(request):
 def download_or_view_patrols(request):
     return serve_pdf(request, 'Osus-2025-03-Issue.pdf')
 
+def view_osus_content(requst):
+    return serve_pdf(requst, 'osus-2025-03-issue-contents.pdf')
+
 def index(request):
     return render(request,'pages/index.html')
 

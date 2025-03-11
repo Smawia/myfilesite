@@ -1,6 +1,6 @@
 {% extends 'base.html' %}
 {% load static %}
-{% block title %}دوريات أٌســس{% endblock %}
+{% block title %}دورية أٌســس{% endblock %}
 {% block content %}
 <div class="container">
     <div class="osus-first-content">
@@ -31,7 +31,7 @@
                     الصلبة. هذه الموضوعات لا تعكس فقط القضايا الأكثر إلحاحًا، بل تقدم أيضًا رؤى واقعية لحلول عملية
                     مستمدة من تجارب دولية ناجحة.</p>
                     <div class="osus-links">
-                        <a href="#">محتويات العدد</a>
+                        <a href="{% url 'osus-content' %}?action=view" target="_blank">محتويات العدد</a>
                         <a href="{% url 'download_or_view_patrols' %}?action=view" target="_blank">قراءة العدد</a>
                         <a href="{% url 'download_or_view_patrols' %}?action=download" target="_blank">تحميل العدد PDF</a>
                     </div>
