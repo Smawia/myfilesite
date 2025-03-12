@@ -294,18 +294,19 @@ header ul .base-li:hover .ul {
 header ul .base-li .ul {
     display: flex;
     flex-direction: column;
-    background-color: var(--fifth-color);
+    background-color: white;
     list-style: none;
-    padding: 8px 5px 8px 0;
+    padding: 8px 5px 7px 0;
     transition: 0.3s;
     margin-top: 15px;
     display: none;
     position: absolute;
     top: 10px;
     right: -23px;
-    width: 150px;
+    width: 131px;
     z-index: 100;
-    border-radius: 8px;
+    border: 1px solid var(--second-color);
+    cursor: pointer;
 }
 
 header ul .base-li .ul::before {
@@ -322,26 +323,37 @@ header ul .base-li .ul::before {
 }
 
 header ul .base-li .ul li {
-    margin-right: 0;
+    margin-right: -5px;
+    margin-top: -8px;
+    transition: 0.3s;
+}
+
+header ul .base-li .ul li:hover {
+    background-color: rgba(128, 128, 128, 0.333);
 }
 
 header ul .base-li .ul li:not(:last-of-type) {
-    padding-bottom: 10px;
-    margin-bottom: 10px;
-    border-bottom: 1px solid white;
+    padding-bottom: 8px;
+    margin-bottom: 7px;
+}
+header ul .base-li .ul li:last-child {
+    margin-bottom: -6px;
 }
 
 header ul .base-li .ul li a {
     text-decoration: none;
-    color: white;
+    color: var(--second-color);
     font-size: 15px;
+    max-width: 100%;
+    display: block;
+    padding-top: 6px;
+    padding-right: 6px;
 }
 
 header ul li a.active,
 header ul li a:hover {
     box-sizing: border-box;
     color: var(--fifth-color);
-    border-radius: 4px;
 }
 
 header ul li a:hover .arrow {
@@ -487,8 +499,8 @@ header .arrow {
 
 .social-above-header {
     display: flex;
-    justify-content: space-between;
     align-items: center;
+    justify-content: flex-end;
 }
 
 .social-above-header #toggleMode {
@@ -501,6 +513,10 @@ header .arrow {
     border-radius: 5px;
     cursor: pointer;
     transition: background-color 0.3s, color 0.3s;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 20px;
 }
 
 .social-above-header a i {
@@ -517,12 +533,15 @@ header .arrow {
 
     .social-above-header a i {
         margin-right: 4px;
+        font-size: 13px;
     }
 
     .social-above-header #toggleMode {
         padding: 3px 4px;
         font-size: 12px;
-        width: 40px;
+        width: 29px;
+        height: 23px;
+        margin-right: 10px;
     }
 }
 
@@ -541,7 +560,9 @@ header .arrow {
     .social-above-header #toggleMode {
         padding: 6px 12px;
         font-size: 14px;
-        width: 40px;
+        width: 35px;
+        height: 27px;
+        margin-right: 10px;
     }
 }
 
@@ -559,7 +580,8 @@ header .arrow {
     .social-above-header #toggleMode {
         padding: 6px 17px;
         font-size: 15px;
-        width: 50px;
+        width: 38px;
+        height: 30px;
     }
 }
 
@@ -567,7 +589,8 @@ header .arrow {
     .social-above-header #toggleMode {
         padding: 6px 8px;
         font-size: 15px;
-        width: 70px;
+        width: 34px;
+        height: 26px;
     }
 }
 
@@ -6061,7 +6084,7 @@ input {
     }
 
     .slide-full-inf span {
-        font-size: 20px;
+        font-size: 18px;
         margin-right: 12px;
     }
 
@@ -6115,7 +6138,7 @@ input {
 
     .navigation-manual .manual-btn {
         border: 2px solid var(--fifth-color);
-        padding: 5px;
+        padding: 6px;
         border-radius: 10px;
         cursor: pointer;
         transition: 1s;
@@ -6154,7 +6177,7 @@ input {
 
     .navigation-auto div {
         border: 2px solid var(--fifth-color);
-        padding: 5px;
+        padding: 6px;
         border-radius: 10px;
         transition: 1s;
     }
@@ -6184,7 +6207,7 @@ input {
     }
 
     .slide-full-inf span {
-        font-size: 24px;
+        font-size: 22px;
         margin-right: 10px;
     }
 
@@ -7006,7 +7029,6 @@ input:focus {
     font-family: 'Calibri';
     color: rgba(0, 0, 0, 0.74);
     display: block;
-    font-weight: bold !important;
     transition: 0.3s;
 }
 
@@ -7026,6 +7048,7 @@ input:focus {
     margin-right: 20px;
     margin-bottom: 20px !important;
     font-family: 'CodecProBold', sans-serif;
+    font-weight: bold !important;
 
 }
 
@@ -7037,6 +7060,7 @@ input:focus {
 .show-studies-index .show-index-imgs .card a .text-info-index span {
     font-size: 18px;
     color: var(--fifth-color);
+    font-weight: 500 !important;
 }
 
 .show-studies-index .show-all {
@@ -8340,7 +8364,7 @@ header .phone button {
 .osus-first-content .osus-second-container img {
     width: 486px;
     height: 426px;
-    box-shadow: 1px 1px 3px 2px #251e1e54   ;
+    box-shadow: 1px 1px 3px 2px #251e1e54;
 }
 
 .osus-first-content .osus-second-container .osus-second-text {
