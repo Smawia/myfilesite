@@ -445,6 +445,9 @@ def show_publications(request):
 
 def osus_journals(request):
     return render(request,'pages/osus_journals.html')
+
+def view_infograph(request):
+    return render(request,'pages/infographs.html')
     
 def error_404(request,exception):
     return render(request,'pages/404_error.html')

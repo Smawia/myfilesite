@@ -4,7 +4,7 @@
 {% block title %}الرئيسية{% endblock %}
 
 {% block content %}
-<div class="container">
+<div class="container spe-show">
     <div class="slider">
         <div class="slides">
             <input type="radio" name="radio-btn" id="radio1">
@@ -14,10 +14,10 @@
             <input type="radio" name="radio-btn" id="radio5">
             <div class="slide first">
                 <a href="{% url 'osus' %}">
-                    <img src="{% static 'imgs/slider2.jpg' %}" alt="">
+                    <img src="{% static 'imgs/Slider.png' %}" alt="">
                     <div class="slide-full-inf">
-                        <h2>دورية أُســـس </h2>
-                        <span><span style="display: inline;"><i class="fas fa-calendar-alt"></i> 8 </span>/3/ 2025
+                        <h2>دورية أُســـس</h2>
+                        <span><span style="display: inline;">8 </span>مارس 2025
                         </span>
                     </div>
                 </a>
@@ -27,7 +27,7 @@
                     <img src="{% static 'imgs/y.png' %}" alt="">
                     <div class="slide-full-inf">
                         <h2>برامج الإصلاح المالي في الجمهورية اليمنية</h2>
-                        <span><span style="display: inline;"> <i class="fas fa-calendar-alt"></i> 13 </span>/1/ 2024
+                        <span><span style="display: inline;">13 </span>يناير 2024
                         </span>
                     </div>
                 </a>
@@ -38,7 +38,7 @@
                     <!-- <h2>سياسة الإصلاح والإنفتاح في الصين</h2> -->
                     <div class="slide-full-inf">
                         <h2>أهم ملامح الوضع الاجتماعي القائم في اليمن</h2>
-                        <span><span style="display: inline;"><i class="fas fa-calendar-alt"></i> 24 </span>/2/ 2024
+                        <span><span style="display: inline;">24 </span>فبراير 2024
                         </span>
                     </div>
                 </a>
@@ -49,7 +49,7 @@
                     <!-- <h2>مراحل عملية الإصلاح التشريعي</h2> -->
                     <div class="slide-full-inf">
                         <h2>تجربة رواندا في الإصلاح الإداري</h2>
-                        <span><span style="display: inline;"><i class="fas fa-calendar-alt"></i> 4 </span>/5/ 2024
+                        <span><span style="display: inline;">4 </span>مايو 2024
                         </span>
                     </div>
                 </a>
@@ -60,7 +60,7 @@
                     <!-- <h2>مدخل إلى الحكومة الإلكترونية</h2> -->
                     <div class="slide-full-inf">
                         <h2>البنية الأساسية لتكنولوجيا المعلومات والاتصالات في اليمن</h2>
-                        <span><span style="display: inline;"> <i class="fas fa-calendar-alt"></i> 28 </span>/10/ 2024
+                        <span><span style="display: inline;">28 </span>أكتوبر 2024
                         </span>
                     </div>
                 </a>
@@ -82,8 +82,8 @@
         </div>
     </div>
 </div>
-<div class="container">
-    <h1 class="spe-h1">دراسات حديثة</h1>
+<div class="container index-articles">
+    <h1 class="spe-h1">دراسات وبحوث</h1>
     <div class="show-studies-index">
         <div class="show-index-imgs">
             <div class="card">
@@ -92,7 +92,7 @@
                 </a>
                 <a href="{% url 'firstpage' %}">
                     <div class="text-info-index">
-                        <span><i class="fa-solid fa-calendar"></i>2024/03/02</span>
+                        <span>2 مارس 2024</span>
                         <p>نشأة الإدارة وتطورها</p>
                     </div>
                 </a>
@@ -103,7 +103,7 @@
                 </a>
                 <a href="{% url 'administrativereform' %}">
                     <div class="text-info-index">
-                        <span><i class="fa-solid fa-calendar"></i>2024/03/16</span>
+                        <span>16 مارس 2024</span>
                         <p>الإصلاح الإداري المفهوم والأهداف</p>
 
                     </div>
@@ -115,7 +115,7 @@
                 </a>
                 <a href="{% url 'reformmethodology' %}">
                     <div class="text-info-index">
-                        <span><i class="fa-solid fa-calendar"></i>2024/03/23</span>
+                        <span>23 مارس 2024</span>
                         <p>منهجية الإصلاح الإداري</p>
 
                     </div>
@@ -127,7 +127,7 @@
                 </a>
                 <a href="{% url 'studyOfUS' %}">
                     <div class="text-info-index">
-                        <span><i class="fa-solid fa-calendar"></i>2024/04/13</span>
+                        <span>13 أبريل 2024</span>
                         <p>تجربة الولايات المتحدة الأمريكية في الإصلاح الإداري</p>
 
                     </div>
@@ -139,7 +139,7 @@
                 </a>
                 <a href="{% url 'studysingapore' %}">
                     <div class="text-info-index">
-                        <span><i class="fa-solid fa-calendar"></i>2024/04/27</span>
+                        <span>27 أبريل 2024</span>
                         <p>تجربة سنغافورا في الإصلاح الإداري</p>
 
                     </div>
@@ -151,37 +151,38 @@
                 </a>
                 <a href="{% url 'rwanda_study' %}">
                     <div class="text-info-index">
-                        <span><i class="fa-solid fa-calendar"></i>2024/04/05</span>
+                        <span>5 أبريل 2024</span>
                         <p>تجربة رواندا في الإصلاح الإداري</p>
                     </div>
                 </a>
             </div>
 
         </div>
-        <a href="{% url 'studies' %}" class="show-all">عرض المزيد...</a>
+        <a href="{% url 'studies' %}" class="show-all">عرض المزيد</a>
     </div>
 </div>
-
-<div class="container">
-    <h1 class="publications">إصدارات المركز</h1>
+<div class="container index-articles">
+    <h1 class="publications in-index">إصدارات المركز</h1>
     <div class="tow-books">
         <div class="daw">
-            <h1 class="spe-h1">الدوريات</h1>
+            <h1 class="spe-h1 index-journals">الدوريات</h1>
             <a href="{% url 'osus' %}">
                 <div class="card">
                     <img src="{% static 'imgs/p.jpg' %}" alt="">
                     <div class="daw-info">
+                        <span class="book-span">العدد الأول | مارس 2025</span>
                         <p>دورية أُســـس</p>
                     </div>
                 </div>
             </a>
         </div>
         <div class="daw">
-            <h1 class="spe-h1">الكتب</h1>
+            <h1 class="spe-h1 index-book">الكتب</h1>
             <a href="{% url 'books' %}">
                 <div class="card">
                     <img src="{% static 'imgs/Book A.jpg' %}" alt="">
                     <div class="daw-info">
+                        <span class="book-span">مجموعة مؤلفين | ديسمبر 2023</span>
                         <p>رؤية مستقبلية للإصلاح الإداري الشامل في اليمن 2023</p>
                     </div>
                 </div>
@@ -189,40 +190,53 @@
         </div>
     </div>
 </div>
-<div class="container">
+<div class="container index-articles">
     <div class="tow-books">
         <div class="daw">
-            <h1 class="spe-h1">بودكاست المركز</h1>
-                <div class="card">
-                    <img src="{% static 'imgs/PODCAST-AD.jpg' %}" alt="">
-                    <div class="daw-info">
-                        <p>داخل الصندوق</p>
-                    </div>
+            <h1 class="spe-h1 pod">داخل الصندوق بودكاست</h1>
+            <div class="card pod">
+                <img src="{% static 'imgs/PODCAST adv-01.png' %}" alt="">
+                <div class="daw-info">
+                    <p>قريباً | سلسلة حلقات من إنتاج المركز التأسيسي للدراسات والبحوث تقدم رؤى فاعلة وتجارب إدارية ناجحة
+                    </p>
                 </div>
+            </div>
         </div>
     </div>
 </div>
-<div class="container">
+<div class="container index-articles">
     <div class="tow-books">
         <div class="daw">
-            <h1 class="spe-h1">إنفوقرافيك</h1>
-                <div class="card">
-                    <img src="{% static 'imgs/info.jpg' %}" alt="">
-                    <div class="daw-info">
-                        <p>أكثر سبع دول في انتاج الأدوية في العالم لعام 2025</p>
-                    </div>
+            <h1 class="spe-h1 infograph">إنفوجراف</h1>
+            <div class="card">
+                <div class="infogr">
+                    <button class="prev" aria-label="السابق">&lt;</button>
+                    <a href="{% url 'infographs' %}">
+                        <img src="{% static 'imgs/info.png' %}" alt="إنفوجراف">
+                    </a>
+                    <button class="next" aria-label="التالي">&gt;</button>
                 </div>
+                <div class="daw-info">
+                    <span class="book-span">13 مارس 2025</span>
+                    <p class="pod-info-index">أكثر سبع دول إنتاجاً للأدوية في العام 2024</p>
+                </div>
+            </div>
         </div>
         <!-- <div class="daw">
-            <h1 class="spe-h1" style="visibility: hidden;">إحصائيات</h1>
+            <h1 class="spe-h1 infograph" style="visibility: hidden;">إنفوجراف</h1>
             <div class="card">
-                <img src="{% static 'imgs/info2.jpg' %}" alt="">
+                <div class="infogr">
+                    <img src="{% static 'imgs/info2.png' %}" alt="إنفوجراف">
+                </div>
                 <div class="daw-info">
-                    <p>أكبر عشر دول في احتياطي اليورانيوم</p>
+                    <span class="book-span">13 مارس 2025</span>
+                    <p class="pod-info-index">ملوك القطن...أكبر عشر دول منتجة للقطن في العالم 2023</p>
                 </div>
             </div>
         </div> -->
     </div>
+    <!-- <a href="{% url 'infographs' %}" class="show-all infograph">عرض المزيد</a> -->
+
 </div>
 <script>
     document.addEventListener('DOMContentLoaded', function () {
@@ -248,7 +262,61 @@
         // التأكد من تشغيل السلايدر عند تحميل الصفحة        
         window.onload = startSlider;
 
+        const slidess = [
+            {
+                image: "{% static 'imgs/info.png' %}",
+                text: "أكثر سبع دول إنتاجاً للأدوية في العام 2024"
+            },
+            {
+                image: "{% static 'imgs/info5.png' %}",
+                text: "أكبر عشر دول في احتياطي اليورانيوم"
+            },
+            {
+                image: "{% static 'imgs/info4.png' %}",
+                text: "الوزارات الحكومية والاقتصادات الخمس الكبرى"
+            },
+            {
+                image: "{% static 'imgs/info3.png' %}",
+                text: "كيف يؤثر التعليم على الاقتصاد"
+            },
+            {
+                image: "{% static 'imgs/info2.png' %}",
+                text: "ملوك القطن...أكبر عشر دول منتجة للقطن في العالم 2023"
+            }
+        ];
 
+        let currentIndex = 0;
+        const imgElement = document.querySelector(".infogr img");
+        const textElement = document.querySelector(".pod-info-index");
+        const prevButton = document.querySelector(".infogr .prev");
+        const nextButton = document.querySelector(".infogr .next");
+
+        // تحديث الصورة
+        // تحديث الصورة والنص معًا
+        function updateSlide(index) {
+            imgElement.style.opacity = 0;
+            textElement.style.opacity = 0;
+
+            setTimeout(() => {
+                imgElement.src = slidess[index].image;
+                textElement.textContent = slidess[index].text;
+
+                imgElement.style.opacity = 1;
+                textElement.style.opacity = 1;
+            }, 0);
+        }
+
+        // أزرار التبديل اليدوي
+        // أزرار التبديل اليدوي - تعديل فقط الأزرار
+        prevButton.addEventListener("click", () => {
+            currentIndex = (currentIndex - 1 + slidess.length) % slidess.length;
+            updateSlide(currentIndex); // تم تعديل الاسم
+        });
+
+        nextButton.addEventListener("click", () => {
+            currentIndex = (currentIndex + 1) % slidess.length; // تعديل المصفوفة
+            updateSlide(currentIndex); // تم تعديل الاسم
+        });
     });
 </script>
 {% endblock %}

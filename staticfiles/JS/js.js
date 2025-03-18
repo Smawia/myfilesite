@@ -148,6 +148,27 @@ function updateStudies() {
 updateStudies();
 
 // تبديل المواضيع كل 5 ثوانٍ
-setInterval(updateStudies, 5000);
+setInterval(updateStudies, 12000);
+
+// تحديد العنصر باستخدام الكلاس
+const hiddenRows = document.querySelectorAll('.hidden-row');
+
+// إضافة مستمع للحدث scroll
+window.addEventListener('scroll', () => {
+    // الحصول على موضع التمرير العمودي
+    const scrollPosition = window.scrollY;
+
+    // تحديد الموضع الذي يظهر عنده العنصر
+    const revealPosition = 300; // يمكن تعديله حسب احتياجك
+
+    // إظهار جميع العناصر التي تحمل الكلاس إذا تجاوز التمرير الموضع المطلوب
+    hiddenRows.forEach(row => {
+        if (scrollPosition > revealPosition) {
+            row.style.display = 'block';
+        } else {
+            row.style.display = 'none';
+        }
+    });
+});
 
 
