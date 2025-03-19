@@ -13,8 +13,9 @@
             <input type="radio" name="radio-btn" id="radio4">
             <input type="radio" name="radio-btn" id="radio5">
             <div class="slide first">
+
+                <img src="{% static 'imgs/New_Slider.png' %}" alt="">
                 <a href="{% url 'osus' %}">
-                    <img src="{% static 'imgs/Slider.png' %}" alt="">
                     <div class="slide-full-inf">
                         <h2>دورية أُســـس</h2>
                         <span><span style="display: inline;">8 </span>مارس 2025
@@ -23,19 +24,20 @@
                 </a>
             </div>
             <div class="slide">
-                <a href="{% url 'financial_reform_in_yemen' %}">
-                    <img src="{% static 'imgs/y.png' %}" alt="">
-                    <div class="slide-full-inf">
-                        <h2>برامج الإصلاح المالي في الجمهورية اليمنية</h2>
-                        <span><span style="display: inline;">13 </span>يناير 2024
-                        </span>
-                    </div>
+                <img src="{% static 'imgs/y.png' %}" alt="">
+                <a href="{% url 'financial_reform_in_yemen' %}"></a>
+                <div class="slide-full-inf">
+                    <h2>برامج الإصلاح المالي في الجمهورية اليمنية</h2>
+                    <span><span style="display: inline;">13 </span>يناير 2024
+                    </span>
+                </div>
                 </a>
             </div>
             <div class="slide">
+
+                <img src="{% static 'imgs/agstate.webp' %}" alt="">
+                <!-- <h2>سياسة الإصلاح والإنفتاح في الصين</h2> -->
                 <a href="{% url 'the_existing_social_situation' %}">
-                    <img src="{% static 'imgs/agstate.webp' %}" alt="">
-                    <!-- <h2>سياسة الإصلاح والإنفتاح في الصين</h2> -->
                     <div class="slide-full-inf">
                         <h2>أهم ملامح الوضع الاجتماعي القائم في اليمن</h2>
                         <span><span style="display: inline;">24 </span>فبراير 2024
@@ -44,9 +46,10 @@
                 </a>
             </div>
             <div class="slide">
+
+                <img src="{% static 'imgs/raw.webp' %}" alt="">
+                <!-- <h2>مراحل عملية الإصلاح التشريعي</h2> -->
                 <a href="{% url 'rwanda_study' %}">
-                    <img src="{% static 'imgs/raw.webp' %}" alt="">
-                    <!-- <h2>مراحل عملية الإصلاح التشريعي</h2> -->
                     <div class="slide-full-inf">
                         <h2>تجربة رواندا في الإصلاح الإداري</h2>
                         <span><span style="display: inline;">4 </span>مايو 2024
@@ -55,9 +58,10 @@
                 </a>
             </div>
             <div class="slide">
+
+                <img src="{% static 'imgs/teg.jpg' %}" alt="">
+                <!-- <h2>مدخل إلى الحكومة الإلكترونية</h2> -->
                 <a href="{% url 'information_and_communications_technology_in_Yemen' %}">
-                    <img src="{% static 'imgs/teg.jpg' %}" alt="">
-                    <!-- <h2>مدخل إلى الحكومة الإلكترونية</h2> -->
                     <div class="slide-full-inf">
                         <h2>البنية الأساسية لتكنولوجيا المعلومات والاتصالات في اليمن</h2>
                         <span><span style="display: inline;">28 </span>أكتوبر 2024
@@ -82,8 +86,8 @@
         </div>
     </div>
 </div>
-<div class="container index-articles">
-    <h1 class="spe-h1">دراسات وبحوث</h1>
+<div class="container index-articles all-art">
+    <h1 class="spe-h1 studies">دراسات وبحوث</h1>
     <div class="show-studies-index">
         <div class="show-index-imgs">
             <div class="card">
@@ -122,17 +126,17 @@
                 </a>
             </div>
             <div class="card">
-                <a href="{% url 'studyOfUS' %}">
-                    <img src="{% static 'imgs/US.jpg' %}" alt="" class="stud">
+                <a href="{% url 'legislative_reform_in_the_world' %}">
+                    <img src="{% static 'imgs/repair4.jpg' %}" alt="" class="stud">
                 </a>
-                <a href="{% url 'studyOfUS' %}">
+                <a href="{% url 'legislative_reform_in_the_world' %}">
                     <div class="text-info-index">
-                        <span>13 أبريل 2024</span>
-                        <p>تجربة الولايات المتحدة الأمريكية في الإصلاح الإداري</p>
-
+                        <span>8 نوفمبر 2024</span>
+                        <p>تجارب عربية وغربية للإصلاح التشريعي</p>
                     </div>
                 </a>
             </div>
+            
             <div class="card">
                 <a href="{% url 'studysingapore' %}">
                     <img src="{% static 'imgs/sn.webp' %}" alt="" class="stud">
@@ -156,50 +160,62 @@
                     </div>
                 </a>
             </div>
+            <div class="card">
+                <a href="{% url 'studyOfUS' %}">
+                    <img src="{% static 'imgs/US.jpg' %}" alt="" class="stud">
+                </a>
+                <a href="{% url 'studyOfUS' %}">
+                    <div class="text-info-index">
+                        <span>13 أبريل 2024</span>
+                        <p>تجربة الولايات المتحدة الأمريكية في الإصلاح الإداري</p>
+
+                    </div>
+                </a>
+            </div>
+            <div class="card">
+                <a href="{% url 'jor_study' %}">
+                    <img src="{% static 'imgs/jor.jpeg' %}" alt="" class="stud">
+                </a>
+                <a href="{% url 'jor_study' %}">
+                    <div class="text-info-index">
+                        <span>15 يونيو 2024</span>
+                        <p>تجربة المملكة الأردنية الهاشيمة في الإصلاح الإداري</p>
+                    </div>
+                </a>
+            </div>
 
         </div>
         <a href="{% url 'studies' %}" class="show-all">عرض المزيد</a>
     </div>
 </div>
-<div class="container index-articles">
-    <h1 class="publications in-index">إصدارات المركز</h1>
-    <div class="tow-books">
-        <div class="daw">
-            <h1 class="spe-h1 index-journals">الدوريات</h1>
-            <a href="{% url 'osus' %}">
-                <div class="card">
-                    <img src="{% static 'imgs/p.jpg' %}" alt="">
-                    <div class="daw-info">
-                        <span class="book-span">العدد الأول | مارس 2025</span>
-                        <p>دورية أُســـس</p>
+<h1 class="publications in-index with-out">إصدارات المركز</h1>
+<div class="outside-container">
+    <div class="container index-articles">
+        <h1 class="publications in-index" style="display: none;">إصدارات المركز</h1>
+        <div class="tow-books publications-all">
+            <div class="daw">
+                <h1 class="spe-h1 index-journals">الدوريات</h1>
+                <a href="{% url 'osus' %}">
+                    <div class="card">
+                        <img src="{% static 'imgs/new_osus.jpg' %}" alt="">
+                        <div class="daw-info">
+                            <span class="book-span">العدد الأول | مارس 2025</span>
+                            <p>دورية أُســـس</p>
+                        </div>
                     </div>
-                </div>
-            </a>
-        </div>
-        <div class="daw">
-            <h1 class="spe-h1 index-book">الكتب</h1>
-            <a href="{% url 'books' %}">
-                <div class="card">
-                    <img src="{% static 'imgs/Book A.jpg' %}" alt="">
-                    <div class="daw-info">
-                        <span class="book-span">مجموعة مؤلفين | ديسمبر 2023</span>
-                        <p>رؤية مستقبلية للإصلاح الإداري الشامل في اليمن 2023</p>
+                </a>
+            </div>
+            <div class="daw">
+                <h1 class="spe-h1 index-book">الكتب</h1>
+                <a href="{% url 'books' %}">
+                    <div class="card">
+                        <img src="{% static 'imgs/new_book.jpg' %}" alt="">
+                        <div class="daw-info">
+                            <span class="book-span">مجموعة مؤلفين | ديسمبر 2023</span>
+                            <p>رؤية مستقبلية للإصلاح الإداري الشامل في اليمن 2023</p>
+                        </div>
                     </div>
-                </div>
-            </a>
-        </div>
-    </div>
-</div>
-<div class="container index-articles">
-    <div class="tow-books">
-        <div class="daw">
-            <h1 class="spe-h1 pod">داخل الصندوق بودكاست</h1>
-            <div class="card pod">
-                <img src="{% static 'imgs/PODCAST adv-01.png' %}" alt="">
-                <div class="daw-info">
-                    <p>قريباً | سلسلة حلقات من إنتاج المركز التأسيسي للدراسات والبحوث تقدم رؤى فاعلة وتجارب إدارية ناجحة
-                    </p>
-                </div>
+                </a>
             </div>
         </div>
     </div>
@@ -238,6 +254,24 @@
     <!-- <a href="{% url 'infographs' %}" class="show-all infograph">عرض المزيد</a> -->
 
 </div>
+<div class="container index-articles">
+    <div class="tow-books">
+        <div class="daw">
+            <h1 class="spe-h1 pod">داخل الصندوق بودكاست</h1>
+            <div class="card pod">
+                <img src="{% static 'imgs/PODCAST adv-01.png' %}" alt="">
+                <div class="daw-info">
+                    <p>قريباً | سلسلة حلقات من إنتاج المركز التأسيسي للدراسات والبحوث تقدم رؤى فاعلة وتجارب إدارية ناجحة
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="container index-articles-pod">
+    <img src="{% static 'imgs/PODCAST adv 2-01.png' %}" alt="">
+</div>
+
 <script>
     document.addEventListener('DOMContentLoaded', function () {
         let counter = 1;
@@ -317,6 +351,9 @@
             currentIndex = (currentIndex + 1) % slidess.length; // تعديل المصفوفة
             updateSlide(currentIndex); // تم تعديل الاسم
         });
+        if (window.innerWidth <= 1200) {
+            document.querySelector('.slide.first img').src = "{% static 'imgs/New_Slider_mobile.png' %}";
+        }
     });
 </script>
 {% endblock %}

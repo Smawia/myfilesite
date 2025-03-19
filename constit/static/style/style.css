@@ -15,6 +15,8 @@
     --text-color: #000000;
     --button-bg-color: #f0f0f0;
     --button-text-color: #000000;
+    --sub-color: #333333;
+    --date-color: #777777;
 }
 
 html {
@@ -328,7 +330,7 @@ header ul .base-li .ul li {
 }
 
 header ul .base-li .ul li:hover {
-    background-color: rgba(128, 128, 128, 0.333);
+    background-color: #E6E7E8;
 }
 
 header ul .base-li .ul li:not(:last-of-type) {
@@ -701,7 +703,6 @@ header .arrow {
     .text-info p {
         font-size: 13px !important;
         margin-right: 10px;
-        word-spacing: -2px;
     }
 }
 
@@ -3708,6 +3709,7 @@ input {
 
 .first-page .full-text {
     font-family: 'Calibri' !important;
+    text-align: right !important;
 }
 
 
@@ -5467,7 +5469,7 @@ input {
 
 /* end styling special icons */
 
-.ws9 {
+/* .ws9 {
     word-spacing: -9px !important;
 }
 
@@ -5561,7 +5563,7 @@ input {
     .ws0 {
         word-spacing: normal !important;
     }
-}
+} */
 
 .ctable {
     display: block;
@@ -5731,8 +5733,7 @@ input {
     top: 0;
     left: 0;
     background:
-        linear-gradient(to bottom, rgba(0, 0, 0, 0.30), rgba(0, 0, 0, 0) 30%, rgba(0, 0, 0, 0.5)),
-        linear-gradient(to top, rgba(0, 0, 0, 0.30), rgba(0, 0, 0, 0) 40%, rgba(0, 0, 0, 0.5));
+        linear-gradient(to bottom, rgba(0, 0, 0, 0.30), rgba(0, 0, 0, 0) 30%, rgba(0, 0, 0, 0.5)), linear-gradient(to top, rgba(0, 0, 0, 0.67), rgba(0, 0, 0, 0) 40%, rgba(0, 0, 0, 0.5))
 }
 
 .slider .slides .slide img {
@@ -5833,7 +5834,7 @@ input {
     color: white;
     width: 50%;
     height: 50%;
-    text-align: end;
+    text-align: start;
     padding-right: 20px;
     box-sizing: border-box;
     font-weight: bold;
@@ -5843,6 +5844,7 @@ input {
     margin-right: 20px;
     font-size: 30px;
     font-family: 'CodecProBold', sans-serif;
+    line-height: 1.4 !important;
 }
 
 .slide-full-inf span {
@@ -5869,16 +5871,23 @@ input {
 @media (max-width: 574px) {
     .slider {
         height: 200px;
-        margin: auto;
+        margin: 0 auto 10px;
+        position: relative;
+        overflow: hidden;
+        /* إخفاء أي جزء من الصورة يتجاوز الحدود */
     }
 
     .slider .slides {
         height: 200px;
     }
 
+    .slider .slides .slide {
+        height: 200px;
+    }
+
     .slider .slides .slide img {
         height: 100%;
-        background-size: cover;
+        width: 100%;
     }
 
     .navigation-manual {
@@ -5932,15 +5941,15 @@ input {
 
     .slide-full-inf {
         right: 5px;
-        bottom: -35px;
+        bottom: -26px;
         text-align: end;
-        width: 100%;
+        width: 95%;
         padding-bottom: 8px;
     }
 
     .slide-full-inf h2 {
         margin-right: -10px;
-        font-size: 20px;
+        font-size: 18px;
         margin-bottom: 5px;
         line-height: normal;
         margin-top: 0px;
@@ -6027,7 +6036,7 @@ input {
         right: 4px;
         bottom: -21px;
         text-align: end;
-        width: 70%;
+        width: 90%;
     }
 
     .slide-full-inf h2 {
@@ -6107,7 +6116,7 @@ input {
         right: -22px;
         bottom: -35px;
         text-align: end;
-        width: 70%;
+        width: 90%;
     }
 
     .slide-full-inf h2 {
@@ -6243,6 +6252,7 @@ input {
 
     .slide-full-inf h2 {
         font-size: 26px;
+        margin-bottom: 7px;
     }
 
     .slide-full-inf span {
@@ -7065,7 +7075,7 @@ input:focus {
 .show-studies-index .show-index-imgs .card a {
     text-decoration: none;
     font-family: 'Calibri';
-    color: #000000c7;
+    color: var(--sub-color);
     display: block;
     transition: 0.3s;
 }
@@ -7084,7 +7094,7 @@ input:focus {
     margin-bottom: 20px !important;
     font-family: 'CodecProBold', sans-serif;
     font-weight: bold !important;
-
+    line-height: 1.3 !important;
 }
 
 .show-studies-index .show-index-imgs .card a .text-info-index p.pod {
@@ -7094,7 +7104,7 @@ input:focus {
 
 .show-studies-index .show-index-imgs .card a .text-info-index span {
     font-size: 18px;
-    color: gray;
+    color: var(--date-color);
     font-weight: normal !important;
     font-family: 'CodecProRegular', sans-serif;
 }
@@ -7105,6 +7115,7 @@ input:focus {
     width: fit-content !important;
     margin: 10px auto;
     padding: 5px 17px !important;
+    font-weight: bold;
 }
 
 @media (max-width: 574px) {
@@ -7233,24 +7244,26 @@ input:focus {
     }
 
     .show-studies-index .show-index-imgs .card {
-        width: calc(37% - 70px) !important;
+        width: calc(25% - 20px) !important;
         margin-bottom: 40px !important;
         margin-top: -20px;
     }
 
     .show-studies-index .show-index-imgs .card img {
         width: 100%;
-        height: 300px !important;
-        max-height: 300px !important;
+        height: 190px !important;
+        max-height: 190px !important;
     }
 
     .show-studies-index .show-index-imgs .card a .text-info-index p {
-        font-size: 18px;
+        font-size: 16px;
         margin-right: 10px;
+        margin-top: 10px;
+        padding-left: 10px;
     }
 
     .show-studies-index .show-index-imgs .card a .text-info-index span {
-        font-size: 16px;
+        font-size: 14px;
         margin-right: 10px;
     }
 
@@ -7310,7 +7323,7 @@ input:focus {
     padding: 10px 6px 20px;
     font-family: 'CodecProBold', sans-serif;
     transition: 0.3s;
-    color: #000000c7;
+    color: var(--sub-color);
     line-height: 1.2;
 }
 
@@ -7326,7 +7339,7 @@ input:focus {
 
     .show-all-studies .studies-card {
         width: calc(100% - 10px) !important;
-        margin-bottom: 65px !important;
+        margin-bottom: 80px !important;
         height: 180px;
     }
 
@@ -7341,8 +7354,7 @@ input:focus {
     }
 
     .show-all-studies .studies-card .study-text-info p {
-        margin-top: -7px;
-        padding: 10px 6px;
+        padding: 20px 6px;
         font-size: 13px;
     }
 }
@@ -7354,7 +7366,7 @@ input:focus {
 
     .show-all-studies .studies-card {
         width: calc(85%) !important;
-        margin-bottom: 62px !important;
+        margin-bottom: 80px !important;
         height: 240px;
         margin-left: auto;
         margin-right: auto;
@@ -7370,6 +7382,10 @@ input:focus {
         font-size: 13px;
     }
 
+    .show-all-studies .studies-card .study-text-info p {
+        padding: 20px 6px;
+    }
+
 }
 
 @media (min-width: 768px) {
@@ -7379,7 +7395,7 @@ input:focus {
 
     .show-all-studies .studies-card {
         width: calc(50% - 16px) !important;
-        margin-bottom: 70px !important;
+        margin-bottom: 80px !important;
         height: 240px;
     }
 
@@ -7400,7 +7416,7 @@ input:focus {
 
     .show-all-studies .studies-card .study-text-info p {
         margin-top: -5px;
-        padding: 10px 6px 20px;
+        padding: 20px 6px;
         font-size: 15px;
     }
 }
@@ -7412,7 +7428,7 @@ input:focus {
 
     .show-all-studies .studies-card {
         width: calc(37% - 70px) !important;
-        margin-bottom: 80px !important;
+        margin-bottom: 90px !important;
         height: 300px;
     }
 
@@ -7433,7 +7449,7 @@ input:focus {
 
     .show-all-studies .studies-card .study-text-info p {
         margin-top: -5px;
-        padding: 10px 6px 20px;
+        padding: 23px 8px;
         font-size: 16px;
     }
 }
@@ -7609,30 +7625,9 @@ input:focus {
     background-color: white;
     margin-top: 15px;
     width: 100%;
-    box-shadow: 0 0 8px rgba(0, 0, 0, 0.3);
     transition: 1s ease;
 }
 
-.tow-books .daw .card:hover {
-    box-shadow:
-        -2px -2px 4px rgba(0, 0, 0, 0.15),
-        /* أعلى يسار */
-        2px -2px 4px rgba(0, 0, 0, 0.15),
-        /* أعلى يمين */
-        -2px 2px 4px rgba(0, 0, 0, 0.15),
-        /* أسفل يسار */
-        2px 2px 4px rgba(0, 0, 0, 0.15),
-        /* أسفل يمين */
-        0px -2px 4px rgba(0, 0, 0, 0.15),
-        /* أعلى منتصف */
-        0px 2px 4px rgba(0, 0, 0, 0.15),
-        /* أسفل منتصف */
-        -2px 0px 4px rgba(0, 0, 0, 0.15),
-        /* يسار منتصف */
-        2px 0px 4px rgba(0, 0, 0, 0.15);
-    /* يمين منتصف */
-
-}
 
 .tow-books .daw .card.download:hover,
 .tow-books .daw .card.view:hover {
@@ -7642,7 +7637,6 @@ input:focus {
 .tow-books .daw .card img {
     width: 100%;
     height: 100%;
-    transition: box-shadow 0.3s ease;
 }
 
 
@@ -7656,10 +7650,10 @@ input:focus {
 }
 
 .tow-books .daw .card .daw-info p {
-    color: #000000c7;
+    color: var(--sub-color);
     font-weight: bold;
     margin: 9px 0;
-    line-height: 1.3;
+    line-height: 1.3 !important;
 }
 
 .tow-books .daw .card a.download,
@@ -7773,7 +7767,7 @@ input:focus {
 
 @media (min-width: 992px) {
     .tow-books .daw {
-        width: calc(50% - 22px) !important;
+        width: calc(50% - 16px) !important;
         margin-bottom: 40px !important;
     }
 
@@ -7870,6 +7864,7 @@ ul .aside-nested-list {
 .studies-text-some-info h3 {
     margin: 5px 0;
     font-family: 'CodecProBold', sans-serif;
+    line-height: 1.3 !important;
 }
 
 .show-some-studies .image-card {
@@ -8339,7 +8334,7 @@ header .phone button {
 @media (max-width: 574px) {
     .publications.in-index {
         font-size: 20px;
-        margin-top: 0;
+        margin-top: 10px;
     }
 
     .publications {
@@ -8367,6 +8362,7 @@ header .phone button {
     .publications {
         font-size: 26px;
         margin-right: 0;
+        margin-top: 34px;
     }
 }
 
@@ -8408,7 +8404,7 @@ header .phone button {
 .osus-first-content .osus-second-container img {
     width: 486px;
     height: 426px;
-    box-shadow: 1px 1px 3px 2px #251e1e54;
+    box-shadow: 1px 1px 3px #251e1e54;
 }
 
 .osus-first-content .osus-second-container .osus-second-text {
@@ -8465,15 +8461,15 @@ header .phone button {
     }
 
     .osus-first-content .osus-second-container img {
-        width: 90%;
-        height: 247px;
+        width: 95%;
+        height: 200px;
     }
 
     .osus-first-content .osus-second-container .osus-second-text {
         font-size: 15px;
         margin-right: 0;
         margin-top: 0px;
-        width: 90%;
+        width: 95%;
     }
 
     .osus-first-content .osus-second-container .osus-second-text .osus-links {
@@ -8528,7 +8524,7 @@ header .phone button {
 
     .osus-first-content .osus-second-container img {
         width: 480px;
-        height: 330px;
+        height: 250px;
     }
 
     .osus-first-content .osus-second-container .osus-second-text {
@@ -8545,9 +8541,9 @@ header .phone button {
 
     .osus-first-content .osus-second-container .osus-second-text .osus-links a {
         margin-left: 10px;
-        padding: 0px 10px;
+        padding: 0px 14px;
         margin-top: 10px;
-        font-size: 12px;
+        font-size: 14px;
     }
 }
 
@@ -8582,15 +8578,19 @@ header .phone button {
     }
 
     .osus-first-content .osus-second-container img {
-        width: 380px;
-        height: 300px;
+        width: 357px;
+        height: 215px;
     }
 
     .osus-first-content .osus-second-container .osus-second-text {
         line-height: 1.1;
         font-size: 18px;
         margin-right: 20px;
-        margin-top: 10px;
+        margin-top: 0;
+    }
+
+    .osus-first-content .osus-second-container .osus-second-text p {
+        margin-top: 0;
     }
 
     .osus-first-content .osus-second-container .osus-second-text .osus-links {
@@ -8601,8 +8601,8 @@ header .phone button {
     .osus-first-content .osus-second-container .osus-second-text .osus-links a {
         margin-left: 10px;
         padding: 3px 17px;
-        margin-top: 40px;
-        font-size: 18px;
+        margin-top: -7px;
+        font-size: 16px;
     }
 }
 
@@ -8631,8 +8631,8 @@ header .phone button {
     }
 
     .osus-first-content .osus-second-container img {
-        width: 476px;
-        height: 400px;
+        width: 482px;
+        height: 280px;
     }
 
     .osus-first-content .osus-second-container .osus-second-text {
@@ -8640,7 +8640,7 @@ header .phone button {
         font-size: 18px;
         text-align: justify;
         margin-right: 60px;
-        margin-top: 20px;
+        margin-top: 0;
     }
 
     .osus-first-content .osus-second-container .osus-second-text .osus-links {
@@ -8651,7 +8651,7 @@ header .phone button {
     .osus-first-content .osus-second-container .osus-second-text .osus-links a {
         margin-left: 10px;
         padding: 0px 45px;
-        margin-top: 150px;
+        margin-top: 50px;
     }
 }
 
@@ -8692,7 +8692,11 @@ header .phone button {
     }
 
     .spe-h1.pod {
-        margin-top: 0;
+        margin-top: -1px;
+    }
+
+    .spe-h1.infograph {
+        margin-top: -1px;
     }
 
     .spe-h1.index-journals,
@@ -8743,11 +8747,16 @@ header .phone button {
     }
 
     .tow-books .daw .card .daw-info span {
-        font-size: 16px;
+        font-size: 14px;
     }
 
     .tow-books .daw .card .daw-info p {
-        font-size: 18px;
+        font-size: 16px;
+    }
+
+    .spe-h1.index-journals,
+    .spe-h1.index-book {
+        margin-top: 7px;
     }
 }
 
@@ -8757,10 +8766,12 @@ header .phone button {
     align-items: center;
     justify-content: center;
 }
+
 .infogr a {
     display: block;
     width: 100%;
 }
+
 .infogr img {
     max-height: 650px;
     min-height: 650px;
@@ -8796,6 +8807,7 @@ header .phone button {
 .infogr .next {
     left: 10px;
 }
+
 .show-all.infograph {
     margin: 20px auto !important;
     padding: 5px 17px !important;
@@ -8804,7 +8816,25 @@ header .phone button {
 .tow-books.infograph {
     margin-top: 40px;
 }
+
+.container.index-articles-pod img {
+    width: 100%;
+    display: block;
+    margin-bottom: 40px;
+}
+
+/* .org-publications {
+    background-color: #3333;
+} */
 @media (max-width: 574px) {
+    .container.index-articles-pod {
+        display: none;
+    }
+
+    .container.index-articles .pod {
+        display: block;
+    }
+
     .container.nav {
         width: 90% !important;
         margin-right: 15px;
@@ -8824,6 +8854,7 @@ header .phone button {
         max-height: 450px;
         min-height: 450px;
     }
+
     .show-all.infograph {
         font-size: 14px !important;
         padding: 7px 28px !important;
@@ -8831,6 +8862,14 @@ header .phone button {
 }
 
 @media (min-width: 575px) {
+    .container.index-articles-pod {
+        display: none;
+    }
+
+    .container.index-articles .pod {
+        display: block;
+    }
+
     .infogr button {
         font-size: 24px;
     }
@@ -8842,6 +8881,14 @@ header .phone button {
 }
 
 @media (min-width: 768px) {
+    .container.index-articles-pod {
+        display: block;
+    }
+
+    .container.index-articles .pod {
+        display: none;
+    }
+
     .infogr button {
         font-size: 30px;
     }
@@ -8853,6 +8900,23 @@ header .phone button {
 }
 
 @media (min-width: 992px) {
+    .container.index-articles.all-art {
+        background: white;
+        margin-top: 40px;
+        padding: 20px 20px 25px;
+        box-sizing: border-box;
+        box-shadow: 0 0 5px rgba(0, 0, 0, 0.38);
+    }
+
+    .container.index-articles.all-art .studies {
+        margin-top: 0;
+        margin-bottom: 40px;
+    }
+
+    .container.index-articles .pod {
+        display: none;
+    }
+
     .infogr button {
         font-size: 40px;
     }
@@ -8861,4 +8925,36 @@ header .phone button {
         max-height: 550px;
         min-height: 550px;
     }
+
+    .container.index-articles .tow-books.publications-all .daw {
+        background-color: white;
+        padding: 20px 20px 15px;
+        box-sizing: border-box;
+        margin-top: 22px;
+        margin-bottom: 22px !important;
+    }
+
+    .publications.in-index.with-out {
+        margin-right: 152px;
+    }
+
+    .outside-container {
+        background-color: #d0d0d0;
+        margin-top: 26px;
+        margin-bottom: 20px;
+    }
+}
+
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+span {
+    word-wrap: break-word;
+    white-space: normal;
+    letter-spacing: normal;
+    text-rendering: optimizeLegibility;
 }

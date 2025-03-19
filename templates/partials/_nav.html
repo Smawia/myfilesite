@@ -245,7 +245,7 @@
                         </form>
                     </div>
                 </div>
-                
+                {% if request.resolver_match.url_name != "index" %}
                 <!-- start social media -->
                 <div class="social">
                     <span>+</span>
@@ -257,6 +257,7 @@
                     <a href="https://www.instagram.com/csryemen/" target="_blank"><i class="fab fa-instagram" style="color: white !important;"></i></a>
                     <a href="https://www.facebook.com/profile.php?id=61556721602912" target="_blank"><i class="fa-brands fa-facebook social-i" style="color: white !important;"></i></a>
                 </div>
+                {% endif %}
                 <!-- end social media -->
             </header>
         </div>
