@@ -140,8 +140,6 @@
                 <!-- overlay -->
                 <!-- aside bar -->
                 <div class="aside">
-                    <img src="{% static 'imgs/LOGOS-01.png' %}" alt="" class="aside-img">
-                    <i class="fa-regular fa-circle-xmark"></i>
                     <ul class="aside-ul">
                         <li><a href="{% url 'index' %}" 
                             {% if '/' == request.path %}
@@ -304,10 +302,34 @@
                 body.classList.add('dark-mode');
                 if (firstPage) {
                     firstPage.classList.add('dark-mode'); // تطبيق الفئة على .first-page
-                }
+                }+
                 contactLinks.forEach(link => link.classList.add('dark-mode'));
                 localStorage.setItem('theme', 'dark-mode'); // حفظ الوضع الغامق
                 icon.className = 'far fa-sun'; // تغيير الأيقونة إلى الشمس
+            }
+        });
+        let bar = document.querySelector(".toggle-menu");
+        let aside_bar = document.querySelector('.aside');
+        bar.onclick = function () {
+            // إذا كان الـ aside يحتوي على الكلاس "show"، نقوم بإضافته الكلاس "hide" لبدء الانسحاب
+            if (aside_bar.classList.contains('show')) {
+                aside_bar.classList.add('hide');
+                setTimeout(function() {
+                    aside_bar.classList.remove('show', 'hide'); // إزالة الكلاس بعد الانتقال
+                }, 900);  // تأخير إزالة الكلاسات بنفس وقت الانتقال
+            } else {
+                // إذا لم يكن الـ aside يحتوي على الكلاس "show"، نقوم بإضافته لإظهاره
+                aside_bar.classList.add('show');
+            }
+        }
+        
+        document.body.addEventListener("click", function (e) {
+            // إذا تم النقر على شيء غير الأيقونة أو الـ aside، نقوم بإخفاء الـ aside
+            if (!e.target.classList.contains('toggle-menu') && !e.target.classList.contains('phone') && !e.target.closest('.aside')) {
+                aside_bar.classList.add('hide');
+                setTimeout(function() {
+                    aside_bar.classList.remove('show', 'hide');
+                }, 900); // نفس التأخير
             }
         });
     });          

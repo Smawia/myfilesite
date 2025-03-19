@@ -69,16 +69,26 @@ socialSpan.onclick = function () {
 }
 
 let aside_bar = document.querySelector('.aside');
-let over = document.querySelector('.over');
 bar.onclick = function () {
-    aside_bar.style.cssText = 'width: 100%;display:block';
-    over.style.display = 'block';
+    // إذا كان الـ aside يحتوي على الكلاس "show"، نقوم بإضافته الكلاس "hide" لبدء الانسحاب
+    if (aside_bar.classList.contains('show')) {
+        aside_bar.classList.add('hide');
+        setTimeout(function() {
+            aside_bar.classList.remove('show', 'hide'); // إزالة الكلاس بعد الانتقال
+        }, 900);  // تأخير إزالة الكلاسات بنفس وقت الانتقال
+    } else {
+        // إذا لم يكن الـ aside يحتوي على الكلاس "show"، نقوم بإضافته لإظهاره
+        aside_bar.classList.add('show');
+    }
 }
 
 document.body.addEventListener("click", function (e) {
-    if (!e.target.classList.contains('toggle-menu') && !e.target.classList.contains('phone')) {
-        aside_bar.style.display = 'none';
-        over.style.display = 'none';
+    // إذا تم النقر على شيء غير الأيقونة أو الـ aside، نقوم بإخفاء الـ aside
+    if (!e.target.classList.contains('toggle-menu') && !e.target.classList.contains('phone') && !e.target.closest('.aside')) {
+        aside_bar.classList.add('hide');
+        setTimeout(function() {
+            aside_bar.classList.remove('show', 'hide');
+        }, 900); // نفس التأخير
     }
 });
 
@@ -107,7 +117,7 @@ const minFontSize = 10;
 // عند النقر على زر التكبير
 increaseButton.addEventListener('click', function () {
     if (fontSize < maxFontSize) { // تحقق أن الحجم أقل من الحد الأقصى
-        fontSize += 2; // زيادة الحجم
+        fontSize += 1; // زيادة الحجم
         elements.forEach(function (el) {
             el.style.setProperty('font-size', `${fontSize}px`, 'important');
         });
@@ -117,7 +127,7 @@ increaseButton.addEventListener('click', function () {
 // عند النقر على زر التصغير
 decreaseButton.addEventListener('click', function () {
     if (fontSize > minFontSize) { // تحقق أن الحجم أكبر من الحد الأدنى
-        fontSize -= 2; // تقليل الحجم
+        fontSize -= 1; // تقليل الحجم
         elements.forEach(function (el) {
             el.style.setProperty('font-size', `${fontSize}px`, 'important');
         });
