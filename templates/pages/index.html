@@ -4,6 +4,210 @@
 {% block title %}الرئيسية{% endblock %}
 
 {% block content %}
+<style>
+    html,
+    body,
+    main {
+        width: 100%;
+        height: 100%;
+        margin: 0px;
+        padding: 0;
+
+    }
+    main {
+        position: relative;
+        margin-bottom: 40px;
+        margin-top: 40px;
+    }
+
+    #carousel {
+        position: relative;
+        height: 600px;
+        top: 50%;
+        transform: translateY(-50%);
+        overflow: hidden;
+    }
+
+    #carousel div {
+        position: absolute;
+        transition: transform 400ms, left 400ms, opacity 400ms, z-index 0s;
+        opacity: 1;
+    }
+
+    #carousel div img {
+        width: 500px;
+        max-height: 90%;
+        min-height: 90%;
+        transition: width 400ms;
+        -webkit-user-drag: none;
+        border-top-right-radius: 10px;
+        border-top-left-radius: 10px;
+        display: block;
+    }
+
+    #carousel .hideLeft .silder-moving,
+    #carousel .prevLeftSecond .silder-moving,
+    #carousel .prev .silder-moving {
+        text-align: left;
+        direction: ltr;
+        left: 10px;
+        /* تأكد من وجود مسافة كافية */
+        right: auto;
+    }
+
+    #carousel div.hideLeft {
+        left: 0%;
+        opacity: 0;
+        transform: translateY(50%) translateX(-50%);
+    }
+
+    #carousel div.hideLeft img {
+        width: 200px;
+        height: 200px;
+    }
+
+    #carousel div.hideRight {
+        left: 100%;
+        opacity: 0;
+        transform: translateY(50%) translateX(-50%);
+    }
+
+    #carousel div.hideRight img {
+        width: 200px;
+    }
+
+    #carousel div.prev {
+        z-index: 5;
+        left: 30%;
+        transform: translateY(50px) translateX(-50%);
+    }
+
+    #carousel img:hover {
+        cursor: default;
+    }
+
+    #carousel div.prev img {
+        width: 300px;
+        height: 300px;
+    }
+
+    #carousel div.prevLeftSecond {
+        z-index: 4;
+        left: 15%;
+        transform: translateY(50%) translateX(-50%);
+        opacity: 0.7;
+    }
+
+    #carousel div.prevLeftSecond img {
+        width: 200px;
+        height: 200px;
+    }
+
+    #carousel div.selected {
+        z-index: 10;
+        left: 50%;
+        transform: translateY(0px) translateX(-50%);
+        height: 550px;
+    }
+
+    #carousel div.next {
+        z-index: 5;
+        left: 70%;
+        transform: translateY(50px) translateX(-50%);
+    }
+
+    #carousel div.next img {
+        width: 300px;
+        height: 300px;
+
+    }
+
+    #carousel .silder-moving {
+        background-color: white;
+        padding: 10px;
+        min-width: 500px;
+        max-width: 500px;
+        box-sizing: border-box;
+        border-bottom-right-radius: 10px;
+        border-bottom-left-radius: 10px;
+        font-family: 'CodecProRegular';
+    }
+    #carousel .silder-moving span {
+        color: #777777;
+        font-size: 14px;
+    }
+    #carousel .silder-moving p {
+        color: #333333;
+        font-size: 16px;
+        font-family: 'CodecProBold';
+    }
+
+    #carousel div.nextRightSecond {
+        z-index: 4;
+        left: 85%;
+        transform: translateY(50%) translateX(-50%);
+        opacity: 0.7;
+    }
+
+    #carousel div.nextRightSecond img {
+        width: 200px;
+    }
+
+    .arrow-silder {
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        font-size: 2rem;
+        color: white;
+        background-color: rgba(0, 0, 0, 0.5);
+        padding: 10px 20px;
+        border-radius: 50%;
+        cursor: pointer;
+        user-select: none;
+        transition: background-color 0.3s;
+    }
+
+    .arrow-silder:hover {
+        background-color: rgba(0, 0, 0, 0.8);
+    }
+
+    .left-arrow-silder {
+        left: 34%;
+    }
+
+    .right-arrow-silder {
+        right: 34%;
+    }
+    @media (max-width: 574px) {
+        main {
+            display: none;
+        }
+    }
+    
+    @media (min-width: 575px) {
+        main {
+            display: none;
+        }
+    }
+    
+    @media (min-width: 768px) {
+        .container.index-articles.hide-in-pc {
+            display: none;
+        }
+        main {
+            display: block;
+        }
+    }
+    
+    @media (min-width: 992px) {
+        .container.index-articles.hide-in-pc {
+            display: none;
+        }
+        main {
+            display: block;
+        }
+    }
+</style>
 <div class="container spe-show">
     <div class="slider">
         <div class="slides">
@@ -25,11 +229,11 @@
             <div class="slide">
                 <img src="{% static 'imgs/y.png' %}" alt="">
                 <a href="{% url 'financial_reform_in_yemen' %}">
-                <div class="slide-full-inf">
-                    <h2>برامج الإصلاح المالي في الجمهورية اليمنية</h2>
-                    <span><span style="display: inline;">13 </span>يناير 2024
-                    </span>
-                </div>
+                    <div class="slide-full-inf">
+                        <h2>برامج الإصلاح المالي في الجمهورية اليمنية</h2>
+                        <span><span style="display: inline;">13 </span>يناير 2024
+                        </span>
+                    </div>
                 </a>
             </div>
             <div class="slide">
@@ -135,7 +339,7 @@
                     </div>
                 </a>
             </div>
-            
+
             <div class="card">
                 <a href="{% url 'studysingapore' %}">
                     <img src="{% static 'imgs/sn.webp' %}" alt="" class="stud">
@@ -219,7 +423,7 @@
         </div>
     </div>
 </div>
-<div class="container index-articles">
+<div class="container index-articles hide-in-pc">
     <div class="tow-books">
         <div class="daw">
             <h1 class="spe-h1 infograph">إنفوجراف</h1>
@@ -241,6 +445,55 @@
     <!-- <a href="{% url 'infographs' %}" class="show-all infograph">عرض المزيد</a> -->
 
 </div>
+<main>
+    <div id="carousel" class="carousel">
+
+        <div id='item_2' class="prevLeftSecond">
+            <img src="{% static 'imgs/info2.png' %}" alt="image info">
+            <div class="silder-moving">
+                <span> 13 مارس 2025 </span>
+                <p>ملوك القطن...أكبر عشر دول منتجة للقطن في العالم 2023</p>
+            </div>
+        </div>
+
+        <div id='item_3' class="prev">
+            <img src="{% static 'imgs/info3.png' %}" alt="image info">
+            <div class="silder-moving">
+                <span> 13 مارس 2025 </span>
+                <p>كيف يؤثر التعليم على الاقتصاد</p>
+            </div>
+        </div>
+
+        <div id='item_4' class="selected">
+            <img src="{% static 'imgs/info4.png' %}" alt="image info">
+            <div class="silder-moving">
+                <span> 13 مارس 2025 </span>
+                <p>الوزارات الحكومية والاقتصادات الخمس الكبرى</p>
+            </div>
+        </div>
+
+        <div id='item_5' class="next">
+            <img src="{% static 'imgs/info5.png' %}" alt="image info">
+            <div class="silder-moving">
+                <span> 13 مارس 2025 </span>
+                <p>أكبر عشر دول في احتياطي اليورانيوم</p>
+            </div>
+        </div>
+
+        <div id='item_6' class="nextRightSecond">
+            <img src="{% static 'imgs/info.png' %}">
+            <div class="silder-moving">
+                <span> 13 مارس 2025 </span>
+                <p>أكثر سبع دول إنتاجاً للأدوية في العام 2024</p>
+            </div>
+        </div>
+
+    </div>
+    <div class="all-rows">
+        <div class="arrow-silder left-arrow-silder" id="prev">&larr;</div>
+        <div class="arrow-silder right-arrow-silder" id="next">&rarr;</div>
+    </div>
+</main>
 <div class="container index-articles">
     <div class="tow-books">
         <div class="daw">
@@ -258,6 +511,7 @@
 <div class="container index-articles-pod">
     <img src="{% static 'imgs/PODCAST adv 2-01.png' %}" alt="">
 </div>
+
 
 <script>
     document.addEventListener('DOMContentLoaded', function () {
@@ -341,6 +595,179 @@
         if (window.innerWidth <= 1200) {
             document.querySelector('.slide.first img').src = "{% static 'imgs/New_Slider_mobile.png' %}";
         }
+        const $ = str => document.querySelector(str);
+        const $$ = str => document.querySelectorAll(str);
+
+        (function () {
+            if (!window.app) {
+                window.app = {};
+            }
+            app.carousel = {
+                removeClass: function (el, classname = '') {
+                    if (el) {
+                        if (classname === '') {
+                            el.className = '';
+                        } else {
+                            el.classList.remove(classname);
+                        }
+                        return el;
+                    }
+                    return;
+                },
+                reorder: function () {
+                    let childcnt = $("#carousel").children.length;
+                    let childs = $("#carousel").children;
+
+                    for (let j = 0; j < childcnt; j++) {
+                        childs[j].dataset.pos = j;
+                    }
+                },
+                move: function (el) {
+                    let selected = el;
+
+                    if (typeof el === "string") {
+                        console.log(`got string: ${el}`);
+                        selected = (el == "next") ? $(".selected").nextElementSibling : $(".selected").previousElementSibling;
+                        console.dir(selected);
+                    }
+
+                    let curpos = parseInt(app.selected.dataset.pos);
+                    let tgtpos = parseInt(selected.dataset.pos);
+
+                    let cnt = curpos - tgtpos;
+                    let dir = (cnt < 0) ? -1 : 1;
+                    let shift = Math.abs(cnt);
+
+                    for (let i = 0; i < shift; i++) {
+                        let el = (dir == -1) ? $("#carousel").firstElementChild : $("#carousel").lastElementChild;
+
+                        if (dir == -1) {
+                            el.dataset.pos = $("#carousel").children.length;
+                            $('#carousel').append(el);
+                        } else {
+                            el.dataset.pos = 0;
+                            $('#carousel').prepend(el);
+                        }
+
+                        app.carousel.reorder();
+                    }
+
+
+                    app.selected = selected;
+                    let next = selected.nextElementSibling;// ? selected.nextElementSibling : selected.parentElement.firstElementChild;
+                    var prev = selected.previousElementSibling; // ? selected.previousElementSibling : selected.parentElement.lastElementChild;
+                    var prevSecond = prev ? prev.previousElementSibling : selected.parentElement.lastElementChild;
+                    var nextSecond = next ? next.nextElementSibling : selected.parentElement.firstElementChild;
+
+                    selected.className = '';
+                    selected.classList.add("selected");
+
+                    app.carousel.removeClass(prev).classList.add('prev');
+                    app.carousel.removeClass(next).classList.add('next');
+
+                    app.carousel.removeClass(nextSecond).classList.add("nextRightSecond");
+                    app.carousel.removeClass(prevSecond).classList.add("prevLeftSecond");
+
+                    app.carousel.nextAll(nextSecond).forEach(item => { item.className = ''; item.classList.add('hideRight') });
+                    app.carousel.prevAll(prevSecond).forEach(item => { item.className = ''; item.classList.add('hideLeft') });
+
+                },
+                nextAll: function (el) {
+                    let els = [];
+
+                    if (el) {
+                        while (el = el.nextElementSibling) { els.push(el); }
+                    }
+
+                    return els;
+
+                },
+                prevAll: function (el) {
+                    let els = [];
+
+                    if (el) {
+                        while (el = el.previousElementSibling) { els.push(el); }
+                    }
+
+
+                    return els;
+                },
+                keypress: function (e) {
+                    switch (e.which) {
+                        case 37: // left
+                            app.carousel.move('prev');
+                            break;
+
+                        case 39: // right
+                            app.carousel.move('next');
+                            break;
+
+                        default:
+                            return;
+                    }
+                    e.preventDefault();
+                    return false;
+                },
+                select: function (e) {
+                    console.log(`select: ${e}`);
+                    let tgt = e.target;
+                    while (!tgt.parentElement.classList.contains('carousel')) {
+                        tgt = tgt.parentElement;
+                    }
+
+                    app.carousel.move(tgt);
+
+                },
+                previous: function (e) {
+                    app.carousel.move('prev');
+                },
+                next: function (e) {
+                    app.carousel.move('next');
+                },
+                doDown: function (e) {
+                    console.log(`down: ${e.x}`);
+                    app.carousel.state.downX = e.x;
+                },
+                doUp: function (e) {
+                    console.log(`up: ${e.x}`);
+                    let direction = 0,
+                        velocity = 0;
+
+                    if (app.carousel.state.downX) {
+                        direction = (app.carousel.state.downX > e.x) ? -1 : 1;
+                        velocity = app.carousel.state.downX - e.x;
+
+                        if (Math.abs(app.carousel.state.downX - e.x) < 10) {
+                            app.carousel.select(e);
+                            return false;
+                        }
+                        if (direction === -1) {
+                            app.carousel.move('next');
+                        } else {
+                            app.carousel.move('prev');
+                        }
+                        app.carousel.state.downX = 0;
+                    }
+                },
+                init: function () {
+                    document.addEventListener("keydown", app.carousel.keypress);
+                    // $('#carousel').addEventListener("click", app.carousel.select, true);
+                    $("#carousel").addEventListener("mousedown", app.carousel.doDown);
+                    $("#carousel").addEventListener("touchstart", app.carousel.doDown);
+                    $("#carousel").addEventListener("mouseup", app.carousel.doUp);
+                    $("#carousel").addEventListener("touchend", app.carousel.doup);
+
+                    app.carousel.reorder();
+                    $('#prev').addEventListener("click", app.carousel.previous);
+                    $('#next').addEventListener("click", app.carousel.next);
+                    app.selected = $(".selected");
+
+                },
+                state: {}
+
+            }
+            app.carousel.init();
+        })();
     });
 </script>
 {% endblock %}

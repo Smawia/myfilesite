@@ -4,7 +4,7 @@
 {% block content %}
 <div class="container articles">
     <div class="top-of-study">
-        <a href="{% url 'index' %}">الرئيسية</a>/<a href="{% url 'studies' %}">دراسات وبحوث</a>/<span>منهجية الإصلاح الإداري</span>
+        <a href="{% url 'index' %}">الرئيسية</a><span class="first-pipe">  |  </span> <a href="{% url 'studies' %}">دراسات وبحوث</a> <span class="first-pipe"> | </span><span>منهجية الإصلاح الإداري</span>
     </div>
     
     <div class="studies-flex">
@@ -192,13 +192,14 @@
     </div>
         </div>
         <div class="show-some-studies">
-            <h3 class="show-studies-h3">مواضيع مشابهة</h3>
+            <h3 class="show-studies-h3">إقرأ أيضاً</h3>
             <a href="{% url 'reformmethodology' %}" class="study-item">
                 <div class="study-info-show">
                     <div class="image-card">
                         <img src="{% static 'imgs/method1.jpg' %}" alt="" class="index-img">
                     </div>
                     <div class="studies-text-some-info">
+                        <span>3 مارس 2024</span>
                         <h3>منهجية الإصلاح الإداري</h3>
                     </div>
                 </div>
@@ -209,6 +210,7 @@
                         <img src="{% static 'imgs/fanicial.webp' %}" alt="" class="index-img">
                     </div>
                     <div class="studies-text-some-info">
+                        <span>23 سبتمبر 2023</span>
                         <h3>تقييم برنامج الإصلاح الاقتصادي والمالي والإداري الشامل في اليمن</h3>
 
                     </div>
@@ -220,6 +222,7 @@
                         <img src="{% static 'imgs/admini.jpg' %}" alt="" class="index-img">
                     </div>
                     <div class="studies-text-some-info">
+                        <span>5 أكتوبر 2024</span>
                         <h3>تطور الإدارة العامة في إطار حقل القانون الإداري</h3>
 
                     </div>
@@ -231,6 +234,7 @@
                         <img src="{% static 'imgs/gold.webp' %}" alt="" class="index-img">
                     </div>
                     <div class="studies-text-some-info">
+                        <span>20 يناير 2024</span>
                         <h3>تجارب بعض الدول في مجال الإصلاح المال</h3>
                     </div>
                 </div>
@@ -241,6 +245,7 @@
                         <img src="{% static 'imgs/maly2.webp' %}" alt="" class="index-img">
                     </div>
                     <div class="studies-text-some-info">
+                        <span>1 يونيو 2024</span>
                         <h3>تجربة ماليزيا في الإصلاح الإداري</h3>
                     </div>
                 </div>
@@ -251,6 +256,7 @@
                         <img src="{% static 'imgs/fix2.webp' %}" alt="" class="index-img">
                     </div>
                     <div class="studies-text-some-info">
+                        <span>14 سبتمبر 2024</span>
                         <h3>الرؤية المستقبلية لإصلاح القانون الإداري في اليمن</h3>
                     </div>
                 </div>
@@ -261,6 +267,7 @@
                         <img src="{% static 'imgs/tagarb9.jpg' %}" alt="" class="index-img">
                     </div>
                     <div class="studies-text-some-info">
+                        <span>6 يناير 2024</span>
                         <h3>رؤية مستقبلية للإصلاح المالي في اليمن</h3>
                     </div>
                 </div>
@@ -271,6 +278,7 @@
                         <img src="{% static 'imgs/test.png' %}" alt="" class="index-img">
                     </div>
                     <div class="studies-text-some-info">
+                        <span>23 ديسمبر 2023</span>
                         <h3>تجارب عالمية وإقليمية لدور القطاع الخاص</h3>
                     </div>
                 </div>
@@ -281,6 +289,7 @@
                         <img src="{% static 'imgs/repair4.jpg' %}" alt="" class="index-img">
                     </div>
                     <div class="studies-text-some-info">
+                        <span>2 نوفمبر 2024</span>
                         <h3>تجارب عربية وغربية للإصلاح التشريعي</h3>
                     </div>
                 </div>
@@ -292,6 +301,7 @@
                         <img src="{% static 'imgs/egoven.jpg' %}" alt="" class="index-img">
                     </div>
                     <div class="studies-text-some-info">
+                        <span>11 نوفمبر 2023</span>
                         <h3>عوامل نجاح أو فشل تنفيذ الحكومة الإلكترونية</h3>
                     </div>
                 </div>

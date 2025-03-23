@@ -106,6 +106,11 @@ html {
     src: url('../fonts/CodecPro-Regular.ttf') format('truetype');
 }
 
+@font-face {
+    font-family: 'CodecProExtaBold';
+    src: url('../fonts/CodecPro-ExtraBold.ttf') format('truetype');
+}
+
 body.dark-mode {
     /* ألوان الوضع الداكن */
     --bg-color: #121212;
@@ -138,7 +143,12 @@ header {
 }
 
 .header-container {
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.38); /* الظلال من الأسفل */
+    transition: box-shadow 0.3s ease-in-out;
+}
+
+/* الظل يظهر عند التمرير */
+.header-container.scrolled {
+    box-shadow: 0 1px 5px rgba(0, 0, 0, 0.20);
 }
 
 
@@ -517,16 +527,24 @@ header .arrow {
 .social-above-header #toggleMode {
     font-family: 'Calibri';
     font-weight: bold;
-    background-color: var(--button-bg-color);
+    background-color: transparent;
     color: var(--button-text-color);
     border: none;
-    padding: 10px 20px;
     cursor: pointer;
     transition: background-color 0.3s, color 0.3s;
     display: flex;
     justify-content: center;
     align-items: center;
     margin-right: 20px;
+    box-sizing: border-box;
+}
+
+.social-above-header #toggleMode img {
+    max-width: 100%;
+    min-width: 100%;
+    max-height: 100%;
+    min-height: 100%;
+    display: block;
 }
 
 .social-above-header a i {
@@ -552,11 +570,17 @@ header .arrow {
     }
 
     .social-above-header #toggleMode {
-        padding: 3px 4px;
         font-size: 12px;
         width: 21px;
         height: 16px;
         margin-right: 10px;
+    }
+
+    .social-above-header #toggleMode img {
+        max-width: 21px;
+        min-width: 21px;
+        max-height: 16px;
+        min-height: 16px;
     }
 }
 
@@ -573,11 +597,17 @@ header .arrow {
     }
 
     .social-above-header #toggleMode {
-        padding: 6px 6px;
         font-size: 13px;
         width: 23px;
         height: 17px;
         margin-right: 10px;
+    }
+
+    .social-above-header #toggleMode img {
+        max-width: 23px;
+        min-width: 23px;
+        max-height: 17px;
+        min-height: 17px;
     }
 }
 
@@ -594,20 +624,30 @@ header .arrow {
     }
 
     .social-above-header #toggleMode {
-        padding: 6px 13px;
         font-size: 14px;
         width: 25px;
         height: 20px;
+    }
+
+    .social-above-header #toggleMode img {
+        max-width: 25px;
+        min-width: 25px;
+        max-height: 20px;
+        min-height: 20px;
     }
 }
 
 @media (min-width: 992px) {
     .social-above-header #toggleMode {
-        padding: 6px 8px;
         font-size: 14px;
         width: 26px;
         height: 20px;
         margin-right: 25px;
+    }
+
+    .social-above-header #toggleMode img {
+        max-width: 26px;
+        max-height: 20px;
     }
 }
 
@@ -3838,7 +3878,7 @@ input {
 
     .first-page .p-img {
         font-size: 22px;
-        padding-bottom: 11px;
+        margin-bottom: 20px;
     }
 }
 
@@ -4137,7 +4177,9 @@ input {
     .first-page img {
         width: 100%;
         margin: 20px auto;
-        height: 310px;
+        height: 320px;
+        margin-bottom: 22.4px;
+        display: block;
     }
 
 
@@ -4725,17 +4767,25 @@ input {
 }
 
 .top-of-study {
-    background-color: var(--second-color);
-    font-family: 'CodecProRegular', sans-serif;
+    background-color: white;
+    font-family: 'CodecProBold', sans-serif;
     color: white;
     padding: 8px 10px;
     font-size: 23px;
+    border-top: 1px solid rgba(0, 0, 0, 0.136);
 }
+
 
 .top-of-study a {
     text-decoration: none;
-    color: white;
+    color: var(--fourth-color);
     transition: 0.3s;
+}
+
+.first-pipe {
+    color: var(--date-color) !important;
+    margin-right: 4px !important;
+    margin-left: 4px !important;
 }
 
 .top-of-study a:hover {
@@ -4745,9 +4795,15 @@ input {
 .top-of-study span {
     color: var(--fifth-color);
     margin-right: 2px;
+    line-height: 1.3;
 }
 
 @media (max-width: 574px) {
+    .first-pipe {
+        margin-right: 1px !important;
+        margin-left: 1px !important;
+    }
+
     .flex-news {
         flex-direction: column;
     }
@@ -4811,7 +4867,7 @@ input {
 
     .top-of-study {
         padding: 5px 7px;
-        font-size: 14px;
+        font-size: 13px;
         margin-bottom: 5px;
     }
 }
@@ -4881,7 +4937,7 @@ input {
 
     .top-of-study {
         padding: 5px 7px;
-        font-size: 15px;
+        font-size: 14px;
         margin-bottom: 8px;
     }
 }
@@ -4944,7 +5000,7 @@ input {
 
     .top-of-study {
         padding: 10px 8px;
-        font-size: 16px;
+        font-size: 15px;
         margin-bottom: 15px;
     }
 }
@@ -4969,7 +5025,7 @@ input {
 
     .top-of-study {
         padding: 10px 15px;
-        font-size: 22px;
+        font-size: 17px;
         margin-bottom: 20px;
     }
 }
@@ -4978,6 +5034,7 @@ input {
     background-color: var(--second-color);
     color: white;
     padding: 5px;
+    font-family: 'CodecProBold', sans-serif;
 }
 
 /* end first page */
@@ -5639,18 +5696,25 @@ input {
     display: block;
     padding-right: 10px;
     border-top: 1px solid rgba(0, 0, 0, 0.136);
-    opacity: 0; /* بداية العنصر غير مرئي */
+    opacity: 0;
+    /* بداية العنصر غير مرئي */
 }
+
 /* عند عرض الـ aside، نغير المكان والشفافية */
 .aside.show {
-    right: 0;  /* يتحرك الـ aside إلى مكانه الطبيعي */
-    opacity: 1; /* يصبح مرئيًا */
+    right: 0;
+    /* يتحرك الـ aside إلى مكانه الطبيعي */
+    opacity: 1;
+    /* يصبح مرئيًا */
     width: 100%;
 }
+
 /* عند إزالة الكلاس "show"، الـ aside يتحرك خارج الشاشة ويختفي */
 .aside.hide {
-    right: -300px; /* يتحرك إلى الخارج */
-    opacity: 0; /* يصبح غير مرئي */
+    right: -300px;
+    /* يتحرك إلى الخارج */
+    opacity: 0;
+    /* يصبح غير مرئي */
 }
 
 .aside .aside-ul {
@@ -6339,6 +6403,9 @@ input {
 }
 
 /* start styling pagination */
+.pagination {
+    margin: 20px;
+}
 .p-ul {
     list-style: none;
     display: flex;
@@ -6356,14 +6423,14 @@ input {
     text-decoration: none;
     transition: 0.3s;
     padding: 5px 10px;
-    border: 1px solid #B46C22;
-    color: #B46C22;
+    border: 1px solid var(--fourth-color);
+    color: var(--fourth-color);
     border-radius: 5px;
 }
 
 .p-ul li a:hover,
 .p-ul li a.active {
-    background-color: #B46C22;
+    background-color: var(--fourth-color);
     color: white !important;
 }
 
@@ -6879,6 +6946,7 @@ h5 {
     table {
         margin: 10px 0 !important;
     }
+
     .e_yemen {
         border-spacing: 1px;
     }
@@ -7322,15 +7390,9 @@ input:focus {
 .show-all-studies .studies-card {
     width: calc(33% - 20px) !important;
     margin-bottom: 50px !important;
-    background-color: rgba(0, 0, 0, 0.74);
     height: 250px;
     box-sizing: border-box;
     transition: 0.3s;
-}
-
-.show-all-studies .studies-card:hover {
-    background-color: white;
-    box-shadow: 1px 1px 10px silver;
 }
 
 .show-all-studies .studies-card img {
@@ -7355,44 +7417,63 @@ input:focus {
 
 }
 
+.show-all-studies .studies-card .study-text-info span {
+    color: var(--date-color);
+}
+
 .show-all-studies .studies-card .study-text-info p {
     margin-top: -4px;
     padding: 10px 6px 20px;
     font-family: 'CodecProBold', sans-serif;
     transition: 0.3s;
     color: var(--sub-color);
-    line-height: 1.2;
+    line-height: 1.3;
 }
 
-.show-all-studies .studies-card .study-text-info p:hover {
-    background-color: white;
-    box-shadow: 1px 1px 10px silver;
-}
 
 @media (max-width: 574px) {
     .show-all-studies {
         margin-top: 8px;
+        background-color: white;
+        box-shadow: 0 0 5px rgba(0, 0, 0, 0.38);
+        padding-top: 25px;
+        padding-bottom: 32px;
+        padding-left: 13px;
+        padding-right: 13px;
+        margin-bottom: 26px;
     }
 
     .show-all-studies .studies-card {
         width: calc(100% - 10px) !important;
-        margin-bottom: 80px !important;
-        height: 180px;
+        margin-bottom: 20px !important;
+        border-bottom: 1px solid #ddd !important;
     }
 
     .show-all-studies .studies-card img {
         width: 100%;
         height: 100% !important;
-        max-height: 180px !important;
+        min-height: 200px !important;
+        max-height: 200px !important;
     }
 
     .show-all-studies .studies-card a {
         font-size: 14px;
     }
+    .show-all-studies .studies-card .study-text-info {
+        padding-top: 2px;
+    }
+    .show-all-studies .studies-card .study-text-info span {
+        font-size: 12px;
+        margin-right: 5px;
+    }
 
     .show-all-studies .studies-card .study-text-info p {
-        padding: 20px 6px;
         font-size: 13px;
+        
+    }
+    .show-all-studies .studies-card .study-text-info p:not(:last-of-type) {
+        border-bottom: 1px solid #ddd;
+        padding-bottom: 12px;
     }
 }
 
@@ -7417,10 +7498,6 @@ input:focus {
 
     .show-all-studies .studies-card a {
         font-size: 13px;
-    }
-
-    .show-all-studies .studies-card .study-text-info p {
-        padding: 20px 6px;
     }
 
 }
@@ -7453,7 +7530,6 @@ input:focus {
 
     .show-all-studies .studies-card .study-text-info p {
         margin-top: -5px;
-        padding: 20px 6px;
         font-size: 15px;
     }
 }
@@ -7464,15 +7540,14 @@ input:focus {
     }
 
     .show-all-studies .studies-card {
-        width: calc(37% - 70px) !important;
+        width: calc(25% - 20px) !important;
         margin-bottom: 90px !important;
-        height: 300px;
     }
 
     .show-all-studies .studies-card img {
         width: 100%;
         height: 100% !important;
-        max-height: 300px !important;
+        max-height: 190px !important;
     }
 
     .show-all-studies .studies-card a {
@@ -7481,13 +7556,18 @@ input:focus {
 
     .show-all-studies .studies-card .study-text-info {
         margin-top: 0;
+        padding-top: 10px;
 
     }
 
+    .show-all-studies .studies-card .study-text-info span {
+        font-size: 14px;
+        padding: 10px 6px 20px;
+    }
+
     .show-all-studies .studies-card .study-text-info p {
-        margin-top: -5px;
-        padding: 23px 8px;
         font-size: 16px;
+        margin-top: 4px;
     }
 }
 
@@ -7865,7 +7945,7 @@ ul .aside-nested-list {
 }
 
 .show-some-studies {
-    width: 300px;
+    width: 356px;
     position: sticky;
     top: 0;
     max-height: 100vh;
@@ -7898,10 +7978,17 @@ ul .aside-nested-list {
     font-size: 14px;
 }
 
+.studies-text-some-info span {
+    color: var(--date-color);
+    font-family: 'CodecProRegular', sans-serif;
+    margin-bottom: 10px;
+}
+
 .studies-text-some-info h3 {
     margin: 5px 0;
     font-family: 'CodecProBold', sans-serif;
     line-height: 1.3 !important;
+    color: var(--sub-color);
 }
 
 .show-some-studies .image-card {
@@ -7936,8 +8023,16 @@ ul .aside-nested-list {
         font-size: 11px;
     }
 
+    .studies-text-some-info span {
+        font-size: 12px;
+        display: block;
+        margin-bottom: 4px;
+        margin-right: -4px;
+    }
+
     .studies-text-some-info h3 {
-        margin: -2px -6px;
+        margin: -2px -3px;
+        font-size: 13px;
     }
 
     .show-some-studies .image-card {
@@ -7947,7 +8042,7 @@ ul .aside-nested-list {
 
     .show-some-studies .image-card img {
         width: 100%;
-        max-height: 150px;
+        max-height: 200px;
         display: block;
         margin: 0 auto;
     }
@@ -8078,9 +8173,17 @@ ul .aside-nested-list {
         font-size: 11px;
     }
 
+    .studies-text-some-info span {
+        font-size: 14px;
+        display: block;
+        margin-bottom: 4px;
+        margin-right: -4px;
+    }
+
     .studies-text-some-info h3 {
-        margin: -4px -3px;
+        margin: 1px -3px;
         font-family: 'CodecProBold', sans-serif;
+        font-size: 16px;
     }
 
     .show-some-studies .image-card {
@@ -8090,11 +8193,11 @@ ul .aside-nested-list {
 
     .show-some-studies .image-card img {
         width: 100%;
-        max-height: 100%;
+        max-height: 190px !important;
     }
 
     .date-info {
-        margin-bottom: 10px;
+        margin-bottom: 26px !important;
         margin-top: 10px;
         font-size: 16px;
     }
@@ -8103,7 +8206,8 @@ ul .aside-nested-list {
 .pub {
     font-weight: bold;
     font-size: 18px;
-    font-family: "CodecProRegular", sans-serif;
+    font-family: "CodecProExtaBold", sans-serif;
+    color: var(--fourth-color);
 }
 
 .special-title {
@@ -8125,7 +8229,7 @@ ul .aside-nested-list {
 
 @media (max-width: 574px) {
     .pub {
-        font-size: 15px;
+        font-size: 12px;
     }
 
     .special-title {
@@ -8148,7 +8252,7 @@ ul .aside-nested-list {
 
 @media (min-width: 575px) {
     .pub {
-        font-size: 15px;
+        font-size: 12px;
     }
 
     .special-title {
@@ -8171,7 +8275,7 @@ ul .aside-nested-list {
 
 @media (min-width: 768px) {
     .pub {
-        font-size: 16px;
+        font-size: 13px;
     }
 
     .special-title {
@@ -8194,7 +8298,9 @@ ul .aside-nested-list {
 
 @media (min-width: 992px) {
     .pub {
-        font-size: 18px;
+        font-size: 14px;
+        margin-bottom: 27px !important;
+        display: block;
     }
 
     .special-title {
@@ -8696,8 +8802,7 @@ header .phone button {
 }
 
 .book-span {
-    color: gray;
-    font-weight: normal;
+    color: var(--date-color);
 }
 
 .scroll {
@@ -8798,6 +8903,10 @@ header .phone button {
     .spe-h1.index-book {
         margin-top: 7px;
     }
+
+    .all-studies h1 {
+        margin-bottom: -22px;
+    }
 }
 
 .infogr {
@@ -8891,8 +9000,8 @@ header .phone button {
     }
 
     .infogr img {
-        max-height: 450px;
-        min-height: 450px;
+        max-height: 480px;
+        min-height: 480px;
     }
 
     .show-all.infograph {
@@ -8962,8 +9071,8 @@ header .phone button {
     }
 
     .infogr img {
-        max-height: 550px;
-        min-height: 550px;
+        max-height: 620px;
+        min-height: 620px;
     }
 
     .container.index-articles .tow-books.publications-all .daw {

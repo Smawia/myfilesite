@@ -62,7 +62,7 @@ def studies(request):
         data = data.filter(
             Q(subject__icontains=query)
         )
-    page = Paginator(data,10)
+    page = Paginator(data,12)
     page_list = request.GET.get('page')
     
     page = page.get_page(page_list)

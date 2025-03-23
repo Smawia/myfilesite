@@ -20,7 +20,7 @@
                                 
                 </div>
                 <button id="toggleMode">
-                    <span id="icon" class="far fa-sun"></span>
+                    <img id="modeIcon" src="{% static 'imgs/night_mode.svg' %}" alt="Mode Icon">
                 </button>
             </div>  
             
@@ -266,48 +266,54 @@
     document.addEventListener('DOMContentLoaded', function () {
         const toggleButton = document.getElementById('toggleMode');
         const body = document.body;
-        const firstPage = document.querySelector('.first-page'); // تحديد العنصر
+        const firstPage = document.querySelector('.first-page');
+        const modeIcon = document.getElementById('modeIcon');
+        const contactLinks = document.querySelectorAll('.contactus a');
 
-        const icon = document.getElementById('icon'); // تحديد الأيقونة
-        const contactLinks = document.querySelectorAll('.contactus a'); // تحديد روابط .contactus
-    
-        // استرجاع الوضع المحفوظ من localStorage
-        const savedMode = localStorage.getItem('theme');
+        // مسارات الصور باستخدام Django static
+        const lightModeImg = "{% static 'imgs/light_mode.svg' %}";
+        const darkModeImg = "{% static 'imgs/night_mode.svg' %}";
+
+        // تحديد الوضع الافتراضي كـ light mode إذا لم يختر المستخدم وضعًا مسبقًا
+        let savedMode = localStorage.getItem('theme');
+        if (!savedMode) {
+            savedMode = 'light-mode'; // الوضع الافتراضي هو الفاتح
+            localStorage.setItem('theme', savedMode);
+        }
+
+        // تطبيق الوضع المحفوظ مع عكس الصور
         if (savedMode === 'dark-mode') {
-            body.classList.add('dark-mode'); // تطبيق الوضع الغامق على body
-            if (firstPage) {
-                firstPage.classList.add('dark-mode'); // تطبيق الوضع الغامق على .first-page
-            }
-            icon.className = 'far fa-sun'; // تغيير الأيقونة إلى الشمس
+            body.classList.add('dark-mode');
+            if (firstPage) firstPage.classList.add('dark-mode');
             contactLinks.forEach(link => link.classList.add('dark-mode'));
+            modeIcon.src = lightModeImg; // عرض أيقونة الوضع الفاتح
         } else {
-            // إذا لم يكن هناك وضع محفوظ، تعيين الوضع الفاتح افتراضيًا
-            icon.className = 'far fa-moon'; 
+            body.classList.remove('dark-mode');
+            modeIcon.src = darkModeImg; // عرض أيقونة الوضع الليلي
             contactLinks.forEach(link => link.classList.remove('dark-mode'));
         }
-    
-        // تبديل الوضع عند النقر على الزر
+
+        // تبديل الوضع عند النقر على الزر مع عكس الصور
         toggleButton.addEventListener('click', function () {
             if (body.classList.contains('dark-mode')) {
-                // إزالة الوضع الغامق
+                // العودة للوضع الفاتح
                 body.classList.remove('dark-mode');
-                if (firstPage) {
-                    firstPage.classList.remove('dark-mode'); // إزالة الفئة من .first-page
-                }
+                if (firstPage) firstPage.classList.remove('dark-mode');
                 contactLinks.forEach(link => link.classList.remove('dark-mode'));
-                localStorage.setItem('theme', ''); // حفظ الوضع الفاتح
-                icon.className = 'far fa-moon'; // تغيير الأيقونة إلى الهلال
+                localStorage.setItem('theme', 'light-mode');
+                modeIcon.src = darkModeImg; // إظهار أيقونة الوضع الليلي
             } else {
-                // إضافة الوضع الغامق
+                // الانتقال إلى الوضع الليلي
                 body.classList.add('dark-mode');
-                if (firstPage) {
-                    firstPage.classList.add('dark-mode'); // تطبيق الفئة على .first-page
-                }+
+                if (firstPage) firstPage.classList.add('dark-mode');
                 contactLinks.forEach(link => link.classList.add('dark-mode'));
-                localStorage.setItem('theme', 'dark-mode'); // حفظ الوضع الغامق
-                icon.className = 'far fa-sun'; // تغيير الأيقونة إلى الشمس
+                localStorage.setItem('theme', 'dark-mode');
+                modeIcon.src = lightModeImg; // إظهار أيقونة الوضع الفاتح
             }
         });
+
+
+
         let bar = document.querySelector(".toggle-menu");
         let aside_bar = document.querySelector('.aside');
         bar.onclick = function () {
@@ -332,5 +338,14 @@
                 }, 900); // نفس التأخير
             }
         });
-    });          
+    });
+    document.addEventListener("scroll", () => {
+        const header = document.querySelector(".header-container");
+        if (window.scrollY > 50) {
+            header.classList.add("scrolled");
+        } else {
+            header.classList.remove("scrolled");
+        }
+    });
+              
  </script>
