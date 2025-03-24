@@ -99,6 +99,7 @@ html {
 @font-face {
     font-family: 'CodecProBold';
     src: url('../fonts/CodecPro-Bold.ttf') format('truetype');
+    font-weight: 600;
 }
 
 @font-face {
@@ -107,7 +108,7 @@ html {
 }
 
 @font-face {
-    font-family: 'CodecProExtaBold';
+    font-family: 'CodecProExtraBold';
     src: url('../fonts/CodecPro-ExtraBold.ttf') format('truetype');
 }
 
@@ -123,7 +124,7 @@ body {
     background-color: var(--bg-color);
     direction: rtl;
     margin: 0;
-    font-family: 'Calibri';
+    font-family: 'CodecProRegular';
     min-height: 100%;
     display: flex;
     flex-direction: column;
@@ -134,12 +135,16 @@ body {
 /* start header */
 header {
     background: white;
-    font-family: 'Calibri';
+    font-family: 'CodecProRegular';
     position: relative;
     z-index: 9999;
     transition: 0.6s;
     display: inline-flex;
     width: 100%;
+}
+
+header form {
+    position: relative;
 }
 
 .header-container {
@@ -220,10 +225,6 @@ header ul.aside-ul {
         display: block !important;
     }
 
-    header .arrow {
-        color: white !important;
-    }
-
     header ul li {
         margin-bottom: 10px;
         color: white !important;
@@ -286,7 +287,6 @@ header ul li a {
     color: var(--fourth-color);
     font-size: 20px;
     transition: 0.4s;
-    padding: 2px 3px 2px 2px;
 }
 
 header ul .base-li {
@@ -320,27 +320,18 @@ header ul .base-li .ul {
     right: -23px;
     width: 131px;
     z-index: 100;
-    border: 1px solid var(--second-color);
+    border: 1px solid #ddd;
     cursor: pointer;
-}
-
-header ul .base-li .ul::before {
-    content: "";
-    position: absolute;
-    width: 0;
-    height: 0;
-    border-style: solid;
-    border-width: 10px;
-    border-color: transparent transparent transparent transparent;
-    top: -10px;
-    left: 60%;
-    /* transform: translateX(-50%); */
+    font-family: 'CodecProRegular' !important;
 }
 
 header ul .base-li .ul li {
     margin-right: -5px;
     margin-top: -8px;
     transition: 0.3s;
+    max-width: 131px;
+    min-width: 131px;
+    box-sizing: border-box;
 }
 
 header ul .base-li .ul li:hover {
@@ -360,10 +351,13 @@ header ul .base-li .ul li a {
     text-decoration: none;
     color: var(--second-color);
     font-size: 15px;
-    max-width: 100%;
+    max-width: 131px;
+    min-width: 131px;
     display: block;
     padding-top: 6px;
     padding-right: 6px;
+    font-family: 'CodecProRegular' !important;
+    font-weight: normal;
 }
 
 header ul li a.active,
@@ -371,11 +365,6 @@ header ul li a:hover {
     box-sizing: border-box;
     color: var(--fifth-color);
 }
-
-header ul li a:hover .arrow {
-    color: white;
-}
-
 
 
 header a i {
@@ -467,7 +456,7 @@ header img {
     }
 
     header ul li {
-        margin-right: 20px;
+        margin-left: 20px;
     }
 }
 
@@ -481,7 +470,7 @@ header img {
 @media (min-width: 1270px) {
 
     header ul li a {
-        font-size: 16px;
+        font-size: 14px;
     }
 }
 
@@ -499,11 +488,6 @@ header img {
         height: auto;
         margin-top: 11px;
     }
-}
-
-header .arrow {
-    color: white;
-    padding-left: 7px;
 }
 
 .above-header {
@@ -526,7 +510,6 @@ header .arrow {
 
 .social-above-header #toggleMode {
     font-family: 'Calibri';
-    font-weight: bold;
     background-color: transparent;
     color: var(--button-text-color);
     border: none;
@@ -731,10 +714,6 @@ header .arrow {
     }
 }
 
-.text-info p span {
-    font-weight: bold;
-}
-
 .text-info p {
     margin-right: 40px;
     font-size: 23px;
@@ -792,7 +771,7 @@ header .arrow {
 
 .spe-h1 {
     color: #5E6F9C;
-    font-family: 'CodecProBold', sans-serif;
+    font-family: 'CodecProExtraBold';
 }
 
 .show-i a {
@@ -828,7 +807,6 @@ header .arrow {
 .show-i .card p {
     margin-top: 0;
     font-size: 18px;
-    font-weight: bold;
     font-family: 'Calibri';
     width: 100%;
     height: 99%;
@@ -885,7 +863,6 @@ header .arrow {
 
     .show-i .card p {
         font-size: 18px;
-        font-weight: bold;
     }
 
     .show-i .card span {
@@ -987,7 +964,7 @@ header .arrow {
 
 .points h2 {
     margin-top: 12px;
-    font-family: 'CodecProBold', sans-serif;
+    font-family: 'CodecProBold';
 }
 
 @media (max-width: 574px) {
@@ -1207,8 +1184,7 @@ header .arrow {
 
 .work h2 {
     font-size: 20px;
-    font-family: 'CodecProBold', sans-serif;
-    font-weight: bold;
+    font-family: 'CodecProBold';
 }
 
 @media (max-width: 574px) {
@@ -1677,7 +1653,6 @@ header .arrow {
     outline: none;
     cursor: pointer;
     background-color: var(--second-color);
-    font-weight: bold;
     transition: 0.3s;
     border: none;
     outline: none;
@@ -1804,10 +1779,6 @@ header .arrow {
     }
 }
 
-/* .signup input[type='text']::placeholder {
-    color: blue;
-    font-weight: bold;
-} */
 
 .signup input[type='submit'] {
     margin-top: 30px;
@@ -2117,7 +2088,7 @@ footer .final-p {
     }
 
     footer .footer-information .footer-social img {
-        width: 200px;
+        width: 220px;
         height: auto;
         margin: 20px auto;
     }
@@ -2126,8 +2097,14 @@ footer .final-p {
         font-size: 14px;
     }
 
+    footer .footer-information .footer-social div i {
+        font-size: 17px;
+        margin-left: 11px;
+    }
+
     footer .footer-information .first-text p.first-p {
         margin-bottom: -9px !important;
+        font-size: 18px;
     }
 }
 
@@ -2306,7 +2283,7 @@ table thead td {
 }
 
 .cretiria h1 {
-    font-family: 'CodecProBold', sans-serif;
+    font-family: 'CodecProBold';
     border: 2px solid white;
     border-radius: 15px;
     background-color: var(--second-color);
@@ -2334,7 +2311,7 @@ table thead td {
 
 
 .cretiria .one h3 {
-    font-family: 'CodecProBold', sans-serif;
+    font-family: 'CodecProBold';
     margin: 20px 0;
     font-size: 30px;
     border: 2px solid white;
@@ -2362,7 +2339,6 @@ table thead td {
 .cretiria ul li,
 .cretiria ol li {
     font-size: 20px;
-    /* font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; */
     font-family: 'Calibri';
 }
 
@@ -2540,7 +2516,6 @@ table thead td {
 .d-flex .authers {
     display: flex;
     justify-content: space-around;
-    font-weight: bold;
     flex-wrap: wrap;
     color: white;
     font-size: 20px;
@@ -2756,7 +2731,6 @@ table thead td {
 
 .contactus .address p {
     font-size: 28px;
-    font-weight: bold;
     font-style: italic;
 }
 
@@ -2990,7 +2964,6 @@ table thead td {
     border-radius: 12px;
     border: 2px solid white;
     font-style: normal;
-    font-weight: bold;
     font-size: 20px;
     color: white;
 }
@@ -3086,7 +3059,6 @@ table thead td {
     color: black;
     text-align: center;
     font-size: 10px;
-    font-weight: bold;
 }
 
 .patrols .text .two a {
@@ -3120,7 +3092,6 @@ table thead td {
         border-radius: 8px;
         border: 2px solid white;
         font-style: normal;
-        font-weight: bold;
         font-size: 15px;
         color: white;
     }
@@ -3181,7 +3152,6 @@ table thead td {
         border-radius: 8px;
         border: 2px solid white;
         font-style: normal;
-        font-weight: bold;
         font-size: 15px;
         color: white;
     }
@@ -3242,7 +3212,6 @@ table thead td {
         border-radius: 8px;
         border: 2px solid white;
         font-style: normal;
-        font-weight: bold;
         font-size: 25px;
         color: white;
     }
@@ -3303,7 +3272,6 @@ table thead td {
         border-radius: 8px;
         border: 2px solid white;
         font-style: normal;
-        font-weight: bold;
         font-size: 28px;
         color: white;
     }
@@ -3689,7 +3657,6 @@ input {
 .first-page {
     width: 90%;
     margin: 40px auto;
-    box-shadow: 2px -2px 5px silver, -2px -2px 5px silver;
     padding: 20px;
     position: relative;
     background-color: white;
@@ -3721,7 +3688,6 @@ input {
 
 .first-page h1 {
     font-family: 'Calibri';
-    font-weight: bold;
 }
 
 .first-page img {
@@ -3734,23 +3700,20 @@ input {
 
 .first-page .p-img {
     font-size: 30px;
-    font-weight: bold;
     margin-right: 10px;
     width: calc(100% - 10px) !important;
     transition: 0.3s;
     position: relative;
     padding-bottom: 10px;
     border-radius: 12px;
-    font-family: 'CodecProBold', sans-serif;
+    font-family: 'CodecProBold';
     margin-top: 0;
     margin-bottom: 0;
     margin-right: 0;
     color: var(--sub-color);
 }
 
-.first-page .info .pub {
-    font-weight: bold;
-}
+
 
 .first-page .full-text {
     font-family: 'Calibri' !important;
@@ -3793,7 +3756,7 @@ input {
     margin-bottom: -18px;
     margin-top: 0px;
     font-size: 18px;
-    font-family: 'CodecProBold', sans-serif;
+    font-family: 'CodecProBold';
 }
 
 .first-page .first-page-info p {
@@ -3841,7 +3804,7 @@ input {
         font-size: 16px;
         padding-bottom: 14px;
         margin-right: 0px;
-        margin-bottom: -16px;
+        margin-bottom: -19px;
         line-height: 1.4;
     }
 }
@@ -3877,8 +3840,11 @@ input {
     }
 
     .first-page .p-img {
-        font-size: 22px;
-        margin-bottom: 20px;
+        margin-bottom: 9px;
+        color: black;
+        display: block;
+        font-family: "CodecProBold";
+        font-size: 25px;
     }
 }
 
@@ -3916,14 +3882,13 @@ input {
 
 .first-page .full-text h2 {
     font-size: 30px;
-    font-family: 'CodecProBold', sans-serif;
+    font-family: 'CodecProBold';
 }
 
 .first-page .full-text p {
     line-height: 1.6;
     font-family: 'Calibri';
     text-align: justify;
-    /* font-weight: bold; */
     font-size: 30px;
     margin-left: 0;
     /* يبدأ من اليسار */
@@ -3943,7 +3908,6 @@ input {
 .first-page .full-text span sup {
     color: #B46C22;
     cursor: pointer;
-    font-weight: bold;
 }
 
 .first-page .full-text a {
@@ -4096,7 +4060,7 @@ input {
 
 @media (min-width: 575px) {
     .first-page {
-        margin: 35px 0 15px;
+        margin: 10px 0 15px;
         width: 93%;
     }
 
@@ -4295,7 +4259,6 @@ input {
 }
 
 .refrences ul li a {
-    font-weight: bold;
     text-decoration: none;
     transition: 0.3s;
 }
@@ -4751,7 +4714,7 @@ input {
     text-overflow: ellipsis;
     width: 275px;
     height: 20px;
-    font-family: 'CodecProBold', sans-serif;
+    font-family: 'CodecProBold';
 }
 
 .show-studies a .study-info p {
@@ -4763,12 +4726,11 @@ input {
     /* white-space: wrap; */
     text-overflow: ellipsis;
     transition: 0.3s;
-    font-weight: bold;
 }
 
 .top-of-study {
     background-color: white;
-    font-family: 'CodecProBold', sans-serif;
+    font-family: 'CodecProBold';
     color: white;
     padding: 8px 10px;
     font-size: 23px;
@@ -5034,7 +4996,7 @@ input {
     background-color: var(--second-color);
     color: white;
     padding: 5px;
-    font-family: 'CodecProBold', sans-serif;
+    font-family: 'CodecProBold';
 }
 
 /* end first page */
@@ -5155,7 +5117,6 @@ input {
     text-decoration: none;
     font-size: 25px;
     color: black;
-    font-weight: bold;
 }
 
 .container-sec .card a p {
@@ -5499,7 +5460,6 @@ input {
 
 .fa-arrow-up-long {
     color: white;
-    font-weight: bold;
     padding: 10px;
     background-color: rgba(87, 84, 163, 0.5);
     border-radius: 8px;
@@ -5679,9 +5639,6 @@ input {
     }
 }
 
-.spe-span {
-    font-weight: bold;
-}
 
 /* start styling aside */
 .aside {
@@ -5734,6 +5691,21 @@ input {
 
 .aside .aside-ul li a:hover {
     color: var(--fifth-color) !important;
+}
+
+.aside-base-li {
+    position: relative;
+}
+
+.aside-base-li::before {
+    content: " \25BC";
+    position: absolute;
+    top: 6px;
+    left: -7px;
+    color: var(--fourth-color);
+    width: 5px;
+    height: 5px;
+    font-size: 10px;
 }
 
 .aside-base-li .ul {
@@ -5934,13 +5906,12 @@ input {
     text-align: start;
     padding-right: 20px;
     box-sizing: border-box;
-    font-weight: bold;
 }
 
 .slide-full-inf h2 {
     margin-right: 20px;
     font-size: 30px;
-    font-family: 'CodecProBold', sans-serif;
+    font-family: 'CodecProBold';
     line-height: 1.4 !important;
 }
 
@@ -5951,7 +5922,7 @@ input {
     text-align: start;
     color: var(--fifth-color);
     font-weight: normal;
-    font-family: 'CodecProRegular', sans-serif;
+    font-family: 'CodecProRegular';
 }
 
 .slide-full-inf span .fa-calendar {
@@ -6406,6 +6377,7 @@ input {
 .pagination {
     margin: 20px;
 }
+
 .p-ul {
     list-style: none;
     display: flex;
@@ -7142,10 +7114,6 @@ h5 {
     }
 }
 
-input:focus {
-    border: 2px solid var(--second-color) !important;
-    outline: none;
-}
 
 /* start styling index imgs study */
 .show-studies-index {
@@ -7197,8 +7165,7 @@ input:focus {
 .show-studies-index .show-index-imgs .card a .text-info-index p {
     margin-right: 0;
     margin-bottom: 20px !important;
-    font-family: 'CodecProBold', sans-serif;
-    font-weight: bold !important;
+    font-family: 'CodecProBold';
     line-height: 1.3 !important;
 }
 
@@ -7211,7 +7178,7 @@ input:focus {
     font-size: 18px;
     color: var(--date-color);
     font-weight: normal !important;
-    font-family: 'CodecProRegular', sans-serif;
+    font-family: 'CodecProRegular';
 }
 
 .show-studies-index .show-all {
@@ -7220,7 +7187,6 @@ input:focus {
     width: fit-content !important;
     margin: 10px auto;
     padding: 5px 17px !important;
-    font-weight: bold;
 }
 
 @media (max-width: 574px) {
@@ -7350,14 +7316,14 @@ input:focus {
 
     .show-studies-index .show-index-imgs .card {
         width: calc(25% - 20px) !important;
-        margin-bottom: 40px !important;
+        margin-bottom: 48px !important;
         margin-top: -20px;
     }
 
     .show-studies-index .show-index-imgs .card img {
         width: 100%;
-        height: 190px !important;
-        max-height: 190px !important;
+        height: 140px !important;
+        max-height: 140px !important;
     }
 
     .show-studies-index .show-index-imgs .card a .text-info-index p {
@@ -7374,7 +7340,8 @@ input:focus {
 
     .show-studies-index .show-all {
         margin: 5px auto;
-        font-size: 23px !important;
+        font-size: 16px !important;
+        padding: 7px 32px !important;
     }
 }
 
@@ -7412,7 +7379,6 @@ input:focus {
 .show-all-studies .studies-card .study-text-info {
     box-sizing: border-box;
     margin-top: 0;
-    font-weight: bold;
     background-color: white;
 
 }
@@ -7424,7 +7390,7 @@ input:focus {
 .show-all-studies .studies-card .study-text-info p {
     margin-top: -4px;
     padding: 10px 6px 20px;
-    font-family: 'CodecProBold', sans-serif;
+    font-family: 'CodecProBold';
     transition: 0.3s;
     color: var(--sub-color);
     line-height: 1.3;
@@ -7459,9 +7425,11 @@ input:focus {
     .show-all-studies .studies-card a {
         font-size: 14px;
     }
+
     .show-all-studies .studies-card .study-text-info {
         padding-top: 2px;
     }
+
     .show-all-studies .studies-card .study-text-info span {
         font-size: 12px;
         margin-right: 5px;
@@ -7469,8 +7437,9 @@ input:focus {
 
     .show-all-studies .studies-card .study-text-info p {
         font-size: 13px;
-        
+
     }
+
     .show-all-studies .studies-card .study-text-info p:not(:last-of-type) {
         border-bottom: 1px solid #ddd;
         padding-bottom: 12px;
@@ -7541,13 +7510,13 @@ input:focus {
 
     .show-all-studies .studies-card {
         width: calc(25% - 20px) !important;
-        margin-bottom: 90px !important;
+        margin-bottom: 32px !important;
     }
 
     .show-all-studies .studies-card img {
         width: 100%;
         height: 100% !important;
-        max-height: 190px !important;
+        max-height: 140px !important;
     }
 
     .show-all-studies .studies-card a {
@@ -7613,7 +7582,6 @@ input:focus {
     margin-top: -10px !important;
     width: 100%;
     font-size: 12px;
-    font-weight: bold;
     overflow: hidden;
     font-style: italic;
     text-align: center;
@@ -7759,7 +7727,7 @@ input:focus {
 
 .tow-books .daw .card .daw-info {
     padding: 10px;
-    font-family: 'CodecProBold';
+    font-family: 'CodecProRegular';
 }
 
 .tow-books .daw .card .daw-info span {
@@ -7768,8 +7736,8 @@ input:focus {
 
 .tow-books .daw .card .daw-info p {
     color: var(--sub-color);
-    font-weight: bold;
     margin: 9px 0;
+    font-family: 'CodecProRegular';
     line-height: 1.3 !important;
 }
 
@@ -7927,7 +7895,7 @@ ul .aside-nested-list {
     margin-bottom: 10px;
     margin-top: 10px;
     color: var(--date-color);
-    font-family: 'CodecProRegular', sans-serif;
+    font-family: 'CodecProRegular';
 }
 
 .date-info i {
@@ -7980,13 +7948,13 @@ ul .aside-nested-list {
 
 .studies-text-some-info span {
     color: var(--date-color);
-    font-family: 'CodecProRegular', sans-serif;
+    font-family: 'CodecProRegular';
     margin-bottom: 10px;
 }
 
 .studies-text-some-info h3 {
     margin: 5px 0;
-    font-family: 'CodecProBold', sans-serif;
+    font-family: 'CodecProBold';
     line-height: 1.3 !important;
     color: var(--sub-color);
 }
@@ -8127,7 +8095,7 @@ ul .aside-nested-list {
 
     .studies-text-some-info h3 {
         margin: -4px -2px;
-        font-family: 'CodecProBold', sans-serif;
+        font-family: 'CodecProBold';
     }
 
     .show-some-studies .image-card {
@@ -8182,7 +8150,7 @@ ul .aside-nested-list {
 
     .studies-text-some-info h3 {
         margin: 1px -3px;
-        font-family: 'CodecProBold', sans-serif;
+        font-family: 'CodecProBold';
         font-size: 16px;
     }
 
@@ -8193,7 +8161,7 @@ ul .aside-nested-list {
 
     .show-some-studies .image-card img {
         width: 100%;
-        max-height: 190px !important;
+        max-height: 140px !important;
     }
 
     .date-info {
@@ -8204,9 +8172,8 @@ ul .aside-nested-list {
 }
 
 .pub {
-    font-weight: bold;
     font-size: 18px;
-    font-family: "CodecProExtaBold", sans-serif;
+    font-family: "CodecProExtraBold";
     color: var(--fourth-color);
 }
 
@@ -8335,7 +8302,6 @@ ul .aside-nested-list {
     background-color: #5A70A2;
     outline: none;
     color: white;
-    font-weight: bold;
     border: none;
     margin-left: 5px;
     transition: 0.3s;
@@ -8436,20 +8402,32 @@ ul .aside-nested-list {
 }
 
 header input {
-    width: 120px;
+    width: 175px;
+    border-bottom: 1px solid var(--fourth-color);
+    border-top: none;
+    border-right: none;
+    border-left: none;
+    height: 22px;
+    background: #f2f2f2;
+    font-family: 'CodecProRegular' !important;
+    font-size: 12px;
+    color: var(--sub-color) !important;
+}
+
+header input:focus {
+    outline: none !important;
 
 }
 
 .search-header button {
-    color: white;
-    font-weight: bold;
-    background-color: var(--second-color);
+    color: var(--sub-color);
     border: none;
     height: 22px;
-    border-radius: 2px;
-    position: relative;
-    top: -1px;
     cursor: pointer;
+    position: absolute;
+    top: 1px;
+    left: 5px;
+    background-color: transparent !important;
 }
 
 @media (max-width: 1137px) {
@@ -8460,10 +8438,16 @@ header input {
 
 header .phone {
     margin-right: 16px;
+    width: 175px;
+    box-sizing: border-box;
+    position: relative;
 }
 
 header .phone button {
     margin-right: 0;
+    position: absolute;
+    left: -9px;
+    width: fit-content;
 }
 
 .footer-social2 {
@@ -8473,7 +8457,7 @@ header .phone button {
 .publications {
     color: #5E6F9C;
     margin-bottom: 0;
-    font-family: 'CodecProBold', sans-serif;
+    font-family: 'CodecProBold';
 }
 
 @media (max-width: 574px) {
@@ -8572,7 +8556,6 @@ header .phone button {
     background: #1A6782;
     color: white;
     border: none;
-    font-weight: bold;
     margin-top: 195px;
 }
 
@@ -8942,7 +8925,6 @@ header .phone button {
     padding: 10px;
     opacity: 0.7;
     transition: opacity 0.3s ease;
-    font-weight: bold;
 }
 
 .infogr button:hover {
@@ -9049,6 +9031,12 @@ header .phone button {
 }
 
 @media (min-width: 992px) {
+    .publications.carousel-title {
+        text-align: center;
+        margin-bottom: -1px;
+        margin-top: 0;
+    }
+
     .container.index-articles.all-art {
         background: white;
         margin-top: 40px;
@@ -9094,6 +9082,10 @@ header .phone button {
     }
 }
 
+a {
+    text-decoration: none !important;
+}
+
 p,
 h1,
 h2,
@@ -9106,4 +9098,5 @@ span {
     white-space: normal;
     letter-spacing: normal;
     text-rendering: optimizeLegibility;
+    font-weight: unset;
 }

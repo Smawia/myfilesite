@@ -139,7 +139,7 @@
     #carousel .silder-moving p {
         color: #333333;
         font-size: 16px;
-        font-family: 'CodecProBold';
+        font-family: 'CodecProRegular';
     }
 
     #carousel div.nextRightSecond {
@@ -182,10 +182,16 @@
         main {
             display: none;
         }
+        .publications.carousel-title {
+            display: none;
+        }
     }
     
     @media (min-width: 575px) {
         main {
+            display: none;
+        }
+        .publications.carousel-title {
             display: none;
         }
     }
@@ -197,6 +203,9 @@
         main {
             display: block;
         }
+        .publications.carousel-title {
+            display: block;
+        }
     }
     
     @media (min-width: 992px) {
@@ -204,6 +213,9 @@
             display: none;
         }
         main {
+            display: block;
+        }
+        .publications.carousel-title {
             display: block;
         }
     }
@@ -290,7 +302,7 @@
     </div>
 </div>
 <div class="container index-articles all-art">
-    <h1 class="spe-h1 studies">دراسات وبحوث</h1>
+    <a href="{% url 'studies' %}"><h1 class="spe-h1 studies">دراسات وبحوث</h1></a>
     <div class="show-studies-index">
         <div class="show-index-imgs">
             <div class="card">
@@ -391,7 +403,7 @@
         <a href="{% url 'studies' %}" class="show-all">عرض المزيد</a>
     </div>
 </div>
-<h1 class="publications in-index with-out">إصدارات المركز</h1>
+<a href="{% url 'publications' %}"><h1 class="publications in-index with-out">إصدارات المركز</h1></a>
 <div class="outside-container">
     <div class="container index-articles">
         <h1 class="publications in-index" style="display: none;">إصدارات المركز</h1>
@@ -426,7 +438,7 @@
 <div class="container index-articles hide-in-pc">
     <div class="tow-books">
         <div class="daw">
-            <h1 class="spe-h1 infograph">إنفوجراف</h1>
+            <a href="{% url 'infographs' %}"><h1 class="spe-h1 infograph">إنفوجراف</h1></a>
             <div class="card">
                 <div class="infogr">
                     <button class="prev" aria-label="السابق">&lt;</button>
@@ -445,9 +457,11 @@
     <!-- <a href="{% url 'infographs' %}" class="show-all infograph">عرض المزيد</a> -->
 
 </div>
+<a href="{% url 'infographs' %}"><h1 class="publications in-index carousel-title">إنفوجراف</h1></a>
 <main>
     <div id="carousel" class="carousel">
-
+        
+    
         <div id='item_2' class="prevLeftSecond">
             <img src="{% static 'imgs/info2.png' %}" alt="image info">
             <div class="silder-moving">
@@ -484,7 +498,7 @@
             <img src="{% static 'imgs/info.png' %}">
             <div class="silder-moving">
                 <span> 13 مارس 2025 </span>
-                <p>أكثر سبع دول إنتاجاً للأدوية في العام 2024</p>
+                <p>أكثر سبع دول إنتاجًا للأدوية في العام 2024</p>
             </div>
         </div>
 

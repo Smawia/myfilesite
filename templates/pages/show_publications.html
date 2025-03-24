@@ -2,29 +2,34 @@
 {% load static %}
 {% block title %}إصدارات المركز{% endblock %}
 {% block content %}
-<div class="container">
-    <h1 class="publications">إصدارات المركز</h1>
-    <div class="tow-books">
-        <div class="daw">
-            <h1 class="spe-h1 publication-jor">دوريات المركز</h1>
-            <div class="card">
+<h1 class="publications in-index with-out">إصدارات المركز</h1>
+<div class="outside-container">
+    <div class="container index-articles">
+        <h1 class="publications in-index" style="display: none;">إصدارات المركز</h1>
+        <div class="tow-books publications-all">
+            <div class="daw">
+                <h1 class="spe-h1 index-journals">الدوريات</h1>
                 <a href="{% url 'osus' %}">
-                    <img src="{% static 'imgs/web.jpg' %}" alt="">
+                    <div class="card">
+                        <img src="{% static 'imgs/new_osus.jpg' %}" alt="">
+                        <div class="daw-info">
+                            <span class="book-span">العدد الأول | مارس 2025</span>
+                            <p>دورية أُســـس</p>
+                        </div>
+                    </div>
                 </a>
-                <div class="daw-info">
-                    <p>دورية أٌســس</p>
-                </div>
             </div>
-        </div>
-        <div class="daw">
-            <h1 class="spe-h1 publication-book">كتب المركز</h1>
-            <div class="card">
+            <div class="daw">
+                <h1 class="spe-h1 index-book">الكتب</h1>
                 <a href="{% url 'books' %}">
-                    <img src="{% static 'imgs/Book A.jpg' %}" alt="">
+                    <div class="card">
+                        <img src="{% static 'imgs/new_book.jpg' %}" alt="">
+                        <div class="daw-info">
+                            <span class="book-span">مجموعة مؤلفين | ديسمبر 2023</span>
+                            <p>رؤية مستقبلية للإصلاح الإداري الشامل في اليمن 2023</p>
+                        </div>
+                    </div>
                 </a>
-                <div class="daw-info">
-                    <p>رؤية مستقبلية للإصلاح الإداري الشامل في اليمن 2023</p>
-                </div>
             </div>
         </div>
     </div>

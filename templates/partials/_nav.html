@@ -40,13 +40,13 @@
                             class="nav-a"
                             {% endif %}
                             >الرئيسية</a></li>
-                        <li class="base-li"><a href="#"
+                        <li class="base-li aside-base-li"><a href="#"
                             {% if 'about' in request.path or '/criteria' in request.path %}
                             class="active js-a nav-a"
                             {% else %}
                             class="js-a nav-a"
                             {% endif %}
-                            >معلومات المركز <i class="fa-solid fa-angle-down arrow active"></i></a>
+                            >معلومات المركز </a>
                             <ul class="ul">
                                 <li><a href="{% url 'about' %}">من نحن</a></li>
                                 <li><a href="{% url 'criteria' %}">معايير النشر</a></li>  
@@ -59,13 +59,13 @@
                             class="nav-a"
                             {% endif %}
                             >دراسات وبحوث</a></li>
-                        <li class="base-li"><a href="{% url 'publications' %}"
+                        <li class="base-li aside-base-li"><a href="{% url 'publications' %}"
                             {% if 'books' in request.path or 'journals' in request.path or 'publications' in request.path or 'Osus' in request.path%}
                             class="active js-a nav-a"
                             {% else %}
                             class="nav-a"
                             {% endif %}
-                            >إصدارات المركز<i class="fa-solid fa-angle-down arrow spe-arrow active"></i></a>
+                            >إصدارات المركز</a>
                             <ul class="ul nested-list">
                                 <li><a href="{% url 'books' %}">الكتب</a></li>
                                 <li><a href="{% url 'osus' %}">الدوريات</a></li>
@@ -80,21 +80,21 @@
                             >الدوريات</a>
                         </li> -->
                         
-                        <li class="asid-li2"><a href="{% url 'news' %}"
-                            {% if 'news' in request.path or 'showDetailNews' in request.path or 'pushNewsPost' in request.path %}
+                        <li class="asid-li2"><a href="{% url 'infographs' %}"
+                            {% if 'Infographic' in request.path %}
                             class="active nav-a"
                             {% else %}
                             class="nav-a"
                             {% endif %}
-                            >الأخبار والفعاليات</a></li>
+                            >إنفوجراف</a></li>
                         
-                            <li class="base-li asid-li3"><a href="{% url 'signup' %}"
+                            <li class="base-li asid-li3 aside-base-li"><a href="{% url 'signup' %}"
                                 {% if 'signup' in request.path or 'signin' in request.path or 'logout' in request.path %}
                                 class="active js-a nav-a"
                                 {% else %}
                                 class="js-a nav-a"
                                 {% endif %}
-                                >تسجيل عضوية<i class="fa-solid fa-angle-down arrow active"></i></a>
+                                >تسجيل عضوية</a>
                                 <ul class="ul">
                                     {% if request.user.is_authenticated %}
                                     <li style="display: none;"><a href="{% url 'signin' %}">تسجيل الدخول</a></li>
@@ -130,7 +130,7 @@
                 </div>
                 <div class="search-header tab">
                     <form action="{% url 'studies' %}" method="get" class="search-form">
-                        <input type="text" name="q" placeholder="بحث...">
+                        <input type="text" name="q" placeholder="ادخل كلمة للبحث">
                         <button type="submit" class="search"><i class="fas fa-search"></i></button>
                     </form>
                 </div>
@@ -179,13 +179,13 @@
                                 <li><a href="{% url 'osus' %}">الدوريات</a></li>
                             </ul>
                         </li>
-                        <li class="asid-li small-screen"><a href="{% url 'news' %}"
-                            {% if 'news' in request.path or 'showDetailNews' in request.path or 'pushNewsPost' in request.path %}
+                        <li class="asid-li small-screen"><a href="{% url 'infographs' %}"
+                            {% if 'Infographic' in request.path %}
                             class="active"
                             {% else %}
                             class=""
                             {% endif %}
-                            >الأخبار والفعاليات</a></li>
+                            >إنفوجراف</a></li>
                         <!-- <li class="asid-li small-screen"><a href="{% url 'signup' %}" 
                             {% if request.user.is_authenticated %}
                             style="display: none;"
@@ -238,7 +238,7 @@
                     </ul>
                     <div class="search-header phone">
                         <form action="{% url 'studies' %}" method="get" class="search-form phone">
-                            <input type="text" name="q" placeholder="بحث..." class="phone">
+                            <input type="text" name="q" placeholder="ادخل كلمة للبحث" class="phone">
                             <button type="submit" class="search phone"><i class="fas fa-search"></i></button>
                         </form>
                     </div>
