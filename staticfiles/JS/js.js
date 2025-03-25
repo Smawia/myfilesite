@@ -55,33 +55,6 @@ if (show_refs.length !== all_refs.length) {
     });
 }
 
-let social = document.querySelector(".social");
-let socialSpan = document.querySelector(".social span");
-
-socialSpan.onclick = function () {
-    social.classList.toggle("social2");
-    socialSpan.innerHTML = '-';
-    res2 = getComputedStyle(social);
-    dis2 = res2.right;
-    if (dis2 == '-55px') {
-        socialSpan.innerHTML = '+';
-    }
-}
-
-let aside_bar = document.querySelector('.aside');
-let over = document.querySelector('.over');
-bar.onclick = function () {
-    aside_bar.style.cssText = 'width: 100%;display:block';
-    over.style.display = 'block';
-}
-
-document.body.addEventListener("click", function (e) {
-    if (!e.target.classList.contains('toggle-menu') && !e.target.classList.contains('phone')) {
-        aside_bar.style.display = 'none';
-        over.style.display = 'none';
-    }
-});
-
 // جميع العناصر المستهدفة لتغيير حجم النص
 const elements = [
     ...document.querySelectorAll('.first-page .full-text p'),      // الفقرات
@@ -107,7 +80,7 @@ const minFontSize = 10;
 // عند النقر على زر التكبير
 increaseButton.addEventListener('click', function () {
     if (fontSize < maxFontSize) { // تحقق أن الحجم أقل من الحد الأقصى
-        fontSize += 2; // زيادة الحجم
+        fontSize += 1; // زيادة الحجم
         elements.forEach(function (el) {
             el.style.setProperty('font-size', `${fontSize}px`, 'important');
         });
@@ -117,7 +90,7 @@ increaseButton.addEventListener('click', function () {
 // عند النقر على زر التصغير
 decreaseButton.addEventListener('click', function () {
     if (fontSize > minFontSize) { // تحقق أن الحجم أكبر من الحد الأدنى
-        fontSize -= 2; // تقليل الحجم
+        fontSize -= 1; // تقليل الحجم
         elements.forEach(function (el) {
             el.style.setProperty('font-size', `${fontSize}px`, 'important');
         });

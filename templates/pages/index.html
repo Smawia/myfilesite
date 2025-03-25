@@ -178,6 +178,26 @@
     .right-arrow-silder {
         right: 34%;
     }
+    .carousel-dots {
+        display: flex;
+        justify-content: center;
+        position: relative;
+        top: 20px;
+    }
+    
+    .carousel-dots div {
+        width: 10px;
+        height: 10px;
+        background-color: rgba(0, 0, 0, 0.3);
+        border-radius: 50%;
+        margin: 0 5px;
+       /* cursor: pointer;*/
+        transition: background-color 0.3s;
+    }
+    
+    .carousel-dots div.active {
+        background-color: rgba(0, 0, 0, 0.8);
+    }
     @media (max-width: 574px) {
         main {
             display: none;
@@ -229,11 +249,12 @@
             <input type="radio" name="radio-btn" id="radio4">
             <input type="radio" name="radio-btn" id="radio5">
             <div class="slide first">
-                <img src="{% static 'imgs/New_Slider.png' %}" alt="">
-                <a href="{% url 'osus' %}">
+                <img src="{% static 'imgs/agstate.webp' %}" alt="">
+                <!-- <h2>سياسة الإصلاح والإنفتاح في الصين</h2> -->
+                <a href="{% url 'the_existing_social_situation' %}">
                     <div class="slide-full-inf">
-                        <h2>دورية أُســـس</h2>
-                        <span><span style="display: inline;">8 </span>مارس 2025
+                        <h2>أهم ملامح الوضع الاجتماعي القائم في اليمن</h2>
+                        <span><span style="display: inline;">24 </span>فبراير 2024
                         </span>
                     </div>
                 </a>
@@ -248,18 +269,7 @@
                     </div>
                 </a>
             </div>
-            <div class="slide">
-
-                <img src="{% static 'imgs/agstate.webp' %}" alt="">
-                <!-- <h2>سياسة الإصلاح والإنفتاح في الصين</h2> -->
-                <a href="{% url 'the_existing_social_situation' %}">
-                    <div class="slide-full-inf">
-                        <h2>أهم ملامح الوضع الاجتماعي القائم في اليمن</h2>
-                        <span><span style="display: inline;">24 </span>فبراير 2024
-                        </span>
-                    </div>
-                </a>
-            </div>
+            
             <div class="slide">
 
                 <img src="{% static 'imgs/raw.webp' %}" alt="">
@@ -277,9 +287,19 @@
                 <img src="{% static 'imgs/teg.jpg' %}" alt="">
                 <!-- <h2>مدخل إلى الحكومة الإلكترونية</h2> -->
                 <a href="{% url 'information_and_communications_technology_in_Yemen' %}">
-                    <div class="slide-full-inf">
+                    <div class="slide-full-inf special-move">
                         <h2>البنية الأساسية لتكنولوجيا المعلومات والاتصالات في اليمن</h2>
                         <span><span style="display: inline;">28 </span>أكتوبر 2024
+                        </span>
+                    </div>
+                </a>
+            </div>
+            <div class="slide journalImage">
+                <img src="{% static 'imgs/New_Slider.png' %}" alt="">
+                <a href="{% url 'osus' %}">
+                    <div class="slide-full-inf">
+                        <h2>دورية أُســـس</h2>
+                        <span><span style="display: inline;">8 </span>مارس 2025
                         </span>
                     </div>
                 </a>
@@ -462,7 +482,7 @@
     <div id="carousel" class="carousel">
         
     
-        <div id='item_2' class="prevLeftSecond">
+        <div id='item_1' class="prevLeftSecond">
             <img src="{% static 'imgs/info2.png' %}" alt="image info">
             <div class="silder-moving">
                 <span> 13 مارس 2025 </span>
@@ -470,7 +490,7 @@
             </div>
         </div>
 
-        <div id='item_3' class="prev">
+        <div id='item_2' class="prev">
             <img src="{% static 'imgs/info3.png' %}" alt="image info">
             <div class="silder-moving">
                 <span> 13 مارس 2025 </span>
@@ -478,7 +498,7 @@
             </div>
         </div>
 
-        <div id='item_4' class="selected">
+        <div id='item_3' class="selected">
             <img src="{% static 'imgs/info4.png' %}" alt="image info">
             <div class="silder-moving">
                 <span> 13 مارس 2025 </span>
@@ -486,7 +506,7 @@
             </div>
         </div>
 
-        <div id='item_5' class="next">
+        <div id='item_4' class="next">
             <img src="{% static 'imgs/info5.png' %}" alt="image info">
             <div class="silder-moving">
                 <span> 13 مارس 2025 </span>
@@ -494,15 +514,16 @@
             </div>
         </div>
 
-        <div id='item_6' class="nextRightSecond">
+        <div id='item_5' class="nextRightSecond">
             <img src="{% static 'imgs/info.png' %}">
             <div class="silder-moving">
                 <span> 13 مارس 2025 </span>
                 <p>أكثر سبع دول إنتاجًا للأدوية في العام 2024</p>
             </div>
         </div>
-
+        
     </div>
+    <div id="carousel-dots" class="carousel-dots"></div>
     <div class="all-rows">
         <div class="arrow-silder left-arrow-silder" id="prev">&larr;</div>
         <div class="arrow-silder right-arrow-silder" id="next">&rarr;</div>
@@ -529,17 +550,16 @@
 
 <script>
     document.addEventListener('DOMContentLoaded', function () {
-        let counter = 1;
-        let intervalTime = 12000; // وقت البداية بين الانتقالات
+        let intervalTime = 10000; // وقت البداية بين الانتقالات
 
         function startSlider() {
-            counter = 1; // التأكد من البدء من الصورة الأولى
+            counter = 5; // التأكد من البدء من الصورة الأولى
             document.getElementById('radio' + counter).checked = true;
 
             setTimeout(function sliderTransition() {
-                counter++;
-                if (counter > 5) {
-                    counter = 1; // العودة إلى الصورة الأولى بعد الصورة الأخيرة
+                counter--;
+                if (counter == 0) {
+                    counter = 5; // العودة إلى الصورة الأولى بعد الصورة الأخيرة
                 }
                 document.getElementById('radio' + counter).checked = true;
 
@@ -607,17 +627,17 @@
             updateSlide(currentIndex); // تم تعديل الاسم
         });
         if (window.innerWidth <= 1200) {
-            document.querySelector('.slide.first img').src = "{% static 'imgs/New_Slider_mobile.png' %}";
+            document.querySelector('.slide.journalImage img').src = "{% static 'imgs/New_Slider_mobile.png' %}";
         }
         const $ = str => document.querySelector(str);
-        const $$ = str => document.querySelectorAll(str);
+    const $$ = str => document.querySelectorAll(str);
 
-        (function () {
+        (function() {
             if (!window.app) {
                 window.app = {};
             }
             app.carousel = {
-                removeClass: function (el, classname = '') {
+                removeClass: function(el, classname='') {
                     if (el) {
                         if (classname === '') {
                             el.className = '';
@@ -628,33 +648,28 @@
                     }
                     return;
                 },
-                reorder: function () {
+                reorder: function() {
                     let childcnt = $("#carousel").children.length;
                     let childs = $("#carousel").children;
 
-                    for (let j = 0; j < childcnt; j++) {
+                    for (let j=0; j< childcnt; j++) {
                         childs[j].dataset.pos = j;
                     }
                 },
-                move: function (el) {
+                move: function(el) {
                     let selected = el;
-
                     if (typeof el === "string") {
                         console.log(`got string: ${el}`);
                         selected = (el == "next") ? $(".selected").nextElementSibling : $(".selected").previousElementSibling;
                         console.dir(selected);
                     }
-
                     let curpos = parseInt(app.selected.dataset.pos);
                     let tgtpos = parseInt(selected.dataset.pos);
-
                     let cnt = curpos - tgtpos;
                     let dir = (cnt < 0) ? -1 : 1;
                     let shift = Math.abs(cnt);
-
                     for (let i = 0; i < shift; i++) {
                         let el = (dir == -1) ? $("#carousel").firstElementChild : $("#carousel").lastElementChild;
-
                         if (dir == -1) {
                             el.dataset.pos = $("#carousel").children.length;
                             $('#carousel').append(el);
@@ -662,31 +677,27 @@
                             el.dataset.pos = 0;
                             $('#carousel').prepend(el);
                         }
-
-                        app.carousel.reorder();
+                        app.carousel.reorder(); 
                     }
-
-
                     app.selected = selected;
-                    let next = selected.nextElementSibling;// ? selected.nextElementSibling : selected.parentElement.firstElementChild;
-                    var prev = selected.previousElementSibling; // ? selected.previousElementSibling : selected.parentElement.lastElementChild;
+                    let next = selected.nextElementSibling;
+                    var prev = selected.previousElementSibling;
                     var prevSecond = prev ? prev.previousElementSibling : selected.parentElement.lastElementChild;
                     var nextSecond = next ? next.nextElementSibling : selected.parentElement.firstElementChild;
-
                     selected.className = '';
                     selected.classList.add("selected");
-
                     app.carousel.removeClass(prev).classList.add('prev');
                     app.carousel.removeClass(next).classList.add('next');
-
                     app.carousel.removeClass(nextSecond).classList.add("nextRightSecond");
                     app.carousel.removeClass(prevSecond).classList.add("prevLeftSecond");
-
                     app.carousel.nextAll(nextSecond).forEach(item => { item.className = ''; item.classList.add('hideRight') });
                     app.carousel.prevAll(prevSecond).forEach(item => { item.className = ''; item.classList.add('hideLeft') });
 
+                    // تحديث النقاط بعد التنقل
+                    app.carousel.updateDots();
+
                 },
-                nextAll: function (el) {
+                nextAll: function(el) {
                     let els = [];
 
                     if (el) {
@@ -696,7 +707,7 @@
                     return els;
 
                 },
-                prevAll: function (el) {
+                prevAll: function(el) {
                     let els = [];
 
                     if (el) {
@@ -706,7 +717,7 @@
 
                     return els;
                 },
-                keypress: function (e) {
+                keypress: function(e) {
                     switch (e.which) {
                         case 37: // left
                             app.carousel.move('prev');
@@ -722,8 +733,8 @@
                     e.preventDefault();
                     return false;
                 },
-                select: function (e) {
-                    console.log(`select: ${e}`);
+                select: function(e) {
+                console.log(`select: ${e}`);
                     let tgt = e.target;
                     while (!tgt.parentElement.classList.contains('carousel')) {
                         tgt = tgt.parentElement;
@@ -732,18 +743,18 @@
                     app.carousel.move(tgt);
 
                 },
-                previous: function (e) {
+                previous: function(e) {
                     app.carousel.move('prev');
                 },
-                next: function (e) {
+                next: function(e) {
                     app.carousel.move('next');
                 },
-                doDown: function (e) {
-                    console.log(`down: ${e.x}`);
+                doDown: function(e) {
+                console.log(`down: ${e.x}`);
                     app.carousel.state.downX = e.x;
                 },
-                doUp: function (e) {
-                    console.log(`up: ${e.x}`);
+                doUp: function(e) {
+                console.log(`up: ${e.x}`);
                     let direction = 0,
                         velocity = 0;
 
@@ -763,9 +774,9 @@
                         app.carousel.state.downX = 0;
                     }
                 },
-                init: function () {
+                init: function() {
                     document.addEventListener("keydown", app.carousel.keypress);
-                    // $('#carousel').addEventListener("click", app.carousel.select, true);
+                // $('#carousel').addEventListener("click", app.carousel.select, true);
                     $("#carousel").addEventListener("mousedown", app.carousel.doDown);
                     $("#carousel").addEventListener("touchstart", app.carousel.doDown);
                     $("#carousel").addEventListener("mouseup", app.carousel.doUp);
@@ -774,12 +785,66 @@
                     app.carousel.reorder();
                     $('#prev').addEventListener("click", app.carousel.previous);
                     $('#next').addEventListener("click", app.carousel.next);
+
+                    // إنشاء النقاط
+                    app.carousel.createDots();
+                    
                     app.selected = $(".selected");
 
                 },
                 state: {}
 
             }
+
+            // إنشاء النقاط
+            app.carousel.createDots = function () {
+                const dotsContainer = $("#carousel-dots");
+                dotsContainer.innerHTML = ""; // مسح النقاط القديمة
+
+                const images = $$("#carousel > div"); // جميع الصور في شريط التمرير
+                images.forEach((_, index) => {
+                    const dot = document.createElement("div");
+                    dot.dataset.index = index; // تخزين فهرس الصورة
+                //  dot.addEventListener("click", app.carousel.dotClick); // إضافة حدث النقر
+                    dotsContainer.appendChild(dot);
+                });
+
+                app.carousel.updateDots(); // تحديث النقطة المحددة
+            };
+
+            // تحديث النقطة المحددة
+            app.carousel.updateDots = function () {
+                const selectedImage = $(".selected");
+                const selectedId = selectedImage.id; // قراءة id الخاص بالعنصر المحدد
+            
+                const dots = $$("#carousel-dots div");
+                dots.forEach(dot => {
+                    const dotIndex = parseInt(dot.dataset.index);
+                    const elementId = `item_${dotIndex + 1}`; // حساب id بناءً على فهرس النقطة
+                    dot.classList.toggle("active", elementId === selectedId); // تحديث النقطة المحددة
+                });
+            };
+
+            // التعامل مع النقر على النقاط
+            app.carousel.dotClick = function (e) {
+                const targetIndex = parseInt(e.target.dataset.index);
+                const targetId = `item_${targetIndex + 1}`; // حساب id بناءً على فهرس النقطة
+            
+                const selectedImage = $(".selected");
+                const currentId = selectedImage.id;
+            
+                // تحديد الاتجاه بناءً على الفرق بين الـ id الحالي والمستهدف
+                const direction = targetIndex > parseInt(currentId.split("_")[1] - 1) ? "next" : "prev";
+                const steps = Math.abs(targetIndex - (parseInt(currentId.split("_")[1]) - 1));
+            
+                for (let i = 0; i < steps; i++) {
+                    app.carousel.move(direction);
+                }
+            
+                // تحديث النقاط بعد النقر
+                app.carousel.updateDots();
+            };
+
             app.carousel.init();
         })();
     });

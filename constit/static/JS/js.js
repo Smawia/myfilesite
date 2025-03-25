@@ -58,40 +58,6 @@ if (show_refs.length !== all_refs.length) {
 let social = document.querySelector(".social");
 let socialSpan = document.querySelector(".social span");
 
-socialSpan.onclick = function () {
-    social.classList.toggle("social2");
-    socialSpan.innerHTML = '-';
-    res2 = getComputedStyle(social);
-    dis2 = res2.right;
-    if (dis2 == '-55px') {
-        socialSpan.innerHTML = '+';
-    }
-}
-
-let aside_bar = document.querySelector('.aside');
-bar.onclick = function () {
-    // إذا كان الـ aside يحتوي على الكلاس "show"، نقوم بإضافته الكلاس "hide" لبدء الانسحاب
-    if (aside_bar.classList.contains('show')) {
-        aside_bar.classList.add('hide');
-        setTimeout(function() {
-            aside_bar.classList.remove('show', 'hide'); // إزالة الكلاس بعد الانتقال
-        }, 900);  // تأخير إزالة الكلاسات بنفس وقت الانتقال
-    } else {
-        // إذا لم يكن الـ aside يحتوي على الكلاس "show"، نقوم بإضافته لإظهاره
-        aside_bar.classList.add('show');
-    }
-}
-
-document.body.addEventListener("click", function (e) {
-    // إذا تم النقر على شيء غير الأيقونة أو الـ aside، نقوم بإخفاء الـ aside
-    if (!e.target.classList.contains('toggle-menu') && !e.target.classList.contains('phone') && !e.target.closest('.aside')) {
-        aside_bar.classList.add('hide');
-        setTimeout(function() {
-            aside_bar.classList.remove('show', 'hide');
-        }, 900); // نفس التأخير
-    }
-});
-
 // جميع العناصر المستهدفة لتغيير حجم النص
 const elements = [
     ...document.querySelectorAll('.first-page .full-text p'),      // الفقرات

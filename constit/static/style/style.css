@@ -135,7 +135,7 @@ body {
 /* start header */
 header {
     background: white;
-    font-family: 'CodecProRegular';
+    font-family: 'CodecProBold';
     position: relative;
     z-index: 9999;
     transition: 0.6s;
@@ -277,7 +277,6 @@ header ul.aside-ul {
 
 header ul li {
     margin-right: 40px;
-    font-weight: bold;
 }
 
 
@@ -311,16 +310,17 @@ header ul .base-li .ul {
     flex-direction: column;
     background-color: white;
     list-style: none;
-    padding: 8px 5px 7px 0;
+    padding: 8px 5px 5px 0;
     transition: 0.3s;
     margin-top: 15px;
     display: none;
     position: absolute;
     top: 10px;
     right: -23px;
-    width: 131px;
     z-index: 100;
-    border: 1px solid #ddd;
+    border-left: 1px solid rgba(128, 128, 128, 0.545);
+    border-right: 1px solid rgba(128, 128, 128, 0.545);
+    border-bottom: 1px solid rgba(128, 128, 128, 0.545);
     cursor: pointer;
     font-family: 'CodecProRegular' !important;
 }
@@ -332,15 +332,21 @@ header ul .base-li .ul li {
     max-width: 131px;
     min-width: 131px;
     box-sizing: border-box;
+
 }
 
 header ul .base-li .ul li:hover {
     background-color: #E6E7E8;
+    border-top: 1px solid rgba(128, 128, 128, 0.545);
 }
 
-header ul .base-li .ul li:not(:last-of-type) {
+header ul .base-li .ul li {
     padding-bottom: 8px;
     margin-bottom: 7px;
+    box-sizing: border-box;
+    display: block;
+    margin-left: 0;
+    border-top: 1px solid rgba(128, 128, 128, 0.545);
 }
 
 header ul .base-li .ul li:last-child {
@@ -353,11 +359,12 @@ header ul .base-li .ul li a {
     font-size: 15px;
     max-width: 131px;
     min-width: 131px;
-    display: block;
+    display: block !important;
     padding-top: 6px;
     padding-right: 6px;
     font-family: 'CodecProRegular' !important;
     font-weight: normal;
+    box-sizing: border-box;
 }
 
 header ul li a.active,
@@ -3710,7 +3717,6 @@ input {
     margin-top: 0;
     margin-bottom: 0;
     margin-right: 0;
-    color: var(--sub-color);
 }
 
 
@@ -3801,7 +3807,7 @@ input {
     }
 
     .first-page .p-img {
-        font-size: 16px;
+        font-size: 22px;
         padding-bottom: 14px;
         margin-right: 0px;
         margin-bottom: -19px;
@@ -4036,13 +4042,13 @@ input {
     }
 
     .first-page .full-text p {
-        font-size: 15px;
+        font-size: 16px;
         font-family: 'Calibri' !important;
     }
 
     .first-page .full-text ul,
     .first-page .full-text ol {
-        font-size: 15px;
+        font-size: 16px;
         margin-top: 0;
         margin-bottom: 0;
         padding-right: 20px;
@@ -4273,7 +4279,7 @@ input {
 
 .refrences ul li::before {
     content: counter(css-counter);
-    padding: 5px;
+    padding: 1px 5px;
     border: 1px solid var(--second-color);
     border-radius: 50%;
     margin-left: 15px;
@@ -4305,6 +4311,18 @@ input {
         padding-right: 10px;
         padding-left: 10px;
         /* overflow: hidden !important; */
+    }
+
+    .refrences .first-ref-info h2 {
+        font-size: 16px !important;
+    }
+
+    .refrences ul {
+        font-size: 13px !important;
+    }
+
+    .refrences ul li {
+        line-height: 1.8;
     }
 
     .first-page .publisher-name h1 {
@@ -4730,7 +4748,7 @@ input {
 
 .top-of-study {
     background-color: white;
-    font-family: 'CodecProBold';
+    font-family: 'CodecProRegular';
     color: white;
     padding: 8px 10px;
     font-size: 23px;
@@ -5695,6 +5713,7 @@ input {
 
 .aside-base-li {
     position: relative;
+    margin-left: 31px;
 }
 
 .aside-base-li::before {
@@ -5716,7 +5735,7 @@ input {
 
 .aside .aside-ul li {
     line-height: 1;
-    margin-top: 8px;
+    margin-top: 11px;
 }
 
 .aside-nested-list li {
@@ -6013,6 +6032,9 @@ input {
         text-align: end;
         width: 95%;
         padding-bottom: 8px;
+    }
+    .slide-full-inf.special-move { 
+        bottom: -18px;
     }
 
     .slide-full-inf h2 {
@@ -6973,7 +6995,17 @@ h5 {
 /* aside  */
 .small-screen {
     position: relative;
-    top: -3px;
+    top: -13px;
+}
+
+.small-screen2 {
+    position: relative;
+    top: -27px;
+}
+
+.mobile-li {
+    position: relative;
+    top: -15px;
 }
 
 
@@ -8196,7 +8228,7 @@ ul .aside-nested-list {
 
 @media (max-width: 574px) {
     .pub {
-        font-size: 12px;
+        font-size: 15px;
     }
 
     .special-title {
@@ -8266,7 +8298,7 @@ ul .aside-nested-list {
 @media (min-width: 992px) {
     .pub {
         font-size: 14px;
-        margin-bottom: 27px !important;
+        margin-bottom: 20px !important;
         display: block;
     }
 
@@ -8290,11 +8322,35 @@ ul .aside-nested-list {
 
 .controls {
     display: flex;
-    position: absolute;
-    top: 122px;
-    left: 126px;
-    z-index: 100;
+    justify-content: space-between;
+    align-items: center;
+}
 
+.controls .studies-controls {
+    display: flex;
+
+    align-items: center;
+}
+
+.controls .studies-controls i {
+    margin-left: 10px;
+    font-size: 30px;
+    color: var(--date-color);
+    cursor: pointer;
+}
+
+.controls .studies-social {
+    margin-left: 30px;
+}
+
+.controls .studies-social .studies-social2 {
+    display: flex;
+}
+
+.controls .studies-social .studies-social2 a {
+    color: var(--date-color);
+    margin-left: 16px;
+    font-size: 20px;
 }
 
 .controls #increaseFont,
@@ -8305,7 +8361,6 @@ ul .aside-nested-list {
     border: none;
     margin-left: 5px;
     transition: 0.3s;
-    padding: 5px 12px;
     font-family: 'Calibri';
     cursor: pointer;
     display: flex;
@@ -8316,15 +8371,29 @@ ul .aside-nested-list {
 
 @media (max-width: 574px) {
     .controls {
-        /* بدلًا من sticky */
-        top: 45px;
-        left: 11px;
+        margin-top: 20px;
     }
 
+    .controls .studies-social .studies-social2 a {
+        margin-left: 12px;
+        font-size: 17px;
+    }
+    .controls .studies-controls i {
+        margin-left: 25px;
+        font-size: 25px;
+    }
     .controls #increaseFont,
     .controls #decreaseFont {
-        margin-left: 8px;
-        font-size: 12px;
+        margin-left: 5px;
+        font-size: 16px;
+        width: 40px;
+        height: 30px;
+    }
+
+    .controls #increaseFont img,
+    .controls #decreaseFont img {
+        max-width: 100%;
+        max-height: 100%;
     }
 }
 
@@ -8352,16 +8421,22 @@ ul .aside-nested-list {
 }
 
 @media (min-width: 992px) {
-    .controls {
-        /* بدلًا من sticky */
-        top: 106px;
-        left: 35px;
+    .controls .studies-controls i {
+        margin-left: 40px;
+        font-size: 30px;
     }
-
     .controls #increaseFont,
     .controls #decreaseFont {
         margin-left: 5px;
         font-size: 16px;
+        width: 49px;
+        height: 39px;
+    }
+
+    .controls #increaseFont img,
+    .controls #decreaseFont img {
+        max-width: 100%;
+        max-height: 100%;
     }
 }
 
