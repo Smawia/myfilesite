@@ -564,6 +564,8 @@ header img {
         width: 21px;
         height: 16px;
         margin-right: 10px;
+        padding-left: 0;
+        margin-left: -1px;
     }
 
     .social-above-header #toggleMode img {
@@ -3847,7 +3849,6 @@ input {
 
     .first-page .p-img {
         margin-bottom: 9px;
-        color: black;
         display: block;
         font-family: "CodecProBold";
         font-size: 25px;
@@ -4181,11 +4182,10 @@ input {
 }
 
 .show-references {
-    font-family: 'Calibri';
+    font-family: 'CodecProBold';
     padding: 10px 12px;
     background-color: var(--second-color);
     color: white;
-    border-radius: 12px;
     cursor: pointer;
     font-size: 18px;
     width: fit-content;
@@ -4211,6 +4211,7 @@ input {
     overflow: auto;
     border-radius: 12px;
     transition: 1s;
+    background-color: white;
 }
 
 .refrences.jordan {
@@ -4322,7 +4323,7 @@ input {
     }
 
     .refrences ul li {
-        line-height: 1.8;
+        line-height: 2;
     }
 
     .first-page .publisher-name h1 {
@@ -4333,8 +4334,7 @@ input {
 
     .show-references {
         font-size: 12px;
-        width: 65px;
-        padding: 6px 6px;
+        padding: 8px 6px 8px 19px;
     }
 
     .refrences {
@@ -4351,6 +4351,9 @@ input {
     /* إخفاء الشريط في Chrome, Safari, و Edge الحديث */
     .refrences::-webkit-scrollbar {
         display: none;
+    }
+    .refrences ul li::before {
+        margin-left: 5px !important;
     }
 }
 
@@ -5011,7 +5014,7 @@ input {
 }
 
 .show-studies-h3 {
-    background-color: var(--second-color);
+    background-color: var(--fourth-color);
     color: white;
     padding: 5px;
     font-family: 'CodecProBold';
@@ -6033,7 +6036,8 @@ input {
         width: 95%;
         padding-bottom: 8px;
     }
-    .slide-full-inf.special-move { 
+
+    .slide-full-inf.special-move {
         bottom: -18px;
     }
 
@@ -7257,7 +7261,7 @@ h5 {
     }
 
     .show-studies-index .show-index-imgs .card a .text-info-index p {
-        font-size: 13px;
+        font-size: 14px;
         margin-top: 7px !important;
         margin-bottom: 10px !important;
     }
@@ -7445,6 +7449,8 @@ h5 {
         width: calc(100% - 10px) !important;
         margin-bottom: 20px !important;
         border-bottom: 1px solid #ddd !important;
+        margin-left: auto;
+        margin-right: auto;
     }
 
     .show-all-studies .studies-card img {
@@ -7468,7 +7474,7 @@ h5 {
     }
 
     .show-all-studies .studies-card .study-text-info p {
-        font-size: 13px;
+        font-size: 14px;
 
     }
 
@@ -7769,7 +7775,7 @@ h5 {
 .tow-books .daw .card .daw-info p {
     color: var(--sub-color);
     margin: 9px 0;
-    font-family: 'CodecProRegular';
+    font-family: 'CodecProBold';
     line-height: 1.3 !important;
 }
 
@@ -8031,8 +8037,8 @@ ul .aside-nested-list {
     }
 
     .studies-text-some-info h3 {
-        margin: -2px -3px;
-        font-size: 13px;
+        margin: 0 -3px;
+        font-size: 14px;
     }
 
     .show-some-studies .image-card {
@@ -8351,6 +8357,11 @@ ul .aside-nested-list {
     color: var(--date-color);
     margin-left: 16px;
     font-size: 20px;
+    transition: transform 0.3s ease;
+}
+
+.controls .studies-social .studies-social2 a:hover {
+    color: var(--fourth-color);
 }
 
 .controls #increaseFont,
@@ -8378,16 +8389,23 @@ ul .aside-nested-list {
         margin-left: 12px;
         font-size: 17px;
     }
+
     .controls .studies-controls i {
         margin-left: 25px;
         font-size: 25px;
     }
+
     .controls #increaseFont,
     .controls #decreaseFont {
         margin-left: 5px;
         font-size: 16px;
-        width: 40px;
-        height: 30px;
+        width: 45px;
+        height: 40px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        box-sizing: border-box;
+        padding: 0;
     }
 
     .controls #increaseFont img,
@@ -8425,6 +8443,7 @@ ul .aside-nested-list {
         margin-left: 40px;
         font-size: 30px;
     }
+
     .controls #increaseFont,
     .controls #decreaseFont {
         margin-left: 5px;
@@ -8512,17 +8531,19 @@ header input:focus {
 }
 
 header .phone {
-    margin-right: 16px;
-    width: 175px;
+    margin-right: 13px;
+    width: 185px;
     box-sizing: border-box;
     position: relative;
+    height: 35px;
 }
 
 header .phone button {
     margin-right: 0;
     position: absolute;
-    left: -9px;
+    left: -10px;
     width: fit-content;
+    top: 5%;
 }
 
 .footer-social2 {
@@ -8912,7 +8933,7 @@ header .phone button {
     }
 
     .tow-books .daw .card .daw-info p {
-        font-size: 13px;
+        font-size: 14px;
     }
 }
 
@@ -8977,11 +8998,6 @@ header .phone button {
 .infogr a {
     display: block;
     width: 100%;
-}
-
-.infogr img {
-    max-height: 650px;
-    min-height: 650px;
 }
 
 .infogr p {
@@ -9057,8 +9073,7 @@ header .phone button {
     }
 
     .infogr img {
-        max-height: 480px;
-        min-height: 480px;
+        height: 418px !important;
     }
 
     .show-all.infograph {
