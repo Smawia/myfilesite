@@ -5,19 +5,14 @@
 
 {% block content %}
 <style>
-    html,
-    body,
     main {
         width: 100%;
-        height: 100%;
         margin: 0px;
         padding: 0;
-
-    }
-    main {
         position: relative;
         margin-bottom: 40px;
-        margin-top: 40px;
+        margin-top: 20px;
+        height: 750px;
     }
 
     #carousel {
@@ -462,7 +457,7 @@
 <div class="container index-articles hide-in-pc">
     <div class="tow-books">
         <div class="daw">
-            <a href="{% url 'infographs' %}"><h1 class="spe-h1 infograph">إنفوجراف</h1></a>
+            <a href="{% url 'infographs' %}"><h1 class="spe-h1 infograph">أسس إنفوجراف</h1></a>
             <div class="card">
                 <div class="infogr">
                     <button class="prev" aria-label="السابق">&lt;</button>
@@ -481,7 +476,7 @@
     <!-- <a href="{% url 'infographs' %}" class="show-all infograph">عرض المزيد</a> -->
 
 </div>
-<a href="{% url 'infographs' %}"><h1 class="publications in-index carousel-title">إنفوجراف</h1></a>
+<a href="{% url 'infographs' %}"><h1 class="publications in-index carousel-title">أسس إنفوجراف</h1></a>
 <main>
     <div id="carousel" class="carousel">
         <div id='item_1' class="hideLeft">

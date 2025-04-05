@@ -4209,9 +4209,9 @@ input {
     font-family: 'Calibri';
     height: 310px;
     overflow: auto;
-    border-radius: 12px;
     transition: 1s;
     background-color: white;
+    scrollbar-width: none;
 }
 
 .refrences.jordan {
@@ -4338,19 +4338,10 @@ input {
     }
 
     .refrences {
-        max-width: 100%;
-        min-width: 100%;
         margin: 10px 0 !important;
         /* إخفاء شريط التمرير */
         scrollbar-width: none;
-        /* لمتصفح Firefox */
-        -ms-overflow-style: none;
-        /* لمتصفح Edge وInternet Explorer */
-    }
-
-    /* إخفاء الشريط في Chrome, Safari, و Edge الحديث */
-    .refrences::-webkit-scrollbar {
-        display: none;
+        width: 100% !important;
     }
     .refrences ul li::before {
         margin-left: 5px !important;
@@ -4374,6 +4365,7 @@ input {
 .refrences ul {
     font-size: 10px;
     padding-right: 10px;
+    color: black;
 }
 
 .refrences ul li {
@@ -4403,12 +4395,11 @@ input {
     }
 
     .refrences {
-        width: 90%;
+        width: 100%;
         margin: 10px 0;
     }
 
     .refrences .first-ref-info h2 {
-        margin-right: 26px;
         font-size: 12px;
         padding: 7px 17px;
     }
@@ -6351,7 +6342,7 @@ input {
 
     .slide-full-inf span {
         font-size: 20px;
-        margin-right: 10px;
+        margin-right: 12px;
     }
 
     .slide-full-inf span .fa-calendar {
@@ -8014,6 +8005,7 @@ ul .aside-nested-list {
 
     .studies-flex .nested-ref {
         display: block;
+        width: 100%;
     }
 
     .show-some-studies {
@@ -8063,6 +8055,10 @@ ul .aside-nested-list {
 @media (min-width: 575px) and (max-width: 767px) {
     .studies-flex {
         flex-direction: column;
+    }
+
+    .studies-flex .nested-ref {
+        display: block;
     }
 
     .show-some-studies {
@@ -8151,6 +8147,13 @@ ul .aside-nested-list {
         margin-top: 10px;
         font-size: 16px;
     }
+    .container.articles .show-references,
+    .container.articles .refrences {
+        display: block;
+    }
+    .container.articles .refrences {
+        width: 75% !important;
+    }
 }
 
 @media (min-width: 992px) {
@@ -8206,6 +8209,13 @@ ul .aside-nested-list {
         margin-bottom: 26px !important;
         margin-top: 10px;
         font-size: 16px;
+    }
+    .container.articles .show-references,
+    .container.articles .refrences {
+        display: block;
+    }
+    .container.articles .refrences {
+        width: 75% !important;
     }
 }
 
@@ -9073,7 +9083,7 @@ header .phone button {
     }
 
     .infogr img {
-        height: 418px !important;
+        height: 340px !important;
     }
 
     .show-all.infograph {
