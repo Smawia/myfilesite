@@ -1942,6 +1942,7 @@ footer .final-p {
     color: #ffffffa6;
     font-size: 15px;
     margin-top: 10px;
+    line-height: 0.6;
 }
 
 @media (max-width: 630px) {
@@ -1999,7 +2000,7 @@ footer .final-p {
     }
 
     footer .final-p {
-        font-size: 13px;
+        font-size: 11px;
         margin-top: 10px;
         padding-top: 10px;
         border-top: 1px solid gray;
@@ -3674,6 +3675,7 @@ input {
 /* الوضع الغامق */
 .first-page.dark-mode {
     background-color: #121212;
+    box-shadow: 0 0 5px #333;
     /* لون غامق */
 }
 
@@ -4203,7 +4205,7 @@ input {
 }
 
 .refrences {
-    box-shadow: 1px 1px 10px silver;
+    box-shadow: 0 0 5px #333;
     width: 70%;
     margin: 20px 45px;
     font-family: 'Calibri';
@@ -4343,6 +4345,7 @@ input {
         scrollbar-width: none;
         width: 100% !important;
     }
+
     .refrences ul li::before {
         margin-left: 5px !important;
     }
@@ -5045,6 +5048,9 @@ input {
         margin-top: 20px;
         margin-bottom: 0;
     }
+    .show-studies-h3 {
+        padding: 10px 5px 5px;
+    }
 }
 
 @media (min-width: 575px) {
@@ -5637,17 +5643,26 @@ input {
     .ctable {
         display: none;
     }
+    .refrences.legis {
+        height: 150px;
+    }
 }
 
 @media (min-width: 575px) {
     .ctable {
         display: none;
     }
+    .refrences.legis {
+        height: 178px;
+    }
 }
 
 @media (min-width: 768px) {
     .ctable {
         display: block;
+    }
+    .refrences.legis {
+        height: 178px;
     }
 }
 
@@ -7449,6 +7464,7 @@ h5 {
         height: 100% !important;
         min-height: 200px !important;
         max-height: 200px !important;
+        margin-bottom: 5px;
     }
 
     .show-all-studies .studies-card a {
@@ -8147,10 +8163,12 @@ ul .aside-nested-list {
         margin-top: 10px;
         font-size: 16px;
     }
+
     .container.articles .show-references,
     .container.articles .refrences {
         display: block;
     }
+
     .container.articles .refrences {
         width: 75% !important;
     }
@@ -8210,10 +8228,12 @@ ul .aside-nested-list {
         margin-top: 10px;
         font-size: 16px;
     }
+
     .container.articles .show-references,
     .container.articles .refrences {
         display: block;
     }
+
     .container.articles .refrences {
         width: 75% !important;
     }

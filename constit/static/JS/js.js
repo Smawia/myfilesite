@@ -28,7 +28,7 @@ if (show_refs.length !== all_refs.length) {
             const heights = {
                 "jordan": "160px",
                 "eveloution": "150px",
-                "legis": "235px"
+                "legis": "160px"
             };
 
             // العثور على الكلاس المتطابق
