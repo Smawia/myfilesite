@@ -113,11 +113,12 @@
         transform: translateY(50px) translateX(-50%);
         opacity: 0.7;
     }
-
+    .carousel img {
+        cursor: pointer !important;
+    }
     #carousel div.next img {
         width: 300px;
         height: 300px;
-
     }
 
     #carousel .silder-moving {
@@ -461,7 +462,7 @@
             <div class="card">
                 <div class="infogr">
                     <button class="prev" aria-label="السابق">&lt;</button>
-                    <a href="{% url 'infographs' %}">
+                    <a href="{% url 'infograph_detail' 'info-01' %}">
                         <img src="{% static 'imgs/Info-01.png' %}" alt="إنفوجراف">
                     </a>
                     <button class="next" aria-label="التالي">&gt;</button>
@@ -480,82 +481,102 @@
 <main>
     <div id="carousel" class="carousel">
         <div id='item_1' class="hideLeft">
+            <a href="{% url 'infograph_detail' 'info-08' %}">
             <img src="{% static 'imgs/Info-08.png' %}" alt="إنفوجراف">
             <div class="silder-moving daw-info">
                 <span> 13 مارس 2025 </span>
                 <p>  أكثر عشر دول تصديرًا للمهاجرين في 2023</p>
             </div>
+        </a>
         </div>
         
         <div id='item_2' class="hideLeft">
+            <a href="{% url 'infograph_detail' 'info-01' %}">
             <img src="{% static 'imgs/Info-01.png' %}" alt="إنفوجراف">
             <div class="silder-moving daw-info">
                 <span> 13 مارس 2025 </span>
                 <p>أكثر سبع دول إنتاجًا للأدوية في العام 2024</p>
             </div>
+            </a>
           </div>
     
         <div id='item_3' class="prevLeftSecond">
+            <a href="{% url 'infograph_detail' 'info-02' %}">
             <img src="{% static 'imgs/Info-02.png' %}" alt="image info">
             <div class="silder-moving">
                 <span> 13 مارس 2025 </span>
                 <p>أكبر عشر دول في احتياطي اليورانيوم</p>
             </div>
+        </a>
         </div>
 
         <div id='item_4' class="prev">
+            <a href="{% url 'infograph_detail' 'info-03' %}">
             <img src="{% static 'imgs/Info-03.png' %}" alt="image info">
             <div class="silder-moving">
                 <span> 13 مارس 2025 </span>
                 <p>الوزارات الحكومية والاقتصادات الخمس الكبرى</p>
             </div>
+        </a>
         </div>
 
         <div id='item_5' class="selected">
+            <a href="{% url 'infograph_detail' 'info-04' %}">
             <img src="{% static 'imgs/Info-04.png' %}" alt="image info">
             <div class="silder-moving">
                 <span> 13 مارس 2025 </span>
                 <p>البطالة في الدول العربية</p>
             </div>
+        </a>
         </div>
 
         <div id='item_6' class="next">
+            <a href="{% url 'infograph_detail' 'info-05' %}">
             <img src="{% static 'imgs/Info-05.png' %}" alt="image info">
             <div class="silder-moving">
                 <span> 13 مارس 2025 </span>
                 <p>كيف يؤثر التعليم على الاقتصاد</p>
             </div>
+        </a>
         </div>
 
         <div id='item_7' class="nextRightSecond">
+            <a href="{% url 'infograph_detail' 'info-06' %}">
             <img src="{% static 'imgs/Info-06.png' %}">
             <div class="silder-moving">
                 <span> 13 مارس 2025 </span>
                 <p>مساهمة القطاع الخاص في الناتج المحلي الإجمالي 2023</p>
             </div>
+        </a>
         </div>
         
         <div id='item_8' class="hideRight" alt="إنفوجراف">
+            <a href="{% url 'infograph_detail' 'info-07' %}">
             <img src="{% static 'imgs/Info-07.png' %}">
             <div class="silder-moving">
                 <span> 13 مارس 2025 </span>
                 <p>ملوك القطن...أكبر عشر دول منتجة للقطن في العالم 2023</p>
             </div>
+        </a>
         </div>
 
         <div id='item_9' class="hideRight" alt="إنفوجراف">
+            <a href="{% url 'infograph_detail' 'info-09' %}">
             <img src="{% static 'imgs/Info-09.png' %}">
             <div class="silder-moving">
                 <span> 13 مارس 2025 </span>
                 <p>الضرائب والشركات</p>
             </div>
+            </a>
         </div>
         <div id='item_10' class="hideRight" alt="إنفوجراف">
-            <img src="{% static 'imgs/Info-10.png' %}">
-            <div class="silder-moving">
-                <span> 13 مارس 2025</span>
-                <p>التعليم العالي في الوطن العربي</p>
-            </div>
+            <a href="{% url 'infograph_detail' 'info-10' %}">
+                <img src="{% static 'imgs/Info-10.png' %}">
+                <div class="silder-moving">
+                    <span> 13 مارس 2025</span>
+                    <p>التعليم العالي في الوطن العربي</p>
+                </div>
+            </a>
         </div>
     </div>
     <div id="carousel-dots" class="carousel-dots"></div>
@@ -609,44 +630,54 @@
         const slidess = [
             {
                 image: "{% static 'imgs/Info-01.png' %}",
-                text: "أكثر سبع دول إنتاجاً للأدوية في العام 2024"
+                text: "أكثر سبع دول إنتاجاً للأدوية في العام 2024",
+                slug: "info-01"
             },
             {
                 image: "{% static 'imgs/Info-02.png' %}",
-                text: "أكبر عشر دول في احتياطي اليورانيوم"
+                text: "أكبر عشر دول في احتياطي اليورانيوم",
+                slug: "info-02"
             },
             {
                 image: "{% static 'imgs/Info-03.png' %}",
-                text: "الوزارات الحكومية والاقتصادات الخمس الكبرى"
+                text: "الوزارات الحكومية والاقتصادات الخمس الكبرى",
+                slug: "info-03"
             },
             {
                 image: "{% static 'imgs/Info-04.png' %}",
-                text: "البطالة في الدول العربية"
+                text: "البطالة في الدول العربية",
+                slug: "info-04"
             },
             {
                 image: "{% static 'imgs/Info-05.png' %}",
-                text: "كيف يؤثر التعليم على الاقتصاد"
+                text: "كيف يؤثر التعليم على الاقتصاد",
+                slug: "info-05"
             },
             {
                 image: "{% static 'imgs/Info-06.png' %}",
-                text: "مساهمة القطاع الخاص في الناتج المحلي الإجمالي 2023"
+                text: "مساهمة القطاع الخاص في الناتج المحلي الإجمالي 2023",
+                slug: "info-06"
             },
             {
                 image: "{% static 'imgs/Info-07.png' %}",
-                text: "ملوك القطن...أكبر عشر دول منتجة للقطن في العالم 2023"
+                text: "ملوك القطن...أكبر عشر دول منتجة للقطن في العالم 2023",
+                slug: "info-07"
             },
             {
                 image: "{% static 'imgs/Info-08.png' %}",
-                text: "أكثر عشر دول تصديرًا للمهاجرين في 2023"
+                text: "أكثر عشر دول تصديرًا للمهاجرين في 2023",
+                slug: "info-08"
             },
             {
                 image: "{% static 'imgs/Info-09.png' %}",
-                text: "الضرائب والشركات"
+                text: "الضرائب والشركات",
+                slug: "info-09"
             },
             {
                 image: "{% static 'imgs/Info-10.png' %}",
-                text: "التعليم العالي في العالم العربي"
-            },
+                text: "التعليم العالي في العالم العربي",
+                slug: "info-10"
+            }
             
         ];
 
@@ -655,6 +686,7 @@
         const textElement = document.querySelector(".pod-info-index");
         const prevButton = document.querySelector(".infogr .prev");
         const nextButton = document.querySelector(".infogr .next");
+        const linkElement = document.querySelector(".infogr a"); // أضفنا هذا السطر
 
         // تحديث الصورة
         // تحديث الصورة والنص معًا
@@ -665,6 +697,7 @@
             setTimeout(() => {
                 imgElement.src = slidess[index].image;
                 textElement.textContent = slidess[index].text;
+                linkElement.href = `infograph/${slidess[index].slug}/`; // عدل الرابط هنا ✅
 
                 imgElement.style.opacity = 1;
                 textElement.style.opacity = 1;

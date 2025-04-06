@@ -448,6 +448,69 @@ def osus_journals(request):
 
 def view_infograph(request):
     return render(request,'pages/infographs.html')
+
+def infograph_detail(request, slug):
+    # بيانات ثابتة للكروت
+    data = {
+        'info-01': {
+            'title': 'أكثر سبع دول إنتاجاً للأدوية في العام 2024',
+            'date': '13 مارس 2025',
+            'image': 'imgs/Info-01.png',
+        },
+        'info-02': {
+            'title': 'أكبر عشر دول في احتياطي اليورانيوم',
+            'date': '13 مارس 2025',
+            'image': 'imgs/Info-02.png',
+        },
+        'info-03': {
+            'title': 'الوزارات الحكومية والاقتصادات الخمس الكبرى',
+            'date': '13 مارس 2025',
+            'image': 'imgs/Info-03.png',
+        },
+        'info-04': {
+            'title': 'البطالة في الدول العربية',
+            'date': '13 مارس 2025',
+            'image': 'imgs/Info-04.png',
+        },
+        'info-05': {
+            'title': 'كيف يؤثر التعليم على الاقتصاد',
+            'date': '13 مارس 2025',
+            'image': 'imgs/Info-05.png',
+        },
+        'info-06': {
+            'title': 'مساهمة القطاع الخاص في الناتج المحلي الإجمالي 2023',
+            'date': '13 مارس 2025',
+            'image': 'imgs/Info-06.png',
+        },
+        'info-07': {
+            'title': 'ملوك القطن...أكبر عشر دول منتجة للقطن في العالم 2023',
+            'date': '13 مارس 2025',
+            'image': 'imgs/Info-07.png',
+        },
+        'info-08': {
+            'title': 'أكثر عشر دول تصديرًا للمهاجرين في 2023',
+            'date': '13 مارس 2025',
+            'image': 'imgs/Info-08.png',
+        },
+        'info-09': {
+            'title': 'الضرائب والشركات',
+            'date': '13 مارس 2025',
+            'image': 'imgs/Info-09.png',
+        },
+        'info-10': {
+            'title': 'التعليم العالي في العالم العربي',
+            'date': '13 مارس 2025',
+            'image': 'imgs/Info-10.png',
+        },
+    }
+
+    detail = data.get(slug)
+    if not detail:
+        # يمكنك هنا إعادة توجيه إلى صفحة 404 أو عرض رسالة
+        return render(request, 'pages/404.html')
+
+    return render(request, 'pages/infograph_detail.html', {'detail': detail})
+
     
 def error_404(request,exception):
     return render(request,'pages/404_error.html')

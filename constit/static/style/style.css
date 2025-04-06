@@ -5048,6 +5048,7 @@ input {
         margin-top: 20px;
         margin-bottom: 0;
     }
+
     .show-studies-h3 {
         padding: 10px 5px 5px;
     }
@@ -5199,7 +5200,7 @@ input {
     padding: 8px 5px;
     margin: 0;
     color: white !important;
-    font-family: 'CodecProRegular';
+    font-family: 'CodecProBold';
     font-size: 25px;
     transition: 0.3s;
     display: block;
@@ -5643,6 +5644,7 @@ input {
     .ctable {
         display: none;
     }
+
     .refrences.legis {
         height: 150px;
     }
@@ -5652,6 +5654,7 @@ input {
     .ctable {
         display: none;
     }
+
     .refrences.legis {
         height: 178px;
     }
@@ -5661,6 +5664,7 @@ input {
     .ctable {
         display: block;
     }
+
     .refrences.legis {
         height: 178px;
     }
@@ -6440,6 +6444,10 @@ input {
 
 
 @media (max-width: 574px) {
+    .pagination {
+        margin: 10px;
+    }
+
     .p-ul li {
         margin-right: 2px;
     }
@@ -8583,7 +8591,7 @@ header .phone button {
 .publications {
     color: #5E6F9C;
     margin-bottom: 0;
-    font-family: 'CodecProBold';
+    font-family: 'CodecProExtraBold';
 }
 
 @media (max-width: 574px) {
@@ -9078,6 +9086,23 @@ header .phone button {
 /* .org-publications {
     background-color: #3333;
 } */
+
+/* صفحة تفاصيل الانفوجراف */
+.index-articles.infograph-detail .infograph-title {
+    font-size: 22px;
+    padding-bottom: 14px;
+    margin-right: 0px;
+    margin-bottom: 0;
+    line-height: 1.4;
+    font-family: 'CodecProBold';
+    color: #030303;
+}
+
+.index-articles.infograph-detail .infograph-date {
+    color: var(--date-color);
+    font-family: 'CodecProRegular';
+}
+
 @media (max-width: 574px) {
     .container.index-articles-pod {
         display: none;
@@ -9110,9 +9135,50 @@ header .phone button {
         font-size: 14px !important;
         padding: 7px 28px !important;
     }
+
+    .index-articles.all-art.infographs .show-all-studies {
+        padding-bottom: 0 !important;
+    }
+
+    .studies-card.infograph-card {
+        width: 100% !important;
+        height: 420px;
+    }
+
+    .studies-card.infograph-card .infograph-img {
+        max-height: 365px !important;
+    }
+
+    /* صفحة تفاصيل الانفوجراف */
+
+    .index-articles.infograph-detail img {
+        width: 100% !important;
+        height: auto !important;
+        margin-top: 20px;
+        margin-left: auto;
+        margin-right: auto;
+        display: block;
+        margin-bottom: 20px;
+    }
+
+    .index-articles.infograph-detail .infograph-title {
+        font-size: 22px;
+        padding-bottom: 14px;
+        margin-right: 0px;
+        margin-bottom: 0;
+        line-height: 1.4;
+    }
+
+    .index-articles.infograph-detail .infograph-date {
+        font-size: 12px;
+    }
+
+    .index-articles.infograph-detail .controls {
+        margin-top: 20px;
+    }
 }
 
-@media (min-width: 575px) {
+@media (min-width: 575px) and (max-width: 767px) {
     .container.index-articles-pod {
         display: none;
     }
@@ -9128,6 +9194,35 @@ header .phone button {
     .infogr img {
         max-height: 450px;
         min-height: 450px;
+    }
+
+    /* صفحة تفاصيل الانفوجراف */
+
+
+    .index-articles.infograph-detail img {
+        width: 100% !important;
+        height: auto !important;
+        margin-top: 20px;
+        margin-left: auto;
+        margin-right: auto;
+        display: block;
+        margin-bottom: 20px;
+    }
+
+    .index-articles.infograph-detail .infograph-title {
+        font-size: 22px;
+        padding-bottom: 14px;
+        margin-right: 0px;
+        margin-bottom: 0;
+        line-height: 1.4;
+    }
+
+    .index-articles.infograph-detail .infograph-date {
+        font-size: 12px;
+    }
+
+    .index-articles.infograph-detail .controls {
+        margin-top: 20px;
     }
 }
 
@@ -9147,6 +9242,29 @@ header .phone button {
     .infogr img {
         max-height: 500px;
         min-height: 500px;
+    }
+
+    /* صفحة التفاصيل */
+
+
+    .index-articles.infograph-detail img {
+        width: 95% !important;
+        height: auto !important;
+        margin-top: 25px;
+        display: block;
+    }
+
+    .index-articles.infograph-detail .infograph-title {
+        margin-bottom: 12px;
+        font-size: 22px;
+    }
+
+    .index-articles.infograph-detail .infograph-date {
+        font-size: 18px;
+    }
+
+    .index-articles.infograph-detail .controls {
+        margin-top: 27px;
     }
 }
 
@@ -9199,6 +9317,40 @@ header .phone button {
         background-color: #d0d0d0;
         margin-top: 26px;
         margin-bottom: 20px;
+    }
+
+    .index-articles.all-art.infographs {
+        margin-bottom: 40px !important;
+    }
+
+    .studies-card.infograph-card {
+        width: calc(33% - 10px) !important;
+        height: 440px;
+    }
+
+    .studies-card.infograph-card .infograph-img {
+        max-height: 365px !important;
+    }
+
+    /* صفحة التفاصيل */
+    .index-articles.infograph-detail img {
+        width: 95% !important;
+        height: auto !important;
+        margin-top: 30px;
+        display: block;
+    }
+
+    .index-articles.infograph-detail .infograph-title {
+        margin-bottom: 14px;
+        font-size: 25px;
+    }
+
+    .index-articles.infograph-detail .infograph-date {
+        font-size: 16px;
+    }
+
+    .index-articles.infograph-detail .controls {
+        margin-top: 30px;
     }
 }
 

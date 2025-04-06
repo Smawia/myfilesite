@@ -81,7 +81,7 @@
                         </li> -->
                         
                         <li class="asid-li2"><a href="{% url 'infographs' %}"
-                            {% if 'Infographic' in request.path %}
+                            {% if 'Infographic' in request.path or 'infograph' in request.path%}
                             class="active nav-a"
                             {% else %}
                             class="nav-a"

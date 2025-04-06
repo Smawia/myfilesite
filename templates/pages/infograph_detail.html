@@ -1,0 +1,85 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}{{ detail.title }}{% endblock %}
+
+{% block content %}
+<div class="container index-articles all-studies">
+    <h1 class="spe-h1">تفاصيل الإنفوجراف</h1>
+</div>
+<div class="container index-articles all-art infographs infograph-detail">
+
+        <div class="study-text-info">
+            <p class="infograph-title">{{ detail.title }}</p>
+            <span class="infograph-date">{{ detail.date }}</span>
+            <div class="controls">
+                <div class="studies-social">
+                    <div class="studies-social2">
+                        <div class="twitter">
+                            <a href="https://twitter.com/intent/tweet?text={{ detail.title |urlencode }}&url={{ request.build_absolute_uri|urlencode }}"
+                                target="_blank">
+                                <i class="fa-brands fa-x-twitter"></i>
+                            </a>
+
+                        </div>
+                        <div class="whats">
+                            <a href="https://wa.me/?text={{ detail.title |urlencode }}%20{{ request.build_absolute_uri|urlencode }}"
+                                target="_blank">
+                                <i class="fa-brands fa-whatsapp foot-i"></i>
+                            </a>
+                        </div>
+                        <div class="telegram">
+                            <a href="https://t.me/share/url?url={{ request.build_absolute_uri|urlencode }}&text={{ detail.title |urlencode }}"
+                                target="_blank">
+                                <i class="fab fa-telegram"></i>
+                            </a>
+
+                        </div>
+                        <div class="face-book">
+                            <a href="https://www.facebook.com/sharer/sharer.php?u={{ request.build_absolute_uri|urlencode }}"
+                                target="_blank">
+                                <i class="fa-brands fa-facebook foot-i"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+        <img src="{% static detail.image %}" alt="إنفوجراف" class="infograph-detail-img">
+</div>
+<div class="container index-articles all-studies">
+    <h1 class="spe-h1">تابع أيضًا</h1>
+</div>
+<div class="container index-articles all-art infographs">
+    <div class="show-all-studies">
+        <div class="studies-card infograph-card">
+            <a href="{% url 'infograph_detail' 'info-01' %}">
+                <img src="{% static 'imgs/Info-01.png' %}" alt="إنفوجراف" class="infograph-img">
+                <div class="study-text-info">
+                    <span>13 مارس 2025</span>
+                    <p>أكثر سبع دول إنتاجاً للأدوية في العام 2024</p>
+                </div>
+            </a>
+        </div>
+        <div class="studies-card infograph-card">
+            <a href="{% url 'infograph_detail' 'info-08' %}">
+                <img src="{% static 'imgs/Info-08.png' %}" alt="إنفوجراف" class="infograph-img">
+                <div class="study-text-info">
+                    <span>13 مارس 2025</span>
+                    <p>أكثر عشر دول تصديرًا للمهاجرين في 2023</p>
+                </div>
+            </a>
+        </div>
+        <div class="studies-card infograph-card">
+            <a href="{% url 'infograph_detail' 'info-03' %}">
+                <img src="{% static 'imgs/Info-03.png' %}" alt="إنفوجراف" class="infograph-img">
+                <div class="study-text-info">
+                    <span>13 مارس 2025</span>
+                    <p>الوزارات الحكومية والاقتصادات الخمس الكبرى</p>
+                </div>
+            </a>
+        </div>
+    </div>
+</div>
+{% endblock %}
