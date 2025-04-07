@@ -465,6 +465,7 @@ header img {
     header ul li {
         margin-left: 15px;
     }
+
     .aside-base-li::before {
         width: 2px !important;
         height: 2px !important;
@@ -7457,7 +7458,6 @@ h5 {
         background-color: white;
         padding-top: 25px;
         padding-bottom: 32px;
-        margin-bottom: 26px;
     }
 
     .show-all-studies .studies-card {
@@ -8147,7 +8147,7 @@ ul .aside-nested-list {
         margin: 10px 0;
         font-size: 14px;
     }
-    
+
 
     .show-some-studies .image-card img {
         width: 100%;
@@ -8191,11 +8191,13 @@ ul .aside-nested-list {
         padding: 10px;
         font-size: 11px;
     }
+
     .studies-text-some-info span {
         font-size: 13px;
         display: block;
         margin-bottom: 10px;
     }
+
     .studies-text-some-info h3 {
         margin: -4px -2px;
         font-family: 'CodecProBold';
@@ -9169,6 +9171,7 @@ header .phone button {
 .index-articles.infograph-detail img {
     cursor: pointer !important;
 }
+
 @media (max-width: 574px) {
     .container.index-articles-pod {
         display: none;
@@ -9219,11 +9222,12 @@ header .phone button {
     .container.index-articles.all-art {
         background: white;
         margin-top: 20px;
-        padding: 10px 15px 20px;
+        padding: 10px 15px 0;
         box-sizing: border-box;
         box-shadow: 0 0 5px rgba(0, 0, 0, 0.38);
         margin-bottom: 20px;
     }
+
     .index-articles.infograph-detail img {
         width: 100% !important;
         height: auto !important;
