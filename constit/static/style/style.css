@@ -9353,6 +9353,12 @@ header .phone button {
         margin-top: 30px;
     }
 }
+.cardContainer-inside {
+    display: none !important;
+}
+.cardContainer-inside.active {
+    display: block !important;
+}
 
 a {
     text-decoration: none !important;

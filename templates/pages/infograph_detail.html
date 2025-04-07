@@ -5,7 +5,7 @@
 
 {% block content %}
 <div class="container index-articles all-studies">
-    <h1 class="spe-h1">تفاصيل الإنفوجراف</h1>
+    <h1 class="spe-h1">أسس إنفوجراف</h1>
 </div>
 <div class="container index-articles all-art infographs infograph-detail">
 
@@ -52,8 +52,8 @@
     <h1 class="spe-h1">تابع أيضًا</h1>
 </div>
 <div class="container index-articles all-art infographs">
-    <div class="show-all-studies">
-        <div class="studies-card infograph-card">
+    <div class="show-all-studies" id="cardContainer">
+        <div class="studies-card infograph-card cardContainer-inside">
             <a href="{% url 'infograph_detail' 'info-01' %}">
                 <img src="{% static 'imgs/Info-01.png' %}" alt="إنفوجراف" class="infograph-img">
                 <div class="study-text-info">
@@ -62,16 +62,16 @@
                 </div>
             </a>
         </div>
-        <div class="studies-card infograph-card">
-            <a href="{% url 'infograph_detail' 'info-08' %}">
-                <img src="{% static 'imgs/Info-08.png' %}" alt="إنفوجراف" class="infograph-img">
+        <div class="studies-card infograph-card cardContainer-inside">
+            <a href="{% url 'infograph_detail' 'info-02' %}">
+                <img src="{% static 'imgs/Info-02.png' %}" alt="إنفوجراف" class="infograph-img">
                 <div class="study-text-info">
                     <span>13 مارس 2025</span>
-                    <p>أكثر عشر دول تصديرًا للمهاجرين في 2023</p>
+                    <p>أكبر عشر دول في احتياطي اليورانيوم</p>
                 </div>
             </a>
         </div>
-        <div class="studies-card infograph-card">
+        <div class="studies-card infograph-card cardContainer-inside">
             <a href="{% url 'infograph_detail' 'info-03' %}">
                 <img src="{% static 'imgs/Info-03.png' %}" alt="إنفوجراف" class="infograph-img">
                 <div class="study-text-info">
@@ -80,6 +80,97 @@
                 </div>
             </a>
         </div>
+        <div class="studies-card infograph-card cardContainer-inside">
+            <a href="{% url 'infograph_detail' 'info-04' %}">
+                <img src="{% static 'imgs/Info-04.png' %}" alt="إنفوجراف" class="infograph-img">
+                <div class="study-text-info">
+                    <span>13 مارس 2025</span>
+                    <p>البطالة في الدول العربية</p>
+                </div>
+            </a>
+        </div>
+        <div class="studies-card infograph-card cardContainer-inside">
+            <a href="{% url 'infograph_detail' 'info-05' %}">
+                <img src="{% static 'imgs/Info-05.png' %}" alt="إنفوجراف" class="infograph-img">
+                <div class="study-text-info">
+                    <span>13 مارس 2025</span>
+                    <p>كيف يؤثر التعليم على الاقتصاد</p>
+                </div>
+            </a>
+        </div>
+        <div class="studies-card infograph-card cardContainer-inside">
+            <a href="{% url 'infograph_detail' 'info-06' %}">
+                <img src="{% static 'imgs/Info-06.png' %}" alt="إنفوجراف" class="infograph-img">
+                <div class="study-text-info">
+                    <span>13 مارس 2025</span>
+                    <p>مساهمة القطاع الخاص في الناتج المحلي الإجمالي 2023</p>
+                </div>
+            </a>
+        </div>
+        <div class="studies-card infograph-card cardContainer-inside">
+            <a href="{% url 'infograph_detail' 'info-07' %}">
+                <img src="{% static 'imgs/Info-07.png' %}" alt="إنفوجراف" class="infograph-img">
+                <div class="study-text-info">
+                    <span>13 مارس 2025</span>
+                    <p>ملوك القطن...أكبر عشر دول منتجة للقطن في العالم 2023</p>
+                </div>
+            </a>
+        </div>
+        <div class="studies-card infograph-card cardContainer-inside">
+            <a href="{% url 'infograph_detail' 'info-08' %}">
+                <img src="{% static 'imgs/Info-08.png' %}" alt="إنفوجراف" class="infograph-img">
+                <div class="study-text-info">
+                    <span>13 مارس 2025</span>
+                    <p>أكثر عشر دول تصديرًا للمهاجرين في 2023</p>
+                </div>
+            </a>
+        </div>
+        <div class="studies-card infograph-card cardContainer-inside">
+            <a href="{% url 'infograph_detail' 'info-09' %}">
+                <img src="{% static 'imgs/Info-09.png' %}" alt="إنفوجراف" class="infograph-img">
+                <div class="study-text-info">
+                    <span>13 مارس 2025</span>
+                    <p>الضرائب والشركات</p>
+                </div>
+            </a>
+        </div>
+        <div class="studies-card infograph-card cardContainer-inside">
+            <a href="{% url 'infograph_detail' 'info-10' %}">
+                <img src="{% static 'imgs/Info-10.png' %}" alt="إنفوجراف" class="infograph-img">
+                <div class="study-text-info">
+                    <span>13 مارس 2025</span>
+                    <p>التعليم العالي في العالم العربي</p>
+                </div>
+            </a>
+        </div>
     </div>
 </div>
+<script>
+    document.addEventListener('DOMContentLoaded', function () {
+        const cards = document.querySelectorAll('#cardContainer .cardContainer-inside');
+        const cardsPerPage = 3;
+        let currentIndex = 0;
+
+        function showCards() {
+            // أولاً نخفي جميع الكروت
+            cards.forEach(card => card.classList.remove('active'));
+
+            // نعرض 3 كروت بناءً على الـ currentIndex
+            for (let i = 0; i < cardsPerPage; i++) {
+                const cardIndex = (currentIndex + i) % cards.length;
+                cards[cardIndex].classList.add('active');
+            }
+
+            // نحسب الخطوة التالية
+            currentIndex = (currentIndex + cardsPerPage) % cards.length;
+        }
+
+        // أول مرة عند تحميل الصفحة
+        showCards();
+
+        // كل 10 ثواني نغير العرض
+        setInterval(showCards, 10000);
+    });
+</script>
+
 {% endblock %}
