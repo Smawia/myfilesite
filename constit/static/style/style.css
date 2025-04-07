@@ -459,13 +459,19 @@ header img {
     }
 
     header ul li a {
-        font-size: 12px;
+        font-size: 10px;
     }
 
     header ul li {
-        margin-left: 20px;
+        margin-left: 15px;
+    }
+    .aside-base-li::before {
+        width: 2px !important;
+        height: 2px !important;
+        left: -2px;
     }
 }
+
 
 /* الشاشات المتوسطة */
 @media (min-width: 575px) and (max-width: 767px) {
@@ -2017,17 +2023,17 @@ footer .final-p {
     }
 
     footer .footer-information .first-text p {
-        font-size: 13px;
-        width: 200px;
+        font-size: 12px;
+        width: 249px;
     }
 
     footer .footer-information .contact-and-links .links ul {
-        font-size: 14px;
-        line-height: 2.1;
+        font-size: 12px;
+        line-height: 1.6 !important;
     }
 
     footer .footer-information .footer-social img {
-        width: 170px;
+        width: 160px;
         height: auto;
         margin: 19px auto 14px;
     }
@@ -2051,17 +2057,17 @@ footer .final-p {
     }
 
     footer .footer-information .first-text p {
-        font-size: 13px;
-        width: 285px;
+        font-size: 12px;
+        width: 300px;
     }
 
     footer .footer-information .contact-and-links .links ul {
-        font-size: 14px;
+        font-size: 13px;
         line-height: 1.8;
     }
 
     footer .footer-information .footer-social img {
-        width: 180px;
+        width: 190px;
         height: auto;
         margin-bottom: 14px;
         margin-top: 13px;
@@ -2069,16 +2075,17 @@ footer .final-p {
     }
 
     footer .footer-information .footer-social div i {
-        font-size: 13px;
+        font-size: 14px;
         margin-left: 3px;
     }
 
     footer .final-p {
-        font-size: 14px;
+        font-size: 13px;
     }
 
     footer .footer-information .first-text p.first-p {
         margin-bottom: -9px !important;
+        font-size: 15px;
     }
 }
 
@@ -3826,7 +3833,7 @@ input {
     }
 
     .first-page .p-img {
-        font-size: 18px;
+        font-size: 20px;
         padding-bottom: 5px;
     }
 }
@@ -5065,7 +5072,7 @@ input {
 @media (min-width: 768px) {
     .spe-h1 {
         font-size: 20px;
-        margin-top: 35px;
+        margin-top: 15px;
         margin-bottom: 0;
     }
 }
@@ -6150,7 +6157,7 @@ input {
 
     .slide-full-inf span {
         font-size: 16px;
-        margin-right: -6px;
+        margin-right: -5px;
     }
 
     .slide-full-inf span .fa-calendar {
@@ -6217,7 +6224,7 @@ input {
     }
 
     .slide-full-inf {
-        right: -22px;
+        right: -30px;
         bottom: -35px;
         text-align: end;
         width: 90%;
@@ -6231,16 +6238,6 @@ input {
     .slide-full-inf span {
         font-size: 18px;
         margin-right: 12px;
-    }
-
-    .slide-full-inf span .fa-calendar {
-        margin-left: 10px;
-        font-size: 28px;
-        margin-right: 1px;
-    }
-
-    .slide-full-inf span.pub {
-        margin-right: 23px;
     }
 }
 
@@ -6362,10 +6359,6 @@ input {
     .slide-full-inf span {
         font-size: 20px;
         margin-right: 12px;
-    }
-
-    .slide-full-inf span .fa-calendar {
-        font-size: 26px;
     }
 }
 
@@ -7241,14 +7234,11 @@ h5 {
 
 @media (max-width: 574px) {
     .show-studies-index {
-        margin-top: 10px !important;
+        margin-top: 0px !important;
         background: white;
         padding-top: 25px;
         padding-bottom: 32px;
-        padding-left: 13px;
-        padding-right: 13px;
         margin-bottom: 26px;
-        box-shadow: 0 0 5px rgba(0, 0, 0, 0.38);
 
     }
 
@@ -7293,22 +7283,35 @@ h5 {
 }
 
 @media (min-width: 575px) and (max-width: 767px) {
+    .slide-full-inf.special-move {
+        bottom: -4px;
+    }
+
     .show-studies-index {
-        margin-top: 10px !important;
+        margin-top: -10px !important;
+        background: white;
+        padding-top: 25px;
+        padding-bottom: 32px;
+        margin-bottom: 23px;
     }
 
     .show-studies-index .show-index-imgs .card {
-        width: calc(85%) !important;
-        margin-bottom: 20px !important;
+        width: calc(98%) !important;
+        margin-bottom: 5px !important;
         margin-left: auto;
         margin-right: auto;
-        margin-top: -5px;
+        margin-top: 5px;
+    }
+
+    .show-studies-index .show-index-imgs .card:not(:last-of-type) {
+        border-bottom:
+            1px solid #ddd;
     }
 
     .show-studies-index .show-index-imgs .card img {
         width: 100%;
-        height: 240px !important;
-        max-height: 240px !important;
+        height: 220px !important;
+        max-height: 220px !important;
     }
 
     .show-studies-index .show-index-imgs .card a .text-info-index p {
@@ -7331,31 +7334,32 @@ h5 {
     }
 
     .show-studies-index .show-index-imgs .card {
-        width: calc(50% - 16px) !important;
-        margin-bottom: 30px !important;
+        width: calc(33% - 8px) !important;
+        margin-bottom: 25px !important;
         margin-top: -12px;
     }
 
     .show-studies-index .show-index-imgs .card img {
         width: 100%;
-        height: 240px !important;
-        max-height: 240px !important;
+        height: 140px !important;
+        max-height: 140px !important;
     }
 
     .show-studies-index .show-index-imgs .card a .text-info-index p {
-        font-size: 16px;
+        font-size: 15px;
         margin-right: 8px;
+        margin-top: 10px;
     }
 
     .show-studies-index .show-index-imgs .card a .text-info-index span {
-        font-size: 14px;
+        font-size: 13px;
         margin-right: 8px;
     }
 
     .show-studies-index .show-all {
         margin: 5px auto;
-        font-size: 20px !important;
-        padding: 5px 27px !important;
+        font-size: 16px !important;
+        padding: 5px 25px !important;
     }
 }
 
@@ -7451,11 +7455,8 @@ h5 {
     .show-all-studies {
         margin-top: 8px;
         background-color: white;
-        box-shadow: 0 0 5px rgba(0, 0, 0, 0.38);
         padding-top: 25px;
         padding-bottom: 32px;
-        padding-left: 13px;
-        padding-right: 13px;
         margin-bottom: 26px;
     }
 
@@ -7499,15 +7500,14 @@ h5 {
     }
 }
 
-@media (min-width: 575px) {
+@media (min-width: 575px) and (max-width: 767px) {
     .show-all-studies {
         margin-top: 8px;
     }
 
     .show-all-studies .studies-card {
-        width: calc(85%) !important;
-        margin-bottom: 80px !important;
-        height: 240px;
+        width: calc(98%) !important;
+        margin-bottom: 45px !important;
         margin-left: auto;
         margin-right: auto;
     }
@@ -7515,30 +7515,41 @@ h5 {
     .show-all-studies .studies-card img {
         width: 100%;
         height: 100% !important;
-        max-height: 240px !important;
+        max-height: 220px !important;
     }
 
     .show-all-studies .studies-card a {
         font-size: 13px;
     }
 
+    .show-all-studies .studies-card .study-text-info span {
+        font-size: 12px;
+        margin-top: 10px;
+        display: block;
+    }
+
+    .show-all-studies .studies-card .study-text-info p {
+        padding-right: 0;
+        font-size: 14px;
+        margin-top: 1px;
+        margin-bottom: 10px;
+    }
 }
 
-@media (min-width: 768px) {
+@media (min-width: 768px) and (max-width: 991px) {
     .show-all-studies {
         margin-top: 15px;
     }
 
     .show-all-studies .studies-card {
-        width: calc(50% - 16px) !important;
-        margin-bottom: 80px !important;
-        height: 240px;
+        width: calc(33% - 8px) !important;
+        margin-bottom: 10px !important;
     }
 
     .show-all-studies .studies-card img {
         width: 100%;
         height: 100% !important;
-        max-height: 240px !important;
+        max-height: 140px !important;
     }
 
     .show-all-studies .studies-card a {
@@ -7550,9 +7561,16 @@ h5 {
 
     }
 
+    .show-all-studies .studies-card .study-text-info span {
+        font-size: 13px;
+        margin-top: 10px;
+        display: block;
+    }
+
     .show-all-studies .studies-card .study-text-info p {
         margin-top: -5px;
         font-size: 15px;
+        padding-right: 0;
     }
 }
 
@@ -7854,7 +7872,7 @@ h5 {
 
 @media (min-width: 575px) and (max-width: 767px) {
     .tow-books .daw {
-        width: calc(86% - 20px) !important;
+        width: calc(100%) !important;
         margin-bottom: 20px !important;
         margin: 0 auto 20px;
         margin-bottom: 20px;
@@ -8034,6 +8052,12 @@ ul .aside-nested-list {
 
     .show-some-studies {
         width: 100%;
+        background:
+            white;
+        padding:
+            12px 10px;
+        box-sizing: border-box;
+        margin-bottom: 20px;
     }
 
     .show-some-studies a .study-info-show {
@@ -8087,17 +8111,25 @@ ul .aside-nested-list {
 
     .show-some-studies {
         width: 100%;
+        background:
+            white;
+        padding:
+            10px;
+        box-sizing: border-box;
+        margin-bottom: 20px;
     }
 
     .show-studies-h3 {
-        width: 80%;
+        width: 100%;
         margin: 10px auto;
         text-align: center;
+        padding: 12px 7px;
+        box-sizing: border-box;
     }
 
     .show-some-studies a .study-info-show {
         padding-bottom: 10px;
-        width: 80%;
+        width: 100%;
         margin: 10px auto;
     }
 
@@ -8105,9 +8137,17 @@ ul .aside-nested-list {
         font-size: 11px;
     }
 
-    .studies-text-some-info h3 {
-        margin: -1px 0;
+    .studies-text-some-info span {
+        font-size: 12px;
+        display: block;
+        margin-bottom: 10px;
     }
+
+    .studies-text-some-info h3 {
+        margin: 10px 0;
+        font-size: 14px;
+    }
+    
 
     .show-some-studies .image-card img {
         width: 100%;
@@ -8117,8 +8157,9 @@ ul .aside-nested-list {
     }
 
     .date-info {
-        margin-top: 20px;
         font-size: 14px;
+        display: block;
+        margin-bottom: 25px;
     }
 }
 
@@ -8150,10 +8191,15 @@ ul .aside-nested-list {
         padding: 10px;
         font-size: 11px;
     }
-
+    .studies-text-some-info span {
+        font-size: 13px;
+        display: block;
+        margin-bottom: 10px;
+    }
     .studies-text-some-info h3 {
         margin: -4px -2px;
         font-family: 'CodecProBold';
+        font-size: 15px;
     }
 
     .show-some-studies .image-card {
@@ -8295,7 +8341,7 @@ ul .aside-nested-list {
 
 @media (min-width: 575px) {
     .pub {
-        font-size: 12px;
+        font-size: 15px;
     }
 
     .special-title {
@@ -8455,15 +8501,26 @@ ul .aside-nested-list {
 
 @media (min-width: 575px) {
     .controls {
-        /* بدلًا من sticky */
-        top: 73px;
-        left: 16px;
+        margin-top: 20px;
     }
 
     .controls #increaseFont,
     .controls #decreaseFont {
-        margin-left: 3px;
-        font-size: 12px;
+        margin-left: 5px;
+        font-size: 16px;
+        width: 45px;
+        height: 40px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        box-sizing: border-box;
+        padding: 0;
+    }
+
+    .controls #increaseFont img,
+    .controls #decreaseFont img {
+        max-width: 100%;
+        max-height: 100%;
     }
 }
 
@@ -8597,8 +8654,7 @@ header .phone button {
 @media (max-width: 574px) {
     .publications.in-index {
         font-size: 20px;
-        margin-top: 10px;
-        margin-right: 16px;
+        margin-top: 20px;
     }
 
     .publications {
@@ -8610,7 +8666,7 @@ header .phone button {
     .publications {
         font-size: 19px;
         margin-bottom: -7px;
-        margin-right: 50px;
+        margin-right: 0;
     }
 }
 
@@ -8619,6 +8675,7 @@ header .phone button {
         font-size: 23px;
         margin-bottom: -17px;
         margin-right: 0;
+        margin-top: 22px;
     }
 }
 
@@ -8977,10 +9034,16 @@ header .phone button {
 
 @media (min-width: 575px) {
 
+    .spe-h1.index-journals,
+    .spe-h1.index-book {
+        text-align: center;
+    }
+
     .spe-h1.pod,
     .spe-h1.infograph {
         margin-top: 10px;
     }
+
 
     .tow-books .daw .card .daw-info span {
         font-size: 12px;
@@ -8997,7 +9060,7 @@ header .phone button {
     }
 
     .tow-books .daw .card .daw-info p {
-        font-size: 16px;
+        font-size: 15px;
     }
 }
 
@@ -9103,6 +9166,9 @@ header .phone button {
     font-family: 'CodecProRegular';
 }
 
+.index-articles.infograph-detail img {
+    cursor: pointer !important;
+}
 @media (max-width: 574px) {
     .container.index-articles-pod {
         display: none;
@@ -9150,7 +9216,14 @@ header .phone button {
     }
 
     /* صفحة تفاصيل الانفوجراف */
-
+    .container.index-articles.all-art {
+        background: white;
+        margin-top: 20px;
+        padding: 10px 15px 20px;
+        box-sizing: border-box;
+        box-shadow: 0 0 5px rgba(0, 0, 0, 0.38);
+        margin-bottom: 20px;
+    }
     .index-articles.infograph-detail img {
         width: 100% !important;
         height: auto !important;
@@ -9187,6 +9260,10 @@ header .phone button {
         display: block;
     }
 
+    .container {
+        width: 86% !important;
+    }
+
     .infogr button {
         font-size: 24px;
     }
@@ -9194,6 +9271,14 @@ header .phone button {
     .infogr img {
         max-height: 450px;
         min-height: 450px;
+    }
+
+    .container.index-articles.all-art {
+        background: white;
+        margin-top: 20px;
+        padding: 10px 15px 20px;
+        box-sizing: border-box;
+        box-shadow: 0 0 5px rgba(0, 0, 0, 0.38);
     }
 
     /* صفحة تفاصيل الانفوجراف */
@@ -9235,6 +9320,10 @@ header .phone button {
         display: none;
     }
 
+    .container {
+        width: 83% !important;
+    }
+
     .infogr button {
         font-size: 30px;
     }
@@ -9242,6 +9331,29 @@ header .phone button {
     .infogr img {
         max-height: 500px;
         min-height: 500px;
+    }
+
+    .container.index-articles.all-art {
+        background: white;
+        margin-top: 20px;
+        padding: 10px 15px 20px;
+        box-sizing: border-box;
+        box-shadow: 0 0 5px rgba(0, 0, 0, 0.38);
+    }
+
+    .outside-container {
+        background-color: #d0d0d0;
+        margin-top: 25px;
+        margin-bottom: 15px;
+    }
+
+    .container.index-articles .tow-books.publications-all .daw {
+        background-color: white;
+        padding: 3px 12px 0px;
+        box-sizing: border-box;
+        margin-top: 22px;
+        margin-bottom: 22px !important;
+        width: calc(50% - 7px);
     }
 
     /* صفحة التفاصيل */
@@ -9265,6 +9377,11 @@ header .phone button {
 
     .index-articles.infograph-detail .controls {
         margin-top: 27px;
+    }
+
+    .publications.carousel-title {
+        text-align: center;
+
     }
 }
 
@@ -9292,6 +9409,10 @@ header .phone button {
         display: none;
     }
 
+    .container {
+        width: 80% !important;
+    }
+
     .infogr button {
         font-size: 40px;
     }
@@ -9307,10 +9428,6 @@ header .phone button {
         box-sizing: border-box;
         margin-top: 22px;
         margin-bottom: 22px !important;
-    }
-
-    .publications.in-index.with-out {
-        margin-right: 152px;
     }
 
     .outside-container {
@@ -9353,9 +9470,11 @@ header .phone button {
         margin-top: 30px;
     }
 }
+
 .cardContainer-inside {
     display: none !important;
 }
+
 .cardContainer-inside.active {
     display: block !important;
 }

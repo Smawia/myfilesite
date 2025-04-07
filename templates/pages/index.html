@@ -217,6 +217,13 @@
     }
     
     @media (min-width: 768px) {
+        #carousel {
+            height: 700px;
+        }
+        #carousel div img {
+            height: 80%;
+            width: auto;
+        }
         .container.index-articles.hide-in-pc {
             display: none;
         }
@@ -225,18 +232,70 @@
         }
         .publications.carousel-title {
             display: block;
+        }
+        #carousel .silder-moving {
+            width: 562px;
+        }
+        .carousel-dots {
+            top: 0;
+        }
+        #carousel .silder-moving span {
+            font-size: 13px;
+        }
+        #carousel .silder-moving p {
+            font-size: 15px;
+        }
+        .right-arrow-silder {
+            right: 24%;
+        }
+        .left-arrow-silder {
+            left: 24%;
+        }
+        main {
+            margin-bottom: -33px;
         }
     }
     
     @media (min-width: 992px) {
+        #carousel {
+            height: 732px;
+        }
         .container.index-articles.hide-in-pc {
             display: none;
         }
         main {
             display: block;
         }
+
         .publications.carousel-title {
             display: block;
+        }
+        #carousel div img {
+            width: auto;
+            height: 90%;
+        }
+
+        #carousel .silder-moving {
+            width: 658px;
+            padding-bottom: 10px;
+        }
+        .carousel-dots {
+            top: 35px;
+        }
+        #carousel .silder-moving span {
+            font-size: 14px;
+        }
+        #carousel .silder-moving p {
+            font-size: 16px;
+        }
+        .right-arrow-silder {
+            right: 30%;
+        }
+        .left-arrow-silder {
+            left: 30%;
+        }
+        main {
+            margin-bottom: 40px;
         }
     }
 </style>
@@ -423,7 +482,9 @@
         <a href="{% url 'studies' %}" class="show-all">عرض المزيد</a>
     </div>
 </div>
-<a href="{% url 'publications' %}"><h1 class="publications in-index with-out">إصدارات المركز</h1></a>
+<div class="container index-articles">
+    <a href="{% url 'publications' %}"><h1 class="publications in-index with-out">إصدارات المركز</h1></a>
+</div>
 <div class="outside-container">
     <div class="container index-articles">
         <h1 class="publications in-index" style="display: none;">إصدارات المركز</h1>
@@ -458,7 +519,7 @@
 <div class="container index-articles hide-in-pc">
     <div class="tow-books">
         <div class="daw">
-            <a href="{% url 'infographs' %}"><h1 class="spe-h1 infograph">أسس إنفوجراف</h1></a>
+                <a href="{% url 'infographs' %}"><h1 class="spe-h1 infograph">أسس إنفوجراف</h1></a>
             <div class="card">
                 <div class="infogr">
                     <button class="prev" aria-label="السابق">&lt;</button>
@@ -477,7 +538,7 @@
     <!-- <a href="{% url 'infographs' %}" class="show-all infograph">عرض المزيد</a> -->
 
 </div>
-<a href="{% url 'infographs' %}"><h1 class="publications in-index carousel-title">أسس إنفوجراف</h1></a>
+<div class="container"><a href="{% url 'infographs' %}"><h1 class="publications in-index carousel-title">أسس إنفوجراف</h1></a></div>
 <main>
     <div id="carousel" class="carousel">
         <div id='item_1' class="hideLeft">

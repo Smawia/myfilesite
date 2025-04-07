@@ -8,46 +8,173 @@
     <h1 class="spe-h1">أسس إنفوجراف</h1>
 </div>
 <div class="container index-articles all-art infographs infograph-detail">
+    <div class="study-text-info">
+        <p class="infograph-title">{{ detail.title }}</p>
+        <span class="infograph-date">{{ detail.date }}</span>
+        <div class="controls">
+            <div class="studies-social">
+                <div class="studies-social2">
+                    <div class="twitter">
+                        <a href="https://twitter.com/intent/tweet?text={{ detail.title |urlencode }}&url={{ request.build_absolute_uri|urlencode }}"
+                            target="_blank">
+                            <i class="fa-brands fa-x-twitter"></i>
+                        </a>
 
-        <div class="study-text-info">
-            <p class="infograph-title">{{ detail.title }}</p>
-            <span class="infograph-date">{{ detail.date }}</span>
-            <div class="controls">
-                <div class="studies-social">
-                    <div class="studies-social2">
-                        <div class="twitter">
-                            <a href="https://twitter.com/intent/tweet?text={{ detail.title |urlencode }}&url={{ request.build_absolute_uri|urlencode }}"
-                                target="_blank">
-                                <i class="fa-brands fa-x-twitter"></i>
-                            </a>
+                    </div>
+                    <div class="whats">
+                        <a href="https://wa.me/?text={{ detail.title |urlencode }}%20{{ request.build_absolute_uri|urlencode }}"
+                            target="_blank">
+                            <i class="fa-brands fa-whatsapp foot-i"></i>
+                        </a>
+                    </div>
+                    <div class="telegram">
+                        <a href="https://t.me/share/url?url={{ request.build_absolute_uri|urlencode }}&text={{ detail.title |urlencode }}"
+                            target="_blank">
+                            <i class="fab fa-telegram"></i>
+                        </a>
 
-                        </div>
-                        <div class="whats">
-                            <a href="https://wa.me/?text={{ detail.title |urlencode }}%20{{ request.build_absolute_uri|urlencode }}"
-                                target="_blank">
-                                <i class="fa-brands fa-whatsapp foot-i"></i>
-                            </a>
-                        </div>
-                        <div class="telegram">
-                            <a href="https://t.me/share/url?url={{ request.build_absolute_uri|urlencode }}&text={{ detail.title |urlencode }}"
-                                target="_blank">
-                                <i class="fab fa-telegram"></i>
-                            </a>
-
-                        </div>
-                        <div class="face-book">
-                            <a href="https://www.facebook.com/sharer/sharer.php?u={{ request.build_absolute_uri|urlencode }}"
-                                target="_blank">
-                                <i class="fa-brands fa-facebook foot-i"></i>
-                            </a>
-                        </div>
+                    </div>
+                    <div class="face-book">
+                        <a href="https://www.facebook.com/sharer/sharer.php?u={{ request.build_absolute_uri|urlencode }}"
+                            target="_blank">
+                            <i class="fa-brands fa-facebook foot-i"></i>
+                        </a>
                     </div>
                 </div>
-
             </div>
+
         </div>
-        <img src="{% static detail.image %}" alt="إنفوجراف" class="infograph-detail-img">
+    </div>
+    <img src="{% static detail.image %}" alt="إنفوجراف" class="infograph-detail-img">
 </div>
+<!-- Popup overlay -->
+<div id="popupOverlay" class="popup-overlay">
+    <div class="popup-content">
+        <span class="close-btn"><i class="fa-solid fa-xmark"></i></span>
+        <div class="zoom-controls">
+            <button class="zoom-in"><i class="fa-solid fa-plus"></i></button>
+            <button class="zoom-out"><i class="fa-solid fa-minus"></i></button>
+        </div>
+        <img id="popupImage" src="" alt="صورة مكبرة" />
+    </div>
+</div>
+<style>
+    .popup-overlay {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.901);
+        display: none;
+        justify-content: center;
+        align-items: center;
+        z-index: 9999;
+    }
+
+    .popup-content {
+        position: relative;
+        max-width: 90%;
+        max-height: 90%;
+        text-align: center;
+    }
+
+    .popup-content img {
+        max-width: 50% !important;
+        max-height: 50% !important;
+        transition: transform 0.3s ease;
+    }
+
+    .close-btn {
+        position: absolute;
+        top: 10px;
+        right: 15px;
+        font-size: 24px;
+        color: white;
+        cursor: pointer;
+    }
+
+    .zoom-controls {
+        position: absolute;
+        top: 10px;
+        left: 15px;
+    }
+
+    .zoom-controls button {
+        background: transparent;
+        border: none;
+        color: white;
+        font-size: 20px;
+        margin: 0 5px;
+        cursor: pointer;
+    }
+
+    @media (max-width: 574px) {
+        .close-btn {
+            right: -4px;
+            top: -45px;
+        }
+
+        .zoom-controls {
+            left: -9px;
+            top: -45px;
+        }
+
+        .popup-content img {
+            max-width: 100% !important;
+            max-height: 100% !important;
+        }
+    }
+
+    @media (min-width: 575px) {
+        .close-btn {
+            right: -16px;
+            top: -45px;
+        }
+
+        .zoom-controls {
+            left: -23px;
+            top: -45px;
+        }
+
+        .popup-content img {
+            max-width: 95% !important;
+            max-height: 100% !important;
+        }
+    }
+
+    @media (min-width: 768px) and (max-width: 991px) {
+        .close-btn {
+            right: 4px;
+        }
+
+        .zoom-controls {
+            left: 17px;
+        }
+
+        .popup-content img {
+            max-width: 80% !important;
+            max-height: 80% !important;
+        }
+    }
+
+    @media (min-width: 992px) {
+        .popup-content img {
+            max-width: 50% !important;
+            max-height: 50% !important;
+            transition: transform 0.3s ease;
+        }
+        .close-btn {
+            top: 10px;
+            right: 15px;
+        }
+    
+        .zoom-controls {
+            top: 10px;
+            left: 15px;
+        }
+    }
+</style>
 <div class="container index-articles all-studies">
     <h1 class="spe-h1">تابع أيضًا</h1>
 </div>
@@ -170,6 +297,41 @@
 
         // كل 10 ثواني نغير العرض
         setInterval(showCards, 10000);
+        const popupOverlay = document.getElementById('popupOverlay');
+        const popupImage = document.getElementById('popupImage');
+        const closeBtn = document.querySelector('.close-btn');
+        const zoomInBtn = document.querySelector('.zoom-in');
+        const zoomOutBtn = document.querySelector('.zoom-out');
+
+        let currentScale = 1;
+
+        // عند الضغط على الصورة الأصلية
+        document.querySelector('.infograph-detail-img').addEventListener('click', function () {
+            popupImage.src = this.src;
+            popupOverlay.style.display = 'flex';
+            currentScale = 1;
+            popupImage.style.transform = `scale(${currentScale})`;
+        });
+
+        // زر الإغلاق
+        closeBtn.addEventListener('click', function () {
+            popupOverlay.style.display = 'none';
+        });
+
+        // تكبير الصورة
+        zoomInBtn.addEventListener('click', function () {
+            currentScale += 0.1;
+            popupImage.style.transform = `scale(${currentScale})`;
+        });
+
+        // تصغير الصورة
+        zoomOutBtn.addEventListener('click', function () {
+            if (currentScale > 0.2) { // منع التصغير الزائد
+                currentScale -= 0.1;
+                popupImage.style.transform = `scale(${currentScale})`;
+            }
+        });
+
     });
 </script>
 
