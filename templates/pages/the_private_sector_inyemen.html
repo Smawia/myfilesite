@@ -3,6 +3,9 @@
 {% block title %}مدخل إلى القطاع الخاص في اليمن{% endblock %}
 {% block content %}
 <div class="container articles">
+    <div id="progress-container" style="position: fixed; top: 0; left: 0; width: 100%; height: 5px; background: #f0f0f0; z-index: 9999;">
+        <div id="progress-bar" style="height: 100%; width: 0%; background: #C79C6F;"></div>
+    </div>  
     <div class="top-of-study">
         <a href="{% url 'index' %}">الرئيسية</a><span class="first-pipe">  |  </span> <a href="{% url 'studies' %}">دراسات وبحوث</a> <span class="first-pipe"> | </span><span>مدخل إلى القطاع الخاص في اليمن</span>
     </div>

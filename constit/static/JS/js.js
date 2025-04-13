@@ -147,4 +147,21 @@ window.addEventListener('scroll', () => {
     });
 });
 
+// عندما يقوم المستخدم بالتمرير
+window.onscroll = function() {
+    updateProgressBar();
+};
+
+function updateProgressBar() {
+    // حساب الارتفاع الكلي للمحتوى
+    const scrollTop = document.documentElement.scrollTop || document.body.scrollTop;
+    const scrollHeight = document.documentElement.scrollHeight || document.body.scrollHeight;
+    const clientHeight = document.documentElement.clientHeight;
+
+    // حساب نسبة التقدم
+    const scrolled = (scrollTop / (scrollHeight - clientHeight)) * 100;
+
+    // تحديث عرض progress bar
+    document.getElementById('progress-bar').style.width = scrolled + "%";
+}
 
