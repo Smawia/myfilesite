@@ -8796,15 +8796,19 @@ header .phone button {
 
     .osus-first-content .osus-second-container .osus-second-text .osus-links {
         display: flex;
-        justify-content: center;
+        justify-content: flex-end;
     }
 
     .osus-first-content .osus-second-container .osus-second-text .osus-links a {
         margin-left: 8px;
-        padding: 0px 8px;
+        padding: 2px 20px;
         margin-top: 10px;
-        font-size: 12px;
+        font-size: 10px;
     }
+    .osus-first-content .osus-second-container .osus-second-text .osus-links a:not(:last-of-type) {
+        margin-left: 5px;
+    }
+    
 }
 
 @media (min-width: 575px) and (max-width: 767px) {
