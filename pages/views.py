@@ -447,57 +447,120 @@ def osus_journals(request):
     return render(request,'pages/osus_journals.html')
 
 def view_infograph(request):
-    return render(request,'pages/infographs.html')
+    infographs = [
+        {
+            "title": "أكثر سبع دول إنتاجاً للأدوية في العام 2024",
+            "slug": "The-seven-largest-pharmaceutical-producing-countries-in-2024",
+            "image": "imgs/Info-01.png",
+            "date": "13 مارس 2025",
+        },
+        {
+            "title": "أكبر عشر دول في احتياطي اليورانيوم",
+            "slug":  "Top-ten-countries-with-the-largest-uranium-reserves",
+            "image": "imgs/Info-02.png",
+            "date": "13 مارس 2025",
+        },
+        {
+            "title": "الوزارات الحكومية والاقتصادات الخمس الكبرى",
+            "slug": "Government-ministries-and-the-big-five-economies",
+            "image": "imgs/Info-03.png",
+            "date": "13 مارس 2025",
+        },
+        {
+            "title": "البطالة في الدول العربية",
+            "slug": "Unemployment-in-Arab-countries",
+            "image": "imgs/Info-04.png",
+            "date": "13 مارس 2025",
+        },
+        {
+            "title": "كيف يؤثر التعليم على الاقتصاد",
+            "slug": "How-education-affects-the-economy",
+            "image": "imgs/Info-05.png",
+            "date": "13 مارس 2025",
+        },
+        {
+            "title": "مساهمة القطاع الخاص في الناتج المحلي الإجمالي 2023",
+            "slug": "Private-sector-contribution-to-GDP-2023",
+            "image": "imgs/Info-06.png",
+            "date": "13 مارس 2025",
+        },
+        {
+            "title": "ملوك القطن...أكبر عشر دول منتجة للقطن في العالم 2023",
+            "slug": "Cotton-kings-2023",
+            "image": "imgs/Info-07.png",
+            "date": "13 مارس 2025",
+        },
+        {
+            "title": "أكثر عشر دول تصديرًا للمهاجرين في 2023",
+            "slug":"Top-10-migrant-exporting-countries-in-2023",
+            "image": "imgs/Info-08.png",
+            "date": "13 مارس 2025",
+        },
+        {
+            "title": "الضرائب والشركات",
+            "slug": "Taxes-and-companies",
+            "image": "imgs/Info-09.png",
+            "date": "13 مارس 2025",
+        },
+        {
+            "title": "التعليم العالي في العالم العربي",
+            "slug": "higher-education-in-the-Arab-World",
+            "image": "imgs/Info-10.png",
+            "date": "13 مارس 2025",
+        },
+    ]
+
+    return render(request, 'pages/infographs.html', {'infographs': infographs})
 
 def infograph_detail(request, slug):
     # بيانات ثابتة للكروت
     data = {
-        'info-01': {
+        "The-seven-largest-pharmaceutical-producing-countries-in-2024": {
             'title': 'أكثر سبع دول إنتاجاً للأدوية في العام 2024',
             'date': '13 مارس 2025',
             'image': 'imgs/Info-01.png',
         },
-        'info-02': {
+        "Top-ten-countries-with-the-largest-uranium-reserves": {
             'title': 'أكبر عشر دول في احتياطي اليورانيوم',
             'date': '13 مارس 2025',
             'image': 'imgs/Info-02.png',
         },
-        'info-03': {
+        "Government-ministries-and-the-big-five-economies": {
             'title': 'الوزارات الحكومية والاقتصادات الخمس الكبرى',
             'date': '13 مارس 2025',
             'image': 'imgs/Info-03.png',
         },
-        'info-04': {
+         "Unemployment-in-Arab-countries": {
             'title': 'البطالة في الدول العربية',
             'date': '13 مارس 2025',
             'image': 'imgs/Info-04.png',
         },
-        'info-05': {
+         "How-education-affects-the-economy": {
             'title': 'كيف يؤثر التعليم على الاقتصاد',
             'date': '13 مارس 2025',
             'image': 'imgs/Info-05.png',
         },
-        'info-06': {
+        "Private-sector-contribution-to-GDP-2023": {
             'title': 'مساهمة القطاع الخاص في الناتج المحلي الإجمالي 2023',
             'date': '13 مارس 2025',
             'image': 'imgs/Info-06.png',
         },
-        'info-07': {
+        "Cotton-kings-2023": {
             'title': 'ملوك القطن...أكبر عشر دول منتجة للقطن في العالم 2023',
             'date': '13 مارس 2025',
             'image': 'imgs/Info-07.png',
         },
-        'info-08': {
+        "Top-10-migrant-exporting-countries-in-2023": {
             'title': 'أكثر عشر دول تصديرًا للمهاجرين في 2023',
             'date': '13 مارس 2025',
             'image': 'imgs/Info-08.png',
         },
-        'info-09': {
+        "Taxes-and-companies": {
             'title': 'الضرائب والشركات',
             'date': '13 مارس 2025',
             'image': 'imgs/Info-09.png',
         },
-        'info-10': {
+        "higher-education-in-the-Arab-World": {
             'title': 'التعليم العالي في العالم العربي',
             'date': '13 مارس 2025',
             'image': 'imgs/Info-10.png',

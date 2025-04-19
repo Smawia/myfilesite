@@ -32,7 +32,7 @@
     #carousel div img {
         width: auto;
         height: 90%;
-      /*  max-height: 90%;
+        /*  max-height: 90%;
         min-height: 90%;*/
         transition: width 400ms;
         -webkit-user-drag: none;
@@ -113,9 +113,11 @@
         transform: translateY(50px) translateX(-50%);
         opacity: 0.7;
     }
+
     .carousel img {
         cursor: pointer !important;
     }
+
     #carousel div.next img {
         width: 300px;
         height: 300px;
@@ -125,17 +127,19 @@
         background-color: white;
         padding: 10px;
         min-width: 500px;
-       /* max-width: 500px; */
+        /* max-width: 500px; */
         box-sizing: border-box;
         border-bottom-right-radius: 10px;
         border-bottom-left-radius: 10px;
         font-family: 'CodecProRegular';
         width: 658px;
     }
+
     #carousel .silder-moving span {
         color: #777777;
         font-size: 14px;
     }
+
     #carousel .silder-moving p {
         color: #333333;
         font-size: 16px;
@@ -178,91 +182,62 @@
     .right-arrow-silder {
         right: 30%;
     }
+
     .carousel-dots {
         display: flex;
         justify-content: center;
         position: relative;
         top: 20px;
     }
-    
+
     .carousel-dots div {
         width: 10px;
         height: 10px;
         background-color: rgba(0, 0, 0, 0.3);
         border-radius: 50%;
         margin: 0 5px;
-       /* cursor: pointer;*/
+        /* cursor: pointer;*/
         transition: background-color 0.3s;
     }
-    
+
     .carousel-dots div.active {
         background-color: rgba(0, 0, 0, 0.8);
     }
+
     @media (max-width: 574px) {
         main {
             display: none;
         }
+
         .publications.carousel-title {
             display: none;
         }
     }
-    
+
     @media (min-width: 575px) {
         main {
             display: none;
         }
+
         .publications.carousel-title {
             display: none;
         }
     }
-    
+
     @media (min-width: 768px) {
         #carousel {
             height: 700px;
         }
+
         #carousel div img {
             height: 80%;
             width: auto;
         }
+
         .container.index-articles.hide-in-pc {
             display: none;
         }
-        main {
-            display: block;
-        }
-        .publications.carousel-title {
-            display: block;
-        }
-        #carousel .silder-moving {
-            width: 562px;
-        }
-        .carousel-dots {
-            top: 0;
-        }
-        #carousel .silder-moving span {
-            font-size: 13px;
-        }
-        #carousel .silder-moving p {
-            font-size: 15px;
-        }
-        .right-arrow-silder {
-            right: 24%;
-        }
-        .left-arrow-silder {
-            left: 24%;
-        }
-        main {
-            margin-bottom: -33px;
-        }
-    }
-    
-    @media (min-width: 992px) {
-        #carousel {
-            height: 732px;
-        }
-        .container.index-articles.hide-in-pc {
-            display: none;
-        }
+
         main {
             display: block;
         }
@@ -270,6 +245,53 @@
         .publications.carousel-title {
             display: block;
         }
+
+        #carousel .silder-moving {
+            width: 562px;
+        }
+
+        .carousel-dots {
+            top: 0;
+        }
+
+        #carousel .silder-moving span {
+            font-size: 13px;
+        }
+
+        #carousel .silder-moving p {
+            font-size: 15px;
+        }
+
+        .right-arrow-silder {
+            right: 24%;
+        }
+
+        .left-arrow-silder {
+            left: 24%;
+        }
+
+        main {
+            margin-bottom: -33px;
+        }
+    }
+
+    @media (min-width: 992px) {
+        #carousel {
+            height: 732px;
+        }
+
+        .container.index-articles.hide-in-pc {
+            display: none;
+        }
+
+        main {
+            display: block;
+        }
+
+        .publications.carousel-title {
+            display: block;
+        }
+
         #carousel div img {
             width: auto;
             height: 90%;
@@ -279,21 +301,27 @@
             width: 658px;
             padding-bottom: 10px;
         }
+
         .carousel-dots {
             top: 35px;
         }
+
         #carousel .silder-moving span {
             font-size: 14px;
         }
+
         #carousel .silder-moving p {
             font-size: 16px;
         }
+
         .right-arrow-silder {
             right: 30%;
         }
+
         .left-arrow-silder {
             left: 30%;
         }
+
         main {
             margin-bottom: 40px;
         }
@@ -328,7 +356,7 @@
                     </div>
                 </a>
             </div>
-            
+
             <div class="slide">
 
                 <img src="{% static 'imgs/raw.webp' %}" alt="">
@@ -381,7 +409,9 @@
     </div>
 </div>
 <div class="container index-articles all-art">
-    <a href="{% url 'studies' %}"><h1 class="spe-h1 studies">دراسات وبحوث</h1></a>
+    <a href="{% url 'studies' %}">
+        <h1 class="spe-h1 studies">دراسات وبحوث</h1>
+    </a>
     <div class="show-studies-index">
         <div class="show-index-imgs">
             <div class="card">
@@ -483,7 +513,9 @@
     </div>
 </div>
 <div class="container index-articles">
-    <a href="{% url 'publications' %}"><h1 class="publications in-index with-out">إصدارات المركز</h1></a>
+    <a href="{% url 'publications' %}">
+        <h1 class="publications in-index with-out">إصدارات المركز</h1>
+    </a>
 </div>
 <div class="outside-container">
     <div class="container index-articles">
@@ -519,11 +551,14 @@
 <div class="container index-articles hide-in-pc">
     <div class="tow-books">
         <div class="daw">
-                <a href="{% url 'infographs' %}"><h1 class="spe-h1 infograph">أسس إنفوجراف</h1></a>
+            <a href="{% url 'infographs' %}">
+                <h1 class="spe-h1 infograph">أسس إنفوجراف</h1>
+            </a>
             <div class="card">
                 <div class="infogr">
                     <button class="prev" aria-label="السابق">&lt;</button>
-                    <a href="{% url 'infograph_detail' 'info-01' %}">
+                    <a
+                        href="{% url 'infograph_detail' 'The-seven-largest-pharmaceutical-producing-countries-in-2024' %}">
                         <img src="{% static 'imgs/Info-01.png' %}" alt="إنفوجراف">
                     </a>
                     <button class="next" aria-label="التالي">&gt;</button>
@@ -538,104 +573,106 @@
     <!-- <a href="{% url 'infographs' %}" class="show-all infograph">عرض المزيد</a> -->
 
 </div>
-<div class="container"><a href="{% url 'infographs' %}"><h1 class="publications in-index carousel-title">أسس إنفوجراف</h1></a></div>
+<div class="container"><a href="{% url 'infographs' %}">
+        <h1 class="publications in-index carousel-title">أسس إنفوجراف</h1>
+    </a></div>
 <main>
     <div id="carousel" class="carousel">
         <div id='item_1' class="hideLeft">
-            <a href="{% url 'infograph_detail' 'info-08' %}">
-            <img src="{% static 'imgs/Info-08.png' %}" alt="إنفوجراف">
-            <div class="silder-moving daw-info">
-                <span> 13 مارس 2025 </span>
-                <p>  أكثر عشر دول تصديرًا للمهاجرين في 2023</p>
-            </div>
-        </a>
-        </div>
-        
-        <div id='item_2' class="hideLeft">
-            <a href="{% url 'infograph_detail' 'info-01' %}">
-            <img src="{% static 'imgs/Info-01.png' %}" alt="إنفوجراف">
-            <div class="silder-moving daw-info">
-                <span> 13 مارس 2025 </span>
-                <p>أكثر سبع دول إنتاجًا للأدوية في العام 2024</p>
-            </div>
+            <a href="{% url 'infograph_detail' 'Top-10-migrant-exporting-countries-in-2023' %}">
+                <img src="{% static 'imgs/Info-08.png' %}" alt="إنفوجراف">
+                <div class="silder-moving daw-info">
+                    <span> 13 مارس 2025 </span>
+                    <p> أكثر عشر دول تصديرًا للمهاجرين في 2023</p>
+                </div>
             </a>
-          </div>
-    
+        </div>
+
+        <div id='item_2' class="hideLeft">
+            <a href="{% url 'infograph_detail' 'The-seven-largest-pharmaceutical-producing-countries-in-2024' %}">
+                <img src="{% static 'imgs/Info-01.png' %}" alt="إنفوجراف">
+                <div class="silder-moving daw-info">
+                    <span> 13 مارس 2025 </span>
+                    <p>أكثر سبع دول إنتاجًا للأدوية في العام 2024</p>
+                </div>
+            </a>
+        </div>
+
         <div id='item_3' class="prevLeftSecond">
-            <a href="{% url 'infograph_detail' 'info-02' %}">
-            <img src="{% static 'imgs/Info-02.png' %}" alt="image info">
-            <div class="silder-moving">
-                <span> 13 مارس 2025 </span>
-                <p>أكبر عشر دول في احتياطي اليورانيوم</p>
-            </div>
-        </a>
+            <a href="{% url 'infograph_detail' 'Top-ten-countries-with-the-largest-uranium-reserves' %}">
+                <img src="{% static 'imgs/Info-02.png' %}" alt="image info">
+                <div class="silder-moving">
+                    <span> 13 مارس 2025 </span>
+                    <p>أكبر عشر دول في احتياطي اليورانيوم</p>
+                </div>
+            </a>
         </div>
 
         <div id='item_4' class="prev">
-            <a href="{% url 'infograph_detail' 'info-03' %}">
-            <img src="{% static 'imgs/Info-03.png' %}" alt="image info">
-            <div class="silder-moving">
-                <span> 13 مارس 2025 </span>
-                <p>الوزارات الحكومية والاقتصادات الخمس الكبرى</p>
-            </div>
-        </a>
+            <a href="{% url 'infograph_detail' 'Government-ministries-and-the-big-five-economies' %}">
+                <img src="{% static 'imgs/Info-03.png' %}" alt="image info">
+                <div class="silder-moving">
+                    <span> 13 مارس 2025 </span>
+                    <p>الوزارات الحكومية والاقتصادات الخمس الكبرى</p>
+                </div>
+            </a>
         </div>
 
         <div id='item_5' class="selected">
-            <a href="{% url 'infograph_detail' 'info-04' %}">
-            <img src="{% static 'imgs/Info-04.png' %}" alt="image info">
-            <div class="silder-moving">
-                <span> 13 مارس 2025 </span>
-                <p>البطالة في الدول العربية</p>
-            </div>
-        </a>
+            <a href="{% url 'infograph_detail' 'Unemployment-in-Arab-countries' %}">
+                <img src="{% static 'imgs/Info-04.png' %}" alt="image info">
+                <div class="silder-moving">
+                    <span> 13 مارس 2025 </span>
+                    <p>البطالة في الدول العربية</p>
+                </div>
+            </a>
         </div>
 
         <div id='item_6' class="next">
-            <a href="{% url 'infograph_detail' 'info-05' %}">
-            <img src="{% static 'imgs/Info-05.png' %}" alt="image info">
-            <div class="silder-moving">
-                <span> 13 مارس 2025 </span>
-                <p>كيف يؤثر التعليم على الاقتصاد</p>
-            </div>
-        </a>
+            <a href="{% url 'infograph_detail' 'How-education-affects-the-economy' %}">
+                <img src="{% static 'imgs/Info-05.png' %}" alt="image info">
+                <div class="silder-moving">
+                    <span> 13 مارس 2025 </span>
+                    <p>كيف يؤثر التعليم على الاقتصاد</p>
+                </div>
+            </a>
         </div>
 
         <div id='item_7' class="nextRightSecond">
-            <a href="{% url 'infograph_detail' 'info-06' %}">
-            <img src="{% static 'imgs/Info-06.png' %}">
-            <div class="silder-moving">
-                <span> 13 مارس 2025 </span>
-                <p>مساهمة القطاع الخاص في الناتج المحلي الإجمالي 2023</p>
-            </div>
-        </a>
+            <a href="{% url 'infograph_detail' 'Private-sector-contribution-to-GDP-2023' %}">
+                <img src="{% static 'imgs/Info-06.png' %}">
+                <div class="silder-moving">
+                    <span> 13 مارس 2025 </span>
+                    <p>مساهمة القطاع الخاص في الناتج المحلي الإجمالي 2023</p>
+                </div>
+            </a>
         </div>
-        
+
         <div id='item_8' class="hideRight" alt="إنفوجراف">
-            <a href="{% url 'infograph_detail' 'info-07' %}">
-            <img src="{% static 'imgs/Info-07.png' %}">
-            <div class="silder-moving">
-                <span> 13 مارس 2025 </span>
-                <p>ملوك القطن...أكبر عشر دول منتجة للقطن في العالم 2023</p>
-            </div>
-        </a>
+            <a href="{% url 'infograph_detail' 'Cotton-kings-2023' %}">
+                <img src="{% static 'imgs/Info-07.png' %}">
+                <div class="silder-moving">
+                    <span> 13 مارس 2025 </span>
+                    <p>ملوك القطن...أكبر عشر دول منتجة للقطن في العالم 2023</p>
+                </div>
+            </a>
         </div>
 
         <div id='item_9' class="hideRight" alt="إنفوجراف">
-            <a href="{% url 'infograph_detail' 'info-09' %}">
-            <img src="{% static 'imgs/Info-09.png' %}">
-            <div class="silder-moving">
-                <span> 13 مارس 2025 </span>
-                <p>الضرائب والشركات</p>
-            </div>
+            <a href="{% url 'infograph_detail' 'Taxes-and-companies' %}">
+                <img src="{% static 'imgs/Info-09.png' %}">
+                <div class="silder-moving">
+                    <span> 13 مارس 2025 </span>
+                    <p>الضرائب والشركات</p>
+                </div>
             </a>
         </div>
         <div id='item_10' class="hideRight" alt="إنفوجراف">
-            <a href="{% url 'infograph_detail' 'info-10' %}">
+            <a href="{% url 'infograph_detail' 'higher-education-in-the-Arab-World' %}">
                 <img src="{% static 'imgs/Info-10.png' %}">
                 <div class="silder-moving">
                     <span> 13 مارس 2025</span>
-                    <p>التعليم العالي في الوطن العربي</p>
+                    <p>التعليم العالي في العالم العربي</p>
                 </div>
             </a>
         </div>
@@ -692,54 +729,54 @@
             {
                 image: "{% static 'imgs/Info-01.png' %}",
                 text: "أكثر سبع دول إنتاجاً للأدوية في العام 2024",
-                slug: "info-01"
+                slug: 'The-seven-largest-pharmaceutical-producing-countries-in-2024'
             },
             {
                 image: "{% static 'imgs/Info-02.png' %}",
                 text: "أكبر عشر دول في احتياطي اليورانيوم",
-                slug: "info-02"
+                slug: 'Top-ten-countries-with-the-largest-uranium-reserves',
             },
             {
                 image: "{% static 'imgs/Info-03.png' %}",
                 text: "الوزارات الحكومية والاقتصادات الخمس الكبرى",
-                slug: "info-03"
+                slug: 'Government-ministries-and-the-big-five-economies'
             },
             {
                 image: "{% static 'imgs/Info-04.png' %}",
                 text: "البطالة في الدول العربية",
-                slug: "info-04"
+                slug: 'Unemployment-in-Arab-countries'
             },
             {
                 image: "{% static 'imgs/Info-05.png' %}",
                 text: "كيف يؤثر التعليم على الاقتصاد",
-                slug: "info-05"
+                slug: 'How-education-affects-the-economy'
             },
             {
                 image: "{% static 'imgs/Info-06.png' %}",
                 text: "مساهمة القطاع الخاص في الناتج المحلي الإجمالي 2023",
-                slug: "info-06"
+                slug: 'Private-sector-contribution-to-GDP-2023'
             },
             {
                 image: "{% static 'imgs/Info-07.png' %}",
                 text: "ملوك القطن...أكبر عشر دول منتجة للقطن في العالم 2023",
-                slug: "info-07"
+                slug: 'Cotton-kings-2023'
             },
             {
                 image: "{% static 'imgs/Info-08.png' %}",
                 text: "أكثر عشر دول تصديرًا للمهاجرين في 2023",
-                slug: "info-08"
+                slug: 'Top-10-migrant-exporting-countries-in-2023'
             },
             {
                 image: "{% static 'imgs/Info-09.png' %}",
                 text: "الضرائب والشركات",
-                slug: "info-09"
+                slug: 'Taxes-and-companies'
             },
             {
                 image: "{% static 'imgs/Info-10.png' %}",
                 text: "التعليم العالي في العالم العربي",
-                slug: "info-10"
+                slug: 'higher-education-in-the-Arab-World'
             }
-            
+
         ];
 
         let currentIndex = 0;
@@ -783,221 +820,221 @@
         const $ = str => document.querySelector(str);
         const $$ = str => document.querySelectorAll(str);
 
-            (function() {
-                if (!window.app) {
-                    window.app = {};
-                }
-                app.carousel = {
-                    removeClass: function(el, classname='') {
-                        if (el) {
-                            if (classname === '') {
-                                el.className = '';
-                            } else {
-                                el.classList.remove(classname);
-                            }
-                            return el;
+        (function () {
+            if (!window.app) {
+                window.app = {};
+            }
+            app.carousel = {
+                removeClass: function (el, classname = '') {
+                    if (el) {
+                        if (classname === '') {
+                            el.className = '';
+                        } else {
+                            el.classList.remove(classname);
                         }
-                        return;
-                    },
-                    reorder: function() {
-                        let childcnt = $("#carousel").children.length;
-                        let childs = $("#carousel").children;
-
-                        for (let j=0; j< childcnt; j++) {
-                            childs[j].dataset.pos = j;
-                        }
-                    },
-                    move: function(el) {
-                        let selected = el;
-                        if (typeof el === "string") {
-                            console.log(`got string: ${el}`);
-                            selected = (el == "next") ? $(".selected").nextElementSibling : $(".selected").previousElementSibling;
-                            console.dir(selected);
-                        }
-                        let curpos = parseInt(app.selected.dataset.pos);
-                        let tgtpos = parseInt(selected.dataset.pos);
-                        let cnt = curpos - tgtpos;
-                        let dir = (cnt < 0) ? -1 : 1;
-                        let shift = Math.abs(cnt);
-                        for (let i = 0; i < shift; i++) {
-                            let el = (dir == -1) ? $("#carousel").firstElementChild : $("#carousel").lastElementChild;
-                            if (dir == -1) {
-                                el.dataset.pos = $("#carousel").children.length;
-                                $('#carousel').append(el);
-                            } else {
-                                el.dataset.pos = 0;
-                                $('#carousel').prepend(el);
-                            }
-                            app.carousel.reorder(); 
-                        }
-                        app.selected = selected;
-                        let next = selected.nextElementSibling;
-                        var prev = selected.previousElementSibling;
-                        var prevSecond = prev ? prev.previousElementSibling : selected.parentElement.lastElementChild;
-                        var nextSecond = next ? next.nextElementSibling : selected.parentElement.firstElementChild;
-                        selected.className = '';
-                        selected.classList.add("selected");
-                        app.carousel.removeClass(prev).classList.add('prev');
-                        app.carousel.removeClass(next).classList.add('next');
-                        app.carousel.removeClass(nextSecond).classList.add("nextRightSecond");
-                        app.carousel.removeClass(prevSecond).classList.add("prevLeftSecond");
-                        app.carousel.nextAll(nextSecond).forEach(item => { item.className = ''; item.classList.add('hideRight') });
-                        app.carousel.prevAll(prevSecond).forEach(item => { item.className = ''; item.classList.add('hideLeft') });
-
-                        // تحديث النقاط بعد التنقل
-                        app.carousel.updateDots();
-
-                    },
-                    nextAll: function(el) {
-                        let els = [];
-
-                        if (el) {
-                            while (el = el.nextElementSibling) { els.push(el); }
-                        }
-
-                        return els;
-
-                    },
-                    prevAll: function(el) {
-                        let els = [];
-
-                        if (el) {
-                            while (el = el.previousElementSibling) { els.push(el); }
-                        }
-
-
-                        return els;
-                    },
-                    keypress: function(e) {
-                        switch (e.which) {
-                            case 37: // left
-                                app.carousel.move('prev');
-                                break;
-
-                            case 39: // right
-                                app.carousel.move('next');
-                                break;
-
-                            default:
-                                return;
-                        }
-                        e.preventDefault();
-                        return false;
-                    },
-                    select: function(e) {
-                    console.log(`select: ${e}`);
-                        let tgt = e.target;
-                        while (!tgt.parentElement.classList.contains('carousel')) {
-                            tgt = tgt.parentElement;
-                        }
-
-                        app.carousel.move(tgt);
-
-                    },
-                    previous: function(e) {
-                        app.carousel.move('prev');
-                    },
-                    next: function(e) {
-                        app.carousel.move('next');
-                    },
-                    doDown: function(e) {
-                    console.log(`down: ${e.x}`);
-                        app.carousel.state.downX = e.x;
-                    },
-                    doUp: function(e) {
-                    console.log(`up: ${e.x}`);
-                        let direction = 0,
-                            velocity = 0;
-
-                        if (app.carousel.state.downX) {
-                            direction = (app.carousel.state.downX > e.x) ? -1 : 1;
-                            velocity = app.carousel.state.downX - e.x;
-
-                            if (Math.abs(app.carousel.state.downX - e.x) < 10) {
-                                app.carousel.select(e);
-                                return false;
-                            }
-                            if (direction === -1) {
-                                app.carousel.move('next');
-                            } else {
-                                app.carousel.move('prev');
-                            }
-                            app.carousel.state.downX = 0;
-                        }
-                    },
-                    init: function() {
-                        document.addEventListener("keydown", app.carousel.keypress);
-                    // $('#carousel').addEventListener("click", app.carousel.select, true);
-                        $("#carousel").addEventListener("mousedown", app.carousel.doDown);
-                        $("#carousel").addEventListener("touchstart", app.carousel.doDown);
-                        $("#carousel").addEventListener("mouseup", app.carousel.doUp);
-                        $("#carousel").addEventListener("touchend", app.carousel.doup);
-
-                        app.carousel.reorder();
-                        $('#prev').addEventListener("click", app.carousel.previous);
-                        $('#next').addEventListener("click", app.carousel.next);
-
-                        // إنشاء النقاط
-                        app.carousel.createDots();
-                        
-                        app.selected = $(".selected");
-
-                    },
-                    state: {}
-
-                }
-
-                // إنشاء النقاط
-                app.carousel.createDots = function () {
-                    const dotsContainer = $("#carousel-dots");
-                    dotsContainer.innerHTML = ""; // مسح النقاط القديمة
-
-                    const images = $$("#carousel > div"); // جميع الصور في شريط التمرير
-                    images.forEach((_, index) => {
-                        const dot = document.createElement("div");
-                        dot.dataset.index = index; // تخزين فهرس الصورة
-                    //  dot.addEventListener("click", app.carousel.dotClick); // إضافة حدث النقر
-                        dotsContainer.appendChild(dot);
-                    });
-
-                    app.carousel.updateDots(); // تحديث النقطة المحددة
-                };
-
-                // تحديث النقطة المحددة
-                app.carousel.updateDots = function () {
-                    const selectedImage = $(".selected");
-                    const selectedId = selectedImage.id; // قراءة id الخاص بالعنصر المحدد
-                
-                    const dots = $$("#carousel-dots div");
-                    dots.forEach(dot => {
-                        const dotIndex = parseInt(dot.dataset.index);
-                        const elementId = `item_${dotIndex + 1}`; // حساب id بناءً على فهرس النقطة
-                        dot.classList.toggle("active", elementId === selectedId); // تحديث النقطة المحددة
-                    });
-                };
-
-                // التعامل مع النقر على النقاط
-                app.carousel.dotClick = function (e) {
-                    const targetIndex = parseInt(e.target.dataset.index);
-                    const targetId = `item_${targetIndex + 1}`; // حساب id بناءً على فهرس النقطة
-                
-                    const selectedImage = $(".selected");
-                    const currentId = selectedImage.id;
-                
-                    // تحديد الاتجاه بناءً على الفرق بين الـ id الحالي والمستهدف
-                    const direction = targetIndex > parseInt(currentId.split("_")[1] - 1) ? "next" : "prev";
-                    const steps = Math.abs(targetIndex - (parseInt(currentId.split("_")[1]) - 1));
-                
-                    for (let i = 0; i < steps; i++) {
-                        app.carousel.move(direction);
+                        return el;
                     }
-                
-                    // تحديث النقاط بعد النقر
-                    app.carousel.updateDots();
-                };
+                    return;
+                },
+                reorder: function () {
+                    let childcnt = $("#carousel").children.length;
+                    let childs = $("#carousel").children;
 
-                app.carousel.init();
-            })();
+                    for (let j = 0; j < childcnt; j++) {
+                        childs[j].dataset.pos = j;
+                    }
+                },
+                move: function (el) {
+                    let selected = el;
+                    if (typeof el === "string") {
+                        console.log(`got string: ${el}`);
+                        selected = (el == "next") ? $(".selected").nextElementSibling : $(".selected").previousElementSibling;
+                        console.dir(selected);
+                    }
+                    let curpos = parseInt(app.selected.dataset.pos);
+                    let tgtpos = parseInt(selected.dataset.pos);
+                    let cnt = curpos - tgtpos;
+                    let dir = (cnt < 0) ? -1 : 1;
+                    let shift = Math.abs(cnt);
+                    for (let i = 0; i < shift; i++) {
+                        let el = (dir == -1) ? $("#carousel").firstElementChild : $("#carousel").lastElementChild;
+                        if (dir == -1) {
+                            el.dataset.pos = $("#carousel").children.length;
+                            $('#carousel').append(el);
+                        } else {
+                            el.dataset.pos = 0;
+                            $('#carousel').prepend(el);
+                        }
+                        app.carousel.reorder();
+                    }
+                    app.selected = selected;
+                    let next = selected.nextElementSibling;
+                    var prev = selected.previousElementSibling;
+                    var prevSecond = prev ? prev.previousElementSibling : selected.parentElement.lastElementChild;
+                    var nextSecond = next ? next.nextElementSibling : selected.parentElement.firstElementChild;
+                    selected.className = '';
+                    selected.classList.add("selected");
+                    app.carousel.removeClass(prev).classList.add('prev');
+                    app.carousel.removeClass(next).classList.add('next');
+                    app.carousel.removeClass(nextSecond).classList.add("nextRightSecond");
+                    app.carousel.removeClass(prevSecond).classList.add("prevLeftSecond");
+                    app.carousel.nextAll(nextSecond).forEach(item => { item.className = ''; item.classList.add('hideRight') });
+                    app.carousel.prevAll(prevSecond).forEach(item => { item.className = ''; item.classList.add('hideLeft') });
+
+                    // تحديث النقاط بعد التنقل
+                    app.carousel.updateDots();
+
+                },
+                nextAll: function (el) {
+                    let els = [];
+
+                    if (el) {
+                        while (el = el.nextElementSibling) { els.push(el); }
+                    }
+
+                    return els;
+
+                },
+                prevAll: function (el) {
+                    let els = [];
+
+                    if (el) {
+                        while (el = el.previousElementSibling) { els.push(el); }
+                    }
+
+
+                    return els;
+                },
+                keypress: function (e) {
+                    switch (e.which) {
+                        case 37: // left
+                            app.carousel.move('prev');
+                            break;
+
+                        case 39: // right
+                            app.carousel.move('next');
+                            break;
+
+                        default:
+                            return;
+                    }
+                    e.preventDefault();
+                    return false;
+                },
+                select: function (e) {
+                    console.log(`select: ${e}`);
+                    let tgt = e.target;
+                    while (!tgt.parentElement.classList.contains('carousel')) {
+                        tgt = tgt.parentElement;
+                    }
+
+                    app.carousel.move(tgt);
+
+                },
+                previous: function (e) {
+                    app.carousel.move('prev');
+                },
+                next: function (e) {
+                    app.carousel.move('next');
+                },
+                doDown: function (e) {
+                    console.log(`down: ${e.x}`);
+                    app.carousel.state.downX = e.x;
+                },
+                doUp: function (e) {
+                    console.log(`up: ${e.x}`);
+                    let direction = 0,
+                        velocity = 0;
+
+                    if (app.carousel.state.downX) {
+                        direction = (app.carousel.state.downX > e.x) ? -1 : 1;
+                        velocity = app.carousel.state.downX - e.x;
+
+                        if (Math.abs(app.carousel.state.downX - e.x) < 10) {
+                            app.carousel.select(e);
+                            return false;
+                        }
+                        if (direction === -1) {
+                            app.carousel.move('next');
+                        } else {
+                            app.carousel.move('prev');
+                        }
+                        app.carousel.state.downX = 0;
+                    }
+                },
+                init: function () {
+                    document.addEventListener("keydown", app.carousel.keypress);
+                    // $('#carousel').addEventListener("click", app.carousel.select, true);
+                    $("#carousel").addEventListener("mousedown", app.carousel.doDown);
+                    $("#carousel").addEventListener("touchstart", app.carousel.doDown);
+                    $("#carousel").addEventListener("mouseup", app.carousel.doUp);
+                    $("#carousel").addEventListener("touchend", app.carousel.doup);
+
+                    app.carousel.reorder();
+                    $('#prev').addEventListener("click", app.carousel.previous);
+                    $('#next').addEventListener("click", app.carousel.next);
+
+                    // إنشاء النقاط
+                    app.carousel.createDots();
+
+                    app.selected = $(".selected");
+
+                },
+                state: {}
+
+            }
+
+            // إنشاء النقاط
+            app.carousel.createDots = function () {
+                const dotsContainer = $("#carousel-dots");
+                dotsContainer.innerHTML = ""; // مسح النقاط القديمة
+
+                const images = $$("#carousel > div"); // جميع الصور في شريط التمرير
+                images.forEach((_, index) => {
+                    const dot = document.createElement("div");
+                    dot.dataset.index = index; // تخزين فهرس الصورة
+                    //  dot.addEventListener("click", app.carousel.dotClick); // إضافة حدث النقر
+                    dotsContainer.appendChild(dot);
+                });
+
+                app.carousel.updateDots(); // تحديث النقطة المحددة
+            };
+
+            // تحديث النقطة المحددة
+            app.carousel.updateDots = function () {
+                const selectedImage = $(".selected");
+                const selectedId = selectedImage.id; // قراءة id الخاص بالعنصر المحدد
+
+                const dots = $$("#carousel-dots div");
+                dots.forEach(dot => {
+                    const dotIndex = parseInt(dot.dataset.index);
+                    const elementId = `item_${dotIndex + 1}`; // حساب id بناءً على فهرس النقطة
+                    dot.classList.toggle("active", elementId === selectedId); // تحديث النقطة المحددة
+                });
+            };
+
+            // التعامل مع النقر على النقاط
+            app.carousel.dotClick = function (e) {
+                const targetIndex = parseInt(e.target.dataset.index);
+                const targetId = `item_${targetIndex + 1}`; // حساب id بناءً على فهرس النقطة
+
+                const selectedImage = $(".selected");
+                const currentId = selectedImage.id;
+
+                // تحديد الاتجاه بناءً على الفرق بين الـ id الحالي والمستهدف
+                const direction = targetIndex > parseInt(currentId.split("_")[1] - 1) ? "next" : "prev";
+                const steps = Math.abs(targetIndex - (parseInt(currentId.split("_")[1]) - 1));
+
+                for (let i = 0; i < steps; i++) {
+                    app.carousel.move(direction);
+                }
+
+                // تحديث النقاط بعد النقر
+                app.carousel.updateDots();
+            };
+
+            app.carousel.init();
+        })();
     });
 </script>
 {% endblock %}
