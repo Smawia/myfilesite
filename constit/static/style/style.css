@@ -187,7 +187,7 @@ header ul li .left-arrow2 {
     display: none;
 }
 
-@media (min-width: 1037px) {
+@media (min-width: 1420px) {
     header .toggle-menu {
         display: none;
     }
@@ -211,10 +211,19 @@ header ul.aside-ul {
     margin-top: 0;
 }
 
-@media (max-width: 1037px) {
+@media (max-width: 1421px) {
+    header {
+        height: 80px;
+    }
     header ul {
         display: none;
 
+    }
+
+    header .togg {
+        position: absolute;
+        left: 0;
+        top: 27px;
     }
 
     header .search-header.tab {
@@ -424,12 +433,12 @@ header img {
 }
 
 /* الشاشات المتوسطة */
-@media (min-width: 575px) and (max-width: 1037px) {
+@media (min-width: 575px) and (max-width: 1420px) {
     header {
         display: flex;
         justify-content: space-between;
         align-items: center;
-        height: 60px;
+        height: 80px;
     }
 
     header .toggle-menu {
@@ -454,7 +463,7 @@ header img {
 
 @media (min-width: 575px) {
     header img {
-        width: 90px;
+        width: 130px;
         height: auto;
     }
 
@@ -8809,7 +8818,7 @@ header .phone button {
     .osus-first-content .osus-second-container .osus-second-text .osus-links a:not(:last-of-type) {
         margin-left: 10px;
     }
-    
+
 }
 
 @media (min-width: 575px) and (max-width: 767px) {
@@ -8962,6 +8971,7 @@ header .phone button {
         display: flex;
         margin-bottom: 100px;
     }
+
     .osus-first-content .osus-second-container .osus-flex {
         display: flex;
     }
