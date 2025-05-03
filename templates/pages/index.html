@@ -967,8 +967,7 @@
         const nextButton = document.querySelector(".infogr .next");
         const linkElement = document.querySelector(".infogr a"); // أضفنا هذا السطر
 
-        // تحديث الصورة
-        // تحديث الصورة والنص معًا
+        // تحديث السلايد
         function updateSlide(index) {
             imgElement.style.opacity = 0;
             textElement.style.opacity = 0;
@@ -976,248 +975,230 @@
             setTimeout(() => {
                 imgElement.src = slidess[index].image;
                 textElement.textContent = slidess[index].text;
-                linkElement.href = `infograph/${slidess[index].slug}/`; // عدل الرابط هنا ✅
                 textdateElement.textContent = slidess[index].date;
+                linkElement.href = `infograph/${slidess[index].slug}/`;
                 imgElement.style.opacity = 1;
                 textElement.style.opacity = 1;
             }, 0);
         }
 
-        // أزرار التبديل اليدوي
-        // أزرار التبديل اليدوي - تعديل فقط الأزرار
+        // أزرار التنقل اليدوي
         prevButton.addEventListener("click", () => {
             currentIndex = (currentIndex - 1 + slidess.length) % slidess.length;
-            updateSlide(currentIndex); // تم تعديل الاسم
+            updateSlide(currentIndex);
         });
 
         nextButton.addEventListener("click", () => {
-            currentIndex = (currentIndex + 1) % slidess.length; // تعديل المصفوفة
-            updateSlide(currentIndex); // تم تعديل الاسم
+            currentIndex = (currentIndex + 1) % slidess.length;
+            updateSlide(currentIndex);
         });
+
+        // تشغيل تلقائي للسلايدر
+        setInterval(() => {
+            currentIndex = (currentIndex + 1) % slidess.length;
+            updateSlide(currentIndex);
+        }, 5000); // كل 7 ثوانٍ
+
+        // تشغيل أول سلايد عند التحميل
+        updateSlide(currentIndex);
 
         if (window.innerWidth <= 1200) {
             document.querySelector('.slide.journalImage img').src = "{% static 'imgs/New_Slider_mobile.png' %}";
         }
-        const $ = str => document.querySelector(str);
-        const $$ = str => document.querySelectorAll(str);
-
-        (function () {
-            if (!window.app) {
-                window.app = {};
-            }
-            app.carousel = {
-                removeClass: function (el, classname = '') {
-                    if (el) {
-                        if (classname === '') {
-                            el.className = '';
-                        } else {
-                            el.classList.remove(classname);
+            const $ = str => document.querySelector(str);
+            const $$ = str => document.querySelectorAll(str);
+        
+            (function () {
+                if (!window.app) window.app = {};
+        
+                app.carousel = {
+                    removeClass: function (el, classname = '') {
+                        if (el) {
+                            if (classname === '') {
+                                el.className = '';
+                            } else {
+                                el.classList.remove(classname);
+                            }
+                            return el;
                         }
-                        return el;
-                    }
-                    return;
-                },
-                reorder: function () {
-                    let childcnt = $("#carousel").children.length;
-                    let childs = $("#carousel").children;
-
-                    for (let j = 0; j < childcnt; j++) {
-                        childs[j].dataset.pos = j;
-                    }
-                },
-                move: function (el) {
-                    let selected = el;
-                    if (typeof el === "string") {
-                        console.log(`got string: ${el}`);
-                        selected = (el == "next") ? $(".selected").nextElementSibling : $(".selected").previousElementSibling;
-                        console.dir(selected);
-                    }
-                    let curpos = parseInt(app.selected.dataset.pos);
-                    let tgtpos = parseInt(selected.dataset.pos);
-                    let cnt = curpos - tgtpos;
-                    let dir = (cnt < 0) ? -1 : 1;
-                    let shift = Math.abs(cnt);
-                    for (let i = 0; i < shift; i++) {
-                        let el = (dir == -1) ? $("#carousel").firstElementChild : $("#carousel").lastElementChild;
-                        if (dir == -1) {
-                            el.dataset.pos = $("#carousel").children.length;
-                            $('#carousel').append(el);
-                        } else {
-                            el.dataset.pos = 0;
-                            $('#carousel').prepend(el);
+                    },
+        
+                    reorder: function () {
+                        let childs = $("#carousel").children;
+                        for (let j = 0; j < childs.length; j++) {
+                            childs[j].dataset.pos = j;
                         }
+                    },
+        
+                    move: function (el) {
+                        let selected = el;
+        
+                        if (typeof el === "string") {
+                            selected = (el === "next") ? $(".selected").nextElementSibling : $(".selected").previousElementSibling;
+                        }
+        
+                        if (!selected) return;
+        
+                        let curpos = parseInt(app.selected.dataset.pos);
+                        let tgtpos = parseInt(selected.dataset.pos);
+                        let dir = (curpos - tgtpos < 0) ? -1 : 1;
+                        let shift = Math.abs(curpos - tgtpos);
+        
+                        for (let i = 0; i < shift; i++) {
+                            let el = (dir === -1) ? $("#carousel").firstElementChild : $("#carousel").lastElementChild;
+                            el.dataset.pos = (dir === -1) ? $("#carousel").children.length : 0;
+                            (dir === -1 ? $('#carousel').append(el) : $('#carousel').prepend(el));
+                            app.carousel.reorder();
+                        }
+        
+                        app.selected = selected;
+        
+                        let next = selected.nextElementSibling;
+                        let prev = selected.previousElementSibling;
+                        let prevSecond = prev ? prev.previousElementSibling : selected.parentElement.lastElementChild;
+                        let nextSecond = next ? next.nextElementSibling : selected.parentElement.firstElementChild;
+        
+                        selected.className = 'selected';
+                        app.carousel.removeClass(prev).classList.add('prev');
+                        app.carousel.removeClass(next).classList.add('next');
+                        app.carousel.removeClass(prevSecond).classList.add('prevLeftSecond');
+                        app.carousel.removeClass(nextSecond).classList.add('nextRightSecond');
+        
+                        app.carousel.nextAll(nextSecond).forEach(el => {
+                            el.className = 'hideRight';
+                        });
+        
+                        app.carousel.prevAll(prevSecond).forEach(el => {
+                            el.className = 'hideLeft';
+                        });
+        
+                        app.carousel.updateDots(); // تحديث النقاط
+                    },
+        
+                    nextAll: function (el) {
+                        let els = [];
+                        while (el && (el = el.nextElementSibling)) {
+                            els.push(el);
+                        }
+                        return els;
+                    },
+        
+                    prevAll: function (el) {
+                        let els = [];
+                        while (el && (el = el.previousElementSibling)) {
+                            els.push(el);
+                        }
+                        return els;
+                    },
+        
+                    keypress: function (e) {
+                        switch (e.which) {
+                            case 37: // Left
+                                app.carousel.move('prev');
+                                break;
+                            case 39: // Right
+                                app.carousel.move('next');
+                                break;
+                        }
+                    },
+        
+                    select: function (e) {
+                        let tgt = e.target;
+                        while (tgt && !tgt.parentElement.classList.contains('carousel')) {
+                            tgt = tgt.parentElement;
+                        }
+                        app.carousel.move(tgt);
+                    },
+        
+                    previous: function () {
+                        app.carousel.move('prev');
+                    },
+        
+                    next: function () {
+                        app.carousel.move('next');
+                    },
+        
+                    doDown: function (e) {
+                        app.carousel.state.downX = e.x || e.touches[0].clientX;
+                    },
+        
+                    doUp: function (e) {
+                        let upX = e.x || (e.changedTouches && e.changedTouches[0].clientX);
+                        if (app.carousel.state.downX) {
+                            let direction = (app.carousel.state.downX > upX) ? -1 : 1;
+                            let velocity = Math.abs(app.carousel.state.downX - upX);
+        
+                            if (velocity < 10) {
+                                app.carousel.select(e);
+                            } else {
+                                (direction === -1) ? app.carousel.move('next') : app.carousel.move('prev');
+                            }
+                            app.carousel.state.downX = 0;
+                        }
+                    },
+        
+                    init: function () {
+                        document.addEventListener("keydown", app.carousel.keypress);
+                        $("#carousel").addEventListener("mousedown", app.carousel.doDown);
+                        $("#carousel").addEventListener("touchstart", app.carousel.doDown);
+                        $("#carousel").addEventListener("mouseup", app.carousel.doUp);
+                        $("#carousel").addEventListener("touchend", app.carousel.doUp);
+                        $('#prev').addEventListener("click", app.carousel.previous);
+                        $('#next').addEventListener("click", app.carousel.next);
+        
                         app.carousel.reorder();
-                    }
-                    app.selected = selected;
-                    let next = selected.nextElementSibling;
-                    var prev = selected.previousElementSibling;
-                    var prevSecond = prev ? prev.previousElementSibling : selected.parentElement.lastElementChild;
-                    var nextSecond = next ? next.nextElementSibling : selected.parentElement.firstElementChild;
-                    selected.className = '';
-                    selected.classList.add("selected");
-                    app.carousel.removeClass(prev).classList.add('prev');
-                    app.carousel.removeClass(next).classList.add('next');
-                    app.carousel.removeClass(nextSecond).classList.add("nextRightSecond");
-                    app.carousel.removeClass(prevSecond).classList.add("prevLeftSecond");
-                    app.carousel.nextAll(nextSecond).forEach(item => { item.className = ''; item.classList.add('hideRight') });
-                    app.carousel.prevAll(prevSecond).forEach(item => { item.className = ''; item.classList.add('hideLeft') });
-
-                    // تحديث النقاط بعد التنقل
-                    app.carousel.updateDots();
-
-                },
-                nextAll: function (el) {
-                    let els = [];
-
-                    if (el) {
-                        while (el = el.nextElementSibling) { els.push(el); }
-                    }
-
-                    return els;
-
-                },
-                prevAll: function (el) {
-                    let els = [];
-
-                    if (el) {
-                        while (el = el.previousElementSibling) { els.push(el); }
-                    }
-
-
-                    return els;
-                },
-                keypress: function (e) {
-                    switch (e.which) {
-                        case 37: // left
-                            app.carousel.move('prev');
-                            break;
-
-                        case 39: // right
+                        app.selected = $(".selected");
+        
+                        app.carousel.createDots();
+                        app.carousel.autoSlide();
+                    },
+        
+                    createDots: function () {
+                        const dotsContainer = $("#carousel-dots");
+                        dotsContainer.innerHTML = "";
+        
+                        const items = $$("#carousel > div");
+                        items.forEach((_, index) => {
+                            const dot = document.createElement("div");
+                            dot.dataset.index = index;
+                            dot.addEventListener("click", app.carousel.dotClick);
+                            dotsContainer.appendChild(dot);
+                        });
+        
+                        app.carousel.updateDots();
+                    },
+        
+                    updateDots: function () {
+                        const selected = $(".selected");
+                        const selectedId = selected ? selected.id : null;
+        
+                        const dots = $$("#carousel-dots div");
+                        dots.forEach(dot => {
+                            const index = parseInt(dot.dataset.index);
+                            const dotId = `item_${index + 1}`;
+                            dot.classList.toggle("active", dotId === selectedId);
+                        });
+                    },
+        
+                    dotClick: function (e) {
+                        const targetIndex = parseInt(e.target.dataset.index);
+                        const targetId = `item_${targetIndex + 1}`;
+                        const targetElement = document.getElementById(targetId);
+                        app.carousel.move(targetElement);
+                    },
+        
+                    autoSlide: function () {
+                        setInterval(() => {
                             app.carousel.move('next');
-                            break;
-
-                        default:
-                            return;
-                    }
-                    e.preventDefault();
-                    return false;
-                },
-                select: function (e) {
-                    console.log(`select: ${e}`);
-                    let tgt = e.target;
-                    while (!tgt.parentElement.classList.contains('carousel')) {
-                        tgt = tgt.parentElement;
-                    }
-
-                    app.carousel.move(tgt);
-
-                },
-                previous: function (e) {
-                    app.carousel.move('prev');
-                },
-                next: function (e) {
-                    app.carousel.move('next');
-                },
-                doDown: function (e) {
-                    console.log(`down: ${e.x}`);
-                    app.carousel.state.downX = e.x;
-                },
-                doUp: function (e) {
-                    console.log(`up: ${e.x}`);
-                    let direction = 0,
-                        velocity = 0;
-
-                    if (app.carousel.state.downX) {
-                        direction = (app.carousel.state.downX > e.x) ? -1 : 1;
-                        velocity = app.carousel.state.downX - e.x;
-
-                        if (Math.abs(app.carousel.state.downX - e.x) < 10) {
-                            app.carousel.select(e);
-                            return false;
-                        }
-                        if (direction === -1) {
-                            app.carousel.move('next');
-                        } else {
-                            app.carousel.move('prev');
-                        }
-                        app.carousel.state.downX = 0;
-                    }
-                },
-                init: function () {
-                    document.addEventListener("keydown", app.carousel.keypress);
-                    // $('#carousel').addEventListener("click", app.carousel.select, true);
-                    $("#carousel").addEventListener("mousedown", app.carousel.doDown);
-                    $("#carousel").addEventListener("touchstart", app.carousel.doDown);
-                    $("#carousel").addEventListener("mouseup", app.carousel.doUp);
-                    $("#carousel").addEventListener("touchend", app.carousel.doup);
-
-                    app.carousel.reorder();
-                    $('#prev').addEventListener("click", app.carousel.previous);
-                    $('#next').addEventListener("click", app.carousel.next);
-
-                    // إنشاء النقاط
-                    app.carousel.createDots();
-
-                    app.selected = $(".selected");
-
-                },
-                state: {}
-
-            }
-
-            // إنشاء النقاط
-            app.carousel.createDots = function () {
-                const dotsContainer = $("#carousel-dots");
-                dotsContainer.innerHTML = ""; // مسح النقاط القديمة
-
-                const images = $$("#carousel > div"); // جميع الصور في شريط التمرير
-                images.forEach((_, index) => {
-                    const dot = document.createElement("div");
-                    dot.dataset.index = index; // تخزين فهرس الصورة
-                    dotsContainer.appendChild(dot);
-                });
-
-                app.carousel.updateDots(); // تحديث النقطة المحددة
-            };
-
-            // تحديث النقاط
-            app.carousel.updateDots = function () {
-                const selectedImage = $(".selected"); // الحصول على الصورة المحددة حاليًا
-                const selectedId = selectedImage ? selectedImage.id : null; // الحصول على ID الصورة المحددة
-
-                const dots = $$("#carousel-dots div"); // الحصول على جميع النقاط
-                dots.forEach(dot => {
-                    const dotIndex = parseInt(dot.dataset.index); // الحصول على فهرس النقطة
-                    const elementId = `item_${dotIndex + 1}`; // حساب ID العنصر المرتبط بالنقطة
-                    dot.classList.toggle("active", elementId === selectedId); // تحديث حالة النقطة
-                });
-            };
-
-            // التعامل مع النقر على النقاط
-            app.carousel.dotClick = function (e) {
-                const targetIndex = parseInt(e.target.dataset.index);
-                const targetId = `item_${targetIndex + 1}`; // العنصر المستهدف
+                        }, 5000);
+                    },
+        
+                    state: {}
+                };
+        
+                app.carousel.init();
+            })();
             
-                const selectedImage = $(".selected");
-                const currentIndex = parseInt(selectedImage.id.split("_")[1]) - 1;
-                
-                console.log(`current: ${currentIndex} target: ${selectedImage.id}`);
-                if (targetIndex === currentIndex) {
-                    return; // لا تفعل شيئًا إذا كانت النقطة هي نفسها المحددة حاليًا
-                }
-            
-                // إزالة المحدد الحالي
-                selectedImage.classList.remove("selected");
-            
-                // تحديد العنصر الجديد
-                const targetElement = document.getElementById(targetId);
-                targetElement.classList.add("selected");
-            
-                // تحديث النقاط
-                app.carousel.updateDots();
-            };
-            app.carousel.init();
-        })();
     });
 </script>
 {% endblock %}
