@@ -163,7 +163,7 @@
         transform: translateY(-50%);
         font-size: 2rem;
         color: white;
-        background-color: rgba(0, 0, 0, 0.5);
+        background-color: rgba(0, 0, 0, 0.33);
         padding: 10px 20px;
         border-radius: 50%;
         cursor: pointer;
@@ -188,6 +188,8 @@
         justify-content: center;
         position: relative;
         top: 20px;
+        transform: scale(1);
+        flex-direction: row-reverse; /* يجعل الترتيب من اليمين إلى اليسار */
     }
 
     .carousel-dots div {
@@ -196,13 +198,31 @@
         background-color: rgba(0, 0, 0, 0.3);
         border-radius: 50%;
         margin: 0 5px;
-        /* cursor: pointer;*/
-        transition: background-color 0.3s;
+        cursor: pointer;
+        transition: 
+            background-color 0.3s ease,
+            width 0.3s ease,
+            height 0.3s ease,
+            border-radius 0.3s ease,
+            transform 0.3s ease; /* للتحكم في التكبير */
     }
-
+    
+    .carousel-dots div:hover {
+        background-color: rgba(0, 0, 0, 0.6);
+        width: 18px;
+        height: 10px;
+        border-radius: 5px;
+        transform: scale(1.2);
+    }
+    
     .carousel-dots div.active {
-        background-color: rgba(0, 0, 0, 0.8);
+        background-color: rgba(0, 0, 0, 0.9);
+        transform: scale(1.4);
+        width: 20px;
+        height: 10px;
+        border-radius: 4px;
     }
+    
 
     @media (max-width: 574px) {
         main {
@@ -564,7 +584,7 @@
                     <button class="next" aria-label="التالي">&gt;</button>
                 </div>
                 <div class="daw-info">
-                    <span class="book-span">13 مارس 2025</span>
+                    <span class="book-span pod-info-index-date">11 مارس 2025</span>
                     <p class="pod-info-index">أكثر سبع دول إنتاجاً للأدوية في العام 2024</p>
                 </div>
             </div>
@@ -582,7 +602,7 @@
             <a href="{% url 'infograph_detail' 'Top-10-migrant-exporting-countries-in-2023' %}">
                 <img src="{% static 'imgs/Info-08.png' %}" alt="إنفوجراف">
                 <div class="silder-moving daw-info">
-                    <span> 13 مارس 2025 </span>
+                    <span> 30 أبريل 2025 </span>
                     <p> أكثر عشر دول تصديرًا للمهاجرين في 2023</p>
                 </div>
             </a>
@@ -592,13 +612,13 @@
             <a href="{% url 'infograph_detail' 'The-seven-largest-pharmaceutical-producing-countries-in-2024' %}">
                 <img src="{% static 'imgs/Info-01.png' %}" alt="إنفوجراف">
                 <div class="silder-moving daw-info">
-                    <span> 13 مارس 2025 </span>
+                    <span> 11 مارس 2025 </span>
                     <p>أكثر سبع دول إنتاجًا للأدوية في العام 2024</p>
                 </div>
             </a>
         </div>
 
-        <div id='item_3' class="prevLeftSecond">
+        <div id='item_3' class="hideLeft">
             <a href="{% url 'infograph_detail' 'Top-ten-countries-with-the-largest-uranium-reserves' %}">
                 <img src="{% static 'imgs/Info-02.png' %}" alt="image info">
                 <div class="silder-moving">
@@ -608,71 +628,161 @@
             </a>
         </div>
 
-        <div id='item_4' class="prev">
+        <div id='item_4' class="hideLeft">
             <a href="{% url 'infograph_detail' 'Government-ministries-and-the-big-five-economies' %}">
                 <img src="{% static 'imgs/Info-03.png' %}" alt="image info">
                 <div class="silder-moving">
-                    <span> 13 مارس 2025 </span>
+                    <span> 15 مارس 2025 </span>
                     <p>الوزارات الحكومية والاقتصادات الخمس الكبرى</p>
                 </div>
             </a>
         </div>
 
-        <div id='item_5' class="selected">
+        <div id='item_5' class="hideLeft">
             <a href="{% url 'infograph_detail' 'Unemployment-in-Arab-countries' %}">
                 <img src="{% static 'imgs/Info-04.png' %}" alt="image info">
                 <div class="silder-moving">
-                    <span> 13 مارس 2025 </span>
+                    <span> 17 مارس 2025 </span>
                     <p>البطالة في الدول العربية</p>
                 </div>
             </a>
         </div>
 
-        <div id='item_6' class="next">
+        <div id='item_6' class="hideLeft">
             <a href="{% url 'infograph_detail' 'How-education-affects-the-economy' %}">
                 <img src="{% static 'imgs/Info-05.png' %}" alt="image info">
                 <div class="silder-moving">
-                    <span> 13 مارس 2025 </span>
+                    <span> 19 مارس 2025 </span>
                     <p>كيف يؤثر التعليم على الاقتصاد</p>
                 </div>
             </a>
         </div>
 
-        <div id='item_7' class="nextRightSecond">
+        <div id='item_7' class="hideLeft">
             <a href="{% url 'infograph_detail' 'Private-sector-contribution-to-GDP-2023' %}">
                 <img src="{% static 'imgs/Info-06.png' %}">
                 <div class="silder-moving">
-                    <span> 13 مارس 2025 </span>
+                    <span> 21 مارس 2025 </span>
                     <p>مساهمة القطاع الخاص في الناتج المحلي الإجمالي 2023</p>
                 </div>
             </a>
         </div>
 
-        <div id='item_8' class="hideRight" alt="إنفوجراف">
+        <div id='item_8' class="prevLeftSecond" alt="إنفوجراف">
             <a href="{% url 'infograph_detail' 'Cotton-kings-2023' %}">
                 <img src="{% static 'imgs/Info-07.png' %}">
                 <div class="silder-moving">
-                    <span> 13 مارس 2025 </span>
+                    <span> 23 مارس 2025 </span>
                     <p>ملوك القطن...أكبر عشر دول منتجة للقطن في العالم 2023</p>
                 </div>
             </a>
         </div>
 
-        <div id='item_9' class="hideRight" alt="إنفوجراف">
+        <div id='item_9' class="prev" alt="إنفوجراف">
             <a href="{% url 'infograph_detail' 'Taxes-and-companies' %}">
                 <img src="{% static 'imgs/Info-09.png' %}">
                 <div class="silder-moving">
-                    <span> 13 مارس 2025 </span>
+                    <span> 25 مارس 2025 </span>
                     <p>الضرائب والشركات</p>
                 </div>
             </a>
         </div>
-        <div id='item_10' class="hideRight" alt="إنفوجراف">
+        <div id='item_10' class="selected" alt="إنفوجراف">
             <a href="{% url 'infograph_detail' 'higher-education-in-the-Arab-World' %}">
                 <img src="{% static 'imgs/Info-10.png' %}">
                 <div class="silder-moving">
-                    <span> 13 مارس 2025</span>
+                    <span> 27 مارس 2025</span>
                     <p>التعليم العالي في العالم العربي</p>
+                </div>
+            </a>
+        </div>
+        <div id='item_11' class="next" alt="إنفوجراف">
+            <a href="{% url 'infograph_detail' 'health-care-in-yemen' %}">
+                <img src="{% static 'imgs/Info-11.png' %}">
+                <div class="silder-moving">
+                    <span> 29 مارس 2025</span>
+                    <p>القطاع الصحي في اليمن</p>
+                </div>
+            </a>
+        </div>
+        <div id='item_12' class="nextRightSecond" alt="إنفوجراف">
+            <a href="{% url 'infograph_detail' 'the-spread-of-epidemics' %}">
+                <img src="{% static 'imgs/Info-12.png' %}">
+                <div class="silder-moving">
+                    <span> 3 أبريل 2025</span>
+                    <p>انتشار الأوبئة</p>
+                </div>
+            </a>
+        </div>
+        <div id='item_13' class="hideRight" alt="إنفوجراف">
+            <a href="{% url 'infograph_detail' 'top-ten-Social-care-Systems' %}">
+                <img src="{% static 'imgs/Info-13.png' %}">
+                <div class="silder-moving">
+                    <span> 7 أبريل 2025</span>
+                    <p>أكبر عشر أنظمة رعاية اجتماعية</p>
+                </div>
+            </a>
+        </div>
+        <div id='item_14' class="hideRight" alt="إنفوجراف">
+            <a href="{% url 'infograph_detail' 'largest-healthcare-systems' %}">
+                <img src="{% static 'imgs/Info-14.png' %}">
+                <div class="silder-moving">
+                    <span> 9 أبريل 2025</span>
+                    <p>أكبر أنظمة رعاية صحية</p>
+                </div>
+            </a>
+        </div>
+        <div id='item_15' class="hideRight" alt="إنفوجراف">
+            <a href="{% url 'infograph_detail' 'the-brain-drain-of-the-Arab-world' %}">
+                <img src="{% static 'imgs/Info-15.png' %}">
+                <div class="silder-moving">
+                    <span> 17 أبريل 2025</span>
+                    <p>هجرة العقول العربية</p>
+                </div>
+            </a>
+        </div>
+        <div id='item_16' class="hideRight" alt="إنفوجراف">
+            <a href="{% url 'infograph_detail' 'the-largest-armies' %}">
+                <img src="{% static 'imgs/Info-16.png' %}">
+                <div class="silder-moving">
+                    <span> 19 أبريل 2025</span>
+                    <p>الجيوش الأكبر</p>
+                </div>
+            </a>
+        </div>
+        <div id='item_17' class="hideRight" alt="إنفوجراف">
+            <a href="{% url 'infograph_detail' 'top-ten-countries-with-the-highest-teacher-density' %}">
+                <img src="{% static 'imgs/Info-17.png' %}">
+                <div class="silder-moving">
+                    <span> 20 أبريل 2025</span>
+                    <p>أكثر عشر دول في كثافة المعلّمين</p>
+                </div>
+            </a>
+        </div>
+        <div id='item_18' class="hideRight" alt="إنفوجراف">
+            <a href="{% url 'infograph_detail' 'top-ten-countries-with-the-most-doctors' %}">
+                <img src="{% static 'imgs/Info-18.png' %}">
+                <div class="silder-moving">
+                    <span> 23 أبريل 2025</span>
+                    <p>أكثر عشر دول في كثافة الأطباء</p>
+                </div>
+            </a>
+        </div>
+        <div id='item_19' class="hideRight" alt="إنفوجراف">
+            <a href="{% url 'infograph_detail' 'water-and-Arab-countries' %}">
+                <img src="{% static 'imgs/Info-19.png' %}">
+                <div class="silder-moving">
+                    <span> 27 أبريل 2025</span>
+                    <p>المياه والدول العربية</p>
+                </div>
+            </a>
+        </div>
+        <div id='item_20' class="hideRight" alt="إنفوجراف">
+            <a href="{% url 'infograph_detail' 'top-ten-Arab-countries-sending-migrant-remittances-2024' %}">
+                <img src="{% static 'imgs/Info-20.png' %}">
+                <div class="silder-moving">
+                    <span> 29 أبريل 2025</span>
+                    <p>أكبر عشر دول عربية إصدارًا لتحويلات المهاجرين 2024</p>
                 </div>
             </a>
         </div>
@@ -729,59 +839,130 @@
             {
                 image: "{% static 'imgs/Info-01.png' %}",
                 text: "أكثر سبع دول إنتاجاً للأدوية في العام 2024",
+                date: "11 مارس 2025",
                 slug: 'The-seven-largest-pharmaceutical-producing-countries-in-2024'
             },
             {
                 image: "{% static 'imgs/Info-02.png' %}",
                 text: "أكبر عشر دول في احتياطي اليورانيوم",
+                date: "13 مارس 2025",
                 slug: 'Top-ten-countries-with-the-largest-uranium-reserves',
             },
             {
                 image: "{% static 'imgs/Info-03.png' %}",
                 text: "الوزارات الحكومية والاقتصادات الخمس الكبرى",
+                date: "15 مارس 2025",
                 slug: 'Government-ministries-and-the-big-five-economies'
             },
             {
                 image: "{% static 'imgs/Info-04.png' %}",
                 text: "البطالة في الدول العربية",
+                date: "17 مارس 2025",
                 slug: 'Unemployment-in-Arab-countries'
             },
             {
                 image: "{% static 'imgs/Info-05.png' %}",
                 text: "كيف يؤثر التعليم على الاقتصاد",
+                date: "19 مارس 2025",
                 slug: 'How-education-affects-the-economy'
             },
             {
                 image: "{% static 'imgs/Info-06.png' %}",
                 text: "مساهمة القطاع الخاص في الناتج المحلي الإجمالي 2023",
+                date: "21 مارس 2025",
                 slug: 'Private-sector-contribution-to-GDP-2023'
             },
             {
                 image: "{% static 'imgs/Info-07.png' %}",
                 text: "ملوك القطن...أكبر عشر دول منتجة للقطن في العالم 2023",
+                date: "23 مارس 2025",
                 slug: 'Cotton-kings-2023'
             },
             {
                 image: "{% static 'imgs/Info-08.png' %}",
                 text: "أكثر عشر دول تصديرًا للمهاجرين في 2023",
+                date: "30 أبريل 2025",
                 slug: 'Top-10-migrant-exporting-countries-in-2023'
             },
             {
                 image: "{% static 'imgs/Info-09.png' %}",
                 text: "الضرائب والشركات",
+                date: "25 مارس 2025",
                 slug: 'Taxes-and-companies'
             },
             {
                 image: "{% static 'imgs/Info-10.png' %}",
                 text: "التعليم العالي في العالم العربي",
+                date: "27 مارس 2025",
                 slug: 'higher-education-in-the-Arab-World'
-            }
+            },
+            {
+                image: "{% static 'imgs/Info-11.png' %}",
+                text: "القطاع الصحي في اليمن",
+                date: "29 مارس 2025",
+                slug: 'health-care-in-yemen'
+            },
+            {
+                image: "{% static 'imgs/Info-12.png' %}",
+                text: "انتشار الأوبئة",
+                date: "3 أبريل 2025",
+                slug: 'the-spread-of-epidemics'
+            },
+            {
+                image: "{% static 'imgs/Info-13.png' %}",
+                text: "أكبر عشر أنظمة رعاية اجتماعية",
+                date: "7 أبريل 2025",
+                slug: 'top-ten-Social-care-Systems'
+            },
+            {
+                image: "{% static 'imgs/Info-14.png' %}",
+                text: "أكبر أنظمة رعاية صحية",
+                date: "9 أبريل 2025",
+                slug: 'largest-healthcare-systems'
+            },
+            {
+                image: "{% static 'imgs/Info-15.png' %}",
+                text: "هجرة العقول العربية",
+                date: "17 أبريل 2025",
+                slug: 'the-brain-drain-of-the-Arab-world'
+            },
+            {
+                image: "{% static 'imgs/Info-16.png' %}",
+                text: "الجيوش الأكبر",
+                date: "19 أبريل 2025",
+                slug: 'the-largest-armies'
+            },
+            {
+                image: "{% static 'imgs/Info-17.png' %}",
+                text: "أكثر عشر دول في كثافة المعلّمين",
+                date: "20 أبريل 2025",
+                slug: 'top-ten-countries-with-the-highest-teacher-density'
+            },
+            {
+                image: "{% static 'imgs/Info-18.png' %}",
+                text: "أكثر عشر دول في كثافة الأطباء",
+                date: "23 أبريل 2025",
+                slug: 'top-ten-countries-with-the-most-doctors'
+            },
+            {
+                image: "{% static 'imgs/Info-19.png' %}",
+                text: "المياه والدول العربية",
+                date: "27 أبريل 2025",
+                slug: 'water-and-Arab-countries'
+            },
+            {
+                image: "{% static 'imgs/Info-20.png' %}",
+                text: "أكبر عشر دول عربية إصدارًا لتحويلات المهاجرين 2024",
+                date: "29 أبريل 2025",
+                slug: 'top-ten-Arab-countries-sending-migrant-remittances-2024'
+            },
 
         ];
 
         let currentIndex = 0;
         const imgElement = document.querySelector(".infogr img");
         const textElement = document.querySelector(".pod-info-index");
+        const textdateElement = document.querySelector(".pod-info-index-date");
         const prevButton = document.querySelector(".infogr .prev");
         const nextButton = document.querySelector(".infogr .next");
         const linkElement = document.querySelector(".infogr a"); // أضفنا هذا السطر
@@ -796,7 +977,7 @@
                 imgElement.src = slidess[index].image;
                 textElement.textContent = slidess[index].text;
                 linkElement.href = `infograph/${slidess[index].slug}/`; // عدل الرابط هنا ✅
-
+                textdateElement.textContent = slidess[index].date;
                 imgElement.style.opacity = 1;
                 textElement.style.opacity = 1;
             }, 0);
@@ -993,46 +1174,48 @@
                 images.forEach((_, index) => {
                     const dot = document.createElement("div");
                     dot.dataset.index = index; // تخزين فهرس الصورة
-                    //  dot.addEventListener("click", app.carousel.dotClick); // إضافة حدث النقر
                     dotsContainer.appendChild(dot);
                 });
 
                 app.carousel.updateDots(); // تحديث النقطة المحددة
             };
 
-            // تحديث النقطة المحددة
+            // تحديث النقاط
             app.carousel.updateDots = function () {
-                const selectedImage = $(".selected");
-                const selectedId = selectedImage.id; // قراءة id الخاص بالعنصر المحدد
+                const selectedImage = $(".selected"); // الحصول على الصورة المحددة حاليًا
+                const selectedId = selectedImage ? selectedImage.id : null; // الحصول على ID الصورة المحددة
 
-                const dots = $$("#carousel-dots div");
+                const dots = $$("#carousel-dots div"); // الحصول على جميع النقاط
                 dots.forEach(dot => {
-                    const dotIndex = parseInt(dot.dataset.index);
-                    const elementId = `item_${dotIndex + 1}`; // حساب id بناءً على فهرس النقطة
-                    dot.classList.toggle("active", elementId === selectedId); // تحديث النقطة المحددة
+                    const dotIndex = parseInt(dot.dataset.index); // الحصول على فهرس النقطة
+                    const elementId = `item_${dotIndex + 1}`; // حساب ID العنصر المرتبط بالنقطة
+                    dot.classList.toggle("active", elementId === selectedId); // تحديث حالة النقطة
                 });
             };
 
             // التعامل مع النقر على النقاط
             app.carousel.dotClick = function (e) {
                 const targetIndex = parseInt(e.target.dataset.index);
-                const targetId = `item_${targetIndex + 1}`; // حساب id بناءً على فهرس النقطة
-
+                const targetId = `item_${targetIndex + 1}`; // العنصر المستهدف
+            
                 const selectedImage = $(".selected");
-                const currentId = selectedImage.id;
-
-                // تحديد الاتجاه بناءً على الفرق بين الـ id الحالي والمستهدف
-                const direction = targetIndex > parseInt(currentId.split("_")[1] - 1) ? "next" : "prev";
-                const steps = Math.abs(targetIndex - (parseInt(currentId.split("_")[1]) - 1));
-
-                for (let i = 0; i < steps; i++) {
-                    app.carousel.move(direction);
+                const currentIndex = parseInt(selectedImage.id.split("_")[1]) - 1;
+                
+                console.log(`current: ${currentIndex} target: ${selectedImage.id}`);
+                if (targetIndex === currentIndex) {
+                    return; // لا تفعل شيئًا إذا كانت النقطة هي نفسها المحددة حاليًا
                 }
-
-                // تحديث النقاط بعد النقر
+            
+                // إزالة المحدد الحالي
+                selectedImage.classList.remove("selected");
+            
+                // تحديد العنصر الجديد
+                const targetElement = document.getElementById(targetId);
+                targetElement.classList.add("selected");
+            
+                // تحديث النقاط
                 app.carousel.updateDots();
             };
-
             app.carousel.init();
         })();
     });

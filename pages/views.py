@@ -452,7 +452,7 @@ def view_infograph(request):
             "title": "أكثر سبع دول إنتاجاً للأدوية في العام 2024",
             "slug": "The-seven-largest-pharmaceutical-producing-countries-in-2024",
             "image": "imgs/Info-01.png",
-            "date": "13 مارس 2025",
+            "date": "11 مارس 2025",
         },
         {
             "title": "أكبر عشر دول في احتياطي اليورانيوم",
@@ -464,49 +464,109 @@ def view_infograph(request):
             "title": "الوزارات الحكومية والاقتصادات الخمس الكبرى",
             "slug": "Government-ministries-and-the-big-five-economies",
             "image": "imgs/Info-03.png",
-            "date": "13 مارس 2025",
+            "date": "15 مارس 2025",
         },
         {
             "title": "البطالة في الدول العربية",
             "slug": "Unemployment-in-Arab-countries",
             "image": "imgs/Info-04.png",
-            "date": "13 مارس 2025",
+            "date": "17 مارس 2025",
         },
         {
             "title": "كيف يؤثر التعليم على الاقتصاد",
             "slug": "How-education-affects-the-economy",
             "image": "imgs/Info-05.png",
-            "date": "13 مارس 2025",
+            "date": "19 مارس 2025",
         },
         {
             "title": "مساهمة القطاع الخاص في الناتج المحلي الإجمالي 2023",
             "slug": "Private-sector-contribution-to-GDP-2023",
             "image": "imgs/Info-06.png",
-            "date": "13 مارس 2025",
+            "date": "21 مارس 2025",
         },
         {
             "title": "ملوك القطن...أكبر عشر دول منتجة للقطن في العالم 2023",
             "slug": "Cotton-kings-2023",
             "image": "imgs/Info-07.png",
-            "date": "13 مارس 2025",
+            "date": "23 مارس 2025",
         },
         {
             "title": "أكثر عشر دول تصديرًا للمهاجرين في 2023",
             "slug":"Top-10-migrant-exporting-countries-in-2023",
             "image": "imgs/Info-08.png",
-            "date": "13 مارس 2025",
+            "date": "30 أبريل 2025",
         },
         {
             "title": "الضرائب والشركات",
             "slug": "Taxes-and-companies",
             "image": "imgs/Info-09.png",
-            "date": "13 مارس 2025",
+            "date": "25 مارس 2025",
         },
         {
             "title": "التعليم العالي في العالم العربي",
             "slug": "higher-education-in-the-Arab-World",
             "image": "imgs/Info-10.png",
-            "date": "13 مارس 2025",
+            "date": "27 مارس 2025",
+        },
+        {
+            "title": "القطاع الصحي في اليمن",
+            "slug": "health-care-in-yemen",
+            "image": "imgs/Info-11.png",
+            "date": "29 مارس 2025",
+        },
+        {
+            "title": "انتشار الأوبئة",
+            "slug": "the-spread-of-epidemics",
+            "image": "imgs/Info-12.png",
+            "date": "3 أبريل 2025",
+        },
+        {
+            "title": "أكبر عشر أنظمة رعاية اجتماعية",
+            "slug": "top-ten-Social-care-Systems",
+            "image": "imgs/Info-13.png",
+            "date": "7 أبريل 2025",
+        },
+        {
+            "title": "أكبر أنظمة رعاية صحية",
+            "slug": "largest-healthcare-systems",
+            "image": "imgs/Info-14.png",
+            "date": "9 أبريل 2025",
+        },
+        {
+            "title": "هجرة العقول العربية",
+            "slug": "the-brain-drain-of-the-Arab-world",
+            "image": "imgs/Info-15.png",
+            "date": "17 أبريل 2025",
+        },
+        {
+            "title": "الجيوش الأكبر",
+            "slug": "the-largest-armies",
+            "image": "imgs/Info-16.png",
+            "date": "19 أبريل 2025",
+        },
+        {
+            "title": "أكثر عشر دول في كثافة المعلّمين",
+            "slug": "top-ten-countries-with-the-highest-teacher-density",
+            "image": "imgs/Info-17.png",
+            "date": "20 أبريل 2025",
+        },
+        {
+            "title": "أكثر عشر دول في كثافة الأطباء",
+            "slug": "top-ten-countries-with-the-most-doctors",
+            "image": "imgs/Info-18.png",
+            "date": "23 أبريل 2025",
+        },
+        {
+            "title": "المياه والدول العربية",
+            "slug": "water-and-Arab-countries",
+            "image": "imgs/Info-19.png",
+            "date": "27 أبريل 2025",
+        },
+        {
+            "title": "أكبر عشر دول عربية إصدارًا لتحويلات المهاجرين 2024",
+            "slug": "top-ten-Arab-countries-sending-migrant-remittances-2024",
+            "image": "imgs/Info-20.png",
+            "date": "29 أبريل 2025",
         },
     ]
 
@@ -517,7 +577,7 @@ def infograph_detail(request, slug):
     data = {
         "The-seven-largest-pharmaceutical-producing-countries-in-2024": {
             'title': 'أكثر سبع دول إنتاجاً للأدوية في العام 2024',
-            'date': '13 مارس 2025',
+            'date': '11 مارس 2025',
             'image': 'imgs/Info-01.png',
         },
         "Top-ten-countries-with-the-largest-uranium-reserves": {
@@ -527,43 +587,93 @@ def infograph_detail(request, slug):
         },
         "Government-ministries-and-the-big-five-economies": {
             'title': 'الوزارات الحكومية والاقتصادات الخمس الكبرى',
-            'date': '13 مارس 2025',
+            'date': '15 مارس 2025',
             'image': 'imgs/Info-03.png',
         },
          "Unemployment-in-Arab-countries": {
             'title': 'البطالة في الدول العربية',
-            'date': '13 مارس 2025',
+            'date': '17 مارس 2025',
             'image': 'imgs/Info-04.png',
         },
          "How-education-affects-the-economy": {
             'title': 'كيف يؤثر التعليم على الاقتصاد',
-            'date': '13 مارس 2025',
+            'date': '19 مارس 2025',
             'image': 'imgs/Info-05.png',
         },
         "Private-sector-contribution-to-GDP-2023": {
             'title': 'مساهمة القطاع الخاص في الناتج المحلي الإجمالي 2023',
-            'date': '13 مارس 2025',
+            'date': '21 مارس 2025',
             'image': 'imgs/Info-06.png',
         },
         "Cotton-kings-2023": {
             'title': 'ملوك القطن...أكبر عشر دول منتجة للقطن في العالم 2023',
-            'date': '13 مارس 2025',
+            'date': '23 مارس 2025',
             'image': 'imgs/Info-07.png',
         },
         "Top-10-migrant-exporting-countries-in-2023": {
             'title': 'أكثر عشر دول تصديرًا للمهاجرين في 2023',
-            'date': '13 مارس 2025',
+            'date': '30 أبريل 2025',
             'image': 'imgs/Info-08.png',
         },
         "Taxes-and-companies": {
             'title': 'الضرائب والشركات',
-            'date': '13 مارس 2025',
+            'date': '25 مارس 2025',
             'image': 'imgs/Info-09.png',
         },
         "higher-education-in-the-Arab-World": {
             'title': 'التعليم العالي في العالم العربي',
-            'date': '13 مارس 2025',
+            'date': '27 مارس 2025',
             'image': 'imgs/Info-10.png',
+        },
+        "health-care-in-yemen": {
+            'title': 'القطاع الصحي في اليمن',
+            'date': '29 مارس 2025',
+            'image': 'imgs/Info-11.png',
+        },
+        "the-spread-of-epidemics": {
+            'title': 'انتشار الأوبئة',
+            'date': '3 أبريل 2025',
+            'image': 'imgs/Info-12.png',
+        },
+        "top-ten-Social-care-Systems": {
+            'title': 'أكبر عشر أنظمة رعاية اجتماعية',
+            'date': '7 أبريل 2025',
+            'image': 'imgs/Info-13.png',
+        },
+        "largest-healthcare-systems": {
+            'title': 'أكبر أنظمة رعاية صحية',
+            'date': '9 أبريل 2025',
+            'image': 'imgs/Info-14.png',
+        },
+        "the-brain-drain-of-the-Arab-world": {
+            'title': 'هجرة العقول العربية',
+            'date': '17 أبريل 2025',
+            'image': 'imgs/Info-15.png',
+        },
+        "the-largest-armies": {
+            'title': 'الجيوش الأكبر',
+            'date': '19 أبريل 2025',
+            'image': 'imgs/Info-16.png',
+        },
+        "top-ten-countries-with-the-highest-teacher-density": {
+            'title': 'أكثر عشر دول في كثافة المعلّمين',
+            'date': '20 أبريل 2025',
+            'image': 'imgs/Info-17.png',
+        },
+        "top-ten-countries-with-the-most-doctors": {
+            'title': 'أكثر عشر دول في كثافة الأطباء',
+            'date': '23 أبريل 2025',
+            'image': 'imgs/Info-18.png',
+        },
+        "water-and-Arab-countries": {
+            'title': 'المياه والدول العربية',
+            'date': '27 أبريل 2025',
+            'image': 'imgs/Info-19.png',
+        },
+        "top-ten-Arab-countries-sending-migrant-remittances-2024": {
+            'title': 'أكبر عشر دول عربية إصدارًا لتحويلات المهاجرين 2024',
+            'date': '29 أبريل 2025',
+            'image': 'imgs/Info-20.png',
         },
     }
 
