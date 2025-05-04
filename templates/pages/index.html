@@ -159,7 +159,7 @@
 
     .arrow-silder {
         position: absolute;
-        top: 50%;
+        top: 37%;
         transform: translateY(-50%);
         font-size: 2rem;
         color: white;
@@ -283,15 +283,18 @@
         }
 
         .right-arrow-silder {
-            right: 24%;
+            right: 22%;
         }
 
         .left-arrow-silder {
-            left: 24%;
+            left: 22%;
         }
 
         main {
             margin-bottom: -33px;
+        }
+        .arrow-silder {
+            top: 40%;
         }
     }
 
@@ -314,16 +317,16 @@
 
         #carousel div img {
             width: auto;
-            height: 90%;
+            height: 76%;
         }
 
         #carousel .silder-moving {
-            width: 658px;
+            width: 550px;
             padding-bottom: 10px;
         }
 
         .carousel-dots {
-            top: 35px;
+            top: -43px;
         }
 
         #carousel .silder-moving span {
@@ -335,15 +338,11 @@
         }
 
         .right-arrow-silder {
-            right: 30%;
+            right: 33%;
         }
 
         .left-arrow-silder {
-            left: 30%;
-        }
-
-        main {
-            margin-bottom: 40px;
+            left: 33%;
         }
     }
 </style>
@@ -997,7 +996,7 @@
         setInterval(() => {
             currentIndex = (currentIndex + 1) % slidess.length;
             updateSlide(currentIndex);
-        }, 5000); // كل 7 ثوانٍ
+        }, 7000); // كل 7 ثوانٍ
 
         // تشغيل أول سلايد عند التحميل
         updateSlide(currentIndex);
@@ -1190,7 +1189,7 @@
                     autoSlide: function () {
                         setInterval(() => {
                             app.carousel.move('next');
-                        }, 5000);
+                        }, 7000);
                     },
         
                     state: {}
