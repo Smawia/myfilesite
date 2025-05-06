@@ -25,7 +25,13 @@
 
     #carousel div {
         position: absolute;
-        transition: transform 400ms, left 400ms, opacity 400ms, z-index 0s;
+        transform: scale(0.9) rotate(-5deg) translateZ(0);
+        transition: 
+            transform 1200ms cubic-bezier(0.3, -0.5, 0.6, 1.5),
+            opacity 800ms ease-in-out;
+        backface-visibility: hidden;
+        perspective: 1000px;
+        will-change: transform, opacity;
         opacity: 1;
     }
 
@@ -121,29 +127,6 @@
     #carousel div.next img {
         width: 300px;
         height: 300px;
-    }
-
-    #carousel .silder-moving {
-        background-color: white;
-        padding: 10px;
-        min-width: 500px;
-        /* max-width: 500px; */
-        box-sizing: border-box;
-        border-bottom-right-radius: 10px;
-        border-bottom-left-radius: 10px;
-        font-family: 'CodecProRegular';
-        width: 658px;
-    }
-
-    #carousel .silder-moving span {
-        color: #777777;
-        font-size: 14px;
-    }
-
-    #carousel .silder-moving p {
-        color: #333333;
-        font-size: 16px;
-        font-family: 'CodecProBold';
     }
 
     #carousel div.nextRightSecond {
@@ -266,20 +249,8 @@
             display: block;
         }
 
-        #carousel .silder-moving {
-            width: 562px;
-        }
-
         .carousel-dots {
-            top: 0;
-        }
-
-        #carousel .silder-moving span {
-            font-size: 13px;
-        }
-
-        #carousel .silder-moving p {
-            font-size: 15px;
+            top: -90px;
         }
 
         .right-arrow-silder {
@@ -295,6 +266,9 @@
         }
         .arrow-silder {
             top: 40%;
+        }
+        .spe-style-m {
+            margin-top: -90px;
         }
     }
 
@@ -316,33 +290,27 @@
         }
 
         #carousel div img {
-            width: auto;
-            height: 76%;
-        }
-
-        #carousel .silder-moving {
-            width: 550px;
-            padding-bottom: 10px;
+            width: 580px;
+            height: 72%;
         }
 
         .carousel-dots {
-            top: -43px;
+            top: -173px;
         }
 
-        #carousel .silder-moving span {
-            font-size: 14px;
-        }
-
-        #carousel .silder-moving p {
-            font-size: 16px;
+        .arrow-silder {
+            top: 36%;
         }
 
         .right-arrow-silder {
-            right: 33%;
+            right: 32%;
         }
 
         .left-arrow-silder {
-            left: 33%;
+            left: 32%;
+        }
+        .spe-style-m {
+            margin-top: -125px;
         }
     }
 </style>
@@ -600,189 +568,109 @@
         <div id='item_1' class="hideLeft">
             <a href="{% url 'infograph_detail' 'Top-10-migrant-exporting-countries-in-2023' %}">
                 <img src="{% static 'imgs/Info-08.png' %}" alt="إنفوجراف">
-                <div class="silder-moving daw-info">
-                    <span> 30 أبريل 2025 </span>
-                    <p> أكثر عشر دول تصديرًا للمهاجرين في 2023</p>
-                </div>
             </a>
         </div>
 
         <div id='item_2' class="hideLeft">
             <a href="{% url 'infograph_detail' 'The-seven-largest-pharmaceutical-producing-countries-in-2024' %}">
                 <img src="{% static 'imgs/Info-01.png' %}" alt="إنفوجراف">
-                <div class="silder-moving daw-info">
-                    <span> 11 مارس 2025 </span>
-                    <p>أكثر سبع دول إنتاجًا للأدوية في العام 2024</p>
-                </div>
             </a>
         </div>
 
         <div id='item_3' class="hideLeft">
             <a href="{% url 'infograph_detail' 'Top-ten-countries-with-the-largest-uranium-reserves' %}">
                 <img src="{% static 'imgs/Info-02.png' %}" alt="image info">
-                <div class="silder-moving">
-                    <span> 13 مارس 2025 </span>
-                    <p>أكبر عشر دول في احتياطي اليورانيوم</p>
-                </div>
             </a>
         </div>
 
         <div id='item_4' class="hideLeft">
             <a href="{% url 'infograph_detail' 'Government-ministries-and-the-big-five-economies' %}">
                 <img src="{% static 'imgs/Info-03.png' %}" alt="image info">
-                <div class="silder-moving">
-                    <span> 15 مارس 2025 </span>
-                    <p>الوزارات الحكومية والاقتصادات الخمس الكبرى</p>
-                </div>
             </a>
         </div>
 
         <div id='item_5' class="hideLeft">
             <a href="{% url 'infograph_detail' 'Unemployment-in-Arab-countries' %}">
                 <img src="{% static 'imgs/Info-04.png' %}" alt="image info">
-                <div class="silder-moving">
-                    <span> 17 مارس 2025 </span>
-                    <p>البطالة في الدول العربية</p>
-                </div>
             </a>
         </div>
 
         <div id='item_6' class="hideLeft">
             <a href="{% url 'infograph_detail' 'How-education-affects-the-economy' %}">
                 <img src="{% static 'imgs/Info-05.png' %}" alt="image info">
-                <div class="silder-moving">
-                    <span> 19 مارس 2025 </span>
-                    <p>كيف يؤثر التعليم على الاقتصاد</p>
-                </div>
             </a>
         </div>
 
         <div id='item_7' class="hideLeft">
             <a href="{% url 'infograph_detail' 'Private-sector-contribution-to-GDP-2023' %}">
                 <img src="{% static 'imgs/Info-06.png' %}">
-                <div class="silder-moving">
-                    <span> 21 مارس 2025 </span>
-                    <p>مساهمة القطاع الخاص في الناتج المحلي الإجمالي 2023</p>
-                </div>
             </a>
         </div>
 
         <div id='item_8' class="prevLeftSecond" alt="إنفوجراف">
             <a href="{% url 'infograph_detail' 'Cotton-kings-2023' %}">
                 <img src="{% static 'imgs/Info-07.png' %}">
-                <div class="silder-moving">
-                    <span> 23 مارس 2025 </span>
-                    <p>ملوك القطن...أكبر عشر دول منتجة للقطن في العالم 2023</p>
-                </div>
             </a>
         </div>
 
         <div id='item_9' class="prev" alt="إنفوجراف">
             <a href="{% url 'infograph_detail' 'Taxes-and-companies' %}">
                 <img src="{% static 'imgs/Info-09.png' %}">
-                <div class="silder-moving">
-                    <span> 25 مارس 2025 </span>
-                    <p>الضرائب والشركات</p>
-                </div>
             </a>
         </div>
         <div id='item_10' class="selected" alt="إنفوجراف">
             <a href="{% url 'infograph_detail' 'higher-education-in-the-Arab-World' %}">
                 <img src="{% static 'imgs/Info-10.png' %}">
-                <div class="silder-moving">
-                    <span> 27 مارس 2025</span>
-                    <p>التعليم العالي في العالم العربي</p>
-                </div>
             </a>
         </div>
         <div id='item_11' class="next" alt="إنفوجراف">
             <a href="{% url 'infograph_detail' 'health-care-in-yemen' %}">
                 <img src="{% static 'imgs/Info-11.png' %}">
-                <div class="silder-moving">
-                    <span> 29 مارس 2025</span>
-                    <p>القطاع الصحي في اليمن</p>
-                </div>
             </a>
         </div>
         <div id='item_12' class="nextRightSecond" alt="إنفوجراف">
             <a href="{% url 'infograph_detail' 'the-spread-of-epidemics' %}">
                 <img src="{% static 'imgs/Info-12.png' %}">
-                <div class="silder-moving">
-                    <span> 3 أبريل 2025</span>
-                    <p>انتشار الأوبئة</p>
-                </div>
             </a>
         </div>
         <div id='item_13' class="hideRight" alt="إنفوجراف">
             <a href="{% url 'infograph_detail' 'top-ten-Social-care-Systems' %}">
                 <img src="{% static 'imgs/Info-13.png' %}">
-                <div class="silder-moving">
-                    <span> 7 أبريل 2025</span>
-                    <p>أكبر عشر أنظمة رعاية اجتماعية</p>
-                </div>
             </a>
         </div>
         <div id='item_14' class="hideRight" alt="إنفوجراف">
             <a href="{% url 'infograph_detail' 'largest-healthcare-systems' %}">
                 <img src="{% static 'imgs/Info-14.png' %}">
-                <div class="silder-moving">
-                    <span> 9 أبريل 2025</span>
-                    <p>أكبر أنظمة رعاية صحية</p>
-                </div>
             </a>
         </div>
         <div id='item_15' class="hideRight" alt="إنفوجراف">
             <a href="{% url 'infograph_detail' 'the-brain-drain-of-the-Arab-world' %}">
                 <img src="{% static 'imgs/Info-15.png' %}">
-                <div class="silder-moving">
-                    <span> 17 أبريل 2025</span>
-                    <p>هجرة العقول العربية</p>
-                </div>
             </a>
         </div>
         <div id='item_16' class="hideRight" alt="إنفوجراف">
             <a href="{% url 'infograph_detail' 'the-largest-armies' %}">
                 <img src="{% static 'imgs/Info-16.png' %}">
-                <div class="silder-moving">
-                    <span> 19 أبريل 2025</span>
-                    <p>الجيوش الأكبر</p>
-                </div>
             </a>
         </div>
         <div id='item_17' class="hideRight" alt="إنفوجراف">
             <a href="{% url 'infograph_detail' 'top-ten-countries-with-the-highest-teacher-density' %}">
                 <img src="{% static 'imgs/Info-17.png' %}">
-                <div class="silder-moving">
-                    <span> 20 أبريل 2025</span>
-                    <p>أكثر عشر دول في كثافة المعلّمين</p>
-                </div>
             </a>
         </div>
         <div id='item_18' class="hideRight" alt="إنفوجراف">
             <a href="{% url 'infograph_detail' 'top-ten-countries-with-the-most-doctors' %}">
                 <img src="{% static 'imgs/Info-18.png' %}">
-                <div class="silder-moving">
-                    <span> 23 أبريل 2025</span>
-                    <p>أكثر عشر دول في كثافة الأطباء</p>
-                </div>
             </a>
         </div>
         <div id='item_19' class="hideRight" alt="إنفوجراف">
             <a href="{% url 'infograph_detail' 'water-and-Arab-countries' %}">
                 <img src="{% static 'imgs/Info-19.png' %}">
-                <div class="silder-moving">
-                    <span> 27 أبريل 2025</span>
-                    <p>المياه والدول العربية</p>
-                </div>
             </a>
         </div>
         <div id='item_20' class="hideRight" alt="إنفوجراف">
             <a href="{% url 'infograph_detail' 'top-ten-Arab-countries-sending-migrant-remittances-2024' %}">
                 <img src="{% static 'imgs/Info-20.png' %}">
-                <div class="silder-moving">
-                    <span> 29 أبريل 2025</span>
-                    <p>أكبر عشر دول عربية إصدارًا لتحويلات المهاجرين 2024</p>
-                </div>
             </a>
         </div>
     </div>
@@ -806,7 +694,7 @@
         </div>
     </div>
 </div>
-<div class="container index-articles-pod">
+<div class="container index-articles-pod spe-style-m">
     <img src="{% static 'imgs/PODCAST adv 2-01.png' %}" alt="">
 </div>
 
@@ -996,7 +884,7 @@
         setInterval(() => {
             currentIndex = (currentIndex + 1) % slidess.length;
             updateSlide(currentIndex);
-        }, 7000); // كل 7 ثوانٍ
+        }, 5000); // كل 7 ثوانٍ
 
         // تشغيل أول سلايد عند التحميل
         updateSlide(currentIndex);
@@ -1189,7 +1077,7 @@
                     autoSlide: function () {
                         setInterval(() => {
                             app.carousel.move('next');
-                        }, 7000);
+                        }, 5000);
                     },
         
                     state: {}

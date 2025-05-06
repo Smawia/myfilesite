@@ -141,6 +141,7 @@ header {
     transition: 0.6s;
     display: inline-flex;
     width: 100%;
+    align-items: baseline;
 }
 
 header form {
@@ -508,7 +509,7 @@ header img {
 
 @media (min-width: 992px) {
     header img {
-        width: 130px;
+        width: 150px;
         height: auto;
         margin-top: 11px;
     }
@@ -6356,7 +6357,7 @@ input {
     }
 
     .slide-full-inf {
-        right: 1px;
+        right: -24px;
         bottom: -70px;
         text-align: end;
         width: 70%;
@@ -9421,7 +9422,7 @@ header .phone button {
 @media (min-width: 992px) {
     .publications.carousel-title {
         text-align: center;
-        margin-bottom: -1px;
+        margin-bottom: -10px;
         margin-top: 0;
     }
 
