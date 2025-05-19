@@ -5,220 +5,97 @@
 
 {% block content %}
 <style>
-    main {
-        width: 100%;
-        margin: 0px;
-        padding: 0;
-        position: relative;
-        margin-bottom: 40px;
-        margin-top: 20px;
-        height: 750px;
-    }
-
-    #carousel {
-        position: relative;
-        height: 732px;
-        top: 50%;
-        transform: translateY(-50%);
+    .swiper-container {
+        max-width: 100%;
         overflow: hidden;
+        padding-top: 40px;
     }
 
-    #carousel div {
-        position: absolute;
-        transform: scale(0.9) rotate(-5deg) translateZ(0);
-        transition: 
-            transform 1200ms cubic-bezier(0.3, -0.5, 0.6, 1.5),
-            opacity 800ms ease-in-out;
-        backface-visibility: hidden;
-        perspective: 1000px;
-        will-change: transform, opacity;
-        opacity: 1;
-    }
-
-    #carousel div img {
-        width: auto;
-        height: 90%;
-        /*  max-height: 90%;
-        min-height: 90%;*/
-        transition: width 400ms;
-        -webkit-user-drag: none;
-        border-top-right-radius: 10px;
-        border-top-left-radius: 10px;
-        display: block;
-    }
-
-    #carousel .hideLeft .silder-moving,
-    #carousel .prevLeftSecond .silder-moving,
-    #carousel .prev .silder-moving {
-        text-align: left;
-        direction: ltr;
-        left: 10px;
-        /* تأكد من وجود مسافة كافية */
-        right: auto;
-    }
-
-    #carousel div.hideLeft {
-        left: 0%;
-        opacity: 0;
-        transform: translateY(50%) translateX(-50%);
-    }
-
-    #carousel div.hideLeft img {
-        width: 200px;
-        height: 200px;
-    }
-
-    #carousel div.hideRight {
-        left: 100%;
-        opacity: 0;
-        transform: translateY(50%) translateX(-50%);
-    }
-
-    #carousel div.hideRight img {
-        width: 200px;
-    }
-
-    #carousel div.prev {
-        z-index: 5;
-        left: 30%;
-        transform: translateY(50px) translateX(-50%);
-        opacity: 0.7;
-    }
-
-    #carousel img:hover {
-        cursor: default;
-    }
-
-    #carousel div.prev img {
-        width: 300px;
-        height: 300px;
-    }
-
-    #carousel div.prevLeftSecond {
-        z-index: 4;
-        left: 15%;
-        transform: translateY(50%) translateX(-50%);
-        opacity: 0.2;
-    }
-
-    #carousel div.prevLeftSecond img {
-        width: 200px;
-        height: 200px;
-    }
-
-    #carousel div.selected {
-        z-index: 10;
-        left: 50%;
-        transform: translateY(0px) translateX(-50%);
-        height: 100%;
-    }
-
-    #carousel div.next {
-        z-index: 5;
-        left: 70%;
-        transform: translateY(50px) translateX(-50%);
-        opacity: 0.7;
-    }
-
-    .carousel img {
-        cursor: pointer !important;
-    }
-
-    #carousel div.next img {
-        width: 300px;
-        height: 300px;
-    }
-
-    #carousel div.nextRightSecond {
-        z-index: 4;
-        left: 85%;
-        transform: translateY(50%) translateX(-50%);
-        opacity: 0.2;
-    }
-
-    #carousel div.nextRightSecond img {
-        width: 200px;
-    }
-
-    .arrow-silder {
-        position: absolute;
-        top: 37%;
-        transform: translateY(-50%);
-        font-size: 2rem;
-        color: white;
-        background-color: rgba(0, 0, 0, 0.33);
-        padding: 10px 20px;
-        border-radius: 50%;
-        cursor: pointer;
-        user-select: none;
-        transition: background-color 0.3s;
-    }
-
-    .arrow-silder:hover {
-        background-color: rgba(0, 0, 0, 0.8);
-    }
-
-    .left-arrow-silder {
-        left: 30%;
-    }
-
-    .right-arrow-silder {
-        right: 30%;
-    }
-
-    .carousel-dots {
-        display: flex;
-        justify-content: center;
+    .swiper-slide {
+        width: 400px;
+        height: 400px;
         position: relative;
-        top: 20px;
-        transform: scale(1);
-        flex-direction: row-reverse; /* يجعل الترتيب من اليمين إلى اليسار */
     }
 
-    .carousel-dots div {
+    .swiper-slide a {
+        cursor: grab;
+    }
+    .swiper-slide img {
+        width: 100%;
+        height: 100%;
+        display: block;
+        filter: blur(2px);
+        transition: filter 0.3s ease, transform 0.3s ease;
+    }
+
+    .swiper-slide-active img {
+        filter: blur(0);
+        transform: scale(1.1);
+        z-index: 2;
+    }
+
+    .swiper-pagination-bullet {
         width: 10px;
         height: 10px;
-        background-color: rgba(0, 0, 0, 0.3);
-        border-radius: 50%;
-        margin: 0 5px;
-        cursor: pointer;
-        transition: 
-            background-color 0.3s ease,
-            width 0.3s ease,
-            height 0.3s ease,
-            border-radius 0.3s ease,
-            transform 0.3s ease; /* للتحكم في التكبير */
+        background: #ddd;
+        opacity: 1;
+        margin-left: 7px;
     }
-    
-    .carousel-dots div:hover {
-        background-color: rgba(0, 0, 0, 0.6);
-        width: 18px;
-        height: 10px;
-        border-radius: 5px;
-        transform: scale(1.2);
-    }
-    
-    .carousel-dots div.active {
-        background-color: rgba(0, 0, 0, 0.9);
-        transform: scale(1.4);
+
+    .swiper-pagination-bullet-active {
+        opacity: 1;
+        background: #5754A3;
         width: 20px;
         height: 10px;
         border-radius: 4px;
     }
-    
-
-    @media (max-width: 574px) {
-        main {
-            display: none;
+    .swiper-controls {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 10px;
+        position: relative;
+        width: 38%;
+        margin: 50px auto 0;
         }
 
+        .swiper-pagination {
+        position: static !important;
+        }
+
+        .swiper-button-prev,
+        .swiper-button-next {
+        position: absolute;
+        width: 24px;
+        height: 24px;
+        background-color: #eee;
+        border-radius: 50%;
+        color: #5754A3 !important;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 10px !important;
+        cursor: pointer;
+        transition: background 0.3s;
+        }
+
+        .swiper-button-prev::after,
+        .swiper-button-next::after {
+        font-size: 10px;
+        }
+
+
+    @media (max-width: 574px) {
+        .swiper-container {
+            display: none;
+        }
         .publications.carousel-title {
             display: none;
         }
     }
 
     @media (min-width: 575px) {
-        main {
+        .swiper-container {
             display: none;
         }
 
@@ -228,89 +105,26 @@
     }
 
     @media (min-width: 768px) {
-        #carousel {
-            height: 700px;
+        .swiper-container {
+            display: block;
         }
-
-        #carousel div img {
-            height: 80%;
-            width: auto;
-        }
-
         .container.index-articles.hide-in-pc {
             display: none;
-        }
-
-        main {
-            display: block;
-        }
-
-        .publications.carousel-title {
-            display: block;
-        }
-
-        .carousel-dots {
-            top: -90px;
-        }
-
-        .right-arrow-silder {
-            right: 22%;
-        }
-
-        .left-arrow-silder {
-            left: 22%;
-        }
-
-        main {
-            margin-bottom: -33px;
-        }
-        .arrow-silder {
-            top: 40%;
-        }
-        .spe-style-m {
-            margin-top: -90px;
         }
     }
 
     @media (min-width: 992px) {
-        #carousel {
-            height: 732px;
+        .swiper-container {
+            display: block;
         }
 
         .container.index-articles.hide-in-pc {
             display: none;
         }
 
-        main {
-            display: block;
-        }
 
         .publications.carousel-title {
             display: block;
-        }
-
-        #carousel div img {
-            width: 580px;
-            height: 72%;
-        }
-
-        .carousel-dots {
-            top: -173px;
-        }
-
-        .arrow-silder {
-            top: 36%;
-        }
-
-        .right-arrow-silder {
-            right: 32%;
-        }
-
-        .left-arrow-silder {
-            left: 32%;
-        }
-        .spe-style-m {
-            margin-top: -125px;
         }
     }
 </style>
@@ -562,124 +376,122 @@
 </div>
 <div class="container"><a href="{% url 'infographs' %}">
         <h1 class="publications in-index carousel-title">أسس إنفوجراف</h1>
-    </a></div>
-<main>
-    <div id="carousel" class="carousel">
-        <div id='item_1' class="hideLeft">
-            <a href="{% url 'infograph_detail' 'Top-10-migrant-exporting-countries-in-2023' %}">
-                <img src="{% static 'imgs/Info-08.png' %}" alt="إنفوجراف">
-            </a>
-        </div>
+    </a>
+</div>
+<!-- Swiper -->
+<div class="container">
+    <div class="swiper-container">
 
-        <div id='item_2' class="hideLeft">
+    <div class="swiper-wrapper">
+        <div class="swiper-slide">
             <a href="{% url 'infograph_detail' 'The-seven-largest-pharmaceutical-producing-countries-in-2024' %}">
-                <img src="{% static 'imgs/Info-01.png' %}" alt="إنفوجراف">
+                <img src="{% static 'imgs/Info-01.png' %}" alt="">
             </a>
         </div>
-
-        <div id='item_3' class="hideLeft">
+        <div class="swiper-slide">
             <a href="{% url 'infograph_detail' 'Top-ten-countries-with-the-largest-uranium-reserves' %}">
-                <img src="{% static 'imgs/Info-02.png' %}" alt="image info">
+                <img src="{% static 'imgs/Info-02.png' %}" alt="">
             </a>
         </div>
-
-        <div id='item_4' class="hideLeft">
+        <div class="swiper-slide">
             <a href="{% url 'infograph_detail' 'Government-ministries-and-the-big-five-economies' %}">
-                <img src="{% static 'imgs/Info-03.png' %}" alt="image info">
+                <img src="{% static 'imgs/Info-03.png' %}" alt="">
             </a>
         </div>
-
-        <div id='item_5' class="hideLeft">
+        <div class="swiper-slide">
             <a href="{% url 'infograph_detail' 'Unemployment-in-Arab-countries' %}">
-                <img src="{% static 'imgs/Info-04.png' %}" alt="image info">
+                <img src="{% static 'imgs/Info-04.png' %}" alt="">
             </a>
         </div>
-
-        <div id='item_6' class="hideLeft">
+        <div class="swiper-slide">
             <a href="{% url 'infograph_detail' 'How-education-affects-the-economy' %}">
-                <img src="{% static 'imgs/Info-05.png' %}" alt="image info">
+                <img src="{% static 'imgs/Info-05.png' %}" alt="">
             </a>
         </div>
-
-        <div id='item_7' class="hideLeft">
+        <div class="swiper-slide">
             <a href="{% url 'infograph_detail' 'Private-sector-contribution-to-GDP-2023' %}">
-                <img src="{% static 'imgs/Info-06.png' %}">
+                <img src="{% static 'imgs/Info-06.png' %}" alt="">
             </a>
         </div>
-
-        <div id='item_8' class="prevLeftSecond" alt="إنفوجراف">
+        <div class="swiper-slide">
             <a href="{% url 'infograph_detail' 'Cotton-kings-2023' %}">
-                <img src="{% static 'imgs/Info-07.png' %}">
+                <img src="{% static 'imgs/Info-07.png' %}" alt="">
+            </a>
+        </div>
+        <div class="swiper-slide">
+            <a href="{% url 'infograph_detail' 'Top-10-migrant-exporting-countries-in-2023' %}">
+                <img src="{% static 'imgs/Info-08.png' %}" alt="">
+            </a>
+        </div>
+        <div class="swiper-slide">
+            <a href="{% url 'infograph_detail' 'Taxes-and-companies' %}">
+                <img src="{% static 'imgs/Info-09.png' %}" alt="">
+            </a>
+        </div>
+        <div class="swiper-slide">
+            <a href="{% url 'infograph_detail' 'higher-education-in-the-Arab-World'  %}">
+                <img src="{% static 'imgs/Info-10.png' %}" alt="">
+            </a>
+        </div>
+        <div class="swiper-slide">
+            <a href="{% url 'infograph_detail' 'health-care-in-yemen' %}">
+                <img src="{% static 'imgs/Info-11.png' %}" alt="">
+            </a>
+        </div>
+        <div class="swiper-slide">
+            <a href="{% url 'infograph_detail' 'the-spread-of-epidemics' %}">
+                <img src="{% static 'imgs/Info-12.png' %}" alt="">
+            </a>
+        </div>
+        <div class="swiper-slide">
+            <a href="{% url 'infograph_detail' 'top-ten-Social-care-Systems' %}">
+                <img src="{% static 'imgs/Info-13.png' %}" alt="">
+            </a>
+        </div>
+        <div class="swiper-slide">
+            <a href="{% url 'infograph_detail' 'largest-healthcare-systems' %}">
+                <img src="{% static 'imgs/Info-14.png' %}" alt="">
+            </a>
+        </div>
+        <div class="swiper-slide">
+            <a href="{% url 'infograph_detail' 'the-brain-drain-of-the-Arab-world' %}">
+                <img src="{% static 'imgs/Info-15.png' %}" alt="">
+            </a>
+        </div>
+        <div class="swiper-slide">
+            <a href="{% url 'infograph_detail' 'the-largest-armies' %}">
+                <img src="{% static 'imgs/Info-16.png' %}" alt="">
+            </a>
+        </div>
+        <div class="swiper-slide">
+            <a href="{% url 'infograph_detail' 'top-ten-countries-with-the-highest-teacher-density' %}">
+                <img src="{% static 'imgs/Info-17.png' %}" alt="">
+            </a>
+        </div>
+        <div class="swiper-slide">
+            <a href="{% url 'infograph_detail' 'top-ten-countries-with-the-most-doctors' %}">
+                <img src="{% static 'imgs/Info-18.png' %}" alt="">
+            </a>
+        </div>
+        <div class="swiper-slide">
+            <a href="{% url 'infograph_detail' 'water-and-Arab-countries' %}">
+                <img src="{% static 'imgs/Info-19.png' %}" alt="">
+            </a>
+        </div>
+        <div class="swiper-slide">
+            <a href="{% url 'infograph_detail' 'top-ten-Arab-countries-sending-migrant-remittances-2024' %}">
+                <img src="{% static 'imgs/Info-20.png' %}" alt="">
             </a>
         </div>
 
-        <div id='item_9' class="prev" alt="إنفوجراف">
-            <a href="{% url 'infograph_detail' 'Taxes-and-companies' %}">
-                <img src="{% static 'imgs/Info-09.png' %}">
-            </a>
-        </div>
-        <div id='item_10' class="selected" alt="إنفوجراف">
-            <a href="{% url 'infograph_detail' 'higher-education-in-the-Arab-World' %}">
-                <img src="{% static 'imgs/Info-10.png' %}">
-            </a>
-        </div>
-        <div id='item_11' class="next" alt="إنفوجراف">
-            <a href="{% url 'infograph_detail' 'health-care-in-yemen' %}">
-                <img src="{% static 'imgs/Info-11.png' %}">
-            </a>
-        </div>
-        <div id='item_12' class="nextRightSecond" alt="إنفوجراف">
-            <a href="{% url 'infograph_detail' 'the-spread-of-epidemics' %}">
-                <img src="{% static 'imgs/Info-12.png' %}">
-            </a>
-        </div>
-        <div id='item_13' class="hideRight" alt="إنفوجراف">
-            <a href="{% url 'infograph_detail' 'top-ten-Social-care-Systems' %}">
-                <img src="{% static 'imgs/Info-13.png' %}">
-            </a>
-        </div>
-        <div id='item_14' class="hideRight" alt="إنفوجراف">
-            <a href="{% url 'infograph_detail' 'largest-healthcare-systems' %}">
-                <img src="{% static 'imgs/Info-14.png' %}">
-            </a>
-        </div>
-        <div id='item_15' class="hideRight" alt="إنفوجراف">
-            <a href="{% url 'infograph_detail' 'the-brain-drain-of-the-Arab-world' %}">
-                <img src="{% static 'imgs/Info-15.png' %}">
-            </a>
-        </div>
-        <div id='item_16' class="hideRight" alt="إنفوجراف">
-            <a href="{% url 'infograph_detail' 'the-largest-armies' %}">
-                <img src="{% static 'imgs/Info-16.png' %}">
-            </a>
-        </div>
-        <div id='item_17' class="hideRight" alt="إنفوجراف">
-            <a href="{% url 'infograph_detail' 'top-ten-countries-with-the-highest-teacher-density' %}">
-                <img src="{% static 'imgs/Info-17.png' %}">
-            </a>
-        </div>
-        <div id='item_18' class="hideRight" alt="إنفوجراف">
-            <a href="{% url 'infograph_detail' 'top-ten-countries-with-the-most-doctors' %}">
-                <img src="{% static 'imgs/Info-18.png' %}">
-            </a>
-        </div>
-        <div id='item_19' class="hideRight" alt="إنفوجراف">
-            <a href="{% url 'infograph_detail' 'water-and-Arab-countries' %}">
-                <img src="{% static 'imgs/Info-19.png' %}">
-            </a>
-        </div>
-        <div id='item_20' class="hideRight" alt="إنفوجراف">
-            <a href="{% url 'infograph_detail' 'top-ten-Arab-countries-sending-migrant-remittances-2024' %}">
-                <img src="{% static 'imgs/Info-20.png' %}">
-            </a>
-        </div>
     </div>
-    <div id="carousel-dots" class="carousel-dots"></div>
-    <div class="all-rows">
-        <div class="arrow-silder left-arrow-silder" id="prev">&larr;</div>
-        <div class="arrow-silder right-arrow-silder" id="next">&rarr;</div>
-    </div>
-</main>
+    <div class="swiper-controls">
+        <div class="swiper-button-prev"></div>
+        <div class="swiper-pagination"></div>
+        <div class="swiper-button-next"></div>
+    </div>  
+</div>
+</div>
 <div class="container index-articles">
     <div class="tow-books">
         <div class="daw">
@@ -698,7 +510,9 @@
     <img src="{% static 'imgs/PODCAST adv 2-01.png' %}" alt="">
 </div>
 
-
+<!-- Swiper JS -->
+<script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
 <script>
     document.addEventListener('DOMContentLoaded', function () {
         let intervalTime = 10000; // وقت البداية بين الانتقالات
@@ -892,200 +706,34 @@
         if (window.innerWidth <= 1200) {
             document.querySelector('.slide.journalImage img').src = "{% static 'imgs/New_Slider_mobile.png' %}";
         }
-            const $ = str => document.querySelector(str);
-            const $$ = str => document.querySelectorAll(str);
-        
-            (function () {
-                if (!window.app) window.app = {};
-        
-                app.carousel = {
-                    removeClass: function (el, classname = '') {
-                        if (el) {
-                            if (classname === '') {
-                                el.className = '';
-                            } else {
-                                el.classList.remove(classname);
-                            }
-                            return el;
-                        }
-                    },
-        
-                    reorder: function () {
-                        let childs = $("#carousel").children;
-                        for (let j = 0; j < childs.length; j++) {
-                            childs[j].dataset.pos = j;
-                        }
-                    },
-        
-                    move: function (el) {
-                        let selected = el;
-        
-                        if (typeof el === "string") {
-                            selected = (el === "next") ? $(".selected").nextElementSibling : $(".selected").previousElementSibling;
-                        }
-        
-                        if (!selected) return;
-        
-                        let curpos = parseInt(app.selected.dataset.pos);
-                        let tgtpos = parseInt(selected.dataset.pos);
-                        let dir = (curpos - tgtpos < 0) ? -1 : 1;
-                        let shift = Math.abs(curpos - tgtpos);
-        
-                        for (let i = 0; i < shift; i++) {
-                            let el = (dir === -1) ? $("#carousel").firstElementChild : $("#carousel").lastElementChild;
-                            el.dataset.pos = (dir === -1) ? $("#carousel").children.length : 0;
-                            (dir === -1 ? $('#carousel').append(el) : $('#carousel').prepend(el));
-                            app.carousel.reorder();
-                        }
-        
-                        app.selected = selected;
-        
-                        let next = selected.nextElementSibling;
-                        let prev = selected.previousElementSibling;
-                        let prevSecond = prev ? prev.previousElementSibling : selected.parentElement.lastElementChild;
-                        let nextSecond = next ? next.nextElementSibling : selected.parentElement.firstElementChild;
-        
-                        selected.className = 'selected';
-                        app.carousel.removeClass(prev).classList.add('prev');
-                        app.carousel.removeClass(next).classList.add('next');
-                        app.carousel.removeClass(prevSecond).classList.add('prevLeftSecond');
-                        app.carousel.removeClass(nextSecond).classList.add('nextRightSecond');
-        
-                        app.carousel.nextAll(nextSecond).forEach(el => {
-                            el.className = 'hideRight';
-                        });
-        
-                        app.carousel.prevAll(prevSecond).forEach(el => {
-                            el.className = 'hideLeft';
-                        });
-        
-                        app.carousel.updateDots(); // تحديث النقاط
-                    },
-        
-                    nextAll: function (el) {
-                        let els = [];
-                        while (el && (el = el.nextElementSibling)) {
-                            els.push(el);
-                        }
-                        return els;
-                    },
-        
-                    prevAll: function (el) {
-                        let els = [];
-                        while (el && (el = el.previousElementSibling)) {
-                            els.push(el);
-                        }
-                        return els;
-                    },
-        
-                    keypress: function (e) {
-                        switch (e.which) {
-                            case 37: // Left
-                                app.carousel.move('prev');
-                                break;
-                            case 39: // Right
-                                app.carousel.move('next');
-                                break;
-                        }
-                    },
-        
-                    select: function (e) {
-                        let tgt = e.target;
-                        while (tgt && !tgt.parentElement.classList.contains('carousel')) {
-                            tgt = tgt.parentElement;
-                        }
-                        app.carousel.move(tgt);
-                    },
-        
-                    previous: function () {
-                        app.carousel.move('prev');
-                    },
-        
-                    next: function () {
-                        app.carousel.move('next');
-                    },
-        
-                    doDown: function (e) {
-                        app.carousel.state.downX = e.x || e.touches[0].clientX;
-                    },
-        
-                    doUp: function (e) {
-                        let upX = e.x || (e.changedTouches && e.changedTouches[0].clientX);
-                        if (app.carousel.state.downX) {
-                            let direction = (app.carousel.state.downX > upX) ? -1 : 1;
-                            let velocity = Math.abs(app.carousel.state.downX - upX);
-        
-                            if (velocity < 10) {
-                                app.carousel.select(e);
-                            } else {
-                                (direction === -1) ? app.carousel.move('next') : app.carousel.move('prev');
-                            }
-                            app.carousel.state.downX = 0;
-                        }
-                    },
-        
-                    init: function () {
-                        document.addEventListener("keydown", app.carousel.keypress);
-                        $("#carousel").addEventListener("mousedown", app.carousel.doDown);
-                        $("#carousel").addEventListener("touchstart", app.carousel.doDown);
-                        $("#carousel").addEventListener("mouseup", app.carousel.doUp);
-                        $("#carousel").addEventListener("touchend", app.carousel.doUp);
-                        $('#prev').addEventListener("click", app.carousel.previous);
-                        $('#next').addEventListener("click", app.carousel.next);
-        
-                        app.carousel.reorder();
-                        app.selected = $(".selected");
-        
-                        app.carousel.createDots();
-                        app.carousel.autoSlide();
-                    },
-        
-                    createDots: function () {
-                        const dotsContainer = $("#carousel-dots");
-                        dotsContainer.innerHTML = "";
-        
-                        const items = $$("#carousel > div");
-                        items.forEach((_, index) => {
-                            const dot = document.createElement("div");
-                            dot.dataset.index = index;
-                            dot.addEventListener("click", app.carousel.dotClick);
-                            dotsContainer.appendChild(dot);
-                        });
-        
-                        app.carousel.updateDots();
-                    },
-        
-                    updateDots: function () {
-                        const selected = $(".selected");
-                        const selectedId = selected ? selected.id : null;
-        
-                        const dots = $$("#carousel-dots div");
-                        dots.forEach(dot => {
-                            const index = parseInt(dot.dataset.index);
-                            const dotId = `item_${index + 1}`;
-                            dot.classList.toggle("active", dotId === selectedId);
-                        });
-                    },
-        
-                    dotClick: function (e) {
-                        const targetIndex = parseInt(e.target.dataset.index);
-                        const targetId = `item_${targetIndex + 1}`;
-                        const targetElement = document.getElementById(targetId);
-                        app.carousel.move(targetElement);
-                    },
-        
-                    autoSlide: function () {
-                        setInterval(() => {
-                            app.carousel.move('next');
-                        }, 5000);
-                    },
-        
-                    state: {}
-                };
-        
-                app.carousel.init();
-            })();
-            
+        var swiper = new Swiper('.swiper-container', {
+        effect: 'coverflow',
+        grabCursor: true,
+        centeredSlides: true,
+        slidesPerView: 'auto',
+        initialSlide: 9,
+        loop: true,
+        speed: 800, 
+        coverflowEffect: {
+            rotate: 50,
+            stretch: 0,
+            depth: 100,
+            modifier: 1,
+            slideShadows: true
+        },
+        autoplay: {
+            delay: 5000,
+            disableOnInteraction: false
+        },
+        pagination: {
+            el: '.swiper-pagination',
+            clickable: true
+        },
+        navigation: {
+            nextEl: '.swiper-button-next',
+            prevEl: '.swiper-button-prev'
+        }
+    });
     });
 </script>
 {% endblock %}
