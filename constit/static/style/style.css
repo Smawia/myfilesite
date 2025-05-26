@@ -5751,12 +5751,17 @@ input {
 .aside-base-li::before {
     content: " \25BC";
     position: absolute;
-    top: 6px;
-    left: -7px;
+    top: 3px;
+    left: -8px;
     color: var(--fourth-color);
     width: 5px;
     height: 5px;
     font-size: 10px;
+}
+@supports (-moz-appearance: none) {
+    .aside-base-li::before {
+        top: 6px;
+    }
 }
 
 .aside-base-li .ul {
