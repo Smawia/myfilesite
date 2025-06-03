@@ -61,6 +61,10 @@
 
         .swiper-pagination {
         position: static !important;
+        height: 30px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
         }
 
         .swiper-button-prev,
@@ -220,7 +224,7 @@
         <div class="show-index-imgs">
             <div class="card">
                 <a href="{% url 'firstpage' %}">
-                    <img src="{% static 'imgs/manage1.webp' %}" alt="">
+                    <img src="{% static 'imgs/manage1.jpg' %}" alt="">
                 </a>
                 <a href="{% url 'firstpage' %}">
                     <div class="text-info-index">
