@@ -9536,3 +9536,373 @@ span {
     text-rendering: optimizeLegibility;
     font-weight: unset;
 }
+
+/* user 2 */
+.Heading-3 {
+    font-size: 21px ;
+    font-family: 'CodecProBold';
+}
+ 
+.Heading-4 {
+    font-size: 19px;
+    font-family: 'CodecProBold'
+}
+
+td.Table-Style {
+	border-left-width:1px;
+	border-left-style:solid;
+	border-left-color:#000000;
+	border-top-width:1px;
+	border-top-style:solid;
+	border-top-color:#000000;
+	border-right-width:1px;
+	border-right-style:solid;
+	border-right-color:#000000;
+	border-bottom-width:1px;
+	border-bottom-style:solid;
+	border-bottom-color:#000000;
+	padding-top:4px;
+	padding-bottom:4px;
+	padding-left:4px;
+	padding-right:4px;
+	vertical-align:top;
+}
+td.Cell-Style-1 {
+	border-bottom-color:#939598;
+	border-bottom-width:1px;
+	border-left-color:#939598;
+	border-left-width:1px;
+	border-right-color:#939598;
+	border-right-width:1px;
+	border-top-color:#939598;
+	border-top-width:1px;
+	padding-bottom:6px;
+	padding-left:6px;
+	padding-right:6px;
+	padding-top:6px;
+	vertical-align:middle;
+}
+td.Header {
+	background-color:#2b3990;
+	border-bottom-color:#939598;
+	border-bottom-style:solid;
+	border-bottom-width:1px;
+	border-left-color:#939598;
+	border-left-style:solid;
+	border-left-width:1px;
+	border-right-color:#939598;
+	border-right-style:solid;
+	border-right-width:1px;
+	border-top-color:#939598;
+	border-top-style:solid;
+	border-top-width:1px;
+	vertical-align:middle;
+}
+
+.Table-Cells {
+	color:#58595b;
+	font-family:"Adobe Arabic", serif;
+	font-size:15px;
+	font-style:normal;
+	font-variant:normal;
+	font-weight:normal;
+	line-height:1.034;
+	margin-bottom:0;
+	margin-left:0;
+	margin-right:0;
+	margin-top:0;
+	orphans:1;
+	page-break-after:auto;
+	page-break-before:auto;
+	text-align:center !important;
+	text-decoration:none;
+	text-indent:0;
+	text-transform:none;
+	widows:1;
+}
+
+.Table-Header {
+	color:#ffffff;
+	font-family:"Adobe Arabic", serif;
+	font-size:15px;
+	font-style:normal;
+	font-variant:normal;
+	font-weight:bold;
+	line-height:1.034;
+	margin-bottom:0;
+	margin-left:0;
+	margin-right:0;
+	margin-top:0;
+	orphans:1;
+	page-break-after:auto;
+	page-break-before:auto;
+	text-align:center !important;
+	text-decoration:none;
+	text-indent:0;
+	text-transform:none;
+	widows:1;
+}
+
+table.Table-Style {
+	border-collapse:collapse;
+	border-color:#939598;
+	border-style:solid;
+	border-width:1px;
+	margin-bottom:9px;
+	margin-top:9px;
+}
+
+table._idGenTablePara-1 {
+	margin-left:auto;
+	margin-right:auto;
+}
+table._idGenTablePara-2 {
+	margin-left:auto;
+}
+
+col._idGenTableRowColumn-1 {
+	width:51px;
+}
+col._idGenTableRowColumn-2 {
+	width:122px;
+}
+col._idGenTableRowColumn-3 {
+	width:94px;
+}
+col._idGenTableRowColumn-4 {
+	width:102px;
+}
+tr._idGenTableRowColumn-5 {
+	min-height:28px;
+}
+tr._idGenTableRowColumn-6 {
+	background-color:#e6e7e8;
+	min-height:54px;
+}
+tr._idGenTableRowColumn-7 {
+	background-color:#ffffff;
+	min-height:54px;
+}
+col._idGenTableRowColumn-8 {
+	width:162px;
+}
+col._idGenTableRowColumn-9 {
+	width:156px;
+}
+tr._idGenTableRowColumn-10 {
+	background-color:#e6e7e8;
+	min-height:44px;
+}
+tr._idGenTableRowColumn-11 {
+	background-color:#ffffff;
+	min-height:44px;
+}
+col._idGenTableRowColumn-12 {
+	width:74px;
+}
+col._idGenTableRowColumn-13 {
+	width:138px;
+}
+tr._idGenTableRowColumn-14 {
+	min-height:33px;
+}
+tr._idGenTableRowColumn-15 {
+	background-color:#e6e7e8;
+	min-height:38px;
+}
+tr._idGenTableRowColumn-16 {
+	background-color:#ffffff;
+	min-height:38px;
+}
+col._idGenTableRowColumn-17 {
+	width:54px;
+}
+col._idGenTableRowColumn-18 {
+	width:130px;
+}
+col._idGenTableRowColumn-19 {
+	width:92px;
+}
+tr._idGenTableRowColumn-20 {
+	background-color:#e6e7e8;
+	min-height:51px;
+}
+tr._idGenTableRowColumn-21 {
+	background-color:#ffffff;
+	min-height:51px;
+}
+col._idGenTableRowColumn-22 {
+	width:126px;
+}
+col._idGenTableRowColumn-23 {
+	width:95px;
+}
+tr._idGenTableRowColumn-24 {
+	background-color:#e6e7e8;
+	min-height:60px;
+}
+tr._idGenTableRowColumn-25 {
+	background-color:#ffffff;
+	min-height:60px;
+}
+col._idGenTableRowColumn-26 {
+	width:116px;
+}
+col._idGenTableRowColumn-27 {
+	width:99px;
+}
+col._idGenTableRowColumn-28 {
+	width:100px;
+}
+tr._idGenTableRowColumn-29 {
+	background-color:#e6e7e8;
+	min-height:36px;
+}
+tr._idGenTableRowColumn-30 {
+	background-color:#ffffff;
+	min-height:36px;
+}
+col._idGenTableRowColumn-31 {
+	width:165px;
+}
+col._idGenTableRowColumn-32 {
+	width:148px;
+}
+tr._idGenTableRowColumn-33 {
+	background-color:#ffffff;
+	min-height:45px;
+}
+tr._idGenTableRowColumn-34 {
+	background-color:#e6e7e8;
+	min-height:45px;
+}
+col._idGenTableRowColumn-35 {
+	width:59px;
+}
+col._idGenTableRowColumn-36 {
+	width:97px;
+}
+col._idGenTableRowColumn-37 {
+	width:113px;
+}
+tr._idGenTableRowColumn-38 {
+	min-height:41px;
+}
+tr._idGenTableRowColumn-39 {
+	background-color:#e6e7e8;
+	min-height:106px;
+}
+tr._idGenTableRowColumn-40 {
+	background-color:#ffffff;
+	min-height:82px;
+}
+col._idGenTableRowColumn-41 {
+	width:93px;
+}
+col._idGenTableRowColumn-42 {
+	width:153px;
+}
+col._idGenTableRowColumn-43 {
+	width:123px;
+}
+tr._idGenTableRowColumn-44 {
+	background-color:#e6e7e8;
+	min-height:43px;
+}
+tr._idGenTableRowColumn-45 {
+	background-color:#ffffff;
+	min-height:43px;
+}
+col._idGenTableRowColumn-46 {
+	width:53px;
+}
+col._idGenTableRowColumn-47 {
+	width:139px;
+}
+col._idGenTableRowColumn-48 {
+	width:85px;
+}
+col._idGenTableRowColumn-49 {
+	width:57px;
+}
+col._idGenTableRowColumn-50 {
+	width:119px;
+}
+col._idGenTableRowColumn-51 {
+	width:80px;
+}
+tr._idGenTableRowColumn-52 {
+	background-color:#e6e7e8;
+	min-height:33px;
+}
+
+.table-caption {
+    font-size: 1.2em;
+    margin-bottom: 10px;
+}
+
+.custom-h5 {
+    text-align: right;
+    font-size: 19px;
+    margin-bottom: -5px;
+}
+
+.custom-li {
+    font-weight: bold;
+}
+
+.definition {
+    margin-top: auto;
+}
+
+.refernces-samp {
+    margin-right: 30px;
+}
+
+.top-margin{
+    margin-top: inherit;
+}
+
+.abstract{
+    font-size: 22px; 
+    font-weight: bolder;
+}
+
+@media (max-width: 574px) {
+    .Heading-3 {
+    font-size: 16px;
+    /* font-weight: bold; */
+    }
+
+    .Heading-4 {
+    font-size: 15px;
+    }
+
+    .table-caption {
+    font-size: 16px;
+    margin-bottom: 10px;
+    }
+
+    .custom-h5 {
+    text-align: right;
+    font-size: 17px;
+    margin-bottom: -9px;
+    margin-top: 15px;
+    }
+    .top-margin{
+        margin-top: 15px
+    }
+
+    .abstract {
+        font-size: 17px !important;
+    }
+
+    .rwanda {
+        margin-bottom: 0px;
+    }
+}
+@media (max-width: 450px){
+    .Table-Style{
+        width: auto;
+    }
+}

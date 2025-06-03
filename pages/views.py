@@ -689,5 +689,26 @@ def error_404(request,exception):
     return render(request,'pages/404_error.html')
 
 
-   
+def journal_studies(request):
+    context = None
+    data = [
+        {'subject': 'القضاء في اليمن', 'url': 'JudiciaryInYemen', 'image': 'imgs/Journal-02.jpg', 'date': '2 مارس 2024'},
+        {'subject':'الوظائف في اليمن', 'url': 'JobsInYemen', 'image': 'imgs/Journal-05.jpg', 'date': '2 مارس 2024'},
+    ]
+    page = Paginator(data,12)
+    page_list = request.GET.get('page')
+    
+    page = page.get_page(page_list)
+    context = {
+        'page': page,
+    }
+    return render(request,'pages/journal_studies.html',context)
 
+def social_market_economy(request):
+        return render(request, 'pages/social_market_economy.html')
+
+def judiciary_in_yemen(request):
+    return render(request, 'pages/judiciary_in_yemen.html')
+
+def jobs_in_yemen(request):
+    return render(request, 'pages/jobs_in_yemen.html')
