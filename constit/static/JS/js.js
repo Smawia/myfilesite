@@ -64,6 +64,10 @@ const elements = [
     ...document.querySelectorAll('.first-page .full-text ul'),     // القوائم غير المرتبة
     ...document.querySelectorAll('.first-page .full-text ol'),     // القوائم المرتبة
     ...document.querySelectorAll('.first-page .full-text h2'),     // العناوين
+    ...document.querySelectorAll('.first-page .full-text h3'),     // العناوين
+    ...document.querySelectorAll('.first-page .full-text h4'),     // العناوين
+    ...document.querySelectorAll('.first-page .full-text h5'),     // العناوين
+    ...document.querySelectorAll('.first-page .table-caption'),     // العناوين
     ...document.querySelectorAll('.special-title'),                // العناوين الخاصة
     ...document.querySelectorAll('.special-title2'),
     ...document.querySelectorAll('.e_yemen tbody tr td')      
