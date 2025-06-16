@@ -189,12 +189,22 @@
                     </div>
                 </a>
             </div>
-            <div class="slide journalImage">
+            <!-- <div class="slide journalImage">
                 <img src="{% static 'imgs/New_Slider.png' %}" alt="">
                 <a href="{% url 'osus' %}">
                     <div class="slide-full-inf">
                         <h2>دورية أُســـس</h2>
                         <span><span style="display: inline;">8 </span>مارس 2025
+                        </span>
+                    </div>
+                </a>
+            </div> -->
+            <div class="slide journalImage">
+                <img src="{% static 'imgs/Second-Issue-2025.jpg' %}" alt="">
+                <a href="{% url 'osus' %}">
+                    <div class="slide-full-inf">
+                        <h2> دورية أُســـس العدد الثاني</h2>
+                        <span><span style="display: inline;">16 </span>يونيو 2025
                         </span>
                     </div>
                 </a>
@@ -710,9 +720,9 @@
         // تشغيل أول سلايد عند التحميل
         updateSlide(currentIndex);
 
-        if (window.innerWidth <= 1200) {
+        /*if (window.innerWidth <= 1200) {
             document.querySelector('.slide.journalImage img').src = "{% static 'imgs/New_Slider_mobile.png' %}";
-        }
+        }*/
         var swiper = new Swiper('.swiper-container', {
         effect: 'coverflow',
         grabCursor: true,

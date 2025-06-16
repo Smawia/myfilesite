@@ -65,6 +65,7 @@ urlpatterns = [
     path('articles/FutureEGovernmentYemen',views.future_of_eGovernment_Yemen,name='future_of_eGovernment_Yemen'),
     path('download/', views.download_or_view_file, name='download_or_view_file'),
     path('publications/journals/osus/osus-2025-03-issue.pdf', views.download_or_view_patrols, name='download_or_view_patrols'),
+    path('publications/journals/osus/Second-Osus-2025-06-Issue.pdf', views.download_or_view_second_ossus, name='download_or_view_second_ossus'),
     path('publications', views.show_publications, name='publications'),
     path('publications/Journals/Osus', views.osus_journals, name='osus'),
     path('publications/Journals/Osus/osus-2025-03-issue-contents.pdf', views.view_osus_content, name='osus-content'),
