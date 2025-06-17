@@ -4282,7 +4282,7 @@ input {
     counter-increment: css-counter 1;
     padding-right: 20px !important;
     padding-left: 20px !important;
-    cursor: pointer;
+    /* cursor: pointer; */
     transition: 0.3s
 }
 
@@ -9999,4 +9999,239 @@ tr._idGenTableRowColumn-52 {
     .Table-Style {
         width: auto;
     }
+}
+
+/* study-5 */
+.prophet {
+  font-size: larger;
+}
+
+.important {
+  font-weight: bold;
+}
+
+.study-figcaption {
+    text-align: center;
+    margin-bottom: inherit;
+    font-size: larger;
+}
+
+.fig-imge {
+    width: 100% !important; 
+}
+
+.li-normal {
+    list-style: none;
+     padding: 0;
+}
+
+/* .li-normal::before {
+      content: "-";
+      color: #555;
+    } */
+
+/* .dash {
+      display: inline-block;
+      width: 50px;
+      height: 1px;
+      background-color: #000;
+      margin: 0 10px;
+      vertical-align: middle;
+    } */
+ 
+.fig-2{
+    margin-top: 70px;
+}
+.fig-imge-2{
+    width: 75% !important;
+}
+.fig-imge-3 {
+    width: 95% !important;
+}
+.list-style-none{
+    list-style: none;
+    padding: 0;
+    margin-right: 25px;
+}
+.alpha-text{
+    margin-right: 12px !important;
+}
+/* تنسيق المصدر */
+.source {
+    background-color:#2b3990;; /* لون أزرق داكن */
+    color: white;             /* لون النص أبيض */
+    padding: 10px 20px;       /* مساحة داخلية */
+    text-align: center;       /* تمركز النص */
+    margin-top: 20px;         /* مسافة من الشكل البياني */
+    font-size: 18px;          /* حجم الخط */
+    margin-bottom: 40px;
+}
+
+span.Hyperlink {
+	text-decoration:underline;
+}
+
+/* tables */
+.study-5 col._idGenTableRowColumn-1 {
+    width: 40px;
+}
+
+.study-5 col._idGenTableRowColumn-2 {
+    width: 127px;
+}
+
+.study-5 col._idGenTableRowColumn-3 {
+    width: 161px;
+}
+
+.study-5 tr._idGenTableRowColumn-4 {
+    min-height: 28px;
+}
+
+.study-5 tr._idGenTableRowColumn-5 {
+    background-color: #e6e7e8;
+    min-height: 51px;
+}
+
+.study-5 tr._idGenTableRowColumn-6 {
+    background-color: #ffffff;
+    min-height: 36px;
+}
+
+.study-5 tr._idGenTableRowColumn-7 {
+    background-color: #e6e7e8;
+    min-height: 36px;
+}
+
+.study-5 tr._idGenTableRowColumn-8 {
+    background-color: #ffffff;
+    min-height: 51px;
+}
+
+.study-5 col._idGenTableRowColumn-9 {
+    width: 145px;
+}
+
+.study-5 col._idGenTableRowColumn-10 {
+    width: 72px;
+}
+
+.study-5 col._idGenTableRowColumn-11 {
+    width: 108px;
+}
+
+.study-5 col._idGenTableRowColumn-12 {
+    width: 44px;
+}
+
+.study-5 tr._idGenTableRowColumn-13 {
+    background-color: #e6e7e8;
+    min-height: 40px;
+}
+
+.study-5 tr._idGenTableRowColumn-14 {
+    background-color: #ffffff;
+    min-height: 40px;
+}
+
+.study-5 col._idGenTableRowColumn-15 {
+    width: 123px;
+}
+
+.study-5 tr._idGenTableRowColumn-16 {
+    background-color: #e6e7e8;
+    min-height: 28px;
+}
+
+.study-5 tr._idGenTableRowColumn-17 {
+    background-color: #ffffff;
+    min-height: 28px;
+}
+
+.study-5 col._idGenTableRowColumn-18 {
+    width: 92px;
+}
+
+.study-5 tr._idGenTableRowColumn-19 {
+    min-height: 26px;
+}
+
+.study-5 tr._idGenTableRowColumn-20 {
+    background-color: #e6e7e8;
+    min-height: 37px;
+}
+
+.study-5 tr._idGenTableRowColumn-21 {
+    background-color: #ffffff;
+    min-height: 37px;
+}
+
+.study-5 col._idGenTableRowColumn-22 {
+    width: 68px;
+}
+
+.study-5 col._idGenTableRowColumn-23 {
+    width: 177px;
+}
+
+.study-5 tr._idGenTableRowColumn-24 {
+    min-height: 33px;
+}
+
+.study-5 tr._idGenTableRowColumn-25 {
+    background-color: #e6e7e8;
+    min-height: 66px;
+}
+
+.study-5 tr._idGenTableRowColumn-26 {
+    background-color: #ffffff;
+    min-height: 66px;
+    text-align: center;
+}
+
+.study-5 tr {
+    text-align: center;
+}
+
+
+.ref-re-margin {
+    margin-right: 36px;
+}
+
+/* moblie */
+@media (max-width: 574px) {
+.fig-2 {
+    margin-top: 50px;
+}
+
+.source {
+    background-color: #2b3990;
+    color: white;
+    padding: 3px 20px;
+    text-align: center;
+    margin-top: 20px;
+    font-size: 18px;
+    margin-bottom: 40px;
+}
+
+.fig-imge-2 {
+    width: 100% !important;
+}
+
+.fig-imge-3 {
+    width: 100% !important;
+}
+
+.list-style-none {
+    display: contents;
+    list-style: none;
+}
+
+.alpha-text {
+    margin-top: auto;
+}
+
+.ref-re-margin {
+    margin-right: 0px;
+}
 }
