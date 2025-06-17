@@ -49,6 +49,8 @@ def download_or_view_second_ossus(request):
 
 def view_osus_content(requst):
     return serve_pdf(requst, 'osus-2025-03-issue-contents.pdf')
+def view_osus_second_content(requst):
+    return serve_pdf(requst, 'osus-2025-06-issue-contents.pdf')
 
 def index(request):
     return render(request,'pages/index.html')
