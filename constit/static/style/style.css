@@ -9576,16 +9576,6 @@ span {
 }
 
 /* user 2 */
-.Heading-3 {
-    font-size: 21px;
-    font-family: 'CodecProBold';
-}
-
-.Heading-4 {
-    font-size: 19px;
-    font-family: 'CodecProBold'
-}
-
 td.Table-Style {
     border-left-width: 1px;
     border-left-style: solid;
@@ -9933,12 +9923,6 @@ tr._idGenTableRowColumn-52 {
     margin-bottom: 10px;
 }
 
-.custom-h5 {
-    text-align: right;
-    font-size: 19px;
-    margin-bottom: -5px;
-}
-
 .custom-li {
     font-weight: bold;
 }
@@ -9956,11 +9940,32 @@ tr._idGenTableRowColumn-52 {
 }
 
 .abstract {
-    font-size: 22px;
+    font-size: 22px !important;
     font-weight: bolder;
 }
 
+.table-caption {
+        font-size: 1.3em;
+        margin-bottom: 10px;
+}
+
+@media (max-width: 450px) {
+    .Table-Style {
+        width: auto;
+    }
+}
+
 @media (max-width: 574px) {
+    .pub-2 {
+       margin-top: 17px;
+       font-size: 15px; 
+    }
+
+     .first-page .p-img2 {
+        font-size: 20px;
+        margin-top: 15px;
+    }
+
     .Heading-3 {
         font-size: 16px;
         /* font-weight: bold; */
@@ -9971,7 +9976,7 @@ tr._idGenTableRowColumn-52 {
     }
 
     .table-caption {
-        font-size: 16px;
+        font-size: 17px;
         margin-bottom: 10px;
     }
 
@@ -9995,10 +10000,124 @@ tr._idGenTableRowColumn-52 {
     }
 }
 
-@media (max-width: 450px) {
-    .Table-Style {
-        width: auto;
+@media (min-width: 575px) {
+    .first-page .p-img2 {
+        font-size: 18px;
+        margin-top: 8px;
     }
+
+    .pub-2 {
+       margin-top: 20px;
+       font-size: 14px; 
+    }
+
+    .abstract {
+        font-size: 19px !important;
+    }
+
+    .Heading-3 {
+        font-size: 18px;
+    }
+
+    .Heading-4 {
+        font-size: 17px;
+    }
+
+    .custom-h5 {
+        font-size: 17px;
+        font-weight: bold;
+    }
+
+    .table-caption {
+        font-size: 1.1em;
+        margin-bottom: 10px;
+}
+}
+
+@media (min-width: 768px) {
+     .first-page .p-img2 {
+        font-size: 18px;
+        margin-top: 8px;
+    }
+
+    .pub-2 {
+       margin-top: 12px;
+       font-size: 13px;
+    }
+
+   .abstract {
+    font-size: 20px !important;
+    }
+
+    .Heading-3 {
+    font-size: 19px;
+    }
+
+    .Heading-4 {
+        font-size: 18px;
+    }
+    
+    .custom-h5 {
+    font-size: 18px;
+    }
+    
+}
+
+@media (min-width: 992px) {
+    .pub-2 {
+        font-size: 14px;
+        margin-bottom: 20px ;
+        }
+
+    .first-page .p-img2 {
+            margin-top: 10px;
+            font-size: 20px;
+    }
+
+    .Heading-3 {
+        font-size: 21px;
+        font-family: 'CodecProBold';
+    }
+
+    .Heading-4 {
+        font-size: 19px;
+        font-family: 'CodecProBold'
+    }
+
+    .custom-h5 {
+        text-align: right;
+        font-size: 19px;
+        margin-bottom: -5px;
+    }
+
+    .table-caption {
+        font-size: 1.3em;
+    }
+}
+
+.pub-2 {
+    display: block;
+    color: var(--fourth-color);
+    font-family: "CodecProExtraBold";
+}
+
+.first-page .p-img2 {
+    display: block;
+    font-family: "CodecProBold";
+    color: #00a79e;
+    line-height: 1;
+}
+
+.Heading-3 {
+    font-family: 'CodecProBold';
+}
+
+.Heading-4 {
+    font-family: 'CodecProBold'
+}
+
+.custom-h5 {
+    text-align: right;
 }
 
 /* study-5 */
@@ -10234,4 +10353,167 @@ span.Hyperlink {
 .ref-re-margin {
     margin-right: 0px;
 }
+
+.study-figcaption {
+    text-align: center;
+    margin-bottom: inherit;
+    font-size: 17PX;
+    }
+}
+
+/* study-6 */
+/* in table  */
+.study-6 td.CellOverride-1 {
+	vertical-align:middle;
+}
+
+/* table*/
+.study-6 td._idGenCellOverride-1 {
+	border-right-color:#939598;
+	border-right-style:solid;
+	border-right-width:1px;
+}
+.study-6 col._idGenTableRowColumn-1 {
+	width:177px;
+}
+.study-6 col._idGenTableRowColumn-2 {
+	width:92px;
+}
+.study-6 col._idGenTableRowColumn-3 {
+	width:50px;
+}
+.study-6 tr._idGenTableRowColumn-4 {
+	min-height:26px;
+}
+.study-6 tr._idGenTableRowColumn-5 {
+	background-color:#e6e7e8;
+	min-height:23px;
+}
+.study-6 tr._idGenTableRowColumn-6 {
+	background-color:#ffffff;
+	min-height:36px;
+}
+.study-6 tr._idGenTableRowColumn-7 {
+	background-color:#e6e7e8;
+	min-height:36px;
+}
+.study-6 tr._idGenTableRowColumn-8 {
+	background-color:#ffffff;
+	min-height:23px;
+}
+.study-6 col._idGenTableRowColumn-9 {
+	width:122px;
+}
+.study-6 col._idGenTableRowColumn-10 {
+	width:62px;
+}
+.study-6 col._idGenTableRowColumn-11 {
+	width:108px;
+}
+.study-6 col._idGenTableRowColumn-12 {
+	width:38px;
+}
+.study-6 tr._idGenTableRowColumn-13 {
+	min-height:28px;
+}
+.study-6 tr._idGenTableRowColumn-14 {
+	background-color:#ffffff;
+	min-height:21px;
+}
+.study-6 tr._idGenTableRowColumn-15 {
+	background-color:#e6e7e8;
+	min-height:21px;
+}
+.study-6 tr._idGenTableRowColumn-16 {
+	background-color:#ffffff;
+	min-height:51px;
+}
+.study-6 col._idGenTableRowColumn-17 {
+	width:277px;
+}
+.study-6 tr._idGenTableRowColumn-18 {
+	background-color:#e6e7e8;
+	min-height:22px;
+}
+.study-6 tr._idGenTableRowColumn-19 {
+	background-color:#ffffff;
+	min-height:22px;
+}
+.study-6 col._idGenTableRowColumn-20 {
+	width:184px;
+}
+.study-6 tr._idGenTableRowColumn-21 {
+	background-color:#e6e7e8;
+	min-height:28px;
+}
+.study-6 tr._idGenTableRowColumn-22 {
+	background-color:#ffffff;
+	min-height:28px;
+}
+.study-6 tr._idGenTableRowColumn-23 {
+	background-color:#e6e7e8;
+	min-height:96px;
+}
+.study-6 tr._idGenTableRowColumn-24 {
+	background-color:#e6e7e8;
+	min-height:51px;
+}
+.study-6 tr._idGenTableRowColumn-25 {
+	background-color:#e6e7e8;
+	min-height:48px;
+}
+.study-6 tr._idGenTableRowColumn-26 {
+	background-color:#ffffff;
+	min-height:48px;
+}
+.study-6 table._idGenTablePara-1 {
+	margin-left:auto;
+	margin-right:auto;
+}
+
+
+.fig-margin {
+    margin-top: 50px;
+}
+
+.fig-margin-2 {
+    margin-top: 30px;
+}
+
+.fig-imge-vertical {
+    width: 95% !important; 
+}
+
+@media (max-width: 1500px) {
+#horizontal-structure {
+   display: none;
+}
+
+}
+
+@media (min-width: 1500px) {
+#vertical-structure {
+   display: none;
+}
+}
+
+span.CharOverride-3 {
+	font-size:58%;
+	vertical-align:super;
+}
+
+@media (min-width: 575px) {
+    .study-figcaption {
+        font-size: 1.1em
+    }
+}
+
+@media (min-width: 768px) {
+
+}
+ 
+@media (min-width: 992px) {
+    .study-figcaption {
+        font-size: 1.3em;
+    }
 }
