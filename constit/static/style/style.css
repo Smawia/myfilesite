@@ -6430,6 +6430,7 @@ input {
     display: flex;
     justify-content: center;
     font-family: 'Calibri';
+    padding-right: 0;
 }
 
 .p-ul li {
@@ -10105,7 +10106,7 @@ tr._idGenTableRowColumn-52 {
     display: block;
     font-family: "CodecProBold";
     color: #00a79e;
-    line-height: 1;
+    line-height: 1.4;
 }
 
 .Heading-3 {
@@ -10329,7 +10330,7 @@ span.Hyperlink {
     padding: 3px 20px;
     text-align: center;
     margin-top: 20px;
-    font-size: 18px;
+    font-size: 17px;
     margin-bottom: 40px;
 }
 
@@ -10517,3 +10518,194 @@ span.CharOverride-3 {
         font-size: 1.3em;
     }
 }
+
+/* study-3 */
+/* tables */
+.study-3 col._idGenTableRowColumn-1 {
+	width:208px;
+}
+.study-3 col._idGenTableRowColumn-2 {
+	width:48px;
+}
+.study-3 col._idGenTableRowColumn-3 {
+	width:110px;
+}
+.study-3 tr._idGenTableRowColumn-4 {
+	min-height:28px;
+}
+.study-3 tr._idGenTableRowColumn-5 {
+	background-color:#e6e7e8;
+	min-height:36px;
+}
+.study-3 tr._idGenTableRowColumn-6 {
+	background-color:#ffffff;
+	min-height:26px;
+}
+.study-3 tr._idGenTableRowColumn-7 {
+	background-color:#e6e7e8;
+	min-height:26px;
+}
+.study-3 col._idGenTableRowColumn-8 {
+	width:315px;
+}
+.study-3 col._idGenTableRowColumn-9 {
+	width:54px;
+}
+.study-3 tr._idGenTableRowColumn-10 {
+	background-color:#e6e7e8;
+	min-height:23px;
+}
+.study-3 tr._idGenTableRowColumn-11 {
+	background-color:#ffffff;
+	min-height:23px;
+}
+.study-3 col._idGenTableRowColumn-12 {
+	width:59px;
+}
+.study-3 col._idGenTableRowColumn-13 {
+	width:134px;
+}
+.study-3 col._idGenTableRowColumn-14 {
+	width:176px;
+}
+.study-3 tr._idGenTableRowColumn-15 {
+	background-color:#ffffff;
+	min-height:36px;
+}
+.study-3 col._idGenTableRowColumn-16 {
+	width:114px;
+}
+.study-3 col._idGenTableRowColumn-17 {
+	width:127px;
+}
+.study-3 col._idGenTableRowColumn-18 {
+	width:67px;
+}
+.study-3 col._idGenTableRowColumn-19 {
+	width:62px;
+}
+.study-3 tr._idGenTableRowColumn-20 {
+	background-color:#e6e7e8;
+	min-height:21px;
+}
+.study-3 tr._idGenTableRowColumn-21 {
+	background-color:#ffffff;
+	min-height:21px;
+}
+.study-3 table._idGenTablePara-1 {
+	margin-left:auto;
+	margin-right:auto;
+}
+
+/* images */
+.fig-imge-4 {
+    width: 90% !important;
+}
+
+/* box */
+.box {
+      border: 1px solid #3333cc;
+      padding: 20px;
+      background-color: #f5f5f5;
+      /* width: 90%; */
+      max-width: 800px;
+      /* margin: auto; */
+      line-height: 1;
+    }
+    .box h4 {
+      margin-top: 0;
+      font-weight: bold;
+      color: #000;
+      font-size: larger;
+      line-height: 1.5;
+    }
+    .box ul {
+      padding-right: 20px;
+    }
+    .box ul li {
+      margin-bottom: 10px;
+    }
+
+    /* الوضع الليلي */
+    body.dark-mode .box {
+    /* background-color: #333; */
+    color: black;
+    /* border-color: white; */
+    }
+
+    /* body.dark-mode h4 {
+    color: white;
+    } */
+     
+    .box-source {
+        background-color:#2b3990;; /* لون أزرق داكن */
+        color: white;             /* لون النص أبيض */
+        padding: 10px 20px;       /* مساحة داخلية */
+        text-align: center;       /* تمركز النص */
+        margin-top: 5px;         /* مسافة من الشكل البياني */
+        font-size: 18px;          /* حجم الخط */
+        margin-bottom: 30px;
+    }
+
+    .source-link a{
+        color: white !important;
+    }
+
+    .source-link a:hover {
+      text-decoration: underline !important;
+    }
+    
+    /* .margin-bottom-table {
+        margin-bottom: 35px !important;
+    } */
+
+    @media(max-width: 574px) {
+        .fig-imge-4 {
+            width: 100% !important;
+        }
+
+        .box h4 {
+            margin-top: 0;
+            font-weight: bold;
+            color: #000;
+            font-size: 17px;
+            line-height: 1.5;
+        }
+
+        .box ul li {
+            margin-bottom: 5px;
+        }
+
+        .box-source {
+            padding: 5px 20px;
+            margin-bottom: 20px;
+            font-size: 16px;
+        }
+    }
+
+    @media(min-width: 575px) {
+      .fig-imge-4 {
+            width: 95% !important;
+        }
+
+      .box-source {
+        font-size: 17px;
+        margin-bottom: 20px;
+        }
+    }
+
+    @media(min-width: 575px) {
+      .fig-imge-4 {
+            width: 95% !important;
+        }
+    }
+
+     @media(min-width: 992px) {
+      .fig-imge-4 {
+            width: 90% !important;
+        }
+        .box-source {
+            font-size: 18px;         
+            margin-bottom: 30px;
+        }
+    }

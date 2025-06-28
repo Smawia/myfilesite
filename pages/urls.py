@@ -40,11 +40,12 @@ urlpatterns = [
     path('articles/LegalReformInYemen',views.legal_reform_in_yemen,name='legal_reform_in_yemen'),
     path('articles/GeneralAdministrationInYemen',views.general_administration_in_yemen,name='general_administration_in_yemen'),
     path('publications/books',views.books,name='books'),
-    path('OsusArticles/articales', views.journal_studies, name='journal_studies'),
-    path('OsusArticles/SocialMarketEconomy', views.social_market_economy, name='social_market_economy'),
-    path('OsusArticles/JudiciaryInYemen', views.judiciary_in_yemen, name='judiciary_in_yemen'),
-    path('OsusArticles/JobsInYemen', views.jobs_in_yemen, name='jobs_in_yemen'),
-    path('OsusArticles/HygieneAndSolidWasteManagement', views.hygiene_and_solid_waste_management, name='hygiene_and_solid_waste_management'),
+    path('journals/osus/articles/', views.journal_studies, name='journal_studies'),
+    path('journals/osus/articles/SocialMarketEconomy', views.social_market_economy, name='social_market_economy'),
+    path('journals/osus/articles/JudiciaryInYemen', views.judiciary_in_yemen, name='judiciary_in_yemen'),
+    path('journals/osus/articles/JobsInYemen', views.jobs_in_yemen, name='jobs_in_yemen'),
+    path('journals/osus/articles/HygieneAndSolidWasteManagement', views.hygiene_and_solid_waste_management, name='hygiene_and_solid_waste_management'),
+    path('journals/osus/articles/EducationalSystemInYemen', views.educational_system_in_yemen, name='educational_system_in_yemen'),
 
     # new studies
     path('articles/CurrentEconomicSituation',views.current_economic_situation,name='current_economic_situation'),
