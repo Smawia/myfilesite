@@ -11487,7 +11487,7 @@ span.CharOverride-1 {
 }
 
 
-
+/* screens views */
 @media (max-width: 574px) {
     .margin-bottom-table {
         margin-bottom: 35px !important;
@@ -11499,6 +11499,14 @@ span.CharOverride-1 {
 
     .study-2 {
         margin-bottom: 10px !important;
+    }
+
+    .modify-margin {
+        margin: 16px;
+    }
+
+    .mobile-view-2 {
+        margin: 25px;
     }
 }
 
@@ -11526,6 +11534,12 @@ span.CharOverride-1 {
 
     .fig-imge-6 {
         width: 65% !important;
+    }
+}
+
+@media (max-width: 991px) {
+    .mobile-view {
+        margin: 10px;
     }
 }
 
