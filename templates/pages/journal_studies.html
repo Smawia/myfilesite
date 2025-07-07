@@ -10,7 +10,7 @@
     
     <div class="show-all-studies">
         {% for data in page.object_list %}
-        <div class="studies-card">
+        <div class="studies-card show-cards-number">
             <a href="{{ data.url }}">
                 <img src="{% static data.image %}" alt="">
             </a>

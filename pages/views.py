@@ -697,6 +697,8 @@ def error_404(request,exception):
 def journal_studies(request):
     context = None
     data = [
+        {'subject': 'اقتصاد السوق الاجتماعي', 'url': 'SocialMarketEconomy', 'image': 'imgs/Journal-01.jpg', 'date': '9 ديسمبر  2024'},
+        {'subject': 'النهضة الزراعية في اليمن', 'url': 'AgriculturalRenaissanceInYemen', 'image': 'imgs/Journal-02.jpg', 'date': '20 ديسمبر 2024'},
         {'subject': 'النظام التعليمي في اليمن', 'url': 'EducationalSystemInYemen', 'image': 'imgs/Journal-03.jpg', 'date': '15 يناير 2025'},
         {'subject': 'القضاء في اليمن', 'url': 'JudiciaryInYemen', 'image': 'imgs/Journal-04.jpg', 'date': '26 يناير 2025'},
         {'subject':'الوظائف في اليمن', 'url': 'JobsInYemen', 'image': 'imgs/Journal-05.jpg', 'date': '5 فبراير 2025'},
@@ -713,6 +715,9 @@ def journal_studies(request):
 
 def social_market_economy(request):
         return render(request, 'pages/social_market_economy.html')
+
+def agricultural_renaissance_in_yemen(request):
+    return render(request, 'pages/agricultural_renaissance_in_yemen.html')
 
 def judiciary_in_yemen(request):
     return render(request, 'pages/judiciary_in_yemen.html')
