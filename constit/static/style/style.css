@@ -10107,6 +10107,7 @@ tr._idGenTableRowColumn-52 {
 
     .table-caption-p {
         font-size: 1.3em !important;
+        
     }
 }
 
@@ -10750,9 +10751,6 @@ body.dark-mode .box {
     text-decoration: underline !important;
 }
 
-/* .margin-bottom-table {
-        margin-bottom: 35px !important;
-    } */
 
 @media(max-width: 574px) {
     .fig-imge-4 {
@@ -10944,6 +10942,7 @@ body.dark-mode .box {
 
     #table-2 {
         display: block !important;
+        margin: auto;
     }
 }
 
@@ -10967,16 +10966,6 @@ body.dark-mode .box {
     margin-top: 15px;
 }
 
-@media (max-width: 409px) {
-    #table001 {
-        display: none;
-    }
-
-    #table-1 {
-        display: block !important;
-        margin: auto;
-    }
-}
 
 @media (max-width: 574px) {
     .table-source {
@@ -11433,57 +11422,18 @@ span.CharOverride-1 {
     width: 65% !important;
 }
 
-.margin-bottom-table {
-    margin-bottom: 50px !important;
-}
-
-
 .study-2 {
-    margin: auto !important;
+    margin-right: auto !important;
+    margin-left: auto !important;
 }
 
 .table-caption-p {
     text-align: center !important;
     margin-bottom: 10px;
     font-weight: 500;
-}
-
-/* tables scrolls */
-
-@media (max-width: 413px) {
-    .table-4-container {
-        overflow-x: scroll;
-    }
-}
-
-@media (max-width: 465px) {
-    .table-7-container {
-        overflow-x: scroll;
-    }
-}
-
-@media (max-width: 441px) {
-    .table-8-container {
-        overflow-x: scroll;
-    }
-}
-
-@media (max-width: 395px) {
-    .table-9-container {
-        overflow-x: scroll;
-    }
-}
-
-@media (max-width: 390px) {
-    .table-11-container {
-        overflow-x: scroll;
-    }
-}
-
-@media (max-width: 477px) {
-    .table-12-container {
-        overflow-x: scroll;
-    }
+    margin-right: 5% !important;
+    margin-left: 5% !important;
+    line-height: normal !important;
 }
 
 
@@ -11495,11 +11445,7 @@ span.CharOverride-1 {
 
     .fig-imge-6 {
         width: 95% !important;
-    }
-
-    .study-2 {
-        margin-bottom: 10px !important;
-    }
+    }   
 
     .modify-margin {
         margin: 16px;
@@ -11520,17 +11466,10 @@ span.CharOverride-1 {
     }
 }
 
-/* @media (min-width: 768px) {
-
-   .fig-imge-6 {
-        width: 75% !important;
-    }
-} */
-
 @media (min-width: 992px) {
-    .margin-bottom-table {
+    /* .margin-bottom-table {
         margin-bottom: 50px !important;
-    }
+    } */
 
     .fig-imge-6 {
         width: 65% !important;
@@ -11554,4 +11493,9 @@ span.CharOverride-1 {
     .show-all-studies .show-cards-number {
         width: calc(33% - 20px) !important;
     }
+}
+
+.table-wrapper {
+  max-width: 100%;
+  overflow-x: auto;
 }
