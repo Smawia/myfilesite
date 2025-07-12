@@ -697,12 +697,12 @@ def error_404(request,exception):
 def journal_studies(request):
     context = None
     data = [
-        {'subject': 'اقتصاد السوق الاجتماعي', 'url': 'SocialMarketEconomy', 'image': 'imgs/Journal-01.jpg', 'date': '9 ديسمبر  2024'},
-        {'subject': 'النهضة الزراعية في اليمن', 'url': 'AgriculturalRenaissanceInYemen', 'image': 'imgs/Journal-02.jpg', 'date': '20 ديسمبر 2024'},
-        {'subject': 'النظام التعليمي في اليمن', 'url': 'EducationalSystemInYemen', 'image': 'imgs/Journal-03.jpg', 'date': '15 يناير 2025'},
-        {'subject': 'القضاء في اليمن', 'url': 'JudiciaryInYemen', 'image': 'imgs/Journal-04.jpg', 'date': '26 يناير 2025'},
-        {'subject':'الوظائف في اليمن', 'url': 'JobsInYemen', 'image': 'imgs/Journal-05.jpg', 'date': '5 فبراير 2025'},
-        {'subject': 'النظافة وإدارة النفايات الصلبة', 'url': 'HygieneAndSolidWasteManagement', 'image': 'imgs/Journal-06.jpg', 'date': '25 فبراير 2025'},
+        {'subject': 'اقتصاد السوق الاجتماعي', 'url': 'SocialMarketEconomy', 'image': 'imgs/Journal-01.jpg', 'date': '20 مارس  2025'},
+        {'subject': 'النهضة الزراعية في اليمن', 'url': 'AgriculturalRenaissanceInYemen', 'image': 'imgs/Journal-02.jpg', 'date': '20 مارس  2025'},
+        {'subject': 'النظام التعليمي في اليمن', 'url': 'EducationalSystemInYemen', 'image': 'imgs/Journal-03.jpg', 'date': '20 مارس  2025'},
+        {'subject': 'القضاء في اليمن', 'url': 'JudiciaryInYemen', 'image': 'imgs/Journal-04.jpg', 'date': '20 مارس  2025'},
+        {'subject':'الوظائف في اليمن', 'url': 'JobsInYemen', 'image': 'imgs/Journal-05.jpg', 'date': '20 مارس  2025'},
+        {'subject': 'النظافة وإدارة النفايات الصلبة', 'url': 'HygieneAndSolidWasteManagement', 'image': 'imgs/Journal-06.jpg', 'date': '20 مارس  2025'},
     ]
     page = Paginator(data,12)
     page_list = request.GET.get('page')
