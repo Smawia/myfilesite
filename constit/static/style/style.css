@@ -9359,6 +9359,13 @@ header .phone button {
         box-shadow: 0 0 5px rgba(0, 0, 0, 0.38);
     }
 
+    /* user 2 */
+    .container-margin {
+        margin-bottom: 40px;
+    }
+
+    /* end */
+
     /* صفحة تفاصيل الانفوجراف */
 
 
@@ -9461,6 +9468,13 @@ header .phone button {
         text-align: center;
 
     }
+
+    /* user 2 */
+    .container-margin {
+        margin-bottom: 60px;
+    }
+
+    /* end */
 }
 
 @media (min-width: 992px) {
@@ -10023,6 +10037,7 @@ tr._idGenTableRowColumn-52 {
 
     .Heading-3 {
         font-size: 18px;
+        line-height: 1.4;
     }
 
     .Heading-4 {
@@ -10107,7 +10122,7 @@ tr._idGenTableRowColumn-52 {
 
     .table-caption-p {
         font-size: 1.3em !important;
-        
+
     }
 }
 
@@ -11445,7 +11460,7 @@ span.CharOverride-1 {
 
     .fig-imge-6 {
         width: 95% !important;
-    }   
+    }
 
     .modify-margin {
         margin: 16px;
@@ -11453,6 +11468,10 @@ span.CharOverride-1 {
 
     .mobile-view-2 {
         margin: 25px;
+    }
+
+    .mobile-view-3 {
+        margin: 10px;
     }
 }
 
@@ -11496,6 +11515,109 @@ span.CharOverride-1 {
 }
 
 .table-wrapper {
-  max-width: 100%;
-  overflow-x: auto;
+    max-width: 100%;
+    overflow-x: auto;
+}
+
+/* study-2-1  */
+td.CellOverride-1 {
+    border-top-style: solid;
+}
+
+.study-2-1 col._idGenTableRowColumn-1 {
+    width: 26px;
+}
+
+.study-2-1 tr._idGenTableRowColumn-2 {
+    min-height: 140px;
+}
+
+.study-2-1 tr._idGenTableRowColumn-3 {
+    min-height: 54px;
+}
+
+.study-2-1 tr._idGenTableRowColumn-4 {
+    background-color: #e6e7e8;
+    height: 37px;
+}
+
+.study-2-1 tr._idGenTableRowColumn-5 {
+    background-color: #ffffff;
+    height: 45px;
+}
+
+.study-2-1 tr._idGenTableRowColumn-6 {
+    background-color: #ffffff;
+    height: 37px;
+}
+
+.study-2-1 col._idGenTableRowColumn-7 {
+    width: 99px;
+}
+
+.study-2-1 col._idGenTableRowColumn-8 {
+    width: 161px;
+}
+
+.study-2-1 col._idGenTableRowColumn-9 {
+    width: 108px;
+}
+
+.study-2-1 tr._idGenTableRowColumn-10 {
+    min-height: 48px;
+}
+
+.study-2-1 tr._idGenTableRowColumn-11 {
+    background-color: #e6e7e8;
+    min-height: 21px;
+}
+
+.study-2-1 tr._idGenTableRowColumn-12 {
+    background-color: #ffffff;
+    min-height: 21px;
+}
+
+.study-2-1 #_idContainer002,
+#_idContainer007 {
+    display: inline-block;
+    height: 539px;
+    width: 369px;
+}
+
+.study-2-1 #_idContainer003 {
+    display: inline-block;
+    height: 103px;
+    width: 349px;
+}
+
+.study-2-1 #_idContainer004 {
+    display: inline-block;
+    height: 180px;
+    width: 350px;
+}
+
+.study-2-1 #_idContainer005 {
+    display: inline-block;
+    height: 160px;
+    width: 264px;
+}
+
+@media (min-width: 673px) {
+    .vatical-data td {
+        vertical-align: bottom;
+        writing-mode: vertical-rl;
+        transform: rotate(180deg);
+        /* لتكون الكتابة من الأعلى للأسفل */
+    }
+}
+
+@media (max-width: 673px) {
+    .vatical-data thead tr:first-child td {
+        writing-mode: sideways-lr;
+    }
+}
+
+.study-2-1 {
+    margin-right: auto !important;
+    margin-left: auto !important;
 }

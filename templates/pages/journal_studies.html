@@ -1,15 +1,15 @@
 {% extends 'base.html' %}
 {% load static %}
-{% block title %}دراسات أسس{% endblock %}
+{% block title %}دراسات أُسس{% endblock %}
 
 {% block content %}
 <div class="container index-articles all-studies">
-    <h1 class="spe-h1">دراسات أسس</h1>
+    <h1 class="spe-h1">دراسات أُسس (العدد الأول)</h1>
 </div>
 <div class="container index-articles all-art">
     
     <div class="show-all-studies">
-        {% for data in page.object_list %}
+        {% for data in issue_one %}
         <div class="studies-card show-cards-number">
             <a href="{{ data.url }}">
                 <img src="{% static data.image %}" alt="">
@@ -27,63 +27,42 @@
         </div>
         {% endfor %}
         <!-- عرض رسالة إذا لم يتم العثور على نتائج -->
-    {% if not page.object_list %}
+    {% if not issue_one %}
     <p style="text-align: center; font-weight: bold;width: 100%;">لم يتم العثور على نتائج تطابق بحثك ({{query}}).</p>
     {% endif %}
     </div>
     
 </div>
-<div class="pagination">
-    <div class="p-row">
-        <div class="p-column">
-            <ul class="p-ul">
-                <!-- زر "الأول" -->
-                <li class="p-item">
-                    {% if not page.has_previous %}
-                    <a href="{% url 'studies' %}?q={{ query }}&page=1" class="p-link first pre" hidden>الأول</a>
-                    {% else %}
-                    <a href="{% url 'studies' %}?q={{ query }}&page=1" class="p-link first pre">الأول</a>
-                    {% endif %}
-                </li>
 
-                <!-- زر "السابق" -->
-                <li class="p-item disabled">
-                    {% if page.has_previous %}
-                    <a href="{% url 'studies' %}?q={{ query }}&page={{ page.previous_page_number }}" class="p-link pre">السابق</a>
-                    {% endif %}
-                </li>
-
-                <!-- أرقام الصفحات -->
-                {% for num_page in page.paginator.page_range %}
-                {% if page.number == num_page %}
-                <li class="p-item">
-                    <a href="{% url 'studies' %}?q={{ query }}&page={{ num_page }}" class="p-link active">{{ num_page }}</a>
-                </li>
-                {% else %}
-                <li class="p-item">
-                    <a href="{% url 'studies' %}?q={{ query }}&page={{ num_page }}" class="p-link">{{ num_page }}</a>
-                </li>
-                {% endif %}
-                {% endfor %}
-
-                <!-- زر "التالي" -->
-                <li class="p-item disabled">
-                    {% if page.has_next %}
-                    <a href="{% url 'studies' %}?q={{ query }}&page={{ page.next_page_number }}" class="p-link next pre">التالي</a>
-                    {% endif %}
-                </li>
-
-                <!-- زر "الأخير" -->
-                <li class="p-item">
-                    {% if not page.has_next %}
-                    <a class="p-link disabled pre" hidden>الأخير</a>
-                    {% else %}
-                    <a href="{% url 'studies' %}?q={{ query }}&page={{ page.paginator.num_pages }}" class="p-link last pre">الأخير</a>
-                    {% endif %}
-                </li>
-            </ul>
+<div class="container index-articles all-studies">
+    <h1 class="spe-h1">دراسات أُسس (العدد الثاني)</h1>
+</div>
+<div class="container index-articles all-art container-margin">
+    
+    <div class="show-all-studies">
+        {% for data in issue_two %}
+        <div class="studies-card show-cards-number">
+            <a href="{{ data.url }}">
+                <img src="{% static data.image %}" alt="">
+            </a>
+            <a href="{{ data.url }}">
+                <div class="study-text-info">
+                    <span>
+                        {{ data.date}}
+                    </span>
+                    <p>
+                        {{ data.subject }}
+                    </p>
+                </div>
+            </a>
         </div>
+        {% endfor %}
+        <!-- عرض رسالة إذا لم يتم العثور على نتائج -->
+    {% if not issue_two %}
+    <p style="text-align: center; font-weight: bold;width: 100%;">لم يتم العثور على نتائج تطابق بحثك ({{query}}).</p>
+    {% endif %}
     </div>
+    
 </div>
 
 {% endblock %}

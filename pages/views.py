@@ -696,7 +696,7 @@ def error_404(request,exception):
 
 def journal_studies(request):
     context = None
-    data = [
+    issue_one = [
         {'subject': 'اقتصاد السوق الاجتماعي', 'url': 'SocialMarketEconomy', 'image': 'imgs/Journal-01.jpg', 'date': '20 مارس  2025'},
         {'subject': 'النهضة الزراعية في اليمن', 'url': 'AgriculturalRenaissanceInYemen', 'image': 'imgs/Journal-02.jpg', 'date': '20 مارس  2025'},
         {'subject': 'النظام التعليمي في اليمن', 'url': 'EducationalSystemInYemen', 'image': 'imgs/Journal-03.jpg', 'date': '20 مارس  2025'},
@@ -704,12 +704,14 @@ def journal_studies(request):
         {'subject':'الوظائف في اليمن', 'url': 'JobsInYemen', 'image': 'imgs/Journal-05.jpg', 'date': '20 مارس  2025'},
         {'subject': 'النظافة وإدارة النفايات الصلبة', 'url': 'HygieneAndSolidWasteManagement', 'image': 'imgs/Journal-06.jpg', 'date': '20 مارس  2025'},
     ]
-    page = Paginator(data,12)
-    page_list = request.GET.get('page')
-    
-    page = page.get_page(page_list)
+
+    issue_two = [
+        {'subject': 'ظاهرة التسول في اليمن', 'url': 'BeggingPhenomenonInYemen', 'image': 'imgs/Journal-7.jpg', 'date': '15 يونيو  2025'},
+    ]
+
     context = {
-        'page': page,
+        'issue_one': issue_one,
+        'issue_two': issue_two,
     }
     return render(request,'pages/journal_studies.html',context)
 
@@ -730,3 +732,6 @@ def hygiene_and_solid_waste_management(request):
 
 def educational_system_in_yemen(request):
     return render(request, 'pages/educational_system_in_yemen.html')
+
+def begging_phenomenon_in_yemen(request):
+    return render(request, 'pages/begging_phenomenon_in_yemen.html')
