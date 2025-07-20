@@ -598,8 +598,8 @@ def view_infograph(request):
             "date": "27 أبريل 2025",
         },
         {
-            "title": "أكبر عشر دول عربية إصدارًا لتحويلات المهاجرين 2024",
-            "slug": "top-ten-Arab-countries-sending-migrant-remittances-2024",
+            "title": "أكبر عشر دول عربية إصدارًا وتلقيًا لتحويلات المهاجرين 2024",
+            "slug": "The-top-ten-countries-in-remittance-outflows-and-inflows-by-migrants-2024",
             "image": "imgs/Info-20.png",
             "date": "29 أبريل 2025",
         },
@@ -705,8 +705,8 @@ def infograph_detail(request, slug):
             'date': '27 أبريل 2025',
             'image': 'imgs/Info-19.png',
         },
-        "top-ten-Arab-countries-sending-migrant-remittances-2024": {
-            'title': 'أكبر عشر دول عربية إصدارًا لتحويلات المهاجرين 2024',
+        "The-top-ten-countries-in-remittance-outflows-and-inflows-by-migrants-2024": {
+            'title': 'أكبر عشر دول عربية إصدارًا وتلقيًا لتحويلات المهاجرين 2024',
             'date': '29 أبريل 2025',
             'image': 'imgs/Info-20.png',
         },
