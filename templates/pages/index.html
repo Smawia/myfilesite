@@ -13,7 +13,7 @@
 
     .swiper-slide {
         width: 400px;
-        height: 400px;
+        height: 440px;
         position: relative;
     }
 
@@ -90,7 +90,15 @@
         .swiper-button-next::after {
         font-size: 10px;
         }
-
+        .swiper-button-next, 
+        .swiper-rtl .swiper-button-prev {
+            right: var(--swiper-navigation-sides-offset,-32px);
+            left: auto;
+        }
+        .swiper-button-prev, .swiper-rtl .swiper-button-next {
+            left: var(--swiper-navigation-sides-offset,-32px);
+            right: auto;
+        }
 
     @media (max-width: 574px) {
         .swiper-container {
@@ -118,6 +126,10 @@
         .container.index-articles.hide-in-pc {
             display: none;
         }
+        
+        .swiper-horizontal > .swiper-pagination-bullets .swiper-pagination-bullet, .swiper-pagination-horizontal.swiper-pagination-bullets .swiper-pagination-bullet {
+            margin: 0 var(--swiper-pagination-bullet-horizontal-gap,2px);
+        }
     }
 
     @media (min-width: 992px) {
@@ -132,6 +144,10 @@
 
         .publications.carousel-title {
             display: block;
+        }
+        
+        .swiper-horizontal > .swiper-pagination-bullets .swiper-pagination-bullet, .swiper-pagination-horizontal.swiper-pagination-bullets .swiper-pagination-bullet {
+            margin: 0 var(--swiper-pagination-bullet-horizontal-gap,4px);
         }
     }
 </style>
@@ -461,6 +477,31 @@
             </a>
         </div>
         <div class="swiper-slide">
+            <a href="{% url 'infograph_detail' 'Countries-that-defeated-thirst-Australia' %}">
+                <img src="{% static 'imgs/australia.png' %}" alt="">
+            </a>
+        </div>
+        <div class="swiper-slide">
+            <a href="{% url 'infograph_detail' 'Countries-that-defeated-thirst-Jordan' %}">
+                <img src="{% static 'imgs/jordan.png' %}" alt="">
+            </a>
+        </div>
+        <div class="swiper-slide">
+            <a href="{% url 'infograph_detail' 'Countries-that-defeated-thirst-Morocco' %}">
+                <img src="{% static 'imgs/morocco.png' %}" alt="">
+            </a>
+        </div>
+        <div class="swiper-slide">
+            <a href="{% url 'infograph_detail' 'Countries-that-defeated-thirst-India' %}">
+                <img src="{% static 'imgs/india.png' %}" alt="">
+            </a>
+        </div>
+        <div class="swiper-slide">
+            <a href="{% url 'infograph_detail' 'Countries-that-defeated-thirst-Singabore' %}">
+                <img src="{% static 'imgs/singabor.png' %}" alt="">
+            </a>
+        </div>
+        <div class="swiper-slide">
             <a href="{% url 'infograph_detail' 'top-ten-Social-care-Systems' %}">
                 <img src="{% static 'imgs/Info-13.png' %}" alt="">
             </a>
@@ -500,7 +541,6 @@
                 <img src="{% static 'imgs/Info-20.png' %}" alt="">
             </a>
         </div>
-
     </div>
     <div class="swiper-controls">
         <div class="swiper-button-prev"></div>
@@ -554,6 +594,36 @@
         window.onload = startSlider;
 
         const slidess = [
+            {
+                image: "{% static 'imgs/australia.png' %}",
+                text: "دول هزمت العطش - أستراليا",
+                date: "2 يوليو 2025",
+                slug: 'Countries-that-defeated-thirst-Australia'
+            },
+            {
+                image: "{% static 'imgs/jordan.png' %}",
+                text: "دول هزمت العطش - الأردن",
+                date: "7 يوليو 2025",
+                slug: 'Countries-that-defeated-thirst-Jordan'
+            },
+            {
+                image: "{% static 'imgs/morocco.png' %}",
+                text: "دول هزمت العطش - المغرب",
+                date: "11 يوليو 2025",
+                slug: 'Countries-that-defeated-thirst-Morocco'
+            },
+            {
+                image: "{% static 'imgs/india.png' %}",
+                text: "دول هزمت العطش - الهند",
+                date: "15 يوليو 2025",
+                slug: 'Countries-that-defeated-thirst-India'
+            },
+            {
+                image: "{% static 'imgs/singabor.png' %}",
+                text: "دول هزمت العطش - سنغافورة",
+                date: "18 يوليو 2025",
+                slug: 'Countries-that-defeated-thirst-Singabore'
+            },
             {
                 image: "{% static 'imgs/Info-01.png' %}",
                 text: "أكثر سبع دول إنتاجاً للأدوية في العام 2024",
@@ -715,7 +785,7 @@
         setInterval(() => {
             currentIndex = (currentIndex + 1) % slidess.length;
             updateSlide(currentIndex);
-        }, 5000); // كل 7 ثوانٍ
+        }, 7000); // كل 7 ثوانٍ
 
         // تشغيل أول سلايد عند التحميل
         updateSlide(currentIndex);
@@ -728,7 +798,7 @@
         grabCursor: true,
         centeredSlides: true,
         slidesPerView: 'auto',
-        initialSlide: 9,
+        initialSlide: 12,
         loop: true,
         speed: 800, 
         coverflowEffect: {

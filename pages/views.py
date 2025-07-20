@@ -452,7 +452,37 @@ def osus_journals(request):
     return render(request,'pages/osus_journals.html')
 
 def view_infograph(request):
-    infographs = [
+    infographs = [    
+        {
+            "title": "دول هزمت العطش - أستراليا",
+            "slug": "Countries-that-defeated-thirst-Australia",
+            "image": "imgs/australia.png",
+            "date": "2 يوليو 2025",
+        },
+        {
+            "title": "دول هزمت العطش - الأردن",
+            "slug": "Countries-that-defeated-thirst-Jordan",
+            "image": "imgs/jordan.png",
+            "date": "7 يوليو 2025",
+        },
+        {
+            "title": "دول هزمت العطش - المغرب",
+            "slug": "Countries-that-defeated-thirst-Morocco",
+            "image": "imgs/morocco.png",
+            "date": "11 يوليو 2025",
+        },
+        {
+            "title": "دول هزمت العطش - الهند",
+            "slug": "Countries-that-defeated-thirst-India",
+            "image": "imgs/india.png",
+            "date": "15 يوليو 2025",
+        },
+        {
+            "title": "دول هزمت العطش - سنغافورة",
+            "slug": "Countries-that-defeated-thirst-Singabore",
+            "image": "imgs/singabor.png",
+            "date": "18 يوليو 2025",
+        },
         {
             "title": "أكثر سبع دول إنتاجاً للأدوية في العام 2024",
             "slug": "The-seven-largest-pharmaceutical-producing-countries-in-2024",
@@ -679,6 +709,31 @@ def infograph_detail(request, slug):
             'title': 'أكبر عشر دول عربية إصدارًا لتحويلات المهاجرين 2024',
             'date': '29 أبريل 2025',
             'image': 'imgs/Info-20.png',
+        },
+        "Countries-that-defeated-thirst-Australia": {
+            'title': 'دول هزمت العطش - أستراليا',
+            'date': '2 يوليو 2025',
+            'image': 'imgs/australia.png',
+        },
+        "Countries-that-defeated-thirst-Jordan": {
+            'title': 'دول هزمت العطش - الأردن',
+            'date': '7 يوليو 2025',
+            'image': 'imgs/jordan.png',
+        },
+        "Countries-that-defeated-thirst-Morocco": {
+            'title': 'دول هزمت العطش - المغرب',
+            'date': '11 يوليو 2025',
+            'image': 'imgs/morocco.png',
+        },
+        "Countries-that-defeated-thirst-India": {
+            'title': 'دول هزمت العطش - الهند',
+            'date': '15 يوليو 2025',
+            'image': 'imgs/india.png',
+        },
+        "Countries-that-defeated-thirst-Singabore": {
+            'title': 'دول هزمت العطش - سنغافورة',
+            'date': '18 يوليو 2025',
+            'image': 'imgs/singabor.png',
         },
     }
 

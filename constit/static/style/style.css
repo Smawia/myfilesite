@@ -9271,7 +9271,7 @@ header .phone button {
     }
 
     .infogr img {
-        height: 340px !important;
+        height: 370px !important;
     }
 
     .show-all.infograph {
@@ -9351,9 +9351,19 @@ header .phone button {
         min-height: 450px;
     }
 
+      .studies-card.infograph-card {
+        width: calc(100% - 20px) !important;
+        height: 430px;
+    }
+
+    .studies-card.infograph-card .infograph-img {
+        max-height: 400px !important;
+    }  
+
     .container.index-articles.all-art {
         background: #fcfcfc;
         margin-top: 20px;
+        margin-bottom: 20px;
         padding: 10px 15px 20px;
         box-sizing: border-box;
         box-shadow: 0 0 5px rgba(0, 0, 0, 0.38);
@@ -9418,9 +9428,19 @@ header .phone button {
         min-height: 500px;
     }
 
+    .studies-card.infograph-card {
+        width: calc(50% - 10px) !important;
+        height: 440px;
+    }
+
+    .studies-card.infograph-card .infograph-img {
+        max-height: 370px !important;
+    }
+
     .container.index-articles.all-art {
         background: #fcfcfc;
         margin-top: 20px;
+        margin-bottom: 20px;
         padding: 10px 15px 20px;
         box-sizing: border-box;
         box-shadow: 0 0 5px rgba(0, 0, 0, 0.38);
@@ -9533,12 +9553,12 @@ header .phone button {
     }
 
     .studies-card.infograph-card {
-        width: calc(33% - 10px) !important;
-        height: 440px;
+        width: calc(33% - 5px) !important;
+        height: 525px;
     }
 
     .studies-card.infograph-card .infograph-img {
-        max-height: 365px !important;
+        max-height: 440px !important;
     }
 
     /* صفحة التفاصيل */
