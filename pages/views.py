@@ -762,6 +762,7 @@ def journal_studies(request):
 
     issue_two = [
         {'subject': 'ظاهرة التسول في اليمن', 'url': 'BeggingPhenomenonInYemen', 'image': 'imgs/Journal-7.jpg', 'date': '15 يونيو  2025'},
+        {'subject': 'الإدارة المحلية في اليمن', 'url': 'LocalGovernanceInYemen', 'image': 'imgs/Journal-8.png', 'date': '15 يونيو  2025'},   
     ]
 
     context = {
@@ -790,3 +791,6 @@ def educational_system_in_yemen(request):
 
 def begging_phenomenon_in_yemen(request):
     return render(request, 'pages/begging_phenomenon_in_yemen.html')
+
+def local_governance_in_yemen(request):
+    return render(request, 'pages/local_governance_in_yemen.html')

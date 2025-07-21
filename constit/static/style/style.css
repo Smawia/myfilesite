@@ -11641,3 +11641,119 @@ td.CellOverride-1 {
     margin-right: auto !important;
     margin-left: auto !important;
 }
+
+ /* study-2-2 */
+
+ /* table  */
+ table.TableOverride-1 {
+	border-collapse:collapse;
+	border-width:1px;
+}
+
+.study-2-2 td.CellOverride-1 {
+	vertical-align:middle;
+}
+.study-2-2 td.CellOverride-2 {
+	background-color:#283c90;
+}
+
+.study-2-2 td._idGenCellOverride-1 {
+	border-right-color:#939598;
+	border-right-style:solid;
+	border-right-width:1px;
+}
+.study-2-2 col._idGenTableRowColumn-1 {
+	width:74px;
+}
+.study-2-2 tr._idGenTableRowColumn-2 {
+	min-height:28px;
+}
+.study-2-2 tr._idGenTableRowColumn-3 {
+	background-color:#e6e7e8;
+	min-height:63px;
+}
+.study-2-2 tr._idGenTableRowColumn-4 {
+	background-color:#ffffff;
+	min-height:34px;
+}
+.study-2-2 tr._idGenTableRowColumn-5 {
+	background-color:#e6e7e8;
+	min-height:34px;
+}
+.study-2-2 col._idGenTableRowColumn-6 {
+	width:73px;
+}
+.study-2-2 col._idGenTableRowColumn-7 {
+	width:105px;
+}
+.study-2-2 col._idGenTableRowColumn-8 {
+	width:80px;
+}
+.study-2-2 col._idGenTableRowColumn-9 {
+	width:111px;
+}
+.study-2-2 tr._idGenTableRowColumn-10 {
+	min-height:33px;
+}
+.study-2-2 tr._idGenTableRowColumn-11 {
+	background-color:#e6e7e8;
+	height:54px;
+}
+.study-2-2 tr._idGenTableRowColumn-12 {
+	background-color:#ffffff;
+	height:54px;
+}
+.study-2-2 col._idGenTableRowColumn-13 {
+	width:165px;
+}
+.study-2-2 col._idGenTableRowColumn-14 {
+	width:45px;
+}
+.study-2-2 col._idGenTableRowColumn-15 {
+	width:83px;
+}
+.study-2-2 col._idGenTableRowColumn-16 {
+	width:75px;
+}
+.study-2-2 tr._idGenTableRowColumn-17 {
+	min-height:32px;
+}
+.study-2-2 tr._idGenTableRowColumn-18 {
+	background-color:#e6e7e8;
+	min-height:36px;
+}
+.study-2-2 tr._idGenTableRowColumn-19 {
+	background-color:#ffffff;
+	min-height:21px;
+}
+.study-2-2 tr._idGenTableRowColumn-20 {
+	background-color:#e6e7e8;
+	min-height:21px;
+}
+
+.study-2-2 table{
+    margin-right: auto !important;
+    margin-left: auto !important;
+}
+
+@media (max-width: 574px) {
+     .mobile-view-4 {
+       margin: auto;
+    }
+
+    .study-2-2 #table003 {
+    width: -webkit-fill-available;
+}
+}
+
+@media (min-width: 575px) {
+    .mobile-view-4 {
+      margin: 10px;
+    }
+}
+
+@media (min-width: 768px) {
+    .fig-imge-7 {
+        width: auto !important;
+    }
+}
