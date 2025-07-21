@@ -11736,6 +11736,10 @@ td.CellOverride-1 {
     margin-left: auto !important;
 }
 
+.normal-li {
+    font-weight: 500;
+}
+
 @media (max-width: 574px) {
      .mobile-view-4 {
        margin: auto;

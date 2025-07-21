@@ -735,6 +735,11 @@ def infograph_detail(request, slug):
             'date': '18 يوليو 2025',
             'image': 'imgs/singabor.png',
         },
+        "top-ten-Arab-countries-sending-migrant-remittances-2024": {
+            'title': 'أكبر عشر دول عربية إصدارًا وتلقيًا لتحويلات المهاجرين 2024',
+            'date':'29 أبريل 2025',
+            'image': 'imgs/Info-20.png',
+        },
     }
 
     detail = data.get(slug)
@@ -763,6 +768,7 @@ def journal_studies(request):
     issue_two = [
         {'subject': 'ظاهرة التسول في اليمن', 'url': 'BeggingPhenomenonInYemen', 'image': 'imgs/Journal-7.jpg', 'date': '15 يونيو  2025'},
         {'subject': 'الإدارة المحلية في اليمن', 'url': 'LocalGovernanceInYemen', 'image': 'imgs/Journal-8.png', 'date': '15 يونيو  2025'},   
+        {'subject': 'فاعلية المنظومة العدلية والرقابية في اليمن', 'url': 'EffectivenessOfTheJudicialAndOversightSystemInYemen', 'image': 'imgs/Journal-9.jpg', 'date': '15 يونيو  2025'},   
     ]
 
     context = {
@@ -794,3 +800,6 @@ def begging_phenomenon_in_yemen(request):
 
 def local_governance_in_yemen(request):
     return render(request, 'pages/local_governance_in_yemen.html')
+
+def effectiveness_of_the_judicial_and_oversight_system_in_yemen(request):
+    return render(request, 'pages/effectiveness_of_the_judicial_and_oversight_system_in_yemen.html')
