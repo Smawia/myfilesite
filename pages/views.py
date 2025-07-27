@@ -454,6 +454,36 @@ def osus_journals(request):
 def view_infograph(request):
     infographs = [    
         {
+            "title": "الثروات الطبيعية وحدها لا تكفي",
+            "slug": "natural-resources-alone-are-not-enough",
+            "image": "imgs/wealth_five.png",
+            "date": "27 يوليو 2025",
+        },
+        {
+            "title": "الثروات لصالح الشعوب",
+            "slug": "wealth-for-the-benefit-of-the-people",
+            "image": "imgs/wealth_four.png",
+            "date": "26 يوليو 2025",
+        },
+        {
+            "title": "ثروات طبيعية معدودة...ودول في الصدرارة",
+            "slug": "limited-natural-resources-and-leading-countries",
+            "image": "imgs/wealth_three.png",
+            "date": "24 يوليو 2025",
+        },
+        {
+            "title": "ثروات طبيعية وفيرة...واقتصادات هشة",
+            "slug": "natural-resources-and-fragile-economies",
+            "image": "imgs/wealth_two.png",
+            "date": "22 يوليو 2025",
+        },
+        {
+            "title": "هل تعني الثروات الطبيعية اقتصادًا قويًا؟",
+            "slug": "natural-resources-and-economy",
+            "image": "imgs/wealth_one.png",
+            "date": "20 يوليو 2025",
+        },
+        {
             "title": "دول هزمت العطش - أستراليا",
             "slug": "Countries-that-defeated-thirst-Australia",
             "image": "imgs/australia.png",
@@ -739,6 +769,31 @@ def infograph_detail(request, slug):
             'title': 'أكبر عشر دول عربية إصدارًا وتلقيًا لتحويلات المهاجرين 2024',
             'date':'29 أبريل 2025',
             'image': 'imgs/Info-20.png',
+        },
+        "natural-resources-and-economy": {
+            'title': 'هل تعني الثروات الطبيعية اقتصادًا قويًا؟',
+            'date': '20 يوليو 2025',
+            'image': 'imgs/wealth_one.png',
+        },
+        "natural-resources-and-fragile-economies": {
+            'title': 'ثروات طبيعية وفيرة...واقتصادات هشة',
+            'date': '22 يوليو 2025',
+            'image': 'imgs/wealth_two.png',
+        },
+        "limited-natural-resources-and-leading-countries": {
+            'title': 'ثروات طبيعية معدودة...ودول في الصدرارة',
+            'date': '24 يوليو 2025',
+            'image': 'imgs/wealth_three.png',
+        },
+        "wealth-for-the-benefit-of-the-people": {
+            'title': 'الثروات لصالح الشعوب',
+            'date': '26 يوليو 2025',
+            'image': 'imgs/wealth_four.png',
+        },
+        "natural-resources-alone-are-not-enough": {
+            'title': 'الثروات الطبيعية وحدها لا تكفي',
+            'date': '27 يوليو 2025',
+            'image': 'imgs/wealth_five.png',
         },
     }
 

@@ -477,6 +477,31 @@
             </a>
         </div>
         <div class="swiper-slide">
+            <a href="{% url 'infograph_detail' 'natural-resources-and-economy' %}">
+                <img src="{% static 'imgs/wealth_one.png' %}" alt="">
+            </a>
+        </div>
+        <div class="swiper-slide">
+            <a href="{% url 'infograph_detail' 'natural-resources-and-fragile-economies' %}">
+                <img src="{% static 'imgs/wealth_two.png' %}" alt="">
+            </a>
+        </div>
+        <div class="swiper-slide">
+            <a href="{% url 'infograph_detail' 'limited-natural-resources-and-leading-countries' %}">
+                <img src="{% static 'imgs/wealth_three.png' %}" alt="">
+            </a>
+        </div>
+        <div class="swiper-slide">
+            <a href="{% url 'infograph_detail' 'wealth-for-the-benefit-of-the-people' %}">
+                <img src="{% static 'imgs/wealth_four.png' %}" alt="">
+            </a>
+        </div>
+        <div class="swiper-slide">
+            <a href="{% url 'infograph_detail' 'natural-resources-alone-are-not-enough' %}">
+                <img src="{% static 'imgs/wealth_five.png' %}" alt="">
+            </a>
+        </div>
+        <div class="swiper-slide">
             <a href="{% url 'infograph_detail' 'Countries-that-defeated-thirst-Australia' %}">
                 <img src="{% static 'imgs/australia.png' %}" alt="">
             </a>
@@ -594,6 +619,36 @@
         window.onload = startSlider;
 
         const slidess = [
+            {
+                image: "{% static 'imgs/wealth_five.png' %}",
+                text: "الثروات الطبيعية وحدها لا تكفي",
+                date: "27 يوليو 2025",
+                slug: 'natural-resources-alone-are-not-enough'
+            },
+            {
+                image: "{% static 'imgs/wealth_four.png' %}",
+                text: "الثروات لصالح الشعوب",
+                date: "26 يوليو 2025",
+                slug: 'wealth-for-the-benefit-of-the-people'
+            },
+            {
+                image: "{% static 'imgs/wealth_three.png' %}",
+                text: "ثروات طبيعية معدودة...ودول في الصدرارة",
+                date: "24 يوليو 2025",
+                slug: 'limited-natural-resources-and-leading-countries'
+            },
+            {
+                image: "{% static 'imgs/wealth_two.png' %}",
+                text: "ثروات طبيعية وفيرة...واقتصادات هشة",
+                date: "22 يوليو 2025",
+                slug: 'natural-resources-and-fragile-economies'
+            },
+            {
+                image: "{% static 'imgs/wealth_one.png' %}",
+                text: "هل تعني الثروات الطبيعية اقتصادًا قويًا؟",
+                date: "20 يوليو 2025",
+                slug: 'natural-resources-and-economy'
+            },
             {
                 image: "{% static 'imgs/australia.png' %}",
                 text: "دول هزمت العطش - أستراليا",
@@ -764,7 +819,7 @@
                 imgElement.src = slidess[index].image;
                 textElement.textContent = slidess[index].text;
                 textdateElement.textContent = slidess[index].date;
-                linkElement.href = `infograph/${slidess[index].slug}/`;
+                linkElement.href = `infographics/${slidess[index].slug}/`;
                 imgElement.style.opacity = 1;
                 textElement.style.opacity = 1;
             }, 0);
