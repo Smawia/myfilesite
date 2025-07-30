@@ -50,6 +50,7 @@ urlpatterns = [
     path('journals/osus/articles/BeggingPhenomenonInYemen', views.begging_phenomenon_in_yemen, name='begging_phenomenon_in_yemen'),
     path('journals/osus/articles/LocalGovernanceInYemen', views.local_governance_in_yemen, name='local_governance_in_yemen'),
     path('journals/osus/articles/EffectivenessOfTheJudicialAndOversightSystemInYemen', views.effectiveness_of_the_judicial_and_oversight_system_in_yemen, name='effectiveness_of_the_judicial_and_oversight_system_in_yemen'),
+    path('journals/osus/articles/SocialHealthInsuranceInYemen', views.social_health_insurance_in_yemen, name='social_health_insurance_in_yemen'),
 
     # new studies
     path('articles/CurrentEconomicSituation',views.current_economic_situation,name='current_economic_situation'),

@@ -11835,3 +11835,121 @@ td.CellOverride-1 {
 	background-color:#ffffff;
 	height:40px;
 }
+
+
+ /* study-2-4 */
+
+.study-2-4 td.CellOverride-1 {
+	background-color:#dcddde;
+}
+
+.study-2-4 td._idGenCellOverride-1 {
+	border-right-color:#939598;
+	border-right-style:solid;
+	border-right-width:1px;
+}
+.study-2-4 col._idGenTableRowColumn-1 {
+	width:123px;
+}
+.study-2-4 col._idGenTableRowColumn-2 {
+	width:61px;
+}
+.study-2-4 tr._idGenTableRowColumn-3 {
+	background-color:#e6e7e8;
+	min-height:21px;
+}
+.study-2-4 tr._idGenTableRowColumn-4 {
+	background-color:#ffffff;
+	min-height:21px;
+}
+.study-2-4 tr._idGenTableRowColumn-5 {
+	background-color:#ffffff;
+	min-height:36px;
+}
+.study-2-4 tr._idGenTableRowColumn-6 {
+	background-color:#e6e7e8;
+	min-height:36px;
+}
+.study-2-4 col._idGenTableRowColumn-7 {
+	width:36px;
+}
+.study-2-4 col._idGenTableRowColumn-8 {
+	width:64px;
+}
+.study-2-4 col._idGenTableRowColumn-9 {
+	width:28px;
+}
+.study-2-4 col._idGenTableRowColumn-10 {
+	width:58px;
+}
+.study-2-4 tr._idGenTableRowColumn-11 {
+	background-color:#e6e7e8;
+	min-height:34px;
+}
+.study-2-4 tr._idGenTableRowColumn-12 {
+	background-color:#ffffff;
+	min-height:34px;
+}
+.study-2-4 col._idGenTableRowColumn-13 {
+	width:65px;
+}
+.study-2-4 tr._idGenTableRowColumn-14 {
+	min-height:28px;
+}
+.study-2-4 col._idGenTableRowColumn-15 {
+	width:92px;
+}
+.study-2-4 tr._idGenTableRowColumn-16 {
+	min-height:34px;
+}
+.study-2-4 table._idGenTablePara-1 {
+	margin-left:auto;
+	margin-right:auto;
+}
+
+.study-2-4 table{
+    margin-right: auto !important;
+    margin-left: auto !important;
+}
+
+.full-width {
+    width: 100% !important;
+}
+
+.large-table-width {
+    margin-left: 5% !important;
+    margin-right: 5% !important;
+}
+
+.add-new-margin {
+    margin-left: 2px !important;
+    margin-right: 2px !important;
+}
+
+.add-padding {
+    padding-right: 2px;
+    padding-left: 2px;
+}
+
+.margin-zero{
+    margin-left: 5% !important;
+    margin-right: 5% !important;
+}
+
+@media (max-width: 450px) {
+    .margin-zero{
+        margin-left: 0% !important;
+        margin-right: 0% !important;
+    }
+
+    .large-table-width {
+        margin-left: 0% !important;
+        margin-right: 0% !important;
+    }
+}
+@media (max-width: 992px) and (min-width: 574px) {
+    .custom-mobile-view-3 {
+        margin: 10px;
+    }
+}
+

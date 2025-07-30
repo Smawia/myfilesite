@@ -823,7 +823,8 @@ def journal_studies(request):
     issue_two = [
         {'subject': 'ظاهرة التسول في اليمن', 'url': 'BeggingPhenomenonInYemen', 'image': 'imgs/Journal-7.jpg', 'date': '15 يونيو  2025'},
         {'subject': 'الإدارة المحلية في اليمن', 'url': 'LocalGovernanceInYemen', 'image': 'imgs/Journal-8.png', 'date': '15 يونيو  2025'},   
-        {'subject': 'فاعلية المنظومة العدلية والرقابية في اليمن', 'url': 'EffectivenessOfTheJudicialAndOversightSystemInYemen', 'image': 'imgs/Journal-9.jpg', 'date': '15 يونيو  2025'},   
+        {'subject': 'فاعلية المنظومة العدلية والرقابية في اليمن', 'url': 'EffectivenessOfTheJudicialAndOversightSystemInYemen', 'image': 'imgs/Journal-9.jpg', 'date': '15 يونيو  2025'},
+        {'subject': 'التأمين الصحي الاجتماعي في اليمن', 'url': 'SocialHealthInsuranceInYemen', 'image': 'imgs/Journal-10.jpg', 'date': '15 يونيو  2025'},   
     ]
 
     context = {
@@ -858,3 +859,6 @@ def local_governance_in_yemen(request):
 
 def effectiveness_of_the_judicial_and_oversight_system_in_yemen(request):
     return render(request, 'pages/effectiveness_of_the_judicial_and_oversight_system_in_yemen.html')
+
+def social_health_insurance_in_yemen(request):
+    return render(request, 'pages/social_health_insurance_in_yemen.html')
