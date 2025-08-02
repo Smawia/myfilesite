@@ -10022,7 +10022,7 @@ tr._idGenTableRowColumn-52 {
         font-size: 17px !important;
     }
 
-    .custom-h5 {
+    .Heading-5 {
         font-size: 17px;
         margin-bottom: -9px;
         margin-top: 15px;
@@ -10066,7 +10066,7 @@ tr._idGenTableRowColumn-52 {
         line-height: 1.4;
     }
 
-    .custom-h5 {
+    .Heading-5 {
         font-size: 17px;
         margin-bottom: -7px;
     }
@@ -10104,7 +10104,7 @@ tr._idGenTableRowColumn-52 {
         font-size: 18px;
     }
 
-    .custom-h5 {
+    .Heading-5 {
         font-size: 18px;
         margin-bottom: -5px;
     }
@@ -10132,7 +10132,7 @@ tr._idGenTableRowColumn-52 {
         font-family: 'CodecProBold'
     }
 
-    .custom-h5 {
+    .Heading-5 {
         text-align: right;
         font-size: 19px;
         margin-bottom: -5px;
@@ -10169,7 +10169,7 @@ tr._idGenTableRowColumn-52 {
     font-family: 'CodecProBold'
 }
 
-.custom-h5 {
+.Heading-5 {
     text-align: right;
     font-weight: bold;
 }
@@ -10446,11 +10446,11 @@ span.Hyperlink {
 }
 
 /* table*/
-.study-6 td._idGenCellOverride-1 {
+/* .study-6 td._idGenCellOverride-1 {
     border-right-color: #939598;
     border-right-style: solid;
     border-right-width: 1px;
-}
+} */
 
 .study-6 col._idGenTableRowColumn-1 {
     width: 177px;
@@ -10998,7 +10998,7 @@ body.dark-mode .box {
     margin-top: 5px;
 }
 
-.custom-h5-2 {
+.custom-h5 {
     margin-bottom: 10px;
     margin-top: 15px;
 }
@@ -11061,11 +11061,11 @@ body.dark-mode .box {
     vertical-align: middle;
 }
 
-.study-2 td._idGenCellOverride-1 {
+/* .study-2 td._idGenCellOverride-1 {
     border-right-color: #939598;
     border-right-style: solid;
     border-right-width: 1px;
-}
+} */
 
 .study-2 col._idGenTableRowColumn-1 {
     width: 99px;
@@ -11659,11 +11659,11 @@ td.CellOverride-1 {
 	background-color:#283c90;
 }
 
-.study-2-2 td._idGenCellOverride-1 {
+/* .study-2-2 td._idGenCellOverride-1 {
 	border-right-color:#939598;
 	border-right-style:solid;
 	border-right-width:1px;
-}
+} */
 .study-2-2 col._idGenTableRowColumn-1 {
 	width:74px;
 }
@@ -11843,11 +11843,11 @@ td.CellOverride-1 {
 	background-color:#dcddde;
 }
 
-.study-2-4 td._idGenCellOverride-1 {
+/* .study-2-4 td._idGenCellOverride-1 {
 	border-right-color:#939598;
 	border-right-style:solid;
 	border-right-width:1px;
-}
+} */
 .study-2-4 col._idGenTableRowColumn-1 {
 	width:123px;
 }
