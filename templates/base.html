@@ -33,22 +33,19 @@
         }
     </script>
     <!-- markup for facebook -->
-    <meta property="og:type" content="website" />
-    <meta property="og:title" content="title" />
     <meta property="og:url" content="http://csr-yemen.com" />
-    <meta property="og:site_name" content="aimen" />
-    <meta property="og:description" content="text" />
+    <meta property="og:site_name" content="المركز التأسيسي" />
+    <meta property="og:description" content="المركز التأسيسي للدراسات والبحوث" />
 
 
     <!-- markup for twitter -->
-    <meta name="twitter:title" content="title" />
-    <meta name="twitter:description" content="text" />
     <meta name="twitter:creator" content="hamzarachid.com" />
     <link rel="stylesheet" href="{% static 'style/style.css' %}?v={{ static_version }}">
     <link rel="stylesheet" href="{% static 'style/all.min.css' %}?v={{ static_version }}">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css" />
 
     <title>{% block title %}المركز التأسيسي للدراسات والبحوث{% endblock %}</title>
+    {% block meta_og %}{% endblock %}
     <link rel="icon" type="image/x-icon" href="{% static 'imgs/icon.ico' %}?v={{ static_version }}">
 </head>
 
