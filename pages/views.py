@@ -628,7 +628,7 @@ def view_infograph(request):
             "date": "13 مارس 2025",
         },
         {
-            "title": "أكثر سبع دول إنتاجاً للأدوية في العام 2024",
+            "title": "أكثر سبع دول إنتاجًا للأدوية في العام 2024",
             "slug": "The-seven-largest-pharmaceutical-producing-countries-in-2024",
             "image": "imgs/Info-01.png",
             "date": "11 مارس 2025",
@@ -641,7 +641,7 @@ def infograph_detail(request, slug):
     # بيانات ثابتة للكروت
     data = {
         "The-seven-largest-pharmaceutical-producing-countries-in-2024": {
-            'title': 'أكثر سبع دول إنتاجاً للأدوية في العام 2024',
+            'title': 'أكثر سبع دول إنتاجًا للأدوية في العام 2024',
             'date': '11 مارس 2025',
             'image': 'imgs/Info-01.png',
         },

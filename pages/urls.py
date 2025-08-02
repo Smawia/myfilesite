@@ -78,7 +78,7 @@ urlpatterns = [
     path('publications/Journals/Osus/osus-2025-03-issue-contents.pdf', views.view_osus_content, name='osus-content'),
     path('publications/Journals/Osus/osus-2025-06-issue-contents.pdf', views.view_osus_second_content, name='osus-second-content'),
     path('Infographics/', views.view_infograph, name='infographs'),
-    path('infographics/<slug:slug>/', views.infograph_detail, name='infograph_detail'),
+    path('Infographics/<slug:slug>/', views.infograph_detail, name='infograph_detail'),
 ]
 sitemaps = {
     'static': StaticViewSitemap,
