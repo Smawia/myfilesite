@@ -1,7 +1,22 @@
 {% extends 'base.html' %}
 {% load static %}
 {% block title %}دراسات وبحوث{% endblock %}
+{% block meta_og %}
+    <meta name="description" content="دراسات وبحوث من المركز التأسيسي للدراسات والبحوث.">
 
+    <!-- Open Graph -->
+    <meta property="og:title" content="دراسات وبحوث المركز">
+    <meta property="og:description" content="دراسات وبحوث من المركز التأسيسي للدراسات والبحوث.">
+    <meta property="og:image" content="https://csr-yemen.com/static/imgs/LOGO ICON-02.png">
+    <meta property="og:url" content="http://csr-yemen.com/articles">
+    <meta property="og:type" content="article">
+
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="دراسات وبحوث المركز">
+    <meta name="twitter:description" content="دراسات وبحوث من المركز التأسيسي للدراسات والبحوث.">
+    <meta name="twitter:image" content="https://csr-yemen.com/static/imgs/LOGO ICON-02.png">
+{% endblock %}
 {% block content %}
 <div class="container index-articles all-studies">
     <h1 class="spe-h1">دراسات وبحوث</h1>

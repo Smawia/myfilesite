@@ -1,6 +1,18 @@
 {% extends 'base.html' %}
 {% load static %}
 {% block title %}ملاحظات على مداخل الإصلاح الإداري{% endblock %}
+{% block meta_og %}
+    <meta name="description" content="تفاصيل حول ملاحظات على مداخل الإصلاح الإداري">
+    <meta property="og:title" content="ملاحظات على مداخل الإصلاح الإداري">
+    <meta property="og:description" content="تفاصيل حول ملاحظات على مداخل الإصلاح الإداري">
+    <meta property="og:image" content="https://csr-yemen.com/static/imgs/notes3.jpg">
+    <meta property="og:url" content="https://csr-yemen.com/articles/NotesReform">
+    <meta property="og:type" content="article">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="ملاحظات على مداخل الإصلاح الإداري">
+    <meta name="twitter:description" content="تفاصيل حول ملاحظات على مداخل الإصلاح الإداري">
+    <meta name="twitter:image" content="https://csr-yemen.com/static/imgs/notes3.jpg">
+{% endblock %}
 {% block content %}
 <div class="container articles">
     <div id="progress-container" style="position: fixed; top: 0; left: 0; width: 100%; height: 5px; background: #f0f0f0; z-index: 9999;">
@@ -56,7 +68,7 @@
                     <button id="decreaseFont"><img src="{% static 'imgs/Zoom_OUT.svg' %}" alt=""></button>
                 </div>
             </div>
-            <img src="{% static 'imgs/notes3.jpg'' %}" alt="" id="img-id">
+            <img src="{% static 'imgs/notes3.jpg' %}" alt="" id="img-id">
 
 
             <div class="full-text">

@@ -1,6 +1,23 @@
 {% extends 'base.html' %}
 {% load static %}
 {% block title %}دورية أٌســس{% endblock %}
+{% block meta_og %}
+    <meta name="description" content="دورية أُسُس: دورية فصلية محكًمة تعني بالإدارة والسياسات العامة تصدر من المركز التأسيسي للدراسات والبحوث.">
+
+    <!-- Open Graph -->
+    <meta property="og:title" content="دورية أُسُس - إصدار علمي من CSR Yemen">
+    <meta property="og:description" content="دورية فصلية محكًمة تعني بالإدارة والسياسات العامة تصدر من المركز التأسيسي للدراسات والبحوث.">
+    <meta property="og:image" content="https://csr-yemen.com/static/imgs/web.jpg">
+    <meta property="og:url" content="http://csr-yemen.com/publications/Journals/Osus">
+    <meta property="og:type" content="article">
+
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="دورية أُسُس - إصدار علمي من CSR Yemen">
+    <meta name="twitter:description" content="دورية فصلية محكًمة تعني بالإدارة والسياسات العامة تصدر من المركز التأسيسي للدراسات والبحوث.">
+    <meta name="twitter:image" content="https://csr-yemen.com/static/imgs/web.jpg">
+{% endblock %}
+
 {% block content %}
 <div class="container">
     <div class="osus-first-content">

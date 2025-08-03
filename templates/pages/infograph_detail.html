@@ -3,6 +3,23 @@
 
 {% block title %}{{ detail.title }}{% endblock %}
 
+{% block meta_og %}
+    <meta name="description" content="{{ detail.title }} - إنفوجراف من المركز التأسيسي للدراسات والبحوث.">
+
+    <!-- Open Graph -->
+    <meta property="og:title" content="{{ detail.title }} | إنفوجراف">
+    <meta property="og:description" content="{{ detail.title }} - إنفوجراف من المركز التأسيسي للدراسات والبحوث.">
+    <meta property="og:image" content="{{ detail.image|default:'https://csr-yemen.com/static/imgs/LOGO ICON-02.png' }}">
+    <meta property="og:url" content="{{ request.build_absolute_uri }}">
+    <meta property="og:type" content="article">
+
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="{{ detail.title }} | إنفوجراف">
+    <meta name="twitter:description" content="{{ detail.title }} - إنفوجراف من المركز التأسيسي للدراسات والبحوث.">
+    <meta name="twitter:image" content="{{ detail.image|default:'https://csr-yemen.com/static/imgs/LOGO ICON-02.png' }}">
+{% endblock %}
+
 {% block content %}
 <div class="container index-articles all-studies">
     <h1 class="spe-h1">أسس إنفوجراف</h1>

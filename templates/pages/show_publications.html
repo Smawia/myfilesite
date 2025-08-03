@@ -1,6 +1,23 @@
 {% extends 'base.html' %}
 {% load static %}
 {% block title %}إصدارات المركز{% endblock %}
+{% block meta_og %}
+    <meta name="description" content="صفحة إصدارات المركز التأسيسي للدراسات والبحوث، تشمل الدوريات والكتب مثل دورية أُسس وكتاب رؤية مستقبلية للإصلاح الإداري في اليمن.">
+
+    <!-- Open Graph -->
+    <meta property="og:title" content="إصدارات المركز | المركز التأسيسي للدراسات والبحوث">
+    <meta property="og:description" content="تعرف على أبرز إصدارات المركز التأسيسي للدراسات والبحوث، من الدوريات مثل دورية أُسس إلى الكتب البحثية المتخصصة.">
+    <meta property="og:image" content="https://csr-yemen.com/static/imgs/new_osus.jpg">
+    <meta property="og:url" content="http://csr-yemen.com/publications">  {# يمكنك تعديل الرابط لاحقًا إذا كان مختلفًا #}
+    <meta property="og:type" content="website">
+
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="إصدارات المركز | المركز التأسيسي للدراسات والبحوث">
+    <meta name="twitter:description" content="دوريات وكتب صادرة عن المركز التأسيسي للدراسات والبحوث، منها دورية أُسس وكتاب الإصلاح الإداري في اليمن.">
+    <meta name="twitter:image" content="https://csr-yemen.com/static/imgs/new_osus.jpg">
+{% endblock %}
+
 {% block content %}
 <div class="container index-articles"><h1 class="publications in-index with-out">إصدارات المركز</h1></div>
 <div class="outside-container">

@@ -1,6 +1,22 @@
 {% extends 'base.html' %}
 {% load static %}
 {% block title %}إنفوجراف{% endblock %}
+{% block meta_og %}
+    <meta name="description" content="إنفوجراف من المركز التأسيسي للدراسات والبحوث">
+
+    <!-- Open Graph -->
+    <meta property="og:title" content="إنفوجراف">
+    <meta property="og:description" content="إنفوجراف من المركز التأسيسي للدراسات والبحوث - CSR Yemen.">
+    <meta property="og:image" content="https://csr-yemen.com/static/imgs/LOGO ICON-02.png">
+    <meta property="og:url" content="http://csr-yemen.com/Infographics/">
+    <meta property="og:type" content="article">
+
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="إنفوجراف">
+    <meta name="twitter:description" content="إنفوجراف من المركز التأسيسي للدراسات والبحوث - CSR Yemen.">
+    <meta name="twitter:image" content="https://csr-yemen.com/static/imgs/LOGO ICON-02.png">
+{% endblock %}
 {% block content %}
 
 <div class="container index-articles all-studies">

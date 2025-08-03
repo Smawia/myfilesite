@@ -1,6 +1,18 @@
 {% extends 'base.html' %}
 {% load static %}
 {% block title %}القضاء في اليمن{% endblock %}
+{% block meta_og %}
+    <meta name="description" content="تفاصيل حول القضاء في اليمن">
+    <meta property="og:title" content="القضاء في اليمن">
+    <meta property="og:description" content="تفاصيل حول القضاء في اليمن">
+    <meta property="og:image" content="https://csr-yemen.com/static/imgs/Journal-04.jpg">
+    <meta property="og:url" content="https://csr-yemen.com/journals/osus/articles/JudiciaryInYemen">
+    <meta property="og:type" content="article">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="القضاء في اليمن">
+    <meta name="twitter:description" content="تفاصيل حول القضاء في اليمن">
+    <meta name="twitter:image" content="https://csr-yemen.com/static/imgs/Journal-04.jpg">
+{% endblock %}
 {% block content %}
 <div class="container articles">
     <div id="progress-container"
