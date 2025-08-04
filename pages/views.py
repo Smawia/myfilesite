@@ -454,6 +454,24 @@ def osus_journals(request):
 def view_infograph(request):
     infographs = [    
         {
+            "title": "أكبر البنوك والشركات المصرفية القابضة في العالم 2025",
+            "slug": "largest-banks-and-banking-holding-companies-in-2025",
+            "image": "imgs/bank.png",
+            "date": "3 أغسطس 2025",
+        },
+        {
+            "title": "الشركات الأكثر قيمة في العالم 2025",
+            "slug": "worlds-most-valuable-companies-2025",
+            "image": "imgs/company.png",
+            "date": "3 أغسطس 2025",
+        },
+        {
+            "title": "أكبر الشركات في العالم من حيث عدد العاملين",
+            "slug": "largest-companies-in-the-world-by-number-of-employees",
+            "image": "imgs/employees.png",
+            "date": "3 أغسطس 2025",
+        },
+        {
             "title": "الثروات الطبيعية وحدها لا تكفي",
             "slug": "natural-resources-alone-are-not-enough",
             "image": "imgs/wealth_five.png",
@@ -794,6 +812,21 @@ def infograph_detail(request, slug):
             'title': 'الثروات الطبيعية وحدها لا تكفي',
             'date': '27 يوليو 2025',
             'image': 'imgs/wealth_five.png',
+        },
+        "largest-banks-and-banking-holding-companies-in-2025": {
+            'title': 'أكبر البنوك والشركات المصرفية القابضة في العالم 2025',
+            'date': '3 أغسطس 2025',
+            'image': 'imgs/bank.png',
+        },
+        "worlds-most-valuable-companies-2025": {
+            'title': 'الشركات الأكثر قيمة في العالم 2025',
+            'date': '3 أغسطس 2025',
+            'image': 'imgs/company.png',
+        },
+        "largest-companies-in-the-world-by-number-of-employees": {
+            'title': 'أكبر الشركات في العالم من حيث عدد العاملين',
+            'date': '3 أغسطس 2025',
+            'image': 'imgs/employees.png',
         },
     }
 

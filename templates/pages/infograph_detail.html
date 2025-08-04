@@ -187,7 +187,7 @@
 
     @media (min-width: 992px) {
         .popup-content img {
-            max-width: 50% !important;
+            max-width: 38% !important;
             max-height: 50% !important;
             transition: transform 0.3s ease;
         }
@@ -470,6 +470,35 @@
             }
             popupImage.style.transform = `scale(${currentScale})`;
             updateCursor();
+        });
+        let isDragging = false;
+        let startX, startY;
+        let currentX = 0, currentY = 0;
+
+        // عند بداية الضغط على الصورة
+        popupImage.addEventListener('mousedown', function (e) {
+            isDragging = true;
+            startX = e.clientX - currentX;
+            startY = e.clientY - currentY;
+            popupImage.style.cursor = 'grabbing';
+        });
+
+        // عند تحريك الفأرة
+        document.addEventListener('mousemove', function (e) {
+            if (!isDragging) return;
+
+            currentX = e.clientX - startX;
+            currentY = e.clientY - startY;
+
+            popupImage.style.transform = `scale(${currentScale}) translate(${currentX}px, ${currentY}px)`;
+        });
+
+        // عند إفلات الفأرة
+        document.addEventListener('mouseup', function () {
+            if (isDragging) {
+                isDragging = false;
+                popupImage.style.cursor = currentScale > 1 ? 'zoom-out' : 'zoom-in';
+            }
         });
 
     });
