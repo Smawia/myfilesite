@@ -67,6 +67,8 @@ const elements = [
     ...document.querySelectorAll('.first-page .full-text h3'),     // العناوين
     ...document.querySelectorAll('.first-page .full-text h4'),     // العناوين
     ...document.querySelectorAll('.first-page .full-text h5'),     // العناوين
+    ...document.querySelectorAll('.first-page .full-text figcaption'),  // عناوين الأشكال
+    ...document.querySelectorAll('.first-page .full-text .source'), // المصادر 
     ...document.querySelectorAll('.first-page .table-caption'),    // عناوين الجداول
     ...document.querySelectorAll('.special-title'),                // العناوين الخاصة
     ...document.querySelectorAll('.special-title2'),

@@ -10374,6 +10374,11 @@ span.Hyperlink {
     text-align: center;
 }
 
+.study-5 tr._idGenTableRowColumn-27 {
+	background-color:#e6e7e8;
+	min-height:65px;
+}
+
 .study-5 tr {
     text-align: center;
 }
@@ -11227,7 +11232,7 @@ body.dark-mode .box {
     min-height: 28px;
 }
 
-.study-2 r._idGenTableRowColumn-37 {
+.study-2 tr._idGenTableRowColumn-37 {
     background-color: #ffffff;
     min-height: 28px;
 }
@@ -11921,14 +11926,14 @@ td.CellOverride-1 {
     margin-right: 5% !important;
 }
 
-.add-new-margin {
+/* .add-new-margin {
     margin-left: 2px !important;
     margin-right: 2px !important;
-}
+} */
 
 .add-padding {
-    padding-right: 2px;
-    padding-left: 2px;
+    padding-right: 1px;
+    padding-left: 1px;
 }
 
 .margin-zero{
