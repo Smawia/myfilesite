@@ -477,6 +477,7 @@
 
         // عند بداية الضغط على الصورة
         popupImage.addEventListener('mousedown', function (e) {
+            e.preventDefault(); // يمنع السلوك الافتراضي للسحب
             isDragging = true;
             startX = e.clientX - currentX;
             startY = e.clientY - currentY;
