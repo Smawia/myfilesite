@@ -59,23 +59,57 @@ def about(request):
     return render(request,'pages/about.html')
 
 def studies(request):
-    context = None
-    query = request.GET.get('q', '')  # الحصول على الكلمة المفتاحية من الطلب
-    data = Studies.objects.all()
-    # تصفية البيانات إذا كان هناك كلمة بحث
+    query = request.GET.get('q', '')  # كلمة البحث
+    db_results = Studies.objects.all()
+
     if query:
-        data = data.filter(
-            Q(subject__icontains=query)
-        )
-    page = Paginator(data,12)
-    page_list = request.GET.get('page')
-    
-    page = page.get_page(page_list)
-    context = {
-        'page': page,
-        'query': query,  # إضافة الكلمة المفتاحية للسياق لعرضها في القالب
-    }
-    return render(request,'pages/studies.html',context)
+        db_results = db_results.filter(Q(subject__icontains=query))
+
+    # تحويل نتائج DB إلى قائمة مع توحيد الحقول
+    combined_results = [
+        {
+            'subject': item.subject,
+            'url': item.url,
+            'image': item.image,  # ImageField من DB
+            'publish_date': item.publish_date,
+            'from_db': True
+        }
+        for item in db_results
+    ]
+    # القوائم الثابتة
+    issue_one = [
+        {'subject': 'اقتصاد السوق الاجتماعي', 'url': 'SocialMarketEconomy', 'image': 'Journal-01.jpg', 'date': '20 مارس  2025', 'from_db': False},
+        {'subject': 'النهضة الزراعية في اليمن', 'url': 'AgriculturalRenaissanceInYemen', 'image': 'Journal-02.jpg', 'date': '20 مارس  2025', 'from_db': False},
+        {'subject': 'النظام التعليمي في اليمن', 'url': 'EducationalSystemInYemen', 'image': 'Journal-03.jpg', 'date': '20 مارس  2025', 'from_db': False},
+        {'subject': 'القضاء في اليمن', 'url': 'JudiciaryInYemen', 'image': 'Journal-04.jpg', 'date': '20 مارس  2025', 'from_db': False},
+        {'subject':'الوظائف في اليمن', 'url': 'JobsInYemen', 'image': 'Journal-05.jpg', 'date': '20 مارس  2025', 'from_db': ' False'},
+        {'subject': 'النظافة وإدارة النفايات الصلبة', 'url': 'HygieneAndSolidWasteManagement', 'image': 'Journal-06.jpg', 'date': '20 مارس  2025', 'from_db': False},
+    ]
+
+    issue_two = [
+        {'subject': 'ظاهرة التسول في اليمن', 'url': 'BeggingPhenomenonInYemen', 'image': 'Journal-7.jpg', 'date': '15 يونيو  2025', 'from_db': False},
+        {'subject': 'الإدارة المحلية في اليمن', 'url': 'LocalGovernanceInYemen', 'image': 'Journal-8.png', 'date': '15 يونيو  2025', 'from_db': False},   
+        {'subject': 'فاعلية المنظومة العدلية والرقابية في اليمن', 'url': 'EffectivenessOfTheJudicialAndOversightSystemInYemen', 'image': 'Journal-9.jpg', 'date': '15 يونيو  2025', 'from_db': False},
+        {'subject': 'التأمين الصحي الاجتماعي في اليمن', 'url': 'SocialHealthInsuranceInYemen', 'image': 'Journal-10.jpg', 'date': '15 يونيو  2025', 'from_db': False},   
+    ]
+
+    # إضافة القوائم الثابتة بعد البحث فيها
+    if query:
+        for item in issue_one + issue_two:
+            if not query or query in item['subject']:
+                combined_results.append({
+                    'subject': item['subject'],
+                    'url': item['url'],
+                    'image': item['image'],  # مسار داخل static
+                    'publish_date': item['date']
+                })
+
+    # Pagination
+    page_number = request.GET.get('page')
+    paginator = Paginator(combined_results, 12)
+    page_obj = paginator.get_page(page_number)
+
+    return render(request, 'pages/studies.html', {'page': page_obj, 'query': query})
 
 def contact(request):
     sugg = None
