@@ -47,7 +47,7 @@
                             class="js-a nav-a"
                             {% endif %}
                             >معلومات المركز </a>
-                            <ul class="ul">
+                            <ul class="ul nested-list">
                                 <li><a href="{% url 'about' %}">من نحن</a></li>
                                 <li><a href="{% url 'criteria' %}">معايير النشر</a></li>  
                             </ul>
@@ -100,7 +100,7 @@
                                 class="js-a nav-a"
                                 {% endif %}
                                 >تسجيل عضوية</a>
-                                <ul class="ul">
+                                <ul class="ul nested-list">
                                     <li style="display: none;"><a href="{% url 'signin' %}">تسجيل الدخول</a></li>
                                     <li><a href="{% url 'signin' %}">تسجيل الدخول</a></li>
                                     <li><a href="{% url 'logout' %}">تسجيل الخروج</a></li> 
@@ -337,5 +337,31 @@
             header.classList.remove("scrolled");
         }
     });
-              
+    
+    document.addEventListener('DOMContentLoaded', () => {
+    const triggers = document.querySelectorAll('.base-li.aside-base-li');
+
+    function animateHeight(el, to, duration = 50) {
+        if (!el) return; // لو العنصر مش موجود
+        const from = parseFloat(getComputedStyle(el).height) || 0;
+        const start = performance.now();
+        let raf;
+
+        const tick = (now) => {
+            const p = Math.min((now - start) / duration, 1);
+            const current = from + (to - from) * p;
+            el.style.setProperty("height", current + 'px', "important");
+            if (p < 1) raf = requestAnimationFrame(tick);
+        };
+        raf = requestAnimationFrame(tick);
+    }
+
+    triggers.forEach(trigger => {
+        const list = trigger.querySelector('.nested-list');
+        if (!list) return; // إذا ما في قائمة فرعية نتجاوز
+
+        trigger.addEventListener('mouseenter', () => animateHeight(list, 39));
+        trigger.addEventListener('mouseleave', () => animateHeight(list, 0));
+    });
+});    
  </script>

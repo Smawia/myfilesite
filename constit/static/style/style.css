@@ -316,6 +316,11 @@ header ul .base-li:hover .ul {
     display: block;
 }
 
+header .nested-list {
+    height: 0px;
+    overflow: hidden;
+}
+
 header ul .base-li .ul {
     display: flex;
     flex-direction: column;
