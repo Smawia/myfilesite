@@ -80,10 +80,10 @@ const increaseButton = document.getElementById('increaseFont');
 const decreaseButton = document.getElementById('decreaseFont');
 
 // الحجم الافتراضي للنص
-let fontSize = 16;
+let fontSize = 19;
 
 // الحد الأقصى والأدنى للحجم
-const maxFontSize = 26;
+const maxFontSize = 30;
 const minFontSize = 10;
 
 // عند النقر على زر التكبير
