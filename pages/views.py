@@ -488,6 +488,18 @@ def osus_journals(request):
 def view_infograph(request):
     infographs = [    
         {
+            "title": "كندا 1494-1498...المراجعة البرنامجية التي أطفأت العجز",
+            "slug": "Canada-the-programmatic-review-that-extinguished-the-deficit",
+            "image": "imgs/canada.png",
+            "date": "13 أغسطس 2025",
+        },
+        {
+            "title": "الإصلاح الحكومي في اليابان",
+            "slug": "Government-reform-in-Japan",
+            "image": "imgs/japan.png",
+            "date": "10 أغسطس 2025",
+        },
+        {
             "title": "أكبر البنوك والشركات المصرفية القابضة في العالم 2025",
             "slug": "largest-banks-and-banking-holding-companies-in-2025",
             "image": "imgs/bank.png",
@@ -861,6 +873,16 @@ def infograph_detail(request, slug):
             'title': 'أكبر الشركات في العالم من حيث عدد العاملين',
             'date': '3 أغسطس 2025',
             'image': 'imgs/employees.png',
+        },
+        "Canada-the-programmatic-review-that-extinguished-the-deficit": {
+            'title': 'كندا 1494-1498...المراجعة البرنامجية التي أطفأت العجز',
+            'date': '13 أغسطس 2025',
+            'image': 'imgs/canada.png',
+        },
+        "Government-reform-in-Japan": {
+            'title': 'الإصلاح الحكومي في اليابان',
+            'date': '10 أغسطس 2025',
+            'image': 'imgs/japan.png',
         },
     }
 

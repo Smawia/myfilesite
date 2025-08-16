@@ -540,6 +540,16 @@
             </a>
         </div>
         <div class="swiper-slide">
+            <a href="{% url 'infograph_detail' 'Canada-the-programmatic-review-that-extinguished-the-deficit' %}">
+                <img src="{% static 'imgs/canada.png' %}" alt="">
+            </a>
+        </div>
+        <div class="swiper-slide">
+            <a href="{% url 'infograph_detail' 'Government-reform-in-Japan' %}">
+                <img src="{% static 'imgs/japan.png' %}" alt="">
+            </a>
+        </div>
+        <div class="swiper-slide">
             <a href="{% url 'infograph_detail' 'largest-banks-and-banking-holding-companies-in-2025' %}">
                 <img src="{% static 'imgs/bank.png' %}" alt="">
             </a>
@@ -673,6 +683,18 @@
         window.onload = startSlider;
 
         const slidess = [
+            {
+                image: "{% static 'imgs/canada.png' %}",
+                text: "كندا 1494-1498...المراجعة البرنامجية التي أطفأت العجز",
+                date: "13 أغسطس 2025",
+                slug: 'Canada-the-programmatic-review-that-extinguished-the-deficit'
+            },
+            {
+                image: "{% static 'imgs/japan.png' %}",
+                text: "الإصلاح الحكومي في اليابان",
+                date: "10 أغسطس 2025",
+                slug: 'Government-reform-in-Japan'
+            },
             {
                 image: "{% static 'imgs/employees.png' %}",
                 text: "أكبر الشركات في العالم من حيث عدد العاملين",
