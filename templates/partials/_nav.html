@@ -338,30 +338,40 @@
         }
     });
     
-    document.addEventListener('DOMContentLoaded', () => {
+   document.addEventListener('DOMContentLoaded', () => {
     const triggers = document.querySelectorAll('.base-li.aside-base-li');
 
-    function animateHeight(el, to, duration = 50) {
-        if (!el) return; // لو العنصر مش موجود
-        const from = parseFloat(getComputedStyle(el).height) || 0;
+    function animateHeight(el, to, duration = 150) {
+        if (!el) return;
+
+        let from = parseFloat(getComputedStyle(el).height);
+        if (isNaN(from)) from = 0;
+
         const start = performance.now();
-        let raf;
 
         const tick = (now) => {
             const p = Math.min((now - start) / duration, 1);
             const current = from + (to - from) * p;
-            el.style.setProperty("height", current + 'px', "important");
-            if (p < 1) raf = requestAnimationFrame(tick);
+            el.style.height = current + 'px';
+            if (p < 1) requestAnimationFrame(tick);
         };
-        raf = requestAnimationFrame(tick);
+        requestAnimationFrame(tick);
     }
 
     triggers.forEach(trigger => {
         const list = trigger.querySelector('.nested-list');
-        if (!list) return; // إذا ما في قائمة فرعية نتجاوز
+        if (!list) return;
 
-        trigger.addEventListener('mouseenter', () => animateHeight(list, 39));
-        trigger.addEventListener('mouseleave', () => animateHeight(list, 0));
+        list.style.height = '0px';
+        list.style.overflow = 'hidden';
+
+        trigger.addEventListener('mouseenter', () => {
+            animateHeight(list, list.scrollHeight);
+        });
+
+        trigger.addEventListener('mouseleave', () => {
+            animateHeight(list, 0);
+        });
     });
-});    
+});
  </script>

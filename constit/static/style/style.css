@@ -11963,3 +11963,23 @@ td.CellOverride-1 {
     }
 }
 
+/* إصلاح المسافات الإضافية */
+.nested-list {
+    padding: 0 !important;
+}
+
+.nested-list li {
+    margin: 0 !important;
+    line-height: normal !important;
+}
+
+.nested-list li a {
+    display: block;
+    padding: 5px 10px !important; /* تحكم أنت في المسافة الداخلية */
+    line-height: 1.2 !important;
+}
+
+.nested-list::before,
+.nested-list::after {
+    content: none !important; /*إزالة أي محتوى pseudo*/
+}
