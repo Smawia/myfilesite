@@ -1099,8 +1099,6 @@ header img {
     margin-top: 30px;
     text-align: justify;
     font-family: 'Calibri';
-    position: relative;
-    z-index: 1000;
 }
 
 .points .right ul li {
