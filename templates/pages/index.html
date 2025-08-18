@@ -545,6 +545,21 @@
             </a>
         </div>
         <div class="swiper-slide">
+            <a href="{% url 'infograph_detail' 'top-ten-countries-with-the-most-doctors' %}">
+                <img src="{% static 'imgs/Info-18.png' %}" alt="">
+            </a>
+        </div>
+        <div class="swiper-slide">
+            <a href="{% url 'infograph_detail' 'water-and-Arab-countries' %}">
+                <img src="{% static 'imgs/Info-19.png' %}" alt="">
+            </a>
+        </div>
+        <div class="swiper-slide">
+            <a href="{% url 'infograph_detail' 'NewZealand-from-deficit-to-surplus' %}">
+                <img src="{% static 'imgs/newzealand.png' %}" alt="">
+            </a>
+        </div>
+        <div class="swiper-slide">
             <a href="{% url 'infograph_detail' 'Canada-the-programmatic-review-that-extinguished-the-deficit' %}">
                 <img src="{% static 'imgs/canada.png' %}" alt="">
             </a>
@@ -621,16 +636,6 @@
         </div>
         
         <div class="swiper-slide">
-            <a href="{% url 'infograph_detail' 'top-ten-countries-with-the-most-doctors' %}">
-                <img src="{% static 'imgs/Info-18.png' %}" alt="">
-            </a>
-        </div>
-        <div class="swiper-slide">
-            <a href="{% url 'infograph_detail' 'water-and-Arab-countries' %}">
-                <img src="{% static 'imgs/Info-19.png' %}" alt="">
-            </a>
-        </div>
-        <div class="swiper-slide">
             <a href="{% url 'infograph_detail' 'The-top-ten-countries-in-remittance-outflows-and-inflows-by-migrants-2024' %}">
                 <img src="{% static 'imgs/Info-20.png' %}" alt="">
             </a>
@@ -688,6 +693,12 @@
         window.onload = startSlider;
 
         const slidess = [
+            {
+                image: "{% static 'imgs/newzealand.png' %}",
+                text: "نيوزيلندا من العجز إلى الفائض",
+                date: "16 أغسطس 2025",
+                slug: 'NewZealand-from-deficit-to-surplus'
+            },
             {
                 image: "{% static 'imgs/canada.png' %}",
                 text: "كندا 1494-1498...المراجعة البرنامجية التي أطفأت العجز",
@@ -952,7 +963,7 @@
         grabCursor: true,
         centeredSlides: true,
         slidesPerView: 'auto',
-        initialSlide: 17,
+        initialSlide: 19,
         loop: true,
         speed: 800, 
         coverflowEffect: {

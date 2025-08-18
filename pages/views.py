@@ -488,6 +488,12 @@ def osus_journals(request):
 def view_infograph(request):
     infographs = [    
         {
+            "title": "نيوزيلندا من العجز إلى الفائض",
+            "slug": "NewZealand-from-deficit-to-surplus",
+            "image": "imgs/newzealand.png",
+            "date": "16 أغسطس 2025",
+        },
+        {
             "title": "كندا 1494-1498...المراجعة البرنامجية التي أطفأت العجز",
             "slug": "Canada-the-programmatic-review-that-extinguished-the-deficit",
             "image": "imgs/canada.png",
@@ -883,6 +889,11 @@ def infograph_detail(request, slug):
             'title': 'الإصلاح الحكومي في اليابان',
             'date': '10 أغسطس 2025',
             'image': 'imgs/japan.png',
+        },
+        "NewZealand-from-deficit-to-surplus": {
+            'title': 'نيوزيلندا من العجز إلى الفائض',
+            'date': '16 أغسطس 2025',
+            'image': 'imgs/newzealand.png',
         },
     }
 
