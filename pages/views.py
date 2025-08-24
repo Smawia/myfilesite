@@ -488,6 +488,18 @@ def osus_journals(request):
 def view_infograph(request):
     infographs = [    
         {
+            "title": "الممكلة المتحدة...إصلاح الخدمة المدنية 1979 - 1997",
+            "slug": "United-Kingdom-Civil-Service-Reform-1979-1997",
+            "image": "imgs/united kingdom.jpg",
+            "date": "20 أغسطس 2025",
+        },
+        {
+            "title": "هولندا...من شتاء الجوع إلى الزارعة عالية التقنية",
+            "slug": "Netherlands-from-hunger-winter-to-high-tech-agriculture",
+            "image": "imgs/netherland.jpg",
+            "date": "22 أغسطس 2025",
+        },
+        {
             "title": "نيوزيلندا من العجز إلى الفائض",
             "slug": "NewZealand-from-deficit-to-surplus",
             "image": "imgs/newzealand.png",
@@ -894,6 +906,16 @@ def infograph_detail(request, slug):
             'title': 'نيوزيلندا من العجز إلى الفائض',
             'date': '16 أغسطس 2025',
             'image': 'imgs/newzealand.png',
+        },
+        "Netherlands-from-hunger-winter-to-high-tech-agriculture": {
+            'title': 'هولندا...من شتاء الجوع إلى الزارعة عالية التقنية',
+            'date': '22 أغسطس 2025',
+            'image': 'imgs/netherland.jpg',
+        },
+        "United-Kingdom-Civil-Service-Reform-1979-1997": {
+            'title': 'الممكلة المتحدة...إصلاح الخدمة المدنية 1979 - 1997',
+            'date': '20 أغسطس 2025',
+            'image': 'imgs/united kingdom.jpg',
         },
     }
 

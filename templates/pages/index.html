@@ -555,6 +555,16 @@
             </a>
         </div>
         <div class="swiper-slide">
+            <a href="{% url 'infograph_detail' 'United-Kingdom-Civil-Service-Reform-1979-1997' %}">
+                <img src="{% static 'imgs/united kingdom.jpg' %}" alt="">
+            </a>
+        </div>
+        <div class="swiper-slide">
+            <a href="{% url 'infograph_detail' 'Netherlands-from-hunger-winter-to-high-tech-agriculture' %}">
+                <img src="{% static 'imgs/netherland.jpg' %}" alt="">
+            </a>
+        </div>
+        <div class="swiper-slide">
             <a href="{% url 'infograph_detail' 'NewZealand-from-deficit-to-surplus' %}">
                 <img src="{% static 'imgs/newzealand.png' %}" alt="">
             </a>
@@ -693,6 +703,18 @@
         window.onload = startSlider;
 
         const slidess = [
+            {
+                image: "{% static 'imgs/united kingdom.jpg' %}",
+                text: "الممكلة المتحدة...إصلاح الخدمة المدنية 1979 - 1997",
+                date: "20 أغسطس 2025",
+                slug: 'United-Kingdom-Civil-Service-Reform-1979-1997'
+            },
+            {
+                image: "{% static 'imgs/netherland.jpg' %}",
+                text: "هولندا...من شتاء الجوع إلى الزارعة عالية التقنية",
+                date: "22 أغسطس 2025",
+                slug: 'Netherlands-from-hunger-winter-to-high-tech-agriculture'
+            },
             {
                 image: "{% static 'imgs/newzealand.png' %}",
                 text: "نيوزيلندا من العجز إلى الفائض",
