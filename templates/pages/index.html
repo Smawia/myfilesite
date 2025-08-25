@@ -980,6 +980,7 @@
         /*if (window.innerWidth <= 1200) {
             document.querySelector('.slide.journalImage img').src = "{% static 'imgs/New_Slider_mobile.png' %}";
         }*/
+        // تعريف الـ Swiper لكن بدون autoplay
         var swiper = new Swiper('.swiper-container', {
         effect: 'coverflow',
         grabCursor: true,
@@ -995,10 +996,7 @@
             modifier: 1,
             slideShadows: true
         },
-        autoplay: {
-            delay: 5000,
-            disableOnInteraction: false
-        },
+        autoplay: false, // نوقف التشغيل التلقائي,
         pagination: {
             el: '.swiper-pagination',
             clickable: true
@@ -1007,6 +1005,12 @@
             nextEl: '.swiper-button-next',
             prevEl: '.swiper-button-prev'
         }
+    });
+
+    // بدء التشغيل التلقائي بعد تحميل الصفحة
+    window.addEventListener("load", function() {
+        swiper.params.autoplay = { delay: 7000, disableOnInteraction: false }; // كل 7 ثواني
+        swiper.autoplay.start();
     });
     });
 </script>
