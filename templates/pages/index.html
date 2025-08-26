@@ -555,6 +555,11 @@
             </a>
         </div>
         <div class="swiper-slide">
+            <a href="{% url 'infograph_detail' 'The_Most_Important_Job_Skills_In_2025' %}">
+                <img src="{% static 'imgs/thinking.jpg' %}" alt="">
+            </a>
+        </div>
+        <div class="swiper-slide">
             <a href="{% url 'infograph_detail' 'United-Kingdom-Civil-Service-Reform-1979-1997' %}">
                 <img src="{% static 'imgs/united kingdom.jpg' %}" alt="">
             </a>
@@ -703,6 +708,12 @@
         window.onload = startSlider;
 
         const slidess = [
+            {
+                image: "{% static 'imgs/thinking.jpg' %}",
+                text: "أهم المهارات الوظيفية في 2025",
+                date: "25 أغسطس 2025",
+                slug: 'The_Most_Important_Job_Skills_In_2025'
+            },
             {
                 image: "{% static 'imgs/united kingdom.jpg' %}",
                 text: "الممكلة المتحدة...إصلاح الخدمة المدنية 1979 - 1997",

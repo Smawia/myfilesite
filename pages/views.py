@@ -488,6 +488,12 @@ def osus_journals(request):
 def view_infograph(request):
     infographs = [    
         {
+            "title": "أهم المهارات الوظيفية في 2025",
+            "slug": "The_Most_Important_Job_Skills_In_2025",
+            "image": "imgs/thinking.jpg",
+            "date": "25 أغسطس 2025",
+        },
+        {
             "title": "الممكلة المتحدة...إصلاح الخدمة المدنية 1979 - 1997",
             "slug": "United-Kingdom-Civil-Service-Reform-1979-1997",
             "image": "imgs/united kingdom.jpg",
@@ -916,6 +922,11 @@ def infograph_detail(request, slug):
             'title': 'الممكلة المتحدة...إصلاح الخدمة المدنية 1979 - 1997',
             'date': '20 أغسطس 2025',
             'image': 'imgs/united kingdom.jpg',
+        },
+        "The_Most_Important_Job_Skills_In_2025": {
+            'title': 'أهم المهارات الوظيفية في 2025',
+            'date': '25 أغسطس 2025',
+            'image': 'imgs/thinking.jpg',
         },
     }
 
