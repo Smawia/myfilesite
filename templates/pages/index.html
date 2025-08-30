@@ -555,6 +555,16 @@
             </a>
         </div>
         <div class="swiper-slide">
+            <a href="{% url 'infograph_detail' 'most_valuable_industries_in_2025' %}">
+                <img src="{% static 'imgs/most_valuable_industries.jpg' %}" alt="">
+            </a>
+        </div>
+        <div class="swiper-slide">
+            <a href="{% url 'infograph_detail' 'economic_investment_in_education' %}">
+                <img src="{% static 'imgs/economic_investment_in_education.jpg' %}" alt="">
+            </a>
+        </div>
+        <div class="swiper-slide">
             <a href="{% url 'infograph_detail' 'The_Most_Important_Job_Skills_In_2025' %}">
                 <img src="{% static 'imgs/thinking.jpg' %}" alt="">
             </a>
@@ -708,6 +718,18 @@
         window.onload = startSlider;
 
         const slidess = [
+            {
+                image: "{% static 'imgs/most_valuable_industries.jpg' %}",
+                text: "الصناعات الأكثر قيمة في 2025",
+                date: "29 أغسطس 2025",
+                slug: 'most_valuable_industries_in_2025'
+            },
+            {
+                image: "{% static 'imgs/economic_investment_in_education.jpg' %}",
+                text: "الاستثمار الاقتصادي في التعليم",
+                date: "27 أغسطس 2025",
+                slug: 'economic_investment_in_education'
+            },
             {
                 image: "{% static 'imgs/thinking.jpg' %}",
                 text: "أهم المهارات الوظيفية في 2025",

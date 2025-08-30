@@ -488,6 +488,18 @@ def osus_journals(request):
 def view_infograph(request):
     infographs = [    
         {
+            "title": "الصناعات الأكثر قيمة في 2025",
+            "slug": "most_valuable_industries_in_2025",
+            "image": "imgs/most_valuable_industries.jpg",
+            "date": "29 أغسطس 2025",
+        },
+        {
+            "title": "الاستثمار الاقتصادي في التعليم",
+            "slug": "economic_investment_in_education",
+            "image": "imgs/economic_investment_in_education.jpg",
+            "date": "27 أغسطس 2025",
+        },
+        {
             "title": "أهم المهارات الوظيفية في 2025",
             "slug": "The_Most_Important_Job_Skills_In_2025",
             "image": "imgs/thinking.jpg",
@@ -927,6 +939,16 @@ def infograph_detail(request, slug):
             'title': 'أهم المهارات الوظيفية في 2025',
             'date': '25 أغسطس 2025',
             'image': 'imgs/thinking.jpg',
+        },
+        "economic_investment_in_education": {
+            'title': 'الاستثمار الاقتصادي في التعليم',
+            'date': '27 أغسطس 2025',
+            'image': 'imgs/economic_investment_in_education.jpg',
+        },
+        "most_valuable_industries_in_2025": {
+            'title': 'الصناعات الأكثر قيمة في 2025',
+            'date': '29 أغسطس 2025',
+            'image': 'imgs/most_valuable_industries.jpg',
         },
     }
 
