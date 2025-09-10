@@ -152,6 +152,9 @@
         .publications.carousel-title {
             display: none;
         }
+        .arrow-1 {
+            font-size: 2rem;
+        }
     }
 
     @media (min-width: 575px) {
@@ -161,6 +164,10 @@
 
         .publications.carousel-title {
             display: none;
+        }
+
+        .arrow-1 {
+            font-size: 2rem;
         }
     }
 
@@ -174,6 +181,10 @@
         
         .swiper-horizontal > .swiper-pagination-bullets .swiper-pagination-bullet, .swiper-pagination-horizontal.swiper-pagination-bullets .swiper-pagination-bullet {
             margin: 0 var(--swiper-pagination-bullet-horizontal-gap,2px);
+        }
+
+        .arrow-1 {
+            font-size: 3rem;
         }
     }
 
@@ -195,9 +206,47 @@
             margin: 0 var(--swiper-pagination-bullet-horizontal-gap,4px);
         }
     }
+   .arrow-1 {
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        /*font-size: 3rem;*/
+        color: #fff;
+        cursor: pointer;
+        z-index: 10;
+        user-select: none;
+        padding: 0 10px;
+        border-radius: 50%;
+        opacity: 0.5;
+        transition: opacity 0.2s, background 0.2s, transform 0.2s;
+    }
+
+    /* عند المرور بالماوس على السهم */
+    .arrow-1:hover {
+        opacity: 1;
+        transform: translateY(-50%) scale(1.2);
+    }
+
+    /* عند الضغط على السهم */
+    .arrow-1:active {
+        opacity: 1;
+        transform: translateY(-50%) scale(1.1);
+    }
+
+    .arrow-1.prev {
+        left: 10px;
+    }
+
+    .arrow-1.next {
+        right: 10px;
+    }
 </style>
 <div class="container spe-show">
     <div class="slider">
+        <!-- أسهم التنقل -->
+        <div class="arrow-1 prev">&#10094;</div>
+        <div class="arrow-1 next">&#10095;</div>
+
         <div class="slides">
             <input type="radio" name="radio-btn" id="radio1">
             <input type="radio" name="radio-btn" id="radio2">
@@ -460,6 +509,11 @@
 
     <div class="swiper-wrapper">
         <div class="swiper-slide">
+            <a href="{% url 'infograph_detail' 'migration_between_east_and_west' %}">
+                <img src="{% static 'imgs/migration_between_east_and_west.jpg' %}" alt="">
+            </a>
+        </div>
+        <div class="swiper-slide">
             <a href="{% url 'infograph_detail' 'most_valuable_industries_in_2025' %}">
                 <img src="{% static 'imgs/most_valuable_industries.jpg' %}" alt="">
             </a>
@@ -695,6 +749,31 @@
 <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
 <script>
     document.addEventListener('DOMContentLoaded', function () {
+        const radios = document.querySelectorAll('.slides input[name="radio-btn"]');
+        let current = 0;
+
+        const prevArrow = document.querySelector('.arrow-1.prev');
+        const nextArrow = document.querySelector('.arrow-1.next');
+
+        function showSlide(index) {
+            radios[index].checked = true;
+            current = index;
+        }
+
+        prevArrow.addEventListener('click', () => {
+            let index = current - 1;
+            if (index < 0) index = radios.length - 1;
+            showSlide(index);
+        });
+
+        nextArrow.addEventListener('click', () => {
+            let index = current + 1;
+            if (index >= radios.length) index = 0;
+            showSlide(index);
+        });
+
+
+
         let intervalTime = 10000; // وقت البداية بين الانتقالات
 
         function startSlider() {
@@ -717,6 +796,12 @@
         window.onload = startSlider;
 
         const slidess = [
+            {
+                image: "{% static 'imgs/migration_between_east_and_west.jpg' %}",
+                text: "الهجرة بين الشرق والغرب",
+                date: "5 سبتمبر 2025",
+                slug: 'migration_between_east_and_west'
+            },
             {
                 image: "{% static 'imgs/most_valuable_industries.jpg' %}",
                 text: "الصناعات الأكثر قيمة في 2025",
@@ -1001,10 +1086,10 @@
         });
 
         // تشغيل تلقائي للسلايدر
-        setInterval(() => {
+       /* setInterval(() => {
             currentIndex = (currentIndex + 1) % slidess.length;
             updateSlide(currentIndex);
-        }, 7000); // كل 7 ثوانٍ
+        }, 7000); */// كل 7 ثوانٍ
 
         // تشغيل أول سلايد عند التحميل
         updateSlide(currentIndex);
@@ -1041,8 +1126,19 @@
 
     // بدء التشغيل التلقائي بعد تحميل الصفحة
     window.addEventListener("load", function() {
-        swiper.params.autoplay = { delay: 7000, disableOnInteraction: false }; // كل 7 ثواني
+        swiper.params.autoplay = { delay: 4000, disableOnInteraction: false }; // كل 7 ثواني
         swiper.autoplay.start();
+    });
+
+    // مراقبة حالة التبويب
+    document.addEventListener("visibilitychange", function () {
+        if (document.hidden) {
+            // إيقاف التشغيل لما تنتقل لتبويب ثاني
+            swiper.autoplay.stop();
+        } else {
+            // إعادة التشغيل لما ترجع للتبويب
+            swiper.autoplay.start();
+        }
     });
     });
 </script>
