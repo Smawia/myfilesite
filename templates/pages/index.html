@@ -153,7 +153,15 @@
             display: none;
         }
         .arrow-1 {
-            font-size: 2rem;
+            font-size: 27px;
+        }
+
+        .arrow-1.prev {
+            left: -5px;
+        }
+
+        .arrow-1.next {
+            right: -5px;
         }
     }
 
@@ -167,7 +175,15 @@
         }
 
         .arrow-1 {
-            font-size: 2rem;
+            font-size: 27px;
+        }
+
+        .arrow-1.prev {
+            left: -5px;
+        }
+
+        .arrow-1.next {
+            right: -5px;
         }
     }
 
@@ -184,7 +200,7 @@
         }
 
         .arrow-1 {
-            font-size: 3rem;
+            font-size: 40px;
         }
     }
 
@@ -204,6 +220,14 @@
         
         .swiper-horizontal > .swiper-pagination-bullets .swiper-pagination-bullet, .swiper-pagination-horizontal.swiper-pagination-bullets .swiper-pagination-bullet {
             margin: 0 var(--swiper-pagination-bullet-horizontal-gap,4px);
+        }
+
+        .arrow-1.prev {
+            left: 3px;
+        }
+
+        .arrow-1.next {
+            right: 3px;
         }
     }
    .arrow-1 {
@@ -233,13 +257,6 @@
         transform: translateY(-50%) scale(1.1);
     }
 
-    .arrow-1.prev {
-        left: 10px;
-    }
-
-    .arrow-1.next {
-        right: 10px;
-    }
 </style>
 <div class="container spe-show">
     <div class="slider">
@@ -1126,7 +1143,7 @@
 
     // بدء التشغيل التلقائي بعد تحميل الصفحة
     window.addEventListener("load", function() {
-        swiper.params.autoplay = { delay: 4000, disableOnInteraction: false }; // كل 7 ثواني
+        swiper.params.autoplay = { delay: 7000, disableOnInteraction: false }; // كل 7 ثواني
         swiper.autoplay.start();
     });
 
