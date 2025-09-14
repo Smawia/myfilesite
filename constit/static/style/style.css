@@ -7442,7 +7442,7 @@ h5 {
 .show-all-studies .video-card {
     width: calc(33% - 20px) !important;
     margin-bottom: 50px !important;
-    height: 250px;
+    height: 270px;
     box-sizing: border-box;
     transition: 0.3s;
 }
