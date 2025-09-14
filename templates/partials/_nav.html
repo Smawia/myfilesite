@@ -12,7 +12,7 @@
                         <a href="https://api.whatsapp.com/send?phone=783222270"><i
                             class="fa-brands fa-whatsapp foot-i" target="_blank"></i></a>
                             <a href="https://t.me/constituenttele" target="_blank"><i class="fab fa-telegram"></i></a>
-                            <a href="https://www.youtube.com/channel/UCnDXXEWOVbtYgwASbii_Frg" target="_blank"><i class="fab fa-youtube"></i></a>
+                            <a href="https://www.youtube.com/channel/UCP5To2r1z-b14J7ml2BU6Zg" target="_blank"><i class="fab fa-youtube"></i></a>
                             
                             <a href="https://www.instagram.com/csryemen/" target="_blank"><i class="fab fa-instagram"></i></a>
                             <a href="https://www.facebook.com/profile.php?id=61556721602912" target="_blank"><i
@@ -85,13 +85,18 @@
                             >الدوريات</a>
                         </li> -->
                         
-                        <li class="asid-li2"><a href="{% url 'infographs' %}"
+                        <li class="base-li aside-base-li"><a href="{% url 'infographs' %}"
                             {% if 'Infographics' in request.path %}
                             class="active nav-a"
                             {% else %}
                             class="nav-a"
                             {% endif %}
-                            >أسس إنفوجراف</a></li>
+                            >أُسس إنفوجراف</a>
+                            <ul class="ul nested-list">
+                                <li><a href="{% url 'infographs' %}"> إنفوجراف</a></li>
+                                <li><a href="{% url 'motion_graphics' %}">موشن جرافيك</a></li>
+                            </ul>
+                        </li>
                         
                             <li class="base-li asid-li3 aside-base-li"><a href="{% url 'signup' %}"
                                 {% if 'signup' in request.path or 'signin' in request.path or 'logout' in request.path %}
@@ -182,13 +187,18 @@
                                 <li><a href="{% url 'osus' %}">الدوريات</a></li>
                             </ul>
                         </li>
-                        <li class="asid-li small-screen"><a href="{% url 'infographs' %}"
+                        <li><a href="{% url 'infographs' %}"
                             {% if 'Infographic' in request.path %}
                             class="active"
                             {% else %}
                             class=""
                             {% endif %}
-                            >أسس إنفوجراف</a></li>
+                            >أسس إنفوجراف</a>
+                            <ul class="aside-ul aside-nested-list">
+                                <li><a href="{% url 'infographs' %}"> إنفوجراف</a></li>
+                                <li><a href="{% url 'motion_graphics' %}">موشن جرافيك</a></li>
+                            </ul>
+                        </li>
                         <!-- <li class="asid-li small-screen"><a href="{% url 'signup' %}" 
                             {% if request.user.is_authenticated %}
                             style="display: none;"

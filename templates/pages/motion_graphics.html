@@ -1,0 +1,146 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block title %}| أُسس موشن جرافيك {% endblock %}
+{% block content %}
+
+<div class="container index-articles all-studies">
+    <h1 class="spe-h1">أُسس موشن جرافيك</h1>
+</div>
+
+<div class="container index-articles all-art">
+    <div class="show-all-studies grid-container">
+        {% for data in issue_one %}
+        <div class="video-card">
+            <!-- الفيديو أو الصورة -->
+            <div class="video-thumbnail">
+                {% if 'youtube.com' in data.video %}
+                <iframe class="youtube-video"
+                    width="100%" 
+                    height="200px" 
+                    src="{{ data.video }}" 
+                    frameborder="0" 
+                    allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                    allowfullscreen>
+                </iframe>
+                {% else %}
+                <video controls muted width="100%" height="200px" poster="{% static data.thumbnail %}">
+                    <source src="{% static data.video %}" type="video/mp4">
+                    متصفحك لا يدعم تشغيل الفيديوهات.
+                </video>
+                {% endif %}
+            </div>
+            
+            <!-- النص -->
+            <!-- <a href="{{ data.url }}"> -->
+                <div class="study-text-info">
+                    <span>{{ data.date }}</span>
+                    <p>{{ data.subject }}</p>
+                </div>
+            <!-- </a> -->
+        </div>
+        {% endfor %}
+        
+        {% if not issue_one %}
+        <p class="no-results">لم يتم العثور على نتائج تطابق بحثك ({{query}}).</p>
+        {% endif %}
+    </div>
+</div>
+
+<style>
+
+.video-card {
+    position: relative;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    width: 250px;
+    text-align: center;
+}
+.video-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 12px rgba(0,0,0,0.2);
+}
+.video-thumbnail {
+    width: 100%;
+    height: 200px; /* مساحة الفيديو المحددة */
+    overflow: hidden;
+    position: relative;
+}
+
+.video-thumbnail iframe,
+.video-thumbnail video {
+    width: 100%;
+    height: 100%;
+    border: 0;
+    display: block;
+    object-fit: cover; /* يخلي الفيديو يملأ المساحة بالكامل مع الحفاظ على النسبة */
+}
+.study-text-info {
+    padding: 10px;
+    background-color: #f9f9f9;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    text-align: center;
+}
+.study-text-info span {
+    display: block;
+    font-size: 12px;
+    color: #666;
+}
+.study-text-info p {
+    font-size: 16px;
+    margin: 5px 0 0;
+    color: #333;
+}
+.no-results {
+    text-align: center;
+    font-weight: bold;
+    color: #ff4d4d;
+    margin-top: 20px;
+}
+</style>
+
+<!-- YouTube Iframe API -->
+<script src="https://www.youtube.com/iframe_api"></script>
+<script>
+document.addEventListener("DOMContentLoaded", function() {
+    // HTML5 videos
+    const htmlVideos = document.querySelectorAll('.video-thumbnail video');
+    // YouTube iframes
+    const allIframes = document.querySelectorAll('.youtube-video');
+    let ytPlayers = [];
+
+    // تهيئة YouTube Players
+    window.onYouTubeIframeAPIReady = function() {
+        allIframes.forEach((iframe, index) => {
+            let player = new YT.Player(iframe, {
+                events: {
+                    'onStateChange': function(event) {
+                        if(event.data === YT.PlayerState.PLAYING) {
+                            // إيقاف كل الفيديوهات الأخرى
+                            ytPlayers.forEach((p, i) => {
+                                if(i !== index) p.pauseVideo();
+                            });
+                            htmlVideos.forEach(v => v.pause());
+                        }
+                    }
+                }
+            });
+            ytPlayers.push(player);
+        });
+    };
+
+    // HTML5 video control
+    htmlVideos.forEach(video => {
+        video.addEventListener('play', () => {
+            htmlVideos.forEach(v => {
+                if(v !== video) v.pause();
+            });
+            ytPlayers.forEach(p => p.pauseVideo());
+        });
+    });
+});
+</script>
+
+{% endblock %}

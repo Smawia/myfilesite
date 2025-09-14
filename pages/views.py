@@ -488,6 +488,12 @@ def osus_journals(request):
 def view_infograph(request):
     infographs = [    
         {
+            "title": "الهجرة بين الشرق والغرب",
+            "slug": "migration_between_east_and_west",
+            "image": "imgs/migration_between_east_and_west.jpg",
+            "date": "5 سبتمبر 2025",
+        },
+        {
             "title": "الصناعات الأكثر قيمة في 2025",
             "slug": "most_valuable_industries_in_2025",
             "image": "imgs/most_valuable_industries.jpg",
@@ -950,6 +956,12 @@ def infograph_detail(request, slug):
             'date': '29 أغسطس 2025',
             'image': 'imgs/most_valuable_industries.jpg',
         },
+        "migration_between_east_and_west": {
+            'title': 'الهجرة بين الشرق والغرب',
+            'description': 'أرقام, اتجاهات, وتحديات',
+            'date': '5 سبتمبر 2025',
+            'image': 'imgs/migration_between_east_and_west.jpg',
+        },
     }
 
     detail = data.get(slug)
@@ -1017,3 +1029,55 @@ def effectiveness_of_the_judicial_and_oversight_system_in_yemen(request):
 
 def social_health_insurance_in_yemen(request):
     return render(request, 'pages/social_health_insurance_in_yemen.html')
+
+
+def motion_graphics(request):
+    issue_one = [
+        {
+            "url": "/studies/1/",
+            "video": "videos/vedio.mp4",
+            "thumbnail": "imgs/Journal-04.jpg",
+            "date": "2025-09-01",
+            "subject": "موشن جرافيك: التعليم"
+        },
+        {
+            "url": "/studies/2/",
+            "video": "https://youtu.be/RYEZJDqXKu8?si=yB5_fzdkBy8GquOo",
+            "thumbnail": "imgs/Journal-05.jpg",
+            "date": "2025-09-01",
+            "subject": "موشن جرافيك: الصحة"
+        },
+        {
+            "url": "/studies/3/",
+            "video": "https://youtu.be/RRFyBt8nK4E?si=-Xy3gNfrlBYUFbN-",
+            "thumbnail": "imgs/Journal-06.jpg",
+            "date": "2025-09-01",
+            "subject": "موشن جرافيك: البيئة"
+        },
+        {
+            "url": "/studies/3/",
+            "video": "https://youtu.be/RRFyBt8nK4E?si=-Xy3gNfrlBYUFbN-",
+            "thumbnail": "imgs/Journal-06.jpg",
+            "date": "2025-09-01",
+            "subject": "موشن جرافيك: البيئة"
+        },
+        {
+            "url": "/studies/3/",
+            "video": "https://youtu.be/h1mNPEjva8U?si=dPv_g5NixX3Fyv7M",
+            "thumbnail": "imgs/Journal-06.jpg",
+            "date": "2025-09-01",
+            "subject": "موشن جرافيك: البيئة"
+        }
+    ]
+
+    # تحويل الروابط إلى embed
+    for item in issue_one:
+        if 'youtu.be' in item['video']:
+            video_id = item['video'].split('/')[-1].split('?')[0]
+            item['video'] = f"https://www.youtube.com/embed/{video_id}?enablejsapi=1"
+
+    query = request.GET.get("q", "")
+    return render(request, "pages/motion_graphics.html", {
+        "issue_one": issue_one,
+        "query": query,
+    })
