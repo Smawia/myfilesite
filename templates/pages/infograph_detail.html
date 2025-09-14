@@ -27,6 +27,9 @@
 <div class="container index-articles all-art infographs infograph-detail">
     <div class="study-text-info">
         <p class="infograph-title">{{ detail.title }}</p>
+        {%if detail.description %}
+            <p class="p-img2">{{ detail.description }}</p>
+        {% endif %}
         <span class="infograph-date">{{ detail.date }}</span>
         <div class="controls">
             <div class="studies-social">
@@ -580,6 +583,15 @@
                 <div class="study-text-info">
                     <span>29 أغسطس 2025</span>
                     <p>الصناعات الأكثر قيمة في 2025</p>
+                </div>
+            </a>
+        </div>
+        <div class="studies-card infograph-card cardContainer-inside">
+            <a href="{% url 'infograph_detail'  'migration_between_east_and_west' %}">
+                <img src="{% static 'imgs/migration_between_east_and_west.jpg' %}" alt="إنفوجراف" class="infograph-img">
+                <div class="study-text-info">
+                    <span>5 سبتمبر 2025</span>
+                    <p>الهجرة بين الشرق والغرب</p>
                 </div>
             </a>
         </div>
