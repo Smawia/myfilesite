@@ -24,7 +24,7 @@
     .swiper-container {
         max-width: 100%;
         overflow: hidden;
-        padding-top: 40px;
+        padding-top: 100px;
     }
 
     .swiper-slide {
@@ -46,7 +46,7 @@
 
     .swiper-slide-active img {
         filter: blur(0);
-        transform: scale(1.1);
+        transform: scale(1.3);
         z-index: 2;
     }
 
@@ -93,7 +93,7 @@
         gap: 10px;
         position: relative;
         width: 38%;
-        margin: 50px auto 0;
+        margin: 85px auto 0;
         }
 
         .swiper-pagination {
@@ -146,10 +146,7 @@
         }
 
     @media (max-width: 574px) {
-        .swiper-container {
-            display: none;
-        }
-        .publications.carousel-title {
+        .container.index-articles.hide-in-pc {
             display: none;
         }
         .arrow-1 {
@@ -163,10 +160,40 @@
         .arrow-1.next {
             right: -5px;
         }
+        .publications.carousel-title {
+            display: block;
+            margin-top: 2px;
+        }
+        .swiper-container {
+        max-width: 100%;
+        overflow: hidden;
+        padding-top: 13px;
+        margin-bottom: 34px;
     }
 
-    @media (min-width: 575px) {
-        .swiper-container {
+    .swiper-slide {
+        width: 400px;
+        height: 440px;
+        position: relative;
+    }
+    .swiper-slide img {
+        filter: blur(0px) !important;
+    }
+
+    .swiper-slide-active img {
+        filter: blur(0) !important;
+        transform: scale(0.95);
+        z-index: 2;
+    }
+
+    .swiper-controls {
+        display: none;
+        }
+    }
+
+    @media (min-width: 575px) and (max-width: 767px) {
+        
+        .container.index-articles.hide-in-pc {
             display: none;
         }
 
@@ -185,11 +212,39 @@
         .arrow-1.next {
             right: -5px;
         }
+        
+        .publications.carousel-title {
+            display: block;
+            margin-top: 1px;
+        }
+        .swiper-container {
+        max-width: 100%;
+        overflow: hidden;
+        padding-top: 13px;
+        margin-bottom: 40px;
     }
 
-    @media (min-width: 768px) {
+    .swiper-slide {
+        width: 400px;
+        height: 440px;
+        position: relative;
+    }
+
+    .swiper-slide-active img {
+        filter: blur(0);
+        transform: scale(1);
+        z-index: 2;
+    }
+
+    .swiper-controls {
+        display: none;
+        }
+    }
+
+    @media (min-width: 768px) and (max-width: 991px) {
         .swiper-container {
             display: block;
+            padding-top: 86px;
         }
         .container.index-articles.hide-in-pc {
             display: none;
@@ -199,8 +254,18 @@
             margin: 0 var(--swiper-pagination-bullet-horizontal-gap,2px);
         }
 
+        .swiper-slide-active img {
+        filter: blur(0);
+        transform: scale(1.2);
+        z-index: 2;
+    }
         .arrow-1 {
             font-size: 40px;
+        }
+
+        .swiper-controls {
+            visibility: hidden;
+            margin-top: 45px;
         }
     }
 
@@ -220,6 +285,9 @@
         
         .swiper-horizontal > .swiper-pagination-bullets .swiper-pagination-bullet, .swiper-pagination-horizontal.swiper-pagination-bullets .swiper-pagination-bullet {
             margin: 0 var(--swiper-pagination-bullet-horizontal-gap,4px);
+        }
+        .arrow-1 {
+            font-size: 40px;
         }
 
         .arrow-1.prev {
@@ -516,12 +584,12 @@
     <!-- <a href="{% url 'infographs' %}" class="show-all infograph">عرض المزيد</a> -->
 
 </div>
-<div class="container"><a href="{% url 'infographs' %}">
+<div class="container index-articles"><a href="{% url 'infographs' %}">
         <h1 class="publications in-index carousel-title">أسس إنفوجراف</h1>
     </a>
 </div>
 <!-- Swiper -->
-<div class="container">
+<div class="container spe-show">
     <div class="swiper-container">
 
     <div class="swiper-wrapper">
@@ -1116,47 +1184,50 @@
         }*/
         // تعريف الـ Swiper لكن بدون autoplay
         var swiper = new Swiper('.swiper-container', {
-        effect: 'coverflow',
-        grabCursor: true,
-        centeredSlides: true,
-        slidesPerView: 'auto',
-        initialSlide: 0,
-        loop: true,
-        speed: 800, 
-        coverflowEffect: {
-            rotate: 50,
-            stretch: 0,
-            depth: 100,
-            modifier: 1,
-            slideShadows: true
-        },
-        autoplay: false, // نوقف التشغيل التلقائي,
-        pagination: {
-            el: '.swiper-pagination',
-            clickable: true
-        },
-        navigation: {
-            nextEl: '.swiper-button-next',
-            prevEl: '.swiper-button-prev'
-        }
+            effect: 'coverflow',
+            grabCursor: true,
+            centeredSlides: true,
+            slidesPerView: 'auto',
+            initialSlide: 0,
+            loop: true,
+            speed: 1000, 
+            coverflowEffect: {
+                rotate: 50,
+                stretch: 0,
+                depth: 100,
+                modifier: 1,
+                slideShadows: true
+            },
+            autoplay: false, // نوقف التشغيل التلقائي,
+            pagination: {
+                el: '.swiper-pagination',
+                clickable: true
+            },
+            navigation: {
+                nextEl: '.swiper-button-next',
+                prevEl: '.swiper-button-prev'
+            },
+            // 🔹 هنا نتحكم في القيم حسب حجم الشاشة
+            breakpoints: {
+            320: { // شاشات صغيرة (موبايل)
+                coverflowEffect: {
+                    stretch: 50
+                }
+            },
+            768: { // شاشات متوسطة (تابلت)
+                coverflowEffect: {
+                    stretch: -30
+                }
+            },
+            1024: { // شاشات كبيرة (لابتوب/ديسكتوب)
+                coverflowEffect: {
+                    stretch: -60
+                }
+            }
+        }  
+          
     });
-
-    // بدء التشغيل التلقائي بعد تحميل الصفحة
-    window.addEventListener("load", function() {
-        swiper.params.autoplay = { delay: 7000, disableOnInteraction: false }; // كل 7 ثواني
-        swiper.autoplay.start();
-    });
-
-    // مراقبة حالة التبويب
-    document.addEventListener("visibilitychange", function () {
-        if (document.hidden) {
-            // إيقاف التشغيل لما تنتقل لتبويب ثاني
-            swiper.autoplay.stop();
-        } else {
-            // إعادة التشغيل لما ترجع للتبويب
-            swiper.autoplay.start();
-        }
-    });
+       
     });
 </script>
 {% endblock %}
