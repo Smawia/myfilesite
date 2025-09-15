@@ -7534,8 +7534,8 @@ h5 {
     .show-all-studies .studies-card img {
         width: 112px;
         height: 82px !important;
-        min-height: 82p !important;
-        max-height: 82p !important;
+        min-height: 82px !important;
+        max-height: 82px !important;
         margin-bottom: 5px;
     }
 
@@ -8177,7 +8177,7 @@ ul .aside-nested-list {
 }
 
 .show-some-studies .image-card {
-    width: 100%;
+    /* width: 100%; */
     max-height: 100%;
 }
 
@@ -8209,10 +8209,17 @@ ul .aside-nested-list {
     .show-some-studies a .study-info-show {
         margin-bottom: 10px;
         padding-bottom: 10px;
+        display: flex;
+        flex-direction: row-reverse;
+        justify-content: space-between;
+        align-items: start;
     }
 
     .studies-text-some-info {
+        line-height: 4;
         font-size: 11px;
+        display: flex;
+        flex-direction: column-reverse;
     }
 
     .studies-text-some-info span {
@@ -8228,15 +8235,16 @@ ul .aside-nested-list {
     }
 
     .show-some-studies .image-card {
-        width: 100%;
+        /* width: 100%; */
         max-height: 100%;
     }
 
     .show-some-studies .image-card img {
-        width: 100%;
-        max-height: 200px;
+        width: 112px;
+        max-height: 82px;
         display: block;
         margin: 0 auto;
+        height: 82px;
     }
 
     .date-info {
@@ -8277,29 +8285,37 @@ ul .aside-nested-list {
         padding-bottom: 10px;
         width: 100%;
         margin: 10px auto;
+        display: flex;
+        flex-direction: row-reverse;
+        justify-content: space-between;
+        align-items: start;
     }
 
     .studies-text-some-info {
         font-size: 11px;
+        display: flex;
+        flex-direction: column-reverse;
+
     }
 
     .studies-text-some-info span {
-        font-size: 12px;
+        font-size: 11px;
         display: block;
         margin-bottom: 10px;
     }
 
     .studies-text-some-info h3 {
         margin: 10px 0;
-        font-size: 14px;
+        font-size: 15px;
     }
 
 
     .show-some-studies .image-card img {
-        width: 100%;
-        max-height: 169px;
+        width: 170px;
+        max-height: 105px;
         display: block;
         margin: 0 auto;
+        height: 105px;
     }
 
     .date-info {
