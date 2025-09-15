@@ -1035,39 +1035,11 @@ def motion_graphics(request):
     issue_one = [
         {
             "url": "/studies/1/",
-            "video": "videos/vedio.mp4",
-            "thumbnail": "imgs/Journal-04.jpg",
-            "date": "2025-09-01",
-            "subject": "موشن جرافيك: التعليم"
-        },
-        {
-            "url": "/studies/2/",
             "video": "https://youtu.be/RYEZJDqXKu8?si=yB5_fzdkBy8GquOo",
-            "thumbnail": "imgs/Journal-05.jpg",
-            "date": "2025-09-01",
-            "subject": "موشن جرافيك: الصحة"
+            "date": "2025-09-10",
+            "subject": "كيف هزمت هذه الدول الجفاف والعطش؟"
         },
-        {
-            "url": "/studies/3/",
-            "video": "https://youtu.be/RRFyBt8nK4E?si=-Xy3gNfrlBYUFbN-",
-            "thumbnail": "imgs/Journal-06.jpg",
-            "date": "2025-09-01",
-            "subject": "موشن جرافيك: البيئة"
-        },
-        {
-            "url": "/studies/3/",
-            "video": "https://youtu.be/RRFyBt8nK4E?si=-Xy3gNfrlBYUFbN-",
-            "thumbnail": "imgs/Journal-06.jpg",
-            "date": "2025-09-01",
-            "subject": "موشن جرافيك: البيئة"
-        },
-        {
-            "url": "/studies/3/",
-            "video": "https://youtu.be/h1mNPEjva8U?si=dPv_g5NixX3Fyv7M",
-            "thumbnail": "imgs/Journal-06.jpg",
-            "date": "2025-09-01",
-            "subject": "موشن جرافيك: البيئة"
-        }
+        
     ]
 
     # تحويل الروابط إلى embed
