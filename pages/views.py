@@ -488,6 +488,12 @@ def osus_journals(request):
 def view_infograph(request):
     infographs = [    
         {
+            "title": "أفضل أنظمة التعليم حول العالم",
+            "slug": "the_best_education_systems_around_the_world",
+            "image": "imgs/best_education_systems.jpg",
+            "date": "13 سبتمبر 2025",
+        },
+        {
             "title": "الهجرة بين الشرق والغرب",
             "slug": "migration_between_east_and_west",
             "image": "imgs/migration_between_east_and_west.jpg",
@@ -961,6 +967,11 @@ def infograph_detail(request, slug):
             'description': 'أرقام, اتجاهات, وتحديات',
             'date': '5 سبتمبر 2025',
             'image': 'imgs/migration_between_east_and_west.jpg',
+        },
+        "the_best_education_systems_around_the_world": {
+            'title': 'أفضل أنظمة التعليم حول العالم',
+            'date': '13 سبتمبر 2025',
+            'image': 'imgs/best_education_systems.jpg',
         },
     }
 
