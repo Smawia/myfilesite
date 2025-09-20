@@ -26,7 +26,7 @@
 <div class="container index-articles all-art infographs">
     <div class="show-all-studies">
         {% for item in infographs %}
-        <div class="studies-card infograph-card">
+        <div class="studies-card infograph-card custom-studies-card">
             <a href="{% url 'infograph_detail' item.slug %}">
                 <img src="{% static item.image %}" alt="إنفوجراف" class="infograph-img">
                 <div class="study-text-info">

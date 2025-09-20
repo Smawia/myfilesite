@@ -488,6 +488,12 @@ def osus_journals(request):
 def view_infograph(request):
     infographs = [    
         {
+            "title": "اليابان من الدمار إلى الريادة",
+            "slug": "japan_from_destruction_to_leadership",
+            "image": "imgs/japan_from_destruction_to_leadership.jpg",
+            "date": "15 سبتمبر 2025",
+        },
+        {
             "title": "أفضل أنظمة التعليم حول العالم",
             "slug": "the_best_education_systems_around_the_world",
             "image": "imgs/best_education_systems.jpg",
@@ -972,6 +978,11 @@ def infograph_detail(request, slug):
             'title': 'أفضل أنظمة التعليم حول العالم',
             'date': '13 سبتمبر 2025',
             'image': 'imgs/best_education_systems.jpg',
+        },
+        "japan_from_destruction_to_leadership": {
+            'title': 'اليابان من الدمار إلى الريادة',
+            'date': '15 سبتمبر 2025',
+            'image': 'imgs/japan_from_destruction_to_leadership.jpg',
         },
     }
 
