@@ -53,6 +53,7 @@ MIDDLEWARE = [
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
+    'django.middleware.gzip.GZipMiddleware',  # أضف هذا السطر
 ]
 
 ROOT_URLCONF = 'constit.urls'
@@ -147,3 +148,4 @@ mimetypes.add_type("font/woff", ".woff", strict=True)
 mimetypes.add_type("font/woff2", ".woff2", strict=True)
 mimetypes.add_type("font/ttf", ".ttf", strict=True)
 mimetypes.add_type("application/javascript", ".js", strict=True)
+
