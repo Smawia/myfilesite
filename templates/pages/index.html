@@ -3,20 +3,20 @@
 {% load static %}
 {% block title %}| الرئيسية{% endblock %}
 {% block meta_og %}
-    <meta name="description" content="مرحبًا بكم في المركز التأسيسي للدراسات والبحوث - CSR Yemen.">
-    
-    <!-- Open Graph Tags -->
-    <meta property="og:title" content="المركز التأسيسي للدراسات والبحوث - CSR Yemen">
-    <meta property="og:description" content="مؤسسة بحثية فكرية تطويرية مستقلة غير ربحية، تختص بالعلوم الإنسانية.">
-    <meta property="og:image" content="https://csr-yemen.com/static/imgs/LOGO ICON-02.png">
-    <meta property="og:url" content="https://csr-yemen.com">
-    <meta property="og:type" content="website">
+<meta name="description" content="مرحبًا بكم في المركز التأسيسي للدراسات والبحوث - CSR Yemen.">
 
-    <!-- Twitter Card Tags -->
-    <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="المركز التأسيسي للدراسات والبحوث - CSR Yemen">
-    <meta name="twitter:description" content="مؤسسة بحثية فكرية تطويرية مستقلة غير ربحية، تختص بالعلوم الإنسانية.">
-    <meta name="twitter:image" content="https://csr-yemen.com/static/imgs/LOGO ICON-02.png">
+<!-- Open Graph Tags -->
+<meta property="og:title" content="المركز التأسيسي للدراسات والبحوث - CSR Yemen">
+<meta property="og:description" content="مؤسسة بحثية فكرية تطويرية مستقلة غير ربحية، تختص بالعلوم الإنسانية.">
+<meta property="og:image" content="https://csr-yemen.com/static/imgs/LOGO ICON-02.png">
+<meta property="og:url" content="https://csr-yemen.com">
+<meta property="og:type" content="website">
+
+<!-- Twitter Card Tags -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="المركز التأسيسي للدراسات والبحوث - CSR Yemen">
+<meta name="twitter:description" content="مؤسسة بحثية فكرية تطويرية مستقلة غير ربحية، تختص بالعلوم الإنسانية.">
+<meta name="twitter:image" content="https://csr-yemen.com/static/imgs/LOGO ICON-02.png">
 {% endblock %}
 
 {% block content %}
@@ -36,6 +36,7 @@
     .swiper-slide a {
         cursor: grab;
     }
+
     .swiper-slide img {
         width: 100%;
         height: 100%;
@@ -80,6 +81,7 @@
             width: 0;
             opacity: 0.5;
         }
+
         100% {
             width: 20px;
             opacity: 1;
@@ -96,16 +98,16 @@
         margin: 85px auto 0;
         }
 
-        .swiper-pagination {
+    .swiper-pagination {
         position: static !important;
         height: 30px;
         display: flex;
         justify-content: center;
         align-items: center;
-        }
+    }
 
-        .swiper-button-prev,
-        .swiper-button-next {
+    .swiper-button-prev,
+    .swiper-button-next {
         position: absolute;
         width: 30px;
         height: 30px;
@@ -121,34 +123,39 @@
         margin-top: -15px;
         font-weight: bold;
         z-index: 10000;
-        }
+    }
 
-        .swiper-button-prev::after,
-        .swiper-button-next::after {
+    .swiper-button-prev::after,
+    .swiper-button-next::after {
         font-size: 10px;
-        }
-        .swiper-button-next, 
-        .swiper-rtl .swiper-button-prev {
-            right: var(--swiper-navigation-sides-offset,-50px);
-            left: auto;
-        }
-        .swiper-button-prev, .swiper-rtl .swiper-button-next {
-            left: var(--swiper-navigation-sides-offset,-50px);
-            right: auto;
-        }
+    }
 
-        .swiper-pagination-horizontal.swiper-pagination-bullets .swiper-pagination-bullet {
-            margin: 0 var(--swiper-pagination-bullet-horizontal-gap,2px) !important;
-        }
+    .swiper-button-next,
+    .swiper-rtl .swiper-button-prev {
+        right: var(--swiper-navigation-sides-offset, -50px);
+        left: auto;
+    }
 
-        .swiper-horizontal > .swiper-pagination-bullets .swiper-pagination-bullet, .swiper-pagination-horizontal.swiper-pagination-bullets .swiper-pagination-bullet {
-            margin: 0 var(--swiper-pagination-bullet-horizontal-gap,2px);
-        }
+    .swiper-button-prev,
+    .swiper-rtl .swiper-button-next {
+        left: var(--swiper-navigation-sides-offset, -50px);
+        right: auto;
+    }
+
+    .swiper-pagination-horizontal.swiper-pagination-bullets .swiper-pagination-bullet {
+        margin: 0 var(--swiper-pagination-bullet-horizontal-gap, 2px) !important;
+    }
+
+    .swiper-horizontal>.swiper-pagination-bullets .swiper-pagination-bullet,
+    .swiper-pagination-horizontal.swiper-pagination-bullets .swiper-pagination-bullet {
+        margin: 0 var(--swiper-pagination-bullet-horizontal-gap, 2px);
+    }
 
     @media (max-width: 574px) {
         .container.index-articles.hide-in-pc {
             display: none;
         }
+
         .arrow-1 {
             font-size: 27px;
         }
@@ -217,32 +224,33 @@
         .arrow-1.next {
             right: -5px;
         }
-        
+
         .publications.carousel-title {
             display: block;
             margin-top: 1px;
         }
+
         .swiper-container {
-        max-width: 100%;
-        overflow: hidden;
-        padding-top: 13px;
-        margin-bottom: 40px;
-    }
+            max-width: 100%;
+            overflow: hidden;
+            padding-top: 13px;
+            margin-bottom: 40px;
+        }
 
-    .swiper-slide {
-        width: 400px;
-        height: 440px;
-        position: relative;
-    }
+        .swiper-slide {
+            width: 400px;
+            height: 440px;
+            position: relative;
+        }
 
-    .swiper-slide-active img {
-        filter: blur(0);
-        transform: scale(1);
-        z-index: 2;
-    }
+        .swiper-slide-active img {
+            filter: blur(0);
+            transform: scale(1);
+            z-index: 2;
+        }
 
-    .swiper-controls {
-        display: none;
+        .swiper-controls {
+            display: none;
         }
     }
 
@@ -251,18 +259,20 @@
             display: block;
             padding-top: 86px;
         }
+
         .container.index-articles.hide-in-pc {
             display: none;
         }
-        
-        .swiper-horizontal > .swiper-pagination-bullets .swiper-pagination-bullet, .swiper-pagination-horizontal.swiper-pagination-bullets .swiper-pagination-bullet {
-            margin: 0 var(--swiper-pagination-bullet-horizontal-gap,2px);
+
+        .swiper-horizontal>.swiper-pagination-bullets .swiper-pagination-bullet,
+        .swiper-pagination-horizontal.swiper-pagination-bullets .swiper-pagination-bullet {
+            margin: 0 var(--swiper-pagination-bullet-horizontal-gap, 2px);
         }
 
         .swiper-slide-active img {
-        filter: blur(0);
-        transform: scale(1.2);
-        z-index: 2;
+            filter: blur(0);
+            transform: scale(1.2);
+            z-index: 2;
         }
 
         .arrow-1 {
@@ -296,10 +306,12 @@
         .publications.carousel-title {
             display: block;
         }
-        
-        .swiper-horizontal > .swiper-pagination-bullets .swiper-pagination-bullet, .swiper-pagination-horizontal.swiper-pagination-bullets .swiper-pagination-bullet {
-            margin: 0 var(--swiper-pagination-bullet-horizontal-gap,4px);
+
+        .swiper-horizontal>.swiper-pagination-bullets .swiper-pagination-bullet,
+        .swiper-pagination-horizontal.swiper-pagination-bullets .swiper-pagination-bullet {
+            margin: 0 var(--swiper-pagination-bullet-horizontal-gap, 4px);
         }
+
         .arrow-1 {
             font-size: 40px;
         }
@@ -312,7 +324,8 @@
             right: 3px;
         }
     }
-   .arrow-1 {
+
+    .arrow-1 {
         position: absolute;
         top: 50%;
         transform: translateY(-50%);
@@ -338,7 +351,6 @@
         opacity: 1;
         transform: translateY(-50%) scale(1.1);
     }
-
 </style>
 <div class="container spe-show">
     <div class="slider">
@@ -358,7 +370,7 @@
                 <a href="{% url 'effectiveness_of_the_judicial_and_oversight_system_in_yemen' %}">
                     <div class="slide-full-inf">
                         <h2>فاعلية المنظومة العدلية والرقابية في اليمن</h2>
-                        <span><span style="display: inline;">15 </span>يونيو   2025
+                        <span><span style="display: inline;">15 </span>يونيو 2025
                         </span>
                     </div>
                 </a>
@@ -441,7 +453,7 @@
     </a>
     <div class="show-studies-index">
         <div class="show-index-imgs">
-             <div class="card">
+            <div class="card">
                 <a href="{% url 'china_study' %}">
                     <img src="{% static 'imgs/china.jpeg' %}" alt="" class="stud">
                 </a>
@@ -572,31 +584,6 @@
             </div>
         </div>
     </div>
-</div>
-<div class="container index-articles hide-in-pc">
-    <div class="tow-books">
-        <div class="daw">
-            <a href="{% url 'infographs' %}">
-                <h1 class="spe-h1 infograph">أسس إنفوجراف</h1>
-            </a>
-            <div class="card">
-                <div class="infogr">
-                    <button class="prev" aria-label="السابق">&lt;</button>
-                    <a
-                        href="{% url 'infograph_detail' 'The-seven-largest-pharmaceutical-producing-countries-in-2024' %}">
-                        <img src="{% static 'imgs/Info-01.png' %}" alt="إنفوجراف">
-                    </a>
-                    <button class="next" aria-label="التالي">&gt;</button>
-                </div>
-                <div class="daw-info">
-                    <span class="book-span pod-info-index-date">11 مارس 2025</span>
-                    <p class="pod-info-index">أكثر سبع دول إنتاجًا للأدوية في العام 2024</p>
-                </div>
-            </div>
-        </div>
-    </div>
-    <!-- <a href="{% url 'infographs' %}" class="show-all infograph">عرض المزيد</a> -->
-
 </div>
 <div class="container index-articles"><a href="{% url 'infographs' %}">
         <h1 class="publications in-index carousel-title">أسس إنفوجراف</h1>
@@ -856,161 +843,4 @@
 <!-- Swiper JS -->
 <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
-<script>
-    document.addEventListener('DOMContentLoaded', function () {
-        const radios = document.querySelectorAll('.slides input[name="radio-btn"]');
-        let current = 0;
-
-        const prevArrow = document.querySelector('.arrow-1.prev');
-        const nextArrow = document.querySelector('.arrow-1.next');
-
-        function showSlide(index) {
-            radios[index].checked = true;
-            current = index;
-        }
-
-        prevArrow.addEventListener('click', () => {
-            let index = current - 1;
-            if (index < 0) index = radios.length - 1;
-            showSlide(index);
-        });
-
-        nextArrow.addEventListener('click', () => {
-            let index = current + 1;
-            if (index >= radios.length) index = 0;
-            showSlide(index);
-        });
-
-
-
-        let intervalTime = 10000; // وقت البداية بين الانتقالات
-
-        function startSlider() {
-            counter = 5; // التأكد من البدء من الصورة الأولى
-            document.getElementById('radio' + counter).checked = true;
-
-            setTimeout(function sliderTransition() {
-                counter--;
-                if (counter == 0) {
-                    counter = 5; // العودة إلى الصورة الأولى بعد الصورة الأخيرة
-                }
-                document.getElementById('radio' + counter).checked = true;
-
-                // ضبط الانتقال التالي بنفس الوقت الثابت                
-                setTimeout(sliderTransition, intervalTime);
-            }, intervalTime);
-        }
-
-        // التأكد من تشغيل السلايدر عند تحميل الصفحة        
-        window.onload = startSlider;
-
- 
-
-        let currentIndex = 0;
-        const imgElement = document.querySelector(".infogr img");
-        const textElement = document.querySelector(".pod-info-index");
-        const textdateElement = document.querySelector(".pod-info-index-date");
-        const prevButton = document.querySelector(".infogr .prev");
-        const nextButton = document.querySelector(".infogr .next");
-        const linkElement = document.querySelector(".infogr a"); // أضفنا هذا السطر
-
-        // تحديث السلايد
-        function updateSlide(index) {
-            imgElement.style.opacity = 0;
-            textElement.style.opacity = 0;
-
-            setTimeout(() => {
-                imgElement.src = slidess[index].image;
-                textElement.textContent = slidess[index].text;
-                textdateElement.textContent = slidess[index].date;
-                linkElement.href = `Infographics/${slidess[index].slug}/`;
-                imgElement.style.opacity = 1;
-                textElement.style.opacity = 1;
-            }, 0);
-        }
-
-        // أزرار التنقل اليدوي
-        prevButton.addEventListener("click", () => {
-            currentIndex = (currentIndex - 1 + slidess.length) % slidess.length;
-            updateSlide(currentIndex);
-        });
-
-        nextButton.addEventListener("click", () => {
-            currentIndex = (currentIndex + 1) % slidess.length;
-            updateSlide(currentIndex);
-        });
-
-        // تشغيل تلقائي للسلايدر
-       /* setInterval(() => {
-            currentIndex = (currentIndex + 1) % slidess.length;
-            updateSlide(currentIndex);
-        }, 7000); */// كل 7 ثوانٍ
-
-        // تشغيل أول سلايد عند التحميل
-        updateSlide(currentIndex);
-
-        /*if (window.innerWidth <= 1200) {
-            document.querySelector('.slide.journalImage img').src = "{% static 'imgs/New_Slider_mobile.png' %}";
-        }*/
-        // تعريف الـ Swiper لكن بدون autoplay
-        var swiper = new Swiper('.swiper-container', {
-            effect: 'coverflow',
-            grabCursor: true,
-            centeredSlides: true,
-            slidesPerView: 'auto',
-            initialSlide: 0,
-            loop: true,
-            speed: 1100, 
-            coverflowEffect: {
-                rotate: 50,
-                stretch: 0,
-                depth: 100,
-                modifier: 1,
-                slideShadows: false
-            },
-            autoplay: false, // نوقف التشغيل التلقائي,
-            pagination: {
-                el: '.swiper-pagination',
-                clickable: true
-            },
-            navigation: {
-                nextEl: '.swiper-button-next',
-                prevEl: '.swiper-button-prev'
-            },
-            // 🔹 هنا نتحكم في القيم حسب حجم الشاشة
-            breakpoints: {
-            320: { // شاشات صغيرة (موبايل)
-                coverflowEffect: {
-                    stretch: 100
-                }
-            },
-            768: { // شاشات متوسطة (تابلت)
-                coverflowEffect: {
-                    stretch: -30
-                }
-            },
-            1024: { // شاشات كبيرة (لابتوب/ديسكتوب)
-                coverflowEffect: {
-                    stretch: -60
-                }
-            }
-        }  
-          
-    });
-     // بدء التشغيل التلقائي بعد تحميل الصفحة
-    window.addEventListener("load", function() {
-        swiper.params.autoplay = { delay: 7000, disableOnInteraction: false }; // كل 7 ثواني
-        swiper.autoplay.start();
-    });
-    document.addEventListener("visibilitychange", function () {
-        if (document.hidden) {
-            // إيقاف التشغيل لما تنتقل لتبويب ثاني
-            swiper.autoplay.stop();
-        } else {
-            // إعادة التشغيل لما ترجع للتبويب
-            swiper.autoplay.start();
-        }
-    });  
-    });
-</script>
 {% endblock %}

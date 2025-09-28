@@ -12,6 +12,113 @@ let nav_i = document.querySelectorAll(".arrow");
 let show_refs = document.querySelectorAll(".container > .show-references , .nested-ref > .show-references");
 let all_refs = document.querySelectorAll(".container > .refrences , .nested-ref > .refrences");
 
+// index page
+document.addEventListener("DOMContentLoaded", function () {
+    const radios = document.querySelectorAll('.slides input[name="radio-btn"]');
+    let current = 0;
+
+    const prevArrow = document.querySelector('.arrow-1.prev');
+    const nextArrow = document.querySelector('.arrow-1.next');
+
+    function showSlide(index) {
+        radios[index].checked = true;
+        current = index;
+    }
+
+    prevArrow.addEventListener('click', () => {
+        let index = current - 1;
+        if (index < 0) index = radios.length - 1;
+        showSlide(index);
+    });
+
+    nextArrow.addEventListener('click', () => {
+        let index = current + 1;
+        if (index >= radios.length) index = 0;
+        showSlide(index);
+    });
+    let intervalTime = 10000; // وقت البداية بين الانتقالات
+
+    function startSlider() {
+        let counter = 5; // التأكد من البدء من الصورة الأولى
+        document.getElementById('radio' + counter).checked = true;
+
+        setTimeout(function sliderTransition() {
+            counter--;
+            if (counter == 0) {
+                counter = 5; // العودة إلى الصورة الأولى بعد الصورة الأخيرة
+            }
+            document.getElementById('radio' + counter).checked = true;
+
+            // ضبط الانتقال التالي بنفس الوقت الثابت                
+            setTimeout(sliderTransition, intervalTime);
+        }, intervalTime);
+    }
+
+    startSlider(); // تشغيل السلايدر بمجرد أن الـ DOM جاهز
+
+
+    // تعريف الـ Swiper لكن بدون autoplay
+    var swiper = new Swiper('.swiper-container', {
+        effect: 'coverflow',
+        grabCursor: true,
+        centeredSlides: true,
+        slidesPerView: 'auto',
+        initialSlide: 0,
+        loop: true,
+        speed: 2000,
+        coverflowEffect: {
+            rotate: 50,
+            stretch: 0,
+            depth: 100,
+            modifier: 1,
+            slideShadows: false
+        },
+        autoplay: false, // نوقف التشغيل التلقائي,
+        pagination: {
+            el: '.swiper-pagination',
+            clickable: true
+        },
+        navigation: {
+            nextEl: '.swiper-button-next',
+            prevEl: '.swiper-button-prev'
+        },
+        // 🔹 هنا نتحكم في القيم حسب حجم الشاشة
+        breakpoints: {
+            320: { // شاشات صغيرة (موبايل)
+                coverflowEffect: {
+                    stretch: 100
+                }
+            },
+            768: { // شاشات متوسطة (تابلت)
+                coverflowEffect: {
+                    stretch: -30
+                }
+            },
+            1024: { // شاشات كبيرة (لابتوب/ديسكتوب)
+                coverflowEffect: {
+                    stretch: -60
+                }
+            }
+        }
+
+    });
+    // بدء التشغيل التلقائي بعد تحميل الصفحة
+    window.addEventListener("load", function () {
+        swiper.params.autoplay = { delay: 7000, disableOnInteraction: false }; // كل 7 ثواني
+        swiper.autoplay.start();
+    });
+    document.addEventListener("visibilitychange", function () {
+        if (document.hidden) {
+            // إيقاف التشغيل لما تنتقل لتبويب ثاني
+            swiper.autoplay.stop();
+        } else {
+            // إعادة التشغيل لما ترجع للتبويب
+            swiper.autoplay.start();
+        }
+    });
+});
+
+
 // تأكد من أن هناك تساويًا بين عدد الأزرار والمراجع
 if (show_refs.length !== all_refs.length) {
     console.error("عدد العناصر غير متساوٍ بين show_refs و all_refs!");
@@ -72,7 +179,7 @@ const elements = [
     ...document.querySelectorAll('.first-page .table-caption'),    // عناوين الجداول
     ...document.querySelectorAll('.special-title'),                // العناوين الخاصة
     ...document.querySelectorAll('.special-title2'),
-    ...document.querySelectorAll('.e_yemen tbody tr td')      
+    ...document.querySelectorAll('.e_yemen tbody tr td')
 ];
 
 // تحديد الأزرار
@@ -154,7 +261,7 @@ window.addEventListener('scroll', () => {
 });
 
 // عندما يقوم المستخدم بالتمرير
-window.onscroll = function() {
+window.onscroll = function () {
     updateProgressBar();
 };
 
