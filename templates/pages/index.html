@@ -96,7 +96,7 @@
         position: relative;
         width: 38%;
         margin: 85px auto 0;
-        }
+    }
 
     .swiper-pagination {
         position: static !important;
@@ -167,44 +167,47 @@
         .arrow-1.next {
             right: -5px;
         }
+
         .publications.carousel-title {
             display: block;
             margin-top: 2px;
         }
+
         .swiper-container {
-        max-width: 100%;
-        overflow: hidden;
-        padding-top: 0;
-        margin-bottom: 7px;
-        margin-top: -15px;
-    }
+            max-width: 100%;
+            overflow: hidden;
+            padding-top: 0;
+            margin-bottom: 7px;
+            margin-top: -15px;
+        }
 
-    .swiper-slide {
-        width: 400px;
-        height: 440px;
-        position: relative;
-    }
+        .swiper-slide {
+            width: 400px;
+            height: 440px;
+            position: relative;
+        }
 
-    .swiper-slide img {
-        filter: blur(0px) !important;
-        width: 100%;
-        height: 100%;
-        transform: scale(0.8); /* الحجم الافتراضي أصغر */
-    }
+        .swiper-slide img {
+            filter: blur(0px) !important;
+            width: 100%;
+            height: 100%;
+            transform: scale(0.8);
+            /* الحجم الافتراضي أصغر */
+        }
 
-    .swiper-slide-active img {
-        filter: blur(0) !important;
-        transform: scale(0.83);
-        z-index: 2;
-    }
+        .swiper-slide-active img {
+            filter: blur(0) !important;
+            transform: scale(0.83);
+            z-index: 2;
+        }
 
-    .swiper-controls {
-        display: none;
+        .swiper-controls {
+            display: none;
         }
     }
 
     @media (min-width: 575px) and (max-width: 767px) {
-        
+
         .container.index-articles.hide-in-pc {
             display: none;
         }
@@ -363,7 +366,7 @@
             <input type="radio" name="radio-btn" id="radio2">
             <input type="radio" name="radio-btn" id="radio3">
             <input type="radio" name="radio-btn" id="radio4">
-            <input type="radio" name="radio-btn" id="radio5">
+            <input type="radio" name="radio-btn" id="radio5" checked>
             <div class="slide first">
                 <img src="{% static 'imgs/Journal-9.jpg' %}" alt="">
                 <!-- <h2>سياسة الإصلاح والإنفتاح في الصين</h2> -->
@@ -592,236 +595,243 @@
 <!-- Swiper -->
 <div class="container spe-show">
     <div class="swiper-container">
-
-    <div class="swiper-wrapper">
-        <div class="swiper-slide">
-            <a href="{% url 'infograph_detail' 'japan_from_destruction_to_leadership' %}">
-                <img src="{% static 'imgs/japan_from_destruction_to_leadership.jpg' %}" alt="">
-            </a>
+        
+        <div class="swiper-wrapper">
+            <div class="swiper-slide">
+                <a href="{% url 'infograph_detail' 'Morocco_leads_the_way' %}">
+                    <img src="{% static 'imgs/Morocco_leads_the_way.jpg' %}" alt="">
+                </a>
+            </div>
+            <div class="swiper-slide">
+                <a href="{% url 'infograph_detail' 'japan_from_destruction_to_leadership' %}">
+                    <img src="{% static 'imgs/japan_from_destruction_to_leadership.jpg' %}" alt="">
+                </a>
+            </div>
+            <div class="swiper-slide">
+                <a href="{% url 'infograph_detail' 'the_best_education_systems_around_the_world' %}">
+                    <img src="{% static 'imgs/best_education_systems.jpg' %}" alt="">
+                </a>
+            </div>
+            <div class="swiper-slide">
+                <a href="{% url 'infograph_detail' 'migration_between_east_and_west' %}">
+                    <img src="{% static 'imgs/migration_between_east_and_west.jpg' %}" alt="">
+                </a>
+            </div>
+            <div class="swiper-slide">
+                <a href="{% url 'infograph_detail' 'most_valuable_industries_in_2025' %}">
+                    <img src="{% static 'imgs/most_valuable_industries.jpg' %}" alt="">
+                </a>
+            </div>
+            <div class="swiper-slide">
+                <a href="{% url 'infograph_detail' 'economic_investment_in_education' %}">
+                    <img src="{% static 'imgs/economic_investment_in_education.jpg' %}" alt="">
+                </a>
+            </div>
+            <div class="swiper-slide">
+                <a href="{% url 'infograph_detail' 'The_Most_Important_Job_Skills_In_2025' %}">
+                    <img src="{% static 'imgs/thinking.jpg' %}" alt="">
+                </a>
+            </div>
+            <div class="swiper-slide">
+                <a href="{% url 'infograph_detail' 'United-Kingdom-Civil-Service-Reform-1979-1997' %}">
+                    <img src="{% static 'imgs/united kingdom.jpg' %}" alt="">
+                </a>
+            </div>
+            <div class="swiper-slide">
+                <a href="{% url 'infograph_detail' 'Netherlands-from-hunger-winter-to-high-tech-agriculture' %}">
+                    <img src="{% static 'imgs/netherland.jpg' %}" alt="">
+                </a>
+            </div>
+            <div class="swiper-slide">
+                <a href="{% url 'infograph_detail' 'NewZealand-from-deficit-to-surplus' %}">
+                    <img src="{% static 'imgs/newzealand.png' %}" alt="">
+                </a>
+            </div>
+            <div class="swiper-slide">
+                <a href="{% url 'infograph_detail' 'Canada-the-programmatic-review-that-extinguished-the-deficit' %}">
+                    <img src="{% static 'imgs/canada.png' %}" alt="">
+                </a>
+            </div>
+            <div class="swiper-slide">
+                <a href="{% url 'infograph_detail' 'Government-reform-in-Japan' %}">
+                    <img src="{% static 'imgs/japan.png' %}" alt="">
+                </a>
+            </div>
+            <div class="swiper-slide">
+                <a href="{% url 'infograph_detail' 'largest-banks-and-banking-holding-companies-in-2025' %}">
+                    <img src="{% static 'imgs/bank.png' %}" alt="">
+                </a>
+            </div>
+            <div class="swiper-slide">
+                <a href="{% url 'infograph_detail' 'worlds-most-valuable-companies-2025' %}">
+                    <img src="{% static 'imgs/company.png' %}" alt="">
+                </a>
+            </div>
+            <div class="swiper-slide">
+                <a href="{% url 'infograph_detail' 'largest-companies-in-the-world-by-number-of-employees' %}">
+                    <img src="{% static 'imgs/employees.png' %}" alt="">
+                </a>
+            </div>
+            <div class="swiper-slide">
+                <a href="{% url 'infograph_detail' 'natural-resources-and-economy' %}">
+                    <img src="{% static 'imgs/wealth_one.png' %}" alt="">
+                </a>
+            </div>
+            <div class="swiper-slide">
+                <a href="{% url 'infograph_detail' 'natural-resources-and-fragile-economies' %}">
+                    <img src="{% static 'imgs/wealth_two.png' %}" alt="">
+                </a>
+            </div>
+            <div class="swiper-slide">
+                <a href="{% url 'infograph_detail' 'limited-natural-resources-and-leading-countries' %}">
+                    <img src="{% static 'imgs/wealth_three.png' %}" alt="">
+                </a>
+            </div>
+            <div class="swiper-slide">
+                <a href="{% url 'infograph_detail' 'wealth-for-the-benefit-of-the-people' %}">
+                    <img src="{% static 'imgs/wealth_four.png' %}" alt="">
+                </a>
+            </div>
+            <div class="swiper-slide">
+                <a href="{% url 'infograph_detail' 'natural-resources-alone-are-not-enough' %}">
+                    <img src="{% static 'imgs/wealth_five.png' %}" alt="">
+                </a>
+            </div>
+            <div class="swiper-slide">
+                <a href="{% url 'infograph_detail' 'Countries-that-defeated-thirst-Australia' %}">
+                    <img src="{% static 'imgs/australia.png' %}" alt="">
+                </a>
+            </div>
+            <div class="swiper-slide">
+                <a href="{% url 'infograph_detail' 'Countries-that-defeated-thirst-Jordan' %}">
+                    <img src="{% static 'imgs/jordan.png' %}" alt="">
+                </a>
+            </div>
+            <div class="swiper-slide">
+                <a href="{% url 'infograph_detail' 'Countries-that-defeated-thirst-Morocco' %}">
+                    <img src="{% static 'imgs/morocco.png' %}" alt="">
+                </a>
+            </div>
+            <div class="swiper-slide">
+                <a href="{% url 'infograph_detail' 'Countries-that-defeated-thirst-India' %}">
+                    <img src="{% static 'imgs/india.png' %}" alt="">
+                </a>
+            </div>
+            <div class="swiper-slide">
+                <a href="{% url 'infograph_detail' 'Countries-that-defeated-thirst-Singabore' %}">
+                    <img src="{% static 'imgs/singabor.png' %}" alt="">
+                </a>
+            </div>
+            <div class="swiper-slide">
+                <a href="{% url 'infograph_detail' 'The-seven-largest-pharmaceutical-producing-countries-in-2024' %}">
+                    <img src="{% static 'imgs/Info-01.png' %}" alt="">
+                </a>
+            </div>
+            <div class="swiper-slide">
+                <a href="{% url 'infograph_detail' 'Top-ten-countries-with-the-largest-uranium-reserves' %}">
+                    <img src="{% static 'imgs/Info-02.png' %}" alt="">
+                </a>
+            </div>
+            <div class="swiper-slide">
+                <a href="{% url 'infograph_detail' 'Government-ministries-and-the-big-five-economies' %}">
+                    <img src="{% static 'imgs/Info-03.png' %}" alt="">
+                </a>
+            </div>
+            <div class="swiper-slide">
+                <a href="{% url 'infograph_detail' 'Unemployment-in-Arab-countries' %}">
+                    <img src="{% static 'imgs/Info-04.png' %}" alt="">
+                </a>
+            </div>
+            <div class="swiper-slide">
+                <a href="{% url 'infograph_detail' 'How-education-affects-the-economy' %}">
+                    <img src="{% static 'imgs/Info-05.png' %}" alt="">
+                </a>
+            </div>
+            <div class="swiper-slide">
+                <a href="{% url 'infograph_detail' 'Private-sector-contribution-to-GDP-2023' %}">
+                    <img src="{% static 'imgs/Info-06.png' %}" alt="">
+                </a>
+            </div>
+            <div class="swiper-slide">
+                <a href="{% url 'infograph_detail' 'Cotton-kings-2023' %}">
+                    <img src="{% static 'imgs/Info-07.png' %}" alt="">
+                </a>
+            </div>
+            <div class="swiper-slide">
+                <a href="{% url 'infograph_detail' 'Top-10-migrant-exporting-countries-in-2023' %}">
+                    <img src="{% static 'imgs/Info-08.png' %}" alt="">
+                </a>
+            </div>
+            <div class="swiper-slide">
+                <a href="{% url 'infograph_detail' 'Taxes-and-companies' %}">
+                    <img src="{% static 'imgs/Info-09.png' %}" alt="">
+                </a>
+            </div>
+            <div class="swiper-slide">
+                <a href="{% url 'infograph_detail' 'higher-education-in-the-Arab-World'  %}">
+                    <img src="{% static 'imgs/Info-10.png' %}" alt="">
+                </a>
+            </div>
+            <div class="swiper-slide">
+                <a href="{% url 'infograph_detail' 'health-care-in-yemen' %}">
+                    <img src="{% static 'imgs/Info-11.png' %}" alt="">
+                </a>
+            </div>
+            <div class="swiper-slide">
+                <a href="{% url 'infograph_detail' 'the-spread-of-epidemics' %}">
+                    <img src="{% static 'imgs/Info-12.png' %}" alt="">
+                </a>
+            </div>
+            <div class="swiper-slide">
+                <a href="{% url 'infograph_detail' 'top-ten-Social-care-Systems' %}">
+                    <img src="{% static 'imgs/Info-13.png' %}" alt="">
+                </a>
+            </div>
+            <div class="swiper-slide">
+                <a href="{% url 'infograph_detail' 'largest-healthcare-systems' %}">
+                    <img src="{% static 'imgs/Info-14.png' %}" alt="">
+                </a>
+            </div>
+            <div class="swiper-slide">
+                <a href="{% url 'infograph_detail' 'the-brain-drain-of-the-Arab-world' %}">
+                    <img src="{% static 'imgs/Info-15.png' %}" alt="">
+                </a>
+            </div>
+            <div class="swiper-slide">
+                <a href="{% url 'infograph_detail' 'the-largest-armies' %}">
+                    <img src="{% static 'imgs/Info-16.png' %}" alt="">
+                </a>
+            </div>
+            <div class="swiper-slide">
+                <a href="{% url 'infograph_detail' 'top-ten-countries-with-the-highest-teacher-density' %}">
+                    <img src="{% static 'imgs/Info-17.png' %}" alt="">
+                </a>
+            </div>
+            <div class="swiper-slide">
+                <a href="{% url 'infograph_detail' 'top-ten-countries-with-the-most-doctors' %}">
+                    <img src="{% static 'imgs/Info-18.png' %}" alt="">
+                </a>
+            </div>
+            <div class="swiper-slide">
+                <a href="{% url 'infograph_detail' 'water-and-Arab-countries' %}">
+                    <img src="{% static 'imgs/Info-19.png' %}" alt="">
+                </a>
+            </div>
+            <div class="swiper-slide">
+                <a
+                    href="{% url 'infograph_detail' 'The-top-ten-countries-in-remittance-outflows-and-inflows-by-migrants-2024' %}">
+                    <img src="{% static 'imgs/Info-20.png' %}" alt="">
+                </a>
+            </div>
         </div>
-        <div class="swiper-slide">
-            <a href="{% url 'infograph_detail' 'the_best_education_systems_around_the_world' %}">
-                <img src="{% static 'imgs/best_education_systems.jpg' %}" alt="">
-            </a>
-        </div>
-        <div class="swiper-slide">
-            <a href="{% url 'infograph_detail' 'migration_between_east_and_west' %}">
-                <img src="{% static 'imgs/migration_between_east_and_west.jpg' %}" alt="">
-            </a>
-        </div>
-        <div class="swiper-slide">
-            <a href="{% url 'infograph_detail' 'most_valuable_industries_in_2025' %}">
-                <img src="{% static 'imgs/most_valuable_industries.jpg' %}" alt="">
-            </a>
-        </div>
-        <div class="swiper-slide">
-            <a href="{% url 'infograph_detail' 'economic_investment_in_education' %}">
-                <img src="{% static 'imgs/economic_investment_in_education.jpg' %}" alt="">
-            </a>
-        </div>
-        <div class="swiper-slide">
-            <a href="{% url 'infograph_detail' 'The_Most_Important_Job_Skills_In_2025' %}">
-                <img src="{% static 'imgs/thinking.jpg' %}" alt="">
-            </a>
-        </div>
-        <div class="swiper-slide">
-            <a href="{% url 'infograph_detail' 'United-Kingdom-Civil-Service-Reform-1979-1997' %}">
-                <img src="{% static 'imgs/united kingdom.jpg' %}" alt="">
-            </a>
-        </div>
-        <div class="swiper-slide">
-            <a href="{% url 'infograph_detail' 'Netherlands-from-hunger-winter-to-high-tech-agriculture' %}">
-                <img src="{% static 'imgs/netherland.jpg' %}" alt="">
-            </a>
-        </div>
-        <div class="swiper-slide">
-            <a href="{% url 'infograph_detail' 'NewZealand-from-deficit-to-surplus' %}">
-                <img src="{% static 'imgs/newzealand.png' %}" alt="">
-            </a>
-        </div>
-        <div class="swiper-slide">
-            <a href="{% url 'infograph_detail' 'Canada-the-programmatic-review-that-extinguished-the-deficit' %}">
-                <img src="{% static 'imgs/canada.png' %}" alt="">
-            </a>
-        </div>
-        <div class="swiper-slide">
-            <a href="{% url 'infograph_detail' 'Government-reform-in-Japan' %}">
-                <img src="{% static 'imgs/japan.png' %}" alt="">
-            </a>
-        </div>
-        <div class="swiper-slide">
-            <a href="{% url 'infograph_detail' 'largest-banks-and-banking-holding-companies-in-2025' %}">
-                <img src="{% static 'imgs/bank.png' %}" alt="">
-            </a>
-        </div>
-        <div class="swiper-slide">
-            <a href="{% url 'infograph_detail' 'worlds-most-valuable-companies-2025' %}">
-                <img src="{% static 'imgs/company.png' %}" alt="">
-            </a>
-        </div>
-        <div class="swiper-slide">
-            <a href="{% url 'infograph_detail' 'largest-companies-in-the-world-by-number-of-employees' %}">
-                <img src="{% static 'imgs/employees.png' %}" alt="">
-            </a>
-        </div>
-        <div class="swiper-slide">
-            <a href="{% url 'infograph_detail' 'natural-resources-and-economy' %}">
-                <img src="{% static 'imgs/wealth_one.png' %}" alt="">
-            </a>
-        </div>
-        <div class="swiper-slide">
-            <a href="{% url 'infograph_detail' 'natural-resources-and-fragile-economies' %}">
-                <img src="{% static 'imgs/wealth_two.png' %}" alt="">
-            </a>
-        </div>
-        <div class="swiper-slide">
-            <a href="{% url 'infograph_detail' 'limited-natural-resources-and-leading-countries' %}">
-                <img src="{% static 'imgs/wealth_three.png' %}" alt="">
-            </a>
-        </div>
-        <div class="swiper-slide">
-            <a href="{% url 'infograph_detail' 'wealth-for-the-benefit-of-the-people' %}">
-                <img src="{% static 'imgs/wealth_four.png' %}" alt="">
-            </a>
-        </div>
-        <div class="swiper-slide">
-            <a href="{% url 'infograph_detail' 'natural-resources-alone-are-not-enough' %}">
-                <img src="{% static 'imgs/wealth_five.png' %}" alt="">
-            </a>
-        </div>
-        <div class="swiper-slide">
-            <a href="{% url 'infograph_detail' 'Countries-that-defeated-thirst-Australia' %}">
-                <img src="{% static 'imgs/australia.png' %}" alt="">
-            </a>
-        </div>
-        <div class="swiper-slide">
-            <a href="{% url 'infograph_detail' 'Countries-that-defeated-thirst-Jordan' %}">
-                <img src="{% static 'imgs/jordan.png' %}" alt="">
-            </a>
-        </div>
-        <div class="swiper-slide">
-            <a href="{% url 'infograph_detail' 'Countries-that-defeated-thirst-Morocco' %}">
-                <img src="{% static 'imgs/morocco.png' %}" alt="">
-            </a>
-        </div>
-        <div class="swiper-slide">
-            <a href="{% url 'infograph_detail' 'Countries-that-defeated-thirst-India' %}">
-                <img src="{% static 'imgs/india.png' %}" alt="">
-            </a>
-        </div>
-        <div class="swiper-slide">
-            <a href="{% url 'infograph_detail' 'Countries-that-defeated-thirst-Singabore' %}">
-                <img src="{% static 'imgs/singabor.png' %}" alt="">
-            </a>
-        </div>
-        <div class="swiper-slide">
-            <a href="{% url 'infograph_detail' 'The-seven-largest-pharmaceutical-producing-countries-in-2024' %}">
-                <img src="{% static 'imgs/Info-01.png' %}" alt="">
-            </a>
-        </div>
-        <div class="swiper-slide">
-            <a href="{% url 'infograph_detail' 'Top-ten-countries-with-the-largest-uranium-reserves' %}">
-                <img src="{% static 'imgs/Info-02.png' %}" alt="">
-            </a>
-        </div>
-        <div class="swiper-slide">
-            <a href="{% url 'infograph_detail' 'Government-ministries-and-the-big-five-economies' %}">
-                <img src="{% static 'imgs/Info-03.png' %}" alt="">
-            </a>
-        </div>
-        <div class="swiper-slide">
-            <a href="{% url 'infograph_detail' 'Unemployment-in-Arab-countries' %}">
-                <img src="{% static 'imgs/Info-04.png' %}" alt="">
-            </a>
-        </div>
-        <div class="swiper-slide">
-            <a href="{% url 'infograph_detail' 'How-education-affects-the-economy' %}">
-                <img src="{% static 'imgs/Info-05.png' %}" alt="">
-            </a>
-        </div>
-        <div class="swiper-slide">
-            <a href="{% url 'infograph_detail' 'Private-sector-contribution-to-GDP-2023' %}">
-                <img src="{% static 'imgs/Info-06.png' %}" alt="">
-            </a>
-        </div>
-        <div class="swiper-slide">
-            <a href="{% url 'infograph_detail' 'Cotton-kings-2023' %}">
-                <img src="{% static 'imgs/Info-07.png' %}" alt="">
-            </a>
-        </div>
-        <div class="swiper-slide">
-            <a href="{% url 'infograph_detail' 'Top-10-migrant-exporting-countries-in-2023' %}">
-                <img src="{% static 'imgs/Info-08.png' %}" alt="">
-            </a>
-        </div>
-        <div class="swiper-slide">
-            <a href="{% url 'infograph_detail' 'Taxes-and-companies' %}">
-                <img src="{% static 'imgs/Info-09.png' %}" alt="">
-            </a>
-        </div>
-        <div class="swiper-slide">
-            <a href="{% url 'infograph_detail' 'higher-education-in-the-Arab-World'  %}">
-                <img src="{% static 'imgs/Info-10.png' %}" alt="">
-            </a>
-        </div>
-        <div class="swiper-slide">
-            <a href="{% url 'infograph_detail' 'health-care-in-yemen' %}">
-                <img src="{% static 'imgs/Info-11.png' %}" alt="">
-            </a>
-        </div>
-        <div class="swiper-slide">
-            <a href="{% url 'infograph_detail' 'the-spread-of-epidemics' %}">
-                <img src="{% static 'imgs/Info-12.png' %}" alt="">
-            </a>
-        </div>
-        <div class="swiper-slide">
-            <a href="{% url 'infograph_detail' 'top-ten-Social-care-Systems' %}">
-                <img src="{% static 'imgs/Info-13.png' %}" alt="">
-            </a>
-        </div>
-        <div class="swiper-slide">
-            <a href="{% url 'infograph_detail' 'largest-healthcare-systems' %}">
-                <img src="{% static 'imgs/Info-14.png' %}" alt="">
-            </a>
-        </div>
-        <div class="swiper-slide">
-            <a href="{% url 'infograph_detail' 'the-brain-drain-of-the-Arab-world' %}">
-                <img src="{% static 'imgs/Info-15.png' %}" alt="">
-            </a>
-        </div>
-        <div class="swiper-slide">
-            <a href="{% url 'infograph_detail' 'the-largest-armies' %}">
-                <img src="{% static 'imgs/Info-16.png' %}" alt="">
-            </a>
-        </div>
-        <div class="swiper-slide">
-            <a href="{% url 'infograph_detail' 'top-ten-countries-with-the-highest-teacher-density' %}">
-                <img src="{% static 'imgs/Info-17.png' %}" alt="">
-            </a>
-        </div>
-        <div class="swiper-slide">
-            <a href="{% url 'infograph_detail' 'top-ten-countries-with-the-most-doctors' %}">
-                <img src="{% static 'imgs/Info-18.png' %}" alt="">
-            </a>
-        </div>
-        <div class="swiper-slide">
-            <a href="{% url 'infograph_detail' 'water-and-Arab-countries' %}">
-                <img src="{% static 'imgs/Info-19.png' %}" alt="">
-            </a>
-        </div>
-         <div class="swiper-slide">
-            <a href="{% url 'infograph_detail' 'The-top-ten-countries-in-remittance-outflows-and-inflows-by-migrants-2024' %}">
-                <img src="{% static 'imgs/Info-20.png' %}" alt="">
-            </a>
+        <div class="swiper-controls">
+            <div class="swiper-button-prev"></div>
+            <div class="swiper-pagination"></div>
+            <div class="swiper-button-next"></div>
         </div>
     </div>
-    <div class="swiper-controls">
-        <div class="swiper-button-prev"></div>
-        <div class="swiper-pagination"></div>
-        <div class="swiper-button-next"></div>
-    </div>  
 </div>
-</div>
+
 <div class="container index-articles">
     <div class="tow-books">
         <div class="daw">

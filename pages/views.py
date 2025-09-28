@@ -1,5 +1,5 @@
 from django.shortcuts import redirect, render
-from django.http import FileResponse, HttpResponse
+from django.http import FileResponse, HttpResponse, JsonResponse
 from django.contrib import messages
 from .models import Contacts
 from .models import Studies
@@ -490,6 +490,12 @@ def osus_journals(request):
 
 def view_infograph(request):
     infographs = [    
+        {
+            "title": "المغرب يقود الطريق",
+            "slug": "Morocco_leads_the_way",
+            "image": "imgs/Morocco_leads_the_way.jpg",
+            "date": "20 سبتمبر 2025",
+        },
         {
             "title": "اليابان من الدمار إلى الريادة",
             "slug": "japan_from_destruction_to_leadership",
@@ -987,6 +993,12 @@ def infograph_detail(request, slug):
             'date': '15 سبتمبر 2025',
             'image': 'imgs/japan_from_destruction_to_leadership.jpg',
         },
+        "Morocco_leads_the_way": {
+            'title': 'المغرب يقود الطريق',
+            'description': 'قصة صناعة السيارات في المغرب',
+            'date': '20 سبتمبر 2025',
+            'image': 'imgs/Morocco_leads_the_way.jpg',
+        },
     }
 
     detail = data.get(slug)
@@ -1060,9 +1072,27 @@ def motion_graphics(request):
     issue_one = [
         {
             "url": "/studies/1/",
-            "video": "https://youtu.be/RYEZJDqXKu8?si=yB5_fzdkBy8GquOo",
-            "date": "2025-09-10",
-            "subject": "كيف هزمت هذه الدول الجفاف والعطش؟"
+            "video": "https://youtu.be/QjvCn5TE5nQ",
+            "date": "2025-09-14",
+            "subject": "كيف هزمت بعض الدول الجفاف والعطش؟ دروس وتجارب ملهمة"
+        },
+        {
+            "url": "/studies/2/",
+            "video": "https://youtu.be/kB3LgcKJtik",
+            "date": "2025-09-16",
+            "subject": "كيف انتقلت هولندا من المجاعة إلى قوة تصدير زراعي؟"
+        },
+        {
+            "url": "/studies/3/",
+            "video": "https://youtu.be/zod4jUphBr8",
+            "date": "2025-09-18",
+            "subject": "اليابان من الدمار إلى المعجزة الاقتصادية"
+        },
+        {
+            "url": "/studies/4/",
+            "video": "https://youtu.be/6wWTygAX0eo",
+            "date": "2025-09-20",
+            "subject": "صناعة السيارات في المغرب"
         },
         
     ]
