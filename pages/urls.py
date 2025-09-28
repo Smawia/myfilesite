@@ -78,6 +78,7 @@ urlpatterns = [
     path('publications/Journals/Osus', views.osus_journals, name='osus'),
     path('publications/Journals/Osus/osus-2025-03-issue-contents.pdf', views.view_osus_content, name='osus-content'),
     path('publications/Journals/Osus/osus-2025-06-issue-contents.pdf', views.view_osus_second_content, name='osus-second-content'),
+    path('publications/Journals/Osus/osus-2025-09-third-issue-contents.pdf', views.view_osus_third_content, name='osus-third-content'),
     path('Infographics/', views.view_infograph, name='infographs'),
     path('Infographics/MotionGraphics', views.motion_graphics, name='motion_graphics'),
     path('Infographics/<slug:slug>/', views.infograph_detail, name='infograph_detail'),

@@ -55,6 +55,9 @@ def view_osus_content(requst):
 def view_osus_second_content(requst):
     return serve_pdf(requst, 'osus-2025-06-issue-contents.pdf')
 
+def view_osus_third_content(requst):
+    return serve_pdf(requst, 'third-osus-2025-09-issue-contents.pdf')
+
 def index(request):
     return render(request,'pages/index.html')
 
