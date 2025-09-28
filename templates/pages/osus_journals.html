@@ -2,20 +2,23 @@
 {% load static %}
 {% block title %}| دورية أٌســس{% endblock %}
 {% block meta_og %}
-    <meta name="description" content="دورية أُسُس: دورية فصلية محكًمة تعني بالإدارة والسياسات العامة تصدر من المركز التأسيسي للدراسات والبحوث.">
+<meta name="description"
+    content="دورية أُسُس: دورية فصلية محكًمة تعني بالإدارة والسياسات العامة تصدر من المركز التأسيسي للدراسات والبحوث.">
 
-    <!-- Open Graph -->
-    <meta property="og:title" content="دورية أُسُس - إصدار علمي من CSR Yemen">
-    <meta property="og:description" content="دورية فصلية محكًمة تعني بالإدارة والسياسات العامة تصدر من المركز التأسيسي للدراسات والبحوث.">
-    <meta property="og:image" content="https://csr-yemen.com/static/imgs/web.jpg">
-    <meta property="og:url" content="http://csr-yemen.com/publications/Journals/Osus">
-    <meta property="og:type" content="article">
+<!-- Open Graph -->
+<meta property="og:title" content="دورية أُسُس - إصدار علمي من CSR Yemen">
+<meta property="og:description"
+    content="دورية فصلية محكًمة تعني بالإدارة والسياسات العامة تصدر من المركز التأسيسي للدراسات والبحوث.">
+<meta property="og:image" content="https://csr-yemen.com/static/imgs/web.jpg">
+<meta property="og:url" content="http://csr-yemen.com/publications/Journals/Osus">
+<meta property="og:type" content="article">
 
-    <!-- Twitter -->
-    <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="دورية أُسُس - إصدار علمي من CSR Yemen">
-    <meta name="twitter:description" content="دورية فصلية محكًمة تعني بالإدارة والسياسات العامة تصدر من المركز التأسيسي للدراسات والبحوث.">
-    <meta name="twitter:image" content="https://csr-yemen.com/static/imgs/web.jpg">
+<!-- Twitter -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="دورية أُسُس - إصدار علمي من CSR Yemen">
+<meta name="twitter:description"
+    content="دورية فصلية محكًمة تعني بالإدارة والسياسات العامة تصدر من المركز التأسيسي للدراسات والبحوث.">
+<meta name="twitter:image" content="https://csr-yemen.com/static/imgs/web.jpg">
 {% endblock %}
 
 {% block content %}
@@ -58,18 +61,41 @@
         <div class="osus-second-container">
             <img src="{% static 'imgs/Second-Issue-Post.jpg' %}" alt="second-osus" class="second-osus">
             <div class="osus-second-text second-osus-container">
-                <p>في العدد الثاني، خمس دراسات تتكامل موضوعيًا ومنهجيًا، وتغطي مجالات حيوية في الإدارة، والعدالة،
-                    والاقتصاد الاجتماعي، والسياسات العامة. تبدأ من تحليل ظاهرة الازدواج الوظيفي في القيادة الإدارية وما
-                    تسببه من تحديات معرفية تؤثر في جودة القرار، لتنتقل إلى قراءة سوسيولوجية لظاهرة التسول في اليمن في
-                    سياق أزمة مركبة، مقدِّمةً مقترحات تستند إلى القانون والسياسات الاجتماعية المتكاملة. كما يتناول العدد
-                    واقع الإدارة المحلية والمنظومة العدلية في اليمن من منظور نقدي مقارن، في ضوء تجارب عالمية بارزة، ليضع
-                    أُطرًا عملية لإصلاح هذه الأنظمة من الداخل. ويختتم العدد بدراسة تحليلية معمّقة حول التأمين الصحي
-                    الاجتماعي، تتجاوز النص القانوني لتناقش الإمكانات المؤسسية والتمويلية الكفيلة بتحقيق نظام تأميني أكثر
-                    عدالة وشمولًا.</p>
+                <p>في عدده الثاني، يواصل المركز التأسيسي للدراسات والبحوث استقصاء قضايا مجتمعية ومؤسسية كبرى تمس الواقع
+                    اليمني وتفتح آفاق الإصلاح. ينطلق العدد من دراسة سوسيولوجية لظاهرة التسول في اليمن، باعتبارها
+                    انعكاسًا لأزمة اجتماعية مركبة تتطلب معالجات متكاملة في ضوء السياسات العامة. كما يتناول واقع الإدارة
+                    المحلية وما تواجهه من تحديات في البنية والصلاحيات، ليقدّم مقاربات عملية لإعادة تفعيل دورها في
+                    التنمية. ويتعمق العدد في بحث فاعلية المنظومة العدلية والرقابية، كاشفًا مواطن القصور ومقترحًا آليات
+                    لتعزيز الشفافية وضمان العدالة. وفي سياق موازٍ، يناقش التأمين الصحي الاجتماعي في اليمن من زاوية
+                    مؤسسية وتمويلية، واضعًا تصورًا لإرساء نظام أكثر عدالة واستدامة. ويُختتم العدد بدراسة حول أخلاقيات
+                    ومعايير النشر في مجلة (أسس)، تجديدًا للالتزام بالقيم العلمية والنزاهة البحثية التي تقوم عليها.
+                </p>
                 <div class="osus-links">
                     <a href="{% url 'osus-second-content' %}?action=view" target="_blank">محتويات العدد</a>
                     <a href="{% url 'download_or_view_second_ossus' %}?action=view" target="_blank">قراءة العدد</a>
-                    <a href="{% url 'download_or_view_second_ossus' %}?action=download" target="_blank">تحميل العدد PDF</a>
+                    <a href="{% url 'download_or_view_second_ossus' %}?action=download" target="_blank">تحميل العدد
+                        PDF</a>
+                </div>
+            </div>
+        </div>
+        <h3>العدد الثالث</h3>
+        <div class="osus-second-container">
+            <img src="{% static 'imgs/Third-Issue-Post.jpg' %}" alt="second-osus" class="second-osus">
+            <div class="osus-second-text second-osus-container">
+                <p>في عدده الثالث، يواصل المركز التأسيسي للدراسات والبحوث تقديم دراسات معمّقة ومتنوعة، تعالج قضايا
+                    الإدارة والتنمية والعدالة والتعليم من زوايا متقاطعة. يبدأ العدد ببحث حول أثر الازدواج الوظيفي
+                    للقيادة الإدارية على جودة اتخاذ القرار وأداء العمل المؤسسي، لينتقل إلى دراسة واقع التعليم الفني
+                    والتدريب المهني في اليمن وما يطرحه من تحديات وفرص. كما يناقش التداخل والتجاوز في المهام والاختصاصات
+                    داخل الإدارة العامة، ويقدّم قراءة نقدية للمنظومة العدلية في اليمن، مسلطًا الضوء على آليات الإصلاح
+                    الممكنة. وفي محور آخر، يتناول الدور المتنامي لمنظمات المجتمع المدني في دعم التنمية المحلية، قبل أن
+                    يختتم بمقالة تحليلية حول التعليم العالي في المغرب وإسهاماته في الدفع بعجلة التنمية الاقتصادية. بهذا،
+                    يجمع العدد بين رؤى نظرية ومقترحات عملية تسهم في إثراء النقاشات حول بناء مؤسسات أكثر كفاءة وعدالة.
+                </p>
+                <div class="osus-links">
+                    <!-- <a href="{% url 'osus-second-content' %}?action=view" target="_blank">محتويات العدد</a> -->
+                    <a href="{% url 'download_or_view_third_ossus' %}?action=view" target="_blank">قراءة العدد</a>
+                    <a href="{% url 'download_or_view_third_ossus' %}?action=download" target="_blank">تحميل العدد
+                        PDF</a>
                 </div>
             </div>
         </div>
