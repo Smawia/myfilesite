@@ -82,6 +82,7 @@ urlpatterns = [
     path('Infographics/', views.view_infograph, name='infographs'),
     path('Infographics/MotionGraphics', views.motion_graphics, name='motion_graphics'),
     path('Infographics/<slug:slug>/', views.infograph_detail, name='infograph_detail'),
+    path("api/motion_graphics_main/", views.motion_graphics_main, name="motion_graphics_main"),
 ]
 sitemaps = {
     'static': StaticViewSitemap,

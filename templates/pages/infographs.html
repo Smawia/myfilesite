@@ -24,8 +24,8 @@
 </div>
 
 <div class="container index-articles all-art infographs">
-    <div class="show-all-studies">
-        {% for item in infographs %}
+    <div class="show-all-studies" id="infographContainer">
+        <!-- {% for item in infographs|slice:":9" %}
         <div class="studies-card infograph-card custom-studies-card">
             <a href="{% url 'infograph_detail' item.slug %}">
                 <img src="{% static item.image %}" alt="إنفوجراف" class="infograph-img">
@@ -35,8 +35,12 @@
                 </div>
             </a>
         </div>
-        {% endfor %}
+        {% endfor %} -->
     </div>
+    <button id="loadMoreBtn" class="show-all">عرض المزيد</button>
 </div>
+<script id="infographs" type="application/json">
+    {{ infographs_json|safe }}
+</script>
 
 {% endblock %}

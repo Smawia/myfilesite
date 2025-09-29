@@ -119,6 +119,60 @@ document.addEventListener("DOMContentLoaded", function () {
 });
 
 
+//   infographic view
+document.addEventListener("DOMContentLoaded", function () {
+    const container = document.getElementById("infographContainer");
+    const loadMoreBtn = document.getElementById("loadMoreBtn");
+    // console.log("Container and Button:", container, loadMoreBtn);
+    // جلب البيانات من الـ script
+    const data = JSON.parse(document.getElementById("infographs").textContent);
+    // console.log("Data length:", data.length);
+
+    let itemsPerPage = 6;   // كم عنصر نعرض كل مرة
+    let currentIndex = 0;   // موقع البداية
+
+    function renderItems() {
+        // نتأكد أن فيه عناصر متبقية
+        if (currentIndex >= data.length) {
+            loadMoreBtn.style.display = "none";
+            return;
+        }
+
+        // ناخذ الشرائح المتبقية فقط
+        const slice = data.slice(currentIndex, currentIndex + itemsPerPage);
+
+        slice.forEach(item => {
+            const card = document.createElement("div");
+            card.className = "studies-card infograph-card custom-studies-card fade-in"; // أضفنا fade-in
+            card.innerHTML = `
+                <a href="/Infographics/${item.slug}/">
+                    <img src="/static/${item.image}" alt="إنفوجراف" class="infograph-img">
+                    <div class="study-text-info">
+                        <span>${item.date}</span>
+                        <p>${item.title}</p>
+                    </div>
+                </a>
+            `;
+            container.appendChild(card);
+        });
+
+        // تحديث المؤشر
+        currentIndex += slice.length;
+
+        // إذا خلصت العناصر، أخفي الزر
+        if (currentIndex >= data.length) {
+            loadMoreBtn.style.display = "none";
+            console.log("كل العناصر تم عرضها");
+        }
+    }
+
+    // تحميل أول دفعة
+    renderItems();
+
+    // عند الضغط على عرض المزيد
+    loadMoreBtn.addEventListener("click", renderItems);
+});
+
 // تأكد من أن هناك تساويًا بين عدد الأزرار والمراجع
 if (show_refs.length !== all_refs.length) {
     console.error("عدد العناصر غير متساوٍ بين show_refs و all_refs!");

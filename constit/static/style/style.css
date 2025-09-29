@@ -7273,6 +7273,15 @@ h5 {
     padding: 5px 17px !important;
 }
 
+.infographs .show-all {
+    display: block;
+    text-align: center;
+    width: fit-content !important;
+    margin: 10px auto;
+    padding: 5px 17px !important;
+    border: unset;
+}
+
 @media (max-width: 574px) {
     .show-studies-index {
         margin-top: 0px !important;
@@ -7335,6 +7344,14 @@ h5 {
         margin-bottom: 40px !important;
         margin-top: 0px !important ;
     }
+
+    .infographs .show-all {
+        margin: 18px auto 0 !important;
+        font-size: 14px !important;
+        padding: 9px 28px !important;
+        margin-bottom: 30px !important;
+        margin-top: 5px !important ;
+    }
     
     .show-all-studies .video-card:not(:last-of-type) {
         margin-bottom: 20px !important;
@@ -7391,6 +7408,12 @@ h5 {
         font-size: 18px !important;
         margin-bottom: 20px !important;
     }
+
+    .infographs .show-all {
+        margin: 5px auto;
+        font-size: 17px !important;
+        margin-bottom: 10px !important;
+    }
     .show-all-studies .video-card:not(:last-of-type) {
         margin-bottom: 20px !important;
     }
@@ -7436,6 +7459,13 @@ h5 {
         padding: 5px 25px !important;
         margin-bottom: 10px !important;
     }
+
+     .infographs .show-all {
+        margin: 5px auto;
+        font-size: 16px !important;
+        padding: 5px 25px !important;
+    }
+
     .show-all-studies .video-card:not(:last-of-type) {
         margin-bottom: 30px !important;
     }
@@ -7481,6 +7511,13 @@ h5 {
         font-size: 16px !important;
         padding: 7px 32px !important;
     }
+
+    .infographs .show-all {
+        margin: 5px auto;
+        font-size: 16px !important;
+        padding: 7px 32px !important;
+    }
+
     .show-all-studies .video-card:not(:last-of-type) {
         margin-bottom: 40px !important;
     }
@@ -12312,4 +12349,23 @@ table.TableOverride-1 {
 .nested-list::after {
     content: none !important;
     /*إزالة أي محتوى pseudo*/
+}
+
+
+/* infographic view */
+ /* الحركة الأساسية */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* نطبق الحركة */
+.infographs .fade-in {
+  animation: fadeInUp 0.6s ease forwards;
 }

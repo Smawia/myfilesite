@@ -10,7 +10,7 @@ from django.core.paginator import Paginator
 from django.db.models import Q  # لاستعمال البحث المتقدم
 import os
 from django.conf import settings
-
+import json
 def serve_pdf(request, filename):
     # تحديد مسار الملف داخل MEDIA_ROOT
     file_path = os.path.join(settings.MEDIA_ROOT, filename)
@@ -765,7 +765,7 @@ def view_infograph(request):
         },
     ]
 
-    return render(request, 'pages/infographs.html', {'infographs': infographs})
+    return render(request, 'pages/infographs.html', {'infographs_json': json.dumps(list(infographs), ensure_ascii=False)})
 
 def infograph_detail(request, slug):
     # بيانات ثابتة للكروت
@@ -1097,6 +1097,12 @@ def motion_graphics(request):
             "date": "2025-09-20",
             "subject": "صناعة السيارات في المغرب"
         },
+        {
+            "url": "/studies/5/",
+            "video": "https://youtu.be/5JrQF9GTNYY",
+            "date": "2025-09-22",
+            "subject": "لماذا تفشل دول غنية وتنجح دول بلا موارد؟"
+        },
         
     ]
 
@@ -1111,3 +1117,34 @@ def motion_graphics(request):
         "issue_one": issue_one,
         "query": query,
     })
+
+
+def motion_graphics_main(request):
+    videos = [
+        {
+            "url": "/studies/1/",
+            "video": "https://youtu.be/QjvCn5TE5nQ",
+            "date": "2025-09-14",
+            "subject": "كيف هزمت بعض الدول الجفاف والعطش؟ دروس وتجارب ملهمة"
+        },
+        {
+            "url": "/studies/2/",
+            "video": "https://youtu.be/kB3LgcKJtik",
+            "date": "2025-09-16",
+            "subject": "كيف انتقلت هولندا من المجاعة إلى قوة تصدير زراعي؟"
+        },
+        {
+            "url": "/studies/3/",
+            "video": "https://youtu.be/zod4jUphBr8",
+            "date": "2025-09-18",
+            "subject": "اليابان من الدمار إلى المعجزة الاقتصادية"
+        },
+    ]
+
+    # تحويل الروابط إلى embed
+    for item in videos:
+        if 'youtu.be' in item['video']:
+            video_id = item['video'].split('/')[-1].split('?')[0]
+            item['video'] = f"https://www.youtube.com/embed/{video_id}"
+
+    return JsonResponse(list(videos), safe=False)
