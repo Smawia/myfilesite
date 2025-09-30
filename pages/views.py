@@ -494,6 +494,12 @@ def osus_journals(request):
 def view_infograph(request):
     infographs = [    
         {
+            "title": "ماليزيا من دولة زراعية إلى نمر اقتصادي ",
+            "slug": "Malaysia_from_an_agricultural_country_to_an_economic_tiger",
+            "image": "imgs/Malaysia_from_an_agricultural_country_to_an_economic.jpg",
+            "date": "20 سبتمبر 2025",
+        },
+        {
             "title": "المغرب يقود الطريق",
             "slug": "Morocco_leads_the_way",
             "image": "imgs/Morocco_leads_the_way.jpg",
@@ -1001,6 +1007,11 @@ def infograph_detail(request, slug):
             'description': 'قصة صناعة السيارات في المغرب',
             'date': '20 سبتمبر 2025',
             'image': 'imgs/Morocco_leads_the_way.jpg',
+        },
+        "Malaysia_from_an_agricultural_country_to_an_economic_tiger": {
+            'title': 'ماليزيا من دولة زراعية إلى نمر اقتصادي ',
+            'date': '20 سبتمبر 2025',
+            'image': 'imgs/Malaysia_from_an_agricultural_country_to_an_economic.jpg',
         },
     }
 

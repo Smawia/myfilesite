@@ -20,6 +20,10 @@ document.addEventListener("DOMContentLoaded", function () {
     const prevArrow = document.querySelector('.arrow-1.prev');
     const nextArrow = document.querySelector('.arrow-1.next');
 
+    if(!prevArrow || !nextArrow) {
+        return;
+    }
+
     function showSlide(index) {
         radios[index].checked = true;
         current = index;
@@ -122,12 +126,18 @@ document.addEventListener("DOMContentLoaded", function () {
 //   infographic view
 document.addEventListener("DOMContentLoaded", function () {
     const container = document.getElementById("infographContainer");
+
+    // لو ما في بيانات infographs في الصفحة، نوقف
+    if (!container) {
+        return;
+    }
+
     const loadMoreBtn = document.getElementById("loadMoreBtn");
     // console.log("Container and Button:", container, loadMoreBtn);
     // جلب البيانات من الـ script
     const data = JSON.parse(document.getElementById("infographs").textContent);
     // console.log("Data length:", data.length);
-
+    
     let itemsPerPage = 6;   // كم عنصر نعرض كل مرة
     let currentIndex = 0;   // موقع البداية
 
@@ -247,25 +257,27 @@ let fontSize = 19;
 const maxFontSize = 30;
 const minFontSize = 10;
 
-// عند النقر على زر التكبير
-increaseButton.addEventListener('click', function () {
-    if (fontSize < maxFontSize) { // تحقق أن الحجم أقل من الحد الأقصى
-        fontSize += 1; // زيادة الحجم
-        elements.forEach(function (el) {
-            el.style.setProperty('font-size', `${fontSize}px`, 'important');
-        });
-    }
-});
+if (increaseButton && decreaseButton) {
+    // عند النقر على زر التكبير
+    increaseButton.addEventListener('click', function () {
+        if (fontSize < maxFontSize) { // تحقق أن الحجم أقل من الحد الأقصى
+            fontSize += 1; // زيادة الحجم
+            elements.forEach(function (el) {
+                el.style.setProperty('font-size', `${fontSize}px`, 'important');
+            });
+        }
+    });
 
-// عند النقر على زر التصغير
-decreaseButton.addEventListener('click', function () {
-    if (fontSize > minFontSize) { // تحقق أن الحجم أكبر من الحد الأدنى
-        fontSize -= 1; // تقليل الحجم
-        elements.forEach(function (el) {
-            el.style.setProperty('font-size', `${fontSize}px`, 'important');
-        });
-    }
-});
+    // عند النقر على زر التصغير
+    decreaseButton.addEventListener('click', function () {
+        if (fontSize > minFontSize) { // تحقق أن الحجم أكبر من الحد الأدنى
+            fontSize -= 1; // تقليل الحجم
+            elements.forEach(function (el) {
+                el.style.setProperty('font-size', `${fontSize}px`, 'important');
+            });
+        }
+    });
+}
 
 
 const studies = document.querySelectorAll(".study-item"); // جميع المواضيع
@@ -274,6 +286,12 @@ let startIndex = 0;
 
 // دالة لتحديث العرض
 function updateStudies() {
+    // إذا ما في عناصر، نخرج
+    if (!studies || studies.length === 0) {
+        console.warn("⚠️ لا يوجد عناصر في studies");
+        return;
+    }
+
     // إخفاء جميع المواضيع
     studies.forEach((item) => item.classList.remove("active"));
 
@@ -320,6 +338,10 @@ window.onscroll = function () {
 };
 
 function updateProgressBar() {
+    const bar = document.getElementById('progress-bar');
+    if (!bar) {
+        return; // ما في progress bar → نخرج
+    }
     // حساب الارتفاع الكلي للمحتوى
     const scrollTop = document.documentElement.scrollTop || document.body.scrollTop;
     const scrollHeight = document.documentElement.scrollHeight || document.body.scrollHeight;
