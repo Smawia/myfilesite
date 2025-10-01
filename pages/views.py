@@ -1114,6 +1114,12 @@ def motion_graphics(request):
             "date": "2025-09-22",
             "subject": "لماذا تفشل دول غنية وتنجح دول بلا موارد؟"
         },
+        {
+            "url": "/studies/6/",
+            "video": "https://youtu.be/lZsi4SgiArk",
+            "date": "2025-10-1",
+            "subject": "رحلة الإصلاح الإداري في المملكة المتحدة: من التحديات إلى الإنجازات"
+        },
         
     ]
 
