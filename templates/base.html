@@ -44,6 +44,8 @@
 
     <link rel="preload" href="{% static 'style/all.min.css' %}?v={{ static_version }}" as="style" onload="this.onload=null;this.rel='stylesheet'">
     <link rel="preload" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/lite-youtube-embed/src/lite-yt-embed.css" />
+
 
     <!-- 📌 دعم للمتصفحات القديمة -->
     <noscript>
@@ -61,6 +63,11 @@
     {% block content %}
     {% endblock %}
     {% include 'partials/_footer.html' %}
+    <!-- Swiper JS -->
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/lite-youtube-embed/src/lite-yt-embed.js"></script>
+
     <script src="{% static 'JS/js.js' %}?v={{ static_version }}" defer></script>
     <script type="application/ld+json">
         {

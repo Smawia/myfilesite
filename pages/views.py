@@ -1121,7 +1121,7 @@ def motion_graphics(request):
     for item in issue_one:
         if 'youtu.be' in item['video']:
             video_id = item['video'].split('/')[-1].split('?')[0]
-            item['video'] = f"https://www.youtube.com/embed/{video_id}?enablejsapi=1"
+            item['video'] = video_id
 
     query = request.GET.get("q", "")
     return render(request, "pages/motion_graphics.html", {
