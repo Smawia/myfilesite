@@ -288,7 +288,7 @@ let startIndex = 0;
 function updateStudies() {
     // إذا ما في عناصر، نخرج
     if (!studies || studies.length === 0) {
-        console.warn("⚠️ لا يوجد عناصر في studies");
+        // console.warn("⚠️ لا يوجد عناصر في studies");
         return;
     }
 
@@ -354,3 +354,126 @@ function updateProgressBar() {
     document.getElementById('progress-bar').style.width = scrolled + "%";
 }
 
+// nav page
+ document.addEventListener('DOMContentLoaded', function () {
+        const toggleButton = document.getElementById('toggleMode');
+        const body = document.body;
+        const firstPage = document.querySelector('.first-page');
+        const modeIcon = document.getElementById('modeIcon');
+        const contactLinks = document.querySelectorAll('.contactus a');
+
+        // مسارات الصور باستخدام Django static
+        const lightModeImg = modeIcon.dataset.light;
+        const darkModeImg = modeIcon.dataset.dark;
+
+
+        // تحديد الوضع الافتراضي كـ light mode إذا لم يختر المستخدم وضعًا مسبقًا
+        let savedMode = localStorage.getItem('theme');
+        if (!savedMode) {
+            savedMode = 'light-mode'; // الوضع الافتراضي هو الفاتح
+            localStorage.setItem('theme', savedMode);
+        }
+
+        // تطبيق الوضع المحفوظ مع عكس الصور
+        if (savedMode === 'dark-mode') {
+            body.classList.add('dark-mode');
+            if (firstPage) firstPage.classList.add('dark-mode');
+            contactLinks.forEach(link => link.classList.add('dark-mode'));
+            modeIcon.src = lightModeImg; // عرض أيقونة الوضع الفاتح
+        } else {
+            body.classList.remove('dark-mode');
+            modeIcon.src = darkModeImg; // عرض أيقونة الوضع الليلي
+            contactLinks.forEach(link => link.classList.remove('dark-mode'));
+        }
+
+        // تبديل الوضع عند النقر على الزر مع عكس الصور
+        toggleButton.addEventListener('click', function () {
+            if (body.classList.contains('dark-mode')) {
+                // العودة للوضع الفاتح
+                body.classList.remove('dark-mode');
+                if (firstPage) firstPage.classList.remove('dark-mode');
+                contactLinks.forEach(link => link.classList.remove('dark-mode'));
+                localStorage.setItem('theme', 'light-mode');
+                modeIcon.src = darkModeImg; // إظهار أيقونة الوضع الليلي
+            } else {
+                // الانتقال إلى الوضع الليلي
+                body.classList.add('dark-mode');
+                if (firstPage) firstPage.classList.add('dark-mode');
+                contactLinks.forEach(link => link.classList.add('dark-mode'));
+                localStorage.setItem('theme', 'dark-mode');
+                modeIcon.src = lightModeImg; // إظهار أيقونة الوضع الفاتح
+            }
+        });
+
+
+
+        let bar = document.querySelector(".toggle-menu");
+        let aside_bar = document.querySelector('.aside');
+        bar.onclick = function () {
+            // إذا كان الـ aside يحتوي على الكلاس "show"، نقوم بإضافته الكلاس "hide" لبدء الانسحاب
+            if (aside_bar.classList.contains('show')) {
+                aside_bar.classList.add('hide');
+                setTimeout(function() {
+                    aside_bar.classList.remove('show', 'hide'); // إزالة الكلاس بعد الانتقال
+                }, 900);  // تأخير إزالة الكلاسات بنفس وقت الانتقال
+            } else {
+                // إذا لم يكن الـ aside يحتوي على الكلاس "show"، نقوم بإضافته لإظهاره
+                aside_bar.classList.add('show');
+            }
+        }
+        
+        document.body.addEventListener("click", function (e) {
+            // إذا تم النقر على شيء غير الأيقونة أو الـ aside، نقوم بإخفاء الـ aside
+            if (!e.target.classList.contains('toggle-menu') && !e.target.classList.contains('phone') && !e.target.closest('.aside')) {
+                aside_bar.classList.add('hide');
+                setTimeout(function() {
+                    aside_bar.classList.remove('show', 'hide');
+                }, 900); // نفس التأخير
+            }
+        });
+    });
+    document.addEventListener("scroll", () => {
+        const header = document.querySelector(".header-container");
+        if (window.scrollY > 50) {
+            header.classList.add("scrolled");
+        } else {
+            header.classList.remove("scrolled");
+        }
+    });
+    
+   document.addEventListener('DOMContentLoaded', () => {
+    const triggers = document.querySelectorAll('.base-li.aside-base-li');
+
+    function animateHeight(el, to, duration = 150) {
+        if (!el) return;
+
+        let from = parseFloat(getComputedStyle(el).height);
+        if (isNaN(from)) from = 0;
+
+        const start = performance.now();
+
+        const tick = (now) => {
+            const p = Math.min((now - start) / duration, 1);
+            const current = from + (to - from) * p;
+            el.style.height = current + 'px';
+            if (p < 1) requestAnimationFrame(tick);
+        };
+        requestAnimationFrame(tick);
+    }
+
+    triggers.forEach(trigger => {
+        const list = trigger.querySelector('.nested-list');
+        if (!list) return;
+
+        list.style.height = '0px';
+        list.style.overflow = 'hidden';
+
+        trigger.addEventListener('mouseenter', () => {
+            animateHeight(list, list.scrollHeight);
+        });
+
+        trigger.addEventListener('mouseleave', () => {
+            animateHeight(list, 0);
+        });
+    });
+});

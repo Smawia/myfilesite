@@ -20,7 +20,10 @@
                                 
                 </div>
                 <button id="toggleMode">
-                    <img id="modeIcon" src="{% static 'imgs/night.svg' %}" alt="Mode Icon">
+                    <img id="modeIcon" 
+                        src="{% static 'imgs/night.svg' %}" 
+                        data-light="{% static 'imgs/light.svg' %}" 
+                        data-dark="{% static 'imgs/night.svg' %}" />
                 </button>
             </div>  
             
@@ -262,7 +265,7 @@
     </div>
 </div>
 <!-- end header -->
- <script>
+ <!-- <script>
     document.addEventListener('DOMContentLoaded', function () {
         const toggleButton = document.getElementById('toggleMode');
         const body = document.body;
@@ -384,4 +387,4 @@
         });
     });
 });
- </script>
+ </script> -->
