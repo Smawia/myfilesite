@@ -11,24 +11,18 @@
     <div class="show-all-studies grid-container">
         {% for data in issue_one %}
         <div class="video-card">
-            <!-- الفيديو أو الصورة -->
-            <div class="video-thumbnail">
-                <lite-youtube videoid="{{ data.video }}" style="width:100%; height:200px;"></lite-youtube>
-            </div>
-            
-            <!-- النص -->
-            <!-- <a href="{{ data.url }}"> -->
-                <div class="study-text-info study-text-info-2">
-                    <span>{{ data.date }}</span>
-                    <p>{{ data.subject }}</p>
+            <div class="yt-container" data-id="{{ data.video }}" id="yt-{{ forloop.counter }}">
+                <div class="yt-thumb"
+                    style="background-image:url('https://img.youtube.com/vi/{{ data.video }}/hqdefault.jpg')">
+                    <div class="yt-play"></div>
                 </div>
-            <!-- </a> -->
+            </div>
+            <div class="study-text-info study-text-info-2">
+                <span>{{ data.date }}</span>
+                <p>{{ data.subject }}</p>
+            </div>
         </div>
         {% endfor %}
-        
-        {% if not issue_one %}
-        <p class="no-results">لم يتم العثور على نتائج تطابق بحثك ({{query}}).</p>
-        {% endif %}
     </div>
 </div>
 
@@ -72,48 +66,107 @@
         box-shadow: none;
     }
 }
+
+.yt-container {
+    position: relative;
+    width: 100%;
+    height: 200px;
+    background: #000;
+    cursor: pointer;
+    overflow: hidden;
+}
+
+.yt-thumb {
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+
+/* 🎯 زر التشغيل بنفس شكل YouTube */
+.yt-play {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 68px;
+    height: 48px;
+    background-color: rgba(0, 0, 0, 0.6);
+    border-radius: 12px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.yt-play::before {
+    content: '';
+    position: absolute;
+    left: 26px;
+    top: 12px;
+    width: 0;
+    height: 0;
+    border-left: 16px solid white;
+    border-top: 12px solid transparent;
+    border-bottom: 12px solid transparent;
+}
+
+.yt-container:hover .yt-play {
+    background-color: rgba(255, 0, 51, 1);
+}
 </style>
 
 <!-- YouTube Iframe API -->
 <script src="https://www.youtube.com/iframe_api"></script>
 <script>
-document.addEventListener("DOMContentLoaded", function() {
-    // HTML5 videos
-    const htmlVideos = document.querySelectorAll('.video-thumbnail video');
-    // YouTube iframes
-    const allIframes = document.querySelectorAll('.youtube-video');
-    let ytPlayers = [];
+    let players = [];
 
-    // تهيئة YouTube Players
-    window.onYouTubeIframeAPIReady = function() {
-        allIframes.forEach((iframe, index) => {
-            let player = new YT.Player(iframe, {
-                events: {
-                    'onStateChange': function(event) {
-                        if(event.data === YT.PlayerState.PLAYING) {
-                            // إيقاف كل الفيديوهات الأخرى
-                            ytPlayers.forEach((p, i) => {
-                                if(i !== index) p.pauseVideo();
-                            });
-                            htmlVideos.forEach(v => v.pause());
-                        }
+    document.addEventListener("DOMContentLoaded", function () {
+        const containers = document.querySelectorAll(".yt-container");
+
+        containers.forEach((el, index) => {
+            el.addEventListener("click", function () {
+                const videoId = el.dataset.id;
+
+                // إزالة الصورة ووضع iframe مكانها
+                el.innerHTML = `<iframe
+                    src="https://www.youtube.com/embed/${videoId}?autoplay=1&rel=0"
+                    frameborder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                    allowfullscreen
+                    style="width:100%; height:100%; border-radius:10px;"
+                ></iframe>`;
+
+                const iframe = el.querySelector("iframe");
+
+                // إنشاء كائن المشغل
+                iframe.onload = () => {
+                    if (!players[index]) {
+                        players[index] = new YT.Player(iframe, {
+                            events: {
+                                onStateChange: (event) => {
+                                    if (event.data === YT.PlayerState.PLAYING) {
+                                        players.forEach((p, i) => {
+                                            if (i !== index && p && typeof p.pauseVideo === "function") {
+                                                p.pauseVideo();
+                                            }
+                                        });
+                                    }
+                                }
+                            }
+                        });
                     }
-                }
-            });
-            ytPlayers.push(player);
-        });
-    };
-
-    // HTML5 video control
-    htmlVideos.forEach(video => {
-        video.addEventListener('play', () => {
-            htmlVideos.forEach(v => {
-                if(v !== video) v.pause();
-            });
-            ytPlayers.forEach(p => p.pauseVideo());
+                };
+            }, { once: true });
         });
     });
-});
+
+    // ✅ تحذير للمطور فقط
+    if (location.protocol !== 'https:' && location.hostname !== 'localhost') {
+        console.warn("⚠️ يُفضل تشغيل الموقع عبر HTTPS أو localhost لتفادي خطأ 153");
+    }
 </script>
 
 {% endblock %}

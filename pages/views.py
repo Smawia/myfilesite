@@ -1085,22 +1085,22 @@ def social_health_insurance_in_yemen(request):
 def motion_graphics(request):
     issue_one = [
         {
-            "url": "/studies/1/",
-            "video": "https://youtu.be/QjvCn5TE5nQ",
-            "date": "2025-09-14",
-            "subject": "كيف هزمت بعض الدول الجفاف والعطش؟ دروس وتجارب ملهمة"
+            "url": "/studies/7/",
+            "video": "https://youtu.be/2Goy5n_CZgI",
+            "date": "2025-10-4",
+            "subject": "كيف نجحت كندا في تجاوز عجز الموازنة؟ تجربة المراجعة البرنامجية"
         },
         {
-            "url": "/studies/2/",
-            "video": "https://youtu.be/kB3LgcKJtik",
-            "date": "2025-09-16",
-            "subject": "كيف انتقلت هولندا من المجاعة إلى قوة تصدير زراعي؟"
+            "url": "/studies/6/",
+            "video": "https://youtu.be/lZsi4SgiArk",
+            "date": "2025-10-1",
+            "subject": "رحلة الإصلاح الإداري في المملكة المتحدة: من التحديات إلى الإنجازات"
         },
         {
-            "url": "/studies/3/",
-            "video": "https://youtu.be/zod4jUphBr8",
-            "date": "2025-09-18",
-            "subject": "اليابان من الدمار إلى المعجزة الاقتصادية"
+            "url": "/studies/5/",
+            "video": "https://youtu.be/5JrQF9GTNYY",
+            "date": "2025-09-22",
+            "subject": "هل الثروة نعمة أم نقمة؟"
         },
         {
             "url": "/studies/4/",
@@ -1109,18 +1109,23 @@ def motion_graphics(request):
             "subject": "صناعة السيارات في المغرب"
         },
         {
-            "url": "/studies/5/",
-            "video": "https://youtu.be/5JrQF9GTNYY",
-            "date": "2025-09-22",
-            "subject": "لماذا تفشل دول غنية وتنجح دول بلا موارد؟"
+            "url": "/studies/3/",
+            "video": "https://youtu.be/zod4jUphBr8",
+            "date": "2025-09-18",
+            "subject": "اليابان من الدمار إلى المعجزة الاقتصادية"
+        }, 
+        {
+            "url": "/studies/2/",
+            "video": "https://youtu.be/kB3LgcKJtik",
+            "date": "2025-09-16",
+            "subject": "كيف انتقلت هولندا من المجاعة إلى قوة تصدير زراعي؟"
         },
         {
-            "url": "/studies/6/",
-            "video": "https://youtu.be/lZsi4SgiArk",
-            "date": "2025-10-1",
-            "subject": "رحلة الإصلاح الإداري في المملكة المتحدة: من التحديات إلى الإنجازات"
+            "url": "/studies/1/",
+            "video": "https://youtu.be/QjvCn5TE5nQ",
+            "date": "2025-09-14",
+            "subject": "كيف هزمت بعض الدول الجفاف والعطش؟ دروس وتجارب ملهمة"
         },
-        
     ]
 
     # تحويل الروابط إلى embed
