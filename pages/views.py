@@ -99,9 +99,14 @@ def studies(request):
         {'subject': 'التأمين الصحي الاجتماعي في اليمن', 'url': 'SocialHealthInsuranceInYemen', 'image': 'Journal-10.jpg', 'date': '15 يونيو  2025', 'from_db': False},   
     ]
 
+    issue_three = [
+        {'subject': 'أثر الازدواج الوظيفي للقيادة الإدارية على جودة اتخاذ القرار والعمل المؤسسي', 'url': 'DualFunctionalForAdministrative', 'image': 'Journal-11.jpg', 'date': '25 سبتمبر 2025', 'from_db': False},
+        {'subject': 'التعليم الفني والتدريب المهني في اليمن', 'url': 'TechnicalEducationAndVocationalTrainingInYemen', 'image': 'Journal-12.jpg', 'date': '25 سبتمبر 2025', 'from_db': False},
+    ]
+
     # إضافة القوائم الثابتة بعد البحث فيها
     if query:
-        for item in issue_one + issue_two:
+        for item in issue_one + issue_two + issue_three:
             if not query or query in item['subject']:
                 combined_results.append({
                     'subject': item['subject'],
@@ -1045,9 +1050,15 @@ def journal_studies(request):
         {'subject': 'التأمين الصحي الاجتماعي في اليمن', 'url': 'SocialHealthInsuranceInYemen', 'image': 'imgs/Journal-10.jpg', 'date': '15 يونيو  2025'},   
     ]
 
+    issue_three = [
+        {'subject': 'أثر الازدواج الوظيفي للقيادة الإدارية على جودة اتخاذ القرار والعمل المؤسسي', 'url': 'DualFunctionalForAdministrative', 'image': 'imgs/Journal-11.jpg', 'date': '25 سبتمبر 2025'},
+        {'subject': 'التعليم الفني والتدريب المهني في اليمن', 'url': 'TechnicalEducationAndVocationalTrainingInYemen', 'image': 'imgs/Journal-12.jpg', 'date': '25 سبتمبر 2025'},
+    ]
+
     context = {
         'issue_one': issue_one,
         'issue_two': issue_two,
+        'issue_three': issue_three,
     }
     return render(request,'pages/journal_studies.html',context)
 
@@ -1081,7 +1092,11 @@ def effectiveness_of_the_judicial_and_oversight_system_in_yemen(request):
 def social_health_insurance_in_yemen(request):
     return render(request, 'pages/social_health_insurance_in_yemen.html')
 
+def dual_functional_for_administrative(request):
+    return render(request, 'pages/dual_functional_for_administrative.html')
 
+def technical_education_and_vocational_training_in_yemen(request):
+    return render(request, 'pages/technical_education_and_vocational_training_in_yemen.html')
 def motion_graphics(request):
     issue_one = [
         {
