@@ -42,13 +42,13 @@ def download_or_view_file(request):
     return serve_pdf(request, 'Future Vision for Administrative Reform.pdf')
 
 def download_or_view_patrols(request):
-    return serve_pdf(request, 'Osus-2025-03-Issue.pdf')
+    return serve_pdf(request, 'Osus-(Vol.1)-01.pdf')
 
 def download_or_view_second_ossus(request):
-    return serve_pdf(request, 'Second-Osus-2025-06-Issue.pdf')
+    return serve_pdf(request, 'Osus-(Vol.1)-02.pdf')
 
 def download_or_view_third_ossus(request):
-    return serve_pdf(request, 'Third-Osus-2025-09-Issue.pdf')
+    return serve_pdf(request, 'Osus-(Vol.1)-03.pdf')
 
 def view_osus_content(requst):
     return serve_pdf(requst, 'osus-2025-03-issue-contents.pdf')
@@ -102,6 +102,10 @@ def studies(request):
     issue_three = [
         {'subject': 'أثر الازدواج الوظيفي للقيادة الإدارية على جودة اتخاذ القرار والعمل المؤسسي', 'url': 'DualFunctionalForAdministrative', 'image': 'Journal-11.jpg', 'date': '25 سبتمبر 2025', 'from_db': False},
         {'subject': 'التعليم الفني والتدريب المهني في اليمن', 'url': 'TechnicalEducationAndVocationalTrainingInYemen', 'image': 'Journal-12.jpg', 'date': '25 سبتمبر 2025', 'from_db': False},
+        {'subject': 'التداخل والتجاوز في المهام والاختصاصات في الإدارة العامة باليمن', 'url': 'OverlapAndEncroachmentInTasksAndCompetencies', 'image': 'Journal-13.jpg', 'date': '25 سبتمبر 2025', 'from_db': False},
+        {'subject': 'المنظومة العدلية', 'url': 'TheJudicialSystem', 'image': 'Journal-14.jpg', 'date': '25 سبتمبر 2025', 'from_db': False},
+        {'subject': 'دور منظمات المجتمع المدني في التنمية المحلية', 'url': 'TheRoleOfCivilSocietyOrganizationsInLocalDevelopment', 'image': 'Journal-15.jpg', 'date': '25 سبتمبر 2025', 'from_db': False},
+        {'subject': 'أي دور للتعليم العالي بالمغرب في التنمية الاقتصادية', 'url': 'MoroccanHigherEducationInEconomicDevelopment', 'image': 'Journal-16.jpg', 'date': '25 2025 سبتمبر', 'from_db': False}
     ]
 
     # إضافة القوائم الثابتة بعد البحث فيها
@@ -1053,6 +1057,10 @@ def journal_studies(request):
     issue_three = [
         {'subject': 'أثر الازدواج الوظيفي للقيادة الإدارية على جودة اتخاذ القرار والعمل المؤسسي', 'url': 'DualFunctionalForAdministrative', 'image': 'imgs/Journal-11.jpg', 'date': '25 سبتمبر 2025'},
         {'subject': 'التعليم الفني والتدريب المهني في اليمن', 'url': 'TechnicalEducationAndVocationalTrainingInYemen', 'image': 'imgs/Journal-12.jpg', 'date': '25 سبتمبر 2025'},
+        {'subject': 'التداخل والتجاوز في المهام والاختصاصات في الإدارة العامة باليمن', 'url': 'OverlapAndEncroachmentInTasksAndCompetencies', 'image': 'imgs/Journal-13.jpg', 'date': '25 سبتمبر 2025'},
+        {'subject': 'المنظومة العدلية', 'url': 'TheJudicialSystem', 'image': 'imgs/Journal-14.jpg', 'date': '25 سبتمبر 2025'},
+        {'subject': 'دور منظمات المجتمع المدني في التنمية المحلية', 'url': 'TheRoleOfCivilSocietyOrganizationsInLocalDevelopment', 'image': 'imgs/Journal-15.jpg', 'date': '25 سبتمبر 2025'},
+        {'subject': 'أي دور للتعليم العالي بالمغرب في التنمية الاقتصادية', 'url': 'MoroccanHigherEducationInEconomicDevelopment', 'image': 'imgs/Journal-16.jpg', 'date': '25 2025 سبتمبر'}
     ]
 
     context = {
@@ -1097,6 +1105,19 @@ def dual_functional_for_administrative(request):
 
 def technical_education_and_vocational_training_in_yemen(request):
     return render(request, 'pages/technical_education_and_vocational_training_in_yemen.html')
+
+def overlap_and_encroachment_in_tasks_and_competencies(request):
+    return render(request, 'pages/overlap_and_encroachment_in_tasks_and_competencies.html')
+
+def the_judicial_system(request):
+    return render(request, 'pages/the_judicial_system.html')
+
+def civil_society_organizations(request):
+    return render(request, 'pages/the_role_of_civil_Society_organizations_in_local_development.html')
+
+def moroccan_higher_education_in_economic_development(request):
+    return render(request, 'pages/moroccan_higher_education_in_economic_development.html')
+
 def motion_graphics(request):
     issue_one = [
         {

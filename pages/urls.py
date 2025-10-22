@@ -53,6 +53,10 @@ urlpatterns = [
     path('journals/osus/articles/SocialHealthInsuranceInYemen', views.social_health_insurance_in_yemen, name='social_health_insurance_in_yemen'),
     path('journals/osus/articles/DualFunctionalForAdministrative',views.dual_functional_for_administrative,name='dual_functional_for_administrative'),
     path('journals/osus/articles/TechnicalEducationAndVocationalTrainingInYemen',views.technical_education_and_vocational_training_in_yemen,name='technical_education_and_vocational_training_in_yemen'),
+    path('journals/osus/articles/OverlapAndEncroachmentInTasksAndCompetencies',views.overlap_and_encroachment_in_tasks_and_competencies,name='overlap_and_encroachment_in_tasks_and_competencies'),
+    path('journals/osus/articles/TheJudicialSystem',views.the_judicial_system,name='the_judicial_system'),
+    path('journals/osus/articles/TheRoleOfCivilSocietyOrganizationsInLocalDevelopment',views.civil_society_organizations,name='civil_society_organizations'),
+    path('journals/osus/articles/MoroccanHigherEducationInEconomicDevelopment',views.moroccan_higher_education_in_economic_development,name='moroccan_higher_education_in_economic_development'),
 
     # new studies
     path('articles/CurrentEconomicSituation',views.current_economic_situation,name='current_economic_situation'),
@@ -73,9 +77,9 @@ urlpatterns = [
     path('articles/ImplementingEgovernmentInYemen',views.implementing_egovernment_in_Yemen,name='implementing_e-government_in_Yemen'),
     path('articles/FutureEGovernmentYemen',views.future_of_eGovernment_Yemen,name='future_of_eGovernment_Yemen'),
     path('download/', views.download_or_view_file, name='download_or_view_file'),
-    path('publications/journals/osus/osus-2025-03-issue.pdf', views.download_or_view_patrols, name='download_or_view_patrols'),
-    path('publications/journals/osus/Second-Osus-2025-06-Issue.pdf', views.download_or_view_second_ossus, name='download_or_view_second_ossus'),
-    path('publications/journals/osus/Third-Osus-2025-09-Issue.pdf', views.download_or_view_third_ossus, name='download_or_view_third_ossus'),
+    path('publications/journals/osus/osus-(vol.1)-01.pdf', views.download_or_view_patrols, name='download_or_view_patrols'),
+    path('publications/journals/osus/Osus-(Vol.1)-02.pdf', views.download_or_view_second_ossus, name='download_or_view_second_ossus'),
+    path('publications/journals/osus/Osus-(Vol.1)-03.pdf', views.download_or_view_third_ossus, name='download_or_view_third_ossus'),
     path('publications', views.show_publications, name='publications'),
     path('publications/Journals/Osus', views.osus_journals, name='osus'),
     path('publications/Journals/Osus/osus-2025-03-issue-contents.pdf', views.view_osus_content, name='osus-content'),
