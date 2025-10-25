@@ -59,7 +59,27 @@ def view_osus_third_content(requst):
     return serve_pdf(requst, 'third-osus-2025-09-issue-contents.pdf')
 
 def index(request):
-    return render(request,'pages/index.html')
+    videos = [
+        {
+            "video": "QjvCn5TE5nQ",
+            "date": "2025-09-14",
+            "subject": "كيف هزمت بعض الدول الجفاف والعطش؟ دروس وتجارب ملهمة"
+        },
+        {
+            "url": "/studies/2/",
+            "video": "kB3LgcKJtik",
+            "date": "2025-09-16",
+            "subject": "كيف انتقلت هولندا من المجاعة إلى قوة تصدير زراعي؟"
+        },
+        {
+            "url": "/studies/3/",
+            "video": "zod4jUphBr8",
+            "date": "2025-09-18",
+            "subject": "اليابان من الدمار إلى المعجزة الاقتصادية"
+        },
+    ]
+
+    return render(request,'pages/index.html',{"data": videos})
 
 def about(request):
     return render(request,'pages/about.html')

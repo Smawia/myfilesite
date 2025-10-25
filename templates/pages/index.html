@@ -655,19 +655,27 @@
 <div class="container index-articles all-studies main-motion">
     <h1 class="spe-h1">أُسس موشن جرافيك</h1>
 </div>
-<div class="container index-articles all-art motion-container">
+<!-- <div class="container index-articles all-art motion-container">
     <div class="show-all-studies grid-container show-all-motion" id="videoContainer">
-        <!-- video 1 -->
+       
         <div class="video-card">
             <div class="video-thumbnail">
-                <lite-youtube videoid="QjvCn5TE5nQ" style="width:100%; height:200px;"></lite-youtube>
+                <lite-youtube 
+                    videoid="QjvCn5TE5nQ"
+                    style="width:100%; height:200px;"
+                    params="rel=0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                    referrerpolicy="strict-origin-when-cross-origin"
+                    title="YouTube video player"
+                    autoplay muted
+                ></lite-youtube>
             </div>
             <div class="study-text-info study-text-info-2">
                 <span>2025-09-14</span>
                 <p>كيف هزمت بعض الدول الجفاف والعطش؟ دروس وتجارب ملهمة</p>
             </div>
         </div>
-        <!-- video 2 -->
+      
         <div class="video-card">
             <div class="video-thumbnail">
                 <lite-youtube videoid="kB3LgcKJtik" style="width:100%; height:200px;"></lite-youtube>
@@ -677,7 +685,7 @@
                 <p>كيف انتقلت هولندا من المجاعة إلى قوة تصدير زراعي؟</p>
             </div>
         </div>
-        <!-- video 3 -->
+
         <div class="video-card">
             <div class="video-thumbnail">
                 <lite-youtube videoid="zod4jUphBr8" style="width:100%; height:200px;"></lite-youtube>
@@ -687,6 +695,26 @@
                 <p>اليابان من الدمار إلى المعجزة الاقتصادية</p>
             </div>
         </div>
+    </div>
+    <a href="{% url 'motion_graphics' %}" class="show-all">عرض المزيد</a>
+</div> -->
+<div class="container index-articles all-art motion-container">
+    <div class="show-all-studies grid-container show-all-motion" id="videoContainer">
+        <!-- video 1 -->
+        {% for data in data %}
+        <div class="video-card">
+            <div class="yt-container" data-id="{{ data.video }}" id="yt-{{ forloop.counter }}">
+                <div class="yt-thumb"
+                    style="background-image:url('https://img.youtube.com/vi/{{ data.video }}/hqdefault.jpg')">
+                    <div class="yt-play"></div>
+                </div>
+            </div>
+            <div class="study-text-info study-text-info-2">
+                <span>{{ data.date }}</span>
+                <p>{{ data.subject }}</p>
+            </div>
+        </div>
+        {% endfor %}
     </div>
     <a href="{% url 'motion_graphics' %}" class="show-all">عرض المزيد</a>
 </div>
