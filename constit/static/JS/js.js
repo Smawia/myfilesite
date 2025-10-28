@@ -63,21 +63,14 @@ document.addEventListener("DOMContentLoaded", function () {
 
     // تعريف الـ Swiper لكن بدون autoplay
     var swiper = new Swiper('.swiper-container', {
-        effect: 'coverflow',
+        effect: 'slide',
         grabCursor: true,
-        centeredSlides: true,
-        slidesPerView: 'auto',
-        initialSlide: 0,
+        centeredSlides: true, // ✅ مهم لظهور الشريحة الوسطى كاملة
+        slidesPerView: 'auto', // ✅ يسمح بعرض جزئي للشرائح
         loop: true,
-        speed: 2000,
-        coverflowEffect: {
-            rotate: 50,
-            stretch: 0,
-            depth: 100,
-            modifier: 1,
-            slideShadows: false
-        },
-        autoplay: false, // نوقف التشغيل التلقائي,
+        speed: 1200,
+        spaceBetween: 10,
+        autoplay: false,
         pagination: {
             el: '.swiper-pagination',
             clickable: true
@@ -86,25 +79,24 @@ document.addEventListener("DOMContentLoaded", function () {
             nextEl: '.swiper-button-next',
             prevEl: '.swiper-button-prev'
         },
-        // 🔹 هنا نتحكم في القيم حسب حجم الشاشة
         breakpoints: {
-            320: { // شاشات صغيرة (موبايل)
-                coverflowEffect: {
-                    stretch: 100
-                }
+            320: { // موبايل
+                slidesPerView: 'auto',
+                spaceBetween: -65
             },
-            768: { // شاشات متوسطة (تابلت)
-                coverflowEffect: {
-                    stretch: -30
-                }
+            575: {
+                slidesPerView: 'auto',
+                spaceBetween: 40
             },
-            1024: { // شاشات كبيرة (لابتوب/ديسكتوب)
-                coverflowEffect: {
-                    stretch: -60
-                }
+            768: { // تابلت
+                slidesPerView: 2,
+                spaceBetween: 70
+            },
+            1024: { // ديسكتوب
+                slidesPerView: 3,
+                spaceBetween: 70
             }
         }
-
     });
     // بدء التشغيل التلقائي بعد تحميل الصفحة
     window.addEventListener("load", function () {
