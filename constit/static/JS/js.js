@@ -470,49 +470,85 @@ function updateProgressBar() {
     });
 });
 
-let players = [];
+// let players = [];
+
+// document.addEventListener("DOMContentLoaded", function () {
+//     const containers = document.querySelectorAll(".yt-container");
+
+//     containers.forEach((el, index) => {
+//         el.addEventListener("click", function () {
+//             const videoId = el.dataset.id;
+
+//             // إزالة الصورة ووضع iframe مكانها
+//             el.innerHTML = `<iframe
+//                 src="https://www.youtube.com/embed/${videoId}?autoplay=1&rel=0"
+//                 frameborder="0"
+//                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+//                 allowfullscreen
+//                 style="width:100%; height:100%; border-radius:10px;"
+//             ></iframe>`;
+
+//             const iframe = el.querySelector("iframe");
+
+//             // إنشاء كائن المشغل
+//             iframe.onload = () => {
+//                 if (!players[index]) {
+//                     players[index] = new YT.Player(iframe, {
+//                         events: {
+//                             onStateChange: (event) => {
+//                                 if (event.data === YT.PlayerState.PLAYING) {
+//                                     players.forEach((p, i) => {
+//                                         if (i !== index && p && typeof p.pauseVideo === "function") {
+//                                             p.pauseVideo();
+//                                         }
+//                                     });
+//                                 }
+//                             }
+//                         }
+//                     });
+//                 }
+//             };
+//         }, { once: true });
+//     });
+// });
+
+// // ✅ تحذير للمطور فقط
+// if (location.protocol !== 'https:' && location.hostname !== 'localhost') {
+//     console.warn("⚠️ يُفضل تشغيل الموقع عبر HTTPS أو localhost لتفادي خطأ 153");
+// }
 
 document.addEventListener("DOMContentLoaded", function () {
-    const containers = document.querySelectorAll(".yt-container");
+    let players = [];
+    
+    // استدعاء API الرسمية
+    function onYouTubeIframeAPIReady() {
+        const containers = document.querySelectorAll(".yt-container");
+        containers.forEach((el, index) => {
+            el.addEventListener("click", function () {
+                const videoId = el.dataset.id;
 
-    containers.forEach((el, index) => {
-        el.addEventListener("click", function () {
-            const videoId = el.dataset.id;
-
-            // إزالة الصورة ووضع iframe مكانها
-            el.innerHTML = `<iframe
-                src="https://www.youtube.com/embed/${videoId}?autoplay=1&rel=0"
-                frameborder="0"
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                allowfullscreen
-                style="width:100%; height:100%; border-radius:10px;"
-            ></iframe>`;
-
-            const iframe = el.querySelector("iframe");
-
-            // إنشاء كائن المشغل
-            iframe.onload = () => {
-                if (!players[index]) {
-                    players[index] = new YT.Player(iframe, {
-                        events: {
-                            onStateChange: (event) => {
-                                if (event.data === YT.PlayerState.PLAYING) {
-                                    players.forEach((p, i) => {
-                                        if (i !== index && p && typeof p.pauseVideo === "function") {
-                                            p.pauseVideo();
-                                        }
-                                    });
-                                }
+                el.innerHTML = `<div id="player-${index}"></div>`;
+                players[index] = new YT.Player(`player-${index}`, {
+                    videoId: videoId,
+                    playerVars: {
+                        autoplay: 1,
+                        rel: 0,
+                        modestbranding: 1
+                    },
+                    events: {
+                        onStateChange: (event) => {
+                            if (event.data === YT.PlayerState.PLAYING) {
+                                players.forEach((p, i) => {
+                                    if (i !== index && p && typeof p.pauseVideo === "function") {
+                                        p.pauseVideo();
+                                    }
+                                });
                             }
                         }
-                    });
-                }
-            };
-        }, { once: true });
-    });
+                    }
+                });
+            }, { once: true });
+        });
+    }
+    onYouTubeIframeAPIReady();
 });
-
-// ✅ تحذير للمطور فقط
-if (location.protocol !== 'https:' && location.hostname !== 'localhost') {
-    console.warn("⚠️ يُفضل تشغيل الموقع عبر HTTPS أو localhost لتفادي خطأ 153");
-}

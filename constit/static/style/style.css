@@ -12838,6 +12838,7 @@ span.CharOverride-2 {
     }
 }
 
+/* ✅ شكل الحاوية */
 .yt-container {
     position: relative;
     width: 100%;
@@ -12847,6 +12848,7 @@ span.CharOverride-2 {
     overflow: hidden;
 }
 
+/* ✅ الصورة المصغّرة */
 .yt-thumb {
     width: 100%;
     height: 100%;
@@ -12886,4 +12888,15 @@ span.CharOverride-2 {
 
 .yt-container:hover .yt-play {
     background-color: rgba(255, 0, 51, 1);
+}
+
+/* ✅ لتناسق الـ iframe بعد التشغيل */
+.yt-container iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: none;
+    display: block;
 }
