@@ -28,7 +28,7 @@
     <div class="study-text-info">
         <p class="infograph-title">{{ detail.title }}</p>
         {%if detail.description %}
-            <p class="p-img2">{{ detail.description }}</p>
+            <p class="p-img2 text-align-justify">{{ detail.description }}</p>
         {% endif %}
         <span class="infograph-date">{{ detail.date }}</span>
         <div class="controls">
@@ -628,6 +628,15 @@
                 <div class="study-text-info">
                     <span>20 سبتمبر 2025</span>
                     <p>ماليزيا من دولة زراعية إلى نمر اقتصادي </p>
+                </div>
+            </a>
+        </div>
+        <div class="studies-card infograph-card cardContainer-inside custom-studies-card">
+            <a href="{% url 'infograph_detail'  'Largest_tourism_economies' %}">
+                <img src="{% static 'imgs/Tourism-Economies-I.jpg' %}" alt="إنفوجراف" class="infograph-img">
+                <div class="study-text-info">
+                    <span>3 نوفمبر 2025</span>
+                    <p>أكبر الاقتصادات السياحة في العالم 2024</p>
                 </div>
             </a>
         </div>

@@ -521,7 +521,13 @@ def osus_journals(request):
     return render(request,'pages/osus_journals.html')
 
 def view_infograph(request):
-    infographs = [    
+    infographs = [ 
+        {
+            "title": "أكبر الاقتصادات السياحة في العالم 2024",
+            "slug": "Largest_tourism_economies",
+            "image": "imgs/Tourism-Economies-I.jpg",
+            "date": "3 نوفمبر 2025",
+        },   
         {
             "title": "ماليزيا من دولة زراعية إلى نمر اقتصادي ",
             "slug": "Malaysia_from_an_agricultural_country_to_an_economic_tiger",
@@ -1041,6 +1047,11 @@ def infograph_detail(request, slug):
             'title': 'ماليزيا من دولة زراعية إلى نمر اقتصادي ',
             'date': '20 سبتمبر 2025',
             'image': 'imgs/Malaysia_from_an_agricultural_country_to_an_economic.jpg',
+        },
+        "Largest_tourism_economies": {
+            'title': 'أكبر الاقتصادات السياحة في العالم 2024',
+            'date': '3 نوفمبر 2025',
+            'image': 'imgs/Tourism-Economies-I.jpg',
         },
     }
 
