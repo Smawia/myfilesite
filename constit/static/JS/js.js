@@ -11,6 +11,7 @@ let nav_a = document.querySelectorAll(".nav-a");
 let nav_i = document.querySelectorAll(".arrow");
 let show_refs = document.querySelectorAll(".container > .show-references , .nested-ref > .show-references");
 let all_refs = document.querySelectorAll(".container > .refrences , .nested-ref > .refrences");
+let global_savedMode = localStorage.getItem('theme');
 
 // index page
 document.addEventListener("DOMContentLoaded", function () {
@@ -143,20 +144,37 @@ document.addEventListener("DOMContentLoaded", function () {
         // ناخذ الشرائح المتبقية فقط
         const slice = data.slice(currentIndex, currentIndex + itemsPerPage);
 
-        slice.forEach(item => {
-            const card = document.createElement("div");
-            card.className = "studies-card infograph-card custom-studies-card fade-in"; // أضفنا fade-in
-            card.innerHTML = `
-                <a href="/Infographics/${item.slug}/">
-                    <img src="/static/${item.image}" alt="إنفوجراف" class="infograph-img">
-                    <div class="study-text-info">
-                        <span>${item.date}</span>
-                        <p>${item.title}</p>
-                    </div>
-                </a>
-            `;
-            container.appendChild(card);
-        });
+        if (global_savedMode === 'dark-mode') {
+            slice.forEach(item => {
+                const card = document.createElement("div");
+                card.className = "studies-card infograph-card custom-studies-card fade-in"; // أضفنا fade-in
+                card.innerHTML = `
+                    <a href="/Infographics/${item.slug}/">
+                        <img src="/static/${item.image}" alt="إنفوجراف" class="infograph-img">
+                        <div class="study-text-info dark-mode">
+                            <span>${item.date}</span>
+                            <p>${item.title}</p>
+                        </div>
+                    </a>
+                `;
+                container.appendChild(card);
+            });
+        } else {
+            slice.forEach(item => {
+                const card = document.createElement("div");
+                card.className = "studies-card infograph-card custom-studies-card fade-in"; // أضفنا fade-in
+                card.innerHTML = `
+                    <a href="/Infographics/${item.slug}/">
+                        <img src="/static/${item.image}" alt="إنفوجراف" class="infograph-img">
+                        <div class="study-text-info">
+                            <span>${item.date}</span>
+                            <p>${item.title}</p>
+                        </div>
+                    </a>
+                `;
+                container.appendChild(card);
+            });
+        }
 
         // تحديث المؤشر
         currentIndex += slice.length;
@@ -351,6 +369,10 @@ function updateProgressBar() {
         const toggleButton = document.getElementById('toggleMode');
         const body = document.body;
         const firstPage = document.querySelector('.first-page');
+        const articles = document.querySelectorAll('.all-art');
+        const card = document.querySelectorAll('.card');
+        const daws = document.querySelectorAll('.daw');
+        let studies_text = document.querySelectorAll('.study-text-info');
         const modeIcon = document.getElementById('modeIcon');
         const contactLinks = document.querySelectorAll('.contactus a');
 
@@ -370,6 +392,18 @@ function updateProgressBar() {
         if (savedMode === 'dark-mode') {
             body.classList.add('dark-mode');
             if (firstPage) firstPage.classList.add('dark-mode');
+            if (articles) {
+                articles.forEach(article => article.classList.add('dark-mode'));
+            }
+            if (card) {
+                card.forEach(c => c.classList.add('dark-mode'));
+            }
+            if (daws) {
+                daws.forEach(daw => daw.classList.add('dark-mode'));
+            };
+            if (studies_text) {
+                studies_text.forEach(study => study.classList.add('dark-mode'));
+            }
             contactLinks.forEach(link => link.classList.add('dark-mode'));
             modeIcon.src = lightModeImg; // عرض أيقونة الوضع الفاتح
         } else {
@@ -380,17 +414,28 @@ function updateProgressBar() {
 
         // تبديل الوضع عند النقر على الزر مع عكس الصور
         toggleButton.addEventListener('click', function () {
+            studies_text = document.querySelectorAll('.study-text-info');
             if (body.classList.contains('dark-mode')) {
                 // العودة للوضع الفاتح
                 body.classList.remove('dark-mode');
+                global_savedMode = 'light-mode';
                 if (firstPage) firstPage.classList.remove('dark-mode');
+                if (articles) {articles.forEach(article => article.classList.remove('dark-mode'));}
+                if (card) {card.forEach(c => c.classList.remove('dark-mode'));}
+                if (daws) {daws.forEach(daw => daw.classList.remove('dark-mode'));}
+                if (studies_text) {studies_text.forEach(study => study.classList.remove('dark-mode'));}
                 contactLinks.forEach(link => link.classList.remove('dark-mode'));
                 localStorage.setItem('theme', 'light-mode');
                 modeIcon.src = darkModeImg; // إظهار أيقونة الوضع الليلي
             } else {
                 // الانتقال إلى الوضع الليلي
                 body.classList.add('dark-mode');
+                global_savedMode = 'dark-mode';
                 if (firstPage) firstPage.classList.add('dark-mode');
+                if (articles) {articles.forEach(article => article.classList.add('dark-mode'));}
+                if (card) {card.forEach(c => c.classList.add('dark-mode'));}
+                if (daws) {daws.forEach(daw => daw.classList.add('dark-mode'));}
+                if (studies_text) {studies_text.forEach(study => study.classList.add('dark-mode'));}
                 contactLinks.forEach(link => link.classList.add('dark-mode'));
                 localStorage.setItem('theme', 'dark-mode');
                 modeIcon.src = lightModeImg; // إظهار أيقونة الوضع الفاتح

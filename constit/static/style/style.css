@@ -12900,3 +12900,33 @@ span.CharOverride-2 {
     border: none;
     display: block;
 }
+
+.all-art.dark-mode {
+    color: #ffffff !important;
+    background-color: #121212 !important;
+    box-shadow: 0 0 5px #333 !important;
+}
+    
+.card.dark-mode {
+    color: #ffffff !important;
+    background-color: #121212 !important;
+    /* box-shadow: 0 0 5px #333 !important; */
+}
+
+.card.dark-mode a {
+    color: #ffffff !important;
+}
+
+.daw.dark-mode{
+   color: #ffffff !important;
+   background-color: #121212 !important;
+   box-shadow: 0 0 5px #333 !important;
+}
+
+.daw.dark-mode h1, .daw.dark-mode p, .all-art.dark-mode p{
+   color: #ffffff !important;
+}
+
+.study-text-info.dark-mode{
+    background-color: #121212 !important;
+}
