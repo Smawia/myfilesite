@@ -60,22 +60,23 @@ def view_osus_third_content(requst):
 
 def index(request):
     videos = [
-        {
-            "video": "QjvCn5TE5nQ",
-            "date": "2025-09-14",
-            "subject": "كيف هزمت بعض الدول الجفاف والعطش؟ دروس وتجارب ملهمة"
+         {
+            "url": "/studies/8/",
+            "video": "NGSkykmL_7s",
+            "date": "2025-11-8",
+            "subject": "أبرز تجارب الإصلاح الحكومي العالمية"
         },
         {
-            "url": "/studies/2/",
-            "video": "kB3LgcKJtik",
-            "date": "2025-09-16",
-            "subject": "كيف انتقلت هولندا من المجاعة إلى قوة تصدير زراعي؟"
+            "url": "/studies/7/",
+            "video": "2Goy5n_CZgI",
+            "date": "2025-10-4",
+            "subject": "كيف نجحت كندا في تجاوز عجز الموازنة؟ تجربة المراجعة البرنامجية"
         },
         {
-            "url": "/studies/3/",
-            "video": "zod4jUphBr8",
-            "date": "2025-09-18",
-            "subject": "اليابان من الدمار إلى المعجزة الاقتصادية"
+            "url": "/studies/6/",
+            "video": "lZsi4SgiArk",
+            "date": "2025-10-1",
+            "subject": "رحلة الإصلاح الإداري في المملكة المتحدة: من التحديات إلى الإنجازات"
         },
     ]
 
@@ -1152,6 +1153,12 @@ def moroccan_higher_education_in_economic_development(request):
 def motion_graphics(request):
     issue_one = [
         {
+            "url": "/studies/8/",
+            "video": "https://youtu.be/NGSkykmL_7s",
+            "date": "2025-11-8",
+            "subject": "أبرز تجارب الإصلاح الحكومي العالمية"
+        },
+        {
             "url": "/studies/7/",
             "video": "https://youtu.be/2Goy5n_CZgI",
             "date": "2025-10-4",
@@ -1208,32 +1215,32 @@ def motion_graphics(request):
     })
 
 
-def motion_graphics_main(request):
-    videos = [
-        {
-            "url": "/studies/1/",
-            "video": "https://youtu.be/QjvCn5TE5nQ",
-            "date": "2025-09-14",
-            "subject": "كيف هزمت بعض الدول الجفاف والعطش؟ دروس وتجارب ملهمة"
-        },
-        {
-            "url": "/studies/2/",
-            "video": "https://youtu.be/kB3LgcKJtik",
-            "date": "2025-09-16",
-            "subject": "كيف انتقلت هولندا من المجاعة إلى قوة تصدير زراعي؟"
-        },
-        {
-            "url": "/studies/3/",
-            "video": "https://youtu.be/zod4jUphBr8",
-            "date": "2025-09-18",
-            "subject": "اليابان من الدمار إلى المعجزة الاقتصادية"
-        },
-    ]
+# def motion_graphics_main(request):
+#     videos = [
+#         {
+#             "url": "/studies/1/",
+#             "video": "https://youtu.be/QjvCn5TE5nQ",
+#             "date": "2025-09-14",
+#             "subject": "كيف هزمت بعض الدول الجفاف والعطش؟ دروس وتجارب ملهمة"
+#         },
+#         {
+#             "url": "/studies/2/",
+#             "video": "https://youtu.be/kB3LgcKJtik",
+#             "date": "2025-09-16",
+#             "subject": "كيف انتقلت هولندا من المجاعة إلى قوة تصدير زراعي؟"
+#         },
+#         {
+#             "url": "/studies/3/",
+#             "video": "https://youtu.be/zod4jUphBr8",
+#             "date": "2025-09-18",
+#             "subject": "اليابان من الدمار إلى المعجزة الاقتصادية"
+#         },
+#     ]
 
-    # تحويل الروابط إلى embed
-    for item in videos:
-        if 'youtu.be' in item['video']:
-            video_id = item['video'].split('/')[-1].split('?')[0]
-            item['video'] = f"https://www.youtube.com/embed/{video_id}"
+#     # تحويل الروابط إلى embed
+#     for item in videos:
+#         if 'youtu.be' in item['video']:
+#             video_id = item['video'].split('/')[-1].split('?')[0]
+#             item['video'] = f"https://www.youtube.com/embed/{video_id}"
 
-    return JsonResponse(list(videos), safe=False)
+#     return JsonResponse(list(videos), safe=False)
