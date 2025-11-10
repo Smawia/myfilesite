@@ -3,12 +3,12 @@
 {% block title %}| دراسات أُسس{% endblock %}
 {% block content %}
 <div class="container index-articles all-studies">
-    <h1 class="spe-h1">دراسات أُسس (العدد الأول)</h1>
+    <h1 class="spe-h1">دراسات أُسس (العدد الثالث)</h1>
 </div>
-<div class="container index-articles all-art">
+<div class="container index-articles all-art container-margin">
     
     <div class="show-all-studies">
-        {% for data in issue_one %}
+        {% for data in issue_three %}
         <div class="studies-card show-cards-number">
             <a href="{{ data.url }}">
                 <img src="{% static data.image %}" alt="">
@@ -18,17 +18,13 @@
                     <span>
                         {{ data.date}}
                     </span>
-                    <p>
+                    <p class="card-title">
                         {{ data.subject }}
                     </p>
                 </div>
             </a>
         </div>
         {% endfor %}
-        <!-- عرض رسالة إذا لم يتم العثور على نتائج -->
-    {% if not issue_one %}
-    <p style="text-align: center; font-weight: bold;width: 100%;">لم يتم العثور على نتائج تطابق بحثك ({{query}}).</p>
-    {% endif %}
     </div>
     
 </div>
@@ -56,21 +52,17 @@
             </a>
         </div>
         {% endfor %}
-        <!-- عرض رسالة إذا لم يتم العثور على نتائج -->
-    {% if not issue_two %}
-    <p style="text-align: center; font-weight: bold;width: 100%;">لم يتم العثور على نتائج تطابق بحثك ({{query}}).</p>
-    {% endif %}
     </div>
     
 </div>
 
 <div class="container index-articles all-studies">
-    <h1 class="spe-h1">دراسات أُسس (العدد الثالث)</h1>
+    <h1 class="spe-h1">دراسات أُسس (العدد الأول)</h1>
 </div>
-<div class="container index-articles all-art container-margin">
+<div class="container index-articles all-art">
     
     <div class="show-all-studies">
-        {% for data in issue_three %}
+        {% for data in issue_one %}
         <div class="studies-card show-cards-number">
             <a href="{{ data.url }}">
                 <img src="{% static data.image %}" alt="">
@@ -80,19 +72,14 @@
                     <span>
                         {{ data.date}}
                     </span>
-                    <p class="card-title">
+                    <p>
                         {{ data.subject }}
                     </p>
                 </div>
             </a>
         </div>
         {% endfor %}
-        <!-- عرض رسالة إذا لم يتم العثور على نتائج -->
-    {% if not issue_three %}
-    <p style="text-align: center; font-weight: bold;width: 100%;">لم يتم العثور على نتائج تطابق بحثك ({{query}}).</p>
-    {% endif %}
     </div>
     
 </div>
-
 {% endblock %}
