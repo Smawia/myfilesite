@@ -1071,28 +1071,28 @@ def error_404(request,exception):
 def journal_studies(request):
     context = None
     issue_one = [
-        {'subject': 'اقتصاد السوق الاجتماعي', 'url': 'SocialMarketEconomy', 'image': 'imgs/Journal-01.jpg', 'date': '20 مارس  2025'},
-        {'subject': 'النهضة الزراعية في اليمن', 'url': 'AgriculturalRenaissanceInYemen', 'image': 'imgs/Journal-02.jpg', 'date': '20 مارس  2025'},
-        {'subject': 'النظام التعليمي في اليمن', 'url': 'EducationalSystemInYemen', 'image': 'imgs/Journal-03.jpg', 'date': '20 مارس  2025'},
-        {'subject': 'القضاء في اليمن', 'url': 'JudiciaryInYemen', 'image': 'imgs/Journal-04.jpg', 'date': '20 مارس  2025'},
-        {'subject':'الوظائف في اليمن', 'url': 'JobsInYemen', 'image': 'imgs/Journal-05.jpg', 'date': '20 مارس  2025'},
-        {'subject': 'النظافة وإدارة النفايات الصلبة', 'url': 'HygieneAndSolidWasteManagement', 'image': 'imgs/Journal-06.jpg', 'date': '20 مارس  2025'},
+        {'subject': 'اقتصاد السوق الاجتماعي', 'url': 'SocialMarketEconomy', 'image': 'imgs/Journal-01-index.jpg', 'date': '20 مارس  2025'},
+        {'subject': 'النهضة الزراعية في اليمن', 'url': 'AgriculturalRenaissanceInYemen', 'image': 'imgs/Journal-02-index.jpg', 'date': '20 مارس  2025'},
+        {'subject': 'النظام التعليمي في اليمن', 'url': 'EducationalSystemInYemen', 'image': 'imgs/Journal-03-index.jpg', 'date': '20 مارس  2025'},
+        {'subject': 'القضاء في اليمن', 'url': 'JudiciaryInYemen', 'image': 'imgs/Journal-04-index.jpg', 'date': '20 مارس  2025'},
+        {'subject':'الوظائف في اليمن', 'url': 'JobsInYemen', 'image': 'imgs/Journal-05-index.jpg', 'date': '20 مارس  2025'},
+        {'subject': 'النظافة وإدارة النفايات الصلبة', 'url': 'HygieneAndSolidWasteManagement', 'image': 'imgs/Journal-06-index.jpg', 'date': '20 مارس  2025'},
     ]
 
     issue_two = [
-        {'subject': 'ظاهرة التسول في اليمن', 'url': 'BeggingPhenomenonInYemen', 'image': 'imgs/Journal-7.jpg', 'date': '15 يونيو  2025'},
+        {'subject': 'ظاهرة التسول في اليمن', 'url': 'BeggingPhenomenonInYemen', 'image': 'imgs/Journal-7-index.jpg', 'date': '15 يونيو  2025'},
         {'subject': 'الإدارة المحلية في اليمن', 'url': 'LocalGovernanceInYemen', 'image': 'imgs/Journal-8.png', 'date': '15 يونيو  2025'},   
-        {'subject': 'فاعلية المنظومة العدلية والرقابية في اليمن', 'url': 'EffectivenessOfTheJudicialAndOversightSystemInYemen', 'image': 'imgs/Journal-9.jpg', 'date': '15 يونيو  2025'},
-        {'subject': 'التأمين الصحي الاجتماعي في اليمن', 'url': 'SocialHealthInsuranceInYemen', 'image': 'imgs/Journal-10.jpg', 'date': '15 يونيو  2025'},   
+        {'subject': 'فاعلية المنظومة العدلية والرقابية في اليمن', 'url': 'EffectivenessOfTheJudicialAndOversightSystemInYemen', 'image': 'imgs/Journal-9-index.jpg', 'date': '15 يونيو  2025'},
+        {'subject': 'التأمين الصحي الاجتماعي في اليمن', 'url': 'SocialHealthInsuranceInYemen', 'image': 'imgs/Journal-10-index.jpg', 'date': '15 يونيو  2025'},   
     ]
 
     issue_three = [
-        {'subject': 'أثر الازدواج الوظيفي للقيادة الإدارية على جودة اتخاذ القرار والعمل المؤسسي', 'url': 'DualFunctionalForAdministrative', 'image': 'imgs/Journal-11.jpg', 'date': '25 سبتمبر 2025'},
-        {'subject': 'التعليم الفني والتدريب المهني في اليمن', 'url': 'TechnicalEducationAndVocationalTrainingInYemen', 'image': 'imgs/Journal-12.jpg', 'date': '25 سبتمبر 2025'},
-        {'subject': 'التداخل والتجاوز في المهام والاختصاصات في الإدارة العامة باليمن', 'url': 'OverlapAndEncroachmentInTasksAndCompetencies', 'image': 'imgs/Journal-13.jpg', 'date': '25 سبتمبر 2025'},
+        {'subject': 'أثر الازدواج الوظيفي للقيادة الإدارية على جودة اتخاذ القرار والعمل المؤسسي', 'url': 'DualFunctionalForAdministrative', 'image': 'imgs/Journal-11-index.jpg', 'date': '25 سبتمبر 2025'},
+        {'subject': 'التعليم الفني والتدريب المهني في اليمن', 'url': 'TechnicalEducationAndVocationalTrainingInYemen', 'image': 'imgs/Journal-12-index.jpg', 'date': '25 سبتمبر 2025'},
+        {'subject': 'التداخل والتجاوز في المهام والاختصاصات في الإدارة العامة باليمن', 'url': 'OverlapAndEncroachmentInTasksAndCompetencies', 'image': 'imgs/Journal-13-index.jpg', 'date': '25 سبتمبر 2025'},
         {'subject': 'المنظومة العدلية', 'url': 'TheJudicialSystem', 'image': 'imgs/Journal-14.jpg', 'date': '25 سبتمبر 2025'},
-        {'subject': 'دور منظمات المجتمع المدني في التنمية المحلية', 'url': 'TheRoleOfCivilSocietyOrganizationsInLocalDevelopment', 'image': 'imgs/Journal-15.jpg', 'date': '25 سبتمبر 2025'},
-        {'subject': 'أي دور للتعليم العالي بالمغرب في التنمية الاقتصادية', 'url': 'MoroccanHigherEducationInEconomicDevelopment', 'image': 'imgs/Journal-16.jpg', 'date': '25 2025 سبتمبر'}
+        {'subject': 'دور منظمات المجتمع المدني في التنمية المحلية', 'url': 'TheRoleOfCivilSocietyOrganizationsInLocalDevelopment', 'image': 'imgs/Journal-15-index.jpg', 'date': '25 سبتمبر 2025'},
+        {'subject': 'أي دور للتعليم العالي بالمغرب في التنمية الاقتصادية', 'url': 'MoroccanHigherEducationInEconomicDevelopment', 'image': 'imgs/Journal-16-index.jpg', 'date': '25 2025 سبتمبر'}
     ]
 
     context = {
