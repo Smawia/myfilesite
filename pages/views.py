@@ -522,7 +522,31 @@ def osus_journals(request):
     return render(request,'pages/osus_journals.html')
 
 def view_infograph(request):
-    infographs = [ 
+    infographs = [
+        {
+            "title": "التحول الدنماركي من أزمة النفط إلى اقتصاد الرياح",
+            "slug": "Denmarks_shift_from_an_oil_crisis_to_a_wind_economy",
+            "image": "imgs/danish_transformation.png",
+            "date": "11 نوفمبر 2025",
+        }, 
+        {
+            "title": "اعتماد الاقتصادات الكبرى على الواردات",
+            "slug": "Major_economies_reliance_on_imports",
+            "image": "imgs/major_economies_reliance_on_imports.jpg",
+            "date": "9 نوفمبر 2025",
+        }, 
+        {
+            "title": "اعتماد الاقتصادات الكبرى على التصدير",
+            "slug": "Major_economies_reliance_on_exports",
+            "image": "imgs/major_economies_reliance_on_exports.jpg",
+            "date": "7 نوفمبر 2025",
+        }, 
+        {
+            "title": "أفضل الدول من حيث جودة الحياة",
+            "slug": "Best_countries_in_terms_of_quality_of_life",
+            "image": "imgs/best_countries_in_quality_of_life.jpg",
+            "date": "5 نوفمبر 2025",
+        }, 
         {
             "title": "أكبر الاقتصادات السياحة في العالم 2024",
             "slug": "Largest_tourism_economies",
@@ -1053,6 +1077,26 @@ def infograph_detail(request, slug):
             'title': 'أكبر الاقتصادات السياحة في العالم 2024',
             'date': '3 نوفمبر 2025',
             'image': 'imgs/Tourism-Economies-I.jpg',
+        },
+        "Best_countries_in_terms_of_quality_of_life": {
+            'title': 'أفضل الدول من حيث جودة الحياة',
+            'date': '5 نوفمبر 2025',
+            'image': 'imgs/best_countries_in_quality_of_life.jpg',
+        },
+        "Major_economies_reliance_on_exports": {
+            'title': 'اعتماد الاقتصادات الكبرى على التصدير',
+            'date': '7 نوفمبر 2025',
+            'image': 'imgs/major_economies_reliance_on_exports.jpg',
+        },
+        "Major_economies_reliance_on_imports": {
+            'title': 'اعتماد الاقتصادات الكبرى على الواردات',
+            'date': '9 نوفمبر 2025',
+            'image': 'imgs/major_economies_reliance_on_imports.jpg',
+        },
+        "Denmarks_shift_from_an_oil_crisis_to_a_wind_economy": {
+            'title': 'التحول الدنماركي من أزمة النفط إلى اقتصاد الرياح',
+            'date': '11 نوفمبر 2025',
+            'image': 'imgs/danish_transformation.png',
         },
     }
 
