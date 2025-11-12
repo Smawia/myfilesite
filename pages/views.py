@@ -60,23 +60,23 @@ def view_osus_third_content(requst):
 
 def index(request):
     videos = [
-         {
+        {
+            "url": "/studies/10/",
+            "video": "UKRuYjkQKds",
+            "date": "2025-11-11",
+            "subject": "تحوّل مذهل… كيف نجحت نيوزيلندا في قلب موازين اقتصادها؟"
+        },
+        {
+            "url": "/studies/9/",
+            "video": "ssPY-RKGTis",
+            "date": "2025-11-11",
+            "subject": "الإصلاح الحكومي في اليابان: قرار واحد غيّر كل شيء!"
+        },
+        {
             "url": "/studies/8/",
             "video": "NGSkykmL_7s",
             "date": "2025-11-8",
             "subject": "أبرز تجارب الإصلاح الحكومي العالمية"
-        },
-        {
-            "url": "/studies/7/",
-            "video": "2Goy5n_CZgI",
-            "date": "2025-10-4",
-            "subject": "كيف نجحت كندا في تجاوز عجز الموازنة؟ تجربة المراجعة البرنامجية"
-        },
-        {
-            "url": "/studies/6/",
-            "video": "lZsi4SgiArk",
-            "date": "2025-10-1",
-            "subject": "رحلة الإصلاح الإداري في المملكة المتحدة: من التحديات إلى الإنجازات"
         },
     ]
 
@@ -1196,6 +1196,18 @@ def moroccan_higher_education_in_economic_development(request):
 
 def motion_graphics(request):
     issue_one = [
+        {
+            "url": "/studies/10/",
+            "video": "https://youtu.be/UKRuYjkQKds",
+            "date": "2025-11-11",
+            "subject": "تحوّل مذهل… كيف نجحت نيوزيلندا في قلب موازين اقتصادها؟"
+        },
+        {
+            "url": "/studies/9/",
+            "video": "https://youtu.be/ssPY-RKGTis",
+            "date": "2025-11-11",
+            "subject": "الإصلاح الحكومي في اليابان: قرار واحد غيّر كل شيء!"
+        },
         {
             "url": "/studies/8/",
             "video": "https://youtu.be/NGSkykmL_7s",
