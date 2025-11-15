@@ -524,6 +524,18 @@ def osus_journals(request):
 def view_infograph(request):
     infographs = [
         {
+            "title": "أعداد المهاجرين في الدول الأوروبية 2024",
+            "slug": "Number_of_immigrants_in_Europea_countries_2024",
+            "image": "imgs/number_of_immigrants_in_Europea_countries_2024.jpg",
+            "date": "15 نوفمبر 2025",
+        }, 
+        {
+            "title": "أكثر دول العالم ابتكارًا في 2025",
+            "slug": "The_most_innovative_countries_in_the_world_in_2025",
+            "image": "imgs/the_most_innovative_countries_in_the_world_in_2025.jpg",
+            "date": "13 نوفمبر 2025",
+        }, 
+        {
             "title": "التحول الدنماركي من أزمة النفط إلى اقتصاد الرياح",
             "slug": "Denmarks_shift_from_an_oil_crisis_to_a_wind_economy",
             "image": "imgs/danish_transformation.png",
@@ -1097,6 +1109,16 @@ def infograph_detail(request, slug):
             'title': 'التحول الدنماركي من أزمة النفط إلى اقتصاد الرياح',
             'date': '11 نوفمبر 2025',
             'image': 'imgs/danish_transformation.png',
+        },
+        "The_most_innovative_countries_in_the_world_in_2025": {
+            'title': 'أكثر دول العالم ابتكارًا في 2025',
+            'date': '13 نوفمبر 2025',
+            'image': 'imgs/the_most_innovative_countries_in_the_world_in_2025.jpg',
+        },
+        "Number_of_immigrants_in_Europea_countries_2024": {
+            'title': 'أعداد المهاجرين في الدول الأوروبية 2024',
+            'date': '15 نوفمبر 2025',
+            'image': 'imgs/number_of_immigrants_in_Europea_countries_2024.jpg',
         },
     }
 
