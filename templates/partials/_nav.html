@@ -101,7 +101,7 @@
                             </ul>
                         </li>
                         
-                            <li class="base-li asid-li3 aside-base-li"><a href="{% url 'signup' %}"
+                            <!-- <li class="base-li asid-li3 aside-base-li"><a href="{% url 'signup' %}"
                                 {% if 'signup' in request.path or 'signin' in request.path or 'logout' in request.path %}
                                 class="active js-a nav-a"
                                 {% else %}
@@ -113,7 +113,7 @@
                                     <li><a href="{% url 'signin' %}">تسجيل الدخول</a></li>
                                     <li><a href="{% url 'logout' %}">تسجيل الخروج</a></li> 
                                 </ul>
-                            </li>
+                            </li> -->
                         <li class="asid-li3"><a href="{% url 'contact' %}" 
                             {% if 'contact' in request.path %}
                             class="active nav-a"
@@ -213,7 +213,7 @@
                             {% endif %}
                             {% endif %}
                             >تسجيل عضوية</a></li> -->
-                            <li class="mobile-li"><a href="{% url 'signup' %}"
+                            <!-- <li class="mobile-li"><a href="{% url 'signup' %}"
                                 {% if 'signup' in request.path or 'signin' in request.path or 'logout' in request.path %}
                                 class="active js-a nav-a"
                                 {% else %}
@@ -232,7 +232,7 @@
                                     <li style="display: none;"><a href="{% url 'logout' %}">تسجيل الخروج</a></li>
                                     {% endif %}
                                 </ul>
-                            </li>
+                            </li> -->
                         <li class="asid-li small-screen2"><a href="{% url 'contact' %}" 
                             {% if 'contact' in request.path %}
                             class="active"

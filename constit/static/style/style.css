@@ -6969,7 +6969,7 @@ h5 {
 
 .small-screen2 {
     position: relative;
-    top: -27px;
+    top: -5px;
 }
 
 .mobile-li {
@@ -12886,4 +12886,10 @@ span.CharOverride-2 {
 
 @media (max-width: 576px) {
   .small-news-ticker { font-size: .75rem; padding: .2rem .4rem; }
+}
+
+#loadMoreBtn:hover {
+    /* background-color: #217dbb; 
+    transform: scale(1.05);     */
+    cursor: pointer;           /* يغيّر شكل المؤشر */
 }
