@@ -61,6 +61,12 @@ def view_osus_third_content(requst):
 def index(request):
     videos = [
         {
+            "url": "/studies/11/",
+            "video": "-KX5ReklYLQ",
+            "date": "2025-11-15",
+            "subject": "رحلة حول العالم: أقوى أنظمة التأمين الصحي وكيف تعمل!"
+        },
+        {
             "url": "/studies/10/",
             "video": "UKRuYjkQKds",
             "date": "2025-11-11",
@@ -71,12 +77,6 @@ def index(request):
             "video": "ssPY-RKGTis",
             "date": "2025-11-11",
             "subject": "الإصلاح الحكومي في اليابان: قرار واحد غيّر كل شيء!"
-        },
-        {
-            "url": "/studies/8/",
-            "video": "NGSkykmL_7s",
-            "date": "2025-11-8",
-            "subject": "أبرز تجارب الإصلاح الحكومي العالمية"
         },
     ]
 
@@ -1218,6 +1218,12 @@ def moroccan_higher_education_in_economic_development(request):
 
 def motion_graphics(request):
     issue_one = [
+        {
+            "url": "/studies/11/",
+            "video": "https://youtu.be/-KX5ReklYLQ",
+            "date": "2025-11-15",
+            "subject": "رحلة حول العالم: أقوى أنظمة التأمين الصحي وكيف تعمل!"
+        },
         {
             "url": "/studies/10/",
             "video": "https://youtu.be/UKRuYjkQKds",
