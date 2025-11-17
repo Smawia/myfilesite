@@ -524,6 +524,12 @@ def osus_journals(request):
 def view_infograph(request):
     infographs = [
         {
+            "title": "أكبر القوى العاملة حسب الدول في 2024",
+            "slug": "Largest_workforce_by_country_in_2024",
+            "image": "imgs/largest_workforce_by_country_in_2024.jpg",
+            "date": "17 نوفمبر 2025",
+        }, 
+        {
             "title": "أعداد المهاجرين في الدول الأوروبية 2024",
             "slug": "Number_of_immigrants_in_Europea_countries_2024",
             "image": "imgs/number_of_immigrants_in_Europea_countries_2024.jpg",
@@ -1173,6 +1179,12 @@ def infograph_detail(request, slug):
             'title': 'أعداد المهاجرين في الدول الأوروبية 2024',
             'date': '15 نوفمبر 2025',
             'image': 'imgs/number_of_immigrants_in_Europea_countries_2024.jpg',
+        },
+        "Largest_workforce_by_country_in_2024": {
+            'slug': 'Largest_workforce_by_country_in_2024',
+            'title': 'أكبر القوى العاملة حسب الدول في 2024',
+            'date': '17 نوفمبر 2025',
+            'image': 'imgs/largest_workforce_by_country_in_2024.jpg',
         },
     }
 
