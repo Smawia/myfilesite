@@ -61,6 +61,12 @@ def view_osus_third_content(requst):
 def index(request):
     videos = [
         {
+            "url": "/studies/12/",
+            "video": "etbGugO-sK4",
+            "date": "2025-11-17",
+            "subject": "النقد الإلكتروني: رحلة التطور من الماضي إلى المستقبل | كيف تتغير النقود في عصر الرقمنة؟"
+        },
+        {
             "url": "/studies/11/",
             "video": "-KX5ReklYLQ",
             "date": "2025-11-15",
@@ -71,12 +77,6 @@ def index(request):
             "video": "UKRuYjkQKds",
             "date": "2025-11-11",
             "subject": "تحوّل مذهل… كيف نجحت نيوزيلندا في قلب موازين اقتصادها؟"
-        },
-        {
-            "url": "/studies/9/",
-            "video": "ssPY-RKGTis",
-            "date": "2025-11-11",
-            "subject": "الإصلاح الحكومي في اليابان: قرار واحد غيّر كل شيء!"
         },
     ]
 
@@ -1284,6 +1284,12 @@ def moroccan_higher_education_in_economic_development(request):
 
 def motion_graphics(request):
     issue_one = [
+        {
+            "url": "/studies/12/",
+            "video": "https://youtu.be/etbGugO-sK4",
+            "date": "2025-11-17",
+            "subject": "النقد الإلكتروني: رحلة التطور من الماضي إلى المستقبل | كيف تتغير النقود في عصر الرقمنة؟"
+        },
         {
             "url": "/studies/11/",
             "video": "https://youtu.be/-KX5ReklYLQ",
