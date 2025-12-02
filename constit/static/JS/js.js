@@ -153,7 +153,7 @@ document.addEventListener("DOMContentLoaded", function () {
                         <img src="/static/${item.image}" alt="إنفوجراف" class="infograph-img">
                         <div class="study-text-info dark-mode">
                             <span>${item.date}</span>
-                            <p>${item.title}</p>
+                            <p class="card-title">${item.title}</p>
                         </div>
                     </a>
                 `;
@@ -168,7 +168,7 @@ document.addEventListener("DOMContentLoaded", function () {
                         <img src="/static/${item.image}" alt="إنفوجراف" class="infograph-img">
                         <div class="study-text-info">
                             <span>${item.date}</span>
-                            <p>${item.title}</p>
+                            <p class="card-title">${item.title}</p>
                         </div>
                     </a>
                 `;

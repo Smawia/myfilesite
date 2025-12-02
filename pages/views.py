@@ -524,6 +524,12 @@ def osus_journals(request):
 def view_infograph(request):
     infographs = [
         {
+            "title": "في هذه الدول، تسهم الثروات الطبيعية بأقل من 1% من الناتج المحلي.. فكم يبلغ حجم ناتج كل منها وما مرتبتها عالميًا؟",
+            "slug": "Gross_domestic_product_2024",
+            "image": "imgs/gross_domestic_product.png",
+            "date": "1 ديسمبر 2025",
+        }, 
+        {
             "title": "أكبر القوى العاملة حسب الدول في 2024",
             "slug": "Largest_workforce_by_country_in_2024",
             "image": "imgs/largest_workforce_by_country_in_2024.jpg",
@@ -1185,6 +1191,12 @@ def infograph_detail(request, slug):
             'title': 'أكبر القوى العاملة حسب الدول في 2024',
             'date': '17 نوفمبر 2025',
             'image': 'imgs/largest_workforce_by_country_in_2024.jpg',
+        },
+        "Gross_domestic_product_2024": {
+            'slug': 'Gross_domestic_product_2024',
+            'title': 'في هذه الدول، تسهم الثروات الطبيعية بأقل من 1% من الناتج المحلي.. فكم يبلغ حجم ناتج كل منها وما مرتبتها عالميًا؟',
+            'date': '1 ديسمبر 2025',
+            'image': 'imgs/gross_domestic_product.png',
         },
     }
 

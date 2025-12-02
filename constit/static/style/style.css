@@ -12309,6 +12309,12 @@ table.TableOverride-1 {
   animation: fadeInUp 0.6s ease forwards;
 }
 
+@media (min-width: 992px) {
+.card-title {        
+  max-height: calc(1.6em * 1) !important;   /* يحدد الارتفاع بالضبط حسب عدد الأسطر */
+}
+
+}
 .card-title {
   display: -webkit-box;
   -webkit-line-clamp: 2;        /* عدد الأسطر */
