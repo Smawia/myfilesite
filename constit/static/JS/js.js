@@ -113,6 +113,22 @@ document.addEventListener("DOMContentLoaded", function () {
             swiper.autoplay.start();
         }
     });
+    function switchResponsiveImage() {
+    const img = document.getElementById("issueImg");
+
+    const mobile = img.dataset.mobile;   // Django قام بتمرير المسار هنا
+    const desktop = img.dataset.desktop; // Django قام بتمرير المسار هنا
+
+    if (window.innerWidth <= 574) {
+        img.src = mobile;
+        } else {
+            img.src = desktop;
+        }
+    }
+
+    switchResponsiveImage();
+    window.addEventListener("resize", switchResponsiveImage);
+
 });
 
 

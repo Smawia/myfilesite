@@ -50,6 +50,9 @@ def download_or_view_second_ossus(request):
 def download_or_view_third_ossus(request):
     return serve_pdf(request, 'Osus-(Vol.1)-03.pdf')
 
+def download_or_view_fourth_ossus(request):
+    return serve_pdf(request, 'Osus-(Vol.1)-04.pdf')
+
 def view_osus_content(requst):
     return serve_pdf(requst, 'osus-2025-03-issue-contents.pdf')
 def view_osus_second_content(requst):
@@ -57,6 +60,8 @@ def view_osus_second_content(requst):
 
 def view_osus_third_content(requst):
     return serve_pdf(requst, 'third-osus-2025-09-issue-contents.pdf')
+def view_osus_fourth_content(requst):
+    return serve_pdf(requst, 'fourth-osus-2025-12-issue-contents.pdf')
 
 def index(request):
     videos = [
