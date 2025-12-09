@@ -9567,6 +9567,9 @@ header .phone button {
     .index-articles.infograph-detail .controls {
         margin-top: 20px;
     }
+    .main-motion.index-motion {
+        margin-top: -25px;
+    }
 }
 
 @media (min-width: 575px) and (max-width: 767px) {

@@ -613,3 +613,32 @@ document.addEventListener("DOMContentLoaded", function () {
     }
     onYouTubeIframeAPIReady();
 });
+
+// منع ال scroll
+document.addEventListener("wheel", function (e) {
+    if (e.ctrlKey) {
+        e.preventDefault(); // منع تكبير الصفحة
+        let container = document.querySelector(".container"); // عدل اسم الكلاس إذا لزم
+
+        // قراءة القيمة الحالية
+        let currentScale = parseFloat(container.getAttribute("data-scale")) || 1;
+
+        // تغيير الحجم بناءً على اتجاه Scroll
+        if (e.deltaY < 0) {
+            currentScale += 0.05; // تكبير
+        } else {
+            currentScale -= 0.05; // تصغير
+        }
+
+        // حدود التكبير والتصغير
+        if (currentScale < 0.5) currentScale = 0.5;
+        if (currentScale > 2) currentScale = 2;
+
+        // تطبيق التحويل
+        container.style.transform = "scale(" + currentScale + ")";
+        container.style.transformOrigin = "top center";
+
+        // تخزين القيمة
+        container.setAttribute("data-scale", currentScale);
+    }
+}, { passive: false });
