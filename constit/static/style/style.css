@@ -4217,12 +4217,15 @@ input {
 }
 
 .refrences ul li {
-    line-height: 2.6;
+    position: relative;
+    line-height: 2.6 !important;
     counter-increment: css-counter 1;
-    padding-right: 20px !important;
+    padding-right: 10px !important;
     padding-left: 20px !important;
+    padding-bottom: 7px !important;
     /* cursor: pointer; */
-    transition: 0.3s
+    transition: 0.3s;
+    margin-right: 40px;
 }
 
 .refrences ul li a {
@@ -4240,10 +4243,15 @@ input {
 
 .refrences ul li::before {
     content: counter(css-counter);
-    padding: 1px 5px;
+    padding: 0px 11px;
     border: 1px solid var(--second-color);
     border-radius: 50%;
     margin-left: 15px;
+    position: absolute;
+    top: 0;
+    right: -40px;
+    margin-bottom: 20px;
+    cursor: pointer;
 }
 
 .refrences ul li:hover::before {
@@ -4306,6 +4314,7 @@ input {
 
     .refrences ul li::before {
         margin-left: 5px !important;
+        padding: 0px 7px;
     }
 }
 
@@ -4366,19 +4375,24 @@ input {
     }
 
     .refrences ul {
-        font-size: 12px;
+        font-size: 14px;
     }
 
     .refrences ul li {
         padding-right: 3px !important;
+        padding-left: 20px !important;
+        padding-bottom: 10px !important;
+        margin-right: 40px;  
+        line-height: 2.6;
     }
+    
 
     .refrences ul li::before {
         margin-left: 10px;
     }
 
     .refrences ul li.eng::before {
-        margin-right: 10px;
+        margin-right: 19px;
     }
 }
 
@@ -4405,11 +4419,14 @@ input {
     }
 
     .refrences ul {
-        font-size: 14px;
+        font-size: 16px;
     }
 
     .refrences ul li {
         padding-right: 5px !important;
+    }
+    .refrences ul li.eng::before {
+        margin-right: 19px;
     }
 }
 
@@ -4428,6 +4445,12 @@ input {
     .refrences {
         margin: 15px 0;
     }
+    .refrences ul li {
+        padding-bottom: 5px !important;
+    }
+    .refrences ul li::before {
+        margin-left: 10px;
+    }
 }
 
 .first-page .publisher-name h2 {
@@ -4440,6 +4463,9 @@ input {
         margin-right: 18px;
         font-size: 18px;
         /* font-family: 'math' !important; */
+    }
+    .refrences ul li.eng::before {
+        margin-right: 19px;
     }
 }
 
@@ -6907,7 +6933,7 @@ h5 {
 
 @media (max-width: 574px) {
     table {
-        margin: 10px 0 !important;
+        margin: 10px auto !important;
     }
 
     .e_yemen {
@@ -7461,7 +7487,6 @@ h5 {
 .show-all-studies .studies-card {
     width: calc(33% - 20px) !important;
     margin-bottom: 50px !important;
-    height: 250px;
     box-sizing: border-box;
     transition: 0.3s;
 }
@@ -7545,15 +7570,18 @@ h5 {
         margin-left: auto;
         margin-right: auto;
         display: flex;
-        height: 77px;
         flex-direction: row-reverse;
         justify-content: space-between;
         align-items: start;
     }
 
+    .show-all-studies .studies-card:not(:last-of-type) {
+        border-bottom: 1px solid #ddd;
+    }
+
     .show-all-studies .custom-studies-card {
         width: calc(100% - 10px) !important;
-        margin-bottom: 20px !important;
+        margin-bottom: 0 !important;
         margin-left: auto;
         margin-right: auto;
         display: block;
@@ -7659,14 +7687,18 @@ h5 {
 
     .show-all-studies .studies-card {
         width: calc(98%) !important;
-        margin-bottom: 45px !important;
+        margin-bottom: 0 !important;
         margin-left: auto;
         margin-right: auto;
         display: flex;
-        height: 77px;
         flex-direction: row-reverse;
         justify-content: space-between;
         align-items: start;
+        margin-bottom: 15px !important;
+        padding-bottom: 5px;
+    }
+    .show-all-studies .studies-card:not(:last-of-type) {
+        border-bottom: 1px solid #ddd;
     }
 
     .show-all-studies .custom-studies-card {
@@ -7771,6 +7803,12 @@ h5 {
         font-size: 16px;
     }
 
+    .show-all-studies .studies-card a.journals-a {
+        display: inline-block;
+        width: 100%;
+        height: 140px;
+    }
+
     .show-all-studies .studies-card .study-text-info {
         margin-top: 0;
 
@@ -7811,7 +7849,7 @@ h5 {
 
     .show-all-studies .studies-card {
         width: calc(25% - 20px) !important;
-        margin-bottom: 32px !important;
+        margin-bottom: 20px !important;
     }
 
     .show-all-studies .studies-card img {
@@ -7823,7 +7861,6 @@ h5 {
     .show-all-studies .studies-card a {
         font-size: 18px;
     }
-
     .show-all-studies .studies-card .study-text-info {
         margin-top: 0;
         padding-top: 10px;
@@ -8221,9 +8258,6 @@ ul .aside-nested-list {
     /* يضمن أن العنصر اللاصق لا يتأثر بمحاذاة العناصر */
 }
 
-.studies-flex .nested-ref {
-    display: none;
-}
 
 .show-some-studies {
     width: 356px;
@@ -8288,7 +8322,6 @@ ul .aside-nested-list {
     }
 
     .studies-flex .nested-ref {
-        display: block;
         width: 100%;
     }
 
@@ -8309,6 +8342,7 @@ ul .aside-nested-list {
         flex-direction: row-reverse;
         justify-content: space-between;
         align-items: start;
+        border-bottom: 1px solid #ddd;
     }
 
     .studies-text-some-info {
@@ -8355,10 +8389,6 @@ ul .aside-nested-list {
         flex-direction: column;
     }
 
-    .studies-flex .nested-ref {
-        display: block;
-    }
-
     .show-some-studies {
         width: 100%;
         background:
@@ -8372,7 +8402,6 @@ ul .aside-nested-list {
     .show-studies-h3 {
         width: 100%;
         margin: 10px auto;
-        text-align: center;
         padding: 12px 7px;
         box-sizing: border-box;
     }
@@ -8385,6 +8414,7 @@ ul .aside-nested-list {
         flex-direction: row-reverse;
         justify-content: space-between;
         align-items: start;
+        border-bottom: 1px solid #ddd;
     }
 
     .studies-text-some-info {
@@ -9216,7 +9246,7 @@ header .phone button {
     }
 
     .osus-second-container .second-osus {
-        width: 520px !important;
+        width: 370px !important;
         height: auto !important;
     }
 
@@ -9525,7 +9555,7 @@ header .phone button {
 
     .studies-card.infograph-card {
         width: 100% !important;
-        height: 420px;
+        margin-bottom: 15px !important;
     }
 
     .studies-card.infograph-card .infograph-img {
@@ -9595,8 +9625,7 @@ header .phone button {
     }
 
     .studies-card.infograph-card {
-        width: calc(100% - 20px) !important;
-        height: 430px;
+        width: calc(100% - 100px) !important;
     }
 
     .studies-card.infograph-card .infograph-img {
@@ -9673,7 +9702,6 @@ header .phone button {
 
     .studies-card.infograph-card {
         width: calc(50% - 10px) !important;
-        height: 440px;
     }
 
     .studies-card.infograph-card .infograph-img {
@@ -9797,7 +9825,12 @@ header .phone button {
 
     .studies-card.infograph-card {
         width: calc(33% - 5px) !important;
-        height: 525px;
+    }
+
+    .studies-card.infograph-card a {
+        display: inline-block;
+        width: 100%;
+        height: 440px;
     }
 
     .studies-card.infograph-card .infograph-img {
@@ -10208,10 +10241,10 @@ tr._idGenTableRowColumn-52 {
 .definition {
     margin-top: auto;
 }
-
+/* 
 .refernces-samp {
     margin-right: 30px;
-}
+} */
 
 .top-margin {
     margin-top: inherit;
@@ -12901,4 +12934,50 @@ span.CharOverride-2 {
     /* background-color: #217dbb; 
     transform: scale(1.05);     */
     cursor: pointer;           /* يغيّر شكل المؤشر */
+}
+
+/* line height  */
+.refrences ul li {
+    line-height: 2.4 !important;
+}
+
+@media (max-width: 576px) {
+    
+    
+}
+@media (min-width: 577px) {
+    .refrences ul li {
+        line-height: 1.9 !important;
+    }
+    
+}
+@media (max-width: 768px) {
+    .refrences ul li {
+        line-height: 1.9 !important;
+    }
+    
+}
+@media (max-width: 574px) {
+    .refrences ul li {
+        line-height: 1.9 !important;
+    }
+}
+
+@media (min-width: 575px) {
+    .refrences ul li {
+        line-height: 1.9 !important;
+    }
+}
+
+@media (min-width: 768px) {
+    .refrences ul li {
+        line-height: 2 !important;
+    }
+}
+
+@media (min-width: 992px) {
+    .refrences ul li {
+        line-height: 2.2 !important;
+        margin-bottom: 5px !important;
+    }
 }

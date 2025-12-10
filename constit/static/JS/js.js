@@ -363,6 +363,7 @@ window.onscroll = function () {
     updateProgressBar();
 };
 
+
 function updateProgressBar() {
     const bar = document.getElementById('progress-bar');
     if (!bar) {
@@ -642,3 +643,19 @@ document.addEventListener("wheel", function (e) {
         container.setAttribute("data-scale", currentScale);
     }
 }, { passive: false });
+
+window.addEventListener("DOMContentLoaded", function () {
+    const mobileRef = document.querySelector(".nested-ref");
+    
+    // نسخة الكمبيوتر = العناصر خارج .nested-ref
+    const desktopRef = document.querySelectorAll("body > .show-references, body > .refrences");
+
+    if (window.innerWidth <= 767) {
+        // شاشة الهاتف → احذف نسخة الكمبيوتر بالكامل
+        desktopRef.forEach(el => el.remove());
+    } else {
+        // شاشة كبيرة → احذف نسخة الهاتف
+        if (mobileRef) mobileRef.remove();
+    }
+});
+
