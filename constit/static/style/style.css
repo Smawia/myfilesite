@@ -4423,7 +4423,7 @@ input {
     }
 
     .refrences ul li {
-        padding-right: 5px !important;
+        padding-right: 17px !important;
     }
     .refrences ul li.eng::before {
         margin-right: 19px;
