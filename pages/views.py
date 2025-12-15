@@ -66,6 +66,12 @@ def view_osus_fourth_content(requst):
 def index(request):
     videos = [
         {
+            "url": "/studies/13/",
+            "video": "PlP0-APrXc4",
+            "date": "2025-12-14",
+            "subject": "حليمة يعقوب... حين تصنع الإرادة امرأة تقود دولة"
+        },
+        {
             "url": "/studies/12/",
             "video": "etbGugO-sK4",
             "date": "2025-11-17",
@@ -76,12 +82,6 @@ def index(request):
             "video": "-KX5ReklYLQ",
             "date": "2025-11-15",
             "subject": "رحلة حول العالم: أقوى أنظمة التأمين الصحي وكيف تعمل!"
-        },
-        {
-            "url": "/studies/10/",
-            "video": "UKRuYjkQKds",
-            "date": "2025-11-11",
-            "subject": "تحوّل مذهل… كيف نجحت نيوزيلندا في قلب موازين اقتصادها؟"
         },
     ]
 
@@ -1301,6 +1301,12 @@ def moroccan_higher_education_in_economic_development(request):
 
 def motion_graphics(request):
     issue_one = [
+        {
+            "url": "/studies/13/",
+            "video": "https://youtu.be/PlP0-APrXc4",
+            "date": "2025-12-14",
+            "subject": "حليمة يعقوب... حين تصنع الإرادة امرأة تقود دولة"
+        },
         {
             "url": "/studies/12/",
             "video": "https://youtu.be/etbGugO-sK4",
