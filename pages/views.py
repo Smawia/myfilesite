@@ -66,6 +66,12 @@ def view_osus_fourth_content(requst):
 def index(request):
     videos = [
         {
+            "url": "/studies/14/",
+            "video": "12mo6GxiMxk",
+            "date": "2025-12-16",
+            "subject": "كوليندا كيتاروفيتش: امرأة كرواتيا الحديدية ونموذج القيادة النسوية في السياسة الأوروبية"
+        },
+        {
             "url": "/studies/13/",
             "video": "PlP0-APrXc4",
             "date": "2025-12-14",
@@ -76,12 +82,6 @@ def index(request):
             "video": "etbGugO-sK4",
             "date": "2025-11-17",
             "subject": "النقد الإلكتروني: رحلة التطور من الماضي إلى المستقبل | كيف تتغير النقود في عصر الرقمنة؟"
-        },
-        {
-            "url": "/studies/11/",
-            "video": "-KX5ReklYLQ",
-            "date": "2025-11-15",
-            "subject": "رحلة حول العالم: أقوى أنظمة التأمين الصحي وكيف تعمل!"
         },
     ]
 
@@ -1301,6 +1301,12 @@ def moroccan_higher_education_in_economic_development(request):
 
 def motion_graphics(request):
     videos = [
+        {
+            "url": "/studies/14/",
+            "video": "https://youtu.be/12mo6GxiMxk",
+            "date": "2025-12-16",
+            "subject": "كوليندا كيتاروفيتش: امرأة كرواتيا الحديدية ونموذج القيادة النسوية في السياسة الأوروبية"
+        },
         {
             "url": "/studies/13/",
             "video": "https://youtu.be/PlP0-APrXc4",
