@@ -581,20 +581,19 @@ function updateProgressBar() {
 
 //motion graphics 
 document.addEventListener("DOMContentLoaded", function () {
-     const container = document.getElementById("mationGraphicContainer");
+    const container = document.getElementById("mationGraphicContainer");
 
     // لو ما في بيانات نوقف
-    if (!container) return;
+    if (container) {
+        const loadMoreBtn = document.getElementById("loadMoreBtn");
 
-    const loadMoreBtn = document.getElementById("loadMoreBtn");
+        // جلب البيانات
+        const data = JSON.parse(document.getElementById("videos").textContent);
 
-    // جلب البيانات
-    const data = JSON.parse(document.getElementById("videos").textContent);
+        let itemsPerPage = 6;
+        let currentIndex = 0;
 
-    let itemsPerPage = 6;
-    let currentIndex = 0;
-
-    function renderItems() {
+        function renderItems() {
         if (currentIndex >= data.length) {
             loadMoreBtn.style.display = "none";
             return;
@@ -639,6 +638,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
     // زر عرض المزيد
     loadMoreBtn.addEventListener("click", renderItems);
+    }
 
     let players = [];
     
