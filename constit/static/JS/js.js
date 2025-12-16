@@ -579,7 +579,67 @@ function updateProgressBar() {
 //     console.warn("⚠️ يُفضل تشغيل الموقع عبر HTTPS أو localhost لتفادي خطأ 153");
 // }
 
+//motion graphics 
 document.addEventListener("DOMContentLoaded", function () {
+     const container = document.getElementById("mationGraphicContainer");
+
+    // لو ما في بيانات نوقف
+    if (!container) return;
+
+    const loadMoreBtn = document.getElementById("loadMoreBtn");
+
+    // جلب البيانات
+    const data = JSON.parse(document.getElementById("videos").textContent);
+
+    let itemsPerPage = 6;
+    let currentIndex = 0;
+
+    function renderItems() {
+        if (currentIndex >= data.length) {
+            loadMoreBtn.style.display = "none";
+            return;
+        }
+
+        const slice = data.slice(currentIndex, currentIndex + itemsPerPage);
+
+        slice.forEach((item, index) => {
+            // 🔹 هذا هو forloop.counter البديل
+            const counter = currentIndex + index;
+
+            const card = document.createElement("div");
+            card.className = "video-card fade-in";
+
+            card.innerHTML = `
+                <div class="yt-container" data-id="${item.video}" id="yt-${counter}">
+                    <div class="yt-thumb"
+                        style="background-image:url('https://img.youtube.com/vi/${item.video}/hqdefault.jpg')">
+                        <div class="yt-play"></div>
+                    </div>
+                </div>
+                <div class="study-text-info study-text-info-2">
+                    <span>${item.date}</span>
+                    <p>${item.subject}</p>
+                </div>
+            `;
+
+            container.appendChild(card);
+            
+        });
+
+        currentIndex += slice.length;
+
+        if (currentIndex >= data.length) {
+            loadMoreBtn.style.display = "none";
+        }
+        onYouTubeIframeAPIReady();
+    }
+
+    // أول تحميل
+    renderItems();
+
+    // زر عرض المزيد
+    loadMoreBtn.addEventListener("click", renderItems);
+
     let players = [];
     
     // استدعاء API الرسمية

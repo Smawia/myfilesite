@@ -7,9 +7,9 @@
     <h1 class="spe-h1">أُسس موشن جرافيك</h1>
 </div>
 
-<div class="container index-articles all-art">
-    <div class="show-all-studies grid-container">
-        {% for data in issue_one %}
+<div class="container index-articles all-art infographs">
+    <div class="show-all-studies grid-container" id="mationGraphicContainer">
+        <!-- {% for data in issue_one %}
         <div class="video-card">
             <div class="yt-container" data-id="{{ data.video }}" id="yt-{{ forloop.counter }}">
                 <div class="yt-thumb"
@@ -22,8 +22,50 @@
                 <p>{{ data.subject }}</p>
             </div>
         </div>
-        {% endfor %}
+        {% endfor %} -->
     </div>
+    <button id="loadMoreBtn" class="show-all">عرض المزيد</button>
 </div>
+<script id="videos" type="application/json">
+    {{ videos|safe }}
+</script>
+<!-- <script>
+    let players = [];
+
+    // استدعاء API الرسمية
+    function onYouTubeIframeAPIReady() {
+        const containers = document.querySelectorAll(".yt-container");
+        containers.forEach((el, index) => {
+            el.addEventListener("click", function () {
+                const videoId = el.dataset.id;
+
+                el.innerHTML = `<div id="player-${index}"></div>`;
+                players[index] = new YT.Player(`player-${index}`, {
+                    videoId: videoId,
+                    playerVars: {
+                        autoplay: 1,
+                        rel: 0,
+                        modestbranding: 1
+                    },
+                    events: {
+                        onStateChange: (event) => {
+                            if (event.data === YT.PlayerState.PLAYING) {
+                                players.forEach((p, i) => {
+                                    if (i !== index && p && typeof p.pauseVideo === "function") {
+                                        p.pauseVideo();
+                                    }
+                                });
+                            }
+                        }
+                    }
+                });
+            }, { once: true });
+        });
+    }
+</script> -->
+
+<!-- تحميل مكتبة YouTube الرسمية -->
+<!-- <script src="https://www.youtube.com/iframe_api"></script> -->
+
 
 {% endblock %}

@@ -1300,7 +1300,7 @@ def moroccan_higher_education_in_economic_development(request):
     return render(request, 'pages/moroccan_higher_education_in_economic_development.html')
 
 def motion_graphics(request):
-    issue_one = [
+    videos = [
         {
             "url": "/studies/13/",
             "video": "https://youtu.be/PlP0-APrXc4",
@@ -1382,14 +1382,14 @@ def motion_graphics(request):
     ]
 
     # تحويل الروابط إلى embed
-    for item in issue_one:
+    for item in videos:
         if 'youtu.be' in item['video']:
             video_id = item['video'].split('/')[-1].split('?')[0]
             item['video'] = video_id
 
     query = request.GET.get("q", "")
     return render(request, "pages/motion_graphics.html", {
-        "issue_one": issue_one,
+        "videos": json.dumps(videos, ensure_ascii=False),
         "query": query,
     })
 
