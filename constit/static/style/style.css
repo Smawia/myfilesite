@@ -4064,6 +4064,7 @@ input {
     .first-page {
         margin: 35px 0 15px;
         width: 95%;
+        max-width: 66%;
     }
 
     .first-page h1 {
@@ -4099,6 +4100,7 @@ input {
         margin: 13px 0 20px 17px;
         padding: 40px;
         box-sizing: border-box;
+        max-width: 75%;
     }
 
     .first-page h1 {
@@ -4108,7 +4110,7 @@ input {
     .first-page img {
         width: 100%;
         margin: 20px auto;
-        height: 320px;
+        height: 450px;
         margin-bottom: 22.4px;
         display: block;
     }
