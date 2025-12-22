@@ -2245,12 +2245,13 @@ table thead td {
     font-family: 'Calibri';
     box-sizing: border-box;
     text-align: justify;
+    background-color: white;
 }
 
 .cretiria h1 {
     font-family: 'CodecProBold';
     border: 2px solid white;
-    border-radius: 15px;
+    /* border-radius: 15px; */
     background-color: var(--second-color);
     color: white;
     margin: 30px auto;
@@ -2280,10 +2281,10 @@ table thead td {
     margin: 20px 0;
     font-size: 30px;
     border: 2px solid white;
-    border-radius: 15px;
+    border-radius: 10px;
     /* background-color: ; */
     color: white;
-    background-color: var(--second-color);
+    background-color: var(--fourth-color);
     text-align: center;
     width: fit-content;
     width: intrinsic;
@@ -2308,6 +2309,9 @@ table thead td {
 }
 
 @media (max-width: 574px) {
+    .cretiria {
+        padding: 20px;
+    }
     .cretiria p {
         font-size: 14px;
         margin-bottom: 0;
@@ -2316,16 +2320,23 @@ table thead td {
 
     .cretiria h1 {
         font-size: 14px;
-        width: 90px;
+        width: fit-content;
         text-align: center;
         margin-bottom: 0;
+        line-height: 1.6;
     }
 
     .cretiria .one h3 {
         font-size: 14px;
-        width: 200px;
         text-align: start;
     }
+
+    .cretiria h4 {
+        font-size: 16px;
+        font-weight: bold;
+        text-align: start;
+        padding-right: 10px;
+    }   
 
 
     .cretiria ul,
@@ -2364,6 +2375,11 @@ table thead td {
         text-align: start;
     }
 
+    .cretiria h4 {
+        font-size: 18px;
+        text-align: start;
+        font-weight: bold;
+    }
     .cretiria .one ul li,
     .cretiria .one ol li {
         font-size: 15px;
@@ -2417,6 +2433,13 @@ table thead td {
     .cretiria .one h3 {
         font-size: 22px;
         text-align: start;
+    }
+
+    .cretiria h4 {
+        font-size: 22px;
+        font-weight: bold;
+        text-align: start;
+        padding-right: 10px;
     }
 
     .cretiria .one ul li,
@@ -13013,4 +13036,9 @@ span.CharOverride-2 {
     .show-cards-number .card-title {        
         max-height: calc(1.4em * 1) !important;  
     }
+}
+
+.refe-instic {
+    display: block;
+    direction: ltr;
 }
