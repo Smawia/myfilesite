@@ -529,6 +529,12 @@ def osus_journals(request):
 def view_infograph(request):
     infographs = [
         {
+            "title": "رغم محدودية الثروات الطبيعية، تُعد هذه الدول من أقوى اقتصادات العالم، ويُعرض فيها نصيب الفرد من الدخل القومي.",
+            "slug": "GDP_per_capita_income",
+            "image": "imgs/gdp_per_capita_income.jpg",
+            "date": "7 ديسمبر 2025",
+        },
+        {
             "title": "في هذه الدول، لا تتجاوز مساهمة الثروات الطبيعية 1% من الناتج المحلي الإجمالي، ومع ذلك تمتلك اقتصادات كبرى عالميًا. تعرّف على الناتج المحلي الإجمالي للفرد فيها.",
             "slug": "GDP_per_capita",
             "image": "imgs/gdp_per_capita.png",
@@ -1211,9 +1217,15 @@ def infograph_detail(request, slug):
         },
         "GDP_per_capita": {
             'slug': 'GDP_per_capita',
-            'title': 'في هذه الدول، لا تتجاوز مساهمة الثروات الطبيعية 1% من الناتج المحلي الإجمالي، ومع ذلك تمتلك اقتصادات كبرى عالميًا. تعرّف على الناتج المحلي الإجمالي للفرد فيها.',
+            'title': 'رغم محدودية مساهمة الثروات الطبيعية (أقل من 1%)، تُعد هذه الدول من أقوى اقتصادات العالم، ويُبيّن ما يلي نصيب الفرد من الدخل القومي الإجمالي فيها.',
             'date': '5 ديسمبر 2025',
-            'image': 'imgs/GDP_per_capita.png',
+            'image': 'imgs/gdp_per_capita.png',
+        },
+        "GDP_per_capita_income": {
+            'slug': 'GDP_per_capita_income',
+            'title': 'رغم محدودية الثروات الطبيعية، تُعد هذه الدول من أقوى اقتصادات العالم، ويُعرض فيها نصيب الفرد من الدخل القومي.',
+            'date': '7 ديسمبر 2025',
+            'image': 'imgs/gdp_per_capita_income.jpg',
         },
     }
 
@@ -1256,10 +1268,15 @@ def journal_studies(request):
         {'subject': 'أي دور للتعليم العالي بالمغرب في التنمية الاقتصادية', 'url': 'MoroccanHigherEducationInEconomicDevelopment', 'image': 'imgs/Journal-16-index.jpg', 'date': '25 2025 سبتمبر'}
     ]
 
+    issue_four = [
+        {'subject': 'التمكين الاقتصادي والاكتفاء الذاتي في اليمن', 'url': 'EconomicEmpowerment', 'image': 'imgs/Journal-17.jpg', 'date': '23 ديسمبر 2025'}, 
+    ]
+
     context = {
         'issue_one': issue_one,
         'issue_two': issue_two,
         'issue_three': issue_three,
+        'issue_four': issue_four,
     }
     return render(request,'pages/journal_studies.html',context)
 
@@ -1310,6 +1327,9 @@ def civil_society_organizations(request):
 
 def moroccan_higher_education_in_economic_development(request):
     return render(request, 'pages/moroccan_higher_education_in_economic_development.html')
+
+def economic_empowerment(request):
+    return render(request, 'pages/economic_empowerment_and_self-Sufficiency_in_yemen.html')
 
 def motion_graphics(request):
     videos = [
