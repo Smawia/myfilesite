@@ -529,6 +529,12 @@ def osus_journals(request):
 def view_infograph(request):
     infographs = [
         {
+            "title": "في هذه الدول، لا تتجاوز مساهمة الثروات الطبيعية 1% من الناتج المحلي الإجمالي، ومع ذلك تمتلك اقتصادات كبرى عالميًا. تعرّف على الناتج المحلي الإجمالي للفرد فيها.",
+            "slug": "GDP_per_capita",
+            "image": "imgs/gdp_per_capita.png",
+            "date": "5 ديسمبر 2025",
+        },
+        {
             "title": "في هذه الدول، تسهم الثروات الطبيعية بأقل من 1% من الناتج المحلي.. فكم يبلغ حجم ناتج كل منها وما مرتبتها عالميًا؟",
             "slug": "Gross_domestic_product_2024",
             "image": "imgs/gross_domestic_product.png",
@@ -1202,6 +1208,12 @@ def infograph_detail(request, slug):
             'title': 'في هذه الدول، تسهم الثروات الطبيعية بأقل من 1% من الناتج المحلي.. فكم يبلغ حجم ناتج كل منها وما مرتبتها عالميًا؟',
             'date': '1 ديسمبر 2025',
             'image': 'imgs/gross_domestic_product.png',
+        },
+        "GDP_per_capita": {
+            'slug': 'GDP_per_capita',
+            'title': 'في هذه الدول، لا تتجاوز مساهمة الثروات الطبيعية 1% من الناتج المحلي الإجمالي، ومع ذلك تمتلك اقتصادات كبرى عالميًا. تعرّف على الناتج المحلي الإجمالي للفرد فيها.',
+            'date': '5 ديسمبر 2025',
+            'image': 'imgs/GDP_per_capita.png',
         },
     }
 

@@ -603,6 +603,11 @@
         
         <div class="swiper-wrapper">
             <div class="swiper-slide">
+                <a href="{% url 'infograph_detail' 'GDP_per_capita' %}">
+                    <img src="{% static 'imgs/gdp_per_capita.png' %}" alt="">
+                </a>
+            </div>
+            <div class="swiper-slide">
                 <a href="{% url 'infograph_detail' 'Gross_domestic_product_2024' %}">
                     <img src="{% static 'imgs/gross_domestic_product-index.png' %}" alt="">
                 </a>
@@ -640,11 +645,6 @@
             <div class="swiper-slide">
                 <a href="{% url 'infograph_detail' 'Best_countries_in_terms_of_quality_of_life' %}">
                     <img src="{% static 'imgs/best_countries_in_quality_of_life-index.jpg' %}" alt="">
-                </a>
-            </div>
-            <div class="swiper-slide">
-                <a href="{% url 'infograph_detail' 'Largest_tourism_economies' %}">
-                    <img src="{% static 'imgs/Tourism-Economies-I-index.jpg' %}" alt="">
                 </a>
             </div>
             

@@ -9580,6 +9580,7 @@ header .phone button {
 
     .studies-card.infograph-card {
         width: 100% !important;
+        height: 420px;
         margin-bottom: 15px !important;
     }
 
@@ -12372,10 +12373,17 @@ table.TableOverride-1 {
 
 @media (min-width: 992px) {
 .infograph-card .card-title {        
-  max-height: calc(1.6em * 1) !important;   /* يحدد الارتفاع بالضبط حسب عدد الأسطر */
+  max-height: calc(1.5em * 1) !important;   /* يحدد الارتفاع بالضبط حسب عدد الأسطر */
 }
 
 }
+
+@media (min-width: 575px) and (max-width: 767px) {
+.infograph-card .card-title {        
+  max-height: 15px !important;   /* يحدد الارتفاع بالضبط حسب عدد الأسطر */
+}
+}
+
 .card-title {
   display: -webkit-box;
   -webkit-line-clamp: 2;        /* عدد الأسطر */
