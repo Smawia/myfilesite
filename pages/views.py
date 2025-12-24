@@ -529,6 +529,18 @@ def osus_journals(request):
 def view_infograph(request):
     infographs = [
         {
+            "title": "رغم محدودية مساهمة الثروات الطبيعية في اقتصادات هذه الدول، إلا أنها تمتلك قوى عاملة نشطة ومعدلات مشاركة مرتفعة في سوق العمل.",
+            "slug": "GDP_workforce",
+            "image": "imgs/gdp_workforce.png",
+            "date": "11 ديسمبر 2025",
+        },
+        {
+            "title": "رغم أن مساهمة الثروات الطبيعية في هذه الدول أقل من 1% من اقتصادها، إلا أنها تتصدر مؤشرات فعالية الحكومة عالميًا.",
+            "slug": "GDP_government_effectiveness",
+            "image": "imgs/gdp_government_effectiveness.png",
+            "date": "9 ديسمبر 2025",
+        },
+        {
             "title": "رغم محدودية الثروات الطبيعية، تُعد هذه الدول من أقوى اقتصادات العالم، ويُعرض فيها نصيب الفرد من الدخل القومي.",
             "slug": "GDP_per_capita_income",
             "image": "imgs/gdp_per_capita_income.jpg",
@@ -1227,6 +1239,19 @@ def infograph_detail(request, slug):
             'date': '7 ديسمبر 2025',
             'image': 'imgs/gdp_per_capita_income.jpg',
         },
+        "GDP_government_effectiveness": {
+            'slug': 'GDP_government_effectiveness',
+            'title': 'رغم أن مساهمة الثروات الطبيعية في هذه الدول أقل من 1% من اقتصادها، إلا أنها تتصدر مؤشرات فعالية الحكومة عالميًا.',
+            'date': '9 ديسمبر 2025',
+            'image': 'imgs/gdp_government_effectiveness.png',
+        },
+        "GDP_workforce": {
+            'slug': 'GDP_workforce',
+            'title': 'رغم محدودية مساهمة الثروات الطبيعية في اقتصادات هذه الدول، إلا أنها تمتلك قوى عاملة نشطة ومعدلات مشاركة مرتفعة في سوق العمل.',
+            'date': '11 ديسمبر 2025',
+            'image': 'imgs/gdp_workforce.png',
+        },
+
     }
 
     detail = data.get(slug)
