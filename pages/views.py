@@ -529,6 +529,12 @@ def osus_journals(request):
 def view_infograph(request):
     infographs = [
         {
+            "title": "رغم أن مساهمة الثروات الطبيعية في اقتصادات هذه الدول أقل من 1% من الناتج المحلي الإجمالي، إلا أن معدلات البطالة فيها تبقى منخفضة نسبيًا.",
+            "slug": "GDP_Unemployment_Rate",
+            "image": "imgs/gdp_unemployment_rate.png",
+            "date": "13 ديسمبر 2025",
+        },
+        {
             "title": "رغم محدودية مساهمة الثروات الطبيعية في اقتصادات هذه الدول، إلا أنها تمتلك قوى عاملة نشطة ومعدلات مشاركة مرتفعة في سوق العمل.",
             "slug": "GDP_workforce",
             "image": "imgs/gdp_workforce.png",
@@ -1250,6 +1256,12 @@ def infograph_detail(request, slug):
             'title': 'رغم محدودية مساهمة الثروات الطبيعية في اقتصادات هذه الدول، إلا أنها تمتلك قوى عاملة نشطة ومعدلات مشاركة مرتفعة في سوق العمل.',
             'date': '11 ديسمبر 2025',
             'image': 'imgs/gdp_workforce.png',
+        },
+        "GDP_Unemployment_Rate": {
+            'slug': 'GDP_Unemployment_Rate',
+            'title': 'رغم أن مساهمة الثروات الطبيعية في اقتصادات هذه الدول أقل من 1% من الناتج المحلي الإجمالي، إلا أن معدلات البطالة فيها تبقى منخفضة نسبيًا.',
+            'date': '13 ديسمبر 2025',
+            'image': 'imgs/gdp_unemployment_rate.png',
         },
 
     }
