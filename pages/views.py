@@ -529,6 +529,12 @@ def osus_journals(request):
 def view_infograph(request):
     infographs = [
         {
+            "title": "رغم أن مساهمة الثروات الطبيعية في هذه الدول لا تتجاوز 1% من الناتج المحلي الإجمالي، إلا أنها حققت مستويات مرتفعة من تغطية خدمات الرعاية الصحية الأساسية.",
+            "slug": "GDP_healthcare_services",
+            "image": "imgs/gdp_healthcare_services.png",
+            "date": "15 ديسمبر 2025",
+        },
+        {
             "title": "رغم أن مساهمة الثروات الطبيعية في اقتصادات هذه الدول أقل من 1% من الناتج المحلي الإجمالي، إلا أن معدلات البطالة فيها تبقى منخفضة نسبيًا.",
             "slug": "GDP_Unemployment_Rate",
             "image": "imgs/gdp_unemployment_rate.png",
@@ -1262,6 +1268,12 @@ def infograph_detail(request, slug):
             'title': 'رغم أن مساهمة الثروات الطبيعية في اقتصادات هذه الدول أقل من 1% من الناتج المحلي الإجمالي، إلا أن معدلات البطالة فيها تبقى منخفضة نسبيًا.',
             'date': '13 ديسمبر 2025',
             'image': 'imgs/gdp_unemployment_rate.png',
+        },
+        "GDP_healthcare_services": {
+            'slug': 'GDP_healthcare_services',
+            'title': 'رغم أن مساهمة الثروات الطبيعية في هذه الدول لا تتجاوز 1% من الناتج المحلي الإجمالي، إلا أنها حققت مستويات مرتفعة من تغطية خدمات الرعاية الصحية الأساسية.',
+            'date': '15 ديسمبر 2025',
+            'image': 'imgs/gdp_healthcare_services.png',
         },
 
     }
