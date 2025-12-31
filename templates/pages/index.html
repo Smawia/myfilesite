@@ -603,6 +603,11 @@
         
         <div class="swiper-wrapper">
             <div class="swiper-slide">
+                <a href="{% url 'infograph_detail' 'GDP_homicides' %}">
+                    <img src="{% static 'imgs/gdp_homicides-index.png' %}" alt="">
+                </a>
+            </div>
+            <div class="swiper-slide">
                 <a href="{% url 'infograph_detail' 'GDP_healthcare_services' %}">
                     <img src="{% static 'imgs/gdp_healthcare_services.png' %}" alt="">
                 </a>
@@ -640,11 +645,6 @@
             <div class="swiper-slide">
                 <a href="{% url 'infograph_detail' 'Largest_workforce_by_country_in_2024' %}">
                     <img src="{% static 'imgs/largest_workforce_by_country_in_2024-index.jpg' %}" alt="">
-                </a>
-            </div>
-            <div class="swiper-slide">
-                <a href="{% url 'infograph_detail' 'Number_of_immigrants_in_Europea_countries_2024' %}">
-                    <img src="{% static 'imgs/number_of_immigrants_in_Europea_countries_2024-index.jpg' %}" alt="">
                 </a>
             </div>
             
