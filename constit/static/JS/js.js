@@ -16,7 +16,7 @@ let global_savedMode = localStorage.getItem('theme');
 // index page
 document.addEventListener("DOMContentLoaded", function () {
     const radios = document.querySelectorAll('.slides input[name="radio-btn"]');
-    let current = 0;
+    let current = -1;
 
     const prevArrow = document.querySelector('.arrow-1.prev');
     const nextArrow = document.querySelector('.arrow-1.next');
@@ -53,7 +53,7 @@ document.addEventListener("DOMContentLoaded", function () {
                 counter = 5; // العودة إلى الصورة الأولى بعد الصورة الأخيرة
             }
             document.getElementById('radio' + counter).checked = true;
-
+            showSlide(counter);
             // ضبط الانتقال التالي بنفس الوقت الثابت                
             setTimeout(sliderTransition, intervalTime);
         }, intervalTime);
