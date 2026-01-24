@@ -122,7 +122,7 @@
         transition: background 0.3s;
         margin-top: -15px;
         font-weight: bold;
-        /*z-index: 10000;*/
+        z-index: 100;
     }
 
     .swiper-button-prev::after,
@@ -370,7 +370,7 @@
             <input type="radio" name="radio-btn" id="radio2">
             <input type="radio" name="radio-btn" id="radio3">
             <input type="radio" name="radio-btn" id="radio4">
-            <input type="radio" name="radio-btn" id="radio5" checked>
+            <input type="radio" name="radio-btn" id="radio5">
             <div class="slide first">
                 <img src="{% static 'imgs/china.jpeg' %}" alt="">
                 <!-- <h2>مدخل إلى الحكومة الإلكترونية</h2> -->
@@ -603,6 +603,36 @@
         
         <div class="swiper-wrapper">
             <div class="swiper-slide">
+                <a href="{% url 'infograph_detail' 'Top_10_countries_in_terms_of_government_spending_on_local_health' %}">
+                    <img src="{% static 'imgs/top_10_countries_in_terms_of_government_spending_on_local_health-index.jpg' %}" alt="">
+                </a>
+            </div>
+            <div class="swiper-slide">
+                <a href="{% url 'infograph_detail' 'Top_10_countries_health_spending' %}">
+                    <img src="{% static 'imgs/top_10_countries_health_spending-index.jpg' %}" alt="">
+                </a>
+            </div>
+            <div class="swiper-slide">
+                <a href="{% url 'infograph_detail' 'GDP_growth_rates_in_2025' %}">
+                    <img src="{% static 'imgs/gdp_growth_rates_in_2025-index.jpg' %}" alt="">
+                </a>
+            </div>
+            <div class="swiper-slide">
+                <a href="{% url 'infograph_detail' 'Global_Knowledge_Index' %}">
+                    <img src="{% static 'imgs/global_knowledge_index-index.jpg' %}" alt="">
+                </a>
+            </div>
+            <div class="swiper-slide">
+                <a href="{% url 'infograph_detail' 'Performance_in_the_2024_Cybersecurity_Index' %}">
+                    <img src="{% static 'imgs/performance_in_the_2024_Cybersecurity_Index.jpg' %}" alt="">
+                </a>
+            </div>
+            <div class="swiper-slide">
+                <a href="{% url 'infograph_detail' 'Global_perspective_on_environmental_performance_2024' %}">
+                    <img src="{% static 'imgs/global_perspective_on_environmental_performance_2024-index.jpg' %}" alt="">
+                </a>
+            </div>
+            <div class="swiper-slide">
                 <a href="{% url 'infograph_detail' 'GDP_homicides' %}">
                     <img src="{% static 'imgs/gdp_homicides-index.png' %}" alt="">
                 </a>
@@ -615,36 +645,6 @@
             <div class="swiper-slide">
                 <a href="{% url 'infograph_detail' 'GDP_Unemployment_Rate' %}">
                     <img src="{% static 'imgs/gdp_unemployment_rate.png' %}" alt="">
-                </a>
-            </div>
-            <div class="swiper-slide">
-                <a href="{% url 'infograph_detail' 'GDP_workforce' %}">
-                    <img src="{% static 'imgs/gdp_workforce.png' %}" alt="">
-                </a>
-            </div>
-            <div class="swiper-slide">
-                <a href="{% url 'infograph_detail' 'GDP_government_effectiveness' %}">
-                    <img src="{% static 'imgs/gdp_government_effectiveness.png' %}" alt="">
-                </a>
-            </div>
-            <div class="swiper-slide">
-                <a href="{% url 'infograph_detail' 'GDP_per_capita_income' %}">
-                    <img src="{% static 'imgs/gdp_per_capita_income.jpg' %}" alt="">
-                </a>
-            </div>
-            <div class="swiper-slide">
-                <a href="{% url 'infograph_detail' 'GDP_per_capita' %}">
-                    <img src="{% static 'imgs/gdp_per_capita.png' %}" alt="">
-                </a>
-            </div>
-            <div class="swiper-slide">
-                <a href="{% url 'infograph_detail' 'Gross_domestic_product_2024' %}">
-                    <img src="{% static 'imgs/gross_domestic_product-index.png' %}" alt="">
-                </a>
-            </div>
-            <div class="swiper-slide">
-                <a href="{% url 'infograph_detail' 'Largest_workforce_by_country_in_2024' %}">
-                    <img src="{% static 'imgs/largest_workforce_by_country_in_2024-index.jpg' %}" alt="">
                 </a>
             </div>
             

@@ -3,6 +3,33 @@
 {% block title %}| دراسات أُسس{% endblock %}
 {% block content %}
 <div class="container index-articles all-studies">
+    <h1 class="spe-h1">دراسات أُسس (العدد الرابع)</h1>
+</div>
+<div class="container index-articles all-art container-margin">
+    
+    <div class="show-all-studies">
+        {% for data in issue_four %}
+        <div class="studies-card show-cards-number">
+            <a href="{{ data.url }}" class="journals-a">
+                <img src="{% static data.image %}" alt="">
+            </a>
+            <a href="{{ data.url }}">
+                <div class="study-text-info">
+                    <span>
+                        {{ data.date}}
+                    </span>
+                    <p class="card-title">
+                        {{ data.subject }}
+                    </p>
+                </div>
+            </a>
+        </div>
+        {% endfor %}
+    </div>
+    
+</div>
+
+<div class="container index-articles all-studies">
     <h1 class="spe-h1">دراسات أُسس (العدد الثالث)</h1>
 </div>
 <div class="container index-articles all-art container-margin">
@@ -18,7 +45,7 @@
                     <span>
                         {{ data.date}}
                     </span>
-                    <p>
+                    <p class="card-title">
                         {{ data.subject }}
                     </p>
                 </div>

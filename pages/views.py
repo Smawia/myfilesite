@@ -8,6 +8,7 @@ from comments.models import Comments
 from comments.forms import DocumentForm
 from django.core.paginator import Paginator
 from django.db.models import Q  # لاستعمال البحث المتقدم
+from django.http import FileResponse
 import os
 from django.conf import settings
 import json
@@ -65,23 +66,23 @@ def view_osus_fourth_content(requst):
 
 def index(request):
     videos = [
+         {
+            "url": "/studies/16/",
+            "video": "2NQktms2hzU",
+            "date": "2026-1-20",
+            "subject": "التجربة التعليمية في فنلندا: تعليم بلا ضغط… ونتائج مذهلة"
+        },
+        {
+            "url": "/studies/15/",
+            "video": "oaIdb4uBwwg",
+            "date": "2026-1-4",
+            "subject": "الاقتصاد المقاوم: كيف تصمد الدول أمام الأزمات والعقوبات الاقتصادية؟"
+        },
         {
             "url": "/studies/14/",
             "video": "12mo6GxiMxk",
             "date": "2025-12-16",
             "subject": "كوليندا كيتاروفيتش: امرأة كرواتيا الحديدية ونموذج القيادة النسوية في السياسة الأوروبية"
-        },
-        {
-            "url": "/studies/13/",
-            "video": "PlP0-APrXc4",
-            "date": "2025-12-14",
-            "subject": "حليمة يعقوب... حين تصنع الإرادة امرأة تقود دولة"
-        },
-        {
-            "url": "/studies/12/",
-            "video": "etbGugO-sK4",
-            "date": "2025-11-17",
-            "subject": "النقد الإلكتروني: رحلة التطور من الماضي إلى المستقبل | كيف تتغير النقود في عصر الرقمنة؟"
         },
     ]
 
@@ -528,6 +529,42 @@ def osus_journals(request):
 
 def view_infograph(request):
     infographs = [
+        {
+            "title": "أفضل 10 دول من حيث الإنفاق الحكومي العام المحلي على الصحة",
+            "slug": "Top_10_countries_in_terms_of_government_spending_on_local_health",
+            "image": "imgs/top_10_countries_in_terms_of_government_spending_on_local_health.jpg",
+            "date": "17 يناير 2025",
+        },
+        {
+            "title": "أفضل 10 دول من حيث الإنفاق الصحي العام الحكومي المحلي",
+            "slug": "Top_10_countries_health_spending",
+            "image": "imgs/top_10_countries_health_spending.jpg",
+            "date": "14 يناير 2025",
+        },
+        {
+            "title": "أعلى 10 دول في العالم من حيث معدلات النمو الحقيقي المتوقع للناتج المحلي الإجمالي في عام 2025",
+            "slug": "GDP_growth_rates_in_2025",
+            "image": "imgs/gdp_growth_rates_in_2025.jpg",
+            "date": "10 يناير 2025",
+        },
+        {
+            "title": "أفضل عشر دول عالميًا في مؤشر المعرفة العالمي لعام 2025",
+            "slug": "Global_Knowledge_Index",
+            "image": "imgs/global_knowledge_index.jpg",
+            "date": "7 يناير 2025",
+        },
+        {
+            "title": "تقييم أداء الدول في مؤشر الأمن السيبراني لعام 2024",
+            "slug": "Performance_in_the_2024_Cybersecurity_Index",
+            "image": "imgs/performance_in_the_2024_Cybersecurity_Index.jpg",
+            "date": "21 ديسمبر 2025",
+        },
+        {
+            "title": "منظور عالمي للأداء البيئي 2024.. الدول الأفضل أداءً",
+            "slug": "Global_perspective_on_environmental_performance_2024",
+            "image": "imgs/global_perspective_on_environmental_performance_2024.jpg",
+            "date": "19 ديسمبر 2025",
+        },
         {
             "title": "رغم أن مساهمة الثروات الطبيعية في اقتصادات هذه الدول لا تتجاوز 1% من الناتج المحلي الإجمالي، إلا أن معدلات الجريمة والقتل العمد فيها تبقى من بين الأدنى عالميًا.",
             "slug": "GDP_homicides",
@@ -1247,7 +1284,7 @@ def infograph_detail(request, slug):
         },
         "GDP_per_capita": {
             'slug': 'GDP_per_capita',
-            'title': 'رغم محدودية مساهمة الثروات الطبيعية (أقل من 1%)، تُعد هذه الدول من أقوى اقتصادات العالم، ويُبيّن ما يلي نصيب الفرد من الدخل القومي الإجمالي فيها.',
+            'title': 'في هذه الدول، لا تتجاوز مساهمة الثروات الطبيعية 1% من الناتج المحلي الإجمالي، ومع ذلك تمتلك اقتصادات كبرى عالميًا. تعرّف على الناتج المحلي الإجمالي للفرد فيها.',
             'date': '5 ديسمبر 2025',
             'image': 'imgs/gdp_per_capita.png',
         },
@@ -1287,7 +1324,42 @@ def infograph_detail(request, slug):
             'date': '17 ديسمبر 2025',
             'image': 'imgs/gdp_homicides.png',
         },
-
+        "Global_perspective_on_environmental_performance_2024": {
+            'slug': 'Global_perspective_on_environmental_performance_2024',
+            'title': 'منظور عالمي للأداء البيئي 2024.. الدول الأفضل أداءً',
+            'date': '19 ديسمبر 2025',
+            'image': 'imgs/global_perspective_on_environmental_performance_2024.jpg',
+        },
+        "Performance_in_the_2024_Cybersecurity_Index": {
+            'slug': 'Performance_in_the_2024_Cybersecurity_Index',
+            'title': 'تقييم أداء الدول في مؤشر الأمن السيبراني لعام 2024',
+            'date': '21 ديسمبر 2025',
+            'image': 'imgs/performance_in_the_2024_Cybersecurity_Index.jpg',
+        },
+        "Global_Knowledge_Index": {
+            'slug': 'Global_Knowledge_Index',
+            'title': 'أفضل عشر دول عالميًا في مؤشر المعرفة العالمي لعام 2025',
+            'date': '7 يناير 2025',
+            'image': 'imgs/global_knowledge_index.jpg',
+        },
+        "GDP_growth_rates_in_2025": {
+            'slug': 'GDP_growth_rates_in_2025',
+            'title': 'أعلى 10 دول في العالم من حيث معدلات النمو الحقيقي المتوقع للناتج المحلي الإجمالي في عام 2025',
+            'date': '10 يناير 2025',
+            'image': 'imgs/gdp_growth_rates_in_2025.jpg',
+        },
+        "Top_10_countries_health_spending": {
+            'slug': 'Top_10_countries_health_spending',
+            'title': 'أفضل 10 دول من حيث الإنفاق الصحي العام الحكومي المحلي',
+            'date': '14 يناير 2025',
+            'image': 'imgs/top_10_countries_health_spending.jpg',
+        },
+        "Top_10_countries_in_terms_of_government_spending_on_local_health": {
+            'slug': 'Top_10_countries_in_terms_of_government_spending_on_local_health',
+            'title': 'أفضل 10 دول من حيث الإنفاق الحكومي العام المحلي على الصحة',
+            'date': '17 يناير 2025',
+            'image': 'imgs/top_10_countries_in_terms_of_government_spending_on_local_health.jpg',
+        },
     }
 
     detail = data.get(slug)
@@ -1331,6 +1403,8 @@ def journal_studies(request):
 
     issue_four = [
         {'subject': 'التمكين الاقتصادي والاكتفاء الذاتي في اليمن', 'url': 'EconomicEmpowerment', 'image': 'imgs/Journal-17.jpg', 'date': '23 ديسمبر 2025'}, 
+        {'subject': 'الأمن المائي في اليمن', 'url': 'WaterSecurityInYemen', 'image': 'imgs/Journal-18.png', 'date': '23 ديسمبر 2025'}, 
+        {'subject': 'المنظمات الدولية ودورها التنموي', 'url': 'InternationalOrganizationsandTheirDevelopmentalRole', 'image': 'imgs/Journal-19.jpeg', 'date': '23 ديسمبر 2025'}, 
     ]
 
     context = {
@@ -1392,8 +1466,26 @@ def moroccan_higher_education_in_economic_development(request):
 def economic_empowerment(request):
     return render(request, 'pages/economic_empowerment_and_self-Sufficiency_in_yemen.html')
 
+def water_security_in_yemen(request):
+    return render(request, 'pages/water_security_in_yemen.html')
+
+def international_organizations_and_their_developmental_role(request):
+     return render(request, 'pages/international_organizations_and_their_developmental_role.html')
+
 def motion_graphics(request):
     videos = [
+        {
+            "url": "/studies/16/",
+            "video": "https://youtu.be/2NQktms2hzU",
+            "date": "2026-1-20",
+            "subject": "التجربة التعليمية في فنلندا: تعليم بلا ضغط… ونتائج مذهلة"
+        },
+        {
+            "url": "/studies/15/",
+            "video": "https://youtu.be/oaIdb4uBwwg",
+            "date": "2026-1-4",
+            "subject": "الاقتصاد المقاوم: كيف تصمد الدول أمام الأزمات والعقوبات الاقتصادية؟"
+        },
         {
             "url": "/studies/14/",
             "video": "https://youtu.be/12mo6GxiMxk",

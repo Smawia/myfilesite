@@ -10373,12 +10373,12 @@ tr._idGenTableRowColumn-52 {
     }
 
     .table-caption {
-        font-size: 1.1em;
+        font-size: 17.6px;
         margin-bottom: 10px;
     }
 
     .table-caption-p {
-        font-size: 1.1em !important;
+        font-size: 17.6px !important;
     }
 }
 
@@ -10440,11 +10440,11 @@ tr._idGenTableRowColumn-52 {
     }
 
     .table-caption {
-        font-size: 1.3em;
+        font-size: 20.8px;
     }
 
     .table-caption-p {
-        font-size: 1.3em !important;
+        font-size: 20.8px !important;
 
     }
 }
@@ -10519,6 +10519,10 @@ tr._idGenTableRowColumn-52 {
 
 .fig-imge-2 {
     width: 75% !important;
+}
+
+.fig-imge-8 {
+    width: 40% !important;
 }
 
 .fig-imge-3 {
@@ -10693,6 +10697,10 @@ span.Hyperlink {
 @media (min-width: 575px) {
     .source {
         font-size: 17px;
+    
+    }
+    .source-2 {
+        font-size: 15px;
     }
 }
 
@@ -10709,6 +10717,10 @@ span.Hyperlink {
         margin-top: 20px;
         font-size: 17px;
         margin-bottom: 40px;
+    }
+
+    .source-2 {
+        font-size: 15px;
     }
 
     .fig-imge-2 {
@@ -10739,8 +10751,18 @@ span.Hyperlink {
     }
 }
 
+@media (min-width: 768px) {
+    .source-2 {
+        font-size: 16px;
+    }
+}
+
 @media (min-width: 992px) {
     .source {
+        font-size: 18px;
+    }
+
+    .source-2 {
         font-size: 18px;
     }
 }
@@ -10915,7 +10937,7 @@ span.CharOverride-3 {
 
 @media (min-width: 575px) {
     .study-figcaption {
-        font-size: 1.1em
+        font-size: 17.6px;
     }
 }
 
@@ -10923,7 +10945,7 @@ span.CharOverride-3 {
 
 @media (min-width: 992px) {
     .study-figcaption {
-        font-size: 1.3em;
+        font-size: 20.8px;
         line-height: 1.4;
     }
 }
@@ -11087,6 +11109,12 @@ body.dark-mode .box {
     margin-bottom: 30px;
 }
 
+.source-2 {
+    text-align: center;
+    margin-left: 5%;
+    margin-right: 5%;
+}
+ 
 .source-link a {
     color: white !important;
 }
@@ -11791,6 +11819,10 @@ span.CharOverride-1 {
         width: 95% !important;
     }
 
+    .fig-imge-8 {
+        width: 50% !important;
+    }
+
     .modify-margin {
         margin: 16px;
     }
@@ -12373,7 +12405,7 @@ table.TableOverride-1 {
 
 @media (min-width: 992px) {
 .infograph-card .card-title {        
-  max-height: calc(1.5em * 1) !important;   /* يحدد الارتفاع بالضبط حسب عدد الأسطر */
+  max-height: calc(1.3em * 1) !important;   /* يحدد الارتفاع بالضبط حسب عدد الأسطر */
 }
 
 }
@@ -12399,6 +12431,22 @@ table.TableOverride-1 {
 
 
 /* study-3-1 */
+.study-3-1 td.Cell-Style-1 {
+    border-bottom-color: #939598;
+    border-bottom-width: 1px;
+    border-left-color: #939598;
+    border-left-width: 1px;
+    border-right-color: #939598;
+    border-right-width: 1px;
+    border-top-color: #939598;
+    border-top-width: 1px;
+    padding-bottom: 6px;
+    padding-left: 3px;
+    padding-right: 3px;
+    padding-top: 6px;
+    vertical-align: middle;
+}
+
 .study-3-1 td.CellOverride-1 {
 	border-left-width:1px;
 	border-right-color:#000000;
@@ -12540,11 +12588,11 @@ table.TableOverride-1 {
 	min-height:56px;
 }
 .study-3-1 tr._idGenTableRowColumn-17 {
-	background-color:#e6e7e8;
+	background-color:#ffffff;
 	min-height:56px;
 }
 .study-3-1 tr._idGenTableRowColumn-18 {
-	background-color:#ffffff;
+	background-color:#e6e7e8;
 	min-height:54px;
 }
 .study-3-1 tr._idGenTableRowColumn-19 {
@@ -13049,4 +13097,615 @@ span.CharOverride-2 {
 .refe-instic {
     display: block;
     direction: ltr;
+}
+
+/* table css */
+.study-4-1 td.CellOverride-2 {
+	background-color:#e7e6e6;
+	padding-bottom:4px;
+	padding-left:4px;
+	padding-right:4px;
+	padding-top:4px;
+	vertical-align:middle;
+}
+.study-4-1 td.CellOverride-3 {
+	padding-bottom:4px;
+	padding-left:4px;
+	padding-right:4px;
+	padding-top:4px;
+	vertical-align:middle;
+    background-color: white;
+}
+.study-4-1 td.CellOverride-4 {
+	background-color:#e7e6e6;
+	padding-bottom:6px;
+	padding-left:4px;
+	padding-right:4px;
+	padding-top:4px;
+	vertical-align:middle;
+}
+.study-4-1 td.CellOverride-5 {
+	padding-bottom:6px;
+	padding-left:4px;
+	padding-right:4px;
+	padding-top:4px;
+	vertical-align:middle;
+    background-color: white;
+}
+.study-4-1 td.CellOverride-6 {
+	background-color:#2a4091;
+	vertical-align:middle;
+}
+.study-4-1 td.CellOverride-7 {
+	background-color:#2a4091;
+	padding-bottom:3px;
+	padding-left:3px;
+	padding-right:3px;
+	padding-top:3px;
+	vertical-align:middle;
+}
+.study-4-1 td.CellOverride-8 {
+	background-color:#e7e6e6;
+	vertical-align:middle;
+}
+.study-4-1 td.CellOverride-9 {
+	background-color:#ffffff;
+	padding-bottom:3px;
+	padding-left:3px;
+	padding-right:3px;
+	padding-top:3px;
+	vertical-align:middle;
+}
+.study-4-1 td.CellOverride-10 {
+	background-color:#ffffff;
+	vertical-align:middle;
+}
+.study-4-1 td.CellOverride-11 {
+	background-color:#2a4091;
+	padding-bottom:6px;
+	padding-top:3px;
+	vertical-align:middle;
+}
+.study-4-1 td.CellOverride-12 {
+	background-color:#2b3990;
+	padding-bottom:9px;
+	padding-left:0px;
+	padding-right:0px;
+	padding-top:0px;
+	vertical-align:middle;
+}
+.study-4-1 td.CellOverride-13 {
+	background-color:#2b3990;
+	padding-bottom:6px;
+	padding-left:0px;
+	padding-right:0px;
+	padding-top:0px;
+	vertical-align:middle;
+}
+.study-4-1 td.CellOverride-14 {
+	background-color:#2b3990;
+	padding-bottom:4px;
+	padding-left:0px;
+	padding-right:0px;
+	padding-top:0px;
+	vertical-align:middle;
+}
+.study-4-1 td.CellOverride-15 {
+	background-color:#e7e6e6;
+	padding-bottom:3px;
+	padding-left:0px;
+	padding-right:0px;
+	padding-top:0px;
+	vertical-align:middle;
+}
+.study-4-1 td.CellOverride-16 {
+	background-color:#e7e6e6;
+	padding-bottom:4px;
+	padding-left:0px;
+	padding-right:0px;
+	padding-top:0px;
+	vertical-align:middle;
+}
+.study-4-1 td.CellOverride-17 {
+	background-color:#ffffff;
+	padding-bottom:4px;
+	padding-left:0px;
+	padding-right:0px;
+	padding-top:0px;
+	vertical-align:middle;
+}
+
+.study-4-1 col._idGenTableRowColumn-1 {
+	width:18px;
+}
+.study-4-1 col._idGenTableRowColumn-2 {
+	width:64px;
+}
+.study-4-1 col._idGenTableRowColumn-3 {
+	width:78px;
+}
+.study-4-1 col._idGenTableRowColumn-4 {
+	width:107px;
+}
+.study-4-1 col._idGenTableRowColumn-5 {
+	width:103px;
+}
+.study-4-1 tr._idGenTableRowColumn-6 {
+	min-height:17px;
+}
+.study-4-1 tr._idGenTableRowColumn-7 {
+	min-height:54px;
+    background-color: white;
+}
+.study-4-1 tr._idGenTableRowColumn-8 {
+	min-height:65px;
+}
+.study-4-1 tr._idGenTableRowColumn-9 {
+	min-height:78px;
+}
+.study-4-1 col._idGenTableRowColumn-10 {
+	width:71px;
+}
+.study-4-1 col._idGenTableRowColumn-11 {
+	width:31px;
+}
+.study-4-1 tr._idGenTableRowColumn-12 {
+	min-height:16px;
+}
+.study-4-1 col._idGenTableRowColumn-13 {
+	width:48px;
+}
+.study-4-1 col._idGenTableRowColumn-14 {
+	width:68px;
+}
+.study-4-1 tr._idGenTableRowColumn-15 {
+	min-height:27px;
+}
+.study-4-1 col._idGenTableRowColumn-16 {
+	width:17px;
+}
+.study-4-1 col._idGenTableRowColumn-17 {
+	width:156px;
+}
+.study-4-1 col._idGenTableRowColumn-18 {
+	width:43px;
+}
+.study-4-1 table._idGenTablePara-1 {
+	margin-left:auto;
+	margin-right:auto;
+}
+
+
+/* study-4-2 */
+.study-4-2 td.CellOverride-1 {
+	background-color:#2b3990;
+	padding-bottom:3px;
+	padding-left:0px;
+	padding-right:0px;
+	padding-top:0px;
+	vertical-align:middle;
+}
+.study-4-2 td.CellOverride-2 {
+	background-color:#e7e6e6;
+	padding-bottom:3px;
+	padding-left:0px;
+	padding-right:0px;
+	padding-top:0px;
+	vertical-align:middle;
+}
+.study-4-2 td.CellOverride-3 {
+	padding-bottom:3px;
+	padding-left:0px;
+	padding-right:0px;
+	padding-top:0px;
+	vertical-align:middle;
+    background-color: #ffffff;
+}
+
+.study-4-2 col._idGenTableRowColumn-1 {
+	width:159px;
+}
+.study-4-2 tr._idGenTableRowColumn-2 {
+	min-height:28px;
+}
+.study-4-2 tr._idGenTableRowColumn-3 {
+	min-height:26px;
+}
+.study-4-2 table._idGenTablePara-1 {
+	margin-left:auto;
+	margin-right:auto;
+}
+
+
+
+/* study-4-3 */
+.study-4-3 td.CellOverride-1 {
+	background-color:#2a4091;
+	border-bottom-color:#000000;
+	border-left-color:#000000;
+	border-right-color:#000000;
+	border-top-color:#000000;
+	padding-bottom:6px;
+	padding-left:6px;
+	padding-right:6px;
+	padding-top:3px;
+	vertical-align:middle;
+}
+.study-4-3 td.CellOverride-2 {
+	background-color:#e7e6e6;
+	border-top-color:#000000;
+	padding-bottom:6px;
+	padding-left:6px;
+	padding-right:6px;
+	padding-top:3px;
+	vertical-align:middle;
+}
+.study-4-3 td.CellOverride-3 {
+	border-top-color:#000000;
+	padding-bottom:6px;
+	padding-left:6px;
+	padding-right:6px;
+	padding-top:3px;
+	vertical-align:middle;
+}
+.study-4-3 td.CellOverride-4 {
+	background-color:#e7e6e6;
+	padding-bottom:6px;
+	padding-left:6px;
+	padding-right:6px;
+	padding-top:3px;
+	vertical-align:middle;
+}
+.study-4-3 td.CellOverride-5 {
+	padding-bottom:6px;
+	padding-left:6px;
+	padding-right:6px;
+	padding-top:3px;
+	vertical-align:middle;
+}
+.study-4-3 td.CellOverride-6 {
+	background-color:#2a4091;
+	padding-bottom:9px;
+	padding-left:4px;
+	padding-right:4px;
+	padding-top:4px;
+	vertical-align:middle;
+}
+.study-4-3 td.CellOverride-7 {
+	background-color:#e7e6e6;
+	padding-bottom:9px;
+	padding-left:4px;
+	padding-right:4px;
+	padding-top:4px;
+	vertical-align:middle;
+}
+.study-4-3 td.CellOverride-8 {
+	padding-bottom:9px;
+	padding-left:4px;
+	padding-right:4px;
+	padding-top:4px;
+	vertical-align:middle;
+    background-color: #ffffff;
+}
+.study-4-3 td.CellOverride-9 {
+	background-color:#2a4091;
+	padding-bottom:6px;
+	padding-left:6px;
+	padding-right:6px;
+	padding-top:6px;
+	vertical-align:middle;
+}
+.study-4-3 td.CellOverride-10 {
+	background-color:#e7e6e6;
+	padding-bottom:9px;
+	padding-left:6px;
+	padding-right:6px;
+	padding-top:6px;
+	vertical-align:middle;
+}
+.study-4-3 td.CellOverride-11 {
+	padding-bottom:9px;
+	padding-left:6px;
+	padding-right:6px;
+	padding-top:6px;
+	vertical-align:middle;
+}
+.study-4-3 td.CellOverride-12 {
+	background-color:#2a4091;
+	padding-bottom:3px;
+	padding-left:3px;
+	padding-right:3px;
+	padding-top:0px;
+	vertical-align:middle;
+}
+.study-4-3 td.CellOverride-13 {
+	background-color:#e7e6e6;
+	padding-bottom:6px;
+	padding-left:3px;
+	padding-right:3px;
+	padding-top:3px;
+	vertical-align:middle;
+}
+.study-4-3 td.CellOverride-14 {
+	padding-bottom:6px;
+	padding-left:3px;
+	padding-right:3px;
+	padding-top:3px;
+	vertical-align:middle;
+}
+.study-4-3 td.CellOverride-15 {
+	background-color:#2a4091;
+	padding-bottom:9px;
+	padding-left:6px;
+	padding-right:6px;
+	padding-top:6px;
+	vertical-align:middle;
+}
+.study-4-3 td.CellOverride-16 {
+	background-color:#2a4091;
+	padding-bottom:6px;
+	padding-left:6px;
+	padding-right:6px;
+	padding-top:3px;
+	vertical-align:middle;
+}
+.study-4-3 td.CellOverride-17 {
+	background-color:#e7e6e6;
+	padding-bottom:9px;
+	padding-left:6px;
+	padding-right:6px;
+	padding-top:3px;
+	vertical-align:middle;
+}
+.study-4-3 td.CellOverride-18 {
+	padding-bottom:9px;
+	padding-left:6px;
+	padding-right:6px;
+	padding-top:3px;
+	vertical-align:middle;
+}
+.study-4-3 td.CellOverride-19 {
+	background-color:#2a4091;
+	padding-bottom:3px;
+	padding-left:0px;
+	padding-right:0px;
+	padding-top:0px;
+	vertical-align:middle;
+}
+.study-4-3 td.CellOverride-20 {
+	background-color:#e7e6e6;
+	padding-bottom:3px;
+	padding-left:0px;
+	padding-right:0px;
+	padding-top:0px;
+	vertical-align:middle;
+}
+.study-4-3 td.CellOverride-21 {
+	padding-bottom:3px;
+	padding-left:0px;
+	padding-right:0px;
+	padding-top:0px;
+	vertical-align:middle;
+}
+.study-4-3 td.CellOverride-22 {
+	background-color:#e7e6e6;
+	padding-bottom:3px;
+	padding-left:3px;
+	padding-right:3px;
+	padding-top:0px;
+	vertical-align:middle;
+}
+.study-4-3 td.CellOverride-23 {
+	padding-bottom:3px;
+	padding-left:3px;
+	padding-right:3px;
+	padding-top:0px;
+	vertical-align:middle;
+}
+.study-4-3 td.CellOverride-24 {
+	background-color:#e7e6e6;
+	padding-bottom:6px;
+	padding-left:6px;
+	padding-right:6px;
+	padding-top:6px;
+	vertical-align:middle;
+}
+.study-4-3 td.CellOverride-25 {
+	padding-bottom:6px;
+	padding-left:6px;
+	padding-right:6px;
+	padding-top:6px;
+	vertical-align:middle;
+}
+.study-4-3 td.CellOverride-26 {
+	background-color:#2a4091;
+	padding-bottom:6px;
+	padding-top:3px;
+	vertical-align:middle;
+}
+.study-4-3 td.CellOverride-27 {
+	background-color:#e7e6e6;
+	vertical-align:middle;
+}
+.study-4-3 td.CellOverride-28 {
+	vertical-align:middle;
+}
+.study-4-3 td.CellOverride-29 {
+	background-color:#2a4091;
+	padding-bottom:9px;
+	padding-left:6px;
+	padding-right:3px;
+	padding-top:6px;
+	vertical-align:middle;
+}
+.study-4-3 td.CellOverride-30 {
+	background-color:#e7e6e6;
+	padding-bottom:9px;
+	padding-left:3px;
+	padding-right:3px;
+	padding-top:6px;
+	vertical-align:middle;
+}
+.study-4-3 td.CellOverride-31 {
+	padding-bottom:9px;
+	padding-left:3px;
+	padding-right:3px;
+	padding-top:6px;
+	vertical-align:middle;
+}
+
+.study-4-3 col._idGenTableRowColumn-1 {
+	width:86px;
+}
+.study-4-3 col._idGenTableRowColumn-2 {
+	width:133px;
+}
+.study-4-3 col._idGenTableRowColumn-3 {
+	width:148px;
+}
+.study-4-3 tr._idGenTableRowColumn-4 {
+	min-height:18px;
+}
+.study-4-3 tr._idGenTableRowColumn-5 {
+	min-height:46px;
+    background-color: #ffffff;
+}
+.study-4-3 tr._idGenTableRowColumn-6 {
+	min-height:32px;
+}
+.study-4-3 tr._idGenTableRowColumn-7 {
+    background-color: #ffffff;
+	min-height:24px;
+}
+.study-4-3 col._idGenTableRowColumn-8 {
+	width:72px;
+}
+.study-4-3 col._idGenTableRowColumn-9 {
+	width:296px;
+}
+.study-4-3 tr._idGenTableRowColumn-10 {
+    background-color: #ffffff;
+	min-height:22px;
+}
+.study-4-3 tr._idGenTableRowColumn-11 {
+	min-height:36px;
+}
+.study-4-3 col._idGenTableRowColumn-12 {
+	width:126px;
+}
+.study-4-3 col._idGenTableRowColumn-13 {
+	width:70px;
+}
+.study-4-3 col._idGenTableRowColumn-14 {
+	width:171px;
+}
+.study-4-3 tr._idGenTableRowColumn-15 {
+    background-color: #ffffff;
+	min-height:21px;
+}
+.study-4-3 tr._idGenTableRowColumn-16 {
+	min-height:38px;
+}
+.study-4-3 col._idGenTableRowColumn-17 {
+	width:89px;
+}
+.study-4-3 col._idGenTableRowColumn-18 {
+	width:151px;
+}
+.study-4-3 col._idGenTableRowColumn-19 {
+	width:128px;
+}
+.study-4-3 tr._idGenTableRowColumn-20 {
+    background-color: #ffffff;
+	height:37px;
+}
+.study-4-3 col._idGenTableRowColumn-21 {
+	width:113px;
+}
+.study-4-3 col._idGenTableRowColumn-22 {
+	width:255px;
+}
+.study-4-3 col._idGenTableRowColumn-23 {
+	width:97px;
+}
+.study-4-3 col._idGenTableRowColumn-24 {
+	width:67px;
+}
+.study-4-3 col._idGenTableRowColumn-25 {
+	width:101px;
+}
+.study-4-3 col._idGenTableRowColumn-26 {
+	width:103px;
+}
+.study-4-3 col._idGenTableRowColumn-27 {
+	width:297px;
+}
+.study-4-3 col._idGenTableRowColumn-28 {
+	width:53px;
+}
+.study-4-3 col._idGenTableRowColumn-29 {
+	width:314px;
+}
+.study-4-3 tr._idGenTableRowColumn-30 {
+	height:17px;
+}
+.study-4-3 tr._idGenTableRowColumn-31 {
+    background-color: #ffffff;
+	height:40px;
+}
+.study-4-3 tr._idGenTableRowColumn-32 {
+	min-height:17px;
+}
+.study-4-3 tr._idGenTableRowColumn-33 {
+	min-height:40px;
+}
+.study-4-3 tr._idGenTableRowColumn-34 {
+	min-height:16px;
+}
+.study-4-3 tr._idGenTableRowColumn-35 {
+    background-color: #ffffff;
+	min-height:23px;
+}
+.study-4-3 col._idGenTableRowColumn-36 {
+	width:57px;
+}
+.study-4-3 col._idGenTableRowColumn-37 {
+	width:77px;
+}
+.study-4-3 col._idGenTableRowColumn-38 {
+	width:78px;
+}
+.study-4-3 col._idGenTableRowColumn-39 {
+	width:79px;
+}
+.study-4-3 col._idGenTableRowColumn-40 {
+	width:92px;
+}
+.study-4-3 tr._idGenTableRowColumn-41 {
+    background-color: #ffffff;
+	min-height:31px;
+}
+.study-4-3 tr._idGenTableRowColumn-42 {
+    background-color: #ffffff;
+	min-height:20px;
+}
+.study-4-3 tr._idGenTableRowColumn-43 {
+    background-color: #ffffff;
+	min-height:33px;
+}
+.study-4-3 col._idGenTableRowColumn-44 {
+	width:108px;
+}
+.study-4-3 col._idGenTableRowColumn-45 {
+	width:206px;
+}
+.study-4-3 table._idGenTablePara-1 {
+	margin-left:23px;
+}
+.study-4-3 table._idGenTablePara-2 {
+	margin-left:auto;
+	margin-right:auto;
+}
+.study-4-3 table._idGenTablePara-3 {
+	margin-right:20px;
 }

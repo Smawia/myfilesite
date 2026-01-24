@@ -57,6 +57,9 @@ urlpatterns = [
     path('journals/osus/articles/TheJudicialSystem',views.the_judicial_system,name='the_judicial_system'),
     path('journals/osus/articles/TheRoleOfCivilSocietyOrganizationsInLocalDevelopment',views.civil_society_organizations,name='civil_society_organizations'),
     path('journals/osus/articles/MoroccanHigherEducationInEconomicDevelopment',views.moroccan_higher_education_in_economic_development,name='moroccan_higher_education_in_economic_development'),
+    path('journals/osus/articles/EconomicEmpowerment',views.economic_empowerment,name='economic_empowerment'),
+    path('journals/osus/articles/WaterSecurityInYemen',views.water_security_in_yemen,name='water_security_in_yemen'),
+    path('journals/osus/articles/InternationalOrganizationsandTheirDevelopmentalRole',views.international_organizations_and_their_developmental_role,name='international_organizations_and_their_developmental_role'),
 
     # new studies
     path('articles/CurrentEconomicSituation',views.current_economic_situation,name='current_economic_situation'),
