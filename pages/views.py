@@ -135,9 +135,15 @@ def studies(request):
         {'subject': 'أي دور للتعليم العالي بالمغرب في التنمية الاقتصادية', 'url': 'MoroccanHigherEducationInEconomicDevelopment', 'image': 'Journal-16.jpg', 'date': '25 2025 سبتمبر', 'from_db': False}
     ]
 
+    issue_four = [
+        {'subject': 'التمكين الاقتصادي والاكتفاء الذاتي في اليمن', 'url': 'EconomicEmpowerment', 'image': 'Journal-17-index.jpg', 'date': '23 ديسمبر 2025', 'from_db': False}, 
+        {'subject': 'الأمن المائي في اليمن', 'url': 'WaterSecurityInYemen', 'image': 'Journal-18-index.jpg', 'date': '23 ديسمبر 2025', 'from_db': False}, 
+        {'subject': 'المنظمات الدولية ودورها التنموي', 'url': 'InternationalOrganizationsandTheirDevelopmentalRole', 'image': 'Journal-19-index.jpg', 'date': '23 ديسمبر 2025', 'from_db': False}, 
+    ]
+
     # إضافة القوائم الثابتة بعد البحث فيها
     if query:
-        for item in issue_one + issue_two + issue_three:
+        for item in issue_one + issue_two + issue_three + issue_four:
             if not query or query in item['subject']:
                 combined_results.append({
                     'subject': item['subject'],
@@ -1402,9 +1408,9 @@ def journal_studies(request):
     ]
 
     issue_four = [
-        {'subject': 'التمكين الاقتصادي والاكتفاء الذاتي في اليمن', 'url': 'EconomicEmpowerment', 'image': 'imgs/Journal-17.jpg', 'date': '23 ديسمبر 2025'}, 
-        {'subject': 'الأمن المائي في اليمن', 'url': 'WaterSecurityInYemen', 'image': 'imgs/Journal-18.png', 'date': '23 ديسمبر 2025'}, 
-        {'subject': 'المنظمات الدولية ودورها التنموي', 'url': 'InternationalOrganizationsandTheirDevelopmentalRole', 'image': 'imgs/Journal-19.jpeg', 'date': '23 ديسمبر 2025'}, 
+        {'subject': 'التمكين الاقتصادي والاكتفاء الذاتي في اليمن', 'url': 'EconomicEmpowerment', 'image': 'imgs/Journal-17-index.jpg', 'date': '23 ديسمبر 2025'}, 
+        {'subject': 'الأمن المائي في اليمن', 'url': 'WaterSecurityInYemen', 'image': 'imgs/Journal-18-index.jpg', 'date': '23 ديسمبر 2025'}, 
+        {'subject': 'المنظمات الدولية ودورها التنموي', 'url': 'InternationalOrganizationsandTheirDevelopmentalRole', 'image': 'imgs/Journal-19-index.jpg', 'date': '23 ديسمبر 2025'}, 
     ]
 
     context = {
