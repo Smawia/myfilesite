@@ -536,6 +536,12 @@ def osus_journals(request):
 def view_infograph(request):
     infographs = [
         {
+            "title": "مقارنة بين الدول في التنمية والإصلاح الإداري، بين الواقع والمفترض",
+            "slug": "Comparison_between_countries_in_development_and_administrative_reform",
+            "image": "imgs/development_and_administrative_reform-index.jpeg",
+            "date": "24 يناير 2025",
+        },
+        {
             "title": "أفضل 10 دول من حيث الإنفاق الحكومي العام المحلي على الصحة",
             "slug": "Top_10_countries_in_terms_of_government_spending_on_local_health",
             "image": "imgs/top_10_countries_in_terms_of_government_spending_on_local_health.jpg",
@@ -1365,6 +1371,12 @@ def infograph_detail(request, slug):
             'title': 'أفضل 10 دول من حيث الإنفاق الحكومي العام المحلي على الصحة',
             'date': '17 يناير 2025',
             'image': 'imgs/top_10_countries_in_terms_of_government_spending_on_local_health.jpg',
+        },
+        "Comparison_between_countries_in_development_and_administrative_reform": {
+            'slug': 'Comparison_between_countries_in_development_and_administrative_reform',
+            'title': 'مقارنة بين الدول في التنمية والإصلاح الإداري، بين الواقع والمفترض',
+            'date': '24 يناير 2025',
+            'image': 'imgs/development_and_administrative_reform.jpeg',
         },
     }
 
