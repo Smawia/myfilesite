@@ -46,7 +46,7 @@ html {
 
 body.dark-mode {
     /* ألوان الوضع الداكن */
-    --bg-color: #121212;
+    --bg-color: #121212db;
     --text-color: #ffffff;
     --button-bg-color: #333333;
     --button-text-color: #ffffff;
