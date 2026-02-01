@@ -138,7 +138,9 @@ def studies(request):
     issue_four = [
         {'subject': 'التمكين الاقتصادي والاكتفاء الذاتي في اليمن', 'url': 'EconomicEmpowerment', 'image': 'Journal-17-index.jpg', 'date': '23 ديسمبر 2025', 'from_db': False}, 
         {'subject': 'الأمن المائي في اليمن', 'url': 'WaterSecurityInYemen', 'image': 'Journal-18-index.jpg', 'date': '23 ديسمبر 2025', 'from_db': False}, 
-        {'subject': 'المنظمات الدولية ودورها التنموي', 'url': 'InternationalOrganizationsandTheirDevelopmentalRole', 'image': 'Journal-19-index.jpg', 'date': '23 ديسمبر 2025', 'from_db': False}, 
+        {'subject': 'المنظمات الدولية ودورها التنموي', 'url': 'InternationalOrganizationsandTheirDevelopmentalRole', 'image': 'Journal-19-index.jpg', 'date': '23 ديسمبر 2025', 'from_db': False},
+        {'subject': 'جودة التعليم في التجربة الفنلندية', 'url': 'EducationalQualityintheFinnishExperience', 'image': 'Journal-20-index.jpg', 'date': '23 ديسمبر 2025', 'from_db': False}, 
+        {'subject': 'الأمن الغذائي في اليمن', 'url': 'FoodSecurityInYemen', 'image': 'Journal-21-index.jpg', 'date': '23 ديسمبر 2025', 'from_db': False}, 
     ]
 
     # إضافة القوائم الثابتة بعد البحث فيها
@@ -535,6 +537,12 @@ def osus_journals(request):
 
 def view_infograph(request):
     infographs = [
+        {
+            "title": "إعادة اختراع الحكومة ديفيد أوزبورن & تيد غايبلر (1991-1992)",
+            "slug": "Reinventing_Government_by_David_Osborne_and_Ted",
+            "image": "imgs/reinventing_government_by_David_and_Ted.jpeg",
+            "date": "28 يناير 2025",
+        },
         {
             "title": "مقارنة بين الدول في التنمية والإصلاح الإداري، بين الواقع والمفترض",
             "slug": "Comparison_between_countries_in_development_and_administrative_reform",
@@ -1378,6 +1386,12 @@ def infograph_detail(request, slug):
             'date': '24 يناير 2025',
             'image': 'imgs/development_and_administrative_reform.jpeg',
         },
+        "Reinventing_Government_by_David_Osborne_and_Ted": {
+            'slug': 'Reinventing_Government_by_David_Osborne_and_Ted',
+            'title': 'إعادة اختراع الحكومة ديفيد أوزبورن & تيد غايبلر (1991-1992)',
+            'date': '28 يناير 2025',
+            'image': 'imgs/reinventing_government_by_David_and_Ted.jpeg',
+        },
     }
 
     detail = data.get(slug)
@@ -1423,6 +1437,8 @@ def journal_studies(request):
         {'subject': 'التمكين الاقتصادي والاكتفاء الذاتي في اليمن', 'url': 'EconomicEmpowerment', 'image': 'imgs/Journal-17-index.jpg', 'date': '23 ديسمبر 2025'}, 
         {'subject': 'الأمن المائي في اليمن', 'url': 'WaterSecurityInYemen', 'image': 'imgs/Journal-18-index.jpg', 'date': '23 ديسمبر 2025'}, 
         {'subject': 'المنظمات الدولية ودورها التنموي', 'url': 'InternationalOrganizationsandTheirDevelopmentalRole', 'image': 'imgs/Journal-19-index.jpg', 'date': '23 ديسمبر 2025'}, 
+        {'subject': 'جودة التعليم في التجربة الفنلندية', 'url': 'EducationalQualityintheFinnishExperience', 'image': 'imgs/Journal-20-index.jpg', 'date': '23 ديسمبر 2025'}, 
+        {'subject': 'الأمن الغذائي في اليمن', 'url': 'FoodSecurityInYemen', 'image': 'imgs/Journal-21-index.jpg', 'date': '23 ديسمبر 2025'}, 
     ]
 
     context = {
@@ -1489,6 +1505,12 @@ def water_security_in_yemen(request):
 
 def international_organizations_and_their_developmental_role(request):
      return render(request, 'pages/international_organizations_and_their_developmental_role.html')
+
+def educational_quality_in_the_finnish_experience(request):
+    return render(request, 'pages/educational_quality_in_the_finnish_experience.html')
+
+def food_security_in_yemen(request):
+    return render(request, 'pages/food_security_in_yemen.html')
 
 def motion_graphics(request):
     videos = [

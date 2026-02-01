@@ -60,6 +60,8 @@ urlpatterns = [
     path('journals/osus/articles/EconomicEmpowerment',views.economic_empowerment,name='economic_empowerment'),
     path('journals/osus/articles/WaterSecurityInYemen',views.water_security_in_yemen,name='water_security_in_yemen'),
     path('journals/osus/articles/InternationalOrganizationsandTheirDevelopmentalRole',views.international_organizations_and_their_developmental_role,name='international_organizations_and_their_developmental_role'),
+    path('journals/osus/articles/EducationalQualityintheFinnishExperience',views.educational_quality_in_the_finnish_experience,name='educational_quality_in_the_finnish_experience'),
+    path('journals/osus/articles/FoodSecurityInYemen',views.food_security_in_yemen,name='food_security_in_yemen'),
 
     # new studies
     path('articles/CurrentEconomicSituation',views.current_economic_situation,name='current_economic_situation'),
