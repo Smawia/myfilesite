@@ -538,40 +538,46 @@ def osus_journals(request):
 def view_infograph(request):
     infographs = [
         {
+            "title": "أفضل 10 دول رائدة في التوازن الاقتصادي في العالم لعام 2025",
+            "slug": "The_top_10_leading_countries_in_economic_balance_in_the_world_for_2025",
+            "image": "imgs/the_top 10_leading_countries_in_economic.jpeg",
+            "date": "2 فبراير 2026",
+        },
+        {
             "title": "إعادة اختراع الحكومة ديفيد أوزبورن & تيد غايبلر (1991-1992)",
             "slug": "Reinventing_Government_by_David_Osborne_and_Ted",
             "image": "imgs/reinventing_government_by_David_and_Ted.jpeg",
-            "date": "28 يناير 2025",
+            "date": "28 يناير 2026",
         },
         {
             "title": "مقارنة بين الدول في التنمية والإصلاح الإداري، بين الواقع والمفترض",
             "slug": "Comparison_between_countries_in_development_and_administrative_reform",
             "image": "imgs/development_and_administrative_reform-index.jpeg",
-            "date": "24 يناير 2025",
+            "date": "24 يناير 2026",
         },
         {
             "title": "أفضل 10 دول من حيث الإنفاق الحكومي العام المحلي على الصحة",
             "slug": "Top_10_countries_in_terms_of_government_spending_on_local_health",
             "image": "imgs/top_10_countries_in_terms_of_government_spending_on_local_health.jpg",
-            "date": "17 يناير 2025",
+            "date": "17 يناير 2026",
         },
         {
             "title": "أفضل 10 دول من حيث الإنفاق الصحي العام الحكومي المحلي",
             "slug": "Top_10_countries_health_spending",
             "image": "imgs/top_10_countries_health_spending.jpg",
-            "date": "14 يناير 2025",
+            "date": "14 يناير 2026",
         },
         {
             "title": "أعلى 10 دول في العالم من حيث معدلات النمو الحقيقي المتوقع للناتج المحلي الإجمالي في عام 2025",
             "slug": "GDP_growth_rates_in_2025",
             "image": "imgs/gdp_growth_rates_in_2025.jpg",
-            "date": "10 يناير 2025",
+            "date": "10 يناير 2026",
         },
         {
             "title": "أفضل عشر دول عالميًا في مؤشر المعرفة العالمي لعام 2025",
             "slug": "Global_Knowledge_Index",
             "image": "imgs/global_knowledge_index.jpg",
-            "date": "7 يناير 2025",
+            "date": "7 يناير 2026",
         },
         {
             "title": "تقييم أداء الدول في مؤشر الأمن السيبراني لعام 2024",
@@ -1359,38 +1365,44 @@ def infograph_detail(request, slug):
         "Global_Knowledge_Index": {
             'slug': 'Global_Knowledge_Index',
             'title': 'أفضل عشر دول عالميًا في مؤشر المعرفة العالمي لعام 2025',
-            'date': '7 يناير 2025',
+            'date': '7 يناير 2026',
             'image': 'imgs/global_knowledge_index.jpg',
         },
         "GDP_growth_rates_in_2025": {
             'slug': 'GDP_growth_rates_in_2025',
             'title': 'أعلى 10 دول في العالم من حيث معدلات النمو الحقيقي المتوقع للناتج المحلي الإجمالي في عام 2025',
-            'date': '10 يناير 2025',
+            'date': '10 يناير 2026',
             'image': 'imgs/gdp_growth_rates_in_2025.jpg',
         },
         "Top_10_countries_health_spending": {
             'slug': 'Top_10_countries_health_spending',
             'title': 'أفضل 10 دول من حيث الإنفاق الصحي العام الحكومي المحلي',
-            'date': '14 يناير 2025',
+            'date': '14 يناير 2026',
             'image': 'imgs/top_10_countries_health_spending.jpg',
         },
         "Top_10_countries_in_terms_of_government_spending_on_local_health": {
             'slug': 'Top_10_countries_in_terms_of_government_spending_on_local_health',
             'title': 'أفضل 10 دول من حيث الإنفاق الحكومي العام المحلي على الصحة',
-            'date': '17 يناير 2025',
+            'date': '17 يناير 2026',
             'image': 'imgs/top_10_countries_in_terms_of_government_spending_on_local_health.jpg',
         },
         "Comparison_between_countries_in_development_and_administrative_reform": {
             'slug': 'Comparison_between_countries_in_development_and_administrative_reform',
             'title': 'مقارنة بين الدول في التنمية والإصلاح الإداري، بين الواقع والمفترض',
-            'date': '24 يناير 2025',
+            'date': '24 يناير 2026',
             'image': 'imgs/development_and_administrative_reform.jpeg',
         },
         "Reinventing_Government_by_David_Osborne_and_Ted": {
             'slug': 'Reinventing_Government_by_David_Osborne_and_Ted',
             'title': 'إعادة اختراع الحكومة ديفيد أوزبورن & تيد غايبلر (1991-1992)',
-            'date': '28 يناير 2025',
+            'date': '28 يناير 2026',
             'image': 'imgs/reinventing_government_by_David_and_Ted.jpeg',
+        },
+        "The_top_10_leading_countries_in_economic_balance_in_the_world_for_2025": {
+            'slug': 'The_top_10_leading_countries_in_economic_balance_in_the_world_for_2025',
+            'title': 'أفضل 10 دول رائدة في التوازن الاقتصادي في العالم لعام 2025',
+            'date': '2 فبراير 2026',
+            'image': 'imgs/the_top 10_leading_countries_in_economic.jpeg',
         },
     }
 
