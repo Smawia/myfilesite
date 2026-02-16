@@ -1,5 +1,114 @@
 {% extends 'base.html' %}
 {% load static %}
 {% block content %}
-<h3 class="error">الصفحة التي تبحث عنها غير موجودة</h3>
+<style>
+
+/*.error-box{*/
+/*    text-align:center;*/
+/*    line-height: 1;*/
+/*    padding: 100px;*/
+/*}*/
+
+/*h1{*/
+/*    font-size:90px;*/
+/*    margin:0;*/
+/*    color:#222;*/
+/*}*/
+
+/*p{*/
+/*    font-size:22px;*/
+/*    color:#666;*/
+/*    margin-top:10px;*/
+/*}*/
+
+/*.go-back {*/
+    /*display:inline-block;*/
+    /*margin-top:25px;*/
+    /*text-decoration:none;*/
+    /*color:white;*/
+    /*background:#5a70a2;*/
+    /*padding:12px 28px;*/
+    /*border-radius:8px;*/
+    /*font-size:16px;*/
+    /*transition:.3s;*/
+/*    text-decoration: underline !important;*/
+/*}*/
+
+</style>
+<style>
+
+.error-box{
+    text-align:center;
+    line-height:1.2;
+    padding:15vh 20px;
+}
+
+/* حجم افتراضي (موبايل أولاً) */
+.error-box h1{
+    font-size:48px;
+    margin:0;
+    color:#222;
+    font-weight:bold;
+}
+
+.error-box p{
+    font-size:18px;
+    color:#666;
+    margin-top:15px;
+}
+
+.go-back{
+    display:inline-block;
+    margin-top:22px;
+    text-decoration: underline !important;
+    font-size:16px;
+}
+
+/* تابلت */
+@media (min-width:768px){
+
+.error-box h1{
+    font-size:70px;
+}
+
+.error-box p{
+    font-size:20px;
+}
+
+}
+
+/* شاشة كبيرة */
+@media (min-width:1200px){
+
+.error-box{
+    padding:120px;
+}
+
+.error-box h1{
+    font-size:110px;
+}
+
+.error-box p{
+    font-size:24px;
+}
+
+.go-back{
+    font-size:18px;
+}
+
+}
+
+</style>
+
+</head>
+
+<body>
+
+<div class="error-box">
+    <h1>404</h1>
+    <p>عذراً، الصفحة التي تحاول الوصول إليها غير موجودة</p>
+    <a href="/" class="go-back">العودة إلى الصفحة الرئيسية</a>
+</div>
+
+</body>
 {% endblock %}
