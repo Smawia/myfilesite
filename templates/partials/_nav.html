@@ -43,7 +43,7 @@
                             class="nav-a"
                             {% endif %}
                             >الرئيسية</a></li>
-                        <li class="base-li aside-base-li"><a href="#"
+                        <li class="base-li aside-base-li"><a href="{% url 'about' %}"
                             {% if 'about' in request.path or '/criteria' in request.path %}
                             class="active js-a nav-a"
                             {% else %}
