@@ -66,7 +66,13 @@ def view_osus_fourth_content(requst):
 
 def index(request):
     videos = [
-         {
+        {
+            "url": "/studies/17/",
+            "video": "kwRoAZMJjIs",
+            "date": "2026-2-7",
+            "subject": "من البيروقراطية إلى الكفاءة: كيف تفكر الحكومات الحديثة؟"
+        },
+        {
             "url": "/studies/16/",
             "video": "2NQktms2hzU",
             "date": "2026-1-20",
@@ -77,12 +83,6 @@ def index(request):
             "video": "oaIdb4uBwwg",
             "date": "2026-1-4",
             "subject": "الاقتصاد المقاوم: كيف تصمد الدول أمام الأزمات والعقوبات الاقتصادية؟"
-        },
-        {
-            "url": "/studies/14/",
-            "video": "12mo6GxiMxk",
-            "date": "2025-12-16",
-            "subject": "كوليندا كيتاروفيتش: امرأة كرواتيا الحديدية ونموذج القيادة النسوية في السياسة الأوروبية"
         },
     ]
 
@@ -537,6 +537,18 @@ def osus_journals(request):
 
 def view_infograph(request):
     infographs = [
+        {
+            "title": "أفضل 10 دول رائدة في الدفع الإلكتروني عالميًا لعام 2025",
+            "slug": "Top_10_Leading_Countries_in_Electronic_Payments_Globally_for_2025",
+            "image": "imgs/top_10_leading_countries_in_electronic_payments.jpeg",
+            "date": "15 فبراير 2026",
+        },
+        {
+            "title": "أفضل 10 دول في تحولات التجارة العالمية نحو الاستدامة (اقتصاديًا واجتماعيًّا وبيئيًا) في ظل التحديات الجيوسياسية لعام 2025",
+            "slug": "Top_10_countries_in_the_global_trade_transformation",
+            "image": "imgs/top_10_countries_in_the_global_trade_transformation.jpeg",
+            "date": "7 فبراير 2026",
+        },
         {
             "title": "أفضل 10 دول رائدة في التوازن الاقتصادي في العالم لعام 2025",
             "slug": "The_top_10_leading_countries_in_economic_balance_in_the_world_for_2025",
@@ -1404,6 +1416,18 @@ def infograph_detail(request, slug):
             'date': '2 فبراير 2026',
             'image': 'imgs/the_top 10_leading_countries_in_economic.jpeg',
         },
+        "Top_10_countries_in_the_global_trade_transformation": {
+            'slug': 'Top_10_countries_in_the_global_trade_transformation',
+            'title': 'أفضل 10 دول في تحولات التجارة العالمية نحو الاستدامة (اقتصاديًا واجتماعيًّا وبيئيًا) في ظل التحديات الجيوسياسية لعام 2025',
+            'date': '7 فبراير 2026',
+            'image': 'imgs/top_10_countries_in_the_global_trade_transformation.jpeg',
+        },
+        "Top_10_Leading_Countries_in_Electronic_Payments_Globally_for_2025": {
+            'slug': 'Top_10_Leading_Countries_in_Electronic_Payments_Globally_for_2025',
+            'title': 'أفضل 10 دول رائدة في الدفع الإلكتروني عالميًا لعام 2025',
+            'date': '15 فبراير 2026',
+            'image': 'imgs/top_10_leading_countries_in_electronic_payments.jpeg',
+        },
     }
 
     detail = data.get(slug)
@@ -1526,6 +1550,12 @@ def food_security_in_yemen(request):
 
 def motion_graphics(request):
     videos = [
+        {
+            "url": "/studies/17/",
+            "video": "https://youtu.be/kwRoAZMJjIs",
+            "date": "2026-2-7",
+            "subject": "من البيروقراطية إلى الكفاءة: كيف تفكر الحكومات الحديثة؟"
+        },
         {
             "url": "/studies/16/",
             "video": "https://youtu.be/2NQktms2hzU",
