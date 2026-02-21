@@ -21,6 +21,19 @@
 {% endblock %}
 
 {% block content %}
+<style>
+
+
+.cardContainer-inside {
+    opacity: 0;
+    pointer-events: none;
+}
+
+.cardContainer-inside.active {
+    pointer-events: auto;
+}
+
+</style>
 <div class="container index-articles all-studies">
     <h1 class="spe-h1">أسس إنفوجراف</h1>
 </div>
@@ -221,7 +234,7 @@
         {% for item in infographs %}
         <div class="studies-card infograph-card cardContainer-inside custom-studies-card">
             <a href="{% url 'infograph_detail' item.slug %}">
-                <img src="{% static item.image %}" alt="إنفوجراف" class="infograph-img">
+                <img data-src="{% static item.image %}" src="{% static 'images/placeholder.png' %}" alt="إنفوجراف" class="infograph-img" loading="lazy">
                 <div class="study-text-info">
                     <span>{{ item.date }}</span>
                     <p class="card-title">{{ item.title }}</p>
@@ -323,78 +336,185 @@
         });
 
     });
+    
+window.addEventListener('load', function () {
 
+    const container = document.getElementById('cardContainer');
+    const cards = document.querySelectorAll('#cardContainer .cardContainer-inside');
 
-    window.addEventListener('load', function() {
-        const cards = document.querySelectorAll('#cardContainer .cardContainer-inside');
-        const cardsPerPage = 6;
-        let currentIndex = 0;
-        const step = 0.1;       
-        const intervalTime = 50; 
-        let firstLoad = true; // لتحديد أول تحميل
+    const cardsPerPage = 6;
+    const displayTime = 10000; // مدة عرض كل مجموعة
+    const step = 0.1;
+    const intervalTime = 50;
 
-        function fadeOut(cardsToFade, callback) {
+    let currentIndex = 0;
+    let isTransitioning = false;
+
+    /* =============================
+       تحميل صورة كاملة مع انتظار
+    ============================== */
+    function loadImageFully(img) {
+        return new Promise(resolve => {
+            if (!img || !img.dataset.src) {
+                resolve();
+                return;
+            }
+
+            const temp = new Image();
+            temp.src = img.dataset.src;
+
+            temp.onload = () => {
+                img.src = img.dataset.src;
+                img.removeAttribute('data-src');
+                resolve();
+            };
+
+            temp.onerror = () => resolve();
+        });
+    }
+
+    function loadImagesAndWait(cards) {
+        return Promise.all(
+            cards.map(card => {
+                const img = card.querySelector('img[data-src]');
+                return loadImageFully(img);
+            })
+        );
+    }
+
+    /* =============================
+       Fade Out / Fade In
+    ============================== */
+    function fadeOut(cardsToFade) {
+        return new Promise(resolve => {
             let opacity = 1;
+
             const fadeInterval = setInterval(() => {
                 opacity -= step;
+
                 if (opacity <= 0) {
                     opacity = 0;
                     clearInterval(fadeInterval);
-                    cardsToFade.forEach(card => card.classList.remove('active'));
-                    callback(); 
+                    cardsToFade.forEach(card => {
+                        card.classList.remove('active');
+                        card.style.opacity = 0;
+                    });
+                    resolve();
                 }
+
                 cardsToFade.forEach(card => card.style.opacity = opacity);
             }, intervalTime);
-        }
+        });
+    }
 
-        function fadeIn(cardsToFade) {
-            let opacity = 0; 
+    function fadeIn(cardsToFade) {
+        return new Promise(resolve => {
+            let opacity = 0;
+
             const fadeInterval = setInterval(() => {
                 opacity += step;
+
                 if (opacity >= 1) {
                     opacity = 1;
                     clearInterval(fadeInterval);
+                    resolve();
                 }
+
                 cardsToFade.forEach(card => card.style.opacity = opacity);
             }, intervalTime);
+        });
+    }
+
+    /* =============================
+       تجهيز المجموعة التالية
+    ============================== */
+    let nextGroupCards = [];
+    let nextGroupReady = false;
+
+    function prepareNextGroup() {
+        nextGroupCards = [];
+
+        for (let i = 0; i < cardsPerPage; i++) {
+            nextGroupCards.push(cards[(currentIndex + i) % cards.length]);
         }
 
-        function showCards() {
-            const activeCards = document.querySelectorAll('#cardContainer .cardContainer-inside.active');
+        nextGroupReady = false;
 
-            if (firstLoad) {
-                // عرض أول 6 كروت مباشرة بدون fade
-                for (let i = 0; i < cardsPerPage; i++) {
-                    const cardIndex = (currentIndex + i) % cards.length;
-                    const card = cards[cardIndex];
-                    card.classList.add('active');
-                    card.style.opacity = 1; // شفافية كاملة
-                }
-                currentIndex = (currentIndex + cardsPerPage) % cards.length;
-                firstLoad = false;
-            } else {
-                // بقية التغييرات لاحقاً بتدرج تدريجي
-                fadeOut(activeCards, () => {
-                    const newCards = [];
-                    for (let i = 0; i < cardsPerPage; i++) {
-                        const cardIndex = (currentIndex + i) % cards.length;
-                        const card = cards[cardIndex];
-                        card.classList.add('active');
-                        card.style.opacity = 0; 
-                        newCards.push(card);
-                    }
-                    fadeIn(newCards); 
-                    currentIndex = (currentIndex + cardsPerPage) % cards.length;
-                });
-            }
+        loadImagesAndWait(nextGroupCards).then(() => {
+            nextGroupReady = true;
+        });
+    }
+
+    /* =============================
+       الانتقال للمجموعة التالية
+    ============================== */
+    async function transitionToNextGroup() {
+        if (isTransitioning) return;
+
+        // ننتظر حتى تجهز الصور
+        if (!nextGroupReady) {
+            setTimeout(transitionToNextGroup, 300);
+            return;
         }
 
-        // أول مرة عند تحميل الصفحة
-        showCards();
+        isTransitioning = true;
 
-        // كل 10 ثواني نغير العرض
-        setInterval(showCards, 10000);
-    });
+        const activeCards = document.querySelectorAll(
+            '#cardContainer .cardContainer-inside.active'
+        );
+
+        await fadeOut(activeCards);
+
+        nextGroupCards.forEach(card => {
+            card.classList.add('active');
+            card.style.opacity = 0;
+        });
+
+        await fadeIn(nextGroupCards);
+
+        currentIndex = (currentIndex + cardsPerPage) % cards.length;
+
+        // نجهز المجموعة التالية
+        prepareNextGroup();
+
+        isTransitioning = false;
+
+        setTimeout(transitionToNextGroup, displayTime);
+    }
+
+    /* =============================
+       عرض أول مجموعة (بعد تحميلها)
+    ============================== */
+    function showFirstGroup() {
+        const firstCards = [];
+
+        for (let i = 0; i < cardsPerPage; i++) {
+            firstCards.push(cards[(currentIndex + i) % cards.length]);
+        }
+
+        // ننتظر تحميل صور المجموعة الأولى
+        loadImagesAndWait(firstCards).then(() => {
+
+            firstCards.forEach(card => {
+                card.classList.add('active');
+                card.style.opacity = 1;
+            });
+
+            currentIndex = (currentIndex + cardsPerPage) % cards.length;
+
+            // نجهز المجموعة التالية
+            prepareNextGroup();
+
+            // نبدأ الانتقال لاحقًا
+            setTimeout(transitionToNextGroup, displayTime);
+        });
+    }
+
+    /* =============================
+       بدء التشغيل
+    ============================== */
+    showFirstGroup();
+});
 </script>
 
 {% endblock %}
