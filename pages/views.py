@@ -67,6 +67,12 @@ def view_osus_fourth_content(requst):
 def index(request):
     videos = [
         {
+            "url": "/studies/18/",
+            "video": "KKBdIw-aYlw",
+            "date": "2026-2-24",
+            "subject": "هل آن الأوان لتخفيف عبء الدولة؟ مستقبل التوظيف في يد القطاع الخاص!"
+        },
+        {
             "url": "/studies/17/",
             "video": "kwRoAZMJjIs",
             "date": "2026-2-7",
@@ -77,12 +83,6 @@ def index(request):
             "video": "2NQktms2hzU",
             "date": "2026-1-20",
             "subject": "التجربة التعليمية في فنلندا: تعليم بلا ضغط… ونتائج مذهلة"
-        },
-        {
-            "url": "/studies/15/",
-            "video": "oaIdb4uBwwg",
-            "date": "2026-1-4",
-            "subject": "الاقتصاد المقاوم: كيف تصمد الدول أمام الأزمات والعقوبات الاقتصادية؟"
         },
     ]
 
@@ -132,7 +132,7 @@ def studies(request):
         {'subject': 'التداخل والتجاوز في المهام والاختصاصات في الإدارة العامة باليمن', 'url': 'OverlapAndEncroachmentInTasksAndCompetencies', 'image': 'Journal-13.jpg', 'date': '25 سبتمبر 2025', 'from_db': False},
         {'subject': 'المنظومة العدلية', 'url': 'TheJudicialSystem', 'image': 'Journal-14.jpg', 'date': '25 سبتمبر 2025', 'from_db': False},
         {'subject': 'دور منظمات المجتمع المدني في التنمية المحلية', 'url': 'TheRoleOfCivilSocietyOrganizationsInLocalDevelopment', 'image': 'Journal-15.jpg', 'date': '25 سبتمبر 2025', 'from_db': False},
-        {'subject': 'أي دور للتعليم العالي بالمغرب في التنمية الاقتصادية', 'url': 'MoroccanHigherEducationInEconomicDevelopment', 'image': 'Journal-16.jpg', 'date': '25 2025 سبتمبر', 'from_db': False}
+        {'subject': 'أي دور للتعليم العالي بالمغرب في التنمية الاقتصادية', 'url': 'MoroccanHigherEducationInEconomicDevelopment', 'image': 'Journal-16.jpg', 'date': '25 سبتمبر 2025', 'from_db': False}
     ]
 
     issue_four = [
@@ -537,6 +537,18 @@ def osus_journals(request):
 
 def view_infograph(request):
     infographs = [
+        {
+            "title": "أغلى 10 دول أوروبية في أسعار البنزين بمطلع عام 2026",
+            "slug": "The_10_most_expensive_European_countries_for_gasoline_prices_at_the_beginning_of_2026",
+            "image": "imgs/the_10_most_expensive_european_countries_for_gasoline_prices.jpeg",
+            "date": "1 مارس 2026",
+        },
+        {
+            "title": "توقعات أكبر 10 دول عجزًا في الموازنة من الناتج المحلي الإجمالي لعام 2025",
+            "slug": "Predictions_for_the_10_countries_with_the_largest_deficits",
+            "image": "imgs/budget_deficit.jpeg",
+            "date": "28 فبراير 2026",
+        },
         {
             "title": "أفضل 10 دول رائدة في الدفع الإلكتروني عالميًا لعام 2025",
             "slug": "Top_10_Leading_Countries_in_Electronic_Payments_Globally_for_2025",
@@ -1428,6 +1440,18 @@ def infograph_detail(request, slug):
             'date': '15 فبراير 2026',
             'image': 'imgs/top_10_leading_countries_in_electronic_payments.jpeg',
         },
+        "Predictions_for_the_10_countries_with_the_largest_deficits": {
+            'slug': 'Predictions_for_the_10_countries_with_the_largest_deficits',
+            'title': 'توقعات أكبر 10 دول عجزًا في الموازنة من الناتج المحلي الإجمالي لعام 2025',
+            'date': '28 فبراير 2026',
+            'image': 'imgs/budget_deficit.jpeg',
+        },
+        "The_10_most_expensive_European_countries_for_gasoline_prices_at_the_beginning_of_2026": {
+            'slug': 'The_10_most_expensive_European_countries_for_gasoline_prices_at_the_beginning_of_2026',
+            'title': 'أغلى 10 دول أوروبية في أسعار البنزين بمطلع عام 2026',
+            'date': '1 مارس 2026',
+            'image': 'imgs/the_10_most_expensive_european_countries_for_gasoline_prices.jpeg',
+        },
     }
 
     detail = data.get(slug)
@@ -1466,7 +1490,7 @@ def journal_studies(request):
         {'subject': 'التداخل والتجاوز في المهام والاختصاصات في الإدارة العامة باليمن', 'url': 'OverlapAndEncroachmentInTasksAndCompetencies', 'image': 'imgs/Journal-13-index.jpg', 'date': '25 سبتمبر 2025'},
         {'subject': 'المنظومة العدلية', 'url': 'TheJudicialSystem', 'image': 'imgs/Journal-14.jpg', 'date': '25 سبتمبر 2025'},
         {'subject': 'دور منظمات المجتمع المدني في التنمية المحلية', 'url': 'TheRoleOfCivilSocietyOrganizationsInLocalDevelopment', 'image': 'imgs/Journal-15-index.jpg', 'date': '25 سبتمبر 2025'},
-        {'subject': 'أي دور للتعليم العالي بالمغرب في التنمية الاقتصادية', 'url': 'MoroccanHigherEducationInEconomicDevelopment', 'image': 'imgs/Journal-16-index.jpg', 'date': '25 2025 سبتمبر'}
+        {'subject': 'أي دور للتعليم العالي بالمغرب في التنمية الاقتصادية', 'url': 'MoroccanHigherEducationInEconomicDevelopment', 'image': 'imgs/Journal-16-index.jpg', 'date': '25 سبتمبر 2025'}
     ]
 
     issue_four = [
@@ -1550,6 +1574,12 @@ def food_security_in_yemen(request):
 
 def motion_graphics(request):
     videos = [
+        {
+            "url": "/studies/18/",
+            "video": "https://youtu.be/KKBdIw-aYlw",
+            "date": "2026-2-24",
+            "subject": "هل آن الأوان لتخفيف عبء الدولة؟ مستقبل التوظيف في يد القطاع الخاص!"
+        },
         {
             "url": "/studies/17/",
             "video": "https://youtu.be/kwRoAZMJjIs",
