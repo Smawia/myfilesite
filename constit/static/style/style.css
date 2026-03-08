@@ -5081,7 +5081,7 @@ input {
 @media (min-width: 575px) {
     .spe-h1 {
         font-size: 18px;
-        margin-top: 20px;
+        margin-top: 15px;
         margin-bottom: 0;
     }
 }
@@ -8377,7 +8377,7 @@ ul .aside-nested-list {
 
     .show-some-studies a .study-info-show {
         margin-bottom: 10px;
-        padding-bottom: 10px;
+        padding-bottom: 0px;
         display: flex;
         flex-direction: row-reverse;
         justify-content: space-between;
@@ -8385,6 +8385,19 @@ ul .aside-nested-list {
         border-bottom: 1px solid #ddd;
     }
 
+    body.dark-mode .show-some-studies{
+        background: #333333 !important;
+    }
+
+    body.dark-mode .studies-text-some-info {
+        padding-bottom: 0px !important;
+        max-height: 80.5px;
+        line-height: 2.5;
+    }
+     
+    body.dark-mode  .show-some-studies a .study-info-show {
+        border-bottom: 1px solid #333333;
+    }
     .studies-text-some-info {
         line-height: 4;
         font-size: 11px;
@@ -8447,7 +8460,7 @@ ul .aside-nested-list {
     }
 
     .show-some-studies a .study-info-show {
-        padding-bottom: 10px;
+        padding-bottom: 0px;
         width: 100%;
         margin: 10px auto;
         display: flex;
@@ -8457,6 +8470,13 @@ ul .aside-nested-list {
         border-bottom: 1px solid #ddd;
     }
 
+    body.dark-mode .show-some-studies{
+        background: #333333 !important;
+    }
+
+    body.dark-mode  .show-some-studies a .study-info-show {
+        border-bottom: 1px solid #333333;
+    }
     .studies-text-some-info {
         font-size: 11px;
         display: flex;
@@ -8985,6 +9005,7 @@ header .phone button {
     .publications.in-index {
         font-size: 20px;
         margin-top: 20px;
+        margin-bottom: 13px;
     }
 
     .publications {
@@ -8995,7 +9016,7 @@ header .phone button {
 @media (min-width: 575px) {
     .publications {
         font-size: 19px;
-        margin-bottom: -7px;
+        margin-bottom: 10px;
         margin-right: 0;
     }
 }
@@ -12981,12 +13002,29 @@ span.CharOverride-2 {
 
 .daw.dark-mode{
    color: #ffffff !important;
+   box-shadow: 0 0 5px #333 !important;
+}
+
+.daw.books.dark-mode{
+   color: #ffffff !important;
    background-color: #121212 !important;
    box-shadow: 0 0 5px #333 !important;
 }
 
-.daw.dark-mode h1, .daw.dark-mode p, .all-art.dark-mode p{
+.daw.dark-mode h1, .daw.dark-mode p, .all-art.dark-mode p, body.dark-mode .studies-text-some-info h3{
    color: #ffffff !important;
+}
+
+.daw.dark-mode h1 {
+    color: #5E6F9C !important;
+}
+
+.show-studies-index.dark-mode, .show-all-studies.dark-mode, .cretiria.dark-mode {
+    background-color: #121212 !important;
+}
+
+body.dark-mode .study-info-show {
+    background-color: #121212 !important;
 }
 
 .study-text-info.dark-mode{

@@ -392,6 +392,9 @@ function updateProgressBar() {
         let studies_text = document.querySelectorAll('.study-text-info');
         const modeIcon = document.getElementById('modeIcon');
         const contactLinks = document.querySelectorAll('.contactus a');
+        const showStudies = document.querySelector('.show-studies-index');
+        const showAllStudies = document.querySelectorAll('.show-all-studies');
+        const cretiria = document.querySelector('.cretiria')
 
         // مسارات الصور باستخدام Django static
         const lightModeImg = modeIcon.dataset.light;
@@ -409,6 +412,8 @@ function updateProgressBar() {
         if (savedMode === 'dark-mode') {
             body.classList.add('dark-mode');
             if (firstPage) firstPage.classList.add('dark-mode');
+            if (showStudies) showStudies.classList.add('dark-mode');
+            if (cretiria) cretiria.classList.add('dark-mode')
             if (articles) {
                 articles.forEach(article => article.classList.add('dark-mode'));
             }
@@ -418,6 +423,9 @@ function updateProgressBar() {
             if (daws) {
                 daws.forEach(daw => daw.classList.add('dark-mode'));
             };
+            if (showAllStudies) {
+                showAllStudies.forEach(study => study.classList.add('dark-mode'))
+            }
             if (studies_text) {
                 studies_text.forEach(study => study.classList.add('dark-mode'));
             }
@@ -437,9 +445,12 @@ function updateProgressBar() {
                 body.classList.remove('dark-mode');
                 global_savedMode = 'light-mode';
                 if (firstPage) firstPage.classList.remove('dark-mode');
+                if (showStudies) showStudies.classList.remove('dark-mode');
+                if (cretiria) cretiria.classList.remove('dark-mode')
                 if (articles) {articles.forEach(article => article.classList.remove('dark-mode'));}
                 if (card) {card.forEach(c => c.classList.remove('dark-mode'));}
                 if (daws) {daws.forEach(daw => daw.classList.remove('dark-mode'));}
+                if (showAllStudies) {showAllStudies.forEach(study => study.classList.remove('dark-mode'))}
                 if (studies_text) {studies_text.forEach(study => study.classList.remove('dark-mode'));}
                 contactLinks.forEach(link => link.classList.remove('dark-mode'));
                 localStorage.setItem('theme', 'light-mode');
@@ -449,9 +460,12 @@ function updateProgressBar() {
                 body.classList.add('dark-mode');
                 global_savedMode = 'dark-mode';
                 if (firstPage) firstPage.classList.add('dark-mode');
+                if (showStudies) showStudies.classList.add('dark-mode');
+                if (cretiria) cretiria.classList.add('dark-mode')
                 if (articles) {articles.forEach(article => article.classList.add('dark-mode'));}
                 if (card) {card.forEach(c => c.classList.add('dark-mode'));}
                 if (daws) {daws.forEach(daw => daw.classList.add('dark-mode'));}
+                if (showAllStudies) {showAllStudies.forEach(study => study.classList.add('dark-mode'))}
                 if (studies_text) {studies_text.forEach(study => study.classList.add('dark-mode'));}
                 contactLinks.forEach(link => link.classList.add('dark-mode'));
                 localStorage.setItem('theme', 'dark-mode');
