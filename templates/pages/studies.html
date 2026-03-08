@@ -118,7 +118,7 @@
                                 {{ data.date|default:"" }}
                             {% endif %}
                         </span>
-                        <p>{% if "مجال الإصلاح المال" in data.subject %}
+                        <p class="card-title">{% if "مجال الإصلاح المال" in data.subject %}
                             تجارب بعض الدول في مجال الإصلاح المالي
                             {% else %}
                             {{ data.subject }}
@@ -133,15 +133,7 @@
                 <a href="journals/osus/articles/{{ data.url }}">
                     <div class="study-text-info">
                         <span>
-                            {% if 'اقتصاد السوق الاجتماعي' in data.subject or 'النهضة الزراعية في اليمن' in data.subject or 'النظام التعليمي في اليمن' in data.subject  or 'القضاء في اليمن' in data.subject or 'الوظائف في اليمن' in data.subject or 'النظافة وإدارة النفايات الصلبة' in data.subject %}
-                              20 مارس  2025
-                            
-                            {% elif 'ظاهرة التسول في اليمن' in data.subject or 'الإدارة المحلية في اليمن' in data.subject or 'فاعلية المنظومة العدلية والرقابية في اليمن' in data.subject or 'التأمين الصحي الاجتماعي في اليمن' in data.subject %}
-                                15 يونيو  2025
-                            {% else %}
-                                <!-- تاريخ افتراضي أو تركه فارغًا -->
-                                {{ data.date|default:"" }}
-                            {% endif %}
+                              {{ data.publish_date }}
                         </span>
                         <p>{% if "مجال الإصلاح المال" in data.subject %}
                             تجارب بعض الدول في مجال الإصلاح المالي
