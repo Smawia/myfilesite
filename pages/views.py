@@ -538,6 +538,12 @@ def osus_journals(request):
 def view_infograph(request):
     infographs = [
         {
+            "title": "أفضل أنظمة التعليم التي صنعت نهضة الدول 2025م",
+            "slug": "The_best_education_systems_2025",
+            "image": "imgs/the_best_education_systems.jpeg",
+            "date": "30 مارس 2026",
+        },
+        {
             "title": "أغلى 10 دول أوروبية في أسعار البنزين بمطلع عام 2026",
             "slug": "The_10_most_expensive_European_countries_for_gasoline_prices_at_the_beginning_of_2026",
             "image": "imgs/the_10_most_expensive_european_countries_for_gasoline_prices.jpeg",
@@ -1451,6 +1457,12 @@ def infograph_detail(request, slug):
             'title': 'أغلى 10 دول أوروبية في أسعار البنزين بمطلع عام 2026',
             'date': '1 مارس 2026',
             'image': 'imgs/the_10_most_expensive_european_countries_for_gasoline_prices.jpeg',
+        },
+        "The_best_education_systems_2025": {
+            'slug': 'The_best_education_systems_2025',
+            'title': 'أفضل أنظمة التعليم التي صنعت نهضة الدول 2025م',
+            'date': '30 مارس 2026',
+            'image': 'imgs/the_best_education_systems.jpeg',
         },
     }
 
