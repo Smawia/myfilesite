@@ -1,4 +1,12 @@
 {% load static %}
+<script>
+let targetHash = window.location.hash;
+
+if (targetHash) {
+    // منع الانتقال التلقائي
+    history.replaceState(null, null, window.location.pathname + window.location.search);
+}
+</script>
 <!-- start header -->
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 <div class="scroll">
