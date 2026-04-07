@@ -15,51 +15,70 @@ let global_savedMode = localStorage.getItem('theme');
 
 // index page
 document.addEventListener("DOMContentLoaded", function () {
-    const radios = document.querySelectorAll('.slides input[name="radio-btn"]');
-    let current = -1;
 
+     /* =========================
+       🎯 SLIDER (Radio)
+    ========================= */
+    const radios = document.querySelectorAll('.slides input[name="radio-btn"]');
     const prevArrow = document.querySelector('.arrow-1.prev');
     const nextArrow = document.querySelector('.arrow-1.next');
 
-    if(!prevArrow || !nextArrow) {
+    let current = 0;
+    let sliderTimer;
+    const intervalTime = 10000;
+
+    if (radios.length === 0) {
+        // الصفحة لا تحتوي على سلايدر
         return;
     }
+
+    radios.forEach((radio, index) => {
+        radio.addEventListener('change', () => {
+            if (radio.checked) {
+                current = index;
+
+                // اختياري: إعادة ضبط التمرير التلقائي
+                stopSlider();
+                startSlider();
+            }
+        });
+    });
 
     function showSlide(index) {
         radios[index].checked = true;
         current = index;
     }
 
-    prevArrow.addEventListener('click', () => {
-        let index = current - 1;
-        if (index < 0) index = radios.length - 1;
-        showSlide(index);
-    });
-
-    nextArrow.addEventListener('click', () => {
+    function nextSlide() {
         let index = current + 1;
         if (index >= radios.length) index = 0;
         showSlide(index);
-    });
-    let intervalTime = 10000; // وقت البداية بين الانتقالات
-
-    function startSlider() {
-        let counter = 5; // التأكد من البدء من الصورة الأولى
-        document.getElementById('radio' + counter).checked = true;
-
-        setTimeout(function sliderTransition() {
-            counter--;
-            if (counter == 0) {
-                counter = 5; // العودة إلى الصورة الأولى بعد الصورة الأخيرة
-            }
-            document.getElementById('radio' + counter).checked = true;
-            showSlide(counter);
-            // ضبط الانتقال التالي بنفس الوقت الثابت                
-            setTimeout(sliderTransition, intervalTime);
-        }, intervalTime);
     }
 
-    startSlider(); // تشغيل السلايدر بمجرد أن الـ DOM جاهز
+    function prevSlide() {
+        let index = current - 1;
+        if (index < 0) index = radios.length - 1;
+        showSlide(index);
+    }
+
+    function startSlider() {
+        stopSlider(); // 🔥 مهم لمنع التكرار
+        sliderTimer = setInterval(prevSlide, intervalTime);
+    }
+
+    function stopSlider() {
+        clearInterval(sliderTimer);
+    }
+
+    // الأسهم
+    if (prevArrow && nextArrow) {
+        prevArrow.addEventListener('click', prevSlide);
+        nextArrow.addEventListener('click', nextSlide);
+    }
+
+    // بدء التشغيل
+    showSlide(4); // التأكد من البدء من الصورة الأولى
+    startSlider();
 
 
     // تعريف الـ Swiper لكن بدون autoplay
@@ -99,20 +118,26 @@ document.addEventListener("DOMContentLoaded", function () {
             }
         }
     });
+
     // بدء التشغيل التلقائي بعد تحميل الصفحة
     window.addEventListener("load", function () {
         swiper.params.autoplay = { delay: 7000, disableOnInteraction: false }; // كل 7 ثواني
         swiper.autoplay.start();
     });
+    swiper.autoplay.start();
     document.addEventListener("visibilitychange", function () {
         if (document.hidden) {
             // إيقاف التشغيل لما تنتقل لتبويب ثاني
             swiper.autoplay.stop();
+            stopSlider();
         } else {
             // إعادة التشغيل لما ترجع للتبويب
             swiper.autoplay.start();
+            startSlider();
         }
     });
+
+
     function switchResponsiveImage() {
     const img = document.getElementById("issueImg");
 
