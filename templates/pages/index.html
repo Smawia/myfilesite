@@ -427,13 +427,13 @@
                 </a>
             </div> -->
             <div class="slide journalImage">
-                <img data-mobile="{% static 'imgs/fourth-Issue-Cover-MOBILE.jpg' %}"
-                data-desktop="{% static 'imgs/fourth-Issue-Cover.jpeg' %}" 
-                src="{% static 'imgs/fourth-Issue-Cover.jpeg' %}" id="issueImg" alt="">
-                <a href="{% url 'osus' %}">
+                <img data-mobile="{% static 'imgs/fifth-Issue-Cover-MOBILE.jpeg' %}"
+                data-desktop="{% static 'imgs/fifth-Issue-Cover.jpeg' %}" 
+                src="{% static 'imgs/fifth-Issue-Cover.jpeg' %}" id="issueImg" alt="">
+                <a href="{% url 'osus' %}?volume=2#issue5">
                     <div class="slide-full-inf">
-                        <h2> دورية أُســـس العدد الرابع</h2>
-                        <span><span style="display: inline;">7 </span>ديسمبر 2025
+                        <h2> دورية أُســـس العدد الخامس</h2>
+                        <span><span style="display: inline;">1 </span>أبريل 2025
                         </span>
                     </div>
                 </a>
@@ -603,6 +603,16 @@
         
         <div class="swiper-wrapper">
             <div class="swiper-slide">
+                <a href="{% url 'infograph_detail' 'Leading_countries_in_the_Global_Investment_Risk_and_Resilience_Index' %}">
+                    <img src="{% static 'imgs/leading_countries_in_the_global_investment_risk-index.jpeg' %}" alt="">
+                </a>
+            </div>
+            <div class="swiper-slide">
+                <a href="{% url 'infograph_detail' 'Leading_countries_in_the_Digital_Government_Index_2025' %}">
+                    <img src="{% static 'imgs/leading_countries_in_the_digital_government_index_2025-index.jpeg' %}" alt="">
+                </a>
+            </div>
+            <div class="swiper-slide">
                 <a href="{% url 'infograph_detail' 'The_best_education_systems_2025' %}">
                     <img src="{% static 'imgs/the_best_education_systems-index.jpeg' %}" alt="">
                 </a>
@@ -625,16 +635,6 @@
             <div class="swiper-slide">
                 <a href="{% url 'infograph_detail' 'Top_10_countries_in_the_global_trade_transformation' %}">
                     <img src="{% static 'imgs/top_10_countries_in_the_global_trade_transformation.jpeg' %}" alt="">
-                </a>
-            </div>
-            <div class="swiper-slide">
-                <a href="{% url 'infograph_detail' 'The_top_10_leading_countries_in_economic_balance_in_the_world_for_2025' %}">
-                    <img src="{% static 'imgs/the_top 10_leading_countries_in_economic-index.jpeg' %}" alt="">
-                </a>
-            </div>
-            <div class="swiper-slide">
-                <a href="{% url 'infograph_detail' 'Reinventing_Government_by_David_Osborne_and_Ted' %}">
-                    <img src="{% static 'imgs/reinventing_government_by_David_and_Ted.jpeg' %}" alt="">
                 </a>
             </div>
                       
