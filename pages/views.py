@@ -54,6 +54,9 @@ def download_or_view_third_ossus(request):
 def download_or_view_fourth_ossus(request):
     return serve_pdf(request, 'Osus-(Vol.1)-04.pdf')
 
+def download_or_view_fifth_ossus(request):
+    return serve_pdf(request, 'Osus-(Vol.2)-05.pdf')
+
 def view_osus_content(requst):
     return serve_pdf(requst, 'osus-2025-03-issue-contents.pdf')
 def view_osus_second_content(requst):
@@ -61,11 +64,21 @@ def view_osus_second_content(requst):
 
 def view_osus_third_content(requst):
     return serve_pdf(requst, 'third-osus-2025-09-issue-contents.pdf')
+
 def view_osus_fourth_content(requst):
     return serve_pdf(requst, 'fourth-osus-2025-12-issue-contents.pdf')
 
+def view_osus_fifth_content(requst):
+    return serve_pdf(requst, 'fifth-osus-2026-4-issue-contents.pdf')
+
 def index(request):
     videos = [
+        {
+            "url": "/studies/19/",
+            "video": "HLOSdnOyy_4",
+            "date": "2026-3-25",
+            "subject": "كيف تبني سويسرا جيشها؟"
+        },
         {
             "url": "/studies/18/",
             "video": "KKBdIw-aYlw",
@@ -77,12 +90,6 @@ def index(request):
             "video": "kwRoAZMJjIs",
             "date": "2026-2-7",
             "subject": "من البيروقراطية إلى الكفاءة: كيف تفكر الحكومات الحديثة؟"
-        },
-        {
-            "url": "/studies/16/",
-            "video": "2NQktms2hzU",
-            "date": "2026-1-20",
-            "subject": "التجربة التعليمية في فنلندا: تعليم بلا ضغط… ونتائج مذهلة"
         },
     ]
 
@@ -537,6 +544,30 @@ def osus_journals(request):
 
 def view_infograph(request):
     infographs = [
+        {
+            "title": "ريادة الدول في إسهام الشركات العائلية اقتصاديًا",
+            "slug": "Leading_countries_in_the_economic_contribution_of_family_businesses",
+            "image": "imgs/leading_countries_in_the_economic_contribution_of_family_businesses.jpeg",
+            "date": "15 أبريل 2026",
+        },
+        {
+            "title": "مقارنة بين أقوى النظم السياسية عالميًا",
+            "slug": "Comparison_between_the_worlds_most_powerful_political_systems",
+            "image": "imgs/comparison_between_the_worlds_most_powerful_political_systems.jpeg",
+            "date": "13 أبريل 2026",
+        },
+        {
+            "title": "الدول الرائدة في مؤشر مخاطر الاستثمار والمرونة العالمية",
+            "slug": "Leading_countries_in_the_Global_Investment_Risk_and_Resilience_Index",
+            "image": "imgs/leading_countries_in_the_global_investment_risk.jpeg",
+            "date": "7 أبريل 2026",
+        },
+        {
+            "title": "الدول الرائدة في مؤشر الحكومة الرقمية 2025م",
+            "slug": "Leading_countries_in_the_Digital_Government_Index_2025",
+            "image": "imgs/leading_countries_in_the_digital_government_index_2025.jpeg",
+            "date": "31 مارس 2026",
+        },
         {
             "title": "أفضل أنظمة التعليم التي صنعت نهضة الدول 2025م",
             "slug": "The_best_education_systems_2025",
@@ -1464,6 +1495,30 @@ def infograph_detail(request, slug):
             'date': '30 مارس 2026',
             'image': 'imgs/the_best_education_systems.jpeg',
         },
+        "Leading_countries_in_the_Digital_Government_Index_2025": {
+            'slug': 'Leading_countries_in_the_Digital_Government_Index_2025',
+            'title': 'الدول الرائدة في مؤشر الحكومة الرقمية 2025م',
+            'date': '31 مارس 2026',
+            'image': 'imgs/leading_countries_in_the_digital_government_index_2025.jpeg',
+        },
+        "Leading_countries_in_the_Global_Investment_Risk_and_Resilience_Index": {
+            'slug': 'Leading_countries_in_the_Global_Investment_Risk_and_Resilience_Index',
+            'title': 'الدول الرائدة في مؤشر مخاطر الاستثمار والمرونة العالمية',
+            'date': '7 أبريل 2026',
+            'image': 'imgs/leading_countries_in_the_global_investment_risk.jpeg',
+        },
+        "Comparison_between_the_worlds_most_powerful_political_systems": {
+            'slug': 'Comparison_between_the_worlds_most_powerful_political_systems',
+            'title': 'مقارنة بين أقوى النظم السياسية عالميًا',
+            'date': '13 أبريل 2026',
+            'image': 'imgs/comparison_between_the_worlds_most_powerful_political_systems.jpeg',
+        },
+        "Leading_countries_in_the_economic_contribution_of_family_businesses": {
+            'slug': 'Leading_countries_in_the_economic_contribution_of_family_businesses',
+            'title': 'ريادة الدول في إسهام الشركات العائلية اقتصاديًا',
+            'date': '15 أبريل 2026',
+            'image': 'imgs/leading_countries_in_the_economic_contribution_of_family_businesses.jpeg',
+        },
     }
 
     detail = data.get(slug)
@@ -1513,14 +1568,24 @@ def journal_studies(request):
         {'subject': 'الأمن الغذائي في اليمن', 'url': 'FoodSecurityInYemen', 'image': 'imgs/Journal-21-index.jpg', 'date': '23 ديسمبر 2025'}, 
     ]
 
+    issue_five = [
+        {'subject': 'الأسر المنتجة ودورها في التنمية الاقتصادية للمجتمع', 'url': 'BusinessFamiliesAndTheirRoleInTheEconomicDevelopmentOfSociety', 'image': 'imgs/business_families_journal-index.jpg', 'date': '10 أبريل 2026'}, 
+        {'subject': 'التحول الرقمي الحكومي في الیمن', 'url': 'GovernmentDigitalTransformationInYemen', 'image': 'imgs/government_digital_transformation_in_yemen-index.jpg', 'date': '10 أبريل 2026'}, 
+        {'subject': 'الاقتصاد السياسي في اليمن', 'url': 'ThePoliticalEconomyInYemen', 'image': 'imgs/political_economy_in_yemen-index.jpg', 'date': '10 أبريل 2026'}, 
+        {'subject': 'العرب والمسلمون في سنوات التَيه', 'url': 'ArabsAndMuslimsInTheYearsOfWandering', 'image': 'imgs/Journal-21-index.jpg', 'date': '10 أبريل 2026'}, 
+    ]
+    
+
     context = {
         'issue_one': issue_one,
         'issue_two': issue_two,
         'issue_three': issue_three,
         'issue_four': issue_four,
+        'issue_five': issue_five,
     }
     return render(request,'pages/journal_studies.html',context)
 
+# issue_one
 def social_market_economy(request):
         return render(request, 'pages/social_market_economy.html')
 
@@ -1539,6 +1604,7 @@ def hygiene_and_solid_waste_management(request):
 def educational_system_in_yemen(request):
     return render(request, 'pages/educational_system_in_yemen.html')
 
+# issue_two
 def begging_phenomenon_in_yemen(request):
     return render(request, 'pages/begging_phenomenon_in_yemen.html')
 
@@ -1551,6 +1617,7 @@ def effectiveness_of_the_judicial_and_oversight_system_in_yemen(request):
 def social_health_insurance_in_yemen(request):
     return render(request, 'pages/social_health_insurance_in_yemen.html')
 
+# issue_three
 def dual_functional_for_administrative(request):
     return render(request, 'pages/dual_functional_for_administrative.html')
 
@@ -1569,6 +1636,7 @@ def civil_society_organizations(request):
 def moroccan_higher_education_in_economic_development(request):
     return render(request, 'pages/moroccan_higher_education_in_economic_development.html')
 
+# issue_four
 def economic_empowerment(request):
     return render(request, 'pages/economic_empowerment_and_self-Sufficiency_in_yemen.html')
 
@@ -1584,8 +1652,28 @@ def educational_quality_in_the_finnish_experience(request):
 def food_security_in_yemen(request):
     return render(request, 'pages/food_security_in_yemen.html')
 
+# issue_five
+def business_families_and_their_role_in_the_economic_development_of_society(request):
+    return render(request, 'pages/business_families_and_their_role_in_the_economic_development_of_society.html')
+
+def government_digital_transformation_in_yemen(request):
+    return render(request, 'pages/government_digital_transformation_in_yemen.html')
+
+def the_political_economy_in_yemen(request):
+    return render(request, 'pages/the_political_economy_in_yemen.html')
+
+def arabs_and_muslims_in_the_years_of_wandering(request):
+    return render(request, 'pages/arabs_and_muslims_in_the_years_of_wandering.html')
+
+
 def motion_graphics(request):
     videos = [
+        {
+            "url": "/studies/19/",
+            "video": "https://youtu.be/HLOSdnOyy_4",
+            "date": "2026-3-25",
+            "subject": "كيف تبني سويسرا جيشها؟"
+        },
         {
             "url": "/studies/18/",
             "video": "https://youtu.be/KKBdIw-aYlw",
