@@ -74,6 +74,12 @@ def view_osus_fifth_content(requst):
 def index(request):
     videos = [
         {
+            "url": "/studies/20/",
+            "video": "AqoC5ncdC6U",
+            "date": "2026-4-20",
+            "subject": "التنمية والإصلاح الإداري: لماذا يختلف الواقع عن المفترض في الدول؟"
+        },
+        {
             "url": "/studies/19/",
             "video": "HLOSdnOyy_4",
             "date": "2026-3-25",
@@ -84,12 +90,6 @@ def index(request):
             "video": "KKBdIw-aYlw",
             "date": "2026-2-24",
             "subject": "هل آن الأوان لتخفيف عبء الدولة؟ مستقبل التوظيف في يد القطاع الخاص!"
-        },
-        {
-            "url": "/studies/17/",
-            "video": "kwRoAZMJjIs",
-            "date": "2026-2-7",
-            "subject": "من البيروقراطية إلى الكفاءة: كيف تفكر الحكومات الحديثة؟"
         },
     ]
 
@@ -1668,6 +1668,12 @@ def arabs_and_muslims_in_the_years_of_wandering(request):
 
 def motion_graphics(request):
     videos = [
+        {
+            "url": "/studies/20/",
+            "video": "https://youtu.be/AqoC5ncdC6U",
+            "date": "2026-4-20",
+            "subject": "التنمية والإصلاح الإداري: لماذا يختلف الواقع عن المفترض في الدول؟"
+        },
         {
             "url": "/studies/19/",
             "video": "https://youtu.be/HLOSdnOyy_4",
