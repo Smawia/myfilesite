@@ -40,6 +40,7 @@ urlpatterns = [
     path('articles/LegalReformInYemen',views.legal_reform_in_yemen,name='legal_reform_in_yemen'),
     path('articles/GeneralAdministrationInYemen',views.general_administration_in_yemen,name='general_administration_in_yemen'),
     path('publications/books',views.books,name='books'),
+    path('publications/journals/osus/<path:filename>/', views.download_pdf, name='download_pdf'),
     path('journals/osus/articles/', views.journal_studies, name='journal_studies'),
     path('journals/osus/articles/SocialMarketEconomy', views.social_market_economy, name='social_market_economy'),
     path('journals/osus/articles/AgriculturalRenaissanceInYemen', views.agricultural_renaissance_in_yemen, name='agricultural_renaissance_in_yemen'),

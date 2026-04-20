@@ -1,5 +1,5 @@
 from django.shortcuts import redirect, render
-from django.http import FileResponse, HttpResponse, JsonResponse
+from django.http import FileResponse, HttpResponse, JsonResponse, Http404
 from django.contrib import messages
 from .models import Contacts
 from .models import Studies
@@ -1796,6 +1796,8 @@ def motion_graphics(request):
         "query": query,
     })
 
+def download_pdf (request, filename):
+    return serve_pdf(request, filename)
 
 # def motion_graphics_main(request):
 #     videos = [
