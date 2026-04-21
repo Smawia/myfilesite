@@ -7479,8 +7479,8 @@ h5 {
 
     .show-studies-index .show-index-imgs .card img {
         width: 100%;
-        height: 160px !important;
-        max-height: 160px !important;
+        height: 210px !important;
+        max-height: 210px !important;
     }
 
     .show-studies-index .show-index-imgs .card a .text-info-index p {
@@ -7893,13 +7893,13 @@ h5 {
 
     .show-all-studies .studies-card {
         width: calc(25% - 20px) !important;
-        margin-bottom: 20px !important;
+        margin-bottom: 60px !important;
     }
 
     .show-all-studies .studies-card img {
         width: 100%;
         height: 100% !important;
-        max-height: 140px !important;
+        max-height: 190px !important;
     }
 
     .show-all-studies .studies-card a {
@@ -14537,8 +14537,163 @@ body.dark-mode .study-info-show {
 
 
 /* study-5-2 */
+/* .study-5-2 td.CellOverride-1 {
+	background-color:#002b80;
+	border-bottom-color:#000000;
+	border-bottom-style:solid;
+	border-bottom-width:1px;
+	border-left-color:#000000;
+	border-left-style:solid;
+	border-left-width:1px;
+	border-right-color:#000000;
+	border-right-style:solid;
+	border-right-width:1px;
+	border-top-color:#000000;
+	border-top-style:solid;
+	border-top-width:1px;
+	vertical-align:middle;
+} */
 .study-5-2 td.CellOverride-2 {
+	background-color:#f3f3f3;
+	/* border-bottom-style:solid;
+	border-bottom-width:1px;
+	border-left-style:solid;
+	border-left-width:1px;
+	border-right-style:solid;
+	border-right-width:1px;
+	border-top-color:#000000;
+	border-top-style:solid;
+	border-top-width:1px;
+	vertical-align:middle; */
+}
+.study-5-2 td.CellOverride-3 {
+	border-bottom-style:solid;
+	border-bottom-width:1px;
+	border-left-style:solid;
+	border-left-width:1px;
+	border-right-style:solid;
+	border-right-width:1px;
+	border-top-color:#000000;
+	border-top-style:solid;
+	border-top-width:1px;
+	vertical-align:middle;
+}
+.study-5-2 td.CellOverride-6 {
 	background-color:#e7e6e6;
+	border-bottom-style:solid;
+	border-bottom-width:1px;
+	border-left-style:solid;
+	border-left-width:1px;
+	border-right-width:1px;
+	border-top-color:#000000;
+	border-top-style:solid;
+	border-top-width:1px;
+	vertical-align:middle;
+}
+.study-5-2 td.CellOverride-7 {
+	background-color:#ffffff;
+	border-bottom-style:solid;
+	border-bottom-width:1px;
+	border-left-width:1px;
+	border-right-width:1px;
+	border-top-color:#000000;
+	border-top-style:solid;
+	border-top-width:1px;
+	vertical-align:middle;
+}
+.study-5-2 td.CellOverride-8 {
+	background-color:#ffffff;
+	border-bottom-style:solid;
+	border-bottom-width:1px;
+	border-left-width:1px;
+	border-right-style:solid;
+	border-right-width:1px;
+	border-top-color:#000000;
+	border-top-style:solid;
+	border-top-width:1px;
+	vertical-align:middle;
+}
+.study-5-2 td.CellOverride-9 {
+	background-color:#e7e6e6;
+	border-bottom-style:solid;
+	border-bottom-width:1px;
+	border-left-style:solid;
+	border-left-width:1px;
+	border-right-width:1px;
+	border-top-style:solid;
+	border-top-width:1px;
+	vertical-align:middle;
+}
+.study-5-2 td.CellOverride-10 {
+	background-color:#ffffff;
+	border-bottom-style:solid;
+	border-bottom-width:1px;
+	border-left-width:1px;
+	border-right-width:1px;
+	border-top-style:solid;
+	border-top-width:1px;
+	vertical-align:middle;
+}
+.study-5-2 td.CellOverride-11 {
+	background-color:#ffffff;
+	border-bottom-style:solid;
+	border-bottom-width:1px;
+	border-left-width:1px;
+	border-right-style:solid;
+	border-right-width:1px;
+	border-top-style:solid;
+	border-top-width:1px;
+	vertical-align:middle;
+}
+.study-5-2 td.CellOverride-12 {
+	background-color:#e7e6e6;
+	border-bottom-style:solid;
+	border-bottom-width:1px;
+	border-left-style:solid;
+	border-left-width:1px;
+	border-right-style:solid;
+	border-right-width:1px;
+	border-top-color:#000000;
+	border-top-style:solid;
+	border-top-width:1px;
+	vertical-align:middle;
+}
+.study-5-2 td.CellOverride-13 {
+	background-color:#ffffff;
+	border-bottom-style:solid;
+	border-bottom-width:1px;
+	border-left-style:solid;
+	border-left-width:1px;
+	border-right-style:solid;
+	border-right-width:1px;
+	border-top-color:#000000;
+	border-top-style:solid;
+	border-top-width:1px;
+	vertical-align:middle;
+}
+.study-5-2 td.CellOverride-14 {
+	background-color:#e7e6e6;
+	border-bottom-style:solid;
+	border-bottom-width:1px;
+	border-left-style:solid;
+	border-left-width:1px;
+	border-right-style:solid;
+	border-right-width:1px;
+	border-top-style:solid;
+	border-top-width:1px;
+	vertical-align:middle;
+}
+.study-5-2 td.CellOverride-15 {
+	background-color:#ffffff;
+	border-bottom-style:solid;
+	border-bottom-width:1px;
+	border-left-style:solid;
+	border-left-width:1px;
+	border-right-style:solid;
+	border-right-width:1px;
+	border-top-style:solid;
+	border-top-width:1px;
+	vertical-align:middle;
 }
 
 .study-5-2 col._idGenTableRowColumn-1 {
@@ -14579,60 +14734,4 @@ body.dark-mode .study-info-show {
 }
 .study-5-2 tr._idGenTableRowColumn-13 {
 	min-height:19px;
-}
-
-.white-background {
-    background-color: #ffffff;
-}
-
-
-/* study-5-3  */
-.study-5-3 table.TableOverride-1 {
-	border-collapse:collapse;
-	border-width:1px;
-	margin-left:auto;
-	margin-right:auto;
-}
-.study-5-3 td.CellOverride-1 {
-	background-color:#002b80;
-	vertical-align:middle;
-}
-.study-5-3 td.CellOverride-2 {
-	background-color:#e7e6e6;
-	vertical-align:middle;
-    font-weight: bold;
-}
-/* .study-5-3 td.CellOverride-3 {
-	vertical-align:middle;
-} */
-.study-5-3 col._idGenTableRowColumn-1 {
-	width:36px;
-}
-.study-5-3 col._idGenTableRowColumn-2 {
-	width:53px;
-}
-.study-5-3 col._idGenTableRowColumn-3 {
-	width:50px;
-}
-.study-5-3 col._idGenTableRowColumn-4 {
-	width:80px;
-}
-.study-5-3 tr._idGenTableRowColumn-5 {
-	min-height:61px;
-}
-.study-5-3 tr._idGenTableRowColumn-6 {
-	min-height:46px;
-}
-.study-5-3 tr._idGenTableRowColumn-7 {
-	min-height:16px;
-}
-
-.study-5-3 span.CharOverride-11 {
-	font-weight:bold;
-}
-
-@media (max-width: 574px) {
-    .study-5-3 .margain-bottom {
-        margin-bottom: 15px;
-    }
 }
