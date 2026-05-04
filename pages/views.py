@@ -1584,7 +1584,8 @@ def journal_studies(request):
         {'subject': 'الأسر المنتجة ودورها في التنمية الاقتصادية للمجتمع', 'url': 'BusinessFamiliesAndTheirRoleInTheEconomicDevelopmentOfSociety', 'image': 'imgs/business_families_journal-index.jpg', 'date': '10 أبريل 2026'}, 
         {'subject': 'التحول الرقمي الحكومي في الیمن', 'url': 'GovernmentDigitalTransformationInYemen', 'image': 'imgs/government_digital_transformation_in_yemen-index.jpg', 'date': '10 أبريل 2026'}, 
         {'subject': 'الاقتصاد السياسي في اليمن', 'url': 'ThePoliticalEconomyInYemen', 'image': 'imgs/political_economy_in_yemen-index.jpg', 'date': '10 أبريل 2026'}, 
-        {'subject': 'العرب والمسلمون في سنوات التَيه', 'url': 'ArabsAndMuslimsInTheYearsOfWandering', 'image': 'imgs/Journal-21-index.jpg', 'date': '10 أبريل 2026'}, 
+        {'subject': 'العرب والمسلمون في سنوات التَيه', 'url': 'ArabsAndMuslimsInTheYearsOfWandering', 'image': 'imgs/arabs_and_muslims_in_the_years_of_wandering-index.jpg', 'date': '10 أبريل 2026'}, 
+        {'subject': 'الأكل والمنتجات الغذائية في سويسرا', 'url': 'FoodAndFoodProductsInSwitzerland ', 'image': 'imgs/food_and_food_products_in_switzerland-index.jpg', 'date': '10 أبريل 2026'}, 
     ]
     
 
@@ -1676,6 +1677,9 @@ def the_political_economy_in_yemen(request):
 
 def arabs_and_muslims_in_the_years_of_wandering(request):
     return render(request, 'pages/arabs_and_muslims_in_the_years_of_wandering.html')
+
+def food_and_food_products_in_switzerland(request):
+    return render(request, 'pages/food_and_food_products_in_switzerland.html')
 
 
 def motion_graphics(request):

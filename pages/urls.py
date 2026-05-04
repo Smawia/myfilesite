@@ -67,6 +67,7 @@ urlpatterns = [
     path('journals/osus/articles/GovernmentDigitalTransformationInYemen',views.government_digital_transformation_in_yemen,name='government_digital_transformation_in_yemen'),
     path('journals/osus/articles/ThePoliticalEconomyInYemen',views.the_political_economy_in_yemen,name='the_political_economy_in_yemen'),
     path('journals/osus/articles/ArabsAndMuslimsInTheYearsOfWandering',views.arabs_and_muslims_in_the_years_of_wandering,name='arabs_and_muslims_in_the_years_of_wandering'),
+    path('journals/osus/articles/FoodAndFoodProductsInSwitzerland',views.food_and_food_products_in_switzerland,name='food_and_food_products_in_switzerland'),
 
     # new studies
     path('articles/CurrentEconomicSituation',views.current_economic_situation,name='current_economic_situation'),
