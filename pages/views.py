@@ -150,9 +150,17 @@ def studies(request):
         {'subject': 'الأمن الغذائي في اليمن', 'url': 'FoodSecurityInYemen', 'image': 'Journal-21-index.jpg', 'date': '23 ديسمبر 2025', 'from_db': False}, 
     ]
 
+    issue_five = [
+        {'subject': 'الأسر المنتجة ودورها في التنمية الاقتصادية للمجتمع', 'url': 'BusinessFamiliesAndTheirRoleInTheEconomicDevelopmentOfSociety', 'image': 'business_families_journal-index.jpg', 'date': '10 أبريل 2026', 'from_db': False}, 
+        {'subject': 'التحول الرقمي الحكومي في الیمن', 'url': 'GovernmentDigitalTransformationInYemen', 'image': 'government_digital_transformation_in_yemen-index.jpg', 'date': '10 أبريل 2026', 'from_db': False}, 
+        {'subject': 'الاقتصاد السياسي في اليمن', 'url': 'ThePoliticalEconomyInYemen', 'image': 'political_economy_in_yemen-index.jpg', 'date': '10 أبريل 2026', 'from_db': False}, 
+        {'subject': 'العرب والمسلمون في سنوات التَيه', 'url': 'ArabsAndMuslimsInTheYearsOfWandering', 'image': 'arabs_and_muslims_in_the_years_of_wandering-index.jpg', 'date': '10 أبريل 2026', 'from_db': False}, 
+        {'subject': 'الأكل والمنتجات الغذائية في سويسرا', 'url': 'FoodAndFoodProductsInSwitzerland ', 'image': 'food_and_food_products_in_switzerland-index.jpg', 'date': '10 أبريل 2026', 'from_db': False}, 
+    ]
+
     # إضافة القوائم الثابتة بعد البحث فيها
     if query:
-        for item in issue_one + issue_two + issue_three + issue_four:
+        for item in issue_one + issue_two + issue_three + issue_four + issue_five:
             if not query or query in item['subject']:
                 combined_results.append({
                     'subject': item['subject'],
