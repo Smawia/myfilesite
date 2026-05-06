@@ -553,6 +553,12 @@ def osus_journals(request):
 def view_infograph(request):
     infographs = [
         {
+            "title": "أفضل اقتصادات القطاع الخاص في العالم 2025",
+            "slug": "The_worlds_best_private_sector_economies_2025",
+            "image": "imgs/the_world_best_private_sector_economies_2025.jpeg",
+            "date": "6 مايو 2026",
+        },
+        {
             "title": "خفض كلفة الدولة ونقل عبء التوظيف إلى القطاع الخاص",
             "slug": "Reducing_state_costs_and_transferring_the_burden_of_employment_to_the_private_sector",
             "image": "imgs/reducing_state_costs_and_transferring.jpeg",
@@ -1538,6 +1544,12 @@ def infograph_detail(request, slug):
             'title': 'خفض كلفة الدولة ونقل عبء التوظيف إلى القطاع الخاص',
             'date': '20 أبريل 2026',
             'image': 'imgs/reducing_state_costs_and_transferring.jpeg',
+        },
+        "The_worlds_best_private_sector_economies_2025": {
+            'slug': 'The_worlds_best_private_sector_economies_2025',
+            'title': 'أفضل اقتصادات القطاع الخاص في العالم 2025',
+            'date': '6 مايو 2026',
+            'image': 'imgs/the_world_best_private_sector_economies_2025.jpeg',
         },
     }
 
