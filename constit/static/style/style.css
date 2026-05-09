@@ -14986,4 +14986,8 @@ body.dark-mode .study-info-show {
     .study-5-5 col._idGenTableRowColumn-16 {
         width:60px;
     }
+    
+    .stretch-table {
+        width: stretch;
+    }
 }
