@@ -74,6 +74,12 @@ def view_osus_fifth_content(requst):
 def index(request):
     videos = [
         {
+            "url": "/studies/21/",
+            "video": "Ji6wBwXdVcM",
+            "date": "2026-5-9",
+            "subject": "كيف تبني الأسر المنتجة اقتصاد وطن؟ السر الذي بدأت به كبرى اقتصادات العالم!"
+        },
+        {
             "url": "/studies/20/",
             "video": "AqoC5ncdC6U",
             "date": "2026-4-20",
@@ -84,12 +90,6 @@ def index(request):
             "video": "HLOSdnOyy_4",
             "date": "2026-3-25",
             "subject": "كيف تبني سويسرا جيشها؟"
-        },
-        {
-            "url": "/studies/18/",
-            "video": "KKBdIw-aYlw",
-            "date": "2026-2-24",
-            "subject": "هل آن الأوان لتخفيف عبء الدولة؟ مستقبل التوظيف في يد القطاع الخاص!"
         },
     ]
 
@@ -1704,6 +1704,12 @@ def food_and_food_products_in_switzerland(request):
 
 def motion_graphics(request):
     videos = [
+        {
+            "url": "/studies/21/",
+            "video": "https://youtu.be/Ji6wBwXdVcM",
+            "date": "2026-5-9",
+            "subject": "كيف تبني الأسر المنتجة اقتصاد وطن؟ السر الذي بدأت به كبرى اقتصادات العالم!"
+        },
         {
             "url": "/studies/20/",
             "video": "https://youtu.be/AqoC5ncdC6U",
