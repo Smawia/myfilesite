@@ -7203,6 +7203,17 @@ h5 {
     margin-bottom: 40px !important;
     background-color: white;
     transition: 0.3s;
+    position: relative !important;
+}
+
+.show-studies-index .show-index-imgs .card span.span-title {
+        position: absolute !important;
+        top: 6px !important;
+        right: 4px !important;
+        font-weight: bold;
+        color: navajowhite;
+        background: #000000a8;
+        padding: 5px;
 }
 
 .show-studies-index .show-index-imgs .card:hover {
@@ -7297,6 +7308,12 @@ h5 {
         margin-top: -5px;
 
     }
+
+    .show-studies-index .show-index-imgs .card span.span-title {
+        top: 0px !important;
+        right: 0px !important;
+        font-size: 15px;
+        }
 
     .show-studies-index .show-index-imgs .card:not(:last-of-type) {
         padding-bottom: 6px;
@@ -7437,6 +7454,12 @@ h5 {
         margin-top: 10px;
     }
 
+    .show-studies-index .show-index-imgs .card span.span-title {
+        top: 5px !important;
+        right: 4px !important;
+        font-size: 15px;
+    }   
+
     .show-studies-index .show-index-imgs .card a .text-info-index span {
         font-size: 13px;
         margin-right: 8px;
@@ -7476,6 +7499,16 @@ h5 {
         margin-bottom: 48px !important;
         margin-top: -20px;
     }
+
+    /* .show-studies-index .show-index-imgs .card span.span-title {
+        position: absolute !important;
+        top: 6px !important;
+        right: 4px !important;
+        font-weight: bold;
+        color: navajowhite;
+        background: #000000a8;
+        padding: 5px;
+    } */
 
     .show-studies-index .show-index-imgs .card img {
         width: 100%;
@@ -14986,7 +15019,7 @@ body.dark-mode .study-info-show {
     .study-5-5 col._idGenTableRowColumn-16 {
         width:60px;
     }
-    
+
     .stretch-table {
         width: stretch;
     }
