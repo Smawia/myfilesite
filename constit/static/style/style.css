@@ -15024,3 +15024,9 @@ body.dark-mode .study-info-show {
         width: stretch;
     }
 }
+
+.show-references,
+    .refrences,
+    .nested-ref {
+        display: none;
+    }

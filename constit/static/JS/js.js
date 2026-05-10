@@ -743,18 +743,51 @@ document.addEventListener("wheel", function (e) {
     }
 }, { passive: false });
 
-window.addEventListener("DOMContentLoaded", function () {
-    const mobileRef = document.querySelector(".nested-ref");
+// window.addEventListener("DOMContentLoaded", function () {
+//     const mobileRef = document.querySelector(".nested-ref");
     
-    // نسخة الكمبيوتر = العناصر خارج .nested-ref
-    const desktopRef = document.querySelectorAll("body > .show-references, body > .refrences");
+//     // نسخة الكمبيوتر = العناصر خارج .nested-ref
+//     const desktopRef = document.querySelectorAll("body > .show-references, body > .refrences");
+
+//     if (window.innerWidth <= 767) {
+//         // شاشة الهاتف → احذف نسخة الكمبيوتر بالكامل
+//         desktopRef.forEach(el => el.remove());
+//     } else {
+//         // شاشة كبيرة → احذف نسخة الهاتف
+//         if (mobileRef) mobileRef.remove();
+//     }
+// });
+
+window.addEventListener("load", function () {
+
+    const mobileRef = document.querySelector(".nested-ref");
+
+    const desktopRef = document.querySelectorAll(
+        "body > .show-references, body > .refrences"
+    );
 
     if (window.innerWidth <= 767) {
-        // شاشة الهاتف → احذف نسخة الكمبيوتر بالكامل
+
+        // حذف نسخة الكمبيوتر
         desktopRef.forEach(el => el.remove());
+
+        // إظهار نسخة الهاتف
+        if (mobileRef) {
+            mobileRef.style.display = "block";
+        }
+
     } else {
-        // شاشة كبيرة → احذف نسخة الهاتف
-        if (mobileRef) mobileRef.remove();
+
+        // حذف نسخة الهاتف
+        if (mobileRef) {
+            mobileRef.remove();
+        }
+
+        // إظهار نسخة الكمبيوتر
+        desktopRef.forEach(el => {
+            el.style.display = "block";
+        });
     }
+
 });
 
