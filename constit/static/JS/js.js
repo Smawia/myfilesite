@@ -774,6 +774,11 @@ window.addEventListener("load", function () {
         // إظهار نسخة الهاتف
         if (mobileRef) {
             mobileRef.style.display = "block";
+
+            const mobileChildren = mobileRef.querySelectorAll(":scope > .show-references, :scope > .refrences");
+
+            mobileChildren.forEach(el => { el.style.display = "block"});
+            
         }
 
     } else {

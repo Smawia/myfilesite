@@ -15026,7 +15026,11 @@ body.dark-mode .study-info-show {
 }
 
 .show-references,
-    .refrences,
-    .nested-ref {
-        display: none;
-    }
+.refrences,
+.nested-ref {
+    display: none;
+}
+
+.refrences li {
+    scroll-margin-top: 140px;
+}
