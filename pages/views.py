@@ -118,28 +118,28 @@ def studies(request):
     ]
     # القوائم الثابتة
     issue_one = [
-        {'subject': 'اقتصاد السوق الاجتماعي', 'url': 'SocialMarketEconomy', 'image': 'Journal-01.jpg', 'date': '20 مارس  2025', 'from_db': False},
-        {'subject': 'النهضة الزراعية في اليمن', 'url': 'AgriculturalRenaissanceInYemen', 'image': 'Journal-02.jpg', 'date': '20 مارس  2025', 'from_db': False},
-        {'subject': 'النظام التعليمي في اليمن', 'url': 'EducationalSystemInYemen', 'image': 'Journal-03.jpg', 'date': '20 مارس  2025', 'from_db': False},
-        {'subject': 'القضاء في اليمن', 'url': 'JudiciaryInYemen', 'image': 'Journal-04.jpg', 'date': '20 مارس  2025', 'from_db': False},
-        {'subject':'الوظائف في اليمن', 'url': 'JobsInYemen', 'image': 'Journal-05.jpg', 'date': '20 مارس  2025', 'from_db': ' False'},
-        {'subject': 'النظافة وإدارة النفايات الصلبة', 'url': 'HygieneAndSolidWasteManagement', 'image': 'Journal-06.jpg', 'date': '20 مارس  2025', 'from_db': False},
+        {'subject': 'اقتصاد السوق الاجتماعي', 'url': 'SocialMarketEconomy', 'image': 'Journal-01-index.jpg', 'date': '20 مارس  2025', 'from_db': False},
+        {'subject': 'النهضة الزراعية في اليمن', 'url': 'AgriculturalRenaissanceInYemen', 'image': 'Journal-02-index.jpg', 'date': '20 مارس  2025', 'from_db': False},
+        {'subject': 'النظام التعليمي في اليمن', 'url': 'EducationalSystemInYemen', 'image': 'Journal-03-index.jpg', 'date': '20 مارس  2025', 'from_db': False},
+        {'subject': 'القضاء في اليمن', 'url': 'JudiciaryInYemen', 'image': 'Journal-04-index.jpg', 'date': '20 مارس  2025', 'from_db': False},
+        {'subject':'الوظائف في اليمن', 'url': 'JobsInYemen', 'image': 'Journal-05-index.jpg', 'date': '20 مارس  2025', 'from_db': ' False'},
+        {'subject': 'النظافة وإدارة النفايات الصلبة', 'url': 'HygieneAndSolidWasteManagement', 'image': 'Journal-06-index.jpg', 'date': '20 مارس  2025', 'from_db': False},
     ]
 
     issue_two = [
-        {'subject': 'ظاهرة التسول في اليمن', 'url': 'BeggingPhenomenonInYemen', 'image': 'Journal-7.jpg', 'date': '15 يونيو  2025', 'from_db': False},
+        {'subject': 'ظاهرة التسول في اليمن', 'url': 'BeggingPhenomenonInYemen', 'image': 'Journal-7-index.jpg', 'date': '15 يونيو  2025', 'from_db': False},
         {'subject': 'الإدارة المحلية في اليمن', 'url': 'LocalGovernanceInYemen', 'image': 'Journal-8.png', 'date': '15 يونيو  2025', 'from_db': False},   
-        {'subject': 'فاعلية المنظومة العدلية والرقابية في اليمن', 'url': 'EffectivenessOfTheJudicialAndOversightSystemInYemen', 'image': 'Journal-9.jpg', 'date': '15 يونيو  2025', 'from_db': False},
-        {'subject': 'التأمين الصحي الاجتماعي في اليمن', 'url': 'SocialHealthInsuranceInYemen', 'image': 'Journal-10.jpg', 'date': '15 يونيو  2025', 'from_db': False},   
+        {'subject': 'فاعلية المنظومة العدلية والرقابية في اليمن', 'url': 'EffectivenessOfTheJudicialAndOversightSystemInYemen', 'image': 'Journal-9-index.jpg', 'date': '15 يونيو  2025', 'from_db': False},
+        {'subject': 'التأمين الصحي الاجتماعي في اليمن', 'url': 'SocialHealthInsuranceInYemen', 'image': 'Journal-10-index.jpg', 'date': '15 يونيو  2025', 'from_db': False},   
     ]
 
     issue_three = [
-        {'subject': 'أثر الازدواج الوظيفي للقيادة الإدارية على جودة اتخاذ القرار والعمل المؤسسي', 'url': 'DualFunctionalForAdministrative', 'image': 'Journal-11.jpg', 'date': '25 سبتمبر 2025', 'from_db': False},
-        {'subject': 'التعليم الفني والتدريب المهني في اليمن', 'url': 'TechnicalEducationAndVocationalTrainingInYemen', 'image': 'Journal-12.jpg', 'date': '25 سبتمبر 2025', 'from_db': False},
-        {'subject': 'التداخل والتجاوز في المهام والاختصاصات في الإدارة العامة باليمن', 'url': 'OverlapAndEncroachmentInTasksAndCompetencies', 'image': 'Journal-13.jpg', 'date': '25 سبتمبر 2025', 'from_db': False},
+        {'subject': 'أثر الازدواج الوظيفي للقيادة الإدارية على جودة اتخاذ القرار والعمل المؤسسي', 'url': 'DualFunctionalForAdministrative', 'image': 'Journal-11-index.jpg', 'date': '25 سبتمبر 2025', 'from_db': False},
+        {'subject': 'التعليم الفني والتدريب المهني في اليمن', 'url': 'TechnicalEducationAndVocationalTrainingInYemen', 'image': 'Journal-12-index.jpg', 'date': '25 سبتمبر 2025', 'from_db': False},
+        {'subject': 'التداخل والتجاوز في المهام والاختصاصات في الإدارة العامة باليمن', 'url': 'OverlapAndEncroachmentInTasksAndCompetencies', 'image': 'Journal-13-index.jpg', 'date': '25 سبتمبر 2025', 'from_db': False},
         {'subject': 'المنظومة العدلية', 'url': 'TheJudicialSystem', 'image': 'Journal-14.jpg', 'date': '25 سبتمبر 2025', 'from_db': False},
-        {'subject': 'دور منظمات المجتمع المدني في التنمية المحلية', 'url': 'TheRoleOfCivilSocietyOrganizationsInLocalDevelopment', 'image': 'Journal-15.jpg', 'date': '25 سبتمبر 2025', 'from_db': False},
-        {'subject': 'أي دور للتعليم العالي بالمغرب في التنمية الاقتصادية', 'url': 'MoroccanHigherEducationInEconomicDevelopment', 'image': 'Journal-16.jpg', 'date': '25 سبتمبر 2025', 'from_db': False}
+        {'subject': 'دور منظمات المجتمع المدني في التنمية المحلية', 'url': 'TheRoleOfCivilSocietyOrganizationsInLocalDevelopment', 'image': 'Journal-15-index.jpg', 'date': '25 سبتمبر 2025', 'from_db': False},
+        {'subject': 'أي دور للتعليم العالي بالمغرب في التنمية الاقتصادية', 'url': 'MoroccanHigherEducationInEconomicDevelopment', 'image': 'Journal-16-index.jpg', 'date': '25 سبتمبر 2025', 'from_db': False}
     ]
 
     issue_four = [
@@ -552,6 +552,12 @@ def osus_journals(request):
 
 def view_infograph(request):
     infographs = [
+        {
+            "title": "لماذا يُعد التعليم في فنلندا الأفضل في العالم؟",
+            "slug": "Why_is_education_in_Finland_the_best_in_the_world",
+            "image": "imgs/why_is_education_in_finland_the_best_in_the_world.jpeg",
+            "date": "11 مايو 2026",
+        },
         {
             "title": "أفضل اقتصادات القطاع الخاص في العالم 2025",
             "slug": "The_worlds_best_private_sector_economies_2025",
@@ -1550,6 +1556,12 @@ def infograph_detail(request, slug):
             'title': 'أفضل اقتصادات القطاع الخاص في العالم 2025',
             'date': '6 مايو 2026',
             'image': 'imgs/the_world_best_private_sector_economies_2025.jpeg',
+        },
+        "Why_is_education_in_Finland_the_best_in_the_world": {
+            'slug': 'Why_is_education_in_Finland_the_best_in_the_world',
+            'title': 'لماذا يُعد التعليم في فنلندا الأفضل في العالم؟',
+            'date': '11 مايو 2026',
+            'image': 'imgs/why_is_education_in_finland_the_best_in_the_world.jpeg',
         },
     }
 
