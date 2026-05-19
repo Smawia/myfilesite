@@ -74,6 +74,12 @@ def view_osus_fifth_content(requst):
 def index(request):
     videos = [
         {
+            "url": "/studies/22/",
+            "video": "JaZ5fysvQC8",
+            "date": "2026-5-19",
+            "subject": "سر نهضة سنغافورة: من دولة فقيرة إلى نموذج عالمي في الإدارة"
+        },
+        {
             "url": "/studies/21/",
             "video": "Ji6wBwXdVcM",
             "date": "2026-5-9",
@@ -84,12 +90,6 @@ def index(request):
             "video": "AqoC5ncdC6U",
             "date": "2026-4-20",
             "subject": "التنمية والإصلاح الإداري: لماذا يختلف الواقع عن المفترض في الدول؟"
-        },
-        {
-            "url": "/studies/19/",
-            "video": "HLOSdnOyy_4",
-            "date": "2026-3-25",
-            "subject": "كيف تبني سويسرا جيشها؟"
         },
     ]
 
@@ -1716,6 +1716,12 @@ def food_and_food_products_in_switzerland(request):
 
 def motion_graphics(request):
     videos = [
+        {
+            "url": "/studies/22/",
+            "video": "https://youtu.be/JaZ5fysvQC8",
+            "date": "2026-5-19",
+            "subject": "سر نهضة سنغافورة: من دولة فقيرة إلى نموذج عالمي في الإدارة"
+        },
         {
             "url": "/studies/21/",
             "video": "https://youtu.be/Ji6wBwXdVcM",
