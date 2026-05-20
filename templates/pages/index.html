@@ -358,6 +358,69 @@
         opacity: 1;
         transform: translateY(-50%) scale(1.1);
     }
+
+
+
+    /* placeholder and loader styles */
+    .image-wrapper {
+        position: relative;
+        overflow: hidden;
+    }
+
+    /* placeholder */
+    .image-placeholder {
+        position: absolute;
+        inset: 0;
+
+        background: #dcdcdc;
+
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        z-index: 2;
+
+        transition: opacity 0.4s ease;
+    }
+
+    /* loader */
+    .loader {
+        width: 45px;
+        height: 45px;
+
+        border: 5px solid #bcc3d3;
+        border-top-color: #5a70a2;
+
+        border-radius: 50%;
+
+        animation: spin 0.8s linear infinite;
+    }
+
+    /* الصورة */
+    .stud {
+        width: 100%;
+        display: block;
+
+        opacity: 0;
+        transition: opacity 0.5s ease;
+    }
+
+    /* بعد التحميل */
+    .stud.loaded {
+        opacity: 1;
+    }
+
+    /* إخفاء placeholder */
+    .image-placeholder.hide {
+        opacity: 0;
+        pointer-events: none;
+    }
+
+    @keyframes spin {
+        to {
+            transform: rotate(360deg);
+        }
+    }
 </style>
 <div class="container spe-show">
     <div class="slider">
@@ -462,9 +525,15 @@
     <div class="show-studies-index">
         <div class="show-index-imgs">
             <div class="card">
-                <a href="{% url 'government_digital_transformation_in_yemen' %}">
-                    <img src="{% static 'imgs/government_digital_transformation_in_yemen-index.jpg' %}" alt="" class="stud">
-                </a>
+                <!-- placeholder -->
+                <div class="image-wrapper">
+                    <div class="image-placeholder">
+                        <div class="loader"></div>
+                    </div>
+                    <a href="{% url 'government_digital_transformation_in_yemen' %}">
+                        <img src="{% static 'imgs/government_digital_transformation_in_yemen-index.jpg' %}" alt="" class="stud">
+                    </a>
+                </div>
                 <a href="{% url 'government_digital_transformation_in_yemen' %}">
                     <div class="text-info-index">
                         <span>10 أبريل 2026 | دورية أُسس</span>
@@ -474,9 +543,15 @@
                 <span class="span-title">دراسة من العدد 5</span>
             </div>
             <div class="card">
-                <a href="{% url 'the_political_economy_in_yemen' %}">
-                    <img src="{% static 'imgs/political_economy_in_yemen-index.jpg' %}" alt="" class="stud">
-                </a>
+                <!-- placeholder -->
+                <div class="image-wrapper">
+                    <div class="image-placeholder">
+                        <div class="loader"></div>
+                    </div>
+                    <a href="{% url 'the_political_economy_in_yemen' %}">
+                        <img src="{% static 'imgs/political_economy_in_yemen-index.jpg' %}"  alt=""  class="stud">
+                    </a>
+                </div>
                 <a href="{% url 'the_political_economy_in_yemen' %}">
                     <div class="text-info-index">
                         <span>10 أبريل 2026 | دورية أُسس</span>
@@ -486,9 +561,15 @@
                 <span class="span-title">دراسة من العدد 5</span>
             </div>
             <div class="card">
-                <a href="{% url 'food_and_food_products_in_switzerland' %}">
-                    <img src="{% static 'imgs/food_and_food_products_in_switzerland-index.jpg' %}" alt="" class="stud">
-                </a>
+                <!-- placeholder -->
+                <div class="image-wrapper">
+                    <div class="image-placeholder">
+                        <div class="loader"></div>
+                    </div>
+                    <a href="{% url 'food_and_food_products_in_switzerland' %}">
+                        <img src="{% static 'imgs/food_and_food_products_in_switzerland-index.jpg' %}" alt="" class="stud">
+                    </a>
+                </div>
                 <a href="{% url 'food_and_food_products_in_switzerland' %}">
                     <div class="text-info-index">
                         <span>10 أبريل 2026 | دورية أُسس</span>
@@ -498,9 +579,15 @@
                 <span class="span-title">دراسة من العدد 5</span>
             </div>
             <div class="card">
-                <a href="{% url 'international_organizations_and_their_developmental_role' %}">
-                    <img src="{% static 'imgs/Journal-19-index.jpg' %}" alt="" class="stud">
-                </a>
+                <!-- placeholder -->
+                 <div class="image-wrapper">
+                    <div class="image-placeholder">
+                        <div class="loader"></div>
+                    </div>
+                    <a href="{% url 'international_organizations_and_their_developmental_role' %}">
+                        <img src="{% static 'imgs/Journal-19-index.jpg' %}" alt="" class="stud">
+                    </a>
+                </div>
                 <a href="{% url 'international_organizations_and_their_developmental_role' %}">
                     <div class="text-info-index">
                         <span>23 ديسمبر 2025 | دورية أُسس</span>
@@ -510,9 +597,15 @@
                 <span class="span-title">دراسة من العدد 4</span>
             </div>
             <div class="card">
-                <a href="{% url 'economic_empowerment' %}">
-                    <img src="{% static 'imgs/Journal-17-index.jpg' %}" alt="" class="stud">
-                </a>
+                <!-- placeholder -->
+                 <div class="image-wrapper">
+                    <div class="image-placeholder">
+                        <div class="loader"></div>
+                    </div>
+                    <a href="{% url 'economic_empowerment' %}">
+                        <img src="{% static 'imgs/Journal-17-index.jpg' %}" alt="" class="stud">
+                    </a>
+                </div>
                 <a href="{% url 'economic_empowerment' %}">
                     <div class="text-info-index">
                         <span>23 ديسمبر 2025 | دورية أُسس</span>
@@ -523,9 +616,15 @@
                 <span class="span-title">دراسة من العدد 4</span>
             </div>
             <div class="card">
-                <a href="{% url 'civil_society_organizations' %}">
-                    <img src="{% static 'imgs/Journal-15-index.jpg' %}" alt="" class="stud">
-                </a>
+                <!-- placeholder -->
+                <div class="image-wrapper">
+                   <div class="image-placeholder">
+                        <div class="loader"></div>
+                    </div>
+                    <a href="{% url 'civil_society_organizations' %}">
+                        <img src="{% static 'imgs/Journal-15-index.jpg' %}" alt="" class="stud">
+                    </a>
+                </div>
                 <a href="{% url 'civil_society_organizations' %}">
                     <div class="text-info-index">
                         <span>25 سبتمبر 2025 | دورية أُسس</span>
@@ -535,9 +634,15 @@
                 <span class="span-title">دراسة من العدد 3</span>
             </div>
             <div class="card">
-                <a href="{% url 'social_health_insurance_in_yemen' %}">
-                    <img src="{% static 'imgs/Journal-10-index.jpg' %}" alt="">
-                </a>
+                <!-- placeholder -->
+                <div class="image-wrapper">
+                   <div class="image-placeholder">
+                        <div class="loader"></div>
+                    </div>
+                    <a href="{% url 'social_health_insurance_in_yemen' %}">
+                        <img src="{% static 'imgs/Journal-10-index.jpg' %}" alt="" class="stud">
+                    </a>
+                </div>
                 <a href="{% url 'social_health_insurance_in_yemen' %}">
                     <div class="text-info-index">
                         <span>15 يونيو 2025 | دورية أُسس</span>
@@ -547,9 +652,15 @@
                 <span class="span-title">دراسة من العدد 2</span>
             </div>
             <div class="card">
-                <a href="{% url 'educational_system_in_yemen' %}">
-                    <img src="{% static 'imgs/Journal-03-index.jpg' %}" alt="">
-                </a>
+                <!-- placeholder -->
+                <div class="image-wrapper">
+                   <div class="image-placeholder">
+                        <div class="loader"></div>
+                    </div>
+                    <a href="{% url 'educational_system_in_yemen' %}">
+                        <img src="{% static 'imgs/Journal-03-index.jpg' %}" alt="" class="stud">
+                    </a>
+                </div>
                 <a href="{% url 'educational_system_in_yemen' %}">
                     <div class="text-info-index">
                         <span>20 مارس 2025 | دورية أُسس</span>
@@ -742,4 +853,37 @@
 <!-- Swiper JS -->
 <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+<!-- placeholder and loader script -->
+<script>
+const images = document.querySelectorAll(".stud");
+
+images.forEach((img) => {
+
+    const wrapper = img.closest(".image-wrapper");
+
+    if (!wrapper) return;
+
+    const placeholder = wrapper.querySelector(".image-placeholder");
+
+    if (!placeholder) return;
+
+    /* إذا الصورة محملة مسبقاً */
+    if (img.complete) {
+
+        img.classList.add("loaded");
+        placeholder.classList.add("hide");
+
+    } else {
+
+        img.onload = () => {
+
+            img.classList.add("loaded");
+            placeholder.classList.add("hide");
+
+        };
+
+    }
+
+});
+</script>
 {% endblock %}
