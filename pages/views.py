@@ -553,6 +553,12 @@ def osus_journals(request):
 def view_infograph(request):
     infographs = [
         {
+            "title": "بناء الدولة كيف تنجح الدول .. ولماذا تفشل أخرى؟",
+            "slug": "state_building_how_do_countries_succeed_and_why_do_others_fail",
+            "image": "imgs/state_building.jpeg",
+            "date": "20 مايو 2026",
+        },
+        {
             "title": "لماذا يُعد التعليم في فنلندا الأفضل في العالم؟",
             "slug": "Why_is_education_in_Finland_the_best_in_the_world",
             "image": "imgs/why_is_education_in_finland_the_best_in_the_world.jpeg",
@@ -1562,6 +1568,12 @@ def infograph_detail(request, slug):
             'title': 'لماذا يُعد التعليم في فنلندا الأفضل في العالم؟',
             'date': '11 مايو 2026',
             'image': 'imgs/why_is_education_in_finland_the_best_in_the_world.jpeg',
+        },
+        "state_building_how_do_countries_succeed_and_why_do_others_fail": {
+            'slug': 'state_building_how_do_countries_succeed_and_why_do_others_fail',
+            'title': 'بناء الدولة كيف تنجح الدول .. ولماذا تفشل أخرى؟',
+            'date': '20 مايو 2026',
+            'image': 'imgs/state_building.jpeg',
         },
     }
 
