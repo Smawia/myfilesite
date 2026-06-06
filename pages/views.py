@@ -553,6 +553,12 @@ def osus_journals(request):
 def view_infograph(request):
     infographs = [
         {
+            "title": "الطريق إلى الرِّق",
+            "slug": "The_road_to_slavery",
+            "image": "imgs/the_road_to_slavery.jpeg",
+            "date": "6 يونيو 2026",
+        },
+        {
             "title": "بناء الدولة كيف تنجح الدول .. ولماذا تفشل أخرى؟",
             "slug": "state_building_how_do_countries_succeed_and_why_do_others_fail",
             "image": "imgs/state_building.jpeg",
@@ -1574,6 +1580,12 @@ def infograph_detail(request, slug):
             'title': 'بناء الدولة كيف تنجح الدول .. ولماذا تفشل أخرى؟',
             'date': '20 مايو 2026',
             'image': 'imgs/state_building.jpeg',
+        },
+        "The_road_to_slavery": {
+            'slug': 'The_road_to_slavery',
+            'title': 'الطريق إلى الرِّق',
+            'date': '6 يونيو 2026',
+            'image': 'imgs/the_road_to_slavery.jpeg',
         },
     }
 
