@@ -553,6 +553,12 @@ def osus_journals(request):
 def view_infograph(request):
     infographs = [
         {
+            "title": "كيف بنت سنغافورة حكومة فعّالة",
+            "slug": "How_did_Singapore_build_a_government",
+            "image": "imgs/how_did_singapore_build_a_government.jpg",
+            "date": "8 يونيو 2026",
+        },
+        {
             "title": "الطريق إلى الرِّق",
             "slug": "The_road_to_slavery",
             "image": "imgs/the_road_to_slavery.jpeg",
@@ -1586,6 +1592,12 @@ def infograph_detail(request, slug):
             'title': 'الطريق إلى الرِّق',
             'date': '6 يونيو 2026',
             'image': 'imgs/the_road_to_slavery.jpeg',
+        },
+        "How_did_Singapore_build_a_government": {
+            'slug': 'How_did_Singapore_build_a_government',
+            'title': 'كيف بنت سنغافورة حكومة فعّالة',
+            'date': '8 يونيو 2026',
+            'image': 'imgs/how_did_singapore_build_a_government.jpg',
         },
     }
 
