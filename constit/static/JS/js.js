@@ -796,3 +796,32 @@ window.addEventListener("load", function () {
 
 });
 
+
+// The Loader in the website
+document.addEventListener("DOMContentLoaded", () => {
+
+    const intro = document.getElementById("intro");
+
+    let introHidden = false;
+
+    /* دالة الإخفاء */
+    function hideIntro() {
+
+        if (introHidden) return;
+
+        introHidden = true;
+
+        intro.classList.add("hide");
+
+        /* إظهار السكرول */
+        document.body.classList.remove("loading");
+        
+    }
+
+    /* إذا اكتمل التحميل */
+    window.addEventListener("load", hideIntro);
+
+    /* أو بعد 1200ms */
+    setTimeout(hideIntro, 2000);
+
+});

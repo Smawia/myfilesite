@@ -15034,3 +15034,104 @@ body.dark-mode .study-info-show {
 .refrences li {
     scroll-margin-top: 140px;
 }
+
+
+
+/* The Loader in the website */
+
+/* إخفاء scrollbar أثناء التحميل */
+/* body.loading::-webkit-scrollbar{
+    display:none;
+} */
+
+/* شاشة البداية */
+#intro{
+    position:fixed;
+    inset:0;
+    background:#f5f5f7;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    z-index:999999;
+    transition:
+        opacity .8s ease,
+        visibility .8s ease;
+}
+
+/* المحتوى */
+.intro-content{
+    text-align:center;
+}
+
+/* حركة اللوجو */
+.intro-logo {
+    width:120px;
+
+    animation:
+        rotateLogo 1.8s cubic-bezier(0.16,1,0.3,1);
+}
+
+/* الحركة مرة واحدة */
+@keyframes rotateLogo{
+
+    0%{
+        transform:rotate(-180deg) scale(.5);
+        opacity:0;
+    }
+
+    100%{
+        transform:rotate(0deg) scale(1);
+        opacity:1;
+    }
+}
+
+/* النقاط */
+.loader-dots{
+
+    margin-top:20px;
+
+    display:flex;
+    justify-content:center;
+    gap:8px;
+}
+
+.loader-dots span{
+
+    width:8px;
+    height:8px;
+
+    border-radius:50%;
+
+    background: var(--second-color);
+
+    animation:dots 1.5s infinite;
+}
+
+/* تأخير لكل نقطة */
+.loader-dots span:nth-child(2){
+    animation-delay:.2s;
+}
+
+.loader-dots span:nth-child(3){
+    animation-delay:.4s;
+}
+
+/* حركة النقاط */
+@keyframes dots{
+
+    0%, 80%, 100%{
+        opacity:.3;
+        transform:scale(.8);
+    }
+
+    40%{
+        opacity:1;
+        transform:scale(1.2);
+    }
+}
+
+/* إخفاء */
+#intro.hide{
+    opacity:0;
+    visibility:hidden;
+}
