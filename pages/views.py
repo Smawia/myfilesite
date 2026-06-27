@@ -74,6 +74,12 @@ def view_osus_fifth_content(requst):
 def index(request):
     videos = [
         {
+            "url": "/studies/23/",
+            "video": "zIGbTUS1bm0",
+            "date": "2026-6-27",
+            "subject": "لماذا تفشل خطط التنمية في الدول النامية؟"
+        },
+        {
             "url": "/studies/22/",
             "video": "JaZ5fysvQC8",
             "date": "2026-5-19",
@@ -84,12 +90,6 @@ def index(request):
             "video": "Ji6wBwXdVcM",
             "date": "2026-5-9",
             "subject": "كيف تبني الأسر المنتجة اقتصاد وطن؟ السر الذي بدأت به كبرى اقتصادات العالم!"
-        },
-        {
-            "url": "/studies/20/",
-            "video": "AqoC5ncdC6U",
-            "date": "2026-4-20",
-            "subject": "التنمية والإصلاح الإداري: لماذا يختلف الواقع عن المفترض في الدول؟"
         },
     ]
 
@@ -161,7 +161,7 @@ def studies(request):
     # إضافة القوائم الثابتة بعد البحث فيها
     if query:
         for item in issue_one + issue_two + issue_three + issue_four + issue_five:
-            if not query or query in item['subject']:
+            if query in item['subject']:
                 combined_results.append({
                     'subject': item['subject'],
                     'url': item['url'],
@@ -552,6 +552,24 @@ def osus_journals(request):
 
 def view_infograph(request):
     infographs = [
+        {
+            "title": "الدولة المستحيلة",
+            "slug": "The_Impossible_State",
+            "image": "imgs/the_impossible_state.jpeg",
+            "date": "1 يوليو 2026",
+        },
+        {
+            "title": "لماذا تفشل الأمم؟",
+            "slug": "Why_do_nations_fail",
+            "image": "imgs/why_do_nations_fail.jpg",
+            "date": "27 يونيو 2026",
+        },
+        {
+            "title": "الحوكمة والحوكمة الرشيدة",
+            "slug": "Governance_and_good_governance",
+            "image": "imgs/governance_and_good_governance.jpg",
+            "date": "23 يونيو 2026",
+        },
         {
             "title": "كيف بنت سنغافورة حكومة فعّالة",
             "slug": "How_did_Singapore_build_a_government",
@@ -1599,7 +1617,25 @@ def infograph_detail(request, slug):
             'date': '8 يونيو 2026',
             'image': 'imgs/how_did_singapore_build_a_government.jpg',
         },
-    }
+        "Governance_and_good_governance": {
+            'slug': 'Governance_and_good_governance',
+            'title': 'الحوكمة والحوكمة الرشيدة',
+            'date': '23 يونيو 2026',
+            'image': 'imgs/governance_and_good_governance.jpg',
+        },
+        "Why_do_nations_fail": {
+            'slug': 'Why_do_nations_fail',
+            'title': 'لماذا تفشل الأمم؟',
+            'date': '27 يونيو 2026',
+            'image': 'imgs/why_do_nations_fail.jpg',
+        },
+        "The_Impossible_State": {
+            'slug': 'The_Impossible_State',
+            'title': 'الدولة المستحيلة',
+            'date': '1 يوليو 2026',
+            'image': 'imgs/the_impossible_state.jpeg',
+        },
+    } 
 
     detail = data.get(slug)
     if not detail:
@@ -1752,6 +1788,12 @@ def food_and_food_products_in_switzerland(request):
 
 def motion_graphics(request):
     videos = [
+        {
+            "url": "/studies/23/",
+            "video": "https://youtu.be/zIGbTUS1bm0",
+            "date": "2026-6-27",
+            "subject": "لماذا تفشل خطط التنمية في الدول النامية؟"
+        },
         {
             "url": "/studies/22/",
             "video": "https://youtu.be/JaZ5fysvQC8",
