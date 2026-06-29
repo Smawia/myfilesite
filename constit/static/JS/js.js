@@ -654,10 +654,12 @@ document.addEventListener("DOMContentLoaded", function () {
                         <div class="yt-play"></div>
                     </div>
                 </div>
-                <div class="study-text-info study-text-info-2">
-                    <span>${item.date}</span>
-                    <p>${item.subject}</p>
-                </div>
+                <a href="https://youtu.be/${item.video}" target="_blank">
+                    <div class="study-text-info study-text-info-2">
+                        <span>${item.date}</span>
+                        <p>${item.subject}</p>
+                    </div>
+                </a>
             `;
 
             container.appendChild(card);
