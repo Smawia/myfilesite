@@ -553,6 +553,12 @@ def osus_journals(request):
 def view_infograph(request):
     infographs = [
         {
+            "title": "لماذا تتصدر الدول الإسكندنافية  مؤشرات السعادة العالمية؟",
+            "slug": "Why_do_Scandinavian_countries_top_global_happiness_indices",
+            "image": "imgs/why_do_scandinavian_countries_top_global_happiness_indices.jpeg",
+            "date": "4 يوليو 2026",
+        },
+        {
             "title": "الدولة المستحيلة",
             "slug": "The_Impossible_State",
             "image": "imgs/the_impossible_state.jpeg",
@@ -1634,6 +1640,12 @@ def infograph_detail(request, slug):
             'title': 'الدولة المستحيلة',
             'date': '1 يوليو 2026',
             'image': 'imgs/the_impossible_state.jpeg',
+        },
+        "Why_do_Scandinavian_countries_top_global_happiness_indices": {
+            'slug': 'Why_do_Scandinavian_countries_top_global_happiness_indices',
+            'title': 'لماذا تتصدر الدول الإسكندنافية  مؤشرات السعادة العالمية؟',
+            'date': '4 يوليو 2026',
+            'image': 'imgs/why_do_scandinavian_countries_top_global_happiness_indices.jpeg',
         },
     } 
 
