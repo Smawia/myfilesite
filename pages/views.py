@@ -553,6 +553,12 @@ def osus_journals(request):
 def view_infograph(request):
     infographs = [
         {
+            "title": "ملخص كتاب الدولة الغنية والدولة الفقيرة",
+            "slug": "rich_country_and_poor_country",
+            "image": "imgs/rich_country_and_poor_country.jpeg",
+            "date": "6 يوليو 2026",
+        },
+        {
             "title": "لماذا تتصدر الدول الإسكندنافية  مؤشرات السعادة العالمية؟",
             "slug": "Why_do_Scandinavian_countries_top_global_happiness_indices",
             "image": "imgs/why_do_scandinavian_countries_top_global_happiness_indices.jpeg",
@@ -1646,6 +1652,12 @@ def infograph_detail(request, slug):
             'title': 'لماذا تتصدر الدول الإسكندنافية  مؤشرات السعادة العالمية؟',
             'date': '4 يوليو 2026',
             'image': 'imgs/why_do_scandinavian_countries_top_global_happiness_indices.jpeg',
+        },
+        "rich_country_and_poor_country": {
+            'slug': 'rich_country_and_poor_country',
+            'title': 'ملخص كتاب الدولة الغنية والدولة الفقيرة',
+            'date': '6 يوليو 2026',
+            'image': 'imgs/rich_country_and_poor_country.jpeg',
         },
     } 
 
