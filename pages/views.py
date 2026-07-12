@@ -553,6 +553,12 @@ def osus_journals(request):
 def view_infograph(request):
     infographs = [
         {
+            "title": "أسباب نجاح رواندا بعد الحرب",
+            "slug": "reasons_for_Rwanda_success_after_war",
+            "image": "imgs/reasons_for_Rwanda_success_after_war.jpeg",
+            "date": "12 يوليو 2026",
+        },
+        {
             "title": "ملخص كتاب الدولة الغنية والدولة الفقيرة",
             "slug": "rich_country_and_poor_country",
             "image": "imgs/rich_country_and_poor_country.jpeg",
@@ -1658,6 +1664,12 @@ def infograph_detail(request, slug):
             'title': 'ملخص كتاب الدولة الغنية والدولة الفقيرة',
             'date': '6 يوليو 2026',
             'image': 'imgs/rich_country_and_poor_country.jpeg',
+        },
+        "reasons_for_Rwanda_success_after_war": {
+            'slug': 'reasons_for_Rwanda_success_after_war',
+            'title': 'أسباب نجاح رواندا بعد الحرب',
+            'date': '12 يوليو 2026',
+            'image': 'imgs/reasons_for_Rwanda_success_after_war.jpeg',
         },
     } 
 
