@@ -553,6 +553,12 @@ def osus_journals(request):
 def view_infograph(request):
     infographs = [
         {
+            "title": "الاقتصاد المنتج أم الاقتصاد الريعي؟",
+            "slug": "Productive_economy_or_rentier_economy",
+            "image": "imgs/productive_economy_or_rentier_conomy.jpeg",
+            "date": "13 يوليو 2026",
+        },
+        {
             "title": "أسباب نجاح رواندا بعد الحرب",
             "slug": "reasons_for_Rwanda_success_after_war",
             "image": "imgs/reasons_for_Rwanda_success_after_war.jpeg",
@@ -1670,6 +1676,12 @@ def infograph_detail(request, slug):
             'title': 'أسباب نجاح رواندا بعد الحرب',
             'date': '12 يوليو 2026',
             'image': 'imgs/reasons_for_Rwanda_success_after_war.jpeg',
+        },
+        "Productive_economy_or_rentier_economy": {
+            'slug': 'Productive_economy_or_rentier_economy',
+            'title': 'الاقتصاد المنتج أم الاقتصاد الريعي؟',
+            'date': '13 يوليو 2026',
+            'image': 'imgs/productive_economy_or_rentier_conomy.jpeg',
         },
     } 
 
