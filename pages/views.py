@@ -553,6 +553,12 @@ def osus_journals(request):
 def view_infograph(request):
     infographs = [
         {
+            "title": "لماذا تعتمد الدول المتقدمة على القطاع الخاص؟",
+            "slug": "Why_do_developed_countries_rely_on_private_sector",
+            "image": "imgs/Why_do_developed_countries_rely_on_private_sector.jpeg",
+            "date": "14 يوليو 2026",
+        },
+        {
             "title": "الاقتصاد المنتج أم الاقتصاد الريعي؟",
             "slug": "Productive_economy_or_rentier_economy",
             "image": "imgs/productive_economy_or_rentier_conomy.jpeg",
@@ -1682,6 +1688,12 @@ def infograph_detail(request, slug):
             'title': 'الاقتصاد المنتج أم الاقتصاد الريعي؟',
             'date': '13 يوليو 2026',
             'image': 'imgs/productive_economy_or_rentier_conomy.jpeg',
+        },
+        "Why_do_developed_countries_rely_on_private_sector": {
+            'slug': 'Why_do_developed_countries_rely_on_private_sector',
+            'title': 'لماذا تعتمد الدول المتقدمة على القطاع الخاص؟',
+            'date': '14 يوليو 2026',
+            'image': 'imgs/Why_do_developed_countries_rely_on_private_sector.jpeg',
         },
     } 
 
