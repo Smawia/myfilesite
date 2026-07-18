@@ -7932,7 +7932,7 @@ h5 {
     .show-all-studies .studies-card img {
         width: 100%;
         height: 100% !important;
-        max-height: 190px !important;
+        max-height: 150px !important;
     }
 
     .show-all-studies .studies-card a {

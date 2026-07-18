@@ -1,0 +1,23 @@
+{% load static %}
+
+{% for data in page.object_list %}
+<div class="studies-card show-cards-number">
+    <a href="journals/osus/articles/{{ data.url }}">
+        <img src="{% static 'imgs/'|add:data.image %}" alt="">
+    </a>
+    <a href="journals/osus/articles/{{ data.url }}" class="journals-a">
+        <div class="study-text-info {% if dark_mode %} dark-mode{% endif %}">
+            <span>
+                {{ data.date}}
+            </span>
+            <p class="card-title">
+                {{ data.subject }}
+            </p>
+        </div>
+    </a>
+</div>
+{% endfor %}
+<!-- عرض رسالة إذا لم يتم العثور على نتائج -->
+{% if not page %}
+<p style="text-align: center; font-weight: bold;width: 100%; line-height: 1.5;">لم يتم العثور على نتائج تطابق بحثك ({{query}})</p>
+{% endif %}

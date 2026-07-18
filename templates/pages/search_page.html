@@ -1,0 +1,233 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block title %}| صفحة البحث{% endblock %}
+{% block meta_og %}
+    <meta name="description" content="دراسات وبحوث من المركز التأسيسي للدراسات والبحوث.">
+
+    <!-- Open Graph -->
+    <meta property="og:title" content="صفحة البحث">
+    <meta property="og:description" content="دراسات وبحوث من المركز التأسيسي للدراسات والبحوث.">
+    <meta property="og:image" content="https://csr-yemen.com/static/imgs/LOGO ICON-02.png">
+    <meta property="og:url" content="http://csr-yemen.com/articles">
+    <meta property="og:type" content="article">
+
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="صفحة البحث">
+    <meta name="twitter:description" content="دراسات وبحوث من المركز التأسيسي للدراسات والبحوث.">
+    <meta name="twitter:image" content="https://csr-yemen.com/static/imgs/LOGO ICON-02.png">
+{% endblock %}
+{% block content %}
+
+<div class="search-tabs tabs container index-articles container-margin" id="search-tabs">
+    <!-- <button class="tab-btn active" data-type="all" data-tab="volume1">الكل</button> -->
+    <button class="tab-btn active" data-type="study" data-tab="volume2">دراسات</button>
+    <button class="tab-btn" data-type="Osusstudy" data-tab="volume3">دراسات أُسس</button>
+    <button class="tab-btn" data-type="infographic" data-tab="volume4">إنفوجراف</button>
+    <button class="tab-btn" data-type="video" data-tab="volume5">فيديوهات</button>
+</div>
+
+
+
+{% if content_type == 'study' %}
+<div class="container index-articles all-art">
+    <div class="show-all-studies" id="results-container">
+        {% include 'partials/search/study_results.html' %}
+    </div>
+</div>
+
+{% elif content_type == 'Osusstudy'%}
+<div class="container index-articles all-art container-margin">        
+        <div class="show-all-studies">
+            {% include 'partials/search/journals_results.html' %}
+        </div>
+</div>
+
+{% elif content_type == 'infographic'%}
+<div class="container index-articles all-art infographs">
+    <div class="show-all-studies" id="results-container">
+        {% include 'partials/search/infographs_results.html' %}
+    </div>
+</div>
+
+{% elif content_type == 'video'%}
+<div class="container index-articles all-art motion-container">
+    <div class="show-all-studies grid-container show-all-motion" id="results-container">
+        {% include 'partials/search/videos_results.html' %}
+    </div>
+</div>
+
+{% elif content_type == 'none'%}
+<div id="results-container">
+    
+</div>
+{% endif %}
+
+<div id="load-more-trigger"></div>
+
+<script>
+    // video player
+    let players = [];
+
+    // استدعاء API الرسمية
+    function onYouTubeIframeAPIReady() {
+        const containers = document.querySelectorAll(".yt-container");
+        containers.forEach((el, index) => {
+            el.addEventListener("click", function () {
+                const videoId = el.dataset.id;
+
+                el.innerHTML = `<div id="player-${index}"></div>`;
+                players[index] = new YT.Player(`player-${index}`, {
+                    videoId: videoId,
+                    playerVars: {
+                        autoplay: 1,
+                        rel: 0,
+                        modestbranding: 1
+                    },
+                    events: {
+                        onStateChange: (event) => {
+                            if (event.data === YT.PlayerState.PLAYING) {
+                                players.forEach((p, i) => {
+                                    if (i !== index && p && typeof p.pauseVideo === "function") {
+                                        p.pauseVideo();
+                                    }
+                                });
+                            }
+                        }
+                    }
+                });
+            }, { once: true });
+        });
+    }
+
+
+    // التبويبات
+    const tabs = document.querySelectorAll(".tab-btn");
+    const resultsContainer = document.getElementById("results-container");
+    const searchInput = document.getElementById("search-tabs");
+    const trigger = document.getElementById("load-more-trigger");
+
+    let query = "{{ query|escapejs }}";
+    let type = "study"; // التبويب الافتراضي
+    let currentPage = 2;
+    let loading = false;
+    let dark_mode = '';
+
+
+    if (document.body.classList.contains("dark-mode")) {
+        document.querySelectorAll(".study-text-info").forEach(element => {
+            element.classList.add("dark-mode");
+        });
+    }
+    // إذا لم يتم إدخال كلمة بحث
+    if (query === "") {
+        if (searchInput) {
+            searchInput.style.display = "none";
+        }
+
+        resultsContainer.innerHTML = `
+            <div class='container index-articles all-art'
+                style='min-height:20vh;display:flex;justify-content:center;align-items:center;'>
+                <p style='font-weight:bold;'>
+                    يرجى إدخال كلمة للبحث
+                </p>
+            </div>
+        `;
+    }
+
+    // تحميل النتائج
+    async function loadResults(reset = false) {
+        if (loading) return;
+        
+        loading = true;
+        
+        const page = reset ? 1 : currentPage;
+
+        if (document.querySelector('.dark-mode')) {
+            dark_mode = 'dark-mode';
+        }
+        else {
+            dark_mode = '';
+        }
+
+        const response = await fetch(
+            `/search?q=${encodeURIComponent(query)}&type=${type}&page=${page}&dark_mode=${dark_mode}`,
+            {
+                headers: {
+                    "X-Requested-With": "XMLHttpRequest"
+                }
+            }
+        );
+        
+        const html = await response.text();
+
+        if (reset) {
+            resultsContainer.innerHTML = html;
+            currentPage = 2;
+            loading = false;
+        } else {
+            if (html.trim()) {
+                resultsContainer.insertAdjacentHTML(
+                    "beforeend",
+                    html
+                );
+                currentPage++;
+            } else {
+                loading = false;
+                observer.disconnect();
+                return;
+            }
+        }
+
+        // إعادة تهيئة فيديوهات يوتيوب
+        if (type === "video") {
+            onYouTubeIframeAPIReady();
+        }
+
+        loading = false;
+    }
+
+    // التبويبات
+    tabs.forEach(tab => {
+        tab.addEventListener("click", async () => {
+
+            tabs.forEach(t => t.classList.remove("active"));
+            tab.classList.add("active");
+
+            type = tab.dataset.type;
+
+            currentPage = 2;
+            loading = false;
+
+            resultsContainer.innerHTML = `
+                <p style="text-align: center; font-weight: bold;width: 100%; line-height: 1.5;"> جاري تحميل النتائج...</p>
+            `;
+
+            // إعادة تشغيل الـ observer
+            observer.disconnect();
+
+            if (trigger) {
+                observer.observe(trigger);
+            }
+
+            await loadResults(true);
+        });
+    });
+
+    // Infinite Scroll
+    const observer = new IntersectionObserver(async ([entry]) => {
+        if (!entry.isIntersecting || loading) return;
+
+        await loadResults();
+
+    }, {
+        rootMargin: "300px"
+    });
+
+    // بدء المراقبة
+    if (trigger) {
+        observer.observe(trigger);
+    }
+
+</script>
+{% endblock %}

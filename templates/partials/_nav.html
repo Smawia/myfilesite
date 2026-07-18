@@ -143,8 +143,8 @@ if (targetHash) {
                     </ul>
                 </div>
                 <div class="search-header tab">
-                    <form action="{% url 'studies' %}" method="get" class="search-form">
-                        <input type="text" name="q" placeholder="ادخل كلمة للبحث">
+                    <form action="{% url 'search' %}" method="get" class="search-form">
+                        <input type="text" name="q" placeholder="أدخل كلمة للبحث">
                         <button type="submit" class="search"><i class="fas fa-search"></i></button>
                     </form>
                 </div>
@@ -261,8 +261,8 @@ if (targetHash) {
                             >المنشورات</a></li>
                     </ul>
                     <div class="search-header phone">
-                        <form action="{% url 'studies' %}" method="get" class="search-form phone">
-                            <input type="text" name="q" placeholder="ادخل كلمة للبحث" class="phone">
+                        <form action="{% url 'search' %}" method="get" class="search-form phone">
+                            <input type="text" name="q" placeholder="أدخل كلمة للبحث" class="phone">
                             <button type="submit" class="search phone"><i class="fas fa-search"></i></button>
                         </form>
                     </div>
