@@ -1130,6 +1130,12 @@ def infograph_detail(request, slug):
             'date': '14 يوليو 2026',
             'image': 'imgs/Why_do_developed_countries_rely_on_private_sector.jpeg',
         },
+        "Why_do_countries_compete_to_attract_investor": {
+            'slug': 'Why_do_countries_compete_to_attract_investor',
+            'title': 'لماذا تتنافس الدول على جذب المستثمرين؟',
+            'date': '19 يوليو 2026',
+            'image': 'imgs/why_do_countries_compete_to_attract_investor.jpeg',
+        },
     } 
 
     detail = data.get(slug)
