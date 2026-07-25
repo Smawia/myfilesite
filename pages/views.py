@@ -76,6 +76,12 @@ def view_osus_fifth_content(requst):
 def index(request):
     videos = [
         {
+            "url": "/studies/24/",
+            "video": "wNWx0L3ltnk",
+            "date": "2026-7-22",
+            "subject": "كيف تبني الدول المتقدمة اقتصادًا قويًا؟ ولماذا يقود القطاع الخاص النمو؟"
+        },
+        {
             "url": "/studies/23/",
             "video": "zIGbTUS1bm0",
             "date": "2026-6-27",
@@ -86,12 +92,6 @@ def index(request):
             "video": "JaZ5fysvQC8",
             "date": "2026-5-19",
             "subject": "سر نهضة سنغافورة: من دولة فقيرة إلى نموذج عالمي في الإدارة"
-        },
-        {
-            "url": "/studies/21/",
-            "video": "Ji6wBwXdVcM",
-            "date": "2026-5-9",
-            "subject": "كيف تبني الأسر المنتجة اقتصاد وطن؟ السر الذي بدأت به كبرى اقتصادات العالم!"
         },
     ]
 
@@ -1290,6 +1290,12 @@ def food_and_food_products_in_switzerland(request):
 def motion_graphics(request):
     videos = [
         {
+            "url": "/studies/24/",
+            "video": "https://youtu.be/wNWx0L3ltnk",
+            "date": "2026-7-22",
+            "subject": "كيف تبني الدول المتقدمة اقتصادًا قويًا؟ ولماذا يقود القطاع الخاص النمو؟"
+        },
+        {
             "url": "/studies/23/",
             "video": "https://youtu.be/zIGbTUS1bm0",
             "date": "2026-6-27",
@@ -1531,6 +1537,12 @@ def search(request):
 
     
     videos = [
+        {
+            "url": "/studies/24/",
+            "video": "https://youtu.be/wNWx0L3ltnk",
+            "date": "2026-7-22",
+            "subject": "كيف تبني الدول المتقدمة اقتصادًا قويًا؟ ولماذا يقود القطاع الخاص النمو؟"
+        },
         {
             "url": "/studies/23/",
             "video": "https://youtu.be/zIGbTUS1bm0",
