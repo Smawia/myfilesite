@@ -142,13 +142,42 @@ if (targetHash) {
                             >المنشورات</a></li>
                     </ul>
                 </div>
-                <div class="search-header tab">
+                <!-- <div class="search-header tab">
                     <form action="{% url 'search' %}" method="get" class="search-form">
                         <input type="text" name="q" placeholder="أدخل كلمة للبحث">
                         <button type="submit" class="search"><i class="fas fa-search"></i></button>
                     </form>
+                </div> -->
+                <div class="search-header tab">
+                    <button id="openSearch" class="search-btn">
+                        <i class="fa-solid fa-magnifying-glass"></i>
+                        <span style="font-family: 'CodecProBold';">بحث</span>
+                    </button>
                 </div>
-                
+                <div id="searchPopup" class="search-popup">
+                    <div class="search-box">
+
+                        <button class="close-btn" id="closeSearch">
+                            <i class="fa-solid fa-xmark"></i>
+                        </button>
+
+                        <form action="/search" method="GET">
+                            <input
+                                type="text"
+                                name="q"
+                                placeholder="ابحث هنا..."
+                                autocomplete="off"
+                                required>
+
+                            <button type="submit">
+                                <i class="fa-solid fa-magnifying-glass"></i>
+                                بحث
+                            </button>
+                        </form>
+
+                    </div>
+                </div>
+
                 <!-- overlay -->
                 <div class="over"></div>
                 <!-- overlay -->

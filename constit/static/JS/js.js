@@ -827,3 +827,30 @@ document.addEventListener("DOMContentLoaded", () => {
     setTimeout(hideIntro, 2000);
 
 });
+
+
+// Search popup functionality
+const popup = document.getElementById("searchPopup");
+const openBtn = document.getElementById("openSearch");
+const closeBtn = document.getElementById("closeSearch");
+
+    openBtn.onclick = () => {
+        popup.classList.add("show");
+        popup.querySelector("input").focus();
+    };
+
+    closeBtn.onclick = () => {
+        popup.classList.remove("show");
+    };
+
+    popup.onclick = (e) => {
+        if (e.target === popup) {
+            popup.classList.remove("show");
+        }
+    };
+
+    document.addEventListener("keydown", (e) => {
+        if (e.key === "Escape") {
+            popup.classList.remove("show");
+        }
+    });
