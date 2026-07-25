@@ -1136,6 +1136,12 @@ def infograph_detail(request, slug):
             'date': '19 يوليو 2026',
             'image': 'imgs/why_do_countries_compete_to_attract_investor.jpeg',
         },
+        "The_Japanese_experience_in_human_development": {
+            'slug': 'The_Japanese_experience_in_human_development',
+            'title': 'التجربة اليابانية في بناء الإنسان',
+            'date': '25 يوليو 2026',
+            'image': 'imgs/the_Japanese_experience_in_human_development.jpeg',
+        },
     } 
 
     detail = data.get(slug)
