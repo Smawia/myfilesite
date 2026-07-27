@@ -1142,6 +1142,12 @@ def infograph_detail(request, slug):
             'date': '25 يوليو 2026',
             'image': 'imgs/the_Japanese_experience_in_human_development.jpeg',
         },
+        "Impact_of_infrastructure_on_investment": {
+            'slug': 'Impact_of_infrastructure_on_investment',
+            'title': 'أثر البنية التحتية على الاستثمار',
+            'date': '27 يوليو 2026',
+            'image': 'imgs/impact_of_infrastructure_on_investment.jpeg',
+        },
     } 
 
     detail = data.get(slug)
