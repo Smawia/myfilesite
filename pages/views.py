@@ -1148,6 +1148,12 @@ def infograph_detail(request, slug):
             'date': '27 يوليو 2026',
             'image': 'imgs/impact_of_infrastructure_on_investment.jpeg',
         },
+        "South_Koreas_Development_Experience": {
+            'slug': 'South_Koreas_Development_Experience',
+            'title': 'تجربة كوريا الجنوبية في التنمية',
+            'date': '29 يوليو 2026',
+            'image': 'imgs/south_koreas_development_experience.jpeg',
+        },
     } 
 
     detail = data.get(slug)
@@ -1297,6 +1303,10 @@ def arabs_and_muslims_in_the_years_of_wandering(request):
 
 def food_and_food_products_in_switzerland(request):
     return render(request, 'pages/food_and_food_products_in_switzerland.html')
+
+# issue_six
+def covenant_of_Imam_Ali_to_Malik(request):
+    return render(request, 'pages/covenant_of_imam_ali_to_malik_al_ashtar.html')
 
 
 def motion_graphics(request):
