@@ -83,7 +83,7 @@
 <!-- Popup overlay -->
 <div id="popupOverlay" class="popup-overlay">
     <div class="popup-content">
-        <span class="close-btn"><i class="fa-solid fa-xmark"></i></span>
+        <span id="close-btn"><i class="fa-solid fa-xmark"></i></span>
         <div class="zoom-controls">
             <button class="zoom-in"><i class="fa-solid fa-plus"></i></button>
             <button class="zoom-out"><i class="fa-solid fa-minus"></i></button>
@@ -128,7 +128,7 @@
         cursor: zoom-out;
     }
 
-    .close-btn {
+    #close-btn {
         position: absolute;
         top: 10px;
         right: 15px;
@@ -153,7 +153,7 @@
     }
 
     @media (max-width: 574px) {
-        .close-btn {
+        #close-btn {
             right: -4px;
             top: -45px;
         }
@@ -170,7 +170,7 @@
     }
 
     @media (min-width: 575px) {
-        .close-btn {
+        #close-btn {
             right: -16px;
             top: -45px;
         }
@@ -187,7 +187,7 @@
     }
 
     @media (min-width: 768px) and (max-width: 991px) {
-        .close-btn {
+        #close-btn {
             right: 4px;
         }
 
@@ -207,7 +207,7 @@
             max-height: 50% !important;
             transition: transform 0.3s ease;
         }
-        .close-btn {
+        #close-btn {
             top: 10px;
             right: 15px;
         }
@@ -249,7 +249,7 @@
     document.addEventListener('DOMContentLoaded', function () {
         const popupOverlay = document.getElementById('popupOverlay');
         const popupImage = document.getElementById('popupImage');
-        const closeBtn = document.querySelector('.close-btn');
+        const closeBtn = document.querySelector('#close-btn');
         const zoomInBtn = document.querySelector('.zoom-in');
         const zoomOutBtn = document.querySelector('.zoom-out');
 
@@ -272,8 +272,17 @@
         });
 
         // زر الإغلاق
-        closeBtn.addEventListener('click', function () {
+        function closePopup() {
             popupOverlay.style.display = 'none';
+        }
+
+        closeBtn.addEventListener('click', closePopup);
+
+        // إغلاق النافذة عند الضغط على Escape
+        document.addEventListener('keydown', function (event) {
+            if (event.key === 'Escape') {
+                closePopup();
+            }
         });
 
         // تكبير الصورة
