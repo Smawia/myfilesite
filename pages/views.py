@@ -1154,6 +1154,12 @@ def infograph_detail(request, slug):
             'date': '29 يوليو 2026',
             'image': 'imgs/south_koreas_development_experience.jpeg',
         },
+        "Key_business_environment_indicators": {
+            'slug': 'Key_business_environment_indicators',
+            'title': 'أهم مؤشرات بيئة الأعمال',
+            'date': '1 أغسطس 2026',
+            'image': 'imgs/key_business_environment_indicators.jpeg',
+        },
     } 
 
     detail = data.get(slug)
