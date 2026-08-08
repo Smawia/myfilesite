@@ -82,6 +82,12 @@ def view_osus_sixth_content(requst):
 def index(request):
     videos = [
         {
+            "url": "/studies/25/",
+            "video": "dtUw4ux4FdI",
+            "date": "2026-8-8",
+            "subject": "ماذا يحدث للدولة عندما يختفي مصدر دخلها الرئيسي؟ | الاقتصاد الريعي والاقتصاد المنتج"
+        },
+        {
             "url": "/studies/24/",
             "video": "wNWx0L3ltnk",
             "date": "2026-7-22",
@@ -92,12 +98,6 @@ def index(request):
             "video": "zIGbTUS1bm0",
             "date": "2026-6-27",
             "subject": "لماذا تفشل خطط التنمية في الدول النامية؟"
-        },
-        {
-            "url": "/studies/22/",
-            "video": "JaZ5fysvQC8",
-            "date": "2026-5-19",
-            "subject": "سر نهضة سنغافورة: من دولة فقيرة إلى نموذج عالمي في الإدارة"
         },
     ]
 
@@ -1324,6 +1324,12 @@ def covenant_of_Imam_Ali_to_Malik(request):
 def motion_graphics(request):
     videos = [
         {
+            "url": "/studies/25/",
+            "video": "https://youtu.be/dtUw4ux4FdI",
+            "date": "2026-8-8",
+            "subject": "ماذا يحدث للدولة عندما يختفي مصدر دخلها الرئيسي؟ | الاقتصاد الريعي والاقتصاد المنتج"
+        },
+        {
             "url": "/studies/24/",
             "video": "https://youtu.be/wNWx0L3ltnk",
             "date": "2026-7-22",
@@ -1571,6 +1577,12 @@ def search(request):
 
     
     videos = [
+        {
+            "url": "/studies/25/",
+            "video": "https://youtu.be/dtUw4ux4FdI",
+            "date": "2026-8-8",
+            "subject": "ماذا يحدث للدولة عندما يختفي مصدر دخلها الرئيسي؟ | الاقتصاد الريعي والاقتصاد المنتج"
+        },
         {
             "url": "/studies/24/",
             "video": "https://youtu.be/wNWx0L3ltnk",
