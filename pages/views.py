@@ -1222,6 +1222,11 @@ def journal_studies(request):
         {'subject': 'العرب والمسلمون في سنوات التَيه', 'url': 'ArabsAndMuslimsInTheYearsOfWandering', 'image': 'imgs/arabs_and_muslims_in_the_years_of_wandering-index.jpg', 'date': '10 أبريل 2026'}, 
         {'subject': 'الأكل والمنتجات الغذائية في سويسرا', 'url': 'FoodAndFoodProductsInSwitzerland ', 'image': 'imgs/food_and_food_products_in_switzerland-index.jpg', 'date': '10 أبريل 2026'}, 
     ]
+
+    issue_six = [
+        {'subject': 'عهد الإمام علي لمالك الأشتر', 'url': 'TheCovenantOfImamAliToMalikAlAshtar', 'image': 'imgs/the_covenant_of_Imam_Ali_to_Malik_al-Ashtar-index.jpg', 'date': '1 أغسطس 2026'}, 
+        {'subject': 'نظم التكاليف والإنتاج وأثرها في تعزيز كفاءة الأداء المؤسسي', 'url': 'IntegratingModernCostSystemsLeanProduction', 'image': 'imgs/integrating_modern_cost_systems_lean_production-index.jpg', 'date': '1 أغسطس 2026'}, 
+    ]
     
 
     context = {
@@ -1230,6 +1235,7 @@ def journal_studies(request):
         'issue_three': issue_three,
         'issue_four': issue_four,
         'issue_five': issue_five,
+        'issue_six': issue_six,
     }
     return render(request,'pages/journal_studies.html',context)
 
@@ -1319,6 +1325,9 @@ def food_and_food_products_in_switzerland(request):
 # issue_six
 def covenant_of_Imam_Ali_to_Malik(request):
     return render(request, 'pages/covenant_of_imam_ali_to_malik_al_ashtar.html')
+
+def integrating_modern_cost_systems_lean_production(request):
+    return render(request, 'pages/integrating_modern_cost_systems_lean_production.html')
 
 
 def motion_graphics(request):

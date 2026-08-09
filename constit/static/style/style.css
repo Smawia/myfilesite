@@ -4383,7 +4383,7 @@ input {
 }
 
 .refrences ul li {
-    padding-right: 3px !important;
+    padding-right: 7px !important;
     padding-left: 3px !important;
 }
 
@@ -15239,4 +15239,103 @@ body.dark-mode .study-info-show {
         border:none;
         font-size:22px;
         cursor:pointer;
+    }
+
+    /* study-6-2 */
+    table.TableOverride-1 {
+    border-collapse:collapse;
+    border-width:1px;
+    margin-left:auto;
+    margin-right:auto;
+    }
+
+
+    .study-6-2 col._idGenTableRowColumn-1 {
+    width:14px;
+    }
+    .study-6-2 col._idGenTableRowColumn-2 {
+        width:51px;
+    }
+    .study-6-2 col._idGenTableRowColumn-3 {
+        width:164px;
+    }
+    .study-6-2 col._idGenTableRowColumn-4 {
+        width:156px;
+    }
+    .study-6-2 tr._idGenTableRowColumn-5 {
+        min-height:17px;
+    }
+    .study-6-2 tr._idGenTableRowColumn-6 {
+        min-height:18px;
+    }
+    .study-6-2 tr._idGenTableRowColumn-7 {
+        min-height:32px;
+    }
+    .study-6-2 col._idGenTableRowColumn-8 {
+        width:20px;
+    }
+    .study-6-2 col._idGenTableRowColumn-9 {
+        width:37px;
+    }
+    .study-6-2 col._idGenTableRowColumn-10 {
+        width:82px;
+    }
+    .study-6-2 col._idGenTableRowColumn-11 {
+        width:68px;
+    }
+    .study-6-2 col._idGenTableRowColumn-12 {
+        width:71px;
+    }
+    .study-6-2 col._idGenTableRowColumn-13 {
+        width:79px;
+    }
+    .study-6-2 tr._idGenTableRowColumn-14 {
+        min-height:77px;
+    }
+    .study-6-2 tr._idGenTableRowColumn-15 {
+        min-height:62px;
+    }
+    .study-6-2 tr._idGenTableRowColumn-16 {
+        min-height:47px;
+    }
+    .study-6-2 col._idGenTableRowColumn-17 {
+        width:119px;
+    }
+    .study-6-2 col._idGenTableRowColumn-18 {
+        width:125px;
+    }
+    .study-6-2 col._idGenTableRowColumn-19 {
+        width:113px;
+    }
+    .study-6-2 col._idGenTableRowColumn-20 {
+        width:116px;
+    }
+    .study-6-2 col._idGenTableRowColumn-21 {
+        width:85px;
+    }
+    .study-6-2 col._idGenTableRowColumn-22 {
+        width:193px;
+    }
+    .study-6-2 col._idGenTableRowColumn-23 {
+        width:13px;
+    }
+    .study-6-2 col._idGenTableRowColumn-24 {
+        width:57px;
+    }
+    .study-6-2 col._idGenTableRowColumn-25 {
+        width:151px;
+    }
+    .study-6-2 col._idGenTableRowColumn-26 {
+        width:159px;
+    }
+    .study-6-2 table._idGenTablePara-1 {
+        margin-left:auto;
+        margin-right:auto;
+    }
+
+
+    
+    /* print icon color */
+    .fa-print {
+        color: red;
     }
