@@ -1,6 +1,24 @@
 [   
     
     {
+        "title": "ملخص كتاب الاقتصاد السياسي للسيادة الغذائية في الدول العربية",
+        "slug": "Political_Economy_of_Food_Sovereignty_in_Arab_Countries",
+        "image": "imgs/political_economy_of_food_sovereignty_in_arab_countries.jpeg",
+        "date": "15 أغسطس 2026"
+    },
+    {
+        "title": "النظام الصحي في السويد",
+        "slug": "Swedish_healthcare_system",
+        "image": "imgs/swedish_healthcare_system.jpeg",
+        "date": "14 أغسطس 2026"
+    },
+    {
+        "title": "التعليم في النرويج",
+        "slug": "Education_in_Norway",
+        "image": "imgs/education_in_norway.jpeg",
+        "date": "13 أغسطس 2026"
+    },
+    {
         "title": "أهم مؤشرات بيئة الأعمال",
         "slug": "Key_business_environment_indicators",
         "image": "imgs/key_business_environment_indicators.jpeg",

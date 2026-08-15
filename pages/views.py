@@ -1166,6 +1166,24 @@ def infograph_detail(request, slug):
             'date': '1 أغسطس 2026',
             'image': 'imgs/key_business_environment_indicators.jpeg',
         },
+        "Education_in_Norway": {
+            'slug': 'Education_in_Norway',
+            'title': 'التعليم في النرويج',
+            'date': '13 أغسطس 2026',
+            'image': 'imgs/education_in_norway.jpeg',
+        },
+        "Swedish_healthcare_system": {
+            'slug': 'Swedish_healthcare_system',
+            'title': 'النظام الصحي في السويد',
+            'date': '14 أغسطس 2026',
+            'image': 'imgs/swedish_healthcare_system.jpeg',
+        },
+        "Political_Economy_of_Food_Sovereignty_in_Arab_Countries": {
+            'slug': 'Political_Economy_of_Food_Sovereignty_in_Arab_Countries',
+            'title': 'ملخص كتاب الاقتصاد السياسي للسيادة الغذائية في الدول العربية',
+            'date': '15 أغسطس 2026',
+            'image': 'imgs/political_economy_of_food_sovereignty_in_arab_countries.jpeg',
+        },
     } 
 
     detail = data.get(slug)
