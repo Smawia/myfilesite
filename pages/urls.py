@@ -71,6 +71,7 @@ urlpatterns = [
     path('journals/osus/articles/FoodAndFoodProductsInSwitzerland',views.food_and_food_products_in_switzerland,name='food_and_food_products_in_switzerland'),
     path('journals/osus/articles/TheCovenantOfImamAliToMalikAlAshtar',views.covenant_of_Imam_Ali_to_Malik ,name='covenant_of_Imam_Ali_to_Malik'),
     path('journals/osus/articles/IntegratingModernCostSystemsLeanProduction',views.integrating_modern_cost_systems_lean_production ,name='integrating_modern_cost_systems_lean_production'),
+    path('journals/osus/articles/TheRulesOfAdministrationAndPolitics',views.the_rules_of_administration_and_politics ,name='the_rules_of_administration_and_politics'),
 
     # new studies
     path('articles/CurrentEconomicSituation',views.current_economic_situation,name='current_economic_situation'),

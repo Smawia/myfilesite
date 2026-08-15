@@ -1226,6 +1226,7 @@ def journal_studies(request):
     issue_six = [
         {'subject': 'عهد الإمام علي لمالك الأشتر', 'url': 'TheCovenantOfImamAliToMalikAlAshtar', 'image': 'imgs/the_covenant_of_Imam_Ali_to_Malik_al-Ashtar-index.jpg', 'date': '1 أغسطس 2026'}, 
         {'subject': 'نظم التكاليف والإنتاج وأثرها في تعزيز كفاءة الأداء المؤسسي', 'url': 'IntegratingModernCostSystemsLeanProduction', 'image': 'imgs/integrating_modern_cost_systems_lean_production-index.jpg', 'date': '1 أغسطس 2026'}, 
+        {'subject': 'قواعد الإدارة والسياسة وإشكالية التوازن المؤسسي', 'url': 'TheRulesOfAdministrationAndPolitics', 'image': 'imgs/the_rules_of_administration_and_politics-index.jpg', 'date': '1 أغسطس 2026'}, 
     ]
     
 
@@ -1328,6 +1329,9 @@ def covenant_of_Imam_Ali_to_Malik(request):
 
 def integrating_modern_cost_systems_lean_production(request):
     return render(request, 'pages/integrating_modern_cost_systems_lean_production.html')
+
+def the_rules_of_administration_and_politics(request):
+    return render(request, 'pages/the_rules_of_administration_and_politics.html')
 
 
 def motion_graphics(request):
