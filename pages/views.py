@@ -1184,6 +1184,12 @@ def infograph_detail(request, slug):
             'date': '15 أغسطس 2026',
             'image': 'imgs/political_economy_of_food_sovereignty_in_arab_countries.jpeg',
         },
+        "How_did_Chinas_industrial_revolution_begin": {
+            'slug': 'How_did_Chinas_industrial_revolution_begin',
+            'title': 'كيف بدأت النهضة الصناعية الصينية؟',
+            'date': '22 أغسطس 2026',
+            'image': 'imgs/how_did_Chinas_industrial_revolution_begin.jpeg',
+        },
     } 
 
     detail = data.get(slug)
