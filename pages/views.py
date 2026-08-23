@@ -82,6 +82,12 @@ def view_osus_sixth_content(requst):
 def index(request):
     videos = [
         {
+            "url": "/studies/26/",
+            "video": "Bf95QieJGYE",
+            "date": "2026-8-22",
+            "subject": "كيف تُبنى الدولة القوية؟ سر المؤسسات التي تصنع المستقبل | بناء الدولة"
+        },
+        {
             "url": "/studies/25/",
             "video": "dtUw4ux4FdI",
             "date": "2026-8-8",
@@ -92,12 +98,6 @@ def index(request):
             "video": "wNWx0L3ltnk",
             "date": "2026-7-22",
             "subject": "كيف تبني الدول المتقدمة اقتصادًا قويًا؟ ولماذا يقود القطاع الخاص النمو؟"
-        },
-        {
-            "url": "/studies/23/",
-            "video": "zIGbTUS1bm0",
-            "date": "2026-6-27",
-            "subject": "لماذا تفشل خطط التنمية في الدول النامية؟"
         },
     ]
 
@@ -1363,6 +1363,12 @@ def consumer_culture_and_its_economic_repercussions(request):
 
 def motion_graphics(request):
     videos = [
+        {
+            "url": "/studies/26/",
+            "video": "https://youtu.be/Bf95QieJGYE",
+            "date": "2026-8-22",
+            "subject": "كيف تُبنى الدولة القوية؟ سر المؤسسات التي تصنع المستقبل | بناء الدولة"
+        },
         {
             "url": "/studies/25/",
             "video": "https://youtu.be/dtUw4ux4FdI",
