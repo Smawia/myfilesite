@@ -1,6 +1,18 @@
 [   
     
     {
+        "title": "مراجعة أكاديمية لكتاب سادة الفقر",
+        "slug": "Masters_of_Poverty_Book",
+        "image": "imgs/masters_of_poverty_book.jpeg",
+        "date": "30 أغسطس 2026"
+    },
+    {
+        "title": "النظام الصحي في سويسرا",
+        "slug": "Swiss_healthcare_system",
+        "image": "imgs/swiss_healthcare_system.jpeg",
+        "date": "29 أغسطس 2026"
+    },
+    {
         "title": "كيف بدأت النهضة الصناعية الصينية؟",
         "slug": "How_did_Chinas_industrial_revolution_begin",
         "image": "imgs/how_did_Chinas_industrial_revolution_begin.jpeg",

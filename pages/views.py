@@ -1190,6 +1190,18 @@ def infograph_detail(request, slug):
             'date': '22 أغسطس 2026',
             'image': 'imgs/how_did_Chinas_industrial_revolution_begin.jpeg',
         },
+        "Swiss_healthcare_system": {
+            'slug': 'Swiss_healthcare_system',
+            'title': 'النظام الصحي في سويسرا',
+            'date': '29 أغسطس 2026',
+            'image': 'imgs/swiss_healthcare_system.jpeg',
+        },
+        "Masters_of_Poverty_Book": {
+            'slug': 'Masters_of_Poverty_Book',
+            'title': 'مراجعة أكاديمية لكتاب سادة الفقر',
+            'date': '30 أغسطس 2026',
+            'image': 'imgs/masters_of_poverty_book.jpeg',
+        },
     } 
 
     detail = data.get(slug)
