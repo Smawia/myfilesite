@@ -1202,6 +1202,12 @@ def infograph_detail(request, slug):
             'date': '30 أغسطس 2026',
             'image': 'imgs/masters_of_poverty_book.jpeg',
         },
+        "Largest_employers": {
+            'slug': 'Largest_employers',
+            'title': 'أكبر الشركات توظيفًا للعمالة',
+            'date': '31 أغسطس 2026',
+            'image': 'imgs/largest_employers.jpeg',
+        },
     } 
 
     detail = data.get(slug)
