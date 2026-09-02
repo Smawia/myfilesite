@@ -1276,6 +1276,7 @@ def journal_studies(request):
         {'subject': 'نظم التكاليف والإنتاج وأثرها في تعزيز كفاءة الأداء المؤسسي', 'url': 'IntegratingModernCostSystemsLeanProduction', 'image': 'imgs/integrating_modern_cost_systems_lean_production-index.jpg', 'date': '1 أغسطس 2026'}, 
         {'subject': 'قواعد الإدارة والسياسة وإشكالية التوازن المؤسسي', 'url': 'TheRulesOfAdministrationAndPolitics', 'image': 'imgs/the_rules_of_administration_and_politics-index.jpg', 'date': '1 أغسطس 2026'}, 
         {'subject': 'الثقافة الاستهلاكية وانعكاساتها الاقتصادية على التنمية في اليمن', 'url': 'ConsumerCultureAndItsEconomicRepercussions', 'image': 'imgs/consumer_culture_and_its_economic_repercussions-index.jpg', 'date': '1 أغسطس 2026'}, 
+        {'subject': 'التخطيط الحضري في اليمن في ضوء التجارب العالمية', 'url': 'UrbanPlanningInYemenInLightofGlobalExperiences', 'image': 'imgs/urban_planning_in_yemen-index.jpg', 'date': '1 أغسطس 2026'}, 
     ]
     
 
@@ -1291,7 +1292,7 @@ def journal_studies(request):
 
 # issue_one
 def social_market_economy(request):
-        return render(request, 'pages/social_market_economy.html')
+    return render(request, 'pages/social_market_economy.html')
 
 def agricultural_renaissance_in_yemen(request):
     return render(request, 'pages/agricultural_renaissance_in_yemen.html')
@@ -1384,6 +1385,9 @@ def the_rules_of_administration_and_politics(request):
 
 def consumer_culture_and_its_economic_repercussions(request):
     return render(request, 'pages/consumer_culture_and_its_economic_repercussions.html')
+
+def urban_planning_in_yemen_in_light_of_global_experiences(request):
+    return render(request, 'pages/urban_planning_in_yemen_in_light_of_global_experiences.html')
 
 def motion_graphics(request):
     videos = [

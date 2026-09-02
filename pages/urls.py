@@ -73,6 +73,7 @@ urlpatterns = [
     path('journals/osus/articles/IntegratingModernCostSystemsLeanProduction',views.integrating_modern_cost_systems_lean_production ,name='integrating_modern_cost_systems_lean_production'),
     path('journals/osus/articles/TheRulesOfAdministrationAndPolitics',views.the_rules_of_administration_and_politics ,name='the_rules_of_administration_and_politics'),
     path('journals/osus/articles/ConsumerCultureAndItsEconomicRepercussions',views.consumer_culture_and_its_economic_repercussions ,name='consumer_culture_and_its_economic_repercussions'),
+    path('journals/osus/articles/UrbanPlanningInYemenInLightofGlobalExperiences',views.urban_planning_in_yemen_in_light_of_global_experiences ,name='urban_planning_in_yemen_in_light_of_global_experiences'),
 
     # new studies
     path('articles/CurrentEconomicSituation',views.current_economic_situation,name='current_economic_situation'),

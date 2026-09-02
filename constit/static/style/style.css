@@ -10533,7 +10533,7 @@ tr._idGenTableRowColumn-52 {
 
     .Heading-5 {
         text-align: right;
-        font-size: 19px;
+        font-size: 19.6px;
         margin-bottom: -5px;
     }
 
@@ -15343,13 +15343,13 @@ body.dark-mode .study-info-show {
 
     /* study-6-4 */
     .study-6-4 col._idGenTableRowColumn-1 {
-	width:85px;
+	    width:85px;
     }
     .study-6-4 col._idGenTableRowColumn-2 {
         width:113px;
     }
     .study-6-4 tr._idGenTableRowColumn-3 {
-	min-height:17px;
+	    min-height:17px;
     }
     .study-6-4 tr._idGenTableRowColumn-4 {
         min-height:23px;
@@ -15367,3 +15367,34 @@ body.dark-mode .study-info-show {
     .study-6-4 .col-min-width-2 {
         min-width: 140px;
     } */
+
+
+    /* study-6-5 */
+    .study-6-5 col._idGenTableRowColumn-1 {
+	width:198px;
+    }
+    .study-6-5 col._idGenTableRowColumn-2 {
+        width:209px;
+    }
+    .study-6-5 tr._idGenTableRowColumn-3 {
+        min-height:17px;
+    }
+    .study-6-5 tr._idGenTableRowColumn-4 {
+        min-height:47px;
+    }
+    .study-6-5 tr._idGenTableRowColumn-5 {
+        min-height:32px;
+    }
+    .study-6-5 col._idGenTableRowColumn-6 {
+        width:258px;
+    }
+    .study-6-5 col._idGenTableRowColumn-7 {
+        width:150px;
+    }
+
+    @media (max-width: 575px) {
+        .study-6-5 .custom-h5-1 {
+            margin-bottom: 10px;
+            margin-top: 15px;
+        }  
+    }
