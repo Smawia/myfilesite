@@ -1208,6 +1208,12 @@ def infograph_detail(request, slug):
             'date': '31 أغسطس 2026',
             'image': 'imgs/largest_employers.jpeg',
         },
+        "How_did_human_development_evolve_in_Rwanda": {
+            'slug': 'How_did_human_development_evolve_in_Rwanda',
+            'title': 'كيف تحولت التنمية البشرية في رواندا؟',
+            'date': '2 سبتمبر 2026',
+            'image': 'imgs/how_did_human_development_evolve_in_rwanda.jpeg',
+        },
     } 
 
     detail = data.get(slug)
