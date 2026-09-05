@@ -1637,6 +1637,11 @@ def search(request):
         {'subject': 'الاقتصاد السياسي في اليمن', 'url': 'ThePoliticalEconomyInYemen', 'image': 'political_economy_in_yemen-index.jpg', 'date': '10 أبريل 2026', 'from_db': False}, 
         {'subject': 'العرب والمسلمون في سنوات التَيه', 'url': 'ArabsAndMuslimsInTheYearsOfWandering', 'image': 'arabs_and_muslims_in_the_years_of_wandering-index.jpg', 'date': '10 أبريل 2026', 'from_db': False}, 
         {'subject': 'الأكل والمنتجات الغذائية في سويسرا', 'url': 'FoodAndFoodProductsInSwitzerland ', 'image': 'food_and_food_products_in_switzerland-index.jpg', 'date': '10 أبريل 2026', 'from_db': False},
+        {'subject': 'عهد الإمام علي لمالك الأشتر', 'url': 'TheCovenantOfImamAliToMalikAlAshtar', 'image': 'the_covenant_of_Imam_Ali_to_Malik_al-Ashtar-index.jpg', 'date': '1 أغسطس 2026'}, 
+        {'subject': 'نظم التكاليف والإنتاج وأثرها في تعزيز كفاءة الأداء المؤسسي', 'url': 'IntegratingModernCostSystemsLeanProduction', 'image': 'integrating_modern_cost_systems_lean_production-index.jpg', 'date': '1 أغسطس 2026'}, 
+        {'subject': 'قواعد الإدارة والسياسة وإشكالية التوازن المؤسسي', 'url': 'TheRulesOfAdministrationAndPolitics', 'image': 'the_rules_of_administration_and_politics-index.jpg', 'date': '1 أغسطس 2026'}, 
+        {'subject': 'الثقافة الاستهلاكية وانعكاساتها الاقتصادية على التنمية في اليمن', 'url': 'ConsumerCultureAndItsEconomicRepercussions', 'image': 'consumer_culture_and_its_economic_repercussions-index.jpg', 'date': '1 أغسطس 2026'}, 
+        {'subject': 'التخطيط الحضري في اليمن في ضوء التجارب العالمية', 'url': 'UrbanPlanningInYemenInLightofGlobalExperiences', 'image': 'urban_planning_in_yemen-index.jpg', 'date': '1 أغسطس 2026'}, 
     ]
 
     if query:
