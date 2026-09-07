@@ -1214,6 +1214,12 @@ def infograph_detail(request, slug):
             'date': '2 سبتمبر 2026',
             'image': 'imgs/how_did_human_development_evolve_in_rwanda.jpeg',
         },
+        "Top_10_Countries_on_the_Quality_of_Life_Index": {
+            'slug': 'Top_10_Countries_on_the_Quality_of_Life_Index',
+            'title': 'أفضل 10 دول في مؤشر معايير جودة الحياة',
+            'date': '7 سبتمبر 2026',
+            'image': 'imgs/top_10_countries_on_the_quality_of_life_index.jpeg',
+        },
     } 
 
     detail = data.get(slug)
