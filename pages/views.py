@@ -1220,6 +1220,18 @@ def infograph_detail(request, slug):
             'date': '7 سبتمبر 2026',
             'image': 'imgs/top_10_countries_on_the_quality_of_life_index.jpeg',
         },
+        "Countries_transition_from_selling_raw_materials_to_manufacturing": {
+            'slug': 'Countries_transition_from_selling_raw_materials_to_manufacturing',
+            'title': 'كيف تنتقل الدول من بيع المواد الخام إلى صناعة المنتجات؟',
+            'date': '13 سبتمبر 2026',
+            'image': 'imgs/countries_transition_from_selling_raw_materials_to_manufacturing.jpeg',
+        },
+        "Education_in_China": {
+            'slug': 'Education_in_China',
+            'title': 'التعليم في الصين',
+            'date': '14 سبتمبر 2026',
+            'image': 'imgs/education_in_china.jpeg',
+        },
     } 
 
     detail = data.get(slug)
@@ -1662,6 +1674,12 @@ def search(request):
 
     
     videos = [
+        {
+            "url": "/studies/26/",
+            "video": "https://youtu.be/Bf95QieJGYE",
+            "date": "2026-8-22",
+            "subject": "كيف تُبنى الدولة القوية؟ سر المؤسسات التي تصنع المستقبل | بناء الدولة"
+        },
         {
             "url": "/studies/25/",
             "video": "https://youtu.be/dtUw4ux4FdI",

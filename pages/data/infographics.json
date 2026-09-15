@@ -1,6 +1,18 @@
 [   
     
     {
+        "title": "التعليم في الصين",
+        "slug": "Education_in_China",
+        "image": "imgs/education_in_china.jpeg",
+        "date": "14 سبتمبر 2026"
+    },
+    {
+        "title": "كيف تنتقل الدول من بيع المواد الخام إلى صناعة المنتجات؟",
+        "slug": "Countries_transition_from_selling_raw_materials_to_manufacturing",
+        "image": "imgs/countries_transition_from_selling_raw_materials_to_manufacturing.jpeg",
+        "date": "13 سبتمبر 2026"
+    },
+    {
         "title": "أفضل 10 دول في مؤشر معايير جودة الحياة",
         "slug": "Top_10_Countries_on_the_Quality_of_Life_Index",
         "image": "imgs/top_10_countries_on_the_quality_of_life_index.jpeg",
