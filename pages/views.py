@@ -1232,6 +1232,12 @@ def infograph_detail(request, slug):
             'date': '14 سبتمبر 2026',
             'image': 'imgs/education_in_china.jpeg',
         },
+        "Education_in_Japan": {
+            'slug': 'Education_in_Japan',
+            'title': 'التعليم في اليابان',
+            'date': '19 سبتمبر 2026',
+            'image': 'imgs/education_in_japan.jpeg',
+        },
     } 
 
     detail = data.get(slug)
