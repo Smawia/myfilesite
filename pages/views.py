@@ -1238,6 +1238,12 @@ def infograph_detail(request, slug):
             'date': '19 سبتمبر 2026',
             'image': 'imgs/education_in_japan.jpeg',
         },
+        "How_is_New_Zealands_smallholder_turning_into_a_global_export_power": {
+            'slug': 'How_is_New_Zealands_smallholder_turning_into_a_global_export_power',
+            'title': 'كيف حوّلت نيوزيلندا المزارع الصغيرة إلى قوة تصديرية عالمية؟',
+            'date': '23 سبتمبر 2026',
+            'image': 'imgs/how_is_new_zealands_smallholder.jpg',
+        },
     } 
 
     detail = data.get(slug)
