@@ -82,6 +82,12 @@ def view_osus_sixth_content(requst):
 def index(request):
     videos = [
         {
+            "url": "/studies/27/",
+            "video": "hfFEUfDu6No",
+            "date": "2026-9-28",
+            "subject": "كيف حوّلت فونتيرا الحليب إلى صناعة بمليارات الدولارات؟ | قصة نجاح نيوزيلندية مذهلة"
+        },
+        {
             "url": "/studies/26/",
             "video": "Bf95QieJGYE",
             "date": "2026-8-22",
@@ -92,12 +98,6 @@ def index(request):
             "video": "dtUw4ux4FdI",
             "date": "2026-8-8",
             "subject": "ماذا يحدث للدولة عندما يختفي مصدر دخلها الرئيسي؟ | الاقتصاد الريعي والاقتصاد المنتج"
-        },
-        {
-            "url": "/studies/24/",
-            "video": "wNWx0L3ltnk",
-            "date": "2026-7-22",
-            "subject": "كيف تبني الدول المتقدمة اقتصادًا قويًا؟ ولماذا يقود القطاع الخاص النمو؟"
         },
     ]
 
@@ -1244,6 +1244,12 @@ def infograph_detail(request, slug):
             'date': '23 سبتمبر 2026',
             'image': 'imgs/how_is_new_zealands_smallholder.jpg',
         },
+        "Competition_between_the_Indian_environment": {
+            'slug': 'Competition_between_the_Indian_environment',
+            'title': 'التنافس على المحيط الهندي وصناعة نظام عالمي جديد',
+            'date': '30 سبتمبر 2026',
+            'image': 'imgs/competition_on_the_indian_environment.jpeg',
+        },
     } 
 
     detail = data.get(slug)
@@ -1421,6 +1427,12 @@ def urban_planning_in_yemen_in_light_of_global_experiences(request):
 
 def motion_graphics(request):
     videos = [
+        {
+            "url": "/studies/27/",
+            "video": "https://youtu.be/hfFEUfDu6No",
+            "date": "2026-9-28",
+            "subject": "كيف حوّلت فونتيرا الحليب إلى صناعة بمليارات الدولارات؟ | قصة نجاح نيوزيلندية مذهلة"
+        },
         {
             "url": "/studies/26/",
             "video": "https://youtu.be/Bf95QieJGYE",
@@ -1686,6 +1698,12 @@ def search(request):
 
     
     videos = [
+        {
+            "url": "/studies/27/",
+            "video": "https://youtu.be/hfFEUfDu6No",
+            "date": "2026-9-28",
+            "subject": "كيف حوّلت فونتيرا الحليب إلى صناعة بمليارات الدولارات؟ | قصة نجاح نيوزيلندية مذهلة"
+        },
         {
             "url": "/studies/26/",
             "video": "https://youtu.be/Bf95QieJGYE",
