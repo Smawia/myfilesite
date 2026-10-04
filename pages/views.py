@@ -1250,6 +1250,12 @@ def infograph_detail(request, slug):
             'date': '30 سبتمبر 2026',
             'image': 'imgs/competition_on_the_indian_environment.jpeg',
         },
+        "How_did_Singapore_build_one_of_the_most_successful_education_systems": {
+            'slug': 'How_did_Singapore_build_one_of_the_most_successful_education_systems',
+            'title': 'كيف صنعت سنغافورة أحد أكثر الأنظمة التعليمية نجاحًا في العالم؟',
+            'date': '4 أكتوبر 2026',
+            'image': 'imgs/how_did_Singapore_build_one_of_the_most_successful_education_systems.jpeg',
+        },
     } 
 
     detail = data.get(slug)
