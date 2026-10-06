@@ -1256,6 +1256,12 @@ def infograph_detail(request, slug):
             'date': '4 أكتوبر 2026',
             'image': 'imgs/how_did_Singapore_build_one_of_the_most_successful_education_systems.jpeg',
         },
+        "Comparison_of_the_Top_10_Countries_in_Agriculture_Food_Security_and_Agricultural_Trade": {
+            'slug': 'Comparison_of_the_Top_10_Countries_in_Agriculture_Food_Security_and_Agricultural_Trade',
+            'title': 'مقارنة أبرز 10 دول في الزراعة والأمن الغذائي والتجارة الزراعية',
+            'date': '6 أكتوبر 2026',
+            'image': 'imgs/comparison_of_the_top_10_countries_in_agriculture_food_security.jpeg',
+        },
     } 
 
     detail = data.get(slug)
