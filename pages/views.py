@@ -82,6 +82,12 @@ def view_osus_sixth_content(requst):
 def index(request):
     videos = [
         {
+            "url": "/studies/28/",
+            "video": "x3Cr1UPkV2o",
+            "date": "2026-10-17",
+            "subject": "كيف تحولت كوريا الجنوبية من الفقر إلى قوة صناعية عالمية؟ | أسرار النهضة"
+        },
+        {
             "url": "/studies/27/",
             "video": "hfFEUfDu6No",
             "date": "2026-9-28",
@@ -92,12 +98,6 @@ def index(request):
             "video": "Bf95QieJGYE",
             "date": "2026-8-22",
             "subject": "كيف تُبنى الدولة القوية؟ سر المؤسسات التي تصنع المستقبل | بناء الدولة"
-        },
-        {
-            "url": "/studies/25/",
-            "video": "dtUw4ux4FdI",
-            "date": "2026-8-8",
-            "subject": "ماذا يحدث للدولة عندما يختفي مصدر دخلها الرئيسي؟ | الاقتصاد الريعي والاقتصاد المنتج"
         },
     ]
 
@@ -1296,6 +1296,36 @@ def infograph_detail(request, slug):
             'date': '6 أكتوبر 2026',
             'image': 'imgs/comparison_of_the_top_10_countries_in_agriculture_food_security.jpeg',
         },
+        "Countries_with_the_highest_and_lowest_percentages_of_citizens_living_abroad": {
+            'slug': 'Countries_with_the_highest_and_lowest_percentages_of_citizens_living_abroad',
+            'title': 'أعلى وأدنى الدول في نسبة مواطنيها بالخارج',
+            'date': '12 أكتوبر 2026',
+            'image': 'imgs/countries_with_the_highest_and_lowest_percentages_of_citizens_living_abroad.jpeg',
+        },
+        "How_did_South_Korea_turn_waste_into_energy": {
+            'slug': 'How_did_South_Korea_turn_waste_into_energy',
+            'title': 'كيف حولت كوريا الجنوبية النفايات إلى طاقة؟',
+            'date': '13 أكتوبر 2026',
+            'image': 'imgs/how_did_south_korea_turn_waste_into_energy.jpeg',
+        },
+        "Developmental_State": {
+            'slug': 'Developmental_State',
+            'title': 'الدولة التنموية',
+            'date': '17 أكتوبر 2026',
+            'image': 'imgs/developmental_state.webp',
+        },
+        "Countries_Most_Attractive_to_Foreign_Investment": {
+            'slug': 'Countries_Most_Attractive_to_Foreign_Investment',
+            'title': 'أكثر الدول جذبًا للاستثمار الأجنبي',
+            'date': '19 أكتوبر 2026',
+            'image': 'imgs/countries_most_attractive_to_foreign_investment.webp',
+        },
+        "Government_effectiveness_index_for_iceland": {
+            'slug': 'Government_effectiveness_index_for_iceland',
+            'title': 'مؤشر فعالية الحكومة في آيسلندا',
+            'date': '27 أكتوبر 2026',
+            'image': 'imgs/government_effectiveness_index_for_iceland.webp',
+        },
     } 
 
     detail = data.get(slug)
@@ -1473,6 +1503,12 @@ def urban_planning_in_yemen_in_light_of_global_experiences(request):
 
 def motion_graphics(request):
     videos = [
+        {
+            "url": "/studies/28/",
+            "video": "https://youtu.be/x3Cr1UPkV2o",
+            "date": "2026-10-17",
+            "subject": "كيف تحولت كوريا الجنوبية من الفقر إلى قوة صناعية عالمية؟ | أسرار النهضة"
+        },
         {
             "url": "/studies/27/",
             "video": "https://youtu.be/hfFEUfDu6No",
@@ -1744,6 +1780,12 @@ def search(request):
 
     
     videos = [
+        {
+            "url": "/studies/28/",
+            "video": "https://youtu.be/x3Cr1UPkV2o",
+            "date": "2026-10-17",
+            "subject": "كيف تحولت كوريا الجنوبية من الفقر إلى قوة صناعية عالمية؟ | أسرار النهضة"
+        },
         {
             "url": "/studies/27/",
             "video": "https://youtu.be/hfFEUfDu6No",
