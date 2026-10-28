@@ -158,81 +158,81 @@ document.addEventListener("DOMContentLoaded", function () {
 
 
 //   infographic view
-document.addEventListener("DOMContentLoaded", function () {
-    const container = document.getElementById("infographContainer");
+// document.addEventListener("DOMContentLoaded", function () {
+//     const container = document.getElementById("infographContainer");
 
-    // لو ما في بيانات infographs في الصفحة، نوقف
-    if (!container) {
-        return;
-    }
+//     // لو ما في بيانات infographs في الصفحة، نوقف
+//     if (!container) {
+//         return;
+//     }
 
-    const loadMoreBtn = document.getElementById("loadMoreBtn");
-    // console.log("Container and Button:", container, loadMoreBtn);
-    // جلب البيانات من الـ script
-    const data = JSON.parse(document.getElementById("infographs").textContent);
-    // console.log("Data length:", data.length);
+//     const loadMoreBtn = document.getElementById("loadMoreBtn");
+//     // console.log("Container and Button:", container, loadMoreBtn);
+//     // جلب البيانات من الـ script
+//     const data = JSON.parse(document.getElementById("infographs").textContent);
+//     // console.log("Data length:", data.length);
     
-    let itemsPerPage = 6;   // كم عنصر نعرض كل مرة
-    let currentIndex = 0;   // موقع البداية
+//     let itemsPerPage = 6;   // كم عنصر نعرض كل مرة
+//     let currentIndex = 0;   // موقع البداية
 
-    function renderItems() {
-        // نتأكد أن فيه عناصر متبقية
-        if (currentIndex >= data.length) {
-            loadMoreBtn.style.display = "none";
-            return;
-        }
+//     function renderItems() {
+//         // نتأكد أن فيه عناصر متبقية
+//         if (currentIndex >= data.length) {
+//             loadMoreBtn.style.display = "none";
+//             return;
+//         }
 
-        // ناخذ الشرائح المتبقية فقط
-        const slice = data.slice(currentIndex, currentIndex + itemsPerPage);
+//         // ناخذ الشرائح المتبقية فقط
+//         const slice = data.slice(currentIndex, currentIndex + itemsPerPage);
 
-        if (global_savedMode === 'dark-mode') {
-            slice.forEach(item => {
-                const card = document.createElement("div");
-                card.className = "studies-card infograph-card custom-studies-card fade-in"; // أضفنا fade-in
-                card.innerHTML = `
-                    <a href="/Infographics/${item.slug}/">
-                        <img src="/static/${item.image}" alt="إنفوجراف" class="infograph-img">
-                        <div class="study-text-info dark-mode">
-                            <span>${item.date}</span>
-                            <p class="card-title">${item.title}</p>
-                        </div>
-                    </a>
-                `;
-                container.appendChild(card);
-            });
-        } else {
-            slice.forEach(item => {
-                const card = document.createElement("div");
-                card.className = "studies-card infograph-card custom-studies-card fade-in"; // أضفنا fade-in
-                card.innerHTML = `
-                    <a href="/Infographics/${item.slug}/">
-                        <img src="/static/${item.image}" alt="إنفوجراف" class="infograph-img">
-                        <div class="study-text-info">
-                            <span>${item.date}</span>
-                            <p class="card-title">${item.title}</p>
-                        </div>
-                    </a>
-                `;
-                container.appendChild(card);
-            });
-        }
+//         if (global_savedMode === 'dark-mode') {
+//             slice.forEach(item => {
+//                 const card = document.createElement("div");
+//                 card.className = "studies-card infograph-card custom-studies-card fade-in"; // أضفنا fade-in
+//                 card.innerHTML = `
+//                     <a href="/Infographics/${item.slug}/">
+//                         <img src="/static/${item.image}" alt="إنفوجراف" class="infograph-img">
+//                         <div class="study-text-info dark-mode">
+//                             <span>${item.date}</span>
+//                             <p class="card-title">${item.title}</p>
+//                         </div>
+//                     </a>
+//                 `;
+//                 container.appendChild(card);
+//             });
+//         } else {
+//             slice.forEach(item => {
+//                 const card = document.createElement("div");
+//                 card.className = "studies-card infograph-card custom-studies-card fade-in"; // أضفنا fade-in
+//                 card.innerHTML = `
+//                     <a href="/Infographics/${item.slug}/">
+//                         <img src="/static/${item.image}" alt="إنفوجراف" class="infograph-img">
+//                         <div class="study-text-info">
+//                             <span>${item.date}</span>
+//                             <p class="card-title">${item.title}</p>
+//                         </div>
+//                     </a>
+//                 `;
+//                 container.appendChild(card);
+//             });
+//         }
 
-        // تحديث المؤشر
-        currentIndex += slice.length;
+//         // تحديث المؤشر
+//         currentIndex += slice.length;
 
-        // إذا خلصت العناصر، أخفي الزر
-        if (currentIndex >= data.length) {
-            loadMoreBtn.style.display = "none";
-            console.log("كل العناصر تم عرضها");
-        }
-    }
+//         // إذا خلصت العناصر، أخفي الزر
+//         if (currentIndex >= data.length) {
+//             loadMoreBtn.style.display = "none";
+//             console.log("كل العناصر تم عرضها");
+//         }
+//     }
 
-    // تحميل أول دفعة
-    renderItems();
+//     // تحميل أول دفعة
+//     renderItems();
 
-    // عند الضغط على عرض المزيد
-    loadMoreBtn.addEventListener("click", renderItems);
-});
+//     // عند الضغط على عرض المزيد
+//     loadMoreBtn.addEventListener("click", renderItems);
+// });
 
 // تأكد من أن هناك تساويًا بين عدد الأزرار والمراجع
 if (show_refs.length !== all_refs.length) {
@@ -854,3 +854,95 @@ const closeBtn = document.getElementById("closeSearch");
             popup.classList.remove("show");
         }
     });
+
+
+// infographic view
+document.addEventListener("DOMContentLoaded", function () {
+    const container = document.getElementById("infographContainer");
+
+    if (!container) return;
+
+    const loadMoreBtn = document.getElementById("loadMoreBtn");
+    const dataElement = document.getElementById("infographs");
+
+    if (!dataElement) return;
+
+    // جعل البيانات قابلة للتغيير
+    let data = JSON.parse(dataElement.textContent);
+
+    const itemsPerPage = 6;
+    let currentIndex = 0;
+
+    function renderItems() {
+        if (currentIndex >= data.length) {
+            if (loadMoreBtn) {
+                loadMoreBtn.style.display = "none";
+            }
+            return;
+        }
+
+        const slice = data.slice(
+            currentIndex,
+            currentIndex + itemsPerPage
+        );
+
+        slice.forEach(item => {
+            const card = document.createElement("div");
+
+            card.className =
+                "studies-card infograph-card custom-studies-card fade-in";
+
+            const isDarkMode = global_savedMode === "dark-mode";
+
+            card.innerHTML = `
+                <a href="/Infographics/${item.slug}/">
+                    <img
+                        src="/static/${item.image}"
+                        alt="إنفوجراف"
+                        class="infograph-img"
+                        loading="lazy"
+                    >
+                    <div class="study-text-info ${isDarkMode ? "dark-mode" : ""}">
+                        <span>${item.date}</span>
+                        <p class="card-title">${item.title}</p>
+                    </div>
+                </a>
+            `;
+
+            container.appendChild(card);
+        });
+
+        currentIndex += slice.length;
+
+        if (loadMoreBtn) {
+            loadMoreBtn.style.display =
+                currentIndex >= data.length ? "none" : "";
+        }
+    }
+
+    // تغيير البيانات وإعادة عرضها
+    window.setInfographicsData = function (newData) {
+        console.count("setInfographicsData called");
+
+        if (!Array.isArray(newData)) {
+            console.error("يجب أن تكون البيانات الجديدة مصفوفة");
+            return;
+        }
+
+        data = newData;
+        currentIndex = 0;
+
+        console.trace("من استدعى setInfographicsData؟");
+
+        console.count("replaceChildren called");
+        container.replaceChildren();
+
+        renderItems();
+    };
+
+    renderItems();
+
+    if (loadMoreBtn) {
+        loadMoreBtn.addEventListener("click", renderItems);
+    }
+});

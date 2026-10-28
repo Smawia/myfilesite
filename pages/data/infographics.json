@@ -1,693 +1,843 @@
 [   
     
     {
+        "title": "مؤشر فعالية الحكومة في آيسلندا",
+        "slug": "Government_effectiveness_index_for_iceland",
+        "image": "imgs/government_effectiveness_index_for_iceland.webp",
+        "category": "politics_and_international_relations",
+        "date": "27 أكتوبر 2026"
+    },
+    {
+        "title": "أكثر الدول جذبًا للاستثمار الأجنبي",
+        "slug": "Countries_Most_Attractive_to_Foreign_Investment",
+        "image": "imgs/countries_most_attractive_to_foreign_investment.webp",
+        "category": "economy_and_development",
+        "date": "19 أكتوبر 2026"
+    },
+    {
+        "title": "الدولة التنموية",
+        "slug": "Developmental_State",
+        "image": "imgs/developmental_state.webp",
+        "category": "economy_and_development",
+        "date": "17 أكتوبر 2026"
+    },
+    {
+        "title": "كيف حولت كوريا الجنوبية النفايات إلى طاقة؟",
+        "slug": "How_did_South_Korea_turn_waste_into_energy",
+        "image": "imgs/how_did_south_korea_turn_waste_into_energy.jpeg",
+        "category": "economy_and_development",
+        "date": "13 أكتوبر 2026"
+    },
+    {
+        "title": "أعلى وأدنى الدول في نسبة مواطنيها بالخارج",
+        "slug": "Countries_with_the_highest_and_lowest_percentages_of_citizens_living_abroad",
+        "image": "imgs/countries_with_the_highest_and_lowest_percentages_of_citizens_living_abroad.jpeg",
+        "category": "all",
+        "date": "12 أكتوبر 2026"
+    },
+    {
         "title": "مقارنة أبرز 10 دول في الزراعة والأمن الغذائي والتجارة الزراعية",
         "slug": "Comparison_of_the_Top_10_Countries_in_Agriculture_Food_Security_and_Agricultural_Trade",
         "image": "imgs/comparison_of_the_top_10_countries_in_agriculture_food_security.jpeg",
+        "category": "agriculture_and_natural_resources",
         "date": "6 أكتوبر 2026"
     },
     {
         "title": "كيف صنعت سنغافورة أحد أكثر الأنظمة التعليمية نجاحًا في العالم؟",
         "slug": "How_did_Singapore_build_one_of_the_most_successful_education_systems",
         "image": "imgs/how_did_Singapore_build_one_of_the_most_successful_education_systems.jpeg",
+        "category": "education_and_technology",
         "date": "4 أكتوبر 2026"
     },
     {
         "title": "التنافس على المحيط الهندي وصناعة نظام عالمي جديد",
         "slug": "Competition_between_the_Indian_environment",
         "image": "imgs/competition_on_the_indian_environment.jpeg",
+        "category": "politics_and_international_relations",
         "date": "30 سبتمبر 2026"
     },
     {
         "title": "كيف حوّلت نيوزيلندا المزارع الصغيرة إلى قوة تصديرية عالمية؟",
         "slug": "How_is_New_Zealands_smallholder_turning_into_a_global_export_power",
         "image": "imgs/how_is_new_zealands_smallholder.jpg",
+        "category": "agriculture_and_natural_resources",
         "date": "23 سبتمبر 2026"
     },
     {
         "title": "التعليم في اليابان",
         "slug": "Education_in_Japan",
         "image": "imgs/education_in_japan.jpeg",
+        "category": "education_and_technology",
         "date": "19 سبتمبر 2026"
     },
     {
         "title": "التعليم في الصين",
         "slug": "Education_in_China",
         "image": "imgs/education_in_china.jpeg",
+        "category": "education_and_technology",
         "date": "14 سبتمبر 2026"
     },
     {
         "title": "كيف تنتقل الدول من بيع المواد الخام إلى صناعة المنتجات؟",
         "slug": "Countries_transition_from_selling_raw_materials_to_manufacturing",
         "image": "imgs/countries_transition_from_selling_raw_materials_to_manufacturing.jpeg",
+        "category": "economy_and_development",
         "date": "13 سبتمبر 2026"
     },
     {
         "title": "أفضل 10 دول في مؤشر معايير جودة الحياة",
         "slug": "Top_10_Countries_on_the_Quality_of_Life_Index",
         "image": "imgs/top_10_countries_on_the_quality_of_life_index.jpeg",
+        "category": "society_and_human_development",
         "date": "7 سبتمبر 2026"
     },
     {
         "title": "كيف تحولت التنمية البشرية في رواندا؟",
         "slug": "How_did_human_development_evolve_in_Rwanda",
         "image": "imgs/how_did_human_development_evolve_in_rwanda.jpeg",
+        "category": "society_and_human_development",
         "date": "2 سبتمبر 2026"
     },
     {
         "title": "أكبر الشركات توظيفًا للعمالة",
         "slug": "Largest_employers",
         "image": "imgs/largest_employers.jpeg",
+        "category": "economy_and_development",
         "date": "31 أغسطس 2026"
     },
     {
         "title": "مراجعة أكاديمية لكتاب سادة الفقر",
         "slug": "Masters_of_Poverty_Book",
         "image": "imgs/masters_of_poverty_book.jpeg",
-        "date": "30 أغسطس 2026"
+        "category": "economy_and_development",
+        "date": "30 أغسطس 2026" 
     },
     {
         "title": "النظام الصحي في سويسرا",
         "slug": "Swiss_healthcare_system",
         "image": "imgs/swiss_healthcare_system.jpeg",
+        "category": "society_and_human_development",
         "date": "29 أغسطس 2026"
     },
     {
         "title": "كيف بدأت النهضة الصناعية الصينية؟",
         "slug": "How_did_Chinas_industrial_revolution_begin",
         "image": "imgs/how_did_Chinas_industrial_revolution_begin.jpeg",
+        "category": "economy_and_development",
         "date": "22 أغسطس 2026"
     },
     {
         "title": "ملخص كتاب الاقتصاد السياسي للسيادة الغذائية في الدول العربية",
         "slug": "Political_Economy_of_Food_Sovereignty_in_Arab_Countries",
         "image": "imgs/political_economy_of_food_sovereignty_in_arab_countries.jpeg",
+        "category": "agriculture_and_natural_resources",
         "date": "15 أغسطس 2026"
     },
     {
         "title": "النظام الصحي في السويد",
         "slug": "Swedish_healthcare_system",
         "image": "imgs/swedish_healthcare_system.jpeg",
+        "category": "society_and_human_development",
         "date": "14 أغسطس 2026"
     },
     {
         "title": "التعليم في النرويج",
         "slug": "Education_in_Norway",
         "image": "imgs/education_in_norway.jpeg",
+        "category": "education_and_technology",
         "date": "13 أغسطس 2026"
     },
     {
         "title": "أهم مؤشرات بيئة الأعمال",
         "slug": "Key_business_environment_indicators",
         "image": "imgs/key_business_environment_indicators.jpeg",
+        "category": "economy_and_development",
         "date": "1 أغسطس 2026"
     },
     {
         "title": "تجربة كوريا الجنوبية في التنمية",
         "slug": "South_Koreas_Development_Experience",
         "image": "imgs/south_koreas_development_experience.jpeg",
+        "category": "economy_and_development",
         "date": "29 يوليو 2026"
     },
     {
         "title": "أثر البنية التحتية على الاستثمار",
         "slug": "Impact_of_infrastructure_on_investment",
         "image": "imgs/impact_of_infrastructure_on_investment.jpeg",
+        "category": "economy_and_development",
         "date": "27 يوليو 2026"
     },
     {
         "title": "التجربة اليابانية في بناء الإنسان",
         "slug": "The_Japanese_experience_in_human_development",
         "image": "imgs/the_Japanese_experience_in_human_development.jpeg",
+        "category": "society_and_human_development",
         "date": "25 يوليو 2026"
     },
     {
         "title": "لماذا تتنافس الدول على جذب المستثمرين؟",
         "slug": "Why_do_countries_compete_to_attract_investor",
         "image": "imgs/why_do_countries_compete_to_attract_investor.jpeg",
+        "category": "economy_and_development",
         "date": "19 يوليو 2026"
     },
     {
         "title": "لماذا تعتمد الدول المتقدمة على القطاع الخاص؟",
         "slug": "Why_do_developed_countries_rely_on_private_sector",
         "image": "imgs/Why_do_developed_countries_rely_on_private_sector.jpeg",
+        "category": "economy_and_development",
         "date": "14 يوليو 2026"
     },
     {
         "title": "الاقتصاد المنتج أم الاقتصاد الريعي؟",
         "slug": "Productive_economy_or_rentier_economy",
         "image": "imgs/productive_economy_or_rentier_conomy.jpeg",
+        "category": "economy_and_development",
         "date": "13 يوليو 2026"
     },
     {
         "title": "أسباب نجاح رواندا بعد الحرب",
         "slug": "reasons_for_Rwanda_success_after_war",
         "image": "imgs/reasons_for_Rwanda_success_after_war.jpeg",
+        "category": "all",
         "date": "12 يوليو 2026"
     },
     {
         "title": "ملخص كتاب الدولة الغنية والدولة الفقيرة",
         "slug": "rich_country_and_poor_country",
         "image": "imgs/rich_country_and_poor_country.jpeg",
+        "category": "economy_and_development",
         "date": "6 يوليو 2026"
     },
     {
-        "title": "لماذا تتصدر الدول الإسكندنافية  مؤشرات السعادة العالمية؟",
+        "title": "لماذا تتصدر الدول الإسكندنافية مؤشرات السعادة العالمية؟",
         "slug": "Why_do_Scandinavian_countries_top_global_happiness_indices",
         "image": "imgs/why_do_scandinavian_countries_top_global_happiness_indices.jpeg",
+        "category": "society_and_human_development",
         "date": "4 يوليو 2026"
     },
     {
         "title": "الدولة المستحيلة",
         "slug": "The_Impossible_State",
         "image": "imgs/the_impossible_state.jpeg",
+        "category": "politics_and_international_relations",
         "date": "1 يوليو 2026"
     },
     {
         "title": "لماذا تفشل الأمم؟",
         "slug": "Why_do_nations_fail",
         "image": "imgs/why_do_nations_fail.jpg",
+        "category": "all",
         "date": "27 يونيو 2026"
     },
     {
         "title": "الحوكمة والحوكمة الرشيدة",
         "slug": "Governance_and_good_governance",
         "image": "imgs/governance_and_good_governance.jpg",
+        "category": "politics_and_international_relations",
         "date": "23 يونيو 2026"
     },
     {
         "title": "كيف بنت سنغافورة حكومة فعّالة",
         "slug": "How_did_Singapore_build_a_government",
         "image": "imgs/how_did_singapore_build_a_government.jpg",
+        "category": "politics_and_international_relations",
         "date": "8 يونيو 2026"
     },
     {
         "title": "الطريق إلى الرِّق",
         "slug": "The_road_to_slavery",
         "image": "imgs/the_road_to_slavery.jpeg",
+        "category": "politics_and_international_relations",
         "date": "6 يونيو 2026"
     },
     {
         "title": "بناء الدولة كيف تنجح الدول .. ولماذا تفشل أخرى؟",
         "slug": "state_building_how_do_countries_succeed_and_why_do_others_fail",
         "image": "imgs/state_building.jpeg",
+        "category": "politics_and_international_relations",
         "date": "20 مايو 2026"
     },
     {
         "title": "لماذا يُعد التعليم في فنلندا الأفضل في العالم؟",
         "slug": "Why_is_education_in_Finland_the_best_in_the_world",
         "image": "imgs/why_is_education_in_finland_the_best_in_the_world.jpeg",
+        "category": "education_and_technology",
         "date": "11 مايو 2026"
     },
     {
         "title": "أفضل اقتصادات القطاع الخاص في العالم 2025",
         "slug": "The_worlds_best_private_sector_economies_2025",
         "image": "imgs/the_world_best_private_sector_economies_2025.jpeg",
+        "category": "economy_and_development",
         "date": "6 مايو 2026"
     },
     {
         "title": "خفض كلفة الدولة ونقل عبء التوظيف إلى القطاع الخاص",
         "slug": "Reducing_state_costs_and_transferring_the_burden_of_employment_to_the_private_sector",
         "image": "imgs/reducing_state_costs_and_transferring.jpeg",
+        "category": "economy_and_development",
         "date": "20 أبريل 2026"
     },
     {
         "title": "ريادة الدول في إسهام الشركات العائلية اقتصاديًا",
         "slug": "Leading_countries_in_the_economic_contribution_of_family_businesses",
         "image": "imgs/leading_countries_in_the_economic_contribution_of_family_businesses.jpeg",
+        "category": "economy_and_development",
         "date": "15 أبريل 2026"
     },
     {
         "title": "مقارنة بين أقوى النظم السياسية عالميًا",
         "slug": "Comparison_between_the_worlds_most_powerful_political_systems",
         "image": "imgs/comparison_between_the_worlds_most_powerful_political_systems.jpeg",
+        "category": "politics_and_international_relations",
         "date": "13 أبريل 2026"
     },
     {
         "title": "الدول الرائدة في مؤشر مخاطر الاستثمار والمرونة العالمية",
         "slug": "Leading_countries_in_the_Global_Investment_Risk_and_Resilience_Index",
         "image": "imgs/leading_countries_in_the_global_investment_risk.jpeg",
+        "category": "economy_and_development",
         "date": "7 أبريل 2026"
     },
     {
         "title": "الدول الرائدة في مؤشر الحكومة الرقمية 2025م",
         "slug": "Leading_countries_in_the_Digital_Government_Index_2025",
         "image": "imgs/leading_countries_in_the_digital_government_index_2025.jpeg",
+        "category": "politics_and_international_relations",
         "date": "31 مارس 2026"
     },
     {
         "title": "أفضل أنظمة التعليم التي صنعت نهضة الدول 2025م",
         "slug": "The_best_education_systems_2025",
         "image": "imgs/the_best_education_systems.jpeg",
+        "category": "education_and_technology",
         "date": "30 مارس 2026"
     },
     {
         "title": "أغلى 10 دول أوروبية في أسعار البنزين بمطلع عام 2026",
         "slug": "The_10_most_expensive_European_countries_for_gasoline_prices_at_the_beginning_of_2026",
         "image": "imgs/the_10_most_expensive_european_countries_for_gasoline_prices.jpeg",
+        "category": "economy_and_development",
         "date": "1 مارس 2026"
     },
     {
         "title": "توقعات أكبر 10 دول عجزًا في الموازنة من الناتج المحلي الإجمالي لعام 2025",
         "slug": "Predictions_for_the_10_countries_with_the_largest_deficits",
         "image": "imgs/budget_deficit.jpeg",
+        "category": "economy_and_development",
         "date": "28 فبراير 2026"
     },
     {
         "title": "أفضل 10 دول رائدة في الدفع الإلكتروني عالميًا لعام 2025",
         "slug": "Top_10_Leading_Countries_in_Electronic_Payments_Globally_for_2025",
         "image": "imgs/top_10_leading_countries_in_electronic_payments.jpeg",
+        "category": "education_and_technology",
         "date": "15 فبراير 2026"
     },
     {
         "title": "أفضل 10 دول في تحولات التجارة العالمية نحو الاستدامة (اقتصاديًا واجتماعيًّا وبيئيًا) في ظل التحديات الجيوسياسية لعام 2025",
         "slug": "Top_10_countries_in_the_global_trade_transformation",
         "image": "imgs/top_10_countries_in_the_global_trade_transformation.jpeg",
+        "category": "economy_and_development",
         "date": "7 فبراير 2026"
     },
     {
         "title": "أفضل 10 دول رائدة في التوازن الاقتصادي في العالم لعام 2025",
         "slug": "The_top_10_leading_countries_in_economic_balance_in_the_world_for_2025",
         "image": "imgs/the_top 10_leading_countries_in_economic.jpeg",
+        "category": "economy_and_development",
         "date": "2 فبراير 2026"
     },
     {
         "title": "إعادة اختراع الحكومة ديفيد أوزبورن & تيد غايبلر (1991-1992)",
         "slug": "Reinventing_Government_by_David_Osborne_and_Ted",
         "image": "imgs/reinventing_government_by_David_and_Ted.jpeg",
+        "category": "politics_and_international_relations",
         "date": "28 يناير 2026"
     },
     {
         "title": "مقارنة بين الدول في التنمية والإصلاح الإداري، بين الواقع والمفترض",
         "slug": "Comparison_between_countries_in_development_and_administrative_reform",
         "image": "imgs/development_and_administrative_reform-index.jpeg",
+        "category":"economy_and_development",
         "date": "24 يناير 2026"
     },
     {
         "title": "أفضل 10 دول من حيث الإنفاق الحكومي العام المحلي على الصحة",
         "slug": "Top_10_countries_in_terms_of_government_spending_on_local_health",
         "image": "imgs/top_10_countries_in_terms_of_government_spending_on_local_health.jpg",
+        "category":"society_and_human_development",
         "date": "17 يناير 2026"
     },
     {
         "title": "أفضل 10 دول من حيث الإنفاق الصحي العام الحكومي المحلي",
         "slug": "Top_10_countries_health_spending",
         "image": "imgs/top_10_countries_health_spending.jpg",
+        "category": "society_and_human_development",
         "date": "14 يناير 2026"
     },
     {
         "title": "أعلى 10 دول في العالم من حيث معدلات النمو الحقيقي المتوقع للناتج المحلي الإجمالي في عام 2025",
         "slug": "GDP_growth_rates_in_2025",
         "image": "imgs/gdp_growth_rates_in_2025.jpg",
+        "category": "economy_and_development",
         "date": "10 يناير 2026"
     },
     {
         "title": "أفضل عشر دول عالميًا في مؤشر المعرفة العالمي لعام 2025",
         "slug": "Global_Knowledge_Index",
         "image": "imgs/global_knowledge_index.jpg",
+        "category": "education_and_technology",
         "date": "7 يناير 2026"
     },
     {
         "title": "تقييم أداء الدول في مؤشر الأمن السيبراني لعام 2024",
         "slug": "Performance_in_the_2024_Cybersecurity_Index",
         "image": "imgs/performance_in_the_2024_Cybersecurity_Index.jpg",
+        "category": "education_and_technology",
         "date": "21 ديسمبر 2025"
     },
     {
         "title": "منظور عالمي للأداء البيئي 2024.. الدول الأفضل أداءً",
         "slug": "Global_perspective_on_environmental_performance_2024",
         "image": "imgs/global_perspective_on_environmental_performance_2024.jpg",
+        "category": "agriculture_and_natural_resources",
         "date": "19 ديسمبر 2025"
     },
     {
         "title": "رغم أن مساهمة الثروات الطبيعية في اقتصادات هذه الدول لا تتجاوز 1% من الناتج المحلي الإجمالي، إلا أن معدلات الجريمة والقتل العمد فيها تبقى من بين الأدنى عالميًا.",
         "slug": "GDP_homicides",
         "image": "imgs/gdp_homicides.png",
+        "category": "all",
         "date": "17 ديسمبر 2025"
     },
     {
         "title": "رغم أن مساهمة الثروات الطبيعية في هذه الدول لا تتجاوز 1% من الناتج المحلي الإجمالي، إلا أنها حققت مستويات مرتفعة من تغطية خدمات الرعاية الصحية الأساسية.",
         "slug": "GDP_healthcare_services",
         "image": "imgs/gdp_healthcare_services.png",
+        "category": "society_and_human_development",
         "date": "15 ديسمبر 2025"
     },
     {
         "title": "رغم أن مساهمة الثروات الطبيعية في اقتصادات هذه الدول أقل من 1% من الناتج المحلي الإجمالي، إلا أن معدلات البطالة فيها تبقى منخفضة نسبيًا.",
         "slug": "GDP_Unemployment_Rate",
         "image": "imgs/gdp_unemployment_rate.png",
+        "category": "society_and_human_development",
         "date": "13 ديسمبر 2025"
     },
     {
         "title": "رغم محدودية مساهمة الثروات الطبيعية في اقتصادات هذه الدول، إلا أنها تمتلك قوى عاملة نشطة ومعدلات مشاركة مرتفعة في سوق العمل.",
         "slug": "GDP_workforce",
         "image": "imgs/gdp_workforce.png",
+        "category": "economy_and_development",
         "date": "11 ديسمبر 2025"
     },
     {
         "title": "رغم أن مساهمة الثروات الطبيعية في هذه الدول أقل من 1% من اقتصادها، إلا أنها تتصدر مؤشرات فعالية الحكومة عالميًا.",
         "slug": "GDP_government_effectiveness",
         "image": "imgs/gdp_government_effectiveness.png",
+        "category": "politics_and_international_relations",
         "date": "9 ديسمبر 2025"
     },
     {
         "title": "رغم محدودية الثروات الطبيعية، تُعد هذه الدول من أقوى اقتصادات العالم، ويُعرض فيها نصيب الفرد من الدخل القومي.",
         "slug": "GDP_per_capita_income",
         "image": "imgs/gdp_per_capita_income.jpg",
+        "category": "economy_and_development",
         "date": "7 ديسمبر 2025"
     },
     {
         "title": "في هذه الدول، لا تتجاوز مساهمة الثروات الطبيعية 1% من الناتج المحلي الإجمالي، ومع ذلك تمتلك اقتصادات كبرى عالميًا. تعرّف على الناتج المحلي الإجمالي للفرد فيها.",
         "slug": "GDP_per_capita",
         "image": "imgs/gdp_per_capita.png",
+        "category": "economy_and_development",
         "date": "5 ديسمبر 2025"
     },
     {
         "title": "في هذه الدول، تسهم الثروات الطبيعية بأقل من 1% من الناتج المحلي.. فكم يبلغ حجم ناتج كل منها وما مرتبتها عالميًا؟",
         "slug": "Gross_domestic_product_2024",
         "image": "imgs/gross_domestic_product.png",
+        "category": "economy_and_development",
         "date": "1 ديسمبر 2025"
     }, 
     {
         "title": "أكبر القوى العاملة حسب الدول في 2024",
         "slug": "Largest_workforce_by_country_in_2024",
         "image": "imgs/largest_workforce_by_country_in_2024.jpg",
+        "category": "all",
         "date": "17 نوفمبر 2025"
     }, 
     {
         "title": "أعداد المهاجرين في الدول الأوروبية 2024",
         "slug": "Number_of_immigrants_in_Europea_countries_2024",
         "image": "imgs/number_of_immigrants_in_Europea_countries_2024.jpg",
+        "category": "all",
         "date": "15 نوفمبر 2025"
     }, 
     {
         "title": "أكثر دول العالم ابتكارًا في 2025",
         "slug": "The_most_innovative_countries_in_the_world_in_2025",
         "image": "imgs/the_most_innovative_countries_in_the_world_in_2025.jpg",
+        "category": "education_and_technology",
         "date": "13 نوفمبر 2025"
     }, 
     {
         "title": "التحول الدنماركي من أزمة النفط إلى اقتصاد الرياح",
         "slug": "Denmarks_shift_from_an_oil_crisis_to_a_wind_economy",
         "image": "imgs/danish_transformation.png",
+        "category": "economy_and_development",
         "date": "11 نوفمبر 2025"
     }, 
     {
         "title": "اعتماد الاقتصادات الكبرى على الواردات",
         "slug": "Major_economies_reliance_on_imports",
         "image": "imgs/major_economies_reliance_on_imports.jpg",
+        "category": "economy_and_development",
         "date": "9 نوفمبر 2025"
     }, 
     {
         "title": "اعتماد الاقتصادات الكبرى على التصدير",
         "slug": "Major_economies_reliance_on_exports",
         "image": "imgs/major_economies_reliance_on_exports.jpg",
+        "category": "economy_and_development",
         "date": "7 نوفمبر 2025"
     }, 
     {
         "title": "أفضل الدول من حيث جودة الحياة",
         "slug": "Best_countries_in_terms_of_quality_of_life",
         "image": "imgs/best_countries_in_quality_of_life.jpg",
+        "category": "society_and_human_development",
         "date": "5 نوفمبر 2025"
     }, 
     {
         "title": "أكبر الاقتصادات السياحة في العالم 2024",
         "slug": "Largest_tourism_economies",
         "image": "imgs/Tourism-Economies-I.jpg",
+        "category": "economy_and_development",
         "date": "3 نوفمبر 2025"
     },   
     {
         "title": "ماليزيا من دولة زراعية إلى نمر اقتصادي ",
         "slug": "Malaysia_from_an_agricultural_country_to_an_economic_tiger",
         "image": "imgs/Malaysia_from_an_agricultural_country_to_an_economic.jpg",
+        "category": "economy_and_development",
         "date": "20 سبتمبر 2025"
     },
     {
         "title": "المغرب يقود الطريق",
         "slug": "Morocco_leads_the_way",
         "image": "imgs/Morocco_leads_the_way.jpg",
+        "category": "economy_and_development",
         "date": "20 سبتمبر 2025"
     },
     {
         "title": "اليابان من الدمار إلى الريادة",
         "slug": "japan_from_destruction_to_leadership",
         "image": "imgs/japan_from_destruction_to_leadership.jpg",
+        "category": "all",
         "date": "15 سبتمبر 2025"
     },
     {
         "title": "أفضل أنظمة التعليم حول العالم",
         "slug": "the_best_education_systems_around_the_world",
         "image": "imgs/best_education_systems.jpg",
+        "category": "education_and_technology",
         "date": "13 سبتمبر 2025"
     },
     {
         "title": "الهجرة بين الشرق والغرب",
         "slug": "migration_between_east_and_west",
         "image": "imgs/migration_between_east_and_west.jpg",
+        "category": "all",
         "date": "5 سبتمبر 2025"
     },
     {
         "title": "الصناعات الأكثر قيمة في 2025",
         "slug": "most_valuable_industries_in_2025",
         "image": "imgs/most_valuable_industries.jpg",
+        "category": "all",
         "date": "29 أغسطس 2025"
     },
     {
         "title": "الاستثمار الاقتصادي في التعليم",
         "slug": "economic_investment_in_education",
         "image": "imgs/economic_investment_in_education.jpg",
+        "category":"education_and_technology",
         "date": "27 أغسطس 2025"
     },
     {
         "title": "أهم المهارات الوظيفية في 2025",
         "slug": "The_Most_Important_Job_Skills_In_2025",
         "image": "imgs/thinking.jpg",
+        "category": "society_and_human_development",
         "date": "25 أغسطس 2025"
     },
     {
         "title": "الممكلة المتحدة...إصلاح الخدمة المدنية 1979 - 1997",
         "slug": "United-Kingdom-Civil-Service-Reform-1979-1997",
         "image": "imgs/united kingdom.jpg",
+        "category": "politics_and_international_relations",
         "date": "20 أغسطس 2025"
     },
     {
         "title": "هولندا...من شتاء الجوع إلى الزارعة عالية التقنية",
         "slug": "Netherlands-from-hunger-winter-to-high-tech-agriculture",
         "image": "imgs/netherland.jpg",
+        "category": "agriculture_and_natural_resources",
         "date": "22 أغسطس 2025"
     },
     {
         "title": "نيوزيلندا من العجز إلى الفائض",
         "slug": "NewZealand-from-deficit-to-surplus",
         "image": "imgs/newzealand.png",
+        "category": "economy_and_development",
         "date": "16 أغسطس 2025"
     },
     {
         "title": "كندا 1494-1498...المراجعة البرنامجية التي أطفأت العجز",
         "slug": "Canada-the-programmatic-review-that-extinguished-the-deficit",
         "image": "imgs/canada.png",
+        "category": "economy_and_development",
         "date": "13 أغسطس 2025"
     },
     {
         "title": "الإصلاح الحكومي في اليابان",
         "slug": "Government-reform-in-Japan",
         "image": "imgs/japan.png",
+        "category": "politics_and_international_relations",
         "date": "10 أغسطس 2025"
     },
     {
         "title": "أكبر البنوك والشركات المصرفية القابضة في العالم 2025",
         "slug": "largest-banks-and-banking-holding-companies-in-2025",
         "image": "imgs/bank.png",
+        "category": "all",
         "date": "3 أغسطس 2025"
     },
     {
         "title": "الشركات الأكثر قيمة في العالم 2025",
         "slug": "worlds-most-valuable-companies-2025",
         "image": "imgs/company.png",
+        "category": "all",
         "date": "3 أغسطس 2025"
     },
     {
         "title": "أكبر الشركات في العالم من حيث عدد العاملين",
         "slug": "largest-companies-in-the-world-by-number-of-employees",
         "image": "imgs/employees.png",
+        "category": "all",
         "date": "3 أغسطس 2025"
     },
     {
         "title": "الثروات الطبيعية وحدها لا تكفي",
         "slug": "natural-resources-alone-are-not-enough",
         "image": "imgs/wealth_five.png",
+        "category": "all",
         "date": "27 يوليو 2025"
     },
     {
         "title": "الثروات لصالح الشعوب",
         "slug": "wealth-for-the-benefit-of-the-people",
         "image": "imgs/wealth_four.png",
+        "category": "all",
         "date": "26 يوليو 2025"
     },
     {
         "title": "ثروات طبيعية معدودة...ودول في الصدرارة",
         "slug": "limited-natural-resources-and-leading-countries",
         "image": "imgs/wealth_three.png",
+        "category": "all",
         "date": "24 يوليو 2025"
     },
     {
         "title": "ثروات طبيعية وفيرة...واقتصادات هشة",
         "slug": "natural-resources-and-fragile-economies",
         "image": "imgs/wealth_two.png",
+        "category": "all",
         "date": "22 يوليو 2025"
     },
     {
         "title": "هل تعني الثروات الطبيعية اقتصادًا قويًا؟",
         "slug": "natural-resources-and-economy",
         "image": "imgs/wealth_one.png",
+        "category": "agriculture_and_natural_resources",
         "date": "20 يوليو 2025"
     },
     {
         "title": "دول هزمت العطش - سنغافورة",
         "slug": "Countries-that-defeated-thirst-Singabore",
         "image": "imgs/singabor.png",
+        "category": "agriculture_and_natural_resources",
         "date": "18 يوليو 2025"
     },
     {
         "title": "دول هزمت العطش - الهند",
         "slug": "Countries-that-defeated-thirst-India",
         "image": "imgs/india.png",
+        "category": "agriculture_and_natural_resources",
         "date": "15 يوليو 2025"
     },
     {
         "title": "دول هزمت العطش - المغرب",
         "slug": "Countries-that-defeated-thirst-Morocco",
         "image": "imgs/morocco.png",
+        "category": "agriculture_and_natural_resources",
         "date": "11 يوليو 2025"
     },
     {
         "title": "دول هزمت العطش - الأردن",
         "slug": "Countries-that-defeated-thirst-Jordan",
         "image": "imgs/jordan.png",
+        "category": "agriculture_and_natural_resources",
         "date": "7 يوليو 2025"
     },
     {
         "title": "دول هزمت العطش - أستراليا",
         "slug": "Countries-that-defeated-thirst-Australia",
         "image": "imgs/australia.png",
+        "category": "agriculture_and_natural_resources",
         "date": "2 يوليو 2025"
     },
     {
         "title": "أكثر عشر دول تصديرًا للمهاجرين في 2023",
         "slug":"Top-10-migrant-exporting-countries-in-2023",
         "image": "imgs/Info-08.png",
+        "category": "all",
         "date": "30 أبريل 2025"
     },
     {
         "title": "أكبر عشر دول عربية إصدارًا وتلقيًا لتحويلات المهاجرين 2024",
         "slug": "The-top-ten-countries-in-remittance-outflows-and-inflows-by-migrants-2024",
         "image": "imgs/Info-20.png",
+        "category": "all",
         "date": "29 أبريل 2025"
     },
     {
         "title": "المياه والدول العربية",
         "slug": "water-and-Arab-countries",
         "image": "imgs/Info-19.png",
+        "category": "agriculture_and_natural_resources",
         "date": "27 أبريل 2025"
     },
     {
         "title": "أكثر عشر دول في كثافة الأطباء",
         "slug": "top-ten-countries-with-the-most-doctors",
         "image": "imgs/Info-18.png",
+        "category": "society_and_human_development",
         "date": "23 أبريل 2025"
     },
     {
         "title": "أكثر عشر دول في كثافة المعلّمين",
         "slug": "top-ten-countries-with-the-highest-teacher-density",
         "image": "imgs/Info-17.png",
+        "category": "education_and_technology",
         "date": "20 أبريل 2025"
     },
     {
         "title": "الجيوش الأكبر",
         "slug": "the-largest-armies",
         "image": "imgs/Info-16.png",
+        "category": "politics_and_international_relations",
         "date": "19 أبريل 2025"
     },
     {
         "title": "هجرة العقول العربية",
         "slug": "the-brain-drain-of-the-Arab-world",
         "image": "imgs/Info-15.png",
+        "category": "all",
         "date": "17 أبريل 2025"
     },
     {
         "title": "أكبر أنظمة رعاية صحية",
         "slug": "largest-healthcare-systems",
         "image": "imgs/Info-14.png",
+        "category": "society_and_human_development",
         "date": "9 أبريل 2025"
     },
     {
         "title": "أكبر عشر أنظمة رعاية اجتماعية",
         "slug": "top-ten-Social-care-Systems",
         "image": "imgs/Info-13.png",
+        "category": "society_and_human_development",
         "date": "7 أبريل 2025"
     },
     {
         "title": "انتشار الأوبئة",
         "slug": "the-spread-of-epidemics",
         "image": "imgs/Info-12.png",
+        "category": "all",
         "date": "3 أبريل 2025"
     },
     {
         "title": "القطاع الصحي في اليمن",
         "slug": "health-care-in-yemen",
         "image": "imgs/Info-11.png",
+        "category": "society_and_human_development",
         "date": "29 مارس 2025"
     },
     {
         "title": "التعليم العالي في العالم العربي",
         "slug": "higher-education-in-the-Arab-World",
         "image": "imgs/Info-10.png",
+        "category": "education_and_technology",
         "date": "27 مارس 2025"
     },
     {
         "title": "الضرائب والشركات",
         "slug": "Taxes-and-companies",
         "image": "imgs/Info-09.png",
+        "category": "all",
         "date": "25 مارس 2025"
     },
     {
         "title": "ملوك القطن...أكبر عشر دول منتجة للقطن في العالم 2023",
         "slug": "Cotton-kings-2023",
         "image": "imgs/Info-07.png",
+        "category": "all",
         "date": "23 مارس 2025"
     },
     {
         "title": "مساهمة القطاع الخاص في الناتج المحلي الإجمالي 2023",
         "slug": "Private-sector-contribution-to-GDP-2023",
         "image": "imgs/Info-06.png",
+        "category": "economy_and_development",
         "date": "21 مارس 2025"
     },
     {
         "title": "كيف يؤثر التعليم على الاقتصاد",
         "slug": "How-education-affects-the-economy",
         "image": "imgs/Info-05.png",
+        "category": "education_and_technology",
         "date": "19 مارس 2025"
     },
     {
         "title": "البطالة في الدول العربية",
         "slug": "Unemployment-in-Arab-countries",
         "image": "imgs/Info-04.png",
+        "category": "economy_and_development",
         "date": "17 مارس 2025"
     },
     {
         "title": "الوزارات الحكومية والاقتصادات الخمس الكبرى",
         "slug": "Government-ministries-and-the-big-five-economies",
         "image": "imgs/Info-03.png",
+        "category": "politics_and_international_relations",
         "date": "15 مارس 2025"
     },
     {
         "title": "أكبر عشر دول في احتياطي اليورانيوم",
         "slug":  "Top-ten-countries-with-the-largest-uranium-reserves",
         "image": "imgs/Info-02.png",
+        "category": "agriculture_and_natural_resources",
         "date": "13 مارس 2025"
     },
     {
         "title": "أكثر سبع دول إنتاجًا للأدوية في العام 2024",
         "slug": "The-seven-largest-pharmaceutical-producing-countries-in-2024",
         "image": "imgs/Info-01.png",
+        "category":"economy_and_development",
         "date": "11 مارس 2025"
     }
 ]

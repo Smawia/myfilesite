@@ -23,6 +23,15 @@
     <h1 class="spe-h1">أسس إنفوجراف</h1>
 </div>
 
+<div class="search-tabs tabs container index-articles container-margin info-tabs" id="search-tabs">
+    <button class="tab-btn active" data-type="all" data-tab="volume1">الكل</button>
+    <button class="tab-btn" data-type="economy-and-development" data-tab="volume2">الاقتصاد والتنمية</button>
+    <button class="tab-btn" data-type="politics-and-international-relations" data-tab="volume3">السياسة والعلاقات الدولية</button>
+    <button class="tab-btn" data-type="education-and-technology" data-tab="volume4">التعليم والتكنولوجيا</button>
+    <button class="tab-btn" data-type="society-and-human-development" data-tab="volume5">المجتمع والتنمية البشرية</button>
+    <button class="tab-btn" data-type="agriculture-and-natural-resources" data-tab="volume6">الزراعة والموارد الطبيعية</button>
+</div>
+
 <div class="container index-articles all-art infographs">
     <div class="show-all-studies" id="infographContainer">
         <!-- {% for item in infographs|slice:":9" %}
@@ -41,6 +50,129 @@
 </div>
 <script id="infographs" type="application/json">
     {{ infographs_json|safe }}
+</script>
+<!-- <script>
+    // التبويبات
+    const tabs = document.querySelectorAll(".tab-btn");
+    const resultsContainer = document.getElementById("infographContainer");
+    let type = "all"; // التبويب الافتراضي
+
+    // التبويبات
+    tabs.forEach(tab => {
+        tab.addEventListener("click", async () => {
+
+            tabs.forEach(t => t.classList.remove("active"));
+            tab.classList.add("active");
+
+            type = tab.dataset.type;
+
+            resultsContainer.innerHTML = `
+                <p style="text-align: center; font-weight: bold;width: 100%; line-height: 1.5;"> جاري تحميل النتائج...</p>
+            `;
+
+            try {
+                const response = await fetch(
+                    `/Infographics/?type=${encodeURIComponent(type)}`,
+                    {
+                        headers: {
+                            "X-Requested-With": "XMLHttpRequest"
+                        }
+                    }
+                );
+
+                if (!response.ok) {
+                    throw new Error(`HTTP Error: ${response.status}`);
+                }
+
+                // تحويل الاستجابة إلى مصفوفة أو كائن JSON
+                const newdata = await response.json();
+
+                // console.log("New data:", newdata);
+
+                window.setInfographicsData(newdata);
+
+            } catch (error) {
+                console.error("حدث خطأ أثناء جلب الإنفوجرافات:", error);
+            }
+
+        });
+    });
+
+</script> -->
+
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+    const tabs = document.querySelectorAll(".tab-btn");
+    const resultsContainer = document.getElementById("infographContainer");
+
+    if (!resultsContainer || !tabs.length) return;
+
+    let type = "all";
+    let latestRequestId = 0;
+
+    tabs.forEach(tab => {
+        tab.addEventListener("click", async function (event) {
+
+            if (event.detail > 1) {
+                console.log("نقرة متتابعة رقم:", event.detail);
+            }
+            
+            console.log("Tab clicked:", tab.dataset.type);
+            console.log("Event detail:", event.detail);
+
+            tabs.forEach(t => t.classList.remove("active"));
+            tab.classList.add("active");
+
+            type = tab.dataset.type;
+
+            // تمييز هذا الطلب عن الطلبات السابقة
+            const requestId = ++latestRequestId;
+            
+            resultsContainer.innerHTML = `
+                <p style="text-align:center;font-weight:bold;width:100%;line-height:1.5;">
+                    جاري تحميل النتائج...
+                </p>
+            `;
+
+            try {
+                const response = await fetch(
+                    `/Infographics/?type=${encodeURIComponent(type)}`,
+                    {
+                        headers: {
+                            "X-Requested-With": "XMLHttpRequest"
+                        }
+                    }
+                );
+
+                if (!response.ok) {
+                    throw new Error(`HTTP Error: ${response.status}`);
+                }
+
+                const newdata = await response.json();
+
+                // تجاهل أي استجابة لم تعد تخص آخر تبويب اختاره المستخدم
+                if (requestId !== latestRequestId) {
+                    return;
+                }
+
+                if (typeof window.setInfographicsData !== "function") {
+                    throw new Error("setInfographicsData غير متاحة");
+                }
+
+                window.setInfographicsData(newdata);
+
+            } catch (error) {
+                // لا تعرض خطأ طلب قديم فوق نتائج طلب أحدث
+                if (requestId !== latestRequestId) return;
+
+                console.error("حدث خطأ أثناء جلب الإنفوجرافات:", error);
+
+                resultsContainer.textContent =
+                    "تعذر تحميل النتائج. يرجى المحاولة مرة أخرى.";
+            }
+        });
+    });
+});
 </script>
 
 {% endblock %}

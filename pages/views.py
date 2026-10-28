@@ -559,6 +559,40 @@ def osus_journals(request):
     return render(request,'pages/osus_journals.html')
 
 def view_infograph(request):
+    content_type = request.GET.get("type", "all")
+    data = []
+
+    if content_type == "all":
+        data = list(infographs)
+
+    elif content_type == "economy-and-development":
+        for item in infographs:
+            if item['category'] == "economy_and_development":
+                data.append(item)
+
+    elif content_type == "politics-and-international-relations":
+        for item in infographs:
+            if item['category'] == "politics_and_international_relations":
+                data.append(item)
+
+    elif content_type == "education-and-technology":
+        for item in infographs:
+            if item['category'] == "education_and_technology":
+                data.append(item)
+
+    elif content_type == "society-and-human-development":
+        for item in infographs:
+            if item['category'] == "society_and_human_development":
+                data.append(item)
+
+    elif content_type == "agriculture-and-natural-resources":
+        for item in infographs:
+            if item['category'] == "agriculture_and_natural_resources":
+                data.append(item)
+
+    if request.headers.get("X-Requested-With") == "XMLHttpRequest":
+        return JsonResponse(data, safe=False)
+    
     return render(request, 'pages/infographs.html', {'infographs_json': json.dumps(list(infographs), ensure_ascii=False)})
 
 def infograph_detail(request, slug):
@@ -1659,7 +1693,7 @@ def search(request):
     videos_results = []
     page_obj = None
     
-    print("dark_mode:", dark_mode)
+    # print("dark_mode:", dark_mode)
     if query:
        db_studies_results = db_studies_results.filter(Q(subject__icontains=query))
     
