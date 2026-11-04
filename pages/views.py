@@ -1326,6 +1326,12 @@ def infograph_detail(request, slug):
             'date': '27 أكتوبر 2026',
             'image': 'imgs/government_effectiveness_index_for_iceland.webp',
         },
+        "Where_does_the_economic_power_of_the_United_States_come_from": {
+            'slug': 'Where_does_the_economic_power_of_the_United_States_come_from',
+            'title': 'من أين تأتي قوة الولايات المتحدة الاقتصادية؟',
+            'date': '31 أكتوبر 2026',
+            'image': 'imgs/where_does_the_economic_power_of_the_United_States_come_from.webp',
+        },
     } 
 
     detail = data.get(slug)
