@@ -1332,6 +1332,12 @@ def infograph_detail(request, slug):
             'date': '31 أكتوبر 2026',
             'image': 'imgs/where_does_the_economic_power_of_the_United_States_come_from.webp',
         },
+        "Top_10_countries_in_the_Rule_of_Law_Index": {
+            'slug': 'Top_10_countries_in_the_Rule_of_Law_Index',
+            'title': 'أفضل 10 دول في مؤشر سيادة القانون',
+            'date': '7 نوفمبر 2026',
+            'image': 'imgs/top_10_countries_in_the_rule_of_law_index.webp',
+        },
     } 
 
     detail = data.get(slug)
