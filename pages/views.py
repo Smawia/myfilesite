@@ -1185,7 +1185,7 @@ def infograph_detail(request, slug):
         "Impact_of_infrastructure_on_investment": {
             'slug': 'Impact_of_infrastructure_on_investment',
             'title': 'أثر البنية التحتية على الاستثمار',
-            'date': '27 يوليو 2026',
+            'date': '27 يوليو 2026',    
             'image': 'imgs/impact_of_infrastructure_on_investment.jpeg',
         },
         "South_Koreas_Development_Experience": {
@@ -1514,176 +1514,242 @@ def urban_planning_in_yemen_in_light_of_global_experiences(request):
     return render(request, 'pages/urban_planning_in_yemen_in_light_of_global_experiences.html')
 
 def motion_graphics(request):
+    content_type = request.GET.get("type", "all")
+    data = []
+
     videos = [
         {
             "url": "/studies/28/",
             "video": "https://youtu.be/x3Cr1UPkV2o",
             "date": "2026-10-17",
-            "subject": "كيف تحولت كوريا الجنوبية من الفقر إلى قوة صناعية عالمية؟ | أسرار النهضة"
+            "subject": "كيف تحولت كوريا الجنوبية من الفقر إلى قوة صناعية عالمية؟ | أسرار النهضة",
+            "category": "economy_and_development"
         },
         {
             "url": "/studies/27/",
             "video": "https://youtu.be/hfFEUfDu6No",
             "date": "2026-9-28",
-            "subject": "كيف حوّلت فونتيرا الحليب إلى صناعة بمليارات الدولارات؟ | قصة نجاح نيوزيلندية مذهلة"
+            "subject": "كيف حوّلت فونتيرا الحليب إلى صناعة بمليارات الدولارات؟ | قصة نجاح نيوزيلندية مذهلة",
+            "category": "economy_and_development"
         },
         {
             "url": "/studies/26/",
             "video": "https://youtu.be/Bf95QieJGYE",
             "date": "2026-8-22",
-            "subject": "كيف تُبنى الدولة القوية؟ سر المؤسسات التي تصنع المستقبل | بناء الدولة"
+            "subject": "كيف تُبنى الدولة القوية؟ سر المؤسسات التي تصنع المستقبل | بناء الدولة",
+            "category": "policies_and_institutions"
         },
         {
             "url": "/studies/25/",
             "video": "https://youtu.be/dtUw4ux4FdI",
             "date": "2026-8-8",
-            "subject": "ماذا يحدث للدولة عندما يختفي مصدر دخلها الرئيسي؟ | الاقتصاد الريعي والاقتصاد المنتج"
+            "subject": "ماذا يحدث للدولة عندما يختفي مصدر دخلها الرئيسي؟ | الاقتصاد الريعي والاقتصاد المنتج",
+            "category": "economy_and_development"
         },
         {
             "url": "/studies/24/",
             "video": "https://youtu.be/wNWx0L3ltnk",
             "date": "2026-7-22",
-            "subject": "كيف تبني الدول المتقدمة اقتصادًا قويًا؟ ولماذا يقود القطاع الخاص النمو؟"
+            "subject": "كيف تبني الدول المتقدمة اقتصادًا قويًا؟ ولماذا يقود القطاع الخاص النمو؟",
+            "category": "economy_and_development"
         },
         {
             "url": "/studies/23/",
             "video": "https://youtu.be/zIGbTUS1bm0",
             "date": "2026-6-27",
-            "subject": "لماذا تفشل خطط التنمية في الدول النامية؟"
+            "subject": "لماذا تفشل خطط التنمية في الدول النامية؟",
+            "category": "economy_and_development"
         },
         {
             "url": "/studies/22/",
             "video": "https://youtu.be/JaZ5fysvQC8",
             "date": "2026-5-19",
-            "subject": "سر نهضة سنغافورة: من دولة فقيرة إلى نموذج عالمي في الإدارة"
+            "subject": "سر نهضة سنغافورة: من دولة فقيرة إلى نموذج عالمي في الإدارة",
+            "category": "policies_and_institutions"
         },
         {
             "url": "/studies/21/",
             "video": "https://youtu.be/Ji6wBwXdVcM",
             "date": "2026-5-9",
-            "subject": "كيف تبني الأسر المنتجة اقتصاد وطن؟ السر الذي بدأت به كبرى اقتصادات العالم!"
+            "subject": "كيف تبني الأسر المنتجة اقتصاد وطن؟ السر الذي بدأت به كبرى اقتصادات العالم!",
+            "category": "economy_and_development"
         },
         {
             "url": "/studies/20/",
             "video": "https://youtu.be/AqoC5ncdC6U",
             "date": "2026-4-20",
-            "subject": "التنمية والإصلاح الإداري: لماذا يختلف الواقع عن المفترض في الدول؟"
+            "subject": "التنمية والإصلاح الإداري: لماذا يختلف الواقع عن المفترض في الدول؟",
+            "category": "policies_and_institutions"
         },
         {
             "url": "/studies/19/",
             "video": "https://youtu.be/HLOSdnOyy_4",
             "date": "2026-3-25",
-            "subject": "كيف تبني سويسرا جيشها؟"
+            "subject": "كيف تبني سويسرا جيشها؟",
+            "category": "policies_and_institutions"
         },
         {
             "url": "/studies/18/",
             "video": "https://youtu.be/KKBdIw-aYlw",
             "date": "2026-2-24",
-            "subject": "هل آن الأوان لتخفيف عبء الدولة؟ مستقبل التوظيف في يد القطاع الخاص!"
+            "subject": "هل آن الأوان لتخفيف عبء الدولة؟ مستقبل التوظيف في يد القطاع الخاص!",
+            "category": "policies_and_institutions"
         },
         {
             "url": "/studies/17/",
             "video": "https://youtu.be/kwRoAZMJjIs",
             "date": "2026-2-7",
-            "subject": "من البيروقراطية إلى الكفاءة: كيف تفكر الحكومات الحديثة؟"
+            "subject": "من البيروقراطية إلى الكفاءة: كيف تفكر الحكومات الحديثة؟",
+            "category": "policies_and_institutions"
         },
         {
             "url": "/studies/16/",
             "video": "https://youtu.be/2NQktms2hzU",
             "date": "2026-1-20",
-            "subject": "التجربة التعليمية في فنلندا: تعليم بلا ضغط… ونتائج مذهلة"
+            "subject": "التجربة التعليمية في فنلندا: تعليم بلا ضغط… ونتائج مذهلة",
+            "category": "economy_and_development"
         },
         {
             "url": "/studies/15/",
             "video": "https://youtu.be/oaIdb4uBwwg",
             "date": "2026-1-4",
-            "subject": "الاقتصاد المقاوم: كيف تصمد الدول أمام الأزمات والعقوبات الاقتصادية؟"
+            "subject": "الاقتصاد المقاوم: كيف تصمد الدول أمام الأزمات والعقوبات الاقتصادية؟",
+            "category": "economy_and_development"
         },
         {
             "url": "/studies/14/",
             "video": "https://youtu.be/12mo6GxiMxk",
             "date": "2025-12-16",
-            "subject": "كوليندا كيتاروفيتش: امرأة كرواتيا الحديدية ونموذج القيادة النسوية في السياسة الأوروبية"
+            "subject": "كوليندا كيتاروفيتش: امرأة كرواتيا الحديدية ونموذج القيادة النسوية في السياسة الأوروبية",
+            "category": "influential_figures"
         },
         {
             "url": "/studies/13/",
             "video": "https://youtu.be/PlP0-APrXc4",
             "date": "2025-12-14",
-            "subject": "حليمة يعقوب... حين تصنع الإرادة امرأة تقود دولة"
+            "subject": "حليمة يعقوب... حين تصنع الإرادة امرأة تقود دولة",
+            "category": "influential_figures"
         },
         {
             "url": "/studies/12/",
             "video": "https://youtu.be/etbGugO-sK4",
             "date": "2025-11-17",
-            "subject": "النقد الإلكتروني: رحلة التطور من الماضي إلى المستقبل | كيف تتغير النقود في عصر الرقمنة؟"
+            "subject": "النقد الإلكتروني: رحلة التطور من الماضي إلى المستقبل | كيف تتغير النقود في عصر الرقمنة؟",
+            "category": "techonlogy_and_digital_transformation"
         },
         {
             "url": "/studies/11/",
             "video": "https://youtu.be/-KX5ReklYLQ",
             "date": "2025-11-15",
-            "subject": "رحلة حول العالم: أقوى أنظمة التأمين الصحي وكيف تعمل!"
+            "subject": "رحلة حول العالم: أقوى أنظمة التأمين الصحي وكيف تعمل!",
+            "category": "economy_and_development"
         },
         {
             "url": "/studies/10/",
             "video": "https://youtu.be/UKRuYjkQKds",
             "date": "2025-11-11",
-            "subject": "تحوّل مذهل… كيف نجحت نيوزيلندا في قلب موازين اقتصادها؟"
+            "subject": "تحوّل مذهل… كيف نجحت نيوزيلندا في قلب موازين اقتصادها؟",
+            "category": "economy_and_development"
         },
         {
             "url": "/studies/9/",
             "video": "https://youtu.be/ssPY-RKGTis",
             "date": "2025-11-11",
-            "subject": "الإصلاح الحكومي في اليابان: قرار واحد غيّر كل شيء!"
+            "subject": "الإصلاح الحكومي في اليابان: قرار واحد غيّر كل شيء!",
+            "category": "policies_and_institutions"
         },
         {
             "url": "/studies/8/",
             "video": "https://youtu.be/NGSkykmL_7s",
             "date": "2025-11-8",
-            "subject": "أبرز تجارب الإصلاح الحكومي العالمية"
+            "subject": "أبرز تجارب الإصلاح الحكومي العالمية",
+            "category": "policies_and_institutions"
         },
         {
             "url": "/studies/7/",
             "video": "https://youtu.be/2Goy5n_CZgI",
             "date": "2025-10-4",
-            "subject": "كيف نجحت كندا في تجاوز عجز الموازنة؟ تجربة المراجعة البرنامجية"
+            "subject": "كيف نجحت كندا في تجاوز عجز الموازنة؟ تجربة المراجعة البرنامجية",
+            "category": "economy_and_development"
         },
         {
             "url": "/studies/6/",
             "video": "https://youtu.be/lZsi4SgiArk",
             "date": "2025-10-1",
-            "subject": "رحلة الإصلاح الإداري في المملكة المتحدة: من التحديات إلى الإنجازات"
+            "subject": "رحلة الإصلاح الإداري في المملكة المتحدة: من التحديات إلى الإنجازات",
+            "category": "policies_and_institutions"
         },
         {
             "url": "/studies/5/",
             "video": "https://youtu.be/5JrQF9GTNYY",
             "date": "2025-09-22",
-            "subject": "هل الثروة نعمة أم نقمة؟"
+            "subject": "هل الثروة نعمة أم نقمة؟",
+            "category": "policies_and_institutions"
         },
         {
             "url": "/studies/4/",
             "video": "https://youtu.be/6wWTygAX0eo",
             "date": "2025-09-20",
-            "subject": "صناعة السيارات في المغرب"
+            "subject": "صناعة السيارات في المغرب",
+            "category": "economy_and_development"
         },
         {
             "url": "/studies/3/",
             "video": "https://youtu.be/zod4jUphBr8",
             "date": "2025-09-18",
-            "subject": "اليابان من الدمار إلى المعجزة الاقتصادية"
+            "subject": "اليابان من الدمار إلى المعجزة الاقتصادية",
+            "category": "economy_and_development"
         }, 
         {
             "url": "/studies/2/",
             "video": "https://youtu.be/kB3LgcKJtik",
             "date": "2025-09-16",
-            "subject": "كيف انتقلت هولندا من المجاعة إلى قوة تصدير زراعي؟"
+            "subject": "كيف انتقلت هولندا من المجاعة إلى قوة تصدير زراعي؟",
+            "category": "agriculture_and_atural_resources"
         },
         {
             "url": "/studies/1/",
             "video": "https://youtu.be/QjvCn5TE5nQ",
             "date": "2025-09-14",
-            "subject": "كيف هزمت بعض الدول الجفاف والعطش؟ دروس وتجارب ملهمة"
+            "subject": "كيف هزمت بعض الدول الجفاف والعطش؟ دروس وتجارب ملهمة",
+            "category": "agriculture_and_atural_resources"
         },
     ]
+ 
+    if content_type == "all":
+        data = list(videos)
+
+    elif content_type == "influential-figures":
+        for item in videos:
+            if item['category'] == "influential_figures":
+                data.append(item)
+
+    elif content_type == "economy-and-development":
+        for item in videos:
+            if item['category'] == "economy_and_development":
+                data.append(item)
+
+    elif content_type == "agriculture-and-atural-resources":
+        for item in videos:
+            if item['category'] == "agriculture_and_atural_resources":
+                data.append(item)
+
+    elif content_type == "technology-and-digital-transformation":
+        for item in videos:
+            if item['category'] == "techonlogy_and_digital_transformation":
+                data.append(item)
+
+    elif content_type == "policies-and-institutions":
+        for item in videos:
+            if item['category'] == "policies_and_institutions":
+                data.append(item)
+
+    if request.headers.get("X-Requested-With") == "XMLHttpRequest":
+        for item in data:
+            if 'youtu.be' in item['video']:
+                video_id = item['video'].split('/')[-1].split('?')[0]
+                item['video'] = video_id
+        return JsonResponse(data, safe=False)
 
     # تحويل الروابط إلى embed
     for item in videos:

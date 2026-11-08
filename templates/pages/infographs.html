@@ -104,6 +104,7 @@
 document.addEventListener("DOMContentLoaded", function () {
     const tabs = document.querySelectorAll(".tab-btn");
     const resultsContainer = document.getElementById("infographContainer");
+    const loadMoreBtn = document.getElementById('loadMoreBtn')
 
     if (!resultsContainer || !tabs.length) return;
 
@@ -113,12 +114,12 @@ document.addEventListener("DOMContentLoaded", function () {
     tabs.forEach(tab => {
         tab.addEventListener("click", async function (event) {
 
-            if (event.detail > 1) {
-                console.log("نقرة متتابعة رقم:", event.detail);
-            }
+            // if (event.detail > 1) {
+            //     console.log("نقرة متتابعة رقم:", event.detail);
+            // }
             
-            console.log("Tab clicked:", tab.dataset.type);
-            console.log("Event detail:", event.detail);
+            // console.log("Tab clicked:", tab.dataset.type);
+            // console.log("Event detail:", event.detail);
 
             tabs.forEach(t => t.classList.remove("active"));
             tab.classList.add("active");
@@ -127,6 +128,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
             // تمييز هذا الطلب عن الطلبات السابقة
             const requestId = ++latestRequestId;
+            loadMoreBtn.style.display = "none";
             
             resultsContainer.innerHTML = `
                 <p style="text-align:center;font-weight:bold;width:100%;line-height:1.5;">
