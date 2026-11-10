@@ -1338,6 +1338,12 @@ def infograph_detail(request, slug):
             'date': '7 نوفمبر 2026',
             'image': 'imgs/top_10_countries_in_the_rule_of_law_index.webp',
         },
+        "Who_possesses_wealth": {
+            'slug': 'Who_possesses_wealth',
+            'title': 'من يملك الثروة؟ الأرض أم الإنسان؟',
+            'date': '9 نوفمبر 2026',
+            'image': 'imgs/who_possesses_wealth.webp',
+        },
     } 
 
     detail = data.get(slug)
