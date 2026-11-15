@@ -82,6 +82,12 @@ def view_osus_sixth_content(requst):
 def index(request):
     videos = [
         {
+            "url": "/studies/29/",
+            "video": "Dg_huWI9H1A",
+            "date": "2026-11-15",
+            "subject": "من الإبادة الجماعية إلى النهضة الاقتصادية.. كيف تغيرت رواندا؟"
+        },
+        {
             "url": "/studies/28/",
             "video": "x3Cr1UPkV2o",
             "date": "2026-10-17",
@@ -92,12 +98,6 @@ def index(request):
             "video": "hfFEUfDu6No",
             "date": "2026-9-28",
             "subject": "كيف حوّلت فونتيرا الحليب إلى صناعة بمليارات الدولارات؟ | قصة نجاح نيوزيلندية مذهلة"
-        },
-        {
-            "url": "/studies/26/",
-            "video": "Bf95QieJGYE",
-            "date": "2026-8-22",
-            "subject": "كيف تُبنى الدولة القوية؟ سر المؤسسات التي تصنع المستقبل | بناء الدولة"
         },
     ]
 
@@ -1531,6 +1531,13 @@ def motion_graphics(request):
 
     videos = [
         {
+            "url": "/studies/29/",
+            "video": "https://youtu.be/Dg_huWI9H1A",
+            "date": "2026-11-15",
+            "subject": "من الإبادة الجماعية إلى النهضة الاقتصادية.. كيف تغيرت رواندا؟",
+            "category": "economy_and_development"
+        },
+        {
             "url": "/studies/28/",
             "video": "https://youtu.be/x3Cr1UPkV2o",
             "date": "2026-10-17",
@@ -1870,6 +1877,12 @@ def search(request):
 
     
     videos = [
+        {
+            "url": "/studies/29/",
+            "video": "https://youtu.be/Dg_huWI9H1A",
+            "date": "2026-11-15",
+            "subject": "من الإبادة الجماعية إلى النهضة الاقتصادية.. كيف تغيرت رواندا؟"
+        },
         {
             "url": "/studies/28/",
             "video": "https://youtu.be/x3Cr1UPkV2o",
