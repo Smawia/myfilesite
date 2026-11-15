@@ -1344,6 +1344,12 @@ def infograph_detail(request, slug):
             'date': '9 نوفمبر 2026',
             'image': 'imgs/who_possesses_wealth.webp',
         },
+        "Regulatory_Quality_Index_in_Singapore": {
+            'slug': 'Regulatory_Quality_Index_in_Singapore',
+            'title': 'مؤشر الجودة التنظيمية في سنغافورة',
+            'date': '14 نوفمبر 2026',
+            'image': 'imgs/regulatory_quality_index_in_singapore.webp',
+        },
     } 
 
     detail = data.get(slug)
