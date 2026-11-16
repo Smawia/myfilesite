@@ -1350,6 +1350,12 @@ def infograph_detail(request, slug):
             'date': '14 نوفمبر 2026',
             'image': 'imgs/regulatory_quality_index_in_singapore.webp',
         },
+        "From_an_Bloated_State_to_a_Lean_State": {
+            'slug': 'From_an_Bloated_State_to_a_Lean_State',
+            'title': 'من الدولة المتضخمة إلى الدولة الرشيقة... هل كثرة الجهاز الإداري تعني دولة أقوى؟',
+            'date': '16 نوفمبر 2026',
+            'image': 'imgs/from_an_bloated_state_to_a_Lean_state.webp',
+        },
     } 
 
     detail = data.get(slug)
