@@ -1360,7 +1360,7 @@ def infograph_detail(request, slug):
             'slug': 'Human_Development_Index_in_Denmark',
             'title': 'مؤشر التنمية البشرية في الدنمارك',
             'date': '17 نوفمبر 2026',
-            'image': 'imgs/human_development_index_in_denmark.jpeg',
+            'image': 'imgs/human_development_index_in_denmark.webp',
         },
     } 
 
