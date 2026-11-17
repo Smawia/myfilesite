@@ -1356,6 +1356,12 @@ def infograph_detail(request, slug):
             'date': '16 نوفمبر 2026',
             'image': 'imgs/from_an_bloated_state_to_a_Lean_state.webp',
         },
+        "Human_Development_Index_in_Denmark": {
+            'slug': 'Human_Development_Index_in_Denmark',
+            'title': 'مؤشر التنمية البشرية في الدنمارك',
+            'date': '17 نوفمبر 2026',
+            'image': 'imgs/human_development_index_in_denmark.jpeg',
+        },
     } 
 
     detail = data.get(slug)
